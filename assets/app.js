@@ -75,8 +75,29 @@
       MONTHS[db.getMonth()] + ' ' + db.getDate() + ', ' + db.getFullYear();
   }
 
-  /* The date this event is filed under: next edition, else last edition. */
-  function keyDate(e) { return e.next_date || e.last_date || ''; }
+  /* The date an event is filed under depends on which way you are looking.
+     Browsing Past, an annual event should show the edition that actually
+     happened, even when a future one is already scheduled. Everywhere else
+     the next edition leads, falling back to the last one held. */
+  function keyDate(e) {
+    if (state.when === 'past') return e.last_date || (isPastISO(e.next_date) ? e.next_date : '');
+    if (state.when === 'upcoming') return e.next_date;   // never advertise a held date as upcoming
+    return e.next_date || e.last_date || '';
+  }
+
+  function keyDateEnd(e) {
+    return keyDate(e) === e.next_date ? e.next_date_end : '';
+  }
+
+  function isPastISO(iso) { return !!iso && iso < TODAY; }
+
+  /* An annual event with no announced date still tells you when it usually
+     runs, which is the useful thing when you are planning a year. */
+  function monthHint(e) {
+    var m = String(e.month || '').trim();
+    if (!m || /^varies$/i.test(m)) return 'TBA';
+    return m.length > 9 ? m.slice(0, 8) + '.' : m;
+  }
 
   function highlight(text, needle) {
     var out = esc(text);
@@ -125,7 +146,9 @@
       // A confirmed future date, or an annual event whose next edition is unannounced.
       return e.status === 'upcoming' || e.status === 'recurring-tbd';
     }
-    return e.status === 'past' || (!!e.last_date && e.status !== 'upcoming');
+    // Past = any edition that has actually been held. An annual event with a
+    // future date still belongs here for the edition that already happened.
+    return !!e.last_date || e.status === 'past' || isPastISO(e.next_date);
   }
 
   function filtered() {
@@ -181,7 +204,10 @@
         '<span class="ev__d1">' + esc(fmtDay(keyDate(e))) + '</span>' +
         '<span class="ev__d2">' + esc(fmtMonYear(keyDate(e))) + '</span>' +
         '</span>'
-      : '<span class="ev__when ev__when--tbd"><span class="ev__d1">TBA</span></span>';
+      : '<span class="ev__when ev__when--tbd">' +
+        '<span class="ev__d1">' + esc(monthHint(e)) + '</span>' +
+        '<span class="ev__d2">' + esc(e.cadence || 'date tba') + '</span>' +
+        '</span>';
 
     var tags = ['<span class="ev__tag ev__tag--kind">' + esc(e.type.replace(/-/g, ' ')) + '</span>'];
     if (e.cost === 'free') tags.push('<span class="ev__tag ev__tag--free">free</span>');
@@ -191,7 +217,7 @@
       tags.push('<span class="ev__tag">' + esc(t) + '</span>');
     });
 
-    var dateLine = dated ? fmtRange(keyDate(e), e.next_date ? e.next_date_end : '') : 'date to be announced';
+    var dateLine = dated ? fmtRange(keyDate(e), keyDateEnd(e)) : 'date to be announced';
     var aria = e.name + ' — ' + dateLine + ' — ' + e.city + ' — opens the official site in a new tab';
 
     return '<a class="ev" href="' + esc(e.url) + '" target="_blank" rel="noopener noreferrer"' +
