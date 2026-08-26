@@ -1,7 +1,7 @@
 {
   "generated_on": "2026-08-26",
-  "event_count": 884,
-  "city_count": 236,
+  "event_count": 880,
+  "city_count": 233,
   "events": [
     {
       "name": "Global Game Jam - Abilene Christian University",
@@ -2455,6 +2455,34 @@
       "source_file": "us-east"
     },
     {
+      "name": "ODSC East",
+      "type": "conference",
+      "topics": [
+        "data-science",
+        "ai",
+        "machine-learning"
+      ],
+      "city": "Boston",
+      "region": "Massachusetts",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "2027-05-10",
+      "next_date_end": "2027-05-12",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "data scientists, ML engineers",
+      "url": "https://odsc.ai/east/",
+      "description": "The east coast edition of the Open Data Science Conference, a hands-on training-heavy event for data science and machine learning practitioners.",
+      "source": "https://odsc.com/",
+      "sort_date": "2027-05-10",
+      "id": "odsc-east-boston",
+      "source_file": "categories"
+    },
+    {
       "name": "PAX East",
       "type": "expo",
       "topics": [
@@ -2653,34 +2681,6 @@
       "sort_date": "2026-05-12",
       "id": "techspo-boston-boston",
       "source_file": "us-east"
-    },
-    {
-      "name": "ODSC East",
-      "type": "conference",
-      "topics": [
-        "data-science",
-        "ai",
-        "machine-learning"
-      ],
-      "city": "Boston",
-      "region": "Massachusetts",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "data scientists, ML engineers",
-      "url": "https://odsc.com/",
-      "description": "The east coast edition of the Open Data Science Conference, a hands-on training-heavy event for data science and machine learning practitioners.",
-      "source": "https://odsc.com/",
-      "sort_date": "",
-      "id": "odsc-east-boston",
-      "source_file": "categories"
     },
     {
       "name": "Papers We Love Boston",
@@ -7489,17 +7489,17 @@
       "venue": "",
       "cadence": "annual",
       "month": "June",
-      "next_date": "",
-      "next_date_end": "",
+      "next_date": "2026-11-11",
+      "next_date_end": "2026-11-11",
       "last_date": "2026-06-06",
-      "status": "recurring-tbd",
+      "status": "upcoming",
       "attendance": "",
       "cost": "freemium",
       "audience": "security practitioners, students",
       "url": "https://bsidesfortwayne.org",
       "description": "Northeast Indiana's Security BSides chapter.",
       "source": "https://www.allbsides.com/",
-      "sort_date": "2026-06-06",
+      "sort_date": "2026-11-11",
       "id": "bsides-fort-wayne-fort-wayne",
       "source_file": "categories"
     },
@@ -8575,34 +8575,6 @@
       "source_file": "categories"
     },
     {
-      "name": "Houston Tech Rodeo",
-      "type": "tech-week",
-      "topics": [
-        "startups",
-        "energy-tech",
-        "venture-capital"
-      ],
-      "city": "Houston",
-      "region": "Texas",
-      "country": "United States",
-      "venue": "Multiple Houston venues",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "varies",
-      "audience": "founders, investors, industry leaders",
-      "url": "https://houstonexponential.org",
-      "description": "A multi-day series of events organized by the nonprofit Houston Exponential that puts investors, entrepreneurs and industry leaders together to showcase the Houston startup community.",
-      "source": "https://greentownlabs.com/event/houston-tech-rodeo/",
-      "sort_date": "",
-      "id": "houston-tech-rodeo-houston",
-      "source_file": "us-central"
-    },
-    {
       "name": "Business Value Builder Summit",
       "type": "summit",
       "topics": [
@@ -9371,34 +9343,6 @@
       "sort_date": "",
       "id": "hack-midwest-kansas-city",
       "source_file": "review-additions"
-    },
-    {
-      "name": "Metabridge Live",
-      "type": "conference",
-      "topics": [
-        "startups",
-        "scale-ups",
-        "venture-capital"
-      ],
-      "city": "Kelowna",
-      "region": "British Columbia",
-      "country": "Canada",
-      "venue": "",
-      "cadence": "annual",
-      "month": "June",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "invite-only",
-      "audience": "scale-up founders, CEOs, venture investors",
-      "url": "https://www.metabridge.ca/",
-      "description": "Canada's by-invitation technology retreat for scale-up founders and CEOs, held annually in the Okanagan with roundtables, curated experiences and C-level networking.",
-      "source": "https://www.tourismkelowna.com/blog/stories/post/annual-metabridge-live-technology-retreat-returns-to-kelowna/",
-      "sort_date": "",
-      "id": "metabridge-live-kelowna",
-      "source_file": "canada"
     },
     {
       "name": "Kent Hack Enough",
@@ -13709,6 +13653,33 @@
       "source_file": "us-east"
     },
     {
+      "name": "BSides NOLA",
+      "type": "conference",
+      "topics": [
+        "security",
+        "community"
+      ],
+      "city": "New Orleans",
+      "region": "Louisiana",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-05-11",
+      "next_date_end": "2027-05-11",
+      "last_date": "2026-05-13",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "freemium",
+      "audience": "security practitioners, students",
+      "url": "https://nolabsides.com",
+      "description": "New Orleans chapter of Security BSides, the main community security conference on the Gulf Coast.",
+      "source": "https://www.allbsides.com/",
+      "sort_date": "2027-05-11",
+      "id": "bsides-nola-new-orleans",
+      "source_file": "categories"
+    },
+    {
       "name": "3rd Coast Venture Summit",
       "type": "summit",
       "topics": [
@@ -13823,33 +13794,6 @@
       "sort_date": "2026-05-15",
       "id": "nolacon-new-orleans",
       "source_file": "review-additions-3"
-    },
-    {
-      "name": "BSides NOLA",
-      "type": "conference",
-      "topics": [
-        "security",
-        "community"
-      ],
-      "city": "New Orleans",
-      "region": "Louisiana",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "May",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-05-13",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "freemium",
-      "audience": "security practitioners, students",
-      "url": "https://nolabsides.com",
-      "description": "New Orleans chapter of Security BSides, the main community security conference on the Gulf Coast.",
-      "source": "https://www.allbsides.com/",
-      "sort_date": "2026-05-13",
-      "id": "bsides-nola-new-orleans",
-      "source_file": "categories"
     },
     {
       "name": "The Idea Village Demo Day",
@@ -16238,7 +16182,7 @@
       "attendance": "500",
       "cost": "free",
       "audience": "university students",
-      "url": "https://www.tartanhacks.com/",
+      "url": "https://www.scottylabs.org/",
       "description": "Pittsburgh's largest hackathon, run by CMU student group ScottyLabs, a 24-hour build sprint with sponsor talks and roughly $35,000 in prizes across sustainability, social impact and grand prize tracks.",
       "source": "https://the-tartan.org/2026/02/09/students-compete-in-tartanhacks/",
       "sort_date": "2026-02-06",
@@ -17224,17 +17168,17 @@
       "venue": "Microsoft Headquarters",
       "cadence": "annual",
       "month": "July-August",
-      "next_date": "",
-      "next_date_end": "",
+      "next_date": "2027-08-02",
+      "next_date_end": "2027-08-06",
       "last_date": "2026-07-27",
-      "status": "recurring-tbd",
+      "status": "upcoming",
       "attendance": "400",
       "cost": "paid",
       "audience": "dotnet developers, Microsoft-stack engineers, architects",
-      "url": "https://vslive.com/events/microsofthq-2026/home.aspx",
+      "url": "https://vslive.com/events/microsofthq-2027/home.aspx",
       "description": "Five days of deep technical training held on the Microsoft Redmond campus, covering Azure OpenAI, Copilot, AI agents and .NET, with sessions from Microsoft engineers.",
       "source": "https://vslive.com/events/microsofthq-2026/home.aspx",
-      "sort_date": "2026-07-27",
+      "sort_date": "2027-08-02",
       "id": "vslive-microsoft-hq-redmond",
       "source_file": "us-west"
     },
@@ -17829,34 +17773,6 @@
       "sort_date": "",
       "id": "ny-smart-i-corridor-semiconductor-summit-rochester",
       "source_file": "review-additions"
-    },
-    {
-      "name": "THAT Conference Texas",
-      "type": "conference",
-      "topics": [
-        "software-development",
-        "family-friendly",
-        "web-development"
-      ],
-      "city": "Round Rock",
-      "region": "Texas",
-      "country": "United States",
-      "venue": "Kalahari Resort",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "audience": "developers and their families",
-      "attendance": "",
-      "cost": "paid",
-      "url": "https://thatconference.com",
-      "description": "The Texas edition of THAT Conference, a multi-day family-friendly software development retreat at the Kalahari Resort with professional and family tracks, open spaces and a maker space.",
-      "source": "https://www.linkedin.com/company/that-conference",
-      "sort_date": "",
-      "id": "that-conference-texas-round-rock",
-      "source_file": "us-central"
     },
     {
       "name": "Sacramento Tech Week",
@@ -18912,6 +18828,34 @@
       "source_file": "categories"
     },
     {
+      "name": "ODSC West",
+      "type": "conference",
+      "topics": [
+        "data-science",
+        "ai",
+        "machine-learning"
+      ],
+      "city": "San Francisco",
+      "region": "California",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "2026-10-27",
+      "next_date_end": "2026-10-29",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "data scientists, ML engineers",
+      "url": "https://odsc.ai/west/",
+      "description": "The west coast edition of the Open Data Science Conference, focused on applied AI training and workshops.",
+      "source": "https://odsc.com/",
+      "sort_date": "2026-10-27",
+      "id": "odsc-west-san-francisco",
+      "source_file": "categories"
+    },
+    {
       "name": "TechCrunch Disrupt",
       "type": "conference",
       "topics": [
@@ -19392,34 +19336,6 @@
       "sort_date": "2025-10-24",
       "id": "cal-hacks-san-francisco",
       "source_file": "us-west"
-    },
-    {
-      "name": "ODSC West",
-      "type": "conference",
-      "topics": [
-        "data-science",
-        "ai",
-        "machine-learning"
-      ],
-      "city": "San Francisco",
-      "region": "California",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "data scientists, ML engineers",
-      "url": "https://odsc.com/",
-      "description": "The west coast edition of the Open Data Science Conference, focused on applied AI training and workshops.",
-      "source": "https://odsc.com/",
-      "sort_date": "",
-      "id": "odsc-west-san-francisco",
-      "source_file": "categories"
     },
     {
       "name": "Nerd Nite San Francisco",
@@ -20192,7 +20108,7 @@
       "attendance": "",
       "cost": "free",
       "audience": "students, researchers, industry, general public",
-      "url": "https://innovationsask.ca/",
+      "url": "https://innovationsask.ca/events/innovation-week/",
       "description": "A provincially proclaimed week of open houses and behind-the-scenes tours at Saskatchewan innovation sites, from the Canadian Light Source to agtech and nuclear research facilities.",
       "source": "https://www.saskatchewan.ca/government/news-and-media/2026/may/11/saskatchewan-proclaims-may-11-15-2026-as-innovation-week-in-saskatchewan",
       "sort_date": "2026-05-11",
@@ -20513,6 +20429,35 @@
       "source": "https://passdatacommunitysummit.com/",
       "sort_date": "2026-11-09",
       "id": "pass-data-community-summit-west-seattle",
+      "source_file": "us-west"
+    },
+    {
+      "name": "GeekWire Seattle AI Summit",
+      "type": "summit",
+      "topics": [
+        "ai",
+        "startups",
+        "policy",
+        "research"
+      ],
+      "city": "Seattle",
+      "region": "Washington",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "2026-10-27",
+      "next_date_end": "2026-10-27",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "800",
+      "cost": "paid",
+      "audience": "AI founders, researchers, investors, executives",
+      "url": "https://www.geekwire.com/calendar-event/seattleaiweek-ai-summit-2026/",
+      "description": "The flagship day of Seattle AI Week, a GeekWire-run summit of cross-sector conversations on where the region's AI ecosystem goes next.",
+      "source": "https://www.geekwire.com/calendar-event/seattleaiweek-ai-summit-2026/",
+      "sort_date": "2026-10-27",
+      "id": "geekwire-seattle-ai-summit-seattle",
       "source_file": "us-west"
     },
     {
@@ -20854,35 +20799,6 @@
       "source_file": "review-additions"
     },
     {
-      "name": "GeekWire Seattle AI Summit",
-      "type": "summit",
-      "topics": [
-        "ai",
-        "startups",
-        "policy",
-        "research"
-      ],
-      "city": "Seattle",
-      "region": "Washington",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "800",
-      "cost": "paid",
-      "audience": "AI founders, researchers, investors, executives",
-      "url": "https://www.geekwire.com/calendar-event/seattleaiweek-ai-summit-2026/",
-      "description": "The flagship day of Seattle AI Week, a GeekWire-run summit of cross-sector conversations on where the region's AI ecosystem goes next.",
-      "source": "https://www.geekwire.com/calendar-event/seattleaiweek-ai-summit-2026/",
-      "sort_date": "",
-      "id": "geekwire-seattle-ai-summit-seattle",
-      "source_file": "us-west"
-    },
-    {
       "name": "New Tech Seattle",
       "type": "meetup-series",
       "topics": [
@@ -20904,7 +20820,7 @@
       "attendance": "300",
       "cost": "freemium",
       "audience": "founders, developers, job seekers, investors",
-      "url": "https://www.geekwire.com/calendar/",
+      "url": "https://www.newtechnorthwest.com/",
       "description": "A long-running monthly Seattle tech meetup featuring startup demos, hiring announcements and large-scale community networking.",
       "source": "https://www.geekwire.com/calendar-event/new-tech-seattle-july-2026-meetup-seattle-startup-week-preview/",
       "sort_date": "",
@@ -21419,6 +21335,34 @@
       "source_file": "us-central"
     },
     {
+      "name": "MnTech Connect",
+      "type": "conference",
+      "topics": [
+        "it-leadership",
+        "ai",
+        "workforce"
+      ],
+      "city": "St. Paul",
+      "region": "Minnesota",
+      "country": "United States",
+      "venue": "Saint Paul RiverCentre",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "2027-04-01",
+      "next_date_end": "2027-04-01",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "600",
+      "cost": "paid",
+      "audience": "technology leaders, builders",
+      "url": "https://mntech.org/tech-connect/",
+      "description": "The Minnesota Technology Association's flagship annual gathering, which drew over 600 leaders, builders and innovators to the Saint Paul RiverCentre in 2026.",
+      "source": "https://mntech.org/tech-connect/",
+      "sort_date": "2027-04-01",
+      "id": "mntech-connect-st-paul",
+      "source_file": "us-central"
+    },
+    {
       "name": "SQLSaturday Minnesota",
       "type": "conference",
       "topics": [
@@ -21473,34 +21417,6 @@
       "sort_date": "2026-10-01",
       "id": "minnedemo-st-paul",
       "source_file": "review-additions"
-    },
-    {
-      "name": "MnTech Connect",
-      "type": "conference",
-      "topics": [
-        "it-leadership",
-        "ai",
-        "workforce"
-      ],
-      "city": "St. Paul",
-      "region": "Minnesota",
-      "country": "United States",
-      "venue": "Saint Paul RiverCentre",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "600",
-      "cost": "paid",
-      "audience": "technology leaders, builders",
-      "url": "https://mntech.org/tech-connect/",
-      "description": "The Minnesota Technology Association's flagship annual gathering, which drew over 600 leaders, builders and innovators to the Saint Paul RiverCentre in 2026.",
-      "source": "https://mntech.org/tech-connect/",
-      "sort_date": "",
-      "id": "mntech-connect-st-paul",
-      "source_file": "us-central"
     },
     {
       "name": "BSidesStPete",
@@ -24996,7 +24912,7 @@
       "attendance": "",
       "cost": "free",
       "audience": "game developers, artists, students",
-      "url": "https://newmediamanitoba.com/",
+      "url": "https://newmediamanitoba.com/event/pegjam-2026/",
       "description": "The Winnipeg Game Collective's annual game jam, held during Manitoba Tech Week, where teams design and build a game over a long weekend.",
       "source": "https://newmediamanitoba.com/event/manitobas-tech-week-2026-new-media-manitoba-events/",
       "sort_date": "2026-02-19",
@@ -25060,35 +24976,6 @@
       "sort_date": "",
       "id": "north-forge-fablab-open-house-winnipeg",
       "source_file": "review-additions-2"
-    },
-    {
-      "name": "THAT Conference Wisconsin",
-      "type": "conference",
-      "topics": [
-        "software-development",
-        "family-friendly",
-        "web-development",
-        "makers"
-      ],
-      "city": "Wisconsin Dells",
-      "region": "Wisconsin",
-      "country": "United States",
-      "venue": "Kalahari Resort and Waterpark",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "developers and their families",
-      "url": "https://thatconference.com",
-      "description": "A four-day family-friendly tech retreat at the Kalahari Resort combining professional and family tracks, workshops, open spaces, a maker space and networking.",
-      "source": "https://www.linkedin.com/company/that-conference",
-      "sort_date": "",
-      "id": "that-conference-wisconsin-wisconsin-dells",
-      "source_file": "us-central"
     },
     {
       "name": "Dayton Hamvention",

@@ -4,12 +4,12 @@
 checked against the organiser's own page, so a pass can spend its budget on what is
 still unknown rather than re-confirming what is settled.
 
-Updated 2026-08-26 · dataset holds 884 events.
+Updated 2026-08-26 · dataset holds 880 events.
 
 | status | count | share | meaning |
 |---|---:|---:|---|
-| `confirmed` | 739 | 83.6% | checked against the organiser's page, correct as recorded — **skip these** |
-| `corrected` | 131 | 14.8% | checked, found wrong, patched — **skip these** |
+| `confirmed` | 739 | 84.0% | checked against the organiser's page, correct as recorded — **skip these** |
+| `corrected` | 127 | 14.4% | checked, found wrong, patched — **skip these** |
 | `blocked` | 14 | 1.6% | attempted, page unreadable by fetch — **needs a web search or a human with a browser** |
 | _unchecked_ | 0 | 0.0% | never attempted — **verify these first** |
 
@@ -33,7 +33,7 @@ Write a JSON array to `data/review/confirm-<yourcycle>.json`:
 Then run `node scripts/ledger.mjs`. Use `corrected` when you also emitted a patch.
 A stronger outcome or a newer date always wins, so re-checks refresh a stale entry.
 
-## Ledger rows with no matching event (29)
+## Ledger rows with no matching event (33)
 
 These were checked, then the event was removed from the dataset by a later patch.
 Kept so the same dead lead is not researched again.
@@ -63,9 +63,13 @@ Kept so the same dead lead is not researched again.
 - **Global Game Jam - AAPI in Gaming** — Vancouver (corrected, passC): globalgamejam.org 2026 jam-site page states 'This site is Online/Virtual only' - there is no in-person Vancouver venue behind this listing
 - **Global Game Jam - Gay Gaming Professionals** — Northridge (corrected, passC): globalgamejam.org 2026 jam-site page is titled '(Online/Virtual Only)' and runs on Discord; Northridge CA is the organiser's base, not a venue
 - **HackTheU** — Salt Lake City (corrected, passC): hacktheu.org is frozen on the 2020/2021 edition - MLH 2021 trust badge, FAQ referencing 'fall hackathon 2020', dates 'October 16-18' with no current year; no forward activity in ~5 years
+- **Houston Tech Rodeo** — Houston (corrected, unblockB): SQUATTED. houstonexponential.org returns HTTP 200 but the page is titled 'houstonexponential -' and its only content is Indonesian online-slot spam ('SCATTER911 | Link RTP Situs Slot Gacor 777 Hari Ini Depo Receh', posted October 5, 2025) promoting Pragmatic Play / PG Soft casino games. The event's own domain houstontechrodeo.com is gone too - it now serves 'The Original Ice Ball Maker Australia | Say No To Ice Cubes!'. No surviving organiser page names the event. Removal patch emitted.
 - **Innovate QA** — Bellevue (corrected, passC): dev.events/NA/US/WA/Bellevue/tech is a generic Bellevue conference directory and does not list 'Innovate QA' anywhere; a dev.events site search for the name also returns nothing - the link does not describe the event
+- **Metabridge Live** — Kelowna (corrected, unblockB): SQUATTED. www.metabridge.ca redirects to metabridge.ca and returns HTTP 200 with the title 'Magpie Bridge Slot Review | Game by Aspect Gaming'; the entire page is online-casino slot review content (reels, rows, paylines, volatility, RTP, betting range). Nothing on the domain refers to Metabridge Live, Kelowna, or a tech conference. Removal patch emitted.
 - **Music City Tech** — Nashville (corrected, passC): musiccitytech.com is frozen on the September 15-17 2021 edition (Music City Code/Agile/Data tracks) with no forward activity in five years
 - **RailsConf** — Philadelphia (corrected, passC): rubycentral.org/conferences states 'After nearly 20 years, RailsConf 2025 was the final gathering of its kind' - the conference is discontinued
+- **THAT Conference Texas** — Round Rock (corrected, unblockB): DEFUNCT. thatconference.com loads (HTTP 200) and the entire homepage is a wind-down notice: 'After 15 incredible years of bringing together thousands of geeks... we're taking a pause to reimagine THAT Conference... While we won't be hosting THAT Conference, this isn't goodbye', linking to /blog/its-time-we-took-a-pause. No Texas edition is scheduled and /tx/2026 returns 404. Removal patch emitted.
+- **THAT Conference Wisconsin** — Wisconsin Dells (corrected, unblockB): DEFUNCT. Same source as the Texas record - thatconference.com's homepage is now only the pause notice ('While we won't be hosting THAT Conference, this isn't goodbye'), with no Wisconsin edition scheduled and /wi/2026 returning 404. Removal patch emitted.
 - **NVTC Cyber Summit & Cyber50 Awards** — McLean (corrected, passA): nvtc.org/events/ lists 'NVTC Cyber Summit & Cyber50 Awards, Oct 28, 2026 | McLean, VA'. Date correct; city was wrong (Reston -> McLean)
 
 ## blocked (14)
@@ -89,7 +93,7 @@ Attempted and unreadable by fetch. These are where a web search actually earns i
 | Yukon Innovation Week | Whitehorse | — | 2026-08-26 | passC | yukoninnovationweek.com returns an empty body to fetch |
 | Yukonstruct Maker Academy | Whitehorse | — | 2026-08-26 | passC | yukonstruct.com/calendar returns an empty body to fetch |
 
-## corrected (131)
+## corrected (127)
 
 Checked and patched.
 
@@ -107,11 +111,11 @@ Checked and patched.
 | BSides Calgary | Calgary | — | 2026-08-26 | cycle1-links | Bare bsidescalgary.org does not resolve; www host loads and shows BSides Calgary 2026 at Contemporary Calgary, May 25-26 2026. |
 | BSides CMH | Columbus | 2026-11-04 | 2026-08-26 | cycle1-links | Own site bsidescolumbus.com verified live: Nov 4-6 2026 with sessions Nov 5-6, presented by GuidePoint Security; replaces the generic allbsides.com link. |
 | BSides Dayton | Dayton | 2027-05-15 | 2026-08-26 | passC | bsidesdayton.com announces Saturday May 15 2027, 9:30am-5pm (Dayton area, Fairborn OH venue) - date now published |
-| BSides Fort Wayne | Fort Wayne | — | 2026-08-26 | unblockB | bsidesfortwayne.org loads (HTTP 200). Banner text: 'We are excited to announce a Fall Event on November 11th 2026 @ Brotherhood Mutual! Get Tickets here!'. The main June 6th 2026 conference is past; the newly published next in-person date is 2026-11-11 in Fort Wayne. Patch emitted. |
+| BSides Fort Wayne | Fort Wayne | 2026-11-11 | 2026-08-26 | unblockB | bsidesfortwayne.org loads (HTTP 200). Banner text: 'We are excited to announce a Fall Event on November 11th 2026 @ Brotherhood Mutual! Get Tickets here!'. The main June 6th 2026 conference is past; the newly published next in-person date is 2026-11-11 in Fort Wayne. Patch emitted. |
 | BSides Harrisburg | Harrisburg | 2027-05-21 | 2026-08-26 | cycle1-links | Bare bsideshbg.com dead; www host live and announces BSidesHBG 2027 on May 21 2027 at the PA Farm Show Complex. |
 | BSides ICS/OT | Tampa | — | 2026-08-26 | passC | bsidesics.org: event runs the day before S4; 2026 edition was Miami but the site now advertises 'BSidesICS/OT 2027 Tampa, FL' (details TBA) - next edition city is Tampa, not Miami |
 | BSides Nashville | Nashville | 2027-04-23 | 2026-08-26 | passC | bsidesnash.org announces April 23 2027, doors 8:30am, Nashville TN - date now published |
-| BSides NOLA | New Orleans | — | 2026-08-26 | unblockB | nolabsides.com redirects to bsidesnola.notion.site, which renders JS-only to curl. Read the page content through Notion's public loadPageChunk endpoint for page 315249e7-315f-8022-98e5-c97d61538355: 'BSidesNOLA May 11, 2027 tickets ON SALE NOW!' with a ticketleap link to bsidesnola-2027-may-pre-release, alongside 'BSidesNOLA 2026 may be over, but the knowledge sharing continues.' Newly published date 2027-05-11, New Orleans. Patch emitted. |
+| BSides NOLA | New Orleans | 2027-05-11 | 2026-08-26 | unblockB | nolabsides.com redirects to bsidesnola.notion.site, which renders JS-only to curl. Read the page content through Notion's public loadPageChunk endpoint for page 315249e7-315f-8022-98e5-c97d61538355: 'BSidesNOLA May 11, 2027 tickets ON SALE NOW!' with a ticketleap link to bsidesnola-2027-may-pre-release, alongside 'BSidesNOLA 2026 may be over, but the knowledge sharing continues.' Newly published date 2027-05-11, New Orleans. Patch emitted. |
 | BSides Ottawa | Ottawa | 2026-11-19 | 2026-08-26 | passB | bsidesottawa.ca (via www redirect): 'Join us November 19-20 for two days of talks, villages...' at Ottawa Conference and Event Centre, 200 Coventry Road, Ottawa ON. Record had a single-day 11-19 event; end date patched to 2026-11-20 |
 | BSides PDX | Portland | 2026-10-23 | 2026-08-26 | cycle3r2-b | bsidespdx.org states verbatim 'BSidesPDX 2026 will be on Fri Oct 23rd & Sat Oct 24th, 2026' - a two-day event. Start date 2026-10-23 is correct but the record ends it the same day. |
 | BSides Peoria | Peoria | 2026-10-24 | 2026-08-26 | cycle1-links | Own site bsidespeoria.com verified live: Oct 24 2026 at Bradley University, Peoria IL; replaces the generic allbsides.com link. |
@@ -138,12 +142,11 @@ Checked and patched.
 | Florida Technology & Innovation Solution Summit | Tampa | 2027-08-25 | 2026-08-26 | cycle1-links | The /fltechinnovationsummit26/ vanity path 404s. Florida Chamber's event index now lists the 2027 summit page: Aug 25 2027 at the Grand Hyatt Tampa Bay. |
 | Fully Connected | San Francisco | 2026-09-29 | 2026-08-26 | cycle1-links | wandb.ai/site/fully-connected/ 404s; fullyconnected.com and the W&B events page both now redirect to CoreWeave. Confirmed Sept 29 - Oct 1 2026 at Moscone South, San Francisco. |
 | GameCon Canada | Edmonton | 2027-06-25 | 2026-08-26 | passC | gameconcanada.com headlines 'JUNE 25th - 27th 2027' for the Edmonton expo - date now published |
-| GeekWire Seattle AI Summit | Seattle | — | 2026-08-26 | unblockB | geekwire.com/calendar-event/seattleaiweek-ai-summit-2026/ loads (HTTP 200), title '#SeattleAIWeek AI Summit 2026'. JSON-LD startDate 2026-10-27T09:00-07:00 / endDate 2026-10-27T18:00-07:00, venue 'Conference Center, 2211 Alaskan Way, Seattle, WA 98121'. That is a future date not currently stored. Patch emitted. |
+| GeekWire Seattle AI Summit | Seattle | 2026-10-27 | 2026-08-26 | unblockB | geekwire.com/calendar-event/seattleaiweek-ai-summit-2026/ loads (HTTP 200), title '#SeattleAIWeek AI Summit 2026'. JSON-LD startDate 2026-10-27T09:00-07:00 / endDate 2026-10-27T18:00-07:00, venue 'Conference Center, 2211 Alaskan Way, Seattle, WA 98121'. That is a future date not currently stored. Patch emitted. |
 | GOVIT Leadership Summit & Symposium | Bloomington | 2026-11-08 | 2026-08-26 | passA | Organiser page fusionlp.org/govit-2026: 'November 8-10, 2026 DoubleTree by Hilton, Bloomington, MN' - dates and city correct, but the stored url was a dev.events regional listing; replaced with the organiser's |
 | GTM Hackathon | Lehi | — | 2026-08-26 | cycle1-links | getmobly.com/gtm-hackathon was taken down after the Feb 2 2026 edition (404) and no successor page is published; pointed at the organiser's live site pending a 2027 edition page. |
 | HackUSU | Logan | 2027-02-19 | 2026-08-26 | passC | huntsman.usu.edu/hackusu announces February 19-20 2027 at 3500 Old Main Hill, Logan UT, registration open - date now published |
 | Hawaii International Conference on System Sciences | Waikoloa | 2027-01-05 | 2026-08-26 | passC | hicss.hawaii.edu announces HICSS January 5-8 2027 at the Hilton Waikoloa Village on the Big Island - date now published and venue is Waikoloa, not Honolulu |
-| Houston Tech Rodeo | Houston | — | 2026-08-26 | unblockB | SQUATTED. houstonexponential.org returns HTTP 200 but the page is titled 'houstonexponential -' and its only content is Indonesian online-slot spam ('SCATTER911 / Link RTP Situs Slot Gacor 777 Hari Ini Depo Receh', posted October 5, 2025) promoting Pragmatic Play / PG Soft casino games. The event's own domain houstontechrodeo.com is gone too - it now serves 'The Original Ice Ball Maker Australia / Say No To Ice Cubes!'. No surviving organiser page names the event. Removal patch emitted. |
 | Hoya Hacks | Washington | — | 2026-08-26 | cycle4-links | hoyahacks.com redirects to hoyahacks.georgetown.domains, verified live: HoyaHacks 2027, Georgetown University, Washington DC, January 22-24 2027, registration open. |
 | Idaho Digital Government Summit | Boise | 2026-09-01 | 2026-08-26 | passC | events.govtech.com Idaho summit page announces Tuesday September 1 2026 at Boise Centre, 850 W Front St, registration open - date now published |
 | Innovation Expo Sioux Falls | Sioux Falls | 2026-09-17 | 2026-08-26 | r2-siouxfalls | Flagged as suspicious because startupsiouxfalls.com/events/ showed nothing on 2026-09-17. The calendar is simply windowed to the current month |
@@ -161,13 +164,12 @@ Checked and patched.
 | Maker Faire Orlando | Orlando | 2026-11-07 | 2026-08-26 | cycle1-links | Own site makerfaireorlando.com verified: Nov 7-8 2026 at the Central Florida Fairgrounds & Expo Halls. |
 | Maker Faire Rochester | Rochester | 2026-11-21 | 2026-08-26 | cycle1-links | Own site rochester.makerfaire.com verified: Nov 21 2026 at the RIT Gordon Field House. |
 | Maker Faire Waterloo | Waterloo | 2026-09-13 | 2026-08-26 | cycle1-links | Own site waterloomakerfaire.org verified: Sept 13 2026 at Waterloo Public Square, Uptown Waterloo. |
-| Metabridge Live | Kelowna | — | 2026-08-26 | unblockB | SQUATTED. www.metabridge.ca redirects to metabridge.ca and returns HTTP 200 with the title 'Magpie Bridge Slot Review / Game by Aspect Gaming'; the entire page is online-casino slot review content (reels, rows, paylines, volatility, RTP, betting range). Nothing on the domain refers to Metabridge Live, Kelowna, or a tech conference. Removal patch emitted. |
 | Michigan Technology Conference | Rochester | 2026-10-28 | 2026-08-26 | passA | Organiser site mitechcon.org shows 'October 28-30, 2026 - Workshops Wednesday - Conference Thursday and Friday' at 'Oakland University, Rochester, Michigan' - dates and city correct, but the stored url was a dev.events regional listing; replaced with the organiser's |
 | Microsoft Build | San Francisco | — | 2026-08-26 | cycle1-links | Verified: Build 2026 was moved from Seattle to San Francisco and held June 2-3 2026 at Fort Mason Center, shortened to two days and application-only in person. The dataset's city a |
 | Mile High Dreamin' | Denver | — | 2026-08-26 | cycle3r2-a | Organiser domain milehighdreamin.com 302-redirects to www and now serves only a bare 'LWC Communities' welcome page with no event content; /events, /2026, /about and /index.html al |
 | Minneapolis Technology Summit | Minneapolis | 2026-10-22 | 2026-08-26 | cycle4-followups | Verified on eitevents.com/event_pages/minneapolis-technology-summit-2026/ |
 | Mississippi Digital Government Summit | Jackson | 2026-09-09 | 2026-08-26 | passC | events.govtech.com Mississippi summit page announces September 9 2026 at Sheraton Flowood The Refuge (Jackson metro), registration open - date now published |
-| MnTech Connect | St. Paul | — | 2026-08-26 | unblockB | mntech.org/tech-connect/ loads (HTTP 200) and leads with 'Save the Date for 2027! Thursday, April 1, 2027 8-5pm / Saint Paul RiverCentre'. The 2026 edition (April 9, Saint Paul RiverCentre) is recapped in the past tense. Newly published date 2027-04-01, city St. Paul confirmed by the venue. Patch emitted. |
+| MnTech Connect | St. Paul | 2027-04-01 | 2026-08-26 | unblockB | mntech.org/tech-connect/ loads (HTTP 200) and leads with 'Save the Date for 2027! Thursday, April 1, 2027 8-5pm / Saint Paul RiverCentre'. The 2026 edition (April 9, Saint Paul RiverCentre) is recapped in the past tense. Newly published date 2027-04-01, city St. Paul confirmed by the venue. Patch emitted. |
 | Montreal Games Week | Montreal | 2026-11-10 | 2026-08-26 | cycle1-links | The /en path 404s; the root domain loads and confirms the 2026 edition runs Nov 10-16 2026. |
 | Nashville Microsoft Community Day | Nashville | 2026-09-11 | 2026-08-26 | r2-redirects | Verified via communitydays.org/event/2026-09-11/nashville-microsoft-community-day |
 | Nerd Nite Austin | Austin | — | 2026-08-26 | cycle1-links | Nerd Nite chapters live at <city>.nerdnite.com; austin.nerdnite.com verified live with current event listings. |
@@ -180,8 +182,8 @@ Checked and patched.
 | New Tech Seattle | Seattle | — | 2026-08-26 | unblockB | The stored link geekwire.com/calendar/ loads (HTTP 200) but is GeekWire's generic community calendar - the string 'New Tech' appears zero times on it, so the link never names the event. The organiser's own site newtechnorthwest.com is live and lists 'New Tech Seattle September 2026 Meetup - September 15, 2026' plus 'Join us at the next monthly New Tech Seattle event'. URL patched to the organiser; left undated because it is a monthly series. |
 | NVIDIA GTC | San Jose | 2027-03-15 | 2026-08-26 | cycle3-accuracy | nvidia.com/gtc shows GTC 2027 as 'March 15-18' in San Jose ('The GTC AI conference returns to San Jose in March'). Confirmed verbatim on a second read of the same page. Dataset end |
 | NVTC Tech100 Celebration | McLean | 2026-12-15 | 2026-08-26 | orchestrator | nvtc.org JSON-LD: Tech100 Celebration, 2026-12-15 18:00-20:00, Hilton McLean Tysons Corner, McLean VA. Date correct, city was Reston. |
-| ODSC East | Boston | — | 2026-08-26 | unblockB | odsc.com/ is a generic landing page shared with the ODSC West record. odsc.com/boston/ redirects to odsc.ai/east/ (HTTP 200), which states 'Center, Boston, MA / May 10-12th, 2027'. Newly published dates 2027-05-10 to 2027-05-12 in Boston, plus an event-specific URL. Patch emitted. |
-| ODSC West | San Francisco | — | 2026-08-26 | unblockB | odsc.com/california/ redirects to odsc.ai/west/ (HTTP 200), title 'ODSC AI West 2026 - California', hero reads 'Oct 27 - Oct 29 / SAN FRANCISCO / 3 days - 7 tracks - 250+ speakers / Register Now'. Newly published dates 2026-10-27 to 2026-10-29 in San Francisco, plus an event-specific URL replacing the shared odsc.com root. Patch emitted. |
+| ODSC East | Boston | 2027-05-10 | 2026-08-26 | unblockB | odsc.com/ is a generic landing page shared with the ODSC West record. odsc.com/boston/ redirects to odsc.ai/east/ (HTTP 200), which states 'Center, Boston, MA / May 10-12th, 2027'. Newly published dates 2027-05-10 to 2027-05-12 in Boston, plus an event-specific URL. Patch emitted. |
+| ODSC West | San Francisco | 2026-10-27 | 2026-08-26 | unblockB | odsc.com/california/ redirects to odsc.ai/west/ (HTTP 200), title 'ODSC AI West 2026 - California', hero reads 'Oct 27 - Oct 29 / SAN FRANCISCO / 3 days - 7 tracks - 250+ speakers / Register Now'. Newly published dates 2026-10-27 to 2026-10-29 in San Francisco, plus an event-specific URL replacing the shared odsc.com root. Patch emitted. |
 | Oracle AI World | Las Vegas | 2026-10-25 | 2026-08-26 | orchestrator | oracle.com/ai-world/ states 'October 25-28 / Las Vegas'. CloudWorld renamed to AI World; /cloudworld/ 301s here. |
 | Papers We Love Boston | Boston | — | 2026-08-26 | cycle1-links | Papers We Love publishes per-chapter pages at /chapter/<slug>/; Boston page fetched and verified. |
 | Papers We Love Chicago | Chicago | — | 2026-08-26 | cycle1-links | Chapter listed in the paperswelove.org/chapter/ index with its own page. |
@@ -220,12 +222,10 @@ Checked and patched.
 | Tech Tomorrow | Columbus | 2026-09-09 | 2026-08-26 | cycle4-links | cio-tomorrow.com redirects to techtomorrow.events, which states 'Tech Tomorrow 2026 debuts as the reimagined CIO Tomorrow', building on a 24-year legacy. Columbus OH, September 9 2 |
 | TECHSPO Chicago | Chicago | — | 2026-08-26 | cycle4-final | techspochicago.com is flaky |
 | TennoCon | London | 2027-07-16 | 2026-08-26 | passC | tennocon.com recaps the concluded 2026 event and announces 'July 16-17 2027' with a countdown - date now published |
-| THAT Conference Texas | Round Rock | — | 2026-08-26 | unblockB | DEFUNCT. thatconference.com loads (HTTP 200) and the entire homepage is a wind-down notice: 'After 15 incredible years of bringing together thousands of geeks... we're taking a pause to reimagine THAT Conference... While we won't be hosting THAT Conference, this isn't goodbye', linking to /blog/its-time-we-took-a-pause. No Texas edition is scheduled and /tx/2026 returns 404. Removal patch emitted. |
-| THAT Conference Wisconsin | Wisconsin Dells | — | 2026-08-26 | unblockB | DEFUNCT. Same source as the Texas record - thatconference.com's homepage is now only the pause notice ('While we won't be hosting THAT Conference, this isn't goodbye'), with no Wisconsin edition scheduled and /wi/2026 returning 404. Removal patch emitted. |
 | TokioConf | Portland | — | 2026-08-26 | orchestrator | tokioconf.com publishes no 2027 dates - 'towards the end of April', 'sign up when dates are finalized'. Stored dates came from dev.events; cleared. |
 | VIATEC AI Meetup | Victoria | 2026-09-10 | 2026-08-26 | r2-newly-exposed | members.viatec.ca/tech-events 404s. The live calendar is members.viatec.ca/event-calendar, which confirms the stored 2026-09-10 date: 'VIATEC AI Meetup |
 | Vibe Coding Con | Las Vegas | 2026-10-27 | 2026-08-26 | passA | Organiser site vibecodingcon.ai shows 'October 27-28, 2026' at 'Red Rock Resort, Las Vegas' - dates and city correct, but the stored url was a dev.events regional listing page, not the event; replaced with the organiser's |
-| VSLive! @ Microsoft HQ | Redmond | — | 2026-08-26 | unblockB | The stored microsofthq-2026 page shows July 27-31, 2026, now past. vslive.com/events/microsofthq-2027/home.aspx exists and loads (HTTP 200), titled 'Microsoft HQ 2027 -- Visual Studio Live!', advertising 'AUG 2-6, 2027' with 'campus experiences waiting for you in Redmond, WA' and the Hyatt Regency Bellevue as conference hotel. URL and newly published dates 2027-08-02 to 2027-08-06 patched. |
+| VSLive! @ Microsoft HQ | Redmond | 2027-08-02 | 2026-08-26 | unblockB | The stored microsofthq-2026 page shows July 27-31, 2026, now past. vslive.com/events/microsofthq-2027/home.aspx exists and loads (HTTP 200), titled 'Microsoft HQ 2027 -- Visual Studio Live!', advertising 'AUG 2-6, 2027' with 'campus experiences waiting for you in Redmond, WA' and the Hyatt Regency Bellevue as conference hotel. URL and newly published dates 2027-08-02 to 2027-08-06 patched. |
 
 ## confirmed (739)
 

@@ -1971,7 +1971,7 @@
     "attendance": "",
     "cost": "free",
     "audience": "game developers, artists, students",
-    "url": "https://newmediamanitoba.com/",
+    "url": "https://newmediamanitoba.com/event/pegjam-2026/",
     "description": "The Winnipeg Game Collective's annual game jam, held during Manitoba Tech Week, where teams design and build a game over a long weekend.",
     "source": "https://newmediamanitoba.com/event/manitobas-tech-week-2026-new-media-manitoba-events/"
   },
@@ -2022,7 +2022,7 @@
     "attendance": "",
     "cost": "free",
     "audience": "students, researchers, industry, general public",
-    "url": "https://innovationsask.ca/",
+    "url": "https://innovationsask.ca/events/innovation-week/",
     "description": "A provincially proclaimed week of open houses and behind-the-scenes tours at Saskatchewan innovation sites, from the Canadian Light Source to agtech and nuclear research facilities.",
     "source": "https://www.saskatchewan.ca/government/news-and-media/2026/may/11/saskatchewan-proclaims-may-11-15-2026-as-innovation-week-in-saskatchewan"
   },
@@ -2354,31 +2354,6 @@
     "url": "https://members.viatec.ca/event-calendar",
     "description": "VIATEC's recurring AI meetup in Victoria, alternating between a technology track for builders and a business track for adopters.",
     "source": "https://members.viatec.ca/event-calendar"
-  },
-  {
-    "name": "Metabridge Live",
-    "type": "conference",
-    "topics": [
-      "startups",
-      "scale-ups",
-      "venture-capital"
-    ],
-    "city": "Kelowna",
-    "region": "British Columbia",
-    "country": "Canada",
-    "venue": "",
-    "cadence": "annual",
-    "month": "June",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "invite-only",
-    "audience": "scale-up founders, CEOs, venture investors",
-    "url": "https://www.metabridge.ca/",
-    "description": "Canada's by-invitation technology retreat for scale-up founders and CEOs, held annually in the Okanagan with roundtables, curated experiences and C-level networking.",
-    "source": "https://www.tourismkelowna.com/blog/stories/post/annual-metabridge-live-technology-retreat-returns-to-kelowna/"
   },
   {
     "name": "Digital Okanagan",
