@@ -99,6 +99,16 @@
     return m.length > 9 ? m.slice(0, 8) + '.' : m;
   }
 
+  /* Index of the first month named in the `month` field, so undated annual
+     events can still be ordered and grouped across the year. 99 = unknown. */
+  function monthIndex(e) {
+    var m = fold(e.month);
+    for (var i = 0; i < MONTHS.length; i++) {
+      if (m.indexOf(MONTHS[i].toLowerCase().slice(0, 3)) >= 0) return i;
+    }
+    return 99;
+  }
+
   function highlight(text, needle) {
     var out = esc(text);
     if (!needle) return out;
@@ -178,10 +188,12 @@
     return out;
   }
 
-  /* Undated recurring events always sink to the bottom of a date sort. */
+  /* Dated events lead, in date order. Undated annual events follow, ordered by
+     the month they usually run in — which is the thing you actually want when
+     planning a year around events whose next date is not announced yet. */
   function cmpDate(a, b, dir) {
     var da = keyDate(a), db = keyDate(b);
-    if (!da && !db) return a.name.localeCompare(b.name);
+    if (!da && !db) return (monthIndex(a) - monthIndex(b)) || a.name.localeCompare(b.name);
     if (!da) return 1;
     if (!db) return -1;
     if (da === db) return a.name.localeCompare(b.name);
@@ -194,8 +206,10 @@
     if (state.sort === 'city') return e.city + ', ' + e.region;
     if (state.sort === 'name') return (e.name[0] || '#').toUpperCase();
     var d = parseISO(keyDate(e));
-    if (!d) return 'Date not yet announced';
-    return MONTHS[d.getMonth()] + ' ' + d.getFullYear();
+    if (d) return MONTHS[d.getMonth()] + ' ' + d.getFullYear();
+    var mi = monthIndex(e);
+    return mi < 12 ? 'Usually ' + MONTHS[mi] + ' — date not yet announced'
+                   : 'Date not yet announced';
   }
 
   function renderRow(e, i) {
