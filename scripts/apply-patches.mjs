@@ -18,6 +18,7 @@
 import { readdirSync, readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { canonPlace } from './lib/places.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW_DIR = join(ROOT, 'data', 'raw');
@@ -37,9 +38,15 @@ for (const f of rawFiles) {
   const arr = JSON.parse(readFileSync(join(RAW_DIR, f), 'utf8'));
   store.set(f, arr);
   arr.forEach((e, i) => {
-    const k = `${norm(e.name)}|${norm(e.city)}`;
-    if (!index.has(k)) index.set(k, []);
-    index.get(k).push({ file: f, i });
+    // Patches are written against the manifest, which carries the canonical
+    // city name, while the raw record may still hold the researcher's spelling.
+    // Index under both so either form resolves to the same record.
+    const cities = new Set([e.city, canonPlace(e.city, e.region).city]);
+    for (const city of cities) {
+      const k = `${norm(e.name)}|${norm(city)}`;
+      if (!index.has(k)) index.set(k, []);
+      index.get(k).push({ file: f, i });
+    }
   });
 }
 

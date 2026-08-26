@@ -7,6 +7,7 @@
 import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { canonPlace, titleCity } from './lib/places.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW_DIR = join(ROOT, 'data', 'raw');
@@ -37,56 +38,6 @@ const slug = (s) => String(s || '')
   .replace(/\b(19|20)\d{2}\b/g, ' ')
   .replace(/[^a-z0-9]+/g, ' ')
   .trim();
-
-const titleCity = (s) => String(s || '').trim().replace(/\s+/g, ' ');
-
-/**
- * Independent researchers name the same place differently, which would split
- * one city into two entries in the picker. Key is `city|region` lowercased,
- * or just `city` to apply regardless of region.
- */
-const CITY_ALIASES = new Map(Object.entries({
-  'new york city':        ['New York', 'New York'],
-  'nyc':                  ['New York', 'New York'],
-  'manhattan':            ['New York', 'New York'],
-  'urbana':               ['Urbana-Champaign', 'Illinois'],
-  'champaign':            ['Urbana-Champaign', 'Illinois'],
-  'ankeny':               ['Des Moines', 'Iowa'],
-  'st paul':              ['St. Paul', 'Minnesota'],
-  'saint paul':           ['St. Paul', 'Minnesota'],
-  'st louis':             ['St. Louis', 'Missouri'],
-  'saint louis':          ['St. Louis', 'Missouri'],
-  'st johns':             ["St. John's", 'Newfoundland and Labrador'],
-  'washington dc':        ['Washington', 'District of Columbia'],
-  'washington, d.c.':     ['Washington', 'District of Columbia'],
-  'washington d.c.':      ['Washington', 'District of Columbia'],
-  'quebec':               ['Quebec City', 'Quebec'],
-  'montréal':             ['Montreal', 'Quebec'],
-  'kitchener-waterloo':   ['Waterloo', 'Ontario'],
-  'kitchener':            ['Waterloo', 'Ontario'],
-  'research triangle park': ['Durham', 'North Carolina'],
-  'winston salem':        ['Winston-Salem', 'North Carolina'],
-  'various':              ['Multiple cities', 'US & Canada'],
-  'multiple':             ['Multiple cities', 'US & Canada'],
-  'nationwide':           ['Multiple cities', 'US & Canada'],
-}));
-
-/** Region strings arrive as both full names and postal codes. */
-const REGION_ALIASES = new Map(Object.entries({
-  ca: 'California', ny: 'New York', tx: 'Texas', wa: 'Washington', ma: 'Massachusetts',
-  il: 'Illinois', on: 'Ontario', bc: 'British Columbia', qc: 'Quebec', ab: 'Alberta',
-  dc: 'District of Columbia', 'washington, d.c.': 'District of Columbia',
-  'washington dc': 'District of Columbia', 'd.c.': 'District of Columbia',
-  various: 'US & Canada',
-}));
-
-function canonPlace(city, region) {
-  const ck = city.toLowerCase().replace(/\./g, '').replace(/\s+/g, ' ').trim();
-  const hit = CITY_ALIASES.get(`${ck}|${region.toLowerCase()}`) || CITY_ALIASES.get(ck);
-  if (hit) return { city: hit[0], region: hit[1] };
-  const rk = region.toLowerCase().replace(/\s+/g, ' ').trim();
-  return { city, region: REGION_ALIASES.get(rk) || region };
-}
 
 function normalise(raw, file) {
   const e = { ...raw };

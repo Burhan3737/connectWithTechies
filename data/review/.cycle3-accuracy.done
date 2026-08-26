@@ -1,0 +1,68 @@
+[
+  {
+    "match": { "name": "SecTor", "city": "Toronto" },
+    "action": "update",
+    "reason": "TASK B RESOLVED. blackhat.com/sector (read through a text-extraction proxy, the site 403s bots directly) states SecTor 2026 runs 'October 6-8, 2026' at the Metro Toronto Convention Centre, with summits Tue Oct 6 and briefings/business hall Wed-Thu. The blackhat.com event list independently shows 'SecTor 2026: Oct 6-8 Toronto'. Start date in the dataset was right; end date was one day too late. The secondary source claiming Sep 30 - Oct 2 2026 is wrong and should be discarded.",
+    "set": { "next_date_end": "2026-10-08", "status": "upcoming", "source": "https://www.blackhat.com/sector/" }
+  },
+  {
+    "match": { "name": "NVIDIA GTC", "city": "San Jose" },
+    "action": "update",
+    "reason": "nvidia.com/gtc shows GTC 2027 as 'March 15-18' in San Jose ('The GTC AI conference returns to San Jose in March'). Confirmed verbatim on a second read of the same page. Dataset end date of 2027-03-19 was one day too late; start date and city are correct.",
+    "set": { "next_date_end": "2027-03-18", "source": "https://www.nvidia.com/gtc/" }
+  },
+  {
+    "match": { "name": "DEF CON", "city": "Las Vegas" },
+    "action": "update",
+    "reason": "defcon.org states DEF CON 34 concluded Aug 6-9 2026 at LVCC West Hall and that DEF CON 35 is scheduled for August 5-8, 2027 in Las Vegas at LVCC West Hall. Dataset had next_date empty; the next edition is published, so it should show as upcoming.",
+    "set": { "next_date": "2027-08-05", "next_date_end": "2027-08-08", "status": "upcoming", "source": "https://defcon.org/" }
+  },
+  {
+    "match": { "name": "Black Hat USA", "city": "Las Vegas" },
+    "action": "update",
+    "reason": "blackhat.com/us-27 (read through a text-extraction proxy; blackhat.com 403s bots) publishes Black Hat USA 2027 as 'July 31-August 5, 2027'. The blackhat.com event list carries the same range. This is the full window including trainings; briefings are the final two days. Dataset had next_date empty with last_date 2026-08-01.",
+    "set": { "next_date": "2027-07-31", "next_date_end": "2027-08-05", "status": "upcoming", "source": "https://www.blackhat.com/us-27/" }
+  },
+  {
+    "match": { "name": "Space Symposium", "city": "Colorado Springs" },
+    "action": "update",
+    "reason": "spacesymposium.org (read through a text-extraction proxy; the site 403s bots directly) publishes the next Space Symposium as April 12-15, 2027 at The Broadmoor, Colorado Springs, CO. Dataset had next_date empty. City and region in the dataset are already correct.",
+    "set": { "next_date": "2027-04-12", "next_date_end": "2027-04-15", "status": "upcoming", "venue": "The Broadmoor", "source": "https://www.spacesymposium.org/" }
+  },
+  {
+    "match": { "name": "ServiceNow Knowledge", "city": "Las Vegas" },
+    "action": "update",
+    "reason": "servicenow.com/events/knowledge.html (read through a text-extraction proxy; the page 403s bots directly) states 'Knowledge 2027 is May 4-6 in Las Vegas', marking the 20th anniversary edition. Dataset had next_date empty.",
+    "set": { "next_date": "2027-05-04", "next_date_end": "2027-05-06", "status": "upcoming", "source": "https://www.servicenow.com/events/knowledge.html" }
+  },
+  {
+    "match": { "name": "Microsoft Build", "city": "San Francisco" },
+    "action": "update",
+    "reason": "Data integrity defect, not a sourcing question: the record has an empty next_date but a populated next_date_end of 2026-06-03, which renders as a dangling end date with no start. The 2026 edition already happened (last_date 2026-06-02) and build.microsoft.com currently publishes no 2027 dates, so the end date must be cleared alongside the start per SCHEMA.md.",
+    "set": { "next_date_end": "", "status": "recurring-tbd" }
+  },
+  {
+    "match": { "name": "FIRST Championship", "city": "Houston" },
+    "action": "update",
+    "reason": "firstinspires.org/programs/first-championship gives the most recent FIRST Championship as April 29 - May 2, 2026 in Houston, Texas; no later edition is published yet. Dataset correctly had next_date empty but last_date was also empty, so the record carried no date at all.",
+    "set": { "last_date": "2026-04-29", "status": "recurring-tbd", "source": "https://www.firstinspires.org/programs/first-championship" }
+  },
+  {
+    "match": { "name": "C2 Montreal", "city": "Montreal" },
+    "action": "update",
+    "reason": "c2montreal.com states 'In 2026, C2 Montreal will be taking a pause from its annual May gathering' while a new format is explored, and lists no future dates. Not discontinued, so keeping the record with an explicit recurring-tbd status rather than removing it. next_date is already empty and no new date is invented.",
+    "set": { "status": "recurring-tbd", "source": "https://c2montreal.com/" }
+  },
+  {
+    "match": { "name": "43North Finals", "city": "Buffalo" },
+    "action": "update",
+    "reason": "43north.org announces that '2026 will mark the final 43North competition, with programming continuing through 2027 for our final cohort'. No date is published for the 2026 Finals, so next_date correctly stays empty; setting status explicitly to recurring-tbd. Flagging for a future cycle: this record will become discontinued once the 2026 Finals have run.",
+    "set": { "status": "recurring-tbd", "source": "https://43north.org/" }
+  },
+  {
+    "match": { "name": "NY Tech Meetup", "city": "New York" },
+    "action": "update",
+    "reason": "Implausible attendance for the event type. meetup.com/ny-tech shows '52,297 members' - the dataset's 52000 is the group's cumulative membership count, not the turnout at any single meetup, which is bounded by the venue and runs in the hundreds. Publishing 52000 as attendance for a meetup-series materially misleads users. No verified per-event figure is available, so clearing to empty per SCHEMA.md ('\"\" if unknown') rather than substituting a guess.",
+    "set": { "attendance": "", "source": "https://www.meetup.com/ny-tech/" }
+  }
+]

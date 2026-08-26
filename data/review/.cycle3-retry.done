@@ -1,0 +1,14 @@
+[
+  {
+    "match": {
+      "name": "NY Tech Meetup",
+      "city": "New York"
+    },
+    "action": "update",
+    "reason": "Implausible attendance for the event type. meetup.com/ny-tech shows '52,297 members' - the dataset's 52000 is the group's cumulative membership count, not the turnout at any single meetup, which is bounded by the venue and runs in the hundreds. Publishing 52000 as attendance for a meetup-series materially misleads users. No verified per-event figure is available, so clearing to empty per SCHEMA.md ('\"\" if unknown') rather than substituting a guess.",
+    "set": {
+      "attendance": "",
+      "source": "https://www.meetup.com/ny-tech/"
+    }
+  }
+]

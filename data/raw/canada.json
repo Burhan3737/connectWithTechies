@@ -67,7 +67,7 @@
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-06",
-    "next_date_end": "2026-10-09",
+    "next_date_end": "2026-10-08",
     "last_date": "",
     "status": "upcoming",
     "attendance": "",
@@ -75,7 +75,7 @@
     "audience": "security researchers, CISOs, IT security practitioners",
     "url": "https://www.blackhat.com/sector/2026/",
     "description": "Canada's largest information security conference, now part of the Black Hat family, featuring briefings, Arsenal tool demos, training and summits on AI, cloud and executive security.",
-    "source": "https://techconf.ca/conferences.csv"
+    "source": "https://www.blackhat.com/sector/"
   },
   {
     "name": "FITC Toronto",
@@ -1239,7 +1239,7 @@
     "audience": "executives, innovators, designers, technologists",
     "url": "https://c2montreal.com/",
     "description": "An immersive commerce-and-creativity conference known for unconventional session formats and collaborative labs. Organizers paused the 2026 edition to redesign the format, with plans to return in 2027.",
-    "source": "https://meet.mtl.org/en/blog/c2-montreal"
+    "source": "https://c2montreal.com/"
   },
   {
     "name": "Montreal Games Week",
