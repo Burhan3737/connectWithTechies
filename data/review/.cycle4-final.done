@@ -1,0 +1,13 @@
+[
+  {
+    "match": { "name": "TECHSPO Chicago", "city": "Chicago" },
+    "action": "update",
+    "reason": "techspochicago.com is flaky — one probe got a connection refusal, a later fetch got HTTP 500 — so the record pointed at a link that often fails. The event is real: techspo.co publishes the full city schedule and lists Chicago as 'May 19 - 20, 2026', which is now past. URL repointed to the parent schedule page, which is reliably up and links through to Chicago, and the held edition recorded in last_date.",
+    "set": {
+      "url": "https://techspo.co/",
+      "last_date": "2026-05-19",
+      "status": "recurring-tbd",
+      "source": "https://techspo.co/"
+    }
+  }
+]
