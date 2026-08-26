@@ -1,0 +1,14 @@
+{
+  "name": "fortechies",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A departures board for tech events across the United States and Canada.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-data.mjs",
+    "build:strict": "cross-env STRICT=1 node scripts/build-data.mjs",
+    "check": "node scripts/check-data.mjs",
+    "start": "npx --yes serve . -l 5173"
+  },
+  "license": "MIT"
+}
