@@ -1,0 +1,19 @@
+[
+  {
+    "match": { "name": "Polyglot Unconference", "city": "Vancouver" },
+    "action": "update",
+    "reason": "polyglotconf.com (organiser site) still advertises 'May 25th 2019, Vancouver' as its event; /2026 and /about return 404. No 2026 edition is published anywhere on the organiser's site, so the 2026-10-17 date in the record is unsupported. Site is dormant, not clearly defunct.",
+    "set": {
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2019-05-25",
+      "status": "recurring-tbd"
+    }
+  },
+  {
+    "match": { "name": "BSides PDX", "city": "Portland" },
+    "action": "update",
+    "reason": "bsidespdx.org states verbatim 'BSidesPDX 2026 will be on Fri Oct 23rd & Sat Oct 24th, 2026' - a two-day event. Start date 2026-10-23 is correct but the record ends it the same day.",
+    "set": { "next_date_end": "2026-10-24" }
+  }
+]

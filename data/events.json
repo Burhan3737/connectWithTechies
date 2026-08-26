@@ -15081,7 +15081,7 @@
       "cadence": "annual",
       "month": "October",
       "next_date": "2026-10-23",
-      "next_date_end": "2026-10-23",
+      "next_date_end": "2026-10-24",
       "last_date": "",
       "status": "upcoming",
       "attendance": "",
@@ -21584,34 +21584,6 @@
       "source_file": "canada"
     },
     {
-      "name": "Polyglot Unconference",
-      "type": "unconference",
-      "topics": [
-        "software",
-        "full-stack",
-        "community"
-      ],
-      "city": "Vancouver",
-      "region": "British Columbia",
-      "country": "Canada",
-      "venue": "",
-      "cadence": "annual",
-      "month": "October",
-      "next_date": "2026-10-17",
-      "next_date_end": "2026-10-17",
-      "last_date": "",
-      "status": "upcoming",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "software developers across languages and stacks",
-      "url": "https://polyglotconf.com/",
-      "description": "A participant-driven unconference where attendees propose and facilitate the sessions, celebrating the diversity of Vancouver's software development community.",
-      "source": "https://dev.events/NA/CA",
-      "sort_date": "2026-10-17",
-      "id": "polyglot-unconference-vancouver",
-      "source_file": "canada"
-    },
-    {
       "name": "CanSecWest",
       "type": "conference",
       "topics": [
@@ -21894,6 +21866,34 @@
       "sort_date": "2026-01-30",
       "id": "global-game-jam-aapi-in-gaming-vancouver",
       "source_file": "review-additions-2"
+    },
+    {
+      "name": "Polyglot Unconference",
+      "type": "unconference",
+      "topics": [
+        "software",
+        "full-stack",
+        "community"
+      ],
+      "city": "Vancouver",
+      "region": "British Columbia",
+      "country": "Canada",
+      "venue": "",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2019-05-25",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "software developers across languages and stacks",
+      "url": "https://polyglotconf.com/",
+      "description": "A participant-driven unconference where attendees propose and facilitate the sessions, celebrating the diversity of Vancouver's software development community.",
+      "source": "https://dev.events/NA/CA",
+      "sort_date": "2019-05-25",
+      "id": "polyglot-unconference-vancouver",
+      "source_file": "canada"
     },
     {
       "name": "PyCascades",
