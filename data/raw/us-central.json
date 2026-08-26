@@ -2,7 +2,14 @@
   {
     "name": "SXSW",
     "type": "festival",
-    "topics": ["startups", "ai", "innovation", "film", "music", "design"],
+    "topics": [
+      "startups",
+      "ai",
+      "innovation",
+      "film",
+      "music",
+      "design"
+    ],
     "city": "Austin",
     "region": "Texas",
     "country": "United States",
@@ -23,7 +30,11 @@
   {
     "name": "SXSW EDU",
     "type": "conference",
-    "topics": ["edtech", "education", "ai"],
+    "topics": [
+      "edtech",
+      "education",
+      "ai"
+    ],
     "city": "Austin",
     "region": "Texas",
     "country": "United States",
@@ -44,7 +55,12 @@
   {
     "name": "Austin Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "venture-capital", "ai", "community"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "ai",
+      "community"
+    ],
     "city": "Austin",
     "region": "Texas",
     "country": "United States",
@@ -65,7 +81,12 @@
   {
     "name": "Airflow Summit",
     "type": "conference",
-    "topics": ["data-engineering", "open-source", "ai", "orchestration"],
+    "topics": [
+      "data-engineering",
+      "open-source",
+      "ai",
+      "orchestration"
+    ],
     "city": "Austin",
     "region": "Texas",
     "country": "United States",
@@ -86,7 +107,12 @@
   {
     "name": "Rails World",
     "type": "conference",
-    "topics": ["ruby", "rails", "web-development", "open-source"],
+    "topics": [
+      "ruby",
+      "rails",
+      "web-development",
+      "open-source"
+    ],
     "city": "Austin",
     "region": "Texas",
     "country": "United States",
@@ -107,7 +133,11 @@
   {
     "name": "LASCON",
     "type": "conference",
-    "topics": ["security", "appsec", "owasp"],
+    "topics": [
+      "security",
+      "appsec",
+      "owasp"
+    ],
     "city": "Austin",
     "region": "Texas",
     "country": "United States",
@@ -128,7 +158,11 @@
   {
     "name": "Texas Linux Fest",
     "type": "conference",
-    "topics": ["linux", "open-source", "sysadmin"],
+    "topics": [
+      "linux",
+      "open-source",
+      "sysadmin"
+    ],
     "city": "Austin",
     "region": "Texas",
     "country": "United States",
@@ -149,7 +183,11 @@
   {
     "name": "Lone Star Cyber Summit",
     "type": "summit",
-    "topics": ["cybersecurity", "ciso", "risk"],
+    "topics": [
+      "cybersecurity",
+      "ciso",
+      "risk"
+    ],
     "city": "Austin",
     "region": "Texas",
     "country": "United States",
@@ -170,7 +208,11 @@
   {
     "name": "SpiceWorld",
     "type": "conference",
-    "topics": ["it-ops", "sysadmin", "community"],
+    "topics": [
+      "it-ops",
+      "sysadmin",
+      "community"
+    ],
     "city": "Austin",
     "region": "Texas",
     "country": "United States",
@@ -191,7 +233,11 @@
   {
     "name": "THAT Conference Texas",
     "type": "conference",
-    "topics": ["software-development", "family-friendly", "web-development"],
+    "topics": [
+      "software-development",
+      "family-friendly",
+      "web-development"
+    ],
     "city": "Round Rock",
     "region": "Texas",
     "country": "United States",
@@ -212,7 +258,11 @@
   {
     "name": "DFW Startup Week",
     "type": "startup-week",
-    "topics": ["startups", "entrepreneurship", "venture-capital"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "venture-capital"
+    ],
     "city": "Dallas",
     "region": "Texas",
     "country": "United States",
@@ -233,7 +283,12 @@
   {
     "name": "DevOpsDays Dallas",
     "type": "conference",
-    "topics": ["devops", "cloud", "sre", "platform-engineering"],
+    "topics": [
+      "devops",
+      "cloud",
+      "sre",
+      "platform-engineering"
+    ],
     "city": "Dallas",
     "region": "Texas",
     "country": "United States",
@@ -254,7 +309,11 @@
   {
     "name": "Venture Dallas",
     "type": "summit",
-    "topics": ["venture-capital", "startups", "investment"],
+    "topics": [
+      "venture-capital",
+      "startups",
+      "investment"
+    ],
     "city": "Dallas",
     "region": "Texas",
     "country": "United States",
@@ -275,7 +334,12 @@
   {
     "name": "TechCon 365 Dallas",
     "type": "conference",
-    "topics": ["microsoft-365", "sharepoint", "power-platform", "ai"],
+    "topics": [
+      "microsoft-365",
+      "sharepoint",
+      "power-platform",
+      "ai"
+    ],
     "city": "Dallas",
     "region": "Texas",
     "country": "United States",
@@ -296,7 +360,12 @@
   {
     "name": "posit::conf",
     "type": "conference",
-    "topics": ["data-science", "r", "python", "open-source"],
+    "topics": [
+      "data-science",
+      "r",
+      "python",
+      "open-source"
+    ],
     "city": "Houston",
     "region": "Texas",
     "country": "United States",
@@ -317,7 +386,11 @@
   {
     "name": "Houston Tech Rodeo",
     "type": "tech-week",
-    "topics": ["startups", "energy-tech", "venture-capital"],
+    "topics": [
+      "startups",
+      "energy-tech",
+      "venture-capital"
+    ],
     "city": "Houston",
     "region": "Texas",
     "country": "United States",
@@ -338,7 +411,11 @@
   {
     "name": "BSides SATX",
     "type": "conference",
-    "topics": ["cybersecurity", "hacking", "ctf"],
+    "topics": [
+      "cybersecurity",
+      "hacking",
+      "ctf"
+    ],
     "city": "San Antonio",
     "region": "Texas",
     "country": "United States",
@@ -359,7 +436,13 @@
   {
     "name": "TechChicago Week",
     "type": "tech-week",
-    "topics": ["startups", "ai", "healthtech", "fintech", "climate"],
+    "topics": [
+      "startups",
+      "ai",
+      "healthtech",
+      "fintech",
+      "climate"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -380,7 +463,12 @@
   {
     "name": "ElixirConf US",
     "type": "conference",
-    "topics": ["elixir", "phoenix", "functional-programming", "web-development"],
+    "topics": [
+      "elixir",
+      "phoenix",
+      "functional-programming",
+      "web-development"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -401,7 +489,11 @@
   {
     "name": "INDUSTRY: The Product Conference",
     "type": "conference",
-    "topics": ["product-management", "design", "leadership"],
+    "topics": [
+      "product-management",
+      "design",
+      "leadership"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -422,7 +514,12 @@
   {
     "name": "Great Lakes Software Symposium",
     "type": "conference",
-    "topics": ["java", "software-architecture", "cloud", "ai"],
+    "topics": [
+      "java",
+      "software-architecture",
+      "cloud",
+      "ai"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -443,7 +540,11 @@
   {
     "name": "BSides Chicago",
     "type": "conference",
-    "topics": ["cybersecurity", "hacking", "ctf"],
+    "topics": [
+      "cybersecurity",
+      "hacking",
+      "ctf"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -464,7 +565,11 @@
   {
     "name": "BSides 312",
     "type": "conference",
-    "topics": ["cybersecurity", "research", "workshops"],
+    "topics": [
+      "cybersecurity",
+      "research",
+      "workshops"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -485,7 +590,11 @@
   {
     "name": "Tech For Good Conference",
     "type": "conference",
-    "topics": ["civic-tech", "ai-ethics", "public-policy"],
+    "topics": [
+      "civic-tech",
+      "ai-ethics",
+      "public-policy"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -506,7 +615,11 @@
   {
     "name": "WildHacks",
     "type": "hackathon",
-    "topics": ["hackathon", "students", "software"],
+    "topics": [
+      "hackathon",
+      "students",
+      "software"
+    ],
     "city": "Evanston",
     "region": "Illinois",
     "country": "United States",
@@ -527,7 +640,11 @@
   {
     "name": "HackIllinois",
     "type": "hackathon",
-    "topics": ["hackathon", "students", "open-source"],
+    "topics": [
+      "hackathon",
+      "students",
+      "open-source"
+    ],
     "city": "Urbana-Champaign",
     "region": "Illinois",
     "country": "United States",
@@ -548,28 +665,36 @@
   {
     "name": "BSides Peoria",
     "type": "conference",
-    "topics": ["cybersecurity", "community"],
+    "topics": [
+      "cybersecurity",
+      "community"
+    ],
     "city": "Peoria",
     "region": "Illinois",
     "country": "United States",
-    "venue": "",
+    "venue": "Bradley University",
     "cadence": "annual",
     "month": "October",
-    "next_date": "",
-    "next_date_end": "",
+    "next_date": "2026-10-24",
+    "next_date_end": "2026-10-24",
     "last_date": "2025-10-25",
-    "status": "recurring-tbd",
+    "status": "upcoming",
     "attendance": "",
     "cost": "paid",
     "audience": "security practitioners, students",
-    "url": "https://www.allbsides.com",
+    "url": "https://www.bsidespeoria.com/",
     "description": "A downstate Illinois community security conference in the BSides family, offering talks and villages for regional infosec practitioners.",
     "source": "https://allbsides.com/events-in-usa.html"
   },
   {
     "name": "Michigan Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "venture-capital", "mobility", "corporate-innovation"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "mobility",
+      "corporate-innovation"
+    ],
     "city": "Detroit",
     "region": "Michigan",
     "country": "United States",
@@ -590,7 +715,12 @@
   {
     "name": "Michigan DevFest",
     "type": "conference",
-    "topics": ["android", "google-cloud", "ai", "web-development"],
+    "topics": [
+      "android",
+      "google-cloud",
+      "ai",
+      "web-development"
+    ],
     "city": "Detroit",
     "region": "Michigan",
     "country": "United States",
@@ -611,7 +741,12 @@
   {
     "name": "MHacks",
     "type": "hackathon",
-    "topics": ["hackathon", "students", "hardware", "ai"],
+    "topics": [
+      "hackathon",
+      "students",
+      "hardware",
+      "ai"
+    ],
     "city": "Ann Arbor",
     "region": "Michigan",
     "country": "United States",
@@ -632,7 +767,12 @@
   {
     "name": "Minnebar",
     "type": "unconference",
-    "topics": ["software-development", "startups", "community", "design"],
+    "topics": [
+      "software-development",
+      "startups",
+      "community",
+      "design"
+    ],
     "city": "Minneapolis",
     "region": "Minnesota",
     "country": "United States",
@@ -653,7 +793,11 @@
   {
     "name": "Minnedemo",
     "type": "demo-day",
-    "topics": ["startups", "product-demos", "community"],
+    "topics": [
+      "startups",
+      "product-demos",
+      "community"
+    ],
     "city": "Minneapolis",
     "region": "Minnesota",
     "country": "United States",
@@ -674,7 +818,11 @@
   {
     "name": "Twin Cities Software Symposium",
     "type": "conference",
-    "topics": ["java", "software-architecture", "cloud"],
+    "topics": [
+      "java",
+      "software-architecture",
+      "cloud"
+    ],
     "city": "Minneapolis",
     "region": "Minnesota",
     "country": "United States",
@@ -695,7 +843,12 @@
   {
     "name": "DevFestMN",
     "type": "conference",
-    "topics": ["ai", "android", "google-cloud", "web-development"],
+    "topics": [
+      "ai",
+      "android",
+      "google-cloud",
+      "web-development"
+    ],
     "city": "Minneapolis",
     "region": "Minnesota",
     "country": "United States",
@@ -716,7 +869,11 @@
   {
     "name": "Minneapolis Technology Summit",
     "type": "summit",
-    "topics": ["it-leadership", "cybersecurity", "cloud"],
+    "topics": [
+      "it-leadership",
+      "cybersecurity",
+      "cloud"
+    ],
     "city": "Minneapolis",
     "region": "Minnesota",
     "country": "United States",
@@ -737,7 +894,11 @@
   {
     "name": "MnTech Connect",
     "type": "conference",
-    "topics": ["it-leadership", "ai", "workforce"],
+    "topics": [
+      "it-leadership",
+      "ai",
+      "workforce"
+    ],
     "city": "St. Paul",
     "region": "Minnesota",
     "country": "United States",
@@ -758,7 +919,11 @@
   {
     "name": "SQLSaturday Minnesota",
     "type": "conference",
-    "topics": ["sql-server", "data", "microsoft"],
+    "topics": [
+      "sql-server",
+      "data",
+      "microsoft"
+    ],
     "city": "St. Paul",
     "region": "Minnesota",
     "country": "United States",
@@ -779,7 +944,12 @@
   {
     "name": "Forward Fest",
     "type": "festival",
-    "topics": ["startups", "entrepreneurship", "ai", "community"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "ai",
+      "community"
+    ],
     "city": "Madison",
     "region": "Wisconsin",
     "country": "United States",
@@ -800,7 +970,11 @@
   {
     "name": "MDEV",
     "type": "conference",
-    "topics": ["game-development", "gaming", "indie-games"],
+    "topics": [
+      "game-development",
+      "gaming",
+      "indie-games"
+    ],
     "city": "Madison",
     "region": "Wisconsin",
     "country": "United States",
@@ -821,7 +995,12 @@
   {
     "name": "THAT Conference Wisconsin",
     "type": "conference",
-    "topics": ["software-development", "family-friendly", "web-development", "makers"],
+    "topics": [
+      "software-development",
+      "family-friendly",
+      "web-development",
+      "makers"
+    ],
     "city": "Wisconsin Dells",
     "region": "Wisconsin",
     "country": "United States",
@@ -842,7 +1021,12 @@
   {
     "name": "Summerfest Tech",
     "type": "conference",
-    "topics": ["startups", "ai", "manufacturing", "healthtech"],
+    "topics": [
+      "startups",
+      "ai",
+      "manufacturing",
+      "healthtech"
+    ],
     "city": "Milwaukee",
     "region": "Wisconsin",
     "country": "United States",
@@ -863,7 +1047,12 @@
   {
     "name": "CypherCon",
     "type": "conference",
-    "topics": ["cybersecurity", "hacking", "cryptography", "hardware-hacking"],
+    "topics": [
+      "cybersecurity",
+      "hacking",
+      "cryptography",
+      "hardware-hacking"
+    ],
     "city": "Milwaukee",
     "region": "Wisconsin",
     "country": "United States",
@@ -884,7 +1073,11 @@
   {
     "name": "BSides MKE",
     "type": "conference",
-    "topics": ["cybersecurity", "ai-security", "careers"],
+    "topics": [
+      "cybersecurity",
+      "ai-security",
+      "careers"
+    ],
     "city": "Milwaukee",
     "region": "Wisconsin",
     "country": "United States",
@@ -905,7 +1098,11 @@
   {
     "name": "Launch Wisconsin",
     "type": "demo-day",
-    "topics": ["startups", "pitch-competition", "venture-capital"],
+    "topics": [
+      "startups",
+      "pitch-competition",
+      "venture-capital"
+    ],
     "city": "Milwaukee",
     "region": "Wisconsin",
     "country": "United States",
@@ -926,7 +1123,11 @@
   {
     "name": "Midwest Gaming Classic",
     "type": "expo",
-    "topics": ["gaming", "retro-gaming", "arcade"],
+    "topics": [
+      "gaming",
+      "retro-gaming",
+      "arcade"
+    ],
     "city": "Milwaukee",
     "region": "Wisconsin",
     "country": "United States",
@@ -947,7 +1148,13 @@
   {
     "name": "Rally Innovation Conference",
     "type": "conference",
-    "topics": ["startups", "venture-capital", "agtech", "healthtech", "sportstech"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "agtech",
+      "healthtech",
+      "sportstech"
+    ],
     "city": "Indianapolis",
     "region": "Indiana",
     "country": "United States",
@@ -968,7 +1175,11 @@
   {
     "name": "Mira Awards",
     "type": "awards",
-    "topics": ["startups", "tech-community", "awards"],
+    "topics": [
+      "startups",
+      "tech-community",
+      "awards"
+    ],
     "city": "Indianapolis",
     "region": "Indiana",
     "country": "United States",
@@ -989,7 +1200,11 @@
   {
     "name": "Indy Women in Tech Summit",
     "type": "summit",
-    "topics": ["women-in-tech", "leadership", "careers"],
+    "topics": [
+      "women-in-tech",
+      "leadership",
+      "careers"
+    ],
     "city": "Indianapolis",
     "region": "Indiana",
     "country": "United States",
@@ -1010,7 +1225,11 @@
   {
     "name": "IND(Venture) Indiana Venture Summit",
     "type": "summit",
-    "topics": ["venture-capital", "startups", "investment"],
+    "topics": [
+      "venture-capital",
+      "startups",
+      "investment"
+    ],
     "city": "Indianapolis",
     "region": "Indiana",
     "country": "United States",
@@ -1031,11 +1250,15 @@
   {
     "name": "BSides Bloomington",
     "type": "conference",
-    "topics": ["cybersecurity", "research", "community"],
+    "topics": [
+      "cybersecurity",
+      "research",
+      "community"
+    ],
     "city": "Bloomington",
     "region": "Indiana",
     "country": "United States",
-    "venue": "",
+    "venue": "Bloomington Convention Center",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-02",
@@ -1045,14 +1268,17 @@
     "attendance": "",
     "cost": "paid",
     "audience": "security practitioners, students",
-    "url": "https://www.allbsides.com",
+    "url": "https://www.bsidesbloomington.org/",
     "description": "A community-run security conference in Bloomington, Indiana with talks, villages and networking for regional infosec practitioners and Indiana University students.",
     "source": "https://dev.events/NA/US/IN/tech"
   },
   {
     "name": "BSides Fort Wayne",
     "type": "conference",
-    "topics": ["cybersecurity", "community"],
+    "topics": [
+      "cybersecurity",
+      "community"
+    ],
     "city": "Fort Wayne",
     "region": "Indiana",
     "country": "United States",
@@ -1073,7 +1299,13 @@
   {
     "name": "STL TechWeek",
     "type": "tech-week",
-    "topics": ["ai", "cybersecurity", "geospatial", "healthtech", "startups"],
+    "topics": [
+      "ai",
+      "cybersecurity",
+      "geospatial",
+      "healthtech",
+      "startups"
+    ],
     "city": "St. Louis",
     "region": "Missouri",
     "country": "United States",
@@ -1094,7 +1326,11 @@
   {
     "name": "BSidesSTL",
     "type": "conference",
-    "topics": ["cybersecurity", "hacking", "community"],
+    "topics": [
+      "cybersecurity",
+      "hacking",
+      "community"
+    ],
     "city": "St. Louis",
     "region": "Missouri",
     "country": "United States",
@@ -1115,7 +1351,11 @@
   {
     "name": "SecureWorld St. Louis",
     "type": "conference",
-    "topics": ["cybersecurity", "ciso", "compliance"],
+    "topics": [
+      "cybersecurity",
+      "ciso",
+      "compliance"
+    ],
     "city": "St. Louis",
     "region": "Missouri",
     "country": "United States",
@@ -1136,7 +1376,12 @@
   {
     "name": "Kansas City Developer Conference",
     "type": "conference",
-    "topics": ["software-development", "cloud", "ai", "architecture"],
+    "topics": [
+      "software-development",
+      "cloud",
+      "ai",
+      "architecture"
+    ],
     "city": "Kansas City",
     "region": "Missouri",
     "country": "United States",
@@ -1157,7 +1402,12 @@
   {
     "name": "DevOpsDays Kansas City",
     "type": "conference",
-    "topics": ["devops", "cloud", "sre", "community"],
+    "topics": [
+      "devops",
+      "cloud",
+      "sre",
+      "community"
+    ],
     "city": "Overland Park",
     "region": "Kansas",
     "country": "United States",
@@ -1178,7 +1428,12 @@
   {
     "name": "BSidesKC",
     "type": "conference",
-    "topics": ["cybersecurity", "ctf", "osint", "lockpicking"],
+    "topics": [
+      "cybersecurity",
+      "ctf",
+      "osint",
+      "lockpicking"
+    ],
     "city": "Kansas City",
     "region": "Kansas",
     "country": "United States",
@@ -1199,7 +1454,11 @@
   {
     "name": "Bank Technology & Operations Conference & Showcase",
     "type": "conference",
-    "topics": ["fintech", "banking-technology", "operations"],
+    "topics": [
+      "fintech",
+      "banking-technology",
+      "operations"
+    ],
     "city": "Wichita",
     "region": "Kansas",
     "country": "United States",
@@ -1220,7 +1479,11 @@
   {
     "name": "Manufacturing Day at WSU Tech",
     "type": "career-fair",
-    "topics": ["advanced-manufacturing", "aviation", "careers"],
+    "topics": [
+      "advanced-manufacturing",
+      "aviation",
+      "careers"
+    ],
     "city": "Wichita",
     "region": "Kansas",
     "country": "United States",
@@ -1241,7 +1504,12 @@
   {
     "name": "Nebraska.Code()",
     "type": "conference",
-    "topics": ["software-development", "cloud", "ai", "architecture"],
+    "topics": [
+      "software-development",
+      "cloud",
+      "ai",
+      "architecture"
+    ],
     "city": "Lincoln",
     "region": "Nebraska",
     "country": "United States",
@@ -1262,7 +1530,11 @@
   {
     "name": "Midwest Entrepreneurship Conference",
     "type": "conference",
-    "topics": ["entrepreneurship", "startups", "students"],
+    "topics": [
+      "entrepreneurship",
+      "startups",
+      "students"
+    ],
     "city": "Omaha",
     "region": "Nebraska",
     "country": "United States",
@@ -1283,7 +1555,11 @@
   {
     "name": "Startup Weekend Omaha",
     "type": "hackathon",
-    "topics": ["startups", "entrepreneurship", "pitch-competition"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "pitch-competition"
+    ],
     "city": "Omaha",
     "region": "Nebraska",
     "country": "United States",
@@ -1304,7 +1580,11 @@
   {
     "name": "Iowa Tech Week",
     "type": "tech-week",
-    "topics": ["it-leadership", "ai", "community"],
+    "topics": [
+      "it-leadership",
+      "ai",
+      "community"
+    ],
     "city": "Des Moines",
     "region": "Iowa",
     "country": "United States",
@@ -1325,7 +1605,11 @@
   {
     "name": "Iowa Technology Summit",
     "type": "summit",
-    "topics": ["it-leadership", "ai", "innovation"],
+    "topics": [
+      "it-leadership",
+      "ai",
+      "innovation"
+    ],
     "city": "Des Moines",
     "region": "Iowa",
     "country": "United States",
@@ -1346,7 +1630,13 @@
   {
     "name": "Iowa Startup Week",
     "type": "startup-week",
-    "topics": ["startups", "agtech", "medtech", "fintech", "venture-capital"],
+    "topics": [
+      "startups",
+      "agtech",
+      "medtech",
+      "fintech",
+      "venture-capital"
+    ],
     "city": "Des Moines",
     "region": "Iowa",
     "country": "United States",
@@ -1367,11 +1657,15 @@
   {
     "name": "Central Iowa Software Symposium",
     "type": "conference",
-    "topics": ["java", "software-architecture", "cloud"],
+    "topics": [
+      "java",
+      "software-architecture",
+      "cloud"
+    ],
     "city": "Des Moines",
     "region": "Iowa",
     "country": "United States",
-    "venue": "",
+    "venue": "West Des Moines Marriott",
     "cadence": "annual",
     "month": "September",
     "next_date": "2026-09-17",
@@ -1381,14 +1675,19 @@
     "attendance": "",
     "cost": "paid",
     "audience": "Java developers, architects",
-    "url": "https://nofluffjuststuff.com/des-moines",
+    "url": "https://nofluffjuststuff.com/desmoines",
     "description": "The Des Moines stop on the No Fluff Just Stuff tour, two days of deep technical sessions for JVM developers and software architects.",
     "source": "https://dev.events/NA/US/IA/tech"
   },
   {
     "name": "Iowa Code Camp",
     "type": "conference",
-    "topics": ["software-development", "javascript", "cloud", "databases"],
+    "topics": [
+      "software-development",
+      "javascript",
+      "cloud",
+      "databases"
+    ],
     "city": "Ankeny",
     "region": "Iowa",
     "country": "United States",
@@ -1409,7 +1708,10 @@
   {
     "name": "BSides Des Moines",
     "type": "conference",
-    "topics": ["cybersecurity", "community"],
+    "topics": [
+      "cybersecurity",
+      "community"
+    ],
     "city": "Ankeny",
     "region": "Iowa",
     "country": "United States",
@@ -1430,7 +1732,11 @@
   {
     "name": "ThunderPlains",
     "type": "conference",
-    "topics": ["software-development", "web-development", "community"],
+    "topics": [
+      "software-development",
+      "web-development",
+      "community"
+    ],
     "city": "Oklahoma City",
     "region": "Oklahoma",
     "country": "United States",
@@ -1451,7 +1757,12 @@
   {
     "name": "BSidesOK",
     "type": "conference",
-    "topics": ["cybersecurity", "ai-security", "training", "students"],
+    "topics": [
+      "cybersecurity",
+      "ai-security",
+      "training",
+      "students"
+    ],
     "city": "Glenpool",
     "region": "Oklahoma",
     "country": "United States",
@@ -1460,7 +1771,7 @@
     "month": "April",
     "next_date": "",
     "next_date_end": "",
-    "last_date": "2026-04-06",
+    "last_date": "2026-04-08",
     "status": "recurring-tbd",
     "attendance": "",
     "cost": "free",
@@ -1472,7 +1783,11 @@
   {
     "name": "Oklahoma Innovation Day",
     "type": "expo",
-    "topics": ["innovation", "research", "startups"],
+    "topics": [
+      "innovation",
+      "research",
+      "startups"
+    ],
     "city": "Oklahoma City",
     "region": "Oklahoma",
     "country": "United States",
@@ -1493,7 +1808,13 @@
   {
     "name": "Tulsa Tech Week",
     "type": "tech-week",
-    "topics": ["cybersecurity", "aerospace", "energy", "advanced-manufacturing", "autonomous-systems"],
+    "topics": [
+      "cybersecurity",
+      "aerospace",
+      "energy",
+      "advanced-manufacturing",
+      "autonomous-systems"
+    ],
     "city": "Tulsa",
     "region": "Oklahoma",
     "country": "United States",
@@ -1514,7 +1835,11 @@
   {
     "name": "CHROMA",
     "type": "conference",
-    "topics": ["startups", "venture-capital", "corporate-innovation"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "corporate-innovation"
+    ],
     "city": "Tulsa",
     "region": "Oklahoma",
     "country": "United States",
@@ -1535,7 +1860,13 @@
   {
     "name": "New Orleans Entrepreneur Week",
     "type": "startup-week",
-    "topics": ["startups", "entrepreneurship", "climate", "healthtech", "culture"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "climate",
+      "healthtech",
+      "culture"
+    ],
     "city": "New Orleans",
     "region": "Louisiana",
     "country": "United States",
@@ -1554,30 +1885,13 @@
     "source": "https://www.noew.org/"
   },
   {
-    "name": "KubeCon + CloudNativeCon North America",
-    "type": "conference",
-    "topics": ["kubernetes", "cloud-native", "open-source", "devops"],
-    "city": "New Orleans",
-    "region": "Louisiana",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "November",
-    "next_date": "2027-11-08",
-    "next_date_end": "2027-11-11",
-    "last_date": "",
-    "status": "upcoming",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "platform engineers, SREs, cloud-native developers",
-    "url": "https://www.cncf.io/kubecon-cloudnativecon-events/",
-    "description": "The CNCF's flagship North American cloud-native conference, bringing thousands of Kubernetes and open-source infrastructure practitioners to New Orleans in 2027.",
-    "source": "https://dev.events/NA/US/LA/tech"
-  },
-  {
     "name": "3686",
     "type": "conference",
-    "topics": ["startups", "venture-capital", "entrepreneurship"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "entrepreneurship"
+    ],
     "city": "Nashville",
     "region": "Tennessee",
     "country": "United States",
@@ -1598,7 +1912,11 @@
   {
     "name": "GNTC Summit",
     "type": "summit",
-    "topics": ["it-leadership", "ai", "workforce"],
+    "topics": [
+      "it-leadership",
+      "ai",
+      "workforce"
+    ],
     "city": "Nashville",
     "region": "Tennessee",
     "country": "United States",
@@ -1619,7 +1937,12 @@
   {
     "name": "DataTune",
     "type": "conference",
-    "topics": ["data", "analytics", "ai", "machine-learning"],
+    "topics": [
+      "data",
+      "analytics",
+      "ai",
+      "machine-learning"
+    ],
     "city": "Nashville",
     "region": "Tennessee",
     "country": "United States",
@@ -1640,7 +1963,11 @@
   {
     "name": "Music City Tech",
     "type": "conference",
-    "topics": ["software-development", "agile", "data"],
+    "topics": [
+      "software-development",
+      "agile",
+      "data"
+    ],
     "city": "Nashville",
     "region": "Tennessee",
     "country": "United States",
@@ -1661,7 +1988,11 @@
   {
     "name": "Bitcoin Conference",
     "type": "conference",
-    "topics": ["bitcoin", "crypto", "fintech"],
+    "topics": [
+      "bitcoin",
+      "crypto",
+      "fintech"
+    ],
     "city": "Nashville",
     "region": "Tennessee",
     "country": "United States",
@@ -1682,7 +2013,10 @@
   {
     "name": "BSides Nashville",
     "type": "conference",
-    "topics": ["cybersecurity", "community"],
+    "topics": [
+      "cybersecurity",
+      "community"
+    ],
     "city": "Nashville",
     "region": "Tennessee",
     "country": "United States",
@@ -1703,7 +2037,12 @@
   {
     "name": "DelTech Conference",
     "type": "conference",
-    "topics": ["startups", "medtech", "tourism-tech", "innovation"],
+    "topics": [
+      "startups",
+      "medtech",
+      "tourism-tech",
+      "innovation"
+    ],
     "city": "Memphis",
     "region": "Tennessee",
     "country": "United States",
@@ -1724,7 +2063,10 @@
   {
     "name": "BSides Memphis",
     "type": "conference",
-    "topics": ["cybersecurity", "community"],
+    "topics": [
+      "cybersecurity",
+      "community"
+    ],
     "city": "Memphis",
     "region": "Tennessee",
     "country": "United States",
@@ -1745,7 +2087,11 @@
   {
     "name": "Innovate 901",
     "type": "demo-day",
-    "topics": ["entrepreneurship", "students", "pitch-competition"],
+    "topics": [
+      "entrepreneurship",
+      "students",
+      "pitch-competition"
+    ],
     "city": "Memphis",
     "region": "Tennessee",
     "country": "United States",
@@ -1766,7 +2112,10 @@
   {
     "name": "BSides Knoxville",
     "type": "conference",
-    "topics": ["cybersecurity", "community"],
+    "topics": [
+      "cybersecurity",
+      "community"
+    ],
     "city": "Knoxville",
     "region": "Tennessee",
     "country": "United States",
@@ -1787,7 +2136,11 @@
   {
     "name": "Chattanooga Entrepreneur Week",
     "type": "startup-week",
-    "topics": ["entrepreneurship", "startups", "small-business"],
+    "topics": [
+      "entrepreneurship",
+      "startups",
+      "small-business"
+    ],
     "city": "Chattanooga",
     "region": "Tennessee",
     "country": "United States",
@@ -1808,7 +2161,13 @@
   {
     "name": "TechFest Louisville",
     "type": "conference",
-    "topics": ["ai", "cybersecurity", "healthtech", "nlp", "robotics"],
+    "topics": [
+      "ai",
+      "cybersecurity",
+      "healthtech",
+      "nlp",
+      "robotics"
+    ],
     "city": "Louisville",
     "region": "Kentucky",
     "country": "United States",
@@ -1829,7 +2188,12 @@
   {
     "name": "Kentucky Digital Government Summit",
     "type": "summit",
-    "topics": ["govtech", "cybersecurity", "ai", "public-sector"],
+    "topics": [
+      "govtech",
+      "cybersecurity",
+      "ai",
+      "public-sector"
+    ],
     "city": "Louisville",
     "region": "Kentucky",
     "country": "United States",
@@ -1850,7 +2214,12 @@
   {
     "name": "NWA Tech Summit",
     "type": "summit",
-    "topics": ["ai", "retail-tech", "supply-chain", "workforce"],
+    "topics": [
+      "ai",
+      "retail-tech",
+      "supply-chain",
+      "workforce"
+    ],
     "city": "Bentonville",
     "region": "Arkansas",
     "country": "United States",
@@ -1871,7 +2240,12 @@
   {
     "name": "Forge Summit",
     "type": "summit",
-    "topics": ["cybersecurity", "ai", "critical-infrastructure", "defense"],
+    "topics": [
+      "cybersecurity",
+      "ai",
+      "critical-infrastructure",
+      "defense"
+    ],
     "city": "North Little Rock",
     "region": "Arkansas",
     "country": "United States",
@@ -1892,7 +2266,12 @@
   {
     "name": "Accelerate Conference",
     "type": "conference",
-    "topics": ["startups", "venture-capital", "sbir", "digital-transformation"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "sbir",
+      "digital-transformation"
+    ],
     "city": "Flowood",
     "region": "Mississippi",
     "country": "United States",
@@ -1913,7 +2292,12 @@
   {
     "name": "Mississippi Technology Expo",
     "type": "expo",
-    "topics": ["it-ops", "ai", "cybersecurity", "public-sector"],
+    "topics": [
+      "it-ops",
+      "ai",
+      "cybersecurity",
+      "public-sector"
+    ],
     "city": "Jackson",
     "region": "Mississippi",
     "country": "United States",
@@ -1934,7 +2318,11 @@
   {
     "name": "National Cyber Summit",
     "type": "summit",
-    "topics": ["cybersecurity", "defense", "workforce-development"],
+    "topics": [
+      "cybersecurity",
+      "defense",
+      "workforce-development"
+    ],
     "city": "Huntsville",
     "region": "Alabama",
     "country": "United States",
@@ -1955,7 +2343,11 @@
   {
     "name": "Southeast Cybersecurity Summit",
     "type": "summit",
-    "topics": ["cybersecurity", "ai", "infragard"],
+    "topics": [
+      "cybersecurity",
+      "ai",
+      "infragard"
+    ],
     "city": "Birmingham",
     "region": "Alabama",
     "country": "United States",
@@ -1976,7 +2368,12 @@
   {
     "name": "CodeMash",
     "type": "conference",
-    "topics": ["software-development", "family-friendly", "cloud", "ai"],
+    "topics": [
+      "software-development",
+      "family-friendly",
+      "cloud",
+      "ai"
+    ],
     "city": "Sandusky",
     "region": "Ohio",
     "country": "United States",
@@ -1997,7 +2394,13 @@
   {
     "name": "Stir Trek",
     "type": "conference",
-    "topics": ["web-development", "mobile", "cloud", "ux", "security"],
+    "topics": [
+      "web-development",
+      "mobile",
+      "cloud",
+      "ux",
+      "security"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2018,7 +2421,12 @@
   {
     "name": "DataConnect Conference",
     "type": "conference",
-    "topics": ["data", "analytics", "ai", "women-in-tech"],
+    "topics": [
+      "data",
+      "analytics",
+      "ai",
+      "women-in-tech"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2039,7 +2447,11 @@
   {
     "name": "HackOHI/O",
     "type": "hackathon",
-    "topics": ["hackathon", "students", "software"],
+    "topics": [
+      "hackathon",
+      "students",
+      "software"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2060,7 +2472,11 @@
   {
     "name": "MakeOHI/O",
     "type": "hackathon",
-    "topics": ["hardware", "makers", "students"],
+    "topics": [
+      "hardware",
+      "makers",
+      "students"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2081,7 +2497,11 @@
   {
     "name": "Hack AI",
     "type": "hackathon",
-    "topics": ["ai", "machine-learning", "students"],
+    "topics": [
+      "ai",
+      "machine-learning",
+      "students"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2102,7 +2522,11 @@
   {
     "name": "Central Ohio Software Symposium",
     "type": "conference",
-    "topics": ["java", "software-architecture", "cloud"],
+    "topics": [
+      "java",
+      "software-architecture",
+      "cloud"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2123,7 +2547,11 @@
   {
     "name": "Columbus Startup Week",
     "type": "startup-week",
-    "topics": ["startups", "entrepreneurship", "venture-capital"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "venture-capital"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2144,7 +2572,12 @@
   {
     "name": "GDEX",
     "type": "expo",
-    "topics": ["gaming", "game-development", "indie-games", "esports"],
+    "topics": [
+      "gaming",
+      "game-development",
+      "indie-games",
+      "esports"
+    ],
     "city": "Newark",
     "region": "Ohio",
     "country": "United States",
@@ -2165,28 +2598,35 @@
   {
     "name": "BSides CMH",
     "type": "conference",
-    "topics": ["cybersecurity", "community"],
+    "topics": [
+      "cybersecurity",
+      "community"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
     "venue": "",
     "cadence": "annual",
     "month": "September",
-    "next_date": "",
-    "next_date_end": "",
+    "next_date": "2026-11-04",
+    "next_date_end": "2026-11-06",
     "last_date": "2025-09-18",
-    "status": "recurring-tbd",
+    "status": "upcoming",
     "attendance": "",
     "cost": "paid",
     "audience": "security practitioners",
-    "url": "https://www.allbsides.com",
+    "url": "https://www.bsidescolumbus.com/",
     "description": "Columbus's community-run information security conference with practitioner talks, villages and networking.",
     "source": "https://allbsides.com/events-in-usa.html"
   },
   {
     "name": "PyOhio",
     "type": "conference",
-    "topics": ["python", "open-source", "community"],
+    "topics": [
+      "python",
+      "open-source",
+      "community"
+    ],
     "city": "Cleveland",
     "region": "Ohio",
     "country": "United States",
@@ -2207,7 +2647,11 @@
   {
     "name": "JumpStart VC Fest",
     "type": "conference",
-    "topics": ["venture-capital", "startups", "corporate-innovation"],
+    "topics": [
+      "venture-capital",
+      "startups",
+      "corporate-innovation"
+    ],
     "city": "Cleveland",
     "region": "Ohio",
     "country": "United States",
@@ -2228,7 +2672,10 @@
   {
     "name": "BSides Cleveland",
     "type": "conference",
-    "topics": ["cybersecurity", "community"],
+    "topics": [
+      "cybersecurity",
+      "community"
+    ],
     "city": "Cleveland",
     "region": "Ohio",
     "country": "United States",
@@ -2249,7 +2696,11 @@
   {
     "name": "StartupCincy Week",
     "type": "startup-week",
-    "topics": ["startups", "venture-capital", "entrepreneurship"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "entrepreneurship"
+    ],
     "city": "Cincinnati",
     "region": "Ohio",
     "country": "United States",
@@ -2270,7 +2721,13 @@
   {
     "name": "Black Tech Week",
     "type": "tech-week",
-    "topics": ["diversity", "startups", "venture-capital", "ai", "careers"],
+    "topics": [
+      "diversity",
+      "startups",
+      "venture-capital",
+      "ai",
+      "careers"
+    ],
     "city": "Cincinnati",
     "region": "Ohio",
     "country": "United States",
@@ -2291,7 +2748,11 @@
   {
     "name": "Cincy AI Week",
     "type": "tech-week",
-    "topics": ["ai", "machine-learning", "community"],
+    "topics": [
+      "ai",
+      "machine-learning",
+      "community"
+    ],
     "city": "Cincinnati",
     "region": "Ohio",
     "country": "United States",
@@ -2312,7 +2773,10 @@
   {
     "name": "BSides Dayton",
     "type": "conference",
-    "topics": ["cybersecurity", "community"],
+    "topics": [
+      "cybersecurity",
+      "community"
+    ],
     "city": "Dayton",
     "region": "Ohio",
     "country": "United States",
@@ -2331,30 +2795,14 @@
     "source": "https://allbsides.com/events-in-usa.html"
   },
   {
-    "name": "OhioX Ohio Tech Summit",
-    "type": "summit",
-    "topics": ["it-leadership", "ai", "policy", "innovation"],
-    "city": "Columbus",
-    "region": "Ohio",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "May",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "2026-05-14",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "technology executives, policymakers, founders",
-    "url": "https://www.ohiox.org/events",
-    "description": "OhioX's statewide technology summit convening enterprise technology leaders, startups and policymakers around Ohio's tech and AI agenda.",
-    "source": "https://www.techlifecolumbus.com/tech-conferences/"
-  },
-  {
     "name": "AgTech Week",
     "type": "tech-week",
-    "topics": ["agtech", "autonomous-systems", "data", "startups"],
+    "topics": [
+      "agtech",
+      "autonomous-systems",
+      "data",
+      "startups"
+    ],
     "city": "Fargo",
     "region": "North Dakota",
     "country": "United States",
@@ -2375,7 +2823,11 @@
   {
     "name": "IgniteND",
     "type": "conference",
-    "topics": ["edtech", "ai", "education"],
+    "topics": [
+      "edtech",
+      "ai",
+      "education"
+    ],
     "city": "Valley City",
     "region": "North Dakota",
     "country": "United States",
@@ -2396,7 +2848,11 @@
   {
     "name": "Innovation Expo Sioux Falls",
     "type": "expo",
-    "topics": ["startups", "entrepreneurship", "investment"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "investment"
+    ],
     "city": "Sioux Falls",
     "region": "South Dakota",
     "country": "United States",
@@ -2417,7 +2873,11 @@
   {
     "name": "ITS Northern Lights Conference",
     "type": "conference",
-    "topics": ["transportation-tech", "smart-cities", "its"],
+    "topics": [
+      "transportation-tech",
+      "smart-cities",
+      "its"
+    ],
     "city": "Sioux Falls",
     "region": "South Dakota",
     "country": "United States",
@@ -2438,7 +2898,11 @@
   {
     "name": "Startup Sioux Falls Founders Meetup",
     "type": "meetup-series",
-    "topics": ["startups", "entrepreneurship", "community"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "community"
+    ],
     "city": "Sioux Falls",
     "region": "South Dakota",
     "country": "United States",
@@ -2459,7 +2923,12 @@
   {
     "name": "Techlahoma Community Meetups",
     "type": "meetup-series",
-    "topics": ["software-development", "community", "javascript", "python"],
+    "topics": [
+      "software-development",
+      "community",
+      "javascript",
+      "python"
+    ],
     "city": "Oklahoma City",
     "region": "Oklahoma",
     "country": "United States",
@@ -2480,7 +2949,11 @@
   {
     "name": "Milwaukee Tech Hub Code & Coffee",
     "type": "meetup-series",
-    "topics": ["software-development", "community", "careers"],
+    "topics": [
+      "software-development",
+      "community",
+      "careers"
+    ],
     "city": "Milwaukee",
     "region": "Wisconsin",
     "country": "United States",
@@ -2501,7 +2974,11 @@
   {
     "name": "Wisconsin Biohealth Summit",
     "type": "summit",
-    "topics": ["biotech", "healthtech", "life-sciences"],
+    "topics": [
+      "biotech",
+      "healthtech",
+      "life-sciences"
+    ],
     "city": "Milwaukee",
     "region": "Wisconsin",
     "country": "United States",
@@ -2522,7 +2999,11 @@
   {
     "name": "Scrum Day Madison",
     "type": "conference",
-    "topics": ["agile", "scrum", "product-management"],
+    "topics": [
+      "agile",
+      "scrum",
+      "product-management"
+    ],
     "city": "Madison",
     "region": "Wisconsin",
     "country": "United States",
@@ -2543,7 +3024,11 @@
   {
     "name": "Tech Fuse Des Moines",
     "type": "conference",
-    "topics": ["ai", "business-technology", "it-leadership"],
+    "topics": [
+      "ai",
+      "business-technology",
+      "it-leadership"
+    ],
     "city": "Des Moines",
     "region": "Iowa",
     "country": "United States",
@@ -2564,7 +3049,11 @@
   {
     "name": "DevOps Midwest",
     "type": "conference",
-    "topics": ["devops", "cloud", "platform-engineering"],
+    "topics": [
+      "devops",
+      "cloud",
+      "platform-engineering"
+    ],
     "city": "St. Louis",
     "region": "Missouri",
     "country": "United States",
@@ -2585,7 +3074,12 @@
   {
     "name": "Day of Data St. Louis",
     "type": "conference",
-    "topics": ["data", "analytics", "microsoft-fabric", "power-bi"],
+    "topics": [
+      "data",
+      "analytics",
+      "microsoft-fabric",
+      "power-bi"
+    ],
     "city": "St. Louis",
     "region": "Missouri",
     "country": "United States",
@@ -2606,7 +3100,12 @@
   {
     "name": "Data in the D",
     "type": "conference",
-    "topics": ["data", "analytics", "sql-server", "ai"],
+    "topics": [
+      "data",
+      "analytics",
+      "sql-server",
+      "ai"
+    ],
     "city": "Detroit",
     "region": "Michigan",
     "country": "United States",
@@ -2627,7 +3126,10 @@
   {
     "name": "BeyondConf",
     "type": "conference",
-    "topics": ["software-development", "community"],
+    "topics": [
+      "software-development",
+      "community"
+    ],
     "city": "Detroit",
     "region": "Michigan",
     "country": "United States",
@@ -2648,7 +3150,11 @@
   {
     "name": "Michigan Technology Conference",
     "type": "conference",
-    "topics": ["it-ops", "cybersecurity", "cloud"],
+    "topics": [
+      "it-ops",
+      "cybersecurity",
+      "cloud"
+    ],
     "city": "Rochester",
     "region": "Michigan",
     "country": "United States",
@@ -2669,7 +3175,11 @@
   {
     "name": "GOVIT Leadership Summit & Symposium",
     "type": "summit",
-    "topics": ["govtech", "public-sector", "cybersecurity"],
+    "topics": [
+      "govtech",
+      "public-sector",
+      "cybersecurity"
+    ],
     "city": "Bloomington",
     "region": "Minnesota",
     "country": "United States",
@@ -2690,7 +3200,11 @@
   {
     "name": "Umbraco US Festival",
     "type": "conference",
-    "topics": ["cms", "dotnet", "web-development"],
+    "topics": [
+      "cms",
+      "dotnet",
+      "web-development"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -2711,7 +3225,11 @@
   {
     "name": "Humanoid Robots Summit North America",
     "type": "summit",
-    "topics": ["robotics", "ai", "hardware"],
+    "topics": [
+      "robotics",
+      "ai",
+      "hardware"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -2732,7 +3250,11 @@
   {
     "name": "Scrum Day Houston",
     "type": "conference",
-    "topics": ["agile", "scrum", "product-management"],
+    "topics": [
+      "agile",
+      "scrum",
+      "product-management"
+    ],
     "city": "Houston",
     "region": "Texas",
     "country": "United States",
@@ -2753,7 +3275,11 @@
   {
     "name": "HackHCC",
     "type": "hackathon",
-    "topics": ["hackathon", "students", "software"],
+    "topics": [
+      "hackathon",
+      "students",
+      "software"
+    ],
     "city": "Houston",
     "region": "Texas",
     "country": "United States",
@@ -2774,7 +3300,11 @@
   {
     "name": "MnTech Twin Cities Startup Community Events",
     "type": "meetup-series",
-    "topics": ["startups", "community", "networking"],
+    "topics": [
+      "startups",
+      "community",
+      "networking"
+    ],
     "city": "Minneapolis",
     "region": "Minnesota",
     "country": "United States",
@@ -2795,7 +3325,11 @@
   {
     "name": "Arkansas IT Symposium",
     "type": "conference",
-    "topics": ["it-ops", "cybersecurity", "public-sector"],
+    "topics": [
+      "it-ops",
+      "cybersecurity",
+      "public-sector"
+    ],
     "city": "Little Rock",
     "region": "Arkansas",
     "country": "United States",
@@ -2816,7 +3350,12 @@
   {
     "name": "Arkansas Digital Government Summit",
     "type": "summit",
-    "topics": ["govtech", "cybersecurity", "ai", "public-sector"],
+    "topics": [
+      "govtech",
+      "cybersecurity",
+      "ai",
+      "public-sector"
+    ],
     "city": "Little Rock",
     "region": "Arkansas",
     "country": "United States",
@@ -2837,7 +3376,12 @@
   {
     "name": "Mississippi Digital Government Summit",
     "type": "summit",
-    "topics": ["govtech", "cybersecurity", "ai", "data-governance"],
+    "topics": [
+      "govtech",
+      "cybersecurity",
+      "ai",
+      "data-governance"
+    ],
     "city": "Jackson",
     "region": "Mississippi",
     "country": "United States",
@@ -2858,7 +3402,11 @@
   {
     "name": "Alabama Public Sector Cybersecurity Summit",
     "type": "summit",
-    "topics": ["cybersecurity", "govtech", "public-sector"],
+    "topics": [
+      "cybersecurity",
+      "govtech",
+      "public-sector"
+    ],
     "city": "Montgomery",
     "region": "Alabama",
     "country": "United States",
@@ -2879,7 +3427,11 @@
   {
     "name": "Mississippi AI Collaborative Annual Conference",
     "type": "conference",
-    "topics": ["ai", "research", "education"],
+    "topics": [
+      "ai",
+      "research",
+      "education"
+    ],
     "city": "Jackson",
     "region": "Mississippi",
     "country": "United States",
@@ -2900,7 +3452,12 @@
   {
     "name": "Iowa Artificial Intelligence Summit for Industry",
     "type": "summit",
-    "topics": ["ai", "insurance", "healthcare", "industry"],
+    "topics": [
+      "ai",
+      "insurance",
+      "healthcare",
+      "industry"
+    ],
     "city": "Des Moines",
     "region": "Iowa",
     "country": "United States",
@@ -2921,7 +3478,11 @@
   {
     "name": "First Look Forum",
     "type": "demo-day",
-    "topics": ["startups", "research-commercialization", "venture-capital"],
+    "topics": [
+      "startups",
+      "research-commercialization",
+      "venture-capital"
+    ],
     "city": "Milwaukee",
     "region": "Wisconsin",
     "country": "United States",
@@ -2942,7 +3503,11 @@
   {
     "name": "AI Week Milwaukee",
     "type": "tech-week",
-    "topics": ["ai", "ethics", "education"],
+    "topics": [
+      "ai",
+      "ethics",
+      "education"
+    ],
     "city": "Milwaukee",
     "region": "Wisconsin",
     "country": "United States",
@@ -2963,7 +3528,12 @@
   {
     "name": "TECHSPO Chicago",
     "type": "expo",
-    "topics": ["martech", "adtech", "saas", "mobile"],
+    "topics": [
+      "martech",
+      "adtech",
+      "saas",
+      "mobile"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -2984,7 +3554,11 @@
   {
     "name": "Cybersecurity Summit Chicago",
     "type": "summit",
-    "topics": ["cybersecurity", "ciso", "risk"],
+    "topics": [
+      "cybersecurity",
+      "ciso",
+      "risk"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -3001,26 +3575,5 @@
     "url": "https://cybersecuritysummit.com",
     "description": "A one-day executive cybersecurity summit at the Hyatt Regency Chicago connecting security leaders with solution providers and peer practitioners.",
     "source": "https://xl.net/blog/top-tech-conferences-chicago/"
-  },
-  {
-    "name": "Chicago Roboto",
-    "type": "conference",
-    "topics": ["android", "mobile", "kotlin"],
-    "city": "Chicago",
-    "region": "Illinois",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "Varies",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "Android and mobile developers",
-    "url": "https://chicagoroboto.com",
-    "description": "Chicago's Android developer conference, the first of its kind in the city, run in partnership with the local Google Developer Group community.",
-    "source": "https://gdg.community.dev/events/details/google-gdg-chicago-presents-chicago-roboto-android-conference/"
   }
 ]

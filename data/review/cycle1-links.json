@@ -1,0 +1,355 @@
+[
+  {
+    "match": { "name": "BSides Calgary", "city": "Calgary" },
+    "action": "update",
+    "reason": "Bare bsidescalgary.org does not resolve; www host loads and shows BSides Calgary 2026 at Contemporary Calgary, May 25-26 2026.",
+    "set": { "url": "https://www.bsidescalgary.org/", "venue": "Contemporary Calgary" }
+  },
+  {
+    "match": { "name": "BSides Harrisburg", "city": "Harrisburg" },
+    "action": "update",
+    "reason": "Bare bsideshbg.com dead; www host live and announces BSidesHBG 2027 on May 21 2027 at the PA Farm Show Complex.",
+    "set": { "url": "https://www.bsideshbg.com/", "next_date": "2027-05-21", "next_date_end": "2027-05-21", "status": "upcoming", "venue": "PA Farm Show Complex and Expo Center" }
+  },
+  {
+    "match": { "name": "BSides San Diego", "city": "San Diego" },
+    "action": "update",
+    "reason": "Bare bsidessd.org does not resolve; www host loads and is the official BSides San Diego site with 2026 event details.",
+    "set": { "url": "https://www.bsidessd.org/" }
+  },
+  {
+    "match": { "name": "BSides Vancouver", "city": "Vancouver" },
+    "action": "update",
+    "reason": "Bare bsidesvancouver.com does not resolve; www host loads, run by Mainland Advanced Research Society, 2026 edition held at SFU Harbour Centre.",
+    "set": { "url": "https://www.bsidesvancouver.com/", "venue": "SFU Harbour Centre" }
+  },
+  {
+    "match": { "name": "Central Iowa Software Symposium", "city": "Des Moines" },
+    "action": "update",
+    "reason": "NFJS tour listing gives the stop path as /desmoines (not /des-moines); page confirms Sept 17-18 2026 at the West Des Moines Marriott.",
+    "set": { "url": "https://nofluffjuststuff.com/desmoines", "next_date": "2026-09-17", "next_date_end": "2026-09-18", "venue": "West Des Moines Marriott" }
+  },
+  {
+    "match": { "name": "Chicago Roboto", "city": "Chicago" },
+    "action": "remove",
+    "reason": "Defunct. chicagoroboto.com no longer resolves (last Wayback capture Sept 2022) and the organisers' notice states Chicago Roboto is on indefinite hiatus after the Aug 2022 edition. Record carried no dates either."
+  },
+  {
+    "match": { "name": "Data Streaming Summit", "city": "San Francisco" },
+    "action": "update",
+    "reason": "datastreamingsummit.io has no DNS record and no archive history; the real official site is datastreaming-summit.org. 2026 edition Oct 7-8 at Hotel Nikko SF; the 2025 edition was Sept 29-30 2025, so last_date corrected.",
+    "set": { "url": "https://datastreaming-summit.org/", "next_date": "2026-10-07", "next_date_end": "2026-10-08", "last_date": "2025-09-29", "venue": "Hotel Nikko San Francisco" }
+  },
+  {
+    "match": { "name": "DrupalCamp Colorado", "city": "Denver" },
+    "action": "update",
+    "reason": "drupalcampcolorado.org is unreachable; drupal.org's event listing gives the camp's official site as drupal-colorado.org, confirming Aug 27-28 2026 at the Lowry Conference Center, Denver.",
+    "set": { "url": "https://www.drupal-colorado.org/", "next_date": "2026-08-27", "next_date_end": "2026-08-28", "venue": "Lowry Conference Center" }
+  },
+  {
+    "match": { "name": "Florida Technology & Innovation Solution Summit", "city": "Tampa" },
+    "action": "update",
+    "reason": "The /fltechinnovationsummit26/ vanity path 404s. Florida Chamber's event index now lists the 2027 summit page: Aug 25 2027 at the Grand Hyatt Tampa Bay.",
+    "set": { "url": "https://www.flchamber.com/event/2027-florida-technology-innovation-solution-summit/", "next_date": "2027-08-25", "next_date_end": "2027-08-25", "status": "upcoming", "venue": "Grand Hyatt Tampa Bay" }
+  },
+  {
+    "match": { "name": "Fully Connected", "city": "San Francisco" },
+    "action": "update",
+    "reason": "wandb.ai/site/fully-connected/ 404s; fullyconnected.com and the W&B events page both now redirect to CoreWeave. Confirmed Sept 29 - Oct 1 2026 at Moscone South, San Francisco.",
+    "set": { "url": "https://www.coreweave.com/fully-connected-2026", "next_date": "2026-09-29", "next_date_end": "2026-10-01", "venue": "Moscone South" }
+  },
+  {
+    "match": { "name": "GTM Hackathon", "city": "Lehi" },
+    "action": "update",
+    "reason": "getmobly.com/gtm-hackathon was taken down after the Feb 2 2026 edition (404) and no successor page is published; pointed at the organiser's live site pending a 2027 edition page.",
+    "set": { "url": "https://www.getmobly.com/" }
+  },
+  {
+    "match": { "name": "Montreal Games Week", "city": "Montreal" },
+    "action": "update",
+    "reason": "The /en path 404s; the root domain loads and confirms the 2026 edition runs Nov 10-16 2026.",
+    "set": { "url": "https://www.semainedujeuvideodemontreal.com/", "next_date": "2026-11-10", "next_date_end": "2026-11-16", "status": "upcoming" }
+  },
+  {
+    "match": { "name": "ShmooCon", "city": "Washington" },
+    "action": "remove",
+    "reason": "Genuinely defunct: ShmooCon 2025 (Jan 10-12 2025, Washington Hilton) was the 20th and final edition and the organisers wound it down. shmoocon.org now returns HTTP 500. The record also carried a wrong last_date of 2026-01-10."
+  },
+
+  {
+    "match": { "name": "Cal Hacks", "city": "Berkeley" },
+    "action": "remove",
+    "reason": "Duplicate. calhacks.io confirms Cal Hacks 12.0 was held at the Palace of Fine Arts, San Francisco (Oct 24-26 2025). The San Francisco record is correct; the Berkeley record duplicates it under the organising university's city."
+  },
+  {
+    "match": { "name": "devopsdays Boston", "city": "Cambridge" },
+    "action": "remove",
+    "reason": "Duplicate of 'DevOpsDays Boston' (Boston) - same event, same devopsdays.org/events/2026-boston/ page. Kept the Boston-branded record; its venue field now carries the Cambridge location."
+  },
+  {
+    "match": { "name": "DevOpsDays Boston", "city": "Boston" },
+    "action": "update",
+    "reason": "Confirmed on devopsdays.org/events/2026-boston/welcome/: Oct 19-20 2026 at the Microsoft NERD Center in Cambridge MA. Merged the last_date carried by the removed Cambridge duplicate.",
+    "set": { "next_date": "2026-10-19", "next_date_end": "2026-10-20", "last_date": "2024-09-23", "venue": "Microsoft NERD Center, Cambridge MA" }
+  },
+  {
+    "match": { "name": "KubeCon + CloudNativeCon North America", "city": "New Orleans" },
+    "action": "remove",
+    "reason": "Unverifiable duplicate. CNCF's own events index lists only China 2026 (Sept), North America 2026 (Salt Lake City, Nov 9-12) and Europe 2027 (Barcelona); no North America 2027 edition or New Orleans venue has been announced."
+  },
+  {
+    "match": { "name": "KubeCon + CloudNativeCon North America", "city": "Salt Lake City" },
+    "action": "update",
+    "reason": "CNCF and Linux Foundation event pages both confirm Salt Lake City, Nov 9-12 2026 as the 2026 North America edition.",
+    "set": { "next_date": "2026-11-09", "next_date_end": "2026-11-12" }
+  },
+  {
+    "match": { "name": "OhioX Ohio Tech Summit", "city": "Columbus" },
+    "action": "remove",
+    "reason": "Duplicate. ohiotechsummit.org confirms the official name is 'Ohio Tech Summit', powered by OhioX, Columbus, May 14 2026. Kept the 'Ohio Tech Summit' record with the dedicated event domain; this one pointed only at the OhioX org events list."
+  },
+  {
+    "match": { "name": "CSAW", "city": "New York" },
+    "action": "remove",
+    "reason": "Duplicate of 'CSAW Cybersecurity Games and Conference' (Brooklyn) - same csaw.io site. CSAW is hosted by NYU Tandon in Brooklyn, so the Brooklyn record is the correct one."
+  },
+  {
+    "match": { "name": "CSAW Cybersecurity Games and Conference", "city": "Brooklyn" },
+    "action": "update",
+    "reason": "csaw.io confirms the 23rd Annual Cybersecurity Games & Conference, NYU Tandon, Brooklyn, Nov 12-14 2026.",
+    "set": { "next_date": "2026-11-12", "next_date_end": "2026-11-14", "venue": "NYU Tandon School of Engineering" }
+  },
+  {
+    "match": { "name": "BSides Oklahoma", "city": "Oklahoma City" },
+    "action": "remove",
+    "reason": "Duplicate of 'BSidesOK' (Glenpool) - same bsidesok.com site. The Techlahoma-run event is held at the Glenpool Conference Center southwest of Tulsa, not Oklahoma City, so the Glenpool record is the correct one."
+  },
+  {
+    "match": { "name": "BSidesOK", "city": "Glenpool" },
+    "action": "update",
+    "reason": "bsidesok.com content confirms the 2026 event ran Apr 8-10 2026 at the Glenpool Conference Center; corrected the start date from 2026-04-06.",
+    "set": { "last_date": "2026-04-08", "venue": "Glenpool Conference Center" }
+  },
+
+  {
+    "match": { "name": "Web Summit Vancouver", "city": "Vancouver" },
+    "action": "update",
+    "reason": "collisionconf.com 301-redirects to vancouver.websummit.com (verified); the dataset holds no separate Collision record, so there is no conflict to resolve. Site confirms May 25-28 2027 at the Vancouver Convention Centre.",
+    "set": { "next_date": "2027-05-25", "next_date_end": "2027-05-28", "venue": "Vancouver Convention Centre" }
+  },
+  {
+    "match": { "name": "Microsoft Build", "city": "San Francisco" },
+    "action": "update",
+    "reason": "Verified: Build 2026 was moved from Seattle to San Francisco and held June 2-3 2026 at Fort Mason Center, shortened to two days and application-only in person. The dataset's city and dates were already correct; only the venue was missing.",
+    "set": { "venue": "Fort Mason Center", "next_date_end": "2026-06-03" }
+  },
+
+  {
+    "match": { "name": "Nerd Nite Austin", "city": "Austin" },
+    "action": "update",
+    "reason": "Nerd Nite chapters live at <city>.nerdnite.com; austin.nerdnite.com verified live with current event listings.",
+    "set": { "url": "https://austin.nerdnite.com/" }
+  },
+  {
+    "match": { "name": "Nerd Nite Chicago", "city": "Chicago" },
+    "action": "update",
+    "reason": "chicago.nerdnite.com verified live with its own event listings.",
+    "set": { "url": "https://chicago.nerdnite.com/" }
+  },
+  {
+    "match": { "name": "Nerd Nite Denver", "city": "Denver" },
+    "action": "update",
+    "reason": "denver.nerdnite.com verified live with its own ticket links.",
+    "set": { "url": "https://denver.nerdnite.com/" }
+  },
+  {
+    "match": { "name": "Nerd Nite Seattle", "city": "Seattle" },
+    "action": "update",
+    "reason": "seattle.nerdnite.com verified live with its own event schedule.",
+    "set": { "url": "https://seattle.nerdnite.com/" }
+  },
+  {
+    "match": { "name": "Nerd Nite Toronto", "city": "Toronto" },
+    "action": "update",
+    "reason": "toronto.nerdnite.com verified live with its own event listings.",
+    "set": { "url": "https://toronto.nerdnite.com/" }
+  },
+  {
+    "match": { "name": "Nerd Nite Vancouver", "city": "Vancouver" },
+    "action": "update",
+    "reason": "vancouver.nerdnite.com verified live with its own event listings at The Fox Cabaret.",
+    "set": { "url": "https://vancouver.nerdnite.com/", "venue": "The Fox Cabaret" }
+  },
+
+  {
+    "match": { "name": "Papers We Love Boston", "city": "Boston" },
+    "action": "update",
+    "reason": "Papers We Love publishes per-chapter pages at /chapter/<slug>/; Boston page fetched and verified.",
+    "set": { "url": "https://paperswelove.org/chapter/boston/" }
+  },
+  {
+    "match": { "name": "Papers We Love Chicago", "city": "Chicago" },
+    "action": "update",
+    "reason": "Chapter listed in the paperswelove.org/chapter/ index with its own page.",
+    "set": { "url": "https://paperswelove.org/chapter/chicago/" }
+  },
+  {
+    "match": { "name": "Papers We Love Denver", "city": "Denver" },
+    "action": "update",
+    "reason": "Chapter listed in the paperswelove.org/chapter/ index with its own page.",
+    "set": { "url": "https://paperswelove.org/chapter/denver/" }
+  },
+  {
+    "match": { "name": "Papers We Love Montreal", "city": "Montreal" },
+    "action": "update",
+    "reason": "Chapter listed in the paperswelove.org/chapter/ index; page loads but carries little chapter-specific content, so the chapter may be dormant.",
+    "set": { "url": "https://paperswelove.org/chapter/montreal/" }
+  },
+  {
+    "match": { "name": "Papers We Love New York", "city": "New York" },
+    "action": "update",
+    "reason": "New York chapter page fetched and verified - the original Papers We Love chapter, meets monthly.",
+    "set": { "url": "https://paperswelove.org/chapter/newyork/" }
+  },
+  {
+    "match": { "name": "Papers We Love Portland", "city": "Portland" },
+    "action": "update",
+    "reason": "Chapter listed in the paperswelove.org/chapter/ index with its own page.",
+    "set": { "url": "https://paperswelove.org/chapter/portland/" }
+  },
+  {
+    "match": { "name": "Papers We Love San Francisco", "city": "San Francisco" },
+    "action": "update",
+    "reason": "San Francisco chapter page fetched and verified - meets monthly at Antithesis's downtown office, RSVPs via Luma.",
+    "set": { "url": "https://paperswelove.org/chapter/sanfrancisco/" }
+  },
+  {
+    "match": { "name": "Papers We Love Seattle", "city": "Seattle" },
+    "action": "update",
+    "reason": "Chapter listed in the paperswelove.org/chapter/ index with its own page.",
+    "set": { "url": "https://paperswelove.org/chapter/seattle/" }
+  },
+  {
+    "match": { "name": "Papers We Love Toronto", "city": "Toronto" },
+    "action": "update",
+    "reason": "Chapter listed in the paperswelove.org/chapter/ index with its own page.",
+    "set": { "url": "https://paperswelove.org/chapter/toronto/" }
+  },
+  {
+    "match": { "name": "Papers We Love Washington DC", "city": "Washington" },
+    "action": "update",
+    "reason": "Washington DC / Northern Virginia chapter page fetched and verified.",
+    "set": { "url": "https://paperswelove.org/chapter/washington-dc/" }
+  },
+
+  {
+    "match": { "name": "Maker Faire NW Arkansas", "city": "Bentonville" },
+    "action": "update",
+    "reason": "Own site nwa.makerfaire.com verified: Sept 12 2026 at the Fayetteville Public Library, so the host city is Fayetteville, not Bentonville.",
+    "set": { "url": "https://nwa.makerfaire.com/", "city": "Fayetteville", "venue": "Fayetteville Public Library" }
+  },
+  {
+    "match": { "name": "Maker Faire Brownsville", "city": "Brownsville" },
+    "action": "update",
+    "reason": "Runs inside BTX Space Fest; its own page verified: Sept 24-26 2026 at the George Ramirez Performing Arts Academy, Brownsville.",
+    "set": { "url": "https://www.btxspacefest.com/makerfaire", "next_date": "2026-09-24", "next_date_end": "2026-09-26", "venue": "George Ramirez Performing Arts Academy" }
+  },
+  {
+    "match": { "name": "Maker Faire Orange County", "city": "Costa Mesa" },
+    "action": "update",
+    "reason": "Own site oc.makerfaire.com verified: Sept 12-13 2026 at the OC Fair & Event Center, Costa Mesa.",
+    "set": { "url": "https://oc.makerfaire.com/", "next_date": "2026-09-12", "next_date_end": "2026-09-13", "venue": "OC Fair & Event Center" }
+  },
+  {
+    "match": { "name": "Maker Faire Fort Worth", "city": "Fort Worth" },
+    "action": "update",
+    "reason": "fortworth.makerfaire.com 301-redirects to southdallas.makerfaire.com; the faire has been rebranded South Dallas Maker Faire and its own site makes no mention of Fort Worth. Date unchanged at Nov 7 2026.",
+    "set": { "url": "https://southdallas.makerfaire.com/", "name": "South Dallas Maker Faire", "city": "Dallas" }
+  },
+  {
+    "match": { "name": "Maker Faire Louisville", "city": "Louisville" },
+    "action": "update",
+    "reason": "Own site louisville.makerfaire.com verified: Oct 17 2026 at the UofL Engineering Student Success and Research Building.",
+    "set": { "url": "https://louisville.makerfaire.com/", "venue": "University of Louisville, Engineering Student Success and Research Building" }
+  },
+  {
+    "match": { "name": "Maker Faire Orlando", "city": "Orlando" },
+    "action": "update",
+    "reason": "Own site makerfaireorlando.com verified: Nov 7-8 2026 at the Central Florida Fairgrounds & Expo Halls.",
+    "set": { "url": "https://www.makerfaireorlando.com/", "next_date": "2026-11-07", "next_date_end": "2026-11-08", "venue": "Central Florida Fairgrounds & Expo Halls" }
+  },
+  {
+    "match": { "name": "Maker Faire Rochester", "city": "Rochester" },
+    "action": "update",
+    "reason": "Own site rochester.makerfaire.com verified: Nov 21 2026 at the RIT Gordon Field House.",
+    "set": { "url": "https://rochester.makerfaire.com/", "venue": "RIT Gordon Field House" }
+  },
+  {
+    "match": { "name": "Maker Faire Happy Valley", "city": "State College" },
+    "action": "update",
+    "reason": "Own site happyvalley.makerfaire.com verified: Oct 3-4 2026 at Axemann Brewery, Bellefonte, in the Happy Valley / Central PA region.",
+    "set": { "url": "https://happyvalley.makerfaire.com/", "next_date": "2026-10-03", "next_date_end": "2026-10-04", "venue": "Axemann Brewery, Bellefonte PA" }
+  },
+  {
+    "match": { "name": "Maker Faire Waterloo", "city": "Waterloo" },
+    "action": "update",
+    "reason": "Own site waterloomakerfaire.org verified: Sept 13 2026 at Waterloo Public Square, Uptown Waterloo.",
+    "set": { "url": "https://www.waterloomakerfaire.org/", "venue": "Waterloo Public Square" }
+  },
+
+  {
+    "match": { "name": "SANS DFIR Summit & Training", "city": "Arlington" },
+    "action": "update",
+    "reason": "Per-event SANS page verified: Oct 15-22 2026 (summit 15-16, training 17-22) at the Hilton Arlington Rosslyn.",
+    "set": { "url": "https://www.sans.org/cyber-security-training-events/digital-forensics-summit-2026/", "next_date": "2026-10-15", "next_date_end": "2026-10-22", "venue": "Hilton Arlington Rosslyn The Key" }
+  },
+  {
+    "match": { "name": "SANS DC Metro", "city": "Bethesda" },
+    "action": "update",
+    "reason": "Per-event SANS page verified: SANS DC Metro September 2026, Sept 28 - Oct 3 2026 at The Bethesdan Hotel, Bethesda MD.",
+    "set": { "url": "https://www.sans.org/cyber-security-training-events/dc-metro-september-2026/", "next_date": "2026-09-28", "next_date_end": "2026-10-03", "venue": "The Bethesdan Hotel, Tapestry Collection by Hilton" }
+  },
+  {
+    "match": { "name": "SANS Miami", "city": "Coral Gables" },
+    "action": "update",
+    "reason": "Per-event SANS page verified: Oct 26-31 2026 at the Hyatt Regency Coral Gables.",
+    "set": { "url": "https://www.sans.org/cyber-security-training-events/miami-2026/", "next_date": "2026-10-26", "next_date_end": "2026-10-31", "venue": "Hyatt Regency Coral Gables" }
+  },
+  {
+    "match": { "name": "SANS Network Security", "city": "Las Vegas" },
+    "action": "update",
+    "reason": "Per-event SANS page verified: Sept 21-26 2026 at Caesars Palace, Las Vegas.",
+    "set": { "url": "https://www.sans.org/cyber-security-training-events/network-security-2026/", "next_date": "2026-09-21", "next_date_end": "2026-09-26", "venue": "Caesars Palace" }
+  },
+  {
+    "match": { "name": "SANS Raleigh", "city": "Raleigh" },
+    "action": "update",
+    "reason": "Per-event SANS page verified: Nov 2-7 2026 at the Embassy Suites Raleigh-Durham Research Triangle in Cary NC.",
+    "set": { "url": "https://www.sans.org/cyber-security-training-events/raleigh-2026/", "next_date": "2026-11-02", "next_date_end": "2026-11-07", "venue": "Embassy Suites by Hilton Raleigh-Durham Research Triangle, Cary NC" }
+  },
+  {
+    "match": { "name": "SANS San Francisco", "city": "San Francisco" },
+    "action": "update",
+    "reason": "Per-event SANS page verified: Nov 2-7 2026 at the Hilton Financial District San Francisco.",
+    "set": { "url": "https://www.sans.org/cyber-security-training-events/san-francisco-2026/", "next_date": "2026-11-02", "next_date_end": "2026-11-07", "venue": "Hilton Financial District San Francisco" }
+  },
+
+  {
+    "match": { "name": "BSides Bloomington", "city": "Bloomington" },
+    "action": "update",
+    "reason": "Own site bsidesbloomington.org verified live, 2026 edition at the Bloomington Convention Center; replaces the generic allbsides.com directory link.",
+    "set": { "url": "https://www.bsidesbloomington.org/", "venue": "Bloomington Convention Center" }
+  },
+  {
+    "match": { "name": "BSides CMH", "city": "Columbus" },
+    "action": "update",
+    "reason": "Own site bsidescolumbus.com verified live: Nov 4-6 2026 with sessions Nov 5-6, presented by GuidePoint Security; replaces the generic allbsides.com link.",
+    "set": { "url": "https://www.bsidescolumbus.com/", "next_date": "2026-11-04", "next_date_end": "2026-11-06", "status": "upcoming" }
+  },
+  {
+    "match": { "name": "BSides Peoria", "city": "Peoria" },
+    "action": "update",
+    "reason": "Own site bsidespeoria.com verified live: Oct 24 2026 at Bradley University, Peoria IL; replaces the generic allbsides.com link.",
+    "set": { "url": "https://www.bsidespeoria.com/", "next_date": "2026-10-24", "next_date_end": "2026-10-24", "status": "upcoming", "venue": "Bradley University" }
+  }
+]

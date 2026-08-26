@@ -2,7 +2,12 @@
   {
     "name": "New York Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "venture-capital", "ai", "networking"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "ai",
+      "networking"
+    ],
     "city": "New York City",
     "region": "New York",
     "country": "United States",
@@ -23,7 +28,12 @@
   {
     "name": "The AI Summit New York",
     "type": "summit",
-    "topics": ["ai", "enterprise", "machine-learning", "data"],
+    "topics": [
+      "ai",
+      "enterprise",
+      "machine-learning",
+      "data"
+    ],
     "city": "New York City",
     "region": "New York",
     "country": "United States",
@@ -44,7 +54,12 @@
   {
     "name": "CSAW Cybersecurity Games and Conference",
     "type": "ctf",
-    "topics": ["security", "ctf", "hardware-security", "students"],
+    "topics": [
+      "security",
+      "ctf",
+      "hardware-security",
+      "students"
+    ],
     "city": "Brooklyn",
     "region": "New York",
     "country": "United States",
@@ -65,7 +80,11 @@
   {
     "name": "HackNYU",
     "type": "hackathon",
-    "topics": ["students", "software", "ai"],
+    "topics": [
+      "students",
+      "software",
+      "ai"
+    ],
     "city": "New York City",
     "region": "New York",
     "country": "United States",
@@ -86,7 +105,12 @@
   {
     "name": "DevOpsCon New York",
     "type": "conference",
-    "topics": ["devops", "cloud-native", "platform-engineering", "sre"],
+    "topics": [
+      "devops",
+      "cloud-native",
+      "platform-engineering",
+      "sre"
+    ],
     "city": "New York City",
     "region": "New York",
     "country": "United States",
@@ -107,7 +131,12 @@
   {
     "name": "JSNation US",
     "type": "conference",
-    "topics": ["javascript", "web", "frontend", "node"],
+    "topics": [
+      "javascript",
+      "web",
+      "frontend",
+      "node"
+    ],
     "city": "New York City",
     "region": "New York",
     "country": "United States",
@@ -128,7 +157,12 @@
   {
     "name": "Advertising Week New York",
     "type": "festival",
-    "topics": ["adtech", "marketing", "media", "creative"],
+    "topics": [
+      "adtech",
+      "marketing",
+      "media",
+      "creative"
+    ],
     "city": "New York City",
     "region": "New York",
     "country": "United States",
@@ -149,7 +183,12 @@
   {
     "name": "TECHSPO New York",
     "type": "expo",
-    "topics": ["adtech", "martech", "saas", "mobile"],
+    "topics": [
+      "adtech",
+      "martech",
+      "saas",
+      "mobile"
+    ],
     "city": "New York City",
     "region": "New York",
     "country": "United States",
@@ -170,7 +209,11 @@
   {
     "name": "NY Tech Meetup",
     "type": "meetup-series",
-    "topics": ["startups", "demos", "networking"],
+    "topics": [
+      "startups",
+      "demos",
+      "networking"
+    ],
     "city": "New York City",
     "region": "New York",
     "country": "United States",
@@ -191,7 +234,11 @@
   {
     "name": "Open Source in Finance Forum New York",
     "type": "conference",
-    "topics": ["open-source", "fintech", "finance"],
+    "topics": [
+      "open-source",
+      "fintech",
+      "finance"
+    ],
     "city": "New York City",
     "region": "New York",
     "country": "United States",
@@ -212,7 +259,12 @@
   {
     "name": "DeveloperWeek New York",
     "type": "conference",
-    "topics": ["software", "ai", "apis", "hackathon"],
+    "topics": [
+      "software",
+      "ai",
+      "apis",
+      "hackathon"
+    ],
     "city": "New York City",
     "region": "New York",
     "country": "United States",
@@ -233,7 +285,11 @@
   {
     "name": "Urban Futures: Co-Creating Climate Resilience in NYC Hackathon",
     "type": "hackathon",
-    "topics": ["climate", "civic-tech", "data"],
+    "topics": [
+      "climate",
+      "civic-tech",
+      "data"
+    ],
     "city": "New York City",
     "region": "New York",
     "country": "United States",
@@ -254,7 +310,12 @@
   {
     "name": "UNBOUND (formerly INBOUND)",
     "type": "conference",
-    "topics": ["marketing", "sales", "ai", "saas"],
+    "topics": [
+      "marketing",
+      "sales",
+      "ai",
+      "saas"
+    ],
     "city": "Boston",
     "region": "Massachusetts",
     "country": "United States",
@@ -275,7 +336,12 @@
   {
     "name": "Boston Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "ai", "biotech", "venture-capital"],
+    "topics": [
+      "startups",
+      "ai",
+      "biotech",
+      "venture-capital"
+    ],
     "city": "Boston",
     "region": "Massachusetts",
     "country": "United States",
@@ -294,30 +360,13 @@
     "source": "https://www.tech-week.com/calendar/boston"
   },
   {
-    "name": "devopsdays Boston",
-    "type": "conference",
-    "topics": ["devops", "sre", "cloud", "open-spaces"],
-    "city": "Cambridge",
-    "region": "Massachusetts",
-    "country": "United States",
-    "venue": "Microsoft NERD Center",
-    "cadence": "annual",
-    "month": "October",
-    "next_date": "2026-10-19",
-    "next_date_end": "2026-10-20",
-    "last_date": "2024-09-23",
-    "status": "upcoming",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "devops practitioners, SREs, operations engineers",
-    "url": "https://devopsdays.org/events/2026-boston/welcome/",
-    "description": "The Boston stop of the worldwide devopsdays community conference series, combining curated talks with ignite sessions and afternoon open spaces at the Microsoft NERD Center.",
-    "source": "https://devopsdays.org/events/2026-boston/welcome/"
-  },
-  {
     "name": "PAX East",
     "type": "expo",
-    "topics": ["gaming", "game-dev", "esports"],
+    "topics": [
+      "gaming",
+      "game-dev",
+      "esports"
+    ],
     "city": "Boston",
     "region": "Massachusetts",
     "country": "United States",
@@ -338,7 +387,12 @@
   {
     "name": "TECHSPO Boston",
     "type": "expo",
-    "topics": ["adtech", "martech", "saas", "mobile"],
+    "topics": [
+      "adtech",
+      "martech",
+      "saas",
+      "mobile"
+    ],
     "city": "Boston",
     "region": "Massachusetts",
     "country": "United States",
@@ -359,7 +413,12 @@
   {
     "name": "Bio-IT World Conference & Expo",
     "type": "conference",
-    "topics": ["bioinformatics", "life-sciences", "ai", "data"],
+    "topics": [
+      "bioinformatics",
+      "life-sciences",
+      "ai",
+      "data"
+    ],
     "city": "Boston",
     "region": "Massachusetts",
     "country": "United States",
@@ -380,7 +439,12 @@
   {
     "name": "HackMIT",
     "type": "hackathon",
-    "topics": ["students", "ai", "software", "hardware"],
+    "topics": [
+      "students",
+      "ai",
+      "software",
+      "hardware"
+    ],
     "city": "Cambridge",
     "region": "Massachusetts",
     "country": "United States",
@@ -401,7 +465,13 @@
   {
     "name": "HackHarvard",
     "type": "hackathon",
-    "topics": ["students", "sustainability", "security", "fintech", "healthcare"],
+    "topics": [
+      "students",
+      "sustainability",
+      "security",
+      "fintech",
+      "healthcare"
+    ],
     "city": "Cambridge",
     "region": "Massachusetts",
     "country": "United States",
@@ -422,7 +492,12 @@
   {
     "name": "Reality Hack at MIT",
     "type": "hackathon",
-    "topics": ["xr", "ar", "vr", "spatial-computing"],
+    "topics": [
+      "xr",
+      "ar",
+      "vr",
+      "spatial-computing"
+    ],
     "city": "Cambridge",
     "region": "Massachusetts",
     "country": "United States",
@@ -443,7 +518,11 @@
   {
     "name": "Quantum.Tech USA",
     "type": "conference",
-    "topics": ["quantum", "hpc", "ai"],
+    "topics": [
+      "quantum",
+      "hpc",
+      "ai"
+    ],
     "city": "Boston",
     "region": "Massachusetts",
     "country": "United States",
@@ -464,7 +543,11 @@
   {
     "name": "Boston TechJam",
     "type": "festival",
-    "topics": ["startups", "networking", "community"],
+    "topics": [
+      "startups",
+      "networking",
+      "community"
+    ],
     "city": "Boston",
     "region": "Massachusetts",
     "country": "United States",
@@ -485,7 +568,12 @@
   {
     "name": "DC Startup & Tech Week",
     "type": "startup-week",
-    "topics": ["startups", "ai", "govtech", "venture-capital"],
+    "topics": [
+      "startups",
+      "ai",
+      "govtech",
+      "venture-capital"
+    ],
     "city": "Washington",
     "region": "District of Columbia",
     "country": "United States",
@@ -506,7 +594,12 @@
   {
     "name": "Billington CyberSecurity Summit",
     "type": "summit",
-    "topics": ["cybersecurity", "government", "ai", "zero-trust"],
+    "topics": [
+      "cybersecurity",
+      "government",
+      "ai",
+      "zero-trust"
+    ],
     "city": "Washington",
     "region": "District of Columbia",
     "country": "United States",
@@ -527,7 +620,12 @@
   {
     "name": "DistrictCon",
     "type": "conference",
-    "topics": ["security", "hacking", "policy", "ctf"],
+    "topics": [
+      "security",
+      "hacking",
+      "policy",
+      "ctf"
+    ],
     "city": "Washington",
     "region": "District of Columbia",
     "country": "United States",
@@ -548,7 +646,12 @@
   {
     "name": "CTA Tech Week",
     "type": "tech-week",
-    "topics": ["policy", "consumer-tech", "broadband", "digital-health"],
+    "topics": [
+      "policy",
+      "consumer-tech",
+      "broadband",
+      "digital-health"
+    ],
     "city": "Washington",
     "region": "District of Columbia",
     "country": "United States",
@@ -569,7 +672,11 @@
   {
     "name": "Critical Effect",
     "type": "conference",
-    "topics": ["ics", "ot-security", "critical-infrastructure"],
+    "topics": [
+      "ics",
+      "ot-security",
+      "critical-infrastructure"
+    ],
     "city": "Washington",
     "region": "District of Columbia",
     "country": "United States",
@@ -590,7 +697,11 @@
   {
     "name": "Cybersecurity, Stronger Together Conference",
     "type": "conference",
-    "topics": ["cybersecurity", "ot-security", "risk"],
+    "topics": [
+      "cybersecurity",
+      "ot-security",
+      "risk"
+    ],
     "city": "Washington",
     "region": "District of Columbia",
     "country": "United States",
@@ -609,30 +720,13 @@
     "source": "https://cyberconference.cps.gwu.edu/2026-conference"
   },
   {
-    "name": "ShmooCon",
-    "type": "conference",
-    "topics": ["security", "hacking", "hardware"],
-    "city": "Washington",
-    "region": "District of Columbia",
-    "country": "United States",
-    "venue": "Washington Hilton",
-    "cadence": "annual",
-    "month": "January",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "2026-01-10",
-    "status": "past",
-    "attendance": "2000",
-    "cost": "paid",
-    "audience": "security researchers, hackers",
-    "url": "https://shmoocon.org/",
-    "description": "A long-running East Coast hacker convention of technology exploitation demos, inventive hardware and software work, and open discussion of critical infosec issues.",
-    "source": "https://10times.com/shmoocon-washington"
-  },
-  {
     "name": "BSides NoVA",
     "type": "conference",
-    "topics": ["security", "community", "ctf"],
+    "topics": [
+      "security",
+      "community",
+      "ctf"
+    ],
     "city": "Arlington",
     "region": "Virginia",
     "country": "United States",
@@ -653,7 +747,11 @@
   {
     "name": "NVTC Cyber Summit & Cyber50 Awards",
     "type": "summit",
-    "topics": ["cybersecurity", "govtech", "awards"],
+    "topics": [
+      "cybersecurity",
+      "govtech",
+      "awards"
+    ],
     "city": "Reston",
     "region": "Virginia",
     "country": "United States",
@@ -674,7 +772,11 @@
   {
     "name": "NVTC Tech100 Celebration",
     "type": "awards",
-    "topics": ["awards", "networking", "govtech"],
+    "topics": [
+      "awards",
+      "networking",
+      "govtech"
+    ],
     "city": "Reston",
     "region": "Virginia",
     "country": "United States",
@@ -695,7 +797,12 @@
   {
     "name": "HopHacks",
     "type": "hackathon",
-    "topics": ["students", "software", "hardware", "health"],
+    "topics": [
+      "students",
+      "software",
+      "hardware",
+      "health"
+    ],
     "city": "Baltimore",
     "region": "Maryland",
     "country": "United States",
@@ -716,7 +823,11 @@
   {
     "name": "BSidesCharm",
     "type": "conference",
-    "topics": ["security", "community", "ctf"],
+    "topics": [
+      "security",
+      "community",
+      "ctf"
+    ],
     "city": "Baltimore",
     "region": "Maryland",
     "country": "United States",
@@ -737,7 +848,11 @@
   {
     "name": "Baltimore Health Tech Startup Symposium",
     "type": "summit",
-    "topics": ["healthtech", "startups", "research-commercialization"],
+    "topics": [
+      "healthtech",
+      "startups",
+      "research-commercialization"
+    ],
     "city": "Baltimore",
     "region": "Maryland",
     "country": "United States",
@@ -758,7 +873,12 @@
   {
     "name": "Philly Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "civic-tech", "community", "ai"],
+    "topics": [
+      "startups",
+      "civic-tech",
+      "community",
+      "ai"
+    ],
     "city": "Philadelphia",
     "region": "Pennsylvania",
     "country": "United States",
@@ -779,7 +899,12 @@
   {
     "name": "devopsdays Philadelphia",
     "type": "conference",
-    "topics": ["devops", "sre", "cloud", "open-spaces"],
+    "topics": [
+      "devops",
+      "sre",
+      "cloud",
+      "open-spaces"
+    ],
     "city": "Philadelphia",
     "region": "Pennsylvania",
     "country": "United States",
@@ -800,7 +925,12 @@
   {
     "name": "PennApps",
     "type": "hackathon",
-    "topics": ["students", "software", "hardware", "ai"],
+    "topics": [
+      "students",
+      "software",
+      "hardware",
+      "ai"
+    ],
     "city": "Philadelphia",
     "region": "Pennsylvania",
     "country": "United States",
@@ -821,7 +951,11 @@
   {
     "name": "PAX Unplugged",
     "type": "expo",
-    "topics": ["tabletop", "gaming", "game-dev"],
+    "topics": [
+      "tabletop",
+      "gaming",
+      "game-dev"
+    ],
     "city": "Philadelphia",
     "region": "Pennsylvania",
     "country": "United States",
@@ -842,7 +976,12 @@
   {
     "name": "Digital Summit Philadelphia",
     "type": "conference",
-    "topics": ["digital-marketing", "martech", "content", "ai"],
+    "topics": [
+      "digital-marketing",
+      "martech",
+      "content",
+      "ai"
+    ],
     "city": "Philadelphia",
     "region": "Pennsylvania",
     "country": "United States",
@@ -863,7 +1002,12 @@
   {
     "name": "TartanHacks",
     "type": "hackathon",
-    "topics": ["students", "software", "hardware", "social-impact"],
+    "topics": [
+      "students",
+      "software",
+      "hardware",
+      "social-impact"
+    ],
     "city": "Pittsburgh",
     "region": "Pennsylvania",
     "country": "United States",
@@ -884,7 +1028,11 @@
   {
     "name": "Pittsburgh TechFest",
     "type": "conference",
-    "topics": ["software", "engineering", "community"],
+    "topics": [
+      "software",
+      "engineering",
+      "community"
+    ],
     "city": "Pittsburgh",
     "region": "Pennsylvania",
     "country": "United States",
@@ -905,7 +1053,11 @@
   {
     "name": "Pittsburgh Tech 50 Awards",
     "type": "awards",
-    "topics": ["awards", "startups", "networking"],
+    "topics": [
+      "awards",
+      "startups",
+      "networking"
+    ],
     "city": "Pittsburgh",
     "region": "Pennsylvania",
     "country": "United States",
@@ -926,7 +1078,11 @@
   {
     "name": "Steel City AI Innovators Meetup",
     "type": "meetup-series",
-    "topics": ["ai", "machine-learning", "community"],
+    "topics": [
+      "ai",
+      "machine-learning",
+      "community"
+    ],
     "city": "Pittsburgh",
     "region": "Pennsylvania",
     "country": "United States",
@@ -947,7 +1103,12 @@
   {
     "name": "Abstractions",
     "type": "conference",
-    "topics": ["software", "design", "devops", "community"],
+    "topics": [
+      "software",
+      "design",
+      "devops",
+      "community"
+    ],
     "city": "Pittsburgh",
     "region": "Pennsylvania",
     "country": "United States",
@@ -968,7 +1129,13 @@
   {
     "name": "RenderATL",
     "type": "conference",
-    "topics": ["frontend", "javascript", "ai", "ux", "culture"],
+    "topics": [
+      "frontend",
+      "javascript",
+      "ai",
+      "ux",
+      "culture"
+    ],
     "city": "Atlanta",
     "region": "Georgia",
     "country": "United States",
@@ -989,7 +1156,12 @@
   {
     "name": "Atlanta Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "ai", "venture-capital", "community"],
+    "topics": [
+      "startups",
+      "ai",
+      "venture-capital",
+      "community"
+    ],
     "city": "Atlanta",
     "region": "Georgia",
     "country": "United States",
@@ -1010,7 +1182,11 @@
   {
     "name": "Venture Atlanta",
     "type": "conference",
-    "topics": ["venture-capital", "startups", "fundraising"],
+    "topics": [
+      "venture-capital",
+      "startups",
+      "fundraising"
+    ],
     "city": "Atlanta",
     "region": "Georgia",
     "country": "United States",
@@ -1031,7 +1207,12 @@
   {
     "name": "Devnexus",
     "type": "conference",
-    "topics": ["java", "jvm", "ai", "developer-tooling"],
+    "topics": [
+      "java",
+      "jvm",
+      "ai",
+      "developer-tooling"
+    ],
     "city": "Atlanta",
     "region": "Georgia",
     "country": "United States",
@@ -1052,7 +1233,12 @@
   {
     "name": "HackGT",
     "type": "hackathon",
-    "topics": ["students", "software", "hardware", "ai"],
+    "topics": [
+      "students",
+      "software",
+      "hardware",
+      "ai"
+    ],
     "city": "Atlanta",
     "region": "Georgia",
     "country": "United States",
@@ -1073,7 +1259,12 @@
   {
     "name": "Hacklytics",
     "type": "hackathon",
-    "topics": ["data-science", "ai", "machine-learning", "students"],
+    "topics": [
+      "data-science",
+      "ai",
+      "machine-learning",
+      "students"
+    ],
     "city": "Atlanta",
     "region": "Georgia",
     "country": "United States",
@@ -1094,7 +1285,13 @@
   {
     "name": "ImmerseGT",
     "type": "hackathon",
-    "topics": ["xr", "ar", "vr", "spatial-computing", "students"],
+    "topics": [
+      "xr",
+      "ar",
+      "vr",
+      "spatial-computing",
+      "students"
+    ],
     "city": "Atlanta",
     "region": "Georgia",
     "country": "United States",
@@ -1115,7 +1312,11 @@
   {
     "name": "Digital Summit Atlanta",
     "type": "conference",
-    "topics": ["digital-marketing", "martech", "ai"],
+    "topics": [
+      "digital-marketing",
+      "martech",
+      "ai"
+    ],
     "city": "Atlanta",
     "region": "Georgia",
     "country": "United States",
@@ -1136,7 +1337,12 @@
   {
     "name": "IBM TechXchange Conference",
     "type": "conference",
-    "topics": ["enterprise", "ai", "cloud", "developer-tooling"],
+    "topics": [
+      "enterprise",
+      "ai",
+      "cloud",
+      "developer-tooling"
+    ],
     "city": "Atlanta",
     "region": "Georgia",
     "country": "United States",
@@ -1157,7 +1363,12 @@
   {
     "name": "Augmented Enterprise Summit",
     "type": "summit",
-    "topics": ["xr", "ar", "industrial-tech", "enterprise"],
+    "topics": [
+      "xr",
+      "ar",
+      "industrial-tech",
+      "enterprise"
+    ],
     "city": "Atlanta",
     "region": "Georgia",
     "country": "United States",
@@ -1178,7 +1389,13 @@
   {
     "name": "eMerge Americas",
     "type": "conference",
-    "topics": ["startups", "ai", "healthtech", "fintech", "defense"],
+    "topics": [
+      "startups",
+      "ai",
+      "healthtech",
+      "fintech",
+      "defense"
+    ],
     "city": "Miami",
     "region": "Florida",
     "country": "United States",
@@ -1199,7 +1416,11 @@
   {
     "name": "ShellHacks",
     "type": "hackathon",
-    "topics": ["students", "software", "career-fair"],
+    "topics": [
+      "students",
+      "software",
+      "career-fair"
+    ],
     "city": "Miami",
     "region": "Florida",
     "country": "United States",
@@ -1220,7 +1441,12 @@
   {
     "name": "Refresh Miami",
     "type": "meetup-series",
-    "topics": ["startups", "ai", "networking", "community"],
+    "topics": [
+      "startups",
+      "ai",
+      "networking",
+      "community"
+    ],
     "city": "Miami",
     "region": "Florida",
     "country": "United States",
@@ -1241,7 +1467,13 @@
   {
     "name": "Live! 360 Tech Con",
     "type": "conference",
-    "topics": ["dotnet", "data", "security", "ai", "it-ops"],
+    "topics": [
+      "dotnet",
+      "data",
+      "security",
+      "ai",
+      "it-ops"
+    ],
     "city": "Orlando",
     "region": "Florida",
     "country": "United States",
@@ -1262,7 +1494,11 @@
   {
     "name": "BSides Orlando",
     "type": "conference",
-    "topics": ["security", "community", "workshops"],
+    "topics": [
+      "security",
+      "community",
+      "workshops"
+    ],
     "city": "Orlando",
     "region": "Florida",
     "country": "United States",
@@ -1283,7 +1519,12 @@
   {
     "name": "Knight Hacks",
     "type": "hackathon",
-    "topics": ["students", "ai", "game-dev", "embedded"],
+    "topics": [
+      "students",
+      "ai",
+      "game-dev",
+      "embedded"
+    ],
     "city": "Orlando",
     "region": "Florida",
     "country": "United States",
@@ -1304,7 +1545,11 @@
   {
     "name": "Orlando Code Camp",
     "type": "conference",
-    "topics": ["dotnet", "software", "community"],
+    "topics": [
+      "dotnet",
+      "software",
+      "community"
+    ],
     "city": "Orlando",
     "region": "Florida",
     "country": "United States",
@@ -1325,7 +1570,12 @@
   {
     "name": "Gartner IT Symposium/Xpo",
     "type": "conference",
-    "topics": ["it-leadership", "ai", "enterprise", "strategy"],
+    "topics": [
+      "it-leadership",
+      "ai",
+      "enterprise",
+      "strategy"
+    ],
     "city": "Orlando",
     "region": "Florida",
     "country": "United States",
@@ -1346,7 +1596,12 @@
   {
     "name": "STAREAST",
     "type": "conference",
-    "topics": ["software-testing", "qa", "automation", "ai"],
+    "topics": [
+      "software-testing",
+      "qa",
+      "automation",
+      "ai"
+    ],
     "city": "Orlando",
     "region": "Florida",
     "country": "United States",
@@ -1367,7 +1622,12 @@
   {
     "name": "Hackabull",
     "type": "hackathon",
-    "topics": ["students", "hardware", "healthcare", "design"],
+    "topics": [
+      "students",
+      "hardware",
+      "healthcare",
+      "design"
+    ],
     "city": "Tampa",
     "region": "Florida",
     "country": "United States",
@@ -1388,7 +1648,11 @@
   {
     "name": "Digital Summit Tampa",
     "type": "conference",
-    "topics": ["digital-marketing", "martech", "ai"],
+    "topics": [
+      "digital-marketing",
+      "martech",
+      "ai"
+    ],
     "city": "Tampa",
     "region": "Florida",
     "country": "United States",
@@ -1409,28 +1673,36 @@
   {
     "name": "Florida Technology & Innovation Solution Summit",
     "type": "summit",
-    "topics": ["innovation", "policy", "enterprise"],
+    "topics": [
+      "innovation",
+      "policy",
+      "enterprise"
+    ],
     "city": "Tampa",
     "region": "Florida",
     "country": "United States",
     "venue": "Grand Hyatt Tampa Bay",
     "cadence": "annual",
     "month": "August",
-    "next_date": "",
-    "next_date_end": "",
+    "next_date": "2027-08-25",
+    "next_date_end": "2027-08-25",
     "last_date": "2026-08-11",
-    "status": "recurring-tbd",
+    "status": "upcoming",
     "attendance": "",
     "cost": "paid",
     "audience": "technology executives, policymakers, business leaders",
-    "url": "https://www.flchamber.com/fltechinnovationsummit26/",
+    "url": "https://www.flchamber.com/event/2027-florida-technology-innovation-solution-summit/",
     "description": "The Florida Chamber of Commerce's statewide technology and innovation summit, a one-day programme on the state's tech economy, workforce and emerging technology policy.",
     "source": "https://www.flchamber.com/fltechinnovationsummit26/"
   },
   {
     "name": "Florida Technology Summit",
     "type": "summit",
-    "topics": ["it-leadership", "cybersecurity", "cloud"],
+    "topics": [
+      "it-leadership",
+      "cybersecurity",
+      "cloud"
+    ],
     "city": "St. Petersburg",
     "region": "Florida",
     "country": "United States",
@@ -1451,7 +1723,12 @@
   {
     "name": "Tampa Bay Tech Community Events",
     "type": "meetup-series",
-    "topics": ["java", "ai", "community", "women-in-tech"],
+    "topics": [
+      "java",
+      "ai",
+      "community",
+      "women-in-tech"
+    ],
     "city": "Tampa",
     "region": "Florida",
     "country": "United States",
@@ -1472,7 +1749,11 @@
   {
     "name": "Clojure/conj",
     "type": "conference",
-    "topics": ["clojure", "functional-programming", "jvm"],
+    "topics": [
+      "clojure",
+      "functional-programming",
+      "jvm"
+    ],
     "city": "Charlotte",
     "region": "North Carolina",
     "country": "United States",
@@ -1493,7 +1774,11 @@
   {
     "name": "NC TECH Outlook for Tech",
     "type": "conference",
-    "topics": ["industry-research", "policy", "networking"],
+    "topics": [
+      "industry-research",
+      "policy",
+      "networking"
+    ],
     "city": "Charlotte",
     "region": "North Carolina",
     "country": "United States",
@@ -1514,7 +1799,12 @@
   {
     "name": "All Things Open",
     "type": "conference",
-    "topics": ["open-source", "ai", "web", "community"],
+    "topics": [
+      "open-source",
+      "ai",
+      "web",
+      "community"
+    ],
     "city": "Raleigh",
     "region": "North Carolina",
     "country": "United States",
@@ -1535,7 +1825,12 @@
   {
     "name": "devopsdays Raleigh",
     "type": "conference",
-    "topics": ["devops", "sre", "cloud", "open-spaces"],
+    "topics": [
+      "devops",
+      "sre",
+      "cloud",
+      "open-spaces"
+    ],
     "city": "Raleigh",
     "region": "North Carolina",
     "country": "United States",
@@ -1556,7 +1851,11 @@
   {
     "name": "Triangle InfoSeCon",
     "type": "conference",
-    "topics": ["security", "ai-governance", "training"],
+    "topics": [
+      "security",
+      "ai-governance",
+      "training"
+    ],
     "city": "Raleigh",
     "region": "North Carolina",
     "country": "United States",
@@ -1577,7 +1876,10 @@
   {
     "name": "BSides RDU",
     "type": "conference",
-    "topics": ["security", "community"],
+    "topics": [
+      "security",
+      "community"
+    ],
     "city": "Raleigh",
     "region": "North Carolina",
     "country": "United States",
@@ -1598,7 +1900,12 @@
   {
     "name": "CED Venture Connect",
     "type": "conference",
-    "topics": ["venture-capital", "startups", "biotech", "deep-tech"],
+    "topics": [
+      "venture-capital",
+      "startups",
+      "biotech",
+      "deep-tech"
+    ],
     "city": "Durham",
     "region": "North Carolina",
     "country": "United States",
@@ -1619,7 +1926,11 @@
   {
     "name": "NC TECH TECHFEST",
     "type": "festival",
-    "topics": ["community", "networking", "innovation"],
+    "topics": [
+      "community",
+      "networking",
+      "innovation"
+    ],
     "city": "Durham",
     "region": "North Carolina",
     "country": "United States",
@@ -1640,7 +1951,10 @@
   {
     "name": "NC TECH Awards Celebration",
     "type": "awards",
-    "topics": ["awards", "networking"],
+    "topics": [
+      "awards",
+      "networking"
+    ],
     "city": "Raleigh",
     "region": "North Carolina",
     "country": "United States",
@@ -1661,7 +1975,11 @@
   {
     "name": "NC TECH Summit for Women in Tech",
     "type": "summit",
-    "topics": ["women-in-tech", "leadership", "career"],
+    "topics": [
+      "women-in-tech",
+      "leadership",
+      "career"
+    ],
     "city": "Asheville",
     "region": "North Carolina",
     "country": "United States",
@@ -1682,7 +2000,11 @@
   {
     "name": "Digital Summit Raleigh",
     "type": "conference",
-    "topics": ["digital-marketing", "martech", "ai"],
+    "topics": [
+      "digital-marketing",
+      "martech",
+      "ai"
+    ],
     "city": "Raleigh",
     "region": "North Carolina",
     "country": "United States",
@@ -1703,7 +2025,11 @@
   {
     "name": "HackNC",
     "type": "hackathon",
-    "topics": ["students", "software", "beginners"],
+    "topics": [
+      "students",
+      "software",
+      "beginners"
+    ],
     "city": "Chapel Hill",
     "region": "North Carolina",
     "country": "United States",
@@ -1724,7 +2050,11 @@
   {
     "name": "HackDuke: Code for Good",
     "type": "hackathon",
-    "topics": ["students", "social-impact", "software"],
+    "topics": [
+      "students",
+      "social-impact",
+      "software"
+    ],
     "city": "Durham",
     "region": "North Carolina",
     "country": "United States",
@@ -1745,7 +2075,11 @@
   {
     "name": "RVAsec",
     "type": "conference",
-    "topics": ["security", "ctf", "lockpicking"],
+    "topics": [
+      "security",
+      "ctf",
+      "lockpicking"
+    ],
     "city": "Richmond",
     "region": "Virginia",
     "country": "United States",
@@ -1766,7 +2100,11 @@
   {
     "name": "rvatech/Women in Technology Conference",
     "type": "conference",
-    "topics": ["women-in-tech", "leadership", "career"],
+    "topics": [
+      "women-in-tech",
+      "leadership",
+      "career"
+    ],
     "city": "Richmond",
     "region": "Virginia",
     "country": "United States",
@@ -1787,7 +2125,11 @@
   {
     "name": "CyberConVA",
     "type": "conference",
-    "topics": ["cybersecurity", "risk", "enterprise"],
+    "topics": [
+      "cybersecurity",
+      "risk",
+      "enterprise"
+    ],
     "city": "Richmond",
     "region": "Virginia",
     "country": "United States",
@@ -1808,7 +2150,11 @@
   {
     "name": "rvatech/Data + AI Summit",
     "type": "summit",
-    "topics": ["data", "ai", "analytics"],
+    "topics": [
+      "data",
+      "ai",
+      "analytics"
+    ],
     "city": "Richmond",
     "region": "Virginia",
     "country": "United States",
@@ -1829,7 +2175,11 @@
   {
     "name": "CodeMash East",
     "type": "conference",
-    "topics": ["software", "polyglot", "community"],
+    "topics": [
+      "software",
+      "polyglot",
+      "community"
+    ],
     "city": "Spotsylvania",
     "region": "Virginia",
     "country": "United States",
@@ -1850,7 +2200,12 @@
   {
     "name": "Bitcoin Conference",
     "type": "conference",
-    "topics": ["bitcoin", "crypto", "fintech", "policy"],
+    "topics": [
+      "bitcoin",
+      "crypto",
+      "fintech",
+      "policy"
+    ],
     "city": "Nashville",
     "region": "Tennessee",
     "country": "United States",
@@ -1871,7 +2226,11 @@
   {
     "name": "ICS Cybersecurity Conference Nashville",
     "type": "conference",
-    "topics": ["ics", "ot-security", "critical-infrastructure"],
+    "topics": [
+      "ics",
+      "ot-security",
+      "critical-infrastructure"
+    ],
     "city": "Nashville",
     "region": "Tennessee",
     "country": "United States",
@@ -1892,7 +2251,11 @@
   {
     "name": "Slate Summit",
     "type": "summit",
-    "topics": ["edtech", "crm", "higher-education"],
+    "topics": [
+      "edtech",
+      "crm",
+      "higher-education"
+    ],
     "city": "Nashville",
     "region": "Tennessee",
     "country": "United States",
@@ -1913,7 +2276,11 @@
   {
     "name": "Music City Tech",
     "type": "conference",
-    "topics": ["software", "agile", "data"],
+    "topics": [
+      "software",
+      "agile",
+      "data"
+    ],
     "city": "Nashville",
     "region": "Tennessee",
     "country": "United States",
@@ -1934,7 +2301,11 @@
   {
     "name": "DIG SOUTH Tech, Venture & AI Summit",
     "type": "summit",
-    "topics": ["startups", "venture-capital", "ai"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "ai"
+    ],
     "city": "Charleston",
     "region": "South Carolina",
     "country": "United States",
@@ -1955,7 +2326,11 @@
   {
     "name": "Charleston Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "ai", "community"],
+    "topics": [
+      "startups",
+      "ai",
+      "community"
+    ],
     "city": "Charleston",
     "region": "South Carolina",
     "country": "United States",
@@ -1976,7 +2351,11 @@
   {
     "name": "The Newark Summit",
     "type": "summit",
-    "topics": ["innovation", "startups", "urban-tech"],
+    "topics": [
+      "innovation",
+      "startups",
+      "urban-tech"
+    ],
     "city": "Newark",
     "region": "New Jersey",
     "country": "United States",
@@ -1997,7 +2376,12 @@
   {
     "name": "Propelify Innovation Festival",
     "type": "festival",
-    "topics": ["startups", "ai", "sports-tech", "innovation"],
+    "topics": [
+      "startups",
+      "ai",
+      "sports-tech",
+      "innovation"
+    ],
     "city": "Hoboken",
     "region": "New Jersey",
     "country": "United States",
@@ -2018,7 +2402,11 @@
   {
     "name": "HackRU",
     "type": "hackathon",
-    "topics": ["students", "software", "beginners"],
+    "topics": [
+      "students",
+      "software",
+      "beginners"
+    ],
     "city": "New Brunswick",
     "region": "New Jersey",
     "country": "United States",
@@ -2039,7 +2427,11 @@
   {
     "name": "HackPrinceton",
     "type": "hackathon",
-    "topics": ["students", "software", "hardware"],
+    "topics": [
+      "students",
+      "software",
+      "hardware"
+    ],
     "city": "Princeton",
     "region": "New Jersey",
     "country": "United States",
@@ -2060,7 +2452,11 @@
   {
     "name": "Rhode Island Startup Week",
     "type": "startup-week",
-    "topics": ["startups", "entrepreneurship", "networking"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "networking"
+    ],
     "city": "Providence",
     "region": "Rhode Island",
     "country": "United States",
@@ -2081,7 +2477,11 @@
   {
     "name": "Hack@Brown",
     "type": "hackathon",
-    "topics": ["students", "software", "beginners"],
+    "topics": [
+      "students",
+      "software",
+      "beginners"
+    ],
     "city": "Providence",
     "region": "Rhode Island",
     "country": "United States",
@@ -2102,7 +2502,11 @@
   {
     "name": "YHack",
     "type": "hackathon",
-    "topics": ["students", "ai", "hardware"],
+    "topics": [
+      "students",
+      "ai",
+      "hardware"
+    ],
     "city": "New Haven",
     "region": "Connecticut",
     "country": "United States",
@@ -2123,7 +2527,11 @@
   {
     "name": "YQuantum",
     "type": "hackathon",
-    "topics": ["quantum", "students", "research"],
+    "topics": [
+      "quantum",
+      "students",
+      "research"
+    ],
     "city": "New Haven",
     "region": "Connecticut",
     "country": "United States",
@@ -2144,7 +2552,12 @@
   {
     "name": "Yale Healthcare Hackathon",
     "type": "hackathon",
-    "topics": ["healthtech", "ai", "students", "clinicians"],
+    "topics": [
+      "healthtech",
+      "ai",
+      "students",
+      "clinicians"
+    ],
     "city": "New Haven",
     "region": "Connecticut",
     "country": "United States",
@@ -2165,7 +2578,11 @@
   {
     "name": "CT Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "innovation", "community"],
+    "topics": [
+      "startups",
+      "innovation",
+      "community"
+    ],
     "city": "Various",
     "region": "Connecticut",
     "country": "United States",
@@ -2186,7 +2603,11 @@
   {
     "name": "Maine Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "community", "innovation"],
+    "topics": [
+      "startups",
+      "community",
+      "innovation"
+    ],
     "city": "Portland",
     "region": "Maine",
     "country": "United States",
@@ -2207,7 +2628,12 @@
   {
     "name": "Vermont Tech Jam",
     "type": "career-fair",
-    "topics": ["careers", "hiring", "robotics", "community"],
+    "topics": [
+      "careers",
+      "hiring",
+      "robotics",
+      "community"
+    ],
     "city": "Burlington",
     "region": "Vermont",
     "country": "United States",
@@ -2228,7 +2654,12 @@
   {
     "name": "New York State Innovation Summit",
     "type": "summit",
-    "topics": ["manufacturing", "ai", "biotech", "advanced-materials"],
+    "topics": [
+      "manufacturing",
+      "ai",
+      "biotech",
+      "advanced-materials"
+    ],
     "city": "Buffalo",
     "region": "New York",
     "country": "United States",
@@ -2249,7 +2680,10 @@
   {
     "name": "BSides Buffalo",
     "type": "conference",
-    "topics": ["security", "community"],
+    "topics": [
+      "security",
+      "community"
+    ],
     "city": "Buffalo",
     "region": "New York",
     "country": "United States",
@@ -2270,7 +2704,11 @@
   {
     "name": "Women in Tech WNY",
     "type": "conference",
-    "topics": ["women-in-tech", "career", "community"],
+    "topics": [
+      "women-in-tech",
+      "career",
+      "community"
+    ],
     "city": "Buffalo",
     "region": "New York",
     "country": "United States",
@@ -2291,7 +2729,11 @@
   {
     "name": "43North Finals",
     "type": "demo-day",
-    "topics": ["startups", "pitch-competition", "venture-capital"],
+    "topics": [
+      "startups",
+      "pitch-competition",
+      "venture-capital"
+    ],
     "city": "Buffalo",
     "region": "New York",
     "country": "United States",
@@ -2312,7 +2754,11 @@
   {
     "name": "HackRPI",
     "type": "hackathon",
-    "topics": ["students", "software", "cloud"],
+    "topics": [
+      "students",
+      "software",
+      "cloud"
+    ],
     "city": "Troy",
     "region": "New York",
     "country": "United States",
@@ -2333,7 +2779,12 @@
   {
     "name": "Ohio Tech Summit",
     "type": "summit",
-    "topics": ["enterprise", "startups", "talent", "ai"],
+    "topics": [
+      "enterprise",
+      "startups",
+      "talent",
+      "ai"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2354,7 +2805,11 @@
   {
     "name": "Startup Week Columbus",
     "type": "startup-week",
-    "topics": ["startups", "entrepreneurship", "networking"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "networking"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2375,7 +2830,12 @@
   {
     "name": "Stir Trek",
     "type": "conference",
-    "topics": ["software", "web", "cloud", "community"],
+    "topics": [
+      "software",
+      "web",
+      "cloud",
+      "community"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2396,7 +2856,11 @@
   {
     "name": "Central Ohio InfoSec Summit",
     "type": "summit",
-    "topics": ["security", "appsec", "grc"],
+    "topics": [
+      "security",
+      "appsec",
+      "grc"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2417,7 +2881,12 @@
   {
     "name": "DataConnect Conference",
     "type": "conference",
-    "topics": ["data", "analytics", "ai", "women-in-tech"],
+    "topics": [
+      "data",
+      "analytics",
+      "ai",
+      "women-in-tech"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2438,7 +2907,12 @@
   {
     "name": "Hackers Teaching Hackers",
     "type": "conference",
-    "topics": ["security", "ctf", "villages", "community"],
+    "topics": [
+      "security",
+      "ctf",
+      "villages",
+      "community"
+    ],
     "city": "Canal Winchester",
     "region": "Ohio",
     "country": "United States",
@@ -2459,7 +2933,11 @@
   {
     "name": "QA or the Highway",
     "type": "conference",
-    "topics": ["software-testing", "qa", "automation"],
+    "topics": [
+      "software-testing",
+      "qa",
+      "automation"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2480,7 +2958,11 @@
   {
     "name": "AI Rising Conference",
     "type": "conference",
-    "topics": ["ai", "machine-learning", "enterprise"],
+    "topics": [
+      "ai",
+      "machine-learning",
+      "enterprise"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2501,7 +2983,11 @@
   {
     "name": "Cloud Nirvana Columbus",
     "type": "conference",
-    "topics": ["cloud", "azure", "devops"],
+    "topics": [
+      "cloud",
+      "azure",
+      "devops"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2522,7 +3008,10 @@
   {
     "name": "BSides Columbus",
     "type": "conference",
-    "topics": ["security", "community"],
+    "topics": [
+      "security",
+      "community"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2543,7 +3032,11 @@
   {
     "name": "MakeOHI/O",
     "type": "hackathon",
-    "topics": ["hardware", "makers", "students"],
+    "topics": [
+      "hardware",
+      "makers",
+      "students"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2564,7 +3057,11 @@
   {
     "name": "CIO Tomorrow",
     "type": "conference",
-    "topics": ["it-leadership", "enterprise", "ai"],
+    "topics": [
+      "it-leadership",
+      "enterprise",
+      "ai"
+    ],
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
@@ -2585,7 +3082,11 @@
   {
     "name": "PyOhio",
     "type": "conference",
-    "topics": ["python", "open-source", "community"],
+    "topics": [
+      "python",
+      "open-source",
+      "community"
+    ],
     "city": "Cleveland",
     "region": "Ohio",
     "country": "United States",
@@ -2606,7 +3107,10 @@
   {
     "name": "BSides Cleveland",
     "type": "conference",
-    "topics": ["security", "community"],
+    "topics": [
+      "security",
+      "community"
+    ],
     "city": "Cleveland",
     "region": "Ohio",
     "country": "United States",
@@ -2627,7 +3131,11 @@
   {
     "name": "Best of Tech Awards",
     "type": "awards",
-    "topics": ["awards", "networking", "startups"],
+    "topics": [
+      "awards",
+      "networking",
+      "startups"
+    ],
     "city": "Cleveland",
     "region": "Ohio",
     "country": "United States",
@@ -2648,7 +3156,12 @@
   {
     "name": "Momentum Developer Conference",
     "type": "conference",
-    "topics": ["software", "web", "cloud", "career"],
+    "topics": [
+      "software",
+      "web",
+      "cloud",
+      "career"
+    ],
     "city": "Cincinnati",
     "region": "Ohio",
     "country": "United States",
@@ -2669,7 +3182,12 @@
   {
     "name": "Cincy AI Week",
     "type": "tech-week",
-    "topics": ["ai", "machine-learning", "enterprise", "community"],
+    "topics": [
+      "ai",
+      "machine-learning",
+      "enterprise",
+      "community"
+    ],
     "city": "Cincinnati",
     "region": "Ohio",
     "country": "United States",
@@ -2690,7 +3208,12 @@
   {
     "name": "CodeMash",
     "type": "conference",
-    "topics": ["software", "polyglot", "community", "family"],
+    "topics": [
+      "software",
+      "polyglot",
+      "community",
+      "family"
+    ],
     "city": "Sandusky",
     "region": "Ohio",
     "country": "United States",

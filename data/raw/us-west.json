@@ -2,7 +2,12 @@
   {
     "name": "TechCrunch Disrupt",
     "type": "conference",
-    "topics": ["startups", "venture-capital", "ai", "founders"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "ai",
+      "founders"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -23,7 +28,12 @@
   {
     "name": "Dreamforce",
     "type": "conference",
-    "topics": ["salesforce", "crm", "ai", "enterprise-software"],
+    "topics": [
+      "salesforce",
+      "crm",
+      "ai",
+      "enterprise-software"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -44,7 +54,12 @@
   {
     "name": "Game Developers Conference",
     "type": "conference",
-    "topics": ["game-development", "gaming", "graphics", "indie-games"],
+    "topics": [
+      "game-development",
+      "gaming",
+      "graphics",
+      "indie-games"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -65,7 +80,12 @@
   {
     "name": "RSAC Conference",
     "type": "conference",
-    "topics": ["cybersecurity", "infosec", "cryptography", "enterprise-security"],
+    "topics": [
+      "cybersecurity",
+      "infosec",
+      "cryptography",
+      "enterprise-security"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -86,7 +106,12 @@
   {
     "name": "SF Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "venture-capital", "ai", "networking"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "ai",
+      "networking"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -107,7 +132,12 @@
   {
     "name": "The AI Conference",
     "type": "conference",
-    "topics": ["ai", "machine-learning", "llm", "research"],
+    "topics": [
+      "ai",
+      "machine-learning",
+      "llm",
+      "research"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -128,7 +158,12 @@
   {
     "name": "QCon San Francisco",
     "type": "conference",
-    "topics": ["software-architecture", "distributed-systems", "platform-engineering", "ai"],
+    "topics": [
+      "software-architecture",
+      "distributed-systems",
+      "platform-engineering",
+      "ai"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -149,7 +184,12 @@
   {
     "name": "OWASP Global AppSec USA",
     "type": "conference",
-    "topics": ["application-security", "cybersecurity", "open-source", "devsecops"],
+    "topics": [
+      "application-security",
+      "cybersecurity",
+      "open-source",
+      "devsecops"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -170,28 +210,38 @@
   {
     "name": "Data Streaming Summit",
     "type": "summit",
-    "topics": ["data-engineering", "streaming", "kafka", "real-time"],
+    "topics": [
+      "data-engineering",
+      "streaming",
+      "kafka",
+      "real-time"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
-    "venue": "",
+    "venue": "Hotel Nikko San Francisco",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-07",
     "next_date_end": "2026-10-08",
-    "last_date": "2025-10-29",
+    "last_date": "2025-09-29",
     "status": "upcoming",
     "attendance": "",
     "cost": "paid",
     "audience": "data engineers, platform engineers, architects",
-    "url": "https://datastreamingsummit.io/",
+    "url": "https://datastreaming-summit.org/",
     "description": "A vendor-neutral conference on real-time data streaming systems, covering Kafka, Flink, Iceberg and streaming architecture in production.",
     "source": "https://dev.events/NA/US/CA/San_Francisco/tech"
   },
   {
     "name": "PyBay",
     "type": "conference",
-    "topics": ["python", "data-science", "ai", "open-source"],
+    "topics": [
+      "python",
+      "data-science",
+      "ai",
+      "open-source"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -212,7 +262,11 @@
   {
     "name": "Step San Francisco",
     "type": "conference",
-    "topics": ["startups", "ai", "venture-capital"],
+    "topics": [
+      "startups",
+      "ai",
+      "venture-capital"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -233,7 +287,12 @@
   {
     "name": "KCD SF Bay Area",
     "type": "conference",
-    "topics": ["kubernetes", "cloud-native", "devops", "open-source"],
+    "topics": [
+      "kubernetes",
+      "cloud-native",
+      "devops",
+      "open-source"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -254,7 +313,12 @@
   {
     "name": "MCP Connect San Francisco",
     "type": "conference",
-    "topics": ["ai", "mcp", "agents", "developer-tools"],
+    "topics": [
+      "ai",
+      "mcp",
+      "agents",
+      "developer-tools"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -275,7 +339,11 @@
   {
     "name": "Product-Led Summit San Francisco",
     "type": "summit",
-    "topics": ["product-management", "growth", "saas"],
+    "topics": [
+      "product-management",
+      "growth",
+      "saas"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -296,7 +364,11 @@
   {
     "name": "Product Operations Summit San Francisco",
     "type": "summit",
-    "topics": ["product-operations", "product-management", "saas"],
+    "topics": [
+      "product-operations",
+      "product-management",
+      "saas"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -317,7 +389,11 @@
   {
     "name": "Chief Product Officer Summit San Francisco",
     "type": "summit",
-    "topics": ["product-management", "leadership", "saas"],
+    "topics": [
+      "product-management",
+      "leadership",
+      "saas"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -338,7 +414,11 @@
   {
     "name": "TailscaleUp",
     "type": "conference",
-    "topics": ["networking", "infrastructure", "developer-tools"],
+    "topics": [
+      "networking",
+      "infrastructure",
+      "developer-tools"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -359,7 +439,11 @@
   {
     "name": "Showerhacks",
     "type": "hackathon",
-    "topics": ["ai", "hackathon", "students"],
+    "topics": [
+      "ai",
+      "hackathon",
+      "students"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -380,7 +464,12 @@
   {
     "name": "SF Hacks",
     "type": "hackathon",
-    "topics": ["hackathon", "students", "ai", "web"],
+    "topics": [
+      "hackathon",
+      "students",
+      "ai",
+      "web"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -401,7 +490,12 @@
   {
     "name": "Cal Hacks",
     "type": "hackathon",
-    "topics": ["hackathon", "students", "ai", "entrepreneurship"],
+    "topics": [
+      "hackathon",
+      "students",
+      "ai",
+      "entrepreneurship"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -422,7 +516,13 @@
   {
     "name": "Microsoft Build",
     "type": "conference",
-    "topics": ["microsoft", "azure", "ai", "developer-tools", "dotnet"],
+    "topics": [
+      "microsoft",
+      "azure",
+      "ai",
+      "developer-tools",
+      "dotnet"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -430,7 +530,7 @@
     "cadence": "annual",
     "month": "May-June",
     "next_date": "",
-    "next_date_end": "",
+    "next_date_end": "2026-06-03",
     "last_date": "2026-06-02",
     "status": "recurring-tbd",
     "attendance": "5000",
@@ -443,7 +543,12 @@
   {
     "name": "AGNTCon + MCPCon North America",
     "type": "conference",
-    "topics": ["ai", "agents", "mcp", "developer-tools"],
+    "topics": [
+      "ai",
+      "agents",
+      "mcp",
+      "developer-tools"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -464,7 +569,11 @@
   {
     "name": "PlatformCon Live Day San Francisco",
     "type": "conference",
-    "topics": ["platform-engineering", "devops", "developer-experience"],
+    "topics": [
+      "platform-engineering",
+      "devops",
+      "developer-experience"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -485,11 +594,15 @@
   {
     "name": "Fully Connected",
     "type": "conference",
-    "topics": ["ai", "machine-learning", "mlops"],
+    "topics": [
+      "ai",
+      "machine-learning",
+      "mlops"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
-    "venue": "",
+    "venue": "Moscone South",
     "cadence": "annual",
     "month": "September-October",
     "next_date": "2026-09-29",
@@ -499,14 +612,18 @@
     "attendance": "",
     "cost": "paid",
     "audience": "ML engineers, AI practitioners",
-    "url": "https://wandb.ai/site/fully-connected/",
+    "url": "https://www.coreweave.com/fully-connected-2026",
     "description": "Weights & Biases' conference for machine learning practitioners, covering model training, evaluation, agents and production ML workflows.",
     "source": "https://dev.events/NA/US/CA/San_Francisco/tech"
   },
   {
     "name": "FTW:SF",
     "type": "conference",
-    "topics": ["ai", "startups", "future-of-work"],
+    "topics": [
+      "ai",
+      "startups",
+      "future-of-work"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -527,7 +644,13 @@
   {
     "name": "SaaStr Annual",
     "type": "conference",
-    "topics": ["saas", "b2b", "ai", "sales", "founders"],
+    "topics": [
+      "saas",
+      "b2b",
+      "ai",
+      "sales",
+      "founders"
+    ],
     "city": "San Mateo",
     "region": "California",
     "country": "United States",
@@ -548,7 +671,13 @@
   {
     "name": "Apple Worldwide Developers Conference",
     "type": "conference",
-    "topics": ["apple", "ios", "macos", "developer-tools", "swift"],
+    "topics": [
+      "apple",
+      "ios",
+      "macos",
+      "developer-tools",
+      "swift"
+    ],
     "city": "Cupertino",
     "region": "California",
     "country": "United States",
@@ -569,7 +698,13 @@
   {
     "name": "Google I/O",
     "type": "conference",
-    "topics": ["google", "android", "ai", "web", "cloud"],
+    "topics": [
+      "google",
+      "android",
+      "ai",
+      "web",
+      "cloud"
+    ],
     "city": "Mountain View",
     "region": "California",
     "country": "United States",
@@ -590,7 +725,12 @@
   {
     "name": "Meta Connect",
     "type": "conference",
-    "topics": ["ar-vr", "metaverse", "ai", "wearables"],
+    "topics": [
+      "ar-vr",
+      "metaverse",
+      "ai",
+      "wearables"
+    ],
     "city": "Menlo Park",
     "region": "California",
     "country": "United States",
@@ -611,7 +751,13 @@
   {
     "name": "NVIDIA GTC",
     "type": "conference",
-    "topics": ["ai", "gpu", "robotics", "hpc", "data-center"],
+    "topics": [
+      "ai",
+      "gpu",
+      "robotics",
+      "hpc",
+      "data-center"
+    ],
     "city": "San Jose",
     "region": "California",
     "country": "United States",
@@ -632,7 +778,12 @@
   {
     "name": "PyTorch Conference",
     "type": "conference",
-    "topics": ["ai", "machine-learning", "open-source", "pytorch"],
+    "topics": [
+      "ai",
+      "machine-learning",
+      "open-source",
+      "pytorch"
+    ],
     "city": "San Jose",
     "region": "California",
     "country": "United States",
@@ -653,7 +804,12 @@
   {
     "name": "OpenSearchCon North America",
     "type": "conference",
-    "topics": ["search", "open-source", "data", "observability"],
+    "topics": [
+      "search",
+      "open-source",
+      "data",
+      "observability"
+    ],
     "city": "San Jose",
     "region": "California",
     "country": "United States",
@@ -674,7 +830,12 @@
   {
     "name": "WeAreDevelopers World Congress",
     "type": "conference",
-    "topics": ["software-development", "ai", "web", "careers"],
+    "topics": [
+      "software-development",
+      "ai",
+      "web",
+      "careers"
+    ],
     "city": "San Jose",
     "region": "California",
     "country": "United States",
@@ -695,7 +856,12 @@
   {
     "name": "Linux Foundation Legal Summit",
     "type": "summit",
-    "topics": ["open-source", "licensing", "legal", "compliance"],
+    "topics": [
+      "open-source",
+      "licensing",
+      "legal",
+      "compliance"
+    ],
     "city": "San Jose",
     "region": "California",
     "country": "United States",
@@ -716,7 +882,12 @@
   {
     "name": "AI & Big Data Expo North America",
     "type": "expo",
-    "topics": ["ai", "big-data", "enterprise", "cloud"],
+    "topics": [
+      "ai",
+      "big-data",
+      "enterprise",
+      "cloud"
+    ],
     "city": "San Jose",
     "region": "California",
     "country": "United States",
@@ -737,7 +908,12 @@
   {
     "name": "OPI Summit on DPU/IPUs",
     "type": "summit",
-    "topics": ["networking", "hardware", "data-center", "open-source"],
+    "topics": [
+      "networking",
+      "hardware",
+      "data-center",
+      "open-source"
+    ],
     "city": "San Jose",
     "region": "California",
     "country": "United States",
@@ -758,7 +934,12 @@
   {
     "name": "Jupyter Day San Jose",
     "type": "conference",
-    "topics": ["jupyter", "data-science", "python", "open-source"],
+    "topics": [
+      "jupyter",
+      "data-science",
+      "python",
+      "open-source"
+    ],
     "city": "San Jose",
     "region": "California",
     "country": "United States",
@@ -779,7 +960,12 @@
   {
     "name": "OIN Connect",
     "type": "conference",
-    "topics": ["open-source", "patents", "licensing", "legal"],
+    "topics": [
+      "open-source",
+      "patents",
+      "licensing",
+      "legal"
+    ],
     "city": "San Jose",
     "region": "California",
     "country": "United States",
@@ -800,7 +986,11 @@
   {
     "name": "AI Product Summit Silicon Valley",
     "type": "summit",
-    "topics": ["ai", "product-management", "saas"],
+    "topics": [
+      "ai",
+      "product-management",
+      "saas"
+    ],
     "city": "San Jose",
     "region": "California",
     "country": "United States",
@@ -821,7 +1011,10 @@
   {
     "name": "Chief Product Officer Summit Silicon Valley",
     "type": "summit",
-    "topics": ["product-management", "leadership"],
+    "topics": [
+      "product-management",
+      "leadership"
+    ],
     "city": "San Jose",
     "region": "California",
     "country": "United States",
@@ -842,7 +1035,12 @@
   {
     "name": "DVCon U.S.",
     "type": "conference",
-    "topics": ["semiconductors", "verification", "eda", "hardware"],
+    "topics": [
+      "semiconductors",
+      "verification",
+      "eda",
+      "hardware"
+    ],
     "city": "San Jose",
     "region": "California",
     "country": "United States",
@@ -863,7 +1061,12 @@
   {
     "name": "API World",
     "type": "conference",
-    "topics": ["apis", "integration", "microservices", "developer-tools"],
+    "topics": [
+      "apis",
+      "integration",
+      "microservices",
+      "developer-tools"
+    ],
     "city": "Santa Clara",
     "region": "California",
     "country": "United States",
@@ -884,7 +1087,12 @@
   {
     "name": "CloudX",
     "type": "conference",
-    "topics": ["cloud", "devops", "infrastructure", "kubernetes"],
+    "topics": [
+      "cloud",
+      "devops",
+      "infrastructure",
+      "kubernetes"
+    ],
     "city": "Santa Clara",
     "region": "California",
     "country": "United States",
@@ -905,7 +1113,12 @@
   {
     "name": "AI TechWorld",
     "type": "conference",
-    "topics": ["ai", "machine-learning", "llm", "enterprise"],
+    "topics": [
+      "ai",
+      "machine-learning",
+      "llm",
+      "enterprise"
+    ],
     "city": "Santa Clara",
     "region": "California",
     "country": "United States",
@@ -926,7 +1139,11 @@
   {
     "name": "DataWeek",
     "type": "conference",
-    "topics": ["data-engineering", "analytics", "databases"],
+    "topics": [
+      "data-engineering",
+      "analytics",
+      "databases"
+    ],
     "city": "Santa Clara",
     "region": "California",
     "country": "United States",
@@ -947,7 +1164,12 @@
   {
     "name": "AI Infra Summit",
     "type": "summit",
-    "topics": ["ai", "infrastructure", "semiconductors", "data-center"],
+    "topics": [
+      "ai",
+      "infrastructure",
+      "semiconductors",
+      "data-center"
+    ],
     "city": "Santa Clara",
     "region": "California",
     "country": "United States",
@@ -968,7 +1190,12 @@
   {
     "name": "DeveloperWeek",
     "type": "conference",
-    "topics": ["software-development", "ai", "web", "devops"],
+    "topics": [
+      "software-development",
+      "ai",
+      "web",
+      "devops"
+    ],
     "city": "Santa Clara",
     "region": "California",
     "country": "United States",
@@ -989,7 +1216,11 @@
   {
     "name": "AI DevWorld",
     "type": "conference",
-    "topics": ["ai", "developer-tools", "llm"],
+    "topics": [
+      "ai",
+      "developer-tools",
+      "llm"
+    ],
     "city": "Santa Clara",
     "region": "California",
     "country": "United States",
@@ -1010,7 +1241,11 @@
   {
     "name": "ProductWorld",
     "type": "conference",
-    "topics": ["product-management", "ux", "growth"],
+    "topics": [
+      "product-management",
+      "ux",
+      "growth"
+    ],
     "city": "Santa Clara",
     "region": "California",
     "country": "United States",
@@ -1031,7 +1266,12 @@
   {
     "name": "OpsWorld",
     "type": "conference",
-    "topics": ["devops", "sre", "cloud", "observability"],
+    "topics": [
+      "devops",
+      "sre",
+      "cloud",
+      "observability"
+    ],
     "city": "Santa Clara",
     "region": "California",
     "country": "United States",
@@ -1052,7 +1292,11 @@
   {
     "name": "UC Berkeley AI Hackathon",
     "type": "hackathon",
-    "topics": ["ai", "hackathon", "students"],
+    "topics": [
+      "ai",
+      "hackathon",
+      "students"
+    ],
     "city": "Berkeley",
     "region": "California",
     "country": "United States",
@@ -1073,7 +1317,11 @@
   {
     "name": "Zeek Workshop Berkeley",
     "type": "workshop",
-    "topics": ["network-security", "open-source", "monitoring"],
+    "topics": [
+      "network-security",
+      "open-source",
+      "monitoring"
+    ],
     "city": "Berkeley",
     "region": "California",
     "country": "United States",
@@ -1094,7 +1342,12 @@
   {
     "name": "LA Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "venture-capital", "ai", "media"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "ai",
+      "media"
+    ],
     "city": "Los Angeles",
     "region": "California",
     "country": "United States",
@@ -1115,7 +1368,13 @@
   {
     "name": "LA Hacks",
     "type": "hackathon",
-    "topics": ["hackathon", "students", "ai", "climate", "healthcare"],
+    "topics": [
+      "hackathon",
+      "students",
+      "ai",
+      "climate",
+      "healthcare"
+    ],
     "city": "Los Angeles",
     "region": "California",
     "country": "United States",
@@ -1136,7 +1395,11 @@
   {
     "name": "LA Hacks AI Hackathon",
     "type": "hackathon",
-    "topics": ["ai", "hackathon", "students"],
+    "topics": [
+      "ai",
+      "hackathon",
+      "students"
+    ],
     "city": "Los Angeles",
     "region": "California",
     "country": "United States",
@@ -1157,7 +1420,12 @@
   {
     "name": "devopsdays Los Angeles",
     "type": "conference",
-    "topics": ["devops", "sre", "cloud", "culture"],
+    "topics": [
+      "devops",
+      "sre",
+      "cloud",
+      "culture"
+    ],
     "city": "Los Angeles",
     "region": "California",
     "country": "United States",
@@ -1178,7 +1446,12 @@
   {
     "name": "STARWEST",
     "type": "conference",
-    "topics": ["software-testing", "qa", "test-automation", "ai"],
+    "topics": [
+      "software-testing",
+      "qa",
+      "test-automation",
+      "ai"
+    ],
     "city": "Anaheim",
     "region": "California",
     "country": "United States",
@@ -1199,7 +1472,11 @@
   {
     "name": "The AI Pivot Conference",
     "type": "conference",
-    "topics": ["ai", "business-transformation", "enterprise"],
+    "topics": [
+      "ai",
+      "business-transformation",
+      "enterprise"
+    ],
     "city": "Anaheim",
     "region": "California",
     "country": "United States",
@@ -1220,7 +1497,12 @@
   {
     "name": "VSLive! San Diego",
     "type": "conference",
-    "topics": ["microsoft", "dotnet", "azure", "ai"],
+    "topics": [
+      "microsoft",
+      "dotnet",
+      "azure",
+      "ai"
+    ],
     "city": "San Diego",
     "region": "California",
     "country": "United States",
@@ -1241,7 +1523,12 @@
   {
     "name": "Offensive AI Con",
     "type": "conference",
-    "topics": ["ai", "offensive-security", "cybersecurity", "red-team"],
+    "topics": [
+      "ai",
+      "offensive-security",
+      "cybersecurity",
+      "red-team"
+    ],
     "city": "San Diego",
     "region": "California",
     "country": "United States",
@@ -1262,7 +1549,11 @@
   {
     "name": "San Diego CyberCon",
     "type": "conference",
-    "topics": ["cybersecurity", "infosec", "defense"],
+    "topics": [
+      "cybersecurity",
+      "infosec",
+      "defense"
+    ],
     "city": "San Diego",
     "region": "California",
     "country": "United States",
@@ -1283,7 +1574,12 @@
   {
     "name": "DDX Innovation & UX Conference San Diego",
     "type": "conference",
-    "topics": ["ux", "design", "product", "innovation"],
+    "topics": [
+      "ux",
+      "design",
+      "product",
+      "innovation"
+    ],
     "city": "San Diego",
     "region": "California",
     "country": "United States",
@@ -1304,7 +1600,12 @@
   {
     "name": "FinovateSpring",
     "type": "conference",
-    "topics": ["fintech", "banking", "ai", "demo"],
+    "topics": [
+      "fintech",
+      "banking",
+      "ai",
+      "demo"
+    ],
     "city": "San Diego",
     "region": "California",
     "country": "United States",
@@ -1325,7 +1626,13 @@
   {
     "name": "TechCon SoCal",
     "type": "conference",
-    "topics": ["ai", "digital-health", "semiconductors", "deep-tech", "investment"],
+    "topics": [
+      "ai",
+      "digital-health",
+      "semiconductors",
+      "deep-tech",
+      "investment"
+    ],
     "city": "San Diego",
     "region": "California",
     "country": "United States",
@@ -1346,7 +1653,12 @@
   {
     "name": "Diamondhacks",
     "type": "hackathon",
-    "topics": ["hackathon", "students", "ai", "web"],
+    "topics": [
+      "hackathon",
+      "students",
+      "ai",
+      "web"
+    ],
     "city": "La Jolla",
     "region": "California",
     "country": "United States",
@@ -1367,7 +1679,12 @@
   {
     "name": "Sacramento Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "ai", "art-tech", "community"],
+    "topics": [
+      "startups",
+      "ai",
+      "art-tech",
+      "community"
+    ],
     "city": "Sacramento",
     "region": "California",
     "country": "United States",
@@ -1388,7 +1705,11 @@
   {
     "name": "Sacramento Summer Startup Party",
     "type": "meetup-series",
-    "topics": ["startups", "networking", "community"],
+    "topics": [
+      "startups",
+      "networking",
+      "community"
+    ],
     "city": "Sacramento",
     "region": "California",
     "country": "United States",
@@ -1409,7 +1730,12 @@
   {
     "name": "Seattle Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "ai", "cloud", "venture-capital"],
+    "topics": [
+      "startups",
+      "ai",
+      "cloud",
+      "venture-capital"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1430,7 +1756,12 @@
   {
     "name": "PAX West",
     "type": "festival",
-    "topics": ["gaming", "game-development", "esports", "indie-games"],
+    "topics": [
+      "gaming",
+      "game-development",
+      "esports",
+      "indie-games"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1451,7 +1782,12 @@
   {
     "name": "SeaGL",
     "type": "conference",
-    "topics": ["linux", "open-source", "free-software", "community"],
+    "topics": [
+      "linux",
+      "open-source",
+      "free-software",
+      "community"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1472,7 +1808,13 @@
   {
     "name": "PASS Data Community Summit West",
     "type": "conference",
-    "topics": ["data", "sql-server", "analytics", "ai", "databases"],
+    "topics": [
+      "data",
+      "sql-server",
+      "analytics",
+      "ai",
+      "databases"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1493,7 +1835,11 @@
   {
     "name": "Seattle Day of Data",
     "type": "conference",
-    "topics": ["data", "sql-server", "analytics"],
+    "topics": [
+      "data",
+      "sql-server",
+      "analytics"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1514,7 +1860,12 @@
   {
     "name": "Pacific Northwest Software Symposium",
     "type": "conference",
-    "topics": ["java", "software-architecture", "jvm", "ai"],
+    "topics": [
+      "java",
+      "software-architecture",
+      "jvm",
+      "ai"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1535,7 +1886,11 @@
   {
     "name": "AI Con USA",
     "type": "conference",
-    "topics": ["ai", "machine-learning", "software-development"],
+    "topics": [
+      "ai",
+      "machine-learning",
+      "software-development"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1556,7 +1911,11 @@
   {
     "name": "Product-Led Summit Seattle",
     "type": "summit",
-    "topics": ["product-management", "growth", "saas"],
+    "topics": [
+      "product-management",
+      "growth",
+      "saas"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1577,7 +1936,12 @@
   {
     "name": "TechCon 365 / DataCon / PWRCon Seattle",
     "type": "conference",
-    "topics": ["microsoft-365", "power-platform", "data", "copilot"],
+    "topics": [
+      "microsoft-365",
+      "power-platform",
+      "data",
+      "copilot"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1598,7 +1962,12 @@
   {
     "name": "GeekWire Seattle AI Summit",
     "type": "summit",
-    "topics": ["ai", "startups", "policy", "research"],
+    "topics": [
+      "ai",
+      "startups",
+      "policy",
+      "research"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1619,7 +1988,12 @@
   {
     "name": "Seattle AI Startup Summit",
     "type": "summit",
-    "topics": ["ai", "startups", "venture-capital", "deep-tech"],
+    "topics": [
+      "ai",
+      "startups",
+      "venture-capital",
+      "deep-tech"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1640,7 +2014,11 @@
   {
     "name": "Seattle Investor Summit + Showcase",
     "type": "demo-day",
-    "topics": ["venture-capital", "startups", "pitch"],
+    "topics": [
+      "venture-capital",
+      "startups",
+      "pitch"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1661,7 +2039,11 @@
   {
     "name": "Startup Day Seattle",
     "type": "conference",
-    "topics": ["startups", "founders", "venture-capital"],
+    "topics": [
+      "startups",
+      "founders",
+      "venture-capital"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1682,7 +2064,12 @@
   {
     "name": "New Tech Seattle",
     "type": "meetup-series",
-    "topics": ["startups", "networking", "demo", "community"],
+    "topics": [
+      "startups",
+      "networking",
+      "demo",
+      "community"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -1703,7 +2090,13 @@
   {
     "name": "VSLive! @ Microsoft HQ",
     "type": "conference",
-    "topics": ["microsoft", "dotnet", "azure", "copilot", "ai"],
+    "topics": [
+      "microsoft",
+      "dotnet",
+      "azure",
+      "copilot",
+      "ai"
+    ],
     "city": "Redmond",
     "region": "Washington",
     "country": "United States",
@@ -1724,7 +2117,11 @@
   {
     "name": "Innovate QA",
     "type": "conference",
-    "topics": ["software-testing", "qa", "automation"],
+    "topics": [
+      "software-testing",
+      "qa",
+      "automation"
+    ],
     "city": "Bellevue",
     "region": "Washington",
     "country": "United States",
@@ -1745,7 +2142,11 @@
   {
     "name": "PNW Day of Data",
     "type": "conference",
-    "topics": ["data", "sql-server", "analytics"],
+    "topics": [
+      "data",
+      "sql-server",
+      "analytics"
+    ],
     "city": "Vancouver",
     "region": "Washington",
     "country": "United States",
@@ -1766,7 +2167,12 @@
   {
     "name": "devopsdays Portland",
     "type": "conference",
-    "topics": ["devops", "sre", "platform-engineering", "culture"],
+    "topics": [
+      "devops",
+      "sre",
+      "platform-engineering",
+      "culture"
+    ],
     "city": "Portland",
     "region": "Oregon",
     "country": "United States",
@@ -1787,7 +2193,11 @@
   {
     "name": "Pacific NW Software Quality Conference",
     "type": "conference",
-    "topics": ["software-testing", "qa", "quality-engineering"],
+    "topics": [
+      "software-testing",
+      "qa",
+      "quality-engineering"
+    ],
     "city": "Portland",
     "region": "Oregon",
     "country": "United States",
@@ -1808,7 +2218,12 @@
   {
     "name": "TokioConf",
     "type": "conference",
-    "topics": ["rust", "async", "open-source", "systems-programming"],
+    "topics": [
+      "rust",
+      "async",
+      "open-source",
+      "systems-programming"
+    ],
     "city": "Portland",
     "region": "Oregon",
     "country": "United States",
@@ -1829,7 +2244,11 @@
   {
     "name": "Calagator Portland Tech Calendar",
     "type": "meetup-series",
-    "topics": ["community", "open-source", "software-development"],
+    "topics": [
+      "community",
+      "open-source",
+      "software-development"
+    ],
     "city": "Portland",
     "region": "Oregon",
     "country": "United States",
@@ -1850,7 +2269,12 @@
   {
     "name": "Rails Camp West",
     "type": "unconference",
-    "topics": ["ruby", "rails", "web-development", "community"],
+    "topics": [
+      "ruby",
+      "rails",
+      "web-development",
+      "community"
+    ],
     "city": "Otis",
     "region": "Oregon",
     "country": "United States",
@@ -1871,7 +2295,12 @@
   {
     "name": "Colorado Startup Week",
     "type": "startup-week",
-    "topics": ["startups", "entrepreneurship", "venture-capital", "product"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "venture-capital",
+      "product"
+    ],
     "city": "Denver",
     "region": "Colorado",
     "country": "United States",
@@ -1892,7 +2321,12 @@
   {
     "name": "devopsdays Denver",
     "type": "conference",
-    "topics": ["devops", "sre", "cloud", "culture"],
+    "topics": [
+      "devops",
+      "sre",
+      "cloud",
+      "culture"
+    ],
     "city": "Denver",
     "region": "Colorado",
     "country": "United States",
@@ -1913,7 +2347,12 @@
   {
     "name": "BSides Denver",
     "type": "conference",
-    "topics": ["cybersecurity", "infosec", "hacking", "community"],
+    "topics": [
+      "cybersecurity",
+      "infosec",
+      "hacking",
+      "community"
+    ],
     "city": "Denver",
     "region": "Colorado",
     "country": "United States",
@@ -1934,7 +2373,11 @@
   {
     "name": "Explore DDD",
     "type": "conference",
-    "topics": ["domain-driven-design", "software-architecture", "modelling"],
+    "topics": [
+      "domain-driven-design",
+      "software-architecture",
+      "modelling"
+    ],
     "city": "Denver",
     "region": "Colorado",
     "country": "United States",
@@ -1955,7 +2398,12 @@
   {
     "name": "Mile High Dreamin'",
     "type": "conference",
-    "topics": ["salesforce", "crm", "admin", "community"],
+    "topics": [
+      "salesforce",
+      "crm",
+      "admin",
+      "community"
+    ],
     "city": "Denver",
     "region": "Colorado",
     "country": "United States",
@@ -1976,28 +2424,38 @@
   {
     "name": "DrupalCamp Colorado",
     "type": "conference",
-    "topics": ["drupal", "php", "web-development", "open-source"],
+    "topics": [
+      "drupal",
+      "php",
+      "web-development",
+      "open-source"
+    ],
     "city": "Denver",
     "region": "Colorado",
     "country": "United States",
-    "venue": "",
+    "venue": "Lowry Conference Center",
     "cadence": "annual",
     "month": "August",
     "next_date": "2026-08-27",
-    "next_date_end": "2026-08-29",
+    "next_date_end": "2026-08-28",
     "last_date": "2025-08-22",
     "status": "upcoming",
     "attendance": "200",
     "cost": "paid",
     "audience": "drupal developers, site builders, content strategists",
-    "url": "https://drupalcampcolorado.org/",
+    "url": "https://www.drupal-colorado.org/",
     "description": "Colorado's regional Drupal community camp, with training days, sessions on site building and development, and community sprints.",
     "source": "https://dev.events/NA/US/CO"
   },
   {
     "name": "Rocky Mountain Technology Summit",
     "type": "summit",
-    "topics": ["it-leadership", "cybersecurity", "ai", "enterprise"],
+    "topics": [
+      "it-leadership",
+      "cybersecurity",
+      "ai",
+      "enterprise"
+    ],
     "city": "Denver",
     "region": "Colorado",
     "country": "United States",
@@ -2018,7 +2476,11 @@
   {
     "name": "Product-Led Summit Denver",
     "type": "summit",
-    "topics": ["product-management", "growth", "saas"],
+    "topics": [
+      "product-management",
+      "growth",
+      "saas"
+    ],
     "city": "Denver",
     "region": "Colorado",
     "country": "United States",
@@ -2039,7 +2501,12 @@
   {
     "name": "dev2next",
     "type": "conference",
-    "topics": ["java", "full-stack", "cloud", "ai"],
+    "topics": [
+      "java",
+      "full-stack",
+      "cloud",
+      "ai"
+    ],
     "city": "Lone Tree",
     "region": "Colorado",
     "country": "United States",
@@ -2060,7 +2527,12 @@
   {
     "name": "CppCon",
     "type": "conference",
-    "topics": ["cpp", "systems-programming", "performance", "open-source"],
+    "topics": [
+      "cpp",
+      "systems-programming",
+      "performance",
+      "open-source"
+    ],
     "city": "Aurora",
     "region": "Colorado",
     "country": "United States",
@@ -2081,7 +2553,12 @@
   {
     "name": "EWF Annual Conference",
     "type": "conference",
-    "topics": ["cybersecurity", "leadership", "women-in-tech", "risk"],
+    "topics": [
+      "cybersecurity",
+      "leadership",
+      "women-in-tech",
+      "risk"
+    ],
     "city": "Aurora",
     "region": "Colorado",
     "country": "United States",
@@ -2102,7 +2579,11 @@
   {
     "name": "Boulder Startup Week",
     "type": "startup-week",
-    "topics": ["startups", "entrepreneurship", "venture-capital"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "venture-capital"
+    ],
     "city": "Boulder",
     "region": "Colorado",
     "country": "United States",
@@ -2123,7 +2604,12 @@
   {
     "name": "Rocky Mountain Ruby",
     "type": "conference",
-    "topics": ["ruby", "rails", "web-development", "open-source"],
+    "topics": [
+      "ruby",
+      "rails",
+      "web-development",
+      "open-source"
+    ],
     "city": "Boulder",
     "region": "Colorado",
     "country": "United States",
@@ -2144,7 +2630,11 @@
   {
     "name": "West Slope Startup Week",
     "type": "startup-week",
-    "topics": ["startups", "entrepreneurship", "rural-tech"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "rural-tech"
+    ],
     "city": "Durango",
     "region": "Colorado",
     "country": "United States",
@@ -2165,7 +2655,11 @@
   {
     "name": "RedacteCON",
     "type": "conference",
-    "topics": ["cybersecurity", "infosec", "community"],
+    "topics": [
+      "cybersecurity",
+      "infosec",
+      "community"
+    ],
     "city": "Grand Junction",
     "region": "Colorado",
     "country": "United States",
@@ -2186,7 +2680,13 @@
   {
     "name": "KubeCon + CloudNativeCon North America",
     "type": "conference",
-    "topics": ["kubernetes", "cloud-native", "open-source", "devops", "ai"],
+    "topics": [
+      "kubernetes",
+      "cloud-native",
+      "open-source",
+      "devops",
+      "ai"
+    ],
     "city": "Salt Lake City",
     "region": "Utah",
     "country": "United States",
@@ -2207,7 +2707,12 @@
   {
     "name": "Silicon Slopes Summit",
     "type": "summit",
-    "topics": ["startups", "tech-community", "ai", "venture-capital"],
+    "topics": [
+      "startups",
+      "tech-community",
+      "ai",
+      "venture-capital"
+    ],
     "city": "Salt Lake City",
     "region": "Utah",
     "country": "United States",
@@ -2228,7 +2733,13 @@
   {
     "name": "DevFest Salt Lake City",
     "type": "conference",
-    "topics": ["google-technologies", "android", "web", "ai", "community"],
+    "topics": [
+      "google-technologies",
+      "android",
+      "web",
+      "ai",
+      "community"
+    ],
     "city": "Salt Lake City",
     "region": "Utah",
     "country": "United States",
@@ -2249,7 +2760,11 @@
   {
     "name": "Partner Vibe",
     "type": "conference",
-    "topics": ["channel", "msp", "it-services"],
+    "topics": [
+      "channel",
+      "msp",
+      "it-services"
+    ],
     "city": "Salt Lake City",
     "region": "Utah",
     "country": "United States",
@@ -2270,7 +2785,11 @@
   {
     "name": "HackTheU",
     "type": "hackathon",
-    "topics": ["hackathon", "students", "software"],
+    "topics": [
+      "hackathon",
+      "students",
+      "software"
+    ],
     "city": "Salt Lake City",
     "region": "Utah",
     "country": "United States",
@@ -2291,7 +2810,12 @@
   {
     "name": "Utah Tech Calendar Community Meetups",
     "type": "meetup-series",
-    "topics": ["community", "software-development", "startups", "networking"],
+    "topics": [
+      "community",
+      "software-development",
+      "startups",
+      "networking"
+    ],
     "city": "Salt Lake City",
     "region": "Utah",
     "country": "United States",
@@ -2312,7 +2836,11 @@
   {
     "name": "UtahJS Conference",
     "type": "conference",
-    "topics": ["javascript", "web-development", "frontend"],
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend"
+    ],
     "city": "Sandy",
     "region": "Utah",
     "country": "United States",
@@ -2333,7 +2861,12 @@
   {
     "name": "SAINTCON",
     "type": "conference",
-    "topics": ["cybersecurity", "hacking", "hardware-hacking", "ctf"],
+    "topics": [
+      "cybersecurity",
+      "hacking",
+      "hardware-hacking",
+      "ctf"
+    ],
     "city": "Provo",
     "region": "Utah",
     "country": "United States",
@@ -2354,7 +2887,12 @@
   {
     "name": "HackUSU",
     "type": "hackathon",
-    "topics": ["hackathon", "students", "software", "hardware"],
+    "topics": [
+      "hackathon",
+      "students",
+      "software",
+      "hardware"
+    ],
     "city": "Logan",
     "region": "Utah",
     "country": "United States",
@@ -2375,7 +2913,11 @@
   {
     "name": "BSidesCache",
     "type": "conference",
-    "topics": ["cybersecurity", "infosec", "community"],
+    "topics": [
+      "cybersecurity",
+      "infosec",
+      "community"
+    ],
     "city": "Logan",
     "region": "Utah",
     "country": "United States",
@@ -2396,7 +2938,12 @@
   {
     "name": "GTM Hackathon",
     "type": "hackathon",
-    "topics": ["gtm-engineering", "automation", "sales-tech", "ai"],
+    "topics": [
+      "gtm-engineering",
+      "automation",
+      "sales-tech",
+      "ai"
+    ],
     "city": "Lehi",
     "region": "Utah",
     "country": "United States",
@@ -2410,14 +2957,18 @@
     "attendance": "100",
     "cost": "free",
     "audience": "go-to-market engineers, revenue operators, developers",
-    "url": "https://www.getmobly.com/gtm-hackathon",
+    "url": "https://www.getmobly.com/",
     "description": "A fast-paced competitive hackathon in Silicon Slopes where go-to-market engineers build automations, workflows and tools from scratch during Utah Tech Week.",
     "source": "https://www.getmobly.com/gtm-hackathon"
   },
   {
     "name": "CISO Fireside",
     "type": "summit",
-    "topics": ["cybersecurity", "leadership", "ciso"],
+    "topics": [
+      "cybersecurity",
+      "leadership",
+      "ciso"
+    ],
     "city": "Sundance",
     "region": "Utah",
     "country": "United States",
@@ -2438,7 +2989,13 @@
   {
     "name": "CES",
     "type": "expo",
-    "topics": ["consumer-electronics", "ai", "mobility", "hardware", "robotics"],
+    "topics": [
+      "consumer-electronics",
+      "ai",
+      "mobility",
+      "hardware",
+      "robotics"
+    ],
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
@@ -2459,7 +3016,13 @@
   {
     "name": "AWS re:Invent",
     "type": "conference",
-    "topics": ["cloud", "aws", "ai", "devops", "data"],
+    "topics": [
+      "cloud",
+      "aws",
+      "ai",
+      "devops",
+      "data"
+    ],
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
@@ -2480,7 +3043,12 @@
   {
     "name": "Black Hat USA",
     "type": "conference",
-    "topics": ["cybersecurity", "infosec", "research", "training"],
+    "topics": [
+      "cybersecurity",
+      "infosec",
+      "research",
+      "training"
+    ],
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
@@ -2501,7 +3069,13 @@
   {
     "name": "DEF CON",
     "type": "conference",
-    "topics": ["hacking", "cybersecurity", "ctf", "hardware-hacking", "villages"],
+    "topics": [
+      "hacking",
+      "cybersecurity",
+      "ctf",
+      "hardware-hacking",
+      "villages"
+    ],
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
@@ -2522,7 +3096,13 @@
   {
     "name": "Oracle AI World",
     "type": "conference",
-    "topics": ["oracle", "cloud", "ai", "databases", "enterprise-software"],
+    "topics": [
+      "oracle",
+      "cloud",
+      "ai",
+      "databases",
+      "enterprise-software"
+    ],
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
@@ -2543,7 +3123,12 @@
   {
     "name": "NetSuite SuiteWorld",
     "type": "conference",
-    "topics": ["erp", "saas", "business-software", "ai"],
+    "topics": [
+      "erp",
+      "saas",
+      "business-software",
+      "ai"
+    ],
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
@@ -2564,7 +3149,12 @@
   {
     "name": "Microsoft Power Platform Community Conference",
     "type": "conference",
-    "topics": ["power-platform", "low-code", "copilot", "microsoft"],
+    "topics": [
+      "power-platform",
+      "low-code",
+      "copilot",
+      "microsoft"
+    ],
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
@@ -2585,7 +3175,11 @@
   {
     "name": "HR Tech Las Vegas",
     "type": "expo",
-    "topics": ["hr-tech", "ai", "enterprise-software"],
+    "topics": [
+      "hr-tech",
+      "ai",
+      "enterprise-software"
+    ],
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
@@ -2606,7 +3200,12 @@
   {
     "name": "DevLearn Conference & Expo",
     "type": "conference",
-    "topics": ["learning-technology", "edtech", "ai", "instructional-design"],
+    "topics": [
+      "learning-technology",
+      "edtech",
+      "ai",
+      "instructional-design"
+    ],
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
@@ -2627,7 +3226,12 @@
   {
     "name": "SAP Connect",
     "type": "conference",
-    "topics": ["sap", "enterprise-software", "erp", "ai"],
+    "topics": [
+      "sap",
+      "enterprise-software",
+      "erp",
+      "ai"
+    ],
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
@@ -2648,7 +3252,11 @@
   {
     "name": "Vibe Coding Con",
     "type": "conference",
-    "topics": ["ai", "developer-tools", "software-development"],
+    "topics": [
+      "ai",
+      "developer-tools",
+      "software-development"
+    ],
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
@@ -2669,7 +3277,12 @@
   {
     "name": "Gartner Identity & Access Management Summit",
     "type": "summit",
-    "topics": ["identity", "cybersecurity", "zero-trust", "enterprise"],
+    "topics": [
+      "identity",
+      "cybersecurity",
+      "zero-trust",
+      "enterprise"
+    ],
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
@@ -2690,7 +3303,11 @@
   {
     "name": "Reno Startup Week",
     "type": "startup-week",
-    "topics": ["startups", "entrepreneurship", "community"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "community"
+    ],
     "city": "Reno",
     "region": "Nevada",
     "country": "United States",
@@ -2711,7 +3328,11 @@
   {
     "name": "Techstars Startup Weekend Reno",
     "type": "hackathon",
-    "topics": ["startups", "entrepreneurship", "pitch"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "pitch"
+    ],
     "city": "Reno",
     "region": "Nevada",
     "country": "United States",
@@ -2732,7 +3353,12 @@
   {
     "name": "TECHSPO Phoenix",
     "type": "expo",
-    "topics": ["martech", "adtech", "saas", "mobile"],
+    "topics": [
+      "martech",
+      "adtech",
+      "saas",
+      "mobile"
+    ],
     "city": "Phoenix",
     "region": "Arizona",
     "country": "United States",
@@ -2753,7 +3379,12 @@
   {
     "name": "Arizona Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "ai", "semiconductors", "community"],
+    "topics": [
+      "startups",
+      "ai",
+      "semiconductors",
+      "community"
+    ],
     "city": "Phoenix",
     "region": "Arizona",
     "country": "United States",
@@ -2774,7 +3405,12 @@
   {
     "name": "Phoenix Technology Summit",
     "type": "summit",
-    "topics": ["it", "cybersecurity", "enterprise", "cloud"],
+    "topics": [
+      "it",
+      "cybersecurity",
+      "enterprise",
+      "cloud"
+    ],
     "city": "Phoenix",
     "region": "Arizona",
     "country": "United States",
@@ -2795,7 +3431,12 @@
   {
     "name": "Arizona Technology Summit",
     "type": "summit",
-    "topics": ["it-leadership", "ai", "cybersecurity", "enterprise"],
+    "topics": [
+      "it-leadership",
+      "ai",
+      "cybersecurity",
+      "enterprise"
+    ],
     "city": "Scottsdale",
     "region": "Arizona",
     "country": "United States",
@@ -2816,7 +3457,12 @@
   {
     "name": "Workplace Ninjas US",
     "type": "conference",
-    "topics": ["microsoft", "endpoint-management", "intune", "it-operations"],
+    "topics": [
+      "microsoft",
+      "endpoint-management",
+      "intune",
+      "it-operations"
+    ],
     "city": "Scottsdale",
     "region": "Arizona",
     "country": "United States",
@@ -2837,7 +3483,12 @@
   {
     "name": "Hack Arizona",
     "type": "hackathon",
-    "topics": ["hackathon", "students", "ai", "social-good"],
+    "topics": [
+      "hackathon",
+      "students",
+      "ai",
+      "social-good"
+    ],
     "city": "Tucson",
     "region": "Arizona",
     "country": "United States",
@@ -2858,7 +3509,12 @@
   {
     "name": "Boise Entrepreneur Week",
     "type": "startup-week",
-    "topics": ["startups", "entrepreneurship", "software", "food-tech"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "software",
+      "food-tech"
+    ],
     "city": "Boise",
     "region": "Idaho",
     "country": "United States",
@@ -2879,7 +3535,12 @@
   {
     "name": "Boise Code Camp",
     "type": "conference",
-    "topics": ["software-development", "cloud", "mobile", "community"],
+    "topics": [
+      "software-development",
+      "cloud",
+      "mobile",
+      "community"
+    ],
     "city": "Boise",
     "region": "Idaho",
     "country": "United States",
@@ -2900,7 +3561,12 @@
   {
     "name": "Idaho Digital Government Summit",
     "type": "summit",
-    "topics": ["govtech", "public-sector", "cybersecurity", "ai"],
+    "topics": [
+      "govtech",
+      "public-sector",
+      "cybersecurity",
+      "ai"
+    ],
     "city": "Boise",
     "region": "Idaho",
     "country": "United States",
@@ -2921,7 +3587,12 @@
   {
     "name": "Idaho Technology Council Trade Show & Conference",
     "type": "expo",
-    "topics": ["it", "enterprise", "startups", "community"],
+    "topics": [
+      "it",
+      "enterprise",
+      "startups",
+      "community"
+    ],
     "city": "Boise",
     "region": "Idaho",
     "country": "United States",
@@ -2942,7 +3613,12 @@
   {
     "name": "Big Sky Dev Con",
     "type": "conference",
-    "topics": ["software-development", "ai", "systems-programming", "game-development"],
+    "topics": [
+      "software-development",
+      "ai",
+      "systems-programming",
+      "game-development"
+    ],
     "city": "Bozeman",
     "region": "Montana",
     "country": "United States",
@@ -2963,7 +3639,11 @@
   {
     "name": "INTERFACE Montana",
     "type": "conference",
-    "topics": ["it-infrastructure", "cybersecurity", "networking"],
+    "topics": [
+      "it-infrastructure",
+      "cybersecurity",
+      "networking"
+    ],
     "city": "Bozeman",
     "region": "Montana",
     "country": "United States",
@@ -2984,7 +3664,11 @@
   {
     "name": "Investing in Montana Summit",
     "type": "summit",
-    "topics": ["startups", "venture-capital", "entrepreneurship"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "entrepreneurship"
+    ],
     "city": "Bozeman",
     "region": "Montana",
     "country": "United States",
@@ -3005,7 +3689,12 @@
   {
     "name": "Emerging Technologies Summit",
     "type": "summit",
-    "topics": ["quantum", "emerging-tech", "security", "research"],
+    "topics": [
+      "quantum",
+      "emerging-tech",
+      "security",
+      "research"
+    ],
     "city": "Bozeman",
     "region": "Montana",
     "country": "United States",
@@ -3026,7 +3715,12 @@
   {
     "name": "Hawaii Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "ai", "ocean-tech", "community"],
+    "topics": [
+      "startups",
+      "ai",
+      "ocean-tech",
+      "community"
+    ],
     "city": "Honolulu",
     "region": "Hawaii",
     "country": "United States",
@@ -3047,7 +3741,12 @@
   {
     "name": "Hawaii International Conference on System Sciences",
     "type": "conference",
-    "topics": ["information-systems", "research", "academic", "ai"],
+    "topics": [
+      "information-systems",
+      "research",
+      "academic",
+      "ai"
+    ],
     "city": "Honolulu",
     "region": "Hawaii",
     "country": "United States",
@@ -3068,7 +3767,12 @@
   {
     "name": "HTDC Events",
     "type": "meetup-series",
-    "topics": ["startups", "innovation", "community", "dual-use"],
+    "topics": [
+      "startups",
+      "innovation",
+      "community",
+      "dual-use"
+    ],
     "city": "Honolulu",
     "region": "Hawaii",
     "country": "United States",
@@ -3089,7 +3793,12 @@
   {
     "name": "Alaska SBDC Summit",
     "type": "summit",
-    "topics": ["startups", "ai", "ecommerce", "small-business"],
+    "topics": [
+      "startups",
+      "ai",
+      "ecommerce",
+      "small-business"
+    ],
     "city": "Anchorage",
     "region": "Alaska",
     "country": "United States",
@@ -3110,7 +3819,11 @@
   {
     "name": "INTERFACE Anchorage",
     "type": "conference",
-    "topics": ["it-infrastructure", "cybersecurity", "networking"],
+    "topics": [
+      "it-infrastructure",
+      "cybersecurity",
+      "networking"
+    ],
     "city": "Anchorage",
     "region": "Alaska",
     "country": "United States",
@@ -3131,7 +3844,11 @@
   {
     "name": "Alaska Digital Government Summit",
     "type": "summit",
-    "topics": ["govtech", "public-sector", "cybersecurity"],
+    "topics": [
+      "govtech",
+      "public-sector",
+      "cybersecurity"
+    ],
     "city": "Anchorage",
     "region": "Alaska",
     "country": "United States",
@@ -3152,7 +3869,11 @@
   {
     "name": "Alaska Entrepreneurship Week",
     "type": "startup-week",
-    "topics": ["startups", "entrepreneurship", "community"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "community"
+    ],
     "city": "Anchorage",
     "region": "Alaska",
     "country": "United States",
@@ -3173,7 +3894,11 @@
   {
     "name": "Techstars Startup Weekend Anchorage",
     "type": "hackathon",
-    "topics": ["startups", "entrepreneurship", "pitch"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "pitch"
+    ],
     "city": "Anchorage",
     "region": "Alaska",
     "country": "United States",
@@ -3194,7 +3919,12 @@
   {
     "name": "New Mexico Tech Week",
     "type": "tech-week",
-    "topics": ["startups", "ai", "research", "national-labs"],
+    "topics": [
+      "startups",
+      "ai",
+      "research",
+      "national-labs"
+    ],
     "city": "Albuquerque",
     "region": "New Mexico",
     "country": "United States",
@@ -3215,7 +3945,13 @@
   {
     "name": "NM TechFest",
     "type": "conference",
-    "topics": ["software", "ai", "climate-tech", "entrepreneurship", "accessibility"],
+    "topics": [
+      "software",
+      "ai",
+      "climate-tech",
+      "entrepreneurship",
+      "accessibility"
+    ],
     "city": "Albuquerque",
     "region": "New Mexico",
     "country": "United States",
@@ -3236,7 +3972,12 @@
   {
     "name": "Security BSides Albuquerque",
     "type": "conference",
-    "topics": ["cybersecurity", "infosec", "hacking", "community"],
+    "topics": [
+      "cybersecurity",
+      "infosec",
+      "hacking",
+      "community"
+    ],
     "city": "Albuquerque",
     "region": "New Mexico",
     "country": "United States",
@@ -3257,7 +3998,12 @@
   {
     "name": "Innovate New Mexico Technology Showcase",
     "type": "expo",
-    "topics": ["research-commercialization", "deep-tech", "national-labs", "startups"],
+    "topics": [
+      "research-commercialization",
+      "deep-tech",
+      "national-labs",
+      "startups"
+    ],
     "city": "Albuquerque",
     "region": "New Mexico",
     "country": "United States",
@@ -3278,7 +4024,12 @@
   {
     "name": "Desert Dev Lab Hackathon",
     "type": "hackathon",
-    "topics": ["hackathon", "agtech", "food-tech", "community"],
+    "topics": [
+      "hackathon",
+      "agtech",
+      "food-tech",
+      "community"
+    ],
     "city": "Albuquerque",
     "region": "New Mexico",
     "country": "United States",
@@ -3299,7 +4050,12 @@
   {
     "name": "New Mexico Tech Summit",
     "type": "summit",
-    "topics": ["it", "enterprise", "innovation", "community"],
+    "topics": [
+      "it",
+      "enterprise",
+      "innovation",
+      "community"
+    ],
     "city": "Albuquerque",
     "region": "New Mexico",
     "country": "United States",
