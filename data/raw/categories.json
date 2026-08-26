@@ -3109,30 +3109,6 @@
     "source": "https://pycon.org/"
   },
   {
-    "name": "PyGotham",
-    "type": "conference",
-    "topics": [
-      "python",
-      "open-source"
-    ],
-    "city": "New York",
-    "region": "New York",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "Varies",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "New York Python developers",
-    "url": "https://pygotham.org/",
-    "description": "New York City's community-run regional Python conference.",
-    "source": "https://pycon.org/"
-  },
-  {
     "name": "North Bay Python",
     "type": "conference",
     "topics": [

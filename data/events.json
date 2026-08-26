@@ -1,6 +1,6 @@
 {
   "generated_on": "2026-08-26",
-  "event_count": 810,
+  "event_count": 809,
   "city_count": 217,
   "events": [
     {
@@ -1878,7 +1878,7 @@
       "attendance": "",
       "cost": "invite-only",
       "audience": "investors, founders, UC Berkeley community",
-      "url": "https://skydeck.berkeley.edu/demo-day/",
+      "url": "https://skydeck.berkeley.edu/",
       "description": "Demo day for each cohort of UC Berkeley's SkyDeck accelerator, where roughly two dozen venture-scale startups pitch to an audience of investors and the Berkeley innovation community.",
       "source": "https://skydeck.berkeley.edu/demo-day/",
       "sort_date": "",
@@ -12404,7 +12404,7 @@
       "cadence": "annual",
       "month": "September",
       "next_date": "2026-09-11",
-      "next_date_end": "",
+      "next_date_end": "2026-09-11",
       "last_date": "",
       "status": "upcoming",
       "attendance": "",
@@ -13326,33 +13326,6 @@
       "sort_date": "2025-03-27",
       "id": "mlconf-new-york",
       "source_file": "review-additions"
-    },
-    {
-      "name": "PyGotham",
-      "type": "conference",
-      "topics": [
-        "python",
-        "open-source"
-      ],
-      "city": "New York",
-      "region": "New York",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "New York Python developers",
-      "url": "https://pygotham.org/",
-      "description": "New York City's community-run regional Python conference.",
-      "source": "https://pycon.org/",
-      "sort_date": "",
-      "id": "pygotham-new-york",
-      "source_file": "categories"
     },
     {
       "name": "Nerd Nite New York",

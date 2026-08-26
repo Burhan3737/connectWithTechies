@@ -1,86 +1,55 @@
-TOTAL 750 events / 202 cities
+TOTAL 810 events / 217 cities / 63 regions
 
 BY TYPE
-   350  conference
-   104  hackathon
-    66  summit
-    60  meetup-series
+   375  conference
+   105  hackathon
+    73  summit
+    66  meetup-series
     35  tech-week
-    29  festival
-    28  expo
-    17  startup-week
-    16  demo-day
-     9  game-jam
-     9  awards
-     7  workshop
+    35  festival
+    31  expo
+    18  demo-day
+    16  startup-week
+    13  game-jam
+    12  awards
+     9  workshop
+     7  unconference
      6  bootcamp
      5  ctf
-     5  unconference
      4  career-fair
 
-EVENTS PER STATE/PROVINCE
-    94  California
-    53  Ontario
-    45  New York
-    33  Texas
-    27  Ohio
-    25  Florida
-    25  Nevada
-    22  Washington
-    22  British Columbia
-    21  Massachusetts
-    21  Colorado
-    21  Quebec
-    20  Tennessee
-    19  North Carolina
-    18  Georgia
-    18  Illinois
-    18  Pennsylvania
-    14  Utah
-    11  Michigan
-    11  Alberta
-    11  Wisconsin
-    11  US & Canada
-    11  District of Columbia
-    10  Minnesota
-     9  Alabama
-     8  Virginia
-     8  Maryland
-     8  New Jersey
-     8  Missouri
-     8  Arizona
-     7  New Mexico
-     7  Nova Scotia
-     7  Connecticut
-     7  Oregon
-     6  Indiana
-     6  Idaho
-     6  Iowa
-     6  Oklahoma
-     5  Alaska
-     5  Arkansas
-     5  Kansas
-     5  Saskatchewan
-     4  Montana
-     4  South Carolina
-     4  Mississippi
-     4  Kentucky
-     4  Rhode Island
-     4  Yukon
-     4  Manitoba
-     3  New Brunswick
-     3  Hawaii
-     3  Nebraska
-     2  North Dakota
-     2  Louisiana
-     2  South Dakota
-     2  Newfoundland and Labrador
-     1  Vermont
-     1  Delaware
-     1  Maine
+THINNEST STATES/PROVINCES (<=6 events)
+    1  Prince Edward Island
+    1  West Virginia
+    1  Wyoming
+    1  Delaware
+    1  Maine
+    2  Vermont
+    3  New Brunswick
+    3  Hawaii
+    3  Nebraska
+    3  South Dakota
+    3  Newfoundland and Labrador
+    4  Montana
+    4  Kentucky
+    4  Louisiana
+    4  Yukon
+    5  Alaska
+    5  Arkansas
+    5  South Carolina
+    5  Kansas
+    5  Rhode Island
+    5  Saskatchewan
+    6  Idaho
+    6  New Hampshire
+    6  Iowa
+    6  North Dakota
+    6  Mississippi
+    6  Oklahoma
+    6  Manitoba
 
-CITIES WITH ONLY ONE EVENT (90)
-  Albany, New York
+CITIES WITH ONLY ONE EVENT (98)
+  Abilene, Texas
   Amherst, Massachusetts
   Asheville, North Carolina
   Athens, Georgia
@@ -91,9 +60,9 @@ CITIES WITH ONLY ONE EVENT (90)
   Bloomington, Minnesota
   Bloomington, Indiana
   Brownsville, Texas
-  Burlington, Vermont
   Canal Winchester, Ohio
   Chapel Hill, North Carolina
+  Charlottetown, Prince Edward Island
   Clemson, South Carolina
   Colorado Springs, Colorado
   Coral Gables, Florida
@@ -104,10 +73,9 @@ CITIES WITH ONLY ONE EVENT (90)
   Durango, Colorado
   East Lansing, Michigan
   Evanston, Illinois
-  Fargo, North Dakota
   Fayetteville, Arkansas
-  Flowood, Mississippi
   Flushing, New York
+  Fort Ransom, North Dakota
   Fort Wayne, Indiana
   Gainesville, Florida
   Glassboro, New Jersey
@@ -116,9 +84,10 @@ CITIES WITH ONLY ONE EVENT (90)
   Half Moon Bay, California
   Harrisburg, Pennsylvania
   Hoboken, New Jersey
+  Huntington, West Virginia
   Idaho Falls, Idaho
-  Irving, Texas
   Ithaca, New York
+  Jackson, Wyoming
   Jersey City, New Jersey
   Kansas City, Kansas
   Kent, Ohio
@@ -129,6 +98,8 @@ CITIES WITH ONLY ONE EVENT (90)
   Lincoln, Nebraska
   Lone Tree, Colorado
   Lubbock, Texas
+  Madison, South Dakota
+  Manchester, New Hampshire
   Menlo Park, California
   Miami Beach, Florida
   Missoula, Montana
@@ -143,7 +114,9 @@ CITIES WITH ONLY ONE EVENT (90)
   Overland Park, Kansas
   Peoria, Illinois
   Petaluma, California
+  Plano, Texas
   Portland, Maine
+  Portsmouth, New Hampshire
   Princeton, New Jersey
   Provo, Utah
   Quebec City, Quebec
@@ -154,7 +127,9 @@ CITIES WITH ONLY ONE EVENT (90)
   Round Rock, Texas
   Sandusky, Ohio
   Sandy, Utah
+  Santa Clarita, California
   Savannah, Georgia
+  Schaumburg, Illinois
   Spotsylvania, Virginia
   St. Petersburg, Florida
   Stanford, California
@@ -163,10 +138,12 @@ CITIES WITH ONLY ONE EVENT (90)
   Sundance, Utah
   Sunnyvale, California
   Tinley Park, Illinois
-  Troy, New York
   Urbana-Champaign, Illinois
   Vallejo, California
   Valley City, North Dakota
   Vancouver, Washington
+  Wall, New Jersey
   West Lafayette, Indiana
+  Wheatland, North Dakota
   Wisconsin Dells, Wisconsin
+  Xenia, Ohio

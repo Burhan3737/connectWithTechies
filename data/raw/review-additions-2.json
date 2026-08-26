@@ -2,7 +2,12 @@
   {
     "name": "NH Tech Alliance Innovation Summit",
     "type": "summit",
-    "topics": ["startups", "innovation", "venture-capital", "policy"],
+    "topics": [
+      "startups",
+      "innovation",
+      "venture-capital",
+      "policy"
+    ],
     "city": "Nashua",
     "region": "New Hampshire",
     "country": "United States",
@@ -23,7 +28,11 @@
   {
     "name": "NH Tech Alliance Cybersecurity Summit",
     "type": "summit",
-    "topics": ["cybersecurity", "infosec", "risk"],
+    "topics": [
+      "cybersecurity",
+      "infosec",
+      "risk"
+    ],
     "city": "Manchester",
     "region": "New Hampshire",
     "country": "United States",
@@ -44,7 +53,12 @@
   {
     "name": "NH Tech Alliance Product of the Year",
     "type": "awards",
-    "topics": ["hardware", "product", "advanced-manufacturing", "startups"],
+    "topics": [
+      "hardware",
+      "product",
+      "advanced-manufacturing",
+      "startups"
+    ],
     "city": "Concord",
     "region": "New Hampshire",
     "country": "United States",
@@ -65,7 +79,11 @@
   {
     "name": "Speed Venture Summit",
     "type": "demo-day",
-    "topics": ["startups", "venture-capital", "fundraising"],
+    "topics": [
+      "startups",
+      "venture-capital",
+      "fundraising"
+    ],
     "city": "Concord",
     "region": "New Hampshire",
     "country": "United States",
@@ -86,7 +104,11 @@
   {
     "name": "eBrew",
     "type": "meetup-series",
-    "topics": ["networking", "creative-tech", "seacoast"],
+    "topics": [
+      "networking",
+      "creative-tech",
+      "seacoast"
+    ],
     "city": "Portsmouth",
     "region": "New Hampshire",
     "country": "United States",
@@ -107,7 +129,11 @@
   {
     "name": "Meeting in the Millyard",
     "type": "conference",
-    "topics": ["innovation", "manufacturing", "ecosystem"],
+    "topics": [
+      "innovation",
+      "manufacturing",
+      "ecosystem"
+    ],
     "city": "Nashua",
     "region": "New Hampshire",
     "country": "United States",
@@ -128,7 +154,12 @@
   {
     "name": "Northeast Dreamin'",
     "type": "conference",
-    "topics": ["salesforce", "crm", "low-code", "user-group"],
+    "topics": [
+      "salesforce",
+      "crm",
+      "low-code",
+      "user-group"
+    ],
     "city": "Concord",
     "region": "New Hampshire",
     "country": "United States",
@@ -149,7 +180,12 @@
   {
     "name": "Business Value Builder Summit",
     "type": "summit",
-    "topics": ["entrepreneurship", "startups", "growth", "exit-planning"],
+    "topics": [
+      "entrepreneurship",
+      "startups",
+      "growth",
+      "exit-planning"
+    ],
     "city": "Huntington",
     "region": "West Virginia",
     "country": "United States",
@@ -170,7 +206,11 @@
   {
     "name": "Silicon Couloir Pitch Day",
     "type": "demo-day",
-    "topics": ["startups", "pitch-competition", "rural-innovation"],
+    "topics": [
+      "startups",
+      "pitch-competition",
+      "rural-innovation"
+    ],
     "city": "Jackson",
     "region": "Wyoming",
     "country": "United States",
@@ -191,7 +231,11 @@
   {
     "name": "PEI BioAlliance Summer Social",
     "type": "meetup-series",
-    "topics": ["bioscience", "biotech", "networking"],
+    "topics": [
+      "bioscience",
+      "biotech",
+      "networking"
+    ],
     "city": "Charlottetown",
     "region": "Prince Edward Island",
     "country": "Canada",
@@ -212,7 +256,11 @@
   {
     "name": "PEI BioAlliance Holiday Social",
     "type": "meetup-series",
-    "topics": ["bioscience", "biotech", "networking"],
+    "topics": [
+      "bioscience",
+      "biotech",
+      "networking"
+    ],
     "city": "Charlottetown",
     "region": "Prince Edward Island",
     "country": "Canada",
@@ -233,7 +281,12 @@
   {
     "name": "Vintage Computer Festival East",
     "type": "festival",
-    "topics": ["retro-computing", "computer-history", "hardware", "restoration"],
+    "topics": [
+      "retro-computing",
+      "computer-history",
+      "hardware",
+      "restoration"
+    ],
     "city": "Wall",
     "region": "New Jersey",
     "country": "United States",
@@ -254,7 +307,11 @@
   {
     "name": "Vintage Computer Festival West",
     "type": "festival",
-    "topics": ["retro-computing", "computer-history", "hardware"],
+    "topics": [
+      "retro-computing",
+      "computer-history",
+      "hardware"
+    ],
     "city": "Mountain View",
     "region": "California",
     "country": "United States",
@@ -275,7 +332,12 @@
   {
     "name": "Vintage Computer Festival Midwest",
     "type": "festival",
-    "topics": ["retro-computing", "computer-history", "hardware", "swap-meet"],
+    "topics": [
+      "retro-computing",
+      "computer-history",
+      "hardware",
+      "swap-meet"
+    ],
     "city": "Schaumburg",
     "region": "Illinois",
     "country": "United States",
@@ -296,7 +358,12 @@
   {
     "name": "Vintage Computer Festival Southeast",
     "type": "festival",
-    "topics": ["retro-computing", "computer-history", "arcade", "hardware"],
+    "topics": [
+      "retro-computing",
+      "computer-history",
+      "arcade",
+      "hardware"
+    ],
     "city": "Atlanta",
     "region": "Georgia",
     "country": "United States",
@@ -317,7 +384,11 @@
   {
     "name": "Vintage Computer Festival Southwest",
     "type": "festival",
-    "topics": ["retro-computing", "computer-history", "hardware"],
+    "topics": [
+      "retro-computing",
+      "computer-history",
+      "hardware"
+    ],
     "city": "Irving",
     "region": "Texas",
     "country": "United States",
@@ -338,7 +409,11 @@
   {
     "name": "Vintage Computer Festival Montreal",
     "type": "festival",
-    "topics": ["retro-computing", "computer-history", "hardware"],
+    "topics": [
+      "retro-computing",
+      "computer-history",
+      "hardware"
+    ],
     "city": "Montreal",
     "region": "Quebec",
     "country": "Canada",
@@ -359,7 +434,12 @@
   {
     "name": "VCF Swap Meet",
     "type": "expo",
-    "topics": ["retro-computing", "amateur-radio", "electronics", "swap-meet"],
+    "topics": [
+      "retro-computing",
+      "amateur-radio",
+      "electronics",
+      "swap-meet"
+    ],
     "city": "Wall",
     "region": "New Jersey",
     "country": "United States",
@@ -380,7 +460,12 @@
   {
     "name": "Portland Retro Gaming Expo",
     "type": "expo",
-    "topics": ["retro-gaming", "computer-history", "arcade", "collecting"],
+    "topics": [
+      "retro-gaming",
+      "computer-history",
+      "arcade",
+      "collecting"
+    ],
     "city": "Portland",
     "region": "Oregon",
     "country": "United States",
@@ -401,7 +486,13 @@
   {
     "name": "SC Conference (Supercomputing)",
     "type": "conference",
-    "topics": ["hpc", "supercomputing", "research-computing", "networking", "ai"],
+    "topics": [
+      "hpc",
+      "supercomputing",
+      "research-computing",
+      "networking",
+      "ai"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -422,7 +513,13 @@
   {
     "name": "NICAR Conference",
     "type": "conference",
-    "topics": ["data-journalism", "python", "r", "ai", "investigative-reporting"],
+    "topics": [
+      "data-journalism",
+      "python",
+      "r",
+      "ai",
+      "investigative-reporting"
+    ],
     "city": "Indianapolis",
     "region": "Indiana",
     "country": "United States",
@@ -443,7 +540,12 @@
   {
     "name": "Code4Lib",
     "type": "conference",
-    "topics": ["library-tech", "open-source", "metadata", "digital-archives"],
+    "topics": [
+      "library-tech",
+      "open-source",
+      "metadata",
+      "digital-archives"
+    ],
     "city": "Philadelphia",
     "region": "Pennsylvania",
     "country": "United States",
@@ -464,7 +566,13 @@
   {
     "name": "Dayton Hamvention",
     "type": "expo",
-    "topics": ["amateur-radio", "electronics", "makers", "emergency-comms", "sdr"],
+    "topics": [
+      "amateur-radio",
+      "electronics",
+      "makers",
+      "emergency-comms",
+      "sdr"
+    ],
     "city": "Xenia",
     "region": "Ohio",
     "country": "United States",
@@ -485,7 +593,13 @@
   {
     "name": "Day of Data Detroit",
     "type": "conference",
-    "topics": ["sql-server", "data", "analytics", "azure", "user-group"],
+    "topics": [
+      "sql-server",
+      "data",
+      "analytics",
+      "azure",
+      "user-group"
+    ],
     "city": "Detroit",
     "region": "Michigan",
     "country": "United States",
@@ -506,7 +620,12 @@
   {
     "name": "Salt Lake City Day of Data",
     "type": "conference",
-    "topics": ["sql-server", "data", "analytics", "user-group"],
+    "topics": [
+      "sql-server",
+      "data",
+      "analytics",
+      "user-group"
+    ],
     "city": "Salt Lake City",
     "region": "Utah",
     "country": "United States",
@@ -527,7 +646,12 @@
   {
     "name": "Day of Data Winnipeg",
     "type": "conference",
-    "topics": ["sql-server", "data", "analytics", "user-group"],
+    "topics": [
+      "sql-server",
+      "data",
+      "analytics",
+      "user-group"
+    ],
     "city": "Winnipeg",
     "region": "Manitoba",
     "country": "Canada",
@@ -548,7 +672,12 @@
   {
     "name": "Day of Data Toronto",
     "type": "conference",
-    "topics": ["sql-server", "data", "analytics", "user-group"],
+    "topics": [
+      "sql-server",
+      "data",
+      "analytics",
+      "user-group"
+    ],
     "city": "Toronto",
     "region": "Ontario",
     "country": "Canada",
@@ -569,7 +698,13 @@
   {
     "name": "Boston Data and AI Saturday",
     "type": "conference",
-    "topics": ["sql-server", "data", "ai", "analytics", "user-group"],
+    "topics": [
+      "sql-server",
+      "data",
+      "ai",
+      "analytics",
+      "user-group"
+    ],
     "city": "Boston",
     "region": "Massachusetts",
     "country": "United States",
@@ -590,7 +725,12 @@
   {
     "name": "Day of Data Pittsburgh",
     "type": "conference",
-    "topics": ["sql-server", "data", "analytics", "user-group"],
+    "topics": [
+      "sql-server",
+      "data",
+      "analytics",
+      "user-group"
+    ],
     "city": "Pittsburgh",
     "region": "Pennsylvania",
     "country": "United States",
@@ -611,7 +751,12 @@
   {
     "name": "Day of Data Orlando",
     "type": "conference",
-    "topics": ["sql-server", "data", "analytics", "user-group"],
+    "topics": [
+      "sql-server",
+      "data",
+      "analytics",
+      "user-group"
+    ],
     "city": "Orlando",
     "region": "Florida",
     "country": "United States",
@@ -632,7 +777,12 @@
   {
     "name": "Day of Data St Louis",
     "type": "conference",
-    "topics": ["sql-server", "data", "analytics", "user-group"],
+    "topics": [
+      "sql-server",
+      "data",
+      "analytics",
+      "user-group"
+    ],
     "city": "St. Louis",
     "region": "Missouri",
     "country": "United States",
@@ -653,7 +803,12 @@
   {
     "name": "Houston Day of Data",
     "type": "conference",
-    "topics": ["sql-server", "data", "analytics", "user-group"],
+    "topics": [
+      "sql-server",
+      "data",
+      "analytics",
+      "user-group"
+    ],
     "city": "Houston",
     "region": "Texas",
     "country": "United States",
@@ -674,7 +829,12 @@
   {
     "name": "MidCamp",
     "type": "conference",
-    "topics": ["drupal", "php", "open-source", "cms"],
+    "topics": [
+      "drupal",
+      "php",
+      "open-source",
+      "cms"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -695,7 +855,12 @@
   {
     "name": "New England Drupal Camp",
     "type": "conference",
-    "topics": ["drupal", "php", "open-source", "cms"],
+    "topics": [
+      "drupal",
+      "php",
+      "open-source",
+      "cms"
+    ],
     "city": "Providence",
     "region": "Rhode Island",
     "country": "United States",
@@ -716,7 +881,12 @@
   {
     "name": "Florida DrupalCamp",
     "type": "conference",
-    "topics": ["drupal", "php", "open-source", "cms"],
+    "topics": [
+      "drupal",
+      "php",
+      "open-source",
+      "cms"
+    ],
     "city": "Orlando",
     "region": "Florida",
     "country": "United States",
@@ -737,7 +907,13 @@
   {
     "name": "DrupalCon North America",
     "type": "conference",
-    "topics": ["drupal", "php", "open-source", "cms", "digital-experience"],
+    "topics": [
+      "drupal",
+      "php",
+      "open-source",
+      "cms",
+      "digital-experience"
+    ],
     "city": "Orlando",
     "region": "Florida",
     "country": "United States",
@@ -758,7 +934,12 @@
   {
     "name": "Southwestern Ontario Drupal Camp",
     "type": "conference",
-    "topics": ["drupal", "php", "open-source", "cms"],
+    "topics": [
+      "drupal",
+      "php",
+      "open-source",
+      "cms"
+    ],
     "city": "Various",
     "region": "Ontario",
     "country": "Canada",
@@ -779,7 +960,13 @@
   {
     "name": "Nashville Microsoft Community Day",
     "type": "conference",
-    "topics": ["microsoft-365", "sharepoint", "power-platform", "azure", "user-group"],
+    "topics": [
+      "microsoft-365",
+      "sharepoint",
+      "power-platform",
+      "azure",
+      "user-group"
+    ],
     "city": "Nashville",
     "region": "Tennessee",
     "country": "United States",
@@ -787,7 +974,7 @@
     "cadence": "annual",
     "month": "September",
     "next_date": "2026-09-11",
-    "next_date_end": "",
+    "next_date_end": "2026-09-11",
     "last_date": "",
     "status": "upcoming",
     "attendance": "",
@@ -800,7 +987,13 @@
   {
     "name": "Vancouver Microsoft 365 Summit",
     "type": "summit",
-    "topics": ["microsoft-365", "azure", "ai", "security", "power-platform"],
+    "topics": [
+      "microsoft-365",
+      "azure",
+      "ai",
+      "security",
+      "power-platform"
+    ],
     "city": "Vancouver",
     "region": "British Columbia",
     "country": "Canada",
@@ -821,7 +1014,12 @@
   {
     "name": "Texas Dreamin'",
     "type": "conference",
-    "topics": ["salesforce", "crm", "low-code", "user-group"],
+    "topics": [
+      "salesforce",
+      "crm",
+      "low-code",
+      "user-group"
+    ],
     "city": "Austin",
     "region": "Texas",
     "country": "United States",
@@ -842,7 +1040,13 @@
   {
     "name": "Cactusforce",
     "type": "conference",
-    "topics": ["salesforce", "apex", "architecture", "developers", "user-group"],
+    "topics": [
+      "salesforce",
+      "apex",
+      "architecture",
+      "developers",
+      "user-group"
+    ],
     "city": "Scottsdale",
     "region": "Arizona",
     "country": "United States",
@@ -863,7 +1067,12 @@
   {
     "name": "Forcelandia",
     "type": "conference",
-    "topics": ["salesforce", "apex", "developers", "user-group"],
+    "topics": [
+      "salesforce",
+      "apex",
+      "developers",
+      "user-group"
+    ],
     "city": "Portland",
     "region": "Oregon",
     "country": "United States",
@@ -884,7 +1093,13 @@
   {
     "name": "WordCamp New York City",
     "type": "conference",
-    "topics": ["wordpress", "php", "open-source", "publishing", "user-group"],
+    "topics": [
+      "wordpress",
+      "php",
+      "open-source",
+      "publishing",
+      "user-group"
+    ],
     "city": "New York",
     "region": "New York",
     "country": "United States",
@@ -905,7 +1120,12 @@
   {
     "name": "WordCamp Santa Clarita",
     "type": "conference",
-    "topics": ["wordpress", "php", "open-source", "user-group"],
+    "topics": [
+      "wordpress",
+      "php",
+      "open-source",
+      "user-group"
+    ],
     "city": "Santa Clarita",
     "region": "California",
     "country": "United States",
@@ -926,7 +1146,12 @@
   {
     "name": "Chi Hack Night",
     "type": "meetup-series",
-    "topics": ["civic-tech", "open-data", "data-journalism", "policy"],
+    "topics": [
+      "civic-tech",
+      "open-data",
+      "data-journalism",
+      "policy"
+    ],
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
@@ -947,7 +1172,12 @@
   {
     "name": "Code for Boston Hack Night",
     "type": "meetup-series",
-    "topics": ["civic-tech", "open-data", "volunteering", "government"],
+    "topics": [
+      "civic-tech",
+      "open-data",
+      "volunteering",
+      "government"
+    ],
     "city": "Cambridge",
     "region": "Massachusetts",
     "country": "United States",
@@ -968,7 +1198,12 @@
   {
     "name": "Ignite Seattle",
     "type": "meetup-series",
-    "topics": ["lightning-talks", "storytelling", "community", "ideas"],
+    "topics": [
+      "lightning-talks",
+      "storytelling",
+      "community",
+      "ideas"
+    ],
     "city": "Seattle",
     "region": "Washington",
     "country": "United States",
@@ -989,7 +1224,13 @@
   {
     "name": "Circuit Hacking Monday at Noisebridge",
     "type": "workshop",
-    "topics": ["electronics", "soldering", "hardware", "hackerspace", "makers"],
+    "topics": [
+      "electronics",
+      "soldering",
+      "hardware",
+      "hackerspace",
+      "makers"
+    ],
     "city": "San Francisco",
     "region": "California",
     "country": "United States",
@@ -1010,7 +1251,13 @@
   {
     "name": "North Forge FabLab Open House",
     "type": "workshop",
-    "topics": ["makerspace", "hardware", "prototyping", "3d-printing", "startups"],
+    "topics": [
+      "makerspace",
+      "hardware",
+      "prototyping",
+      "3d-printing",
+      "startups"
+    ],
     "city": "Winnipeg",
     "region": "Manitoba",
     "country": "Canada",
@@ -1031,7 +1278,12 @@
   {
     "name": "Tech Titans Awards Gala",
     "type": "awards",
-    "topics": ["awards", "networking", "north-texas", "innovation"],
+    "topics": [
+      "awards",
+      "networking",
+      "north-texas",
+      "innovation"
+    ],
     "city": "Plano",
     "region": "Texas",
     "country": "United States",
@@ -1052,7 +1304,11 @@
   {
     "name": "Kentucky Entrepreneur Hall of Fame Induction Celebration",
     "type": "awards",
-    "topics": ["entrepreneurship", "awards", "networking"],
+    "topics": [
+      "entrepreneurship",
+      "awards",
+      "networking"
+    ],
     "city": "Lexington",
     "region": "Kentucky",
     "country": "United States",
@@ -1073,7 +1329,11 @@
   {
     "name": "Awesome Fellowship Demo Day",
     "type": "demo-day",
-    "topics": ["startups", "accelerator", "pitching"],
+    "topics": [
+      "startups",
+      "accelerator",
+      "pitching"
+    ],
     "city": "Lexington",
     "region": "Kentucky",
     "country": "United States",
@@ -1094,7 +1354,12 @@
   {
     "name": "LaunchVT Demo Night",
     "type": "demo-day",
-    "topics": ["startups", "accelerator", "pitching", "vermont"],
+    "topics": [
+      "startups",
+      "accelerator",
+      "pitching",
+      "vermont"
+    ],
     "city": "Burlington",
     "region": "Vermont",
     "country": "United States",
@@ -1115,7 +1380,12 @@
   {
     "name": "The Idea Village Demo Day",
     "type": "demo-day",
-    "topics": ["startups", "accelerator", "pitching", "gulf-south"],
+    "topics": [
+      "startups",
+      "accelerator",
+      "pitching",
+      "gulf-south"
+    ],
     "city": "New Orleans",
     "region": "Louisiana",
     "country": "United States",
@@ -1136,7 +1406,12 @@
   {
     "name": "3rd Coast Venture Summit",
     "type": "summit",
-    "topics": ["venture-capital", "startups", "gulf-south", "fundraising"],
+    "topics": [
+      "venture-capital",
+      "startups",
+      "gulf-south",
+      "fundraising"
+    ],
     "city": "New Orleans",
     "region": "Louisiana",
     "country": "United States",
@@ -1157,7 +1432,12 @@
   {
     "name": "Cultivate Conference",
     "type": "conference",
-    "topics": ["agtech", "agriculture", "robotics", "startups"],
+    "topics": [
+      "agtech",
+      "agriculture",
+      "robotics",
+      "startups"
+    ],
     "city": "Fargo",
     "region": "North Dakota",
     "country": "United States",
@@ -1178,7 +1458,13 @@
   {
     "name": "Elevate Conference",
     "type": "conference",
-    "topics": ["agtech", "ai", "robotics", "computer-vision", "agriculture"],
+    "topics": [
+      "agtech",
+      "ai",
+      "robotics",
+      "computer-vision",
+      "agriculture"
+    ],
     "city": "Wheatland",
     "region": "North Dakota",
     "country": "United States",
@@ -1199,7 +1485,13 @@
   {
     "name": "Autonomous Nation",
     "type": "conference",
-    "topics": ["autonomy", "robotics", "agtech", "policy", "transportation"],
+    "topics": [
+      "autonomy",
+      "robotics",
+      "agtech",
+      "policy",
+      "transportation"
+    ],
     "city": "Wheatland",
     "region": "North Dakota",
     "country": "United States",
@@ -1220,7 +1512,11 @@
   {
     "name": "StartupBREW Fargo",
     "type": "meetup-series",
-    "topics": ["startups", "entrepreneurship", "networking"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "networking"
+    ],
     "city": "Fargo",
     "region": "North Dakota",
     "country": "United States",
@@ -1241,7 +1537,12 @@
   {
     "name": "Prairie Capital Summit",
     "type": "summit",
-    "topics": ["venture-capital", "startups", "fundraising", "midwest"],
+    "topics": [
+      "venture-capital",
+      "startups",
+      "fundraising",
+      "midwest"
+    ],
     "city": "Fargo",
     "region": "North Dakota",
     "country": "United States",
@@ -1262,7 +1563,12 @@
   {
     "name": "Founders Retreat",
     "type": "unconference",
-    "topics": ["founders", "startups", "peer-support", "retreat"],
+    "topics": [
+      "founders",
+      "startups",
+      "peer-support",
+      "retreat"
+    ],
     "city": "Fort Ransom",
     "region": "North Dakota",
     "country": "United States",
@@ -1283,7 +1589,12 @@
   {
     "name": "DakotaCon",
     "type": "conference",
-    "topics": ["cybersecurity", "infosec", "ctf", "hacking"],
+    "topics": [
+      "cybersecurity",
+      "infosec",
+      "ctf",
+      "hacking"
+    ],
     "city": "Madison",
     "region": "South Dakota",
     "country": "United States",
@@ -1304,7 +1615,12 @@
   {
     "name": "Build48",
     "type": "hackathon",
-    "topics": ["startups", "mvp", "ai", "product"],
+    "topics": [
+      "startups",
+      "mvp",
+      "ai",
+      "product"
+    ],
     "city": "St. John's",
     "region": "Newfoundland and Labrador",
     "country": "Canada",
@@ -1325,7 +1641,11 @@
   {
     "name": "iFiveK",
     "type": "festival",
-    "topics": ["networking", "community", "charleston-tech"],
+    "topics": [
+      "networking",
+      "community",
+      "charleston-tech"
+    ],
     "city": "Charleston",
     "region": "South Carolina",
     "country": "United States",
@@ -1346,7 +1666,11 @@
   {
     "name": "Charleston Digital Connect",
     "type": "meetup-series",
-    "topics": ["networking", "startups", "charleston-tech"],
+    "topics": [
+      "networking",
+      "startups",
+      "charleston-tech"
+    ],
     "city": "Charleston",
     "region": "South Carolina",
     "country": "United States",
@@ -1367,7 +1691,12 @@
   {
     "name": "Mississippi Aerospace & Defense Symposium",
     "type": "summit",
-    "topics": ["aerospace", "defense", "manufacturing", "innovation"],
+    "topics": [
+      "aerospace",
+      "defense",
+      "manufacturing",
+      "innovation"
+    ],
     "city": "Flowood",
     "region": "Mississippi",
     "country": "United States",
@@ -1388,7 +1717,11 @@
   {
     "name": "CONNECT: Networking for Entrepreneurs",
     "type": "meetup-series",
-    "topics": ["startups", "entrepreneurship", "networking"],
+    "topics": [
+      "startups",
+      "entrepreneurship",
+      "networking"
+    ],
     "city": "Jackson",
     "region": "Mississippi",
     "country": "United States",
@@ -1409,7 +1742,12 @@
   {
     "name": "Agile Open Northwest",
     "type": "unconference",
-    "topics": ["agile", "open-space", "software-practice", "coaching"],
+    "topics": [
+      "agile",
+      "open-space",
+      "software-practice",
+      "coaching"
+    ],
     "city": "Portland",
     "region": "Oregon",
     "country": "United States",
@@ -1430,7 +1768,11 @@
   {
     "name": "Global Game Jam - NYU Game Center",
     "type": "game-jam",
-    "topics": ["game-development", "game-design", "students"],
+    "topics": [
+      "game-development",
+      "game-design",
+      "students"
+    ],
     "city": "New York",
     "region": "New York",
     "country": "United States",
@@ -1451,7 +1793,11 @@
   {
     "name": "Global Game Jam - Parsons School of Design",
     "type": "game-jam",
-    "topics": ["game-development", "game-design", "students"],
+    "topics": [
+      "game-development",
+      "game-design",
+      "students"
+    ],
     "city": "New York",
     "region": "New York",
     "country": "United States",
@@ -1472,7 +1818,11 @@
   {
     "name": "Global Game Jam - RPI Game Development Club",
     "type": "game-jam",
-    "topics": ["game-development", "students", "game-design"],
+    "topics": [
+      "game-development",
+      "students",
+      "game-design"
+    ],
     "city": "Troy",
     "region": "New York",
     "country": "United States",
@@ -1493,7 +1843,11 @@
   {
     "name": "Global Game Jam - Abilene Christian University",
     "type": "game-jam",
-    "topics": ["game-development", "students", "game-design"],
+    "topics": [
+      "game-development",
+      "students",
+      "game-design"
+    ],
     "city": "Abilene",
     "region": "Texas",
     "country": "United States",
@@ -1514,7 +1868,11 @@
   {
     "name": "Global Game Jam - AAPI in Gaming",
     "type": "game-jam",
-    "topics": ["game-development", "diversity", "game-design"],
+    "topics": [
+      "game-development",
+      "diversity",
+      "game-design"
+    ],
     "city": "Vancouver",
     "region": "British Columbia",
     "country": "Canada",

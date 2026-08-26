@@ -1,0 +1,29 @@
+[
+  {
+    "match": { "name": "Nashville Microsoft Community Day", "city": "Nashville" },
+    "action": "update",
+    "reason": "Verified via communitydays.org/event/2026-09-11/nashville-microsoft-community-day — 'September 11, 2026' at the Nelson Andrews Leadership Center, 3088 Smith Springs Rd, Nashville TN. The stored date was already correct; adding the single-day end date and the venue.",
+    "set": {
+      "next_date_end": "2026-09-11",
+      "venue": "Nelson Andrews Leadership Center",
+      "source": "https://www.communitydays.org/event/2026-09-11/nashville-microsoft-community-day"
+    }
+  },
+  {
+    "match": { "name": "Berkeley SkyDeck Demo Day", "city": "Berkeley" },
+    "action": "update",
+    "reason": "skydeck.berkeley.edu/demo-day/ redirects to demo-day-fall-2020, an article dated 04 February 2020 — anyone clicking through landed on a six-year-old page. Repointed to the accelerator's live root, which does carry current batch and demo-day news. No date invented: the only forward reference found was a 'Batch 22 Demo Day is coming up on September 30th' line in a July 2026 newsletter footer, which is not an authoritative event page.",
+    "set": { "url": "https://skydeck.berkeley.edu/" }
+  },
+  {
+    "match": { "name": "SIGGRAPH", "city": "Los Angeles" },
+    "action": "update",
+    "reason": "Confirmed on s2026.siggraph.org: SIGGRAPH 2026 ran 19-23 July 2026 at the L.A. Convention Center, so the stored city and last_date are right. The 2027 edition is announced only as '8-12 August 2027' with no host city published and s2027.siggraph.org not yet resolving, so no next_date is set — SIGGRAPH rotates cities and guessing one would be worse than leaving it blank. Adding the confirmed venue.",
+    "set": { "venue": "Los Angeles Convention Center" }
+  },
+  {
+    "match": { "name": "PyGotham", "city": "New York" },
+    "action": "remove",
+    "reason": "Dormant for three years and its last edition was not an in-person event. pygotham.org 307s to a 2023 archive which states 'PyGotham will take place online October 6th and 7th, 2023'. No later edition exists anywhere and no closure statement was published. A directory of events you physically travel to should not carry a listing whose most recent edition was online and whose next edition has been unannounced since 2023."
+  }
+]
