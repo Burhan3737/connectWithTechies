@@ -22,7 +22,14 @@ const ISO = /^\d{4}-\d{2}-\d{2}$/;
 const today = process.env.TODAY || new Date().toISOString().slice(0, 10);
 
 const problems = [];
+const dropped = [];
 const warn = (file, name, msg) => problems.push(`${file} :: ${name || '(unnamed)'} :: ${msg}`);
+
+class Fatal extends Error {}
+const fatal = (file, name, msg) => {
+  dropped.push(`${file} :: ${name || '(unnamed)'} :: ${msg}`);
+  throw new Fatal(msg);
+};
 
 /** Collapse a name to a comparison key so "Collision 2026" == "collision". */
 const slug = (s) => String(s || '')
@@ -49,12 +56,16 @@ function normalise(raw, file) {
     e[k] = e[k] == null ? '' : String(e[k]).trim();
   }
 
-  if (!e.name) warn(file, e.name, 'missing name');
-  if (!e.url || !/^https?:\/\//i.test(e.url)) warn(file, e.name, `bad url: ${e.url}`);
-  if (!TYPES.has(e.type)) warn(file, e.name, `unknown type: ${e.type}`);
-  if (!COUNTRIES.has(e.country)) warn(file, e.name, `unknown country: ${e.country}`);
-  if (!e.city) warn(file, e.name, 'missing city');
-  if (e.cost && !COSTS.has(e.cost)) warn(file, e.name, `unknown cost: ${e.cost}`);
+  // Fatal problems drop the record entirely — a listing with no name, no city
+  // or no working link is worse than no listing at all.
+  if (!e.name) fatal(file, e.name, 'missing name');
+  if (!e.url || !/^https?:\/\//i.test(e.url)) fatal(file, e.name, `bad url: ${e.url}`);
+  if (!COUNTRIES.has(e.country)) fatal(file, e.name, `unknown country: ${e.country}`);
+  if (!e.city) fatal(file, e.name, 'missing city');
+
+  // Recoverable problems are corrected in place and reported.
+  if (!TYPES.has(e.type)) { warn(file, e.name, `unknown type "${e.type}" -> conference`); e.type = 'conference'; }
+  if (!COSTS.has(e.cost)) { warn(file, e.name, `unknown cost "${e.cost}" -> varies`); e.cost = 'varies'; }
   if (!e.description) warn(file, e.name, 'missing description');
 
   for (const k of ['next_date', 'next_date_end', 'last_date']) {
@@ -80,7 +91,19 @@ function normalise(raw, file) {
 const files = readdirSync(RAW_DIR).filter((f) => f.endsWith('.json')).sort();
 if (!files.length) { console.error('No raw data files found in data/raw/'); process.exit(1); }
 
-const byKey = new Map();
+/** Two records are the same event if they agree on (name, city) OR on (url, city). */
+function keysFor(e) {
+  const city = slug(e.city);
+  const url = e.url.toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/[/?#].*$/, '');
+  return [`n:${slug(e.name)}|${city}`, `u:${url}|${city}`];
+}
+
+/** Richer record wins: a confirmed future date first, then more populated fields. */
+const score = (x) => (x.next_date ? 100 : 0) +
+  Object.values(x).filter((v) => v !== '' && v != null && !(Array.isArray(v) && !v.length)).length;
+
+const byKey = new Map();   // dedup key -> canonical record
+const kept = new Set();    // the surviving record objects
 let read = 0, dupes = 0;
 
 for (const f of files) {
@@ -92,18 +115,35 @@ for (const f of files) {
 
   for (const raw of parsed) {
     read++;
-    const e = normalise(raw, f);
-    const key = `${slug(e.name)}|${slug(e.city)}`;
-    const existing = byKey.get(key);
-    if (!existing) { byKey.set(key, e); continue; }
+    let e;
+    try { e = normalise(raw, f); }
+    catch (err) { if (err instanceof Fatal) continue; throw err; }
+
+    const keys = keysFor(e);
+    const hit = keys.map((k) => byKey.get(k)).find(Boolean);
+
+    if (!hit) {
+      kept.add(e);
+      for (const k of keys) byKey.set(k, e);
+      continue;
+    }
+
     dupes++;
-    // Keep the richer record: prefer one with a confirmed future date, then more filled fields.
-    const score = (x) => (x.next_date ? 100 : 0) + Object.values(x).filter((v) => v !== '' && v != null).length;
-    if (score(e) > score(existing)) byKey.set(key, e);
+    let winner = hit;
+    if (score(e) > score(hit)) {
+      // Promote the richer record and repoint every key that referenced the old one.
+      winner = e;
+      kept.delete(hit);
+      kept.add(e);
+      for (const [k, v] of byKey) if (v === hit) byKey.set(k, e);
+    }
+    // Both records' keys now resolve to the survivor, so a third copy found by
+    // either name or url still collapses into the same entry.
+    for (const k of keys) byKey.set(k, winner);
   }
 }
 
-const events = [...byKey.values()].sort((a, b) => {
+const events = [...kept].sort((a, b) => {
   if (a.city !== b.city) return a.city.localeCompare(b.city);
   return (b.sort_date || '').localeCompare(a.sort_date || '');
 });
@@ -121,11 +161,18 @@ writeFileSync(OUT_FILE, JSON.stringify(payload, null, 2) + '\n', 'utf8');
 
 console.log(`Files:      ${files.length} (${files.join(', ')})`);
 console.log(`Read:       ${read} records`);
+console.log(`Dropped:    ${dropped.length} unusable`);
 console.log(`Duplicates: ${dupes} merged`);
 console.log(`Output:     ${events.length} events across ${cities.length} cities`);
 console.log(`Upcoming:   ${events.filter((e) => e.status === 'upcoming').length}`);
 console.log(`Past:       ${events.filter((e) => e.status === 'past').length}`);
 console.log(`Recurring:  ${events.filter((e) => e.status === 'recurring-tbd').length}`);
+
+if (dropped.length) {
+  console.log(`\n${dropped.length} record(s) dropped as unusable:`);
+  for (const d of dropped.slice(0, 40)) console.log(`  ! ${d}`);
+  if (dropped.length > 40) console.log(`  ... and ${dropped.length - 40} more`);
+}
 
 if (problems.length) {
   console.log(`\n${problems.length} validation problem(s):`);
