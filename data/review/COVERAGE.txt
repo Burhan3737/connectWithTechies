@@ -1,0 +1,172 @@
+TOTAL 750 events / 202 cities
+
+BY TYPE
+   350  conference
+   104  hackathon
+    66  summit
+    60  meetup-series
+    35  tech-week
+    29  festival
+    28  expo
+    17  startup-week
+    16  demo-day
+     9  game-jam
+     9  awards
+     7  workshop
+     6  bootcamp
+     5  ctf
+     5  unconference
+     4  career-fair
+
+EVENTS PER STATE/PROVINCE
+    94  California
+    53  Ontario
+    45  New York
+    33  Texas
+    27  Ohio
+    25  Florida
+    25  Nevada
+    22  Washington
+    22  British Columbia
+    21  Massachusetts
+    21  Colorado
+    21  Quebec
+    20  Tennessee
+    19  North Carolina
+    18  Georgia
+    18  Illinois
+    18  Pennsylvania
+    14  Utah
+    11  Michigan
+    11  Alberta
+    11  Wisconsin
+    11  US & Canada
+    11  District of Columbia
+    10  Minnesota
+     9  Alabama
+     8  Virginia
+     8  Maryland
+     8  New Jersey
+     8  Missouri
+     8  Arizona
+     7  New Mexico
+     7  Nova Scotia
+     7  Connecticut
+     7  Oregon
+     6  Indiana
+     6  Idaho
+     6  Iowa
+     6  Oklahoma
+     5  Alaska
+     5  Arkansas
+     5  Kansas
+     5  Saskatchewan
+     4  Montana
+     4  South Carolina
+     4  Mississippi
+     4  Kentucky
+     4  Rhode Island
+     4  Yukon
+     4  Manitoba
+     3  New Brunswick
+     3  Hawaii
+     3  Nebraska
+     2  North Dakota
+     2  Louisiana
+     2  South Dakota
+     2  Newfoundland and Labrador
+     1  Vermont
+     1  Delaware
+     1  Maine
+
+CITIES WITH ONLY ONE EVENT (90)
+  Albany, New York
+  Amherst, Massachusetts
+  Asheville, North Carolina
+  Athens, Georgia
+  Bellevue, Washington
+  Bentonville, Arkansas
+  Bethesda, Maryland
+  Blacksburg, Virginia
+  Bloomington, Minnesota
+  Bloomington, Indiana
+  Brownsville, Texas
+  Burlington, Vermont
+  Canal Winchester, Ohio
+  Chapel Hill, North Carolina
+  Clemson, South Carolina
+  Colorado Springs, Colorado
+  Coral Gables, Florida
+  Costa Mesa, California
+  Cupertino, California
+  Dayton, Ohio
+  Dearborn, Michigan
+  Durango, Colorado
+  East Lansing, Michigan
+  Evanston, Illinois
+  Fargo, North Dakota
+  Fayetteville, Arkansas
+  Flowood, Mississippi
+  Flushing, New York
+  Fort Wayne, Indiana
+  Gainesville, Florida
+  Glassboro, New Jersey
+  Glenpool, Oklahoma
+  Grand Junction, Colorado
+  Half Moon Bay, California
+  Harrisburg, Pennsylvania
+  Hoboken, New Jersey
+  Idaho Falls, Idaho
+  Irving, Texas
+  Ithaca, New York
+  Jersey City, New Jersey
+  Kansas City, Kansas
+  Kent, Ohio
+  La Jolla, California
+  Lawrence, Kansas
+  Lehi, Utah
+  Lexington, Kentucky
+  Lincoln, Nebraska
+  Lone Tree, Colorado
+  Lubbock, Texas
+  Menlo Park, California
+  Miami Beach, Florida
+  Missoula, Montana
+  Moncton, New Brunswick
+  Montgomery, Alabama
+  Moscow, Idaho
+  National Harbor, Maryland
+  Newark, Delaware
+  Newark, Ohio
+  North Little Rock, Arkansas
+  Otis, Oregon
+  Overland Park, Kansas
+  Peoria, Illinois
+  Petaluma, California
+  Portland, Maine
+  Princeton, New Jersey
+  Provo, Utah
+  Quebec City, Quebec
+  Redwood City, California
+  Reston, Virginia
+  Roanoke, Virginia
+  Rochester, Michigan
+  Round Rock, Texas
+  Sandusky, Ohio
+  Sandy, Utah
+  Savannah, Georgia
+  Spotsylvania, Virginia
+  St. Petersburg, Florida
+  Stanford, California
+  State College, Pennsylvania
+  Stony Brook, New York
+  Sundance, Utah
+  Sunnyvale, California
+  Tinley Park, Illinois
+  Troy, New York
+  Urbana-Champaign, Illinois
+  Vallejo, California
+  Valley City, North Dakota
+  Vancouver, Washington
+  West Lafayette, Indiana
+  Wisconsin Dells, Wisconsin

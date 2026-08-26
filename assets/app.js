@@ -238,7 +238,10 @@
       tags.push('<span class="ev__tag">' + esc(t) + '</span>');
     });
 
-    var dateLine = dated ? fmtRange(keyDate(e), keyDateEnd(e)) : 'date to be announced';
+    var mi = monthIndex(e);
+    var dateLine = dated ? fmtRange(keyDate(e), keyDateEnd(e))
+      : mi < 12 ? 'usually ' + MONTHS[mi] + ', next date not yet announced'
+      : 'date not yet announced';
     var aria = e.name + ' — ' + dateLine + ' — ' + e.city + ' — opens the official site in a new tab';
 
     return '<a class="ev" href="' + esc(e.url) + '" target="_blank" rel="noopener noreferrer"' +
