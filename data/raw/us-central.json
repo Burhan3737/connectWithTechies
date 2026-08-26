@@ -1625,7 +1625,7 @@
     "audience": "technology leaders, practitioners",
     "url": "https://www.technologyiowa.org/iowa-technology-summit-2026/",
     "description": "The centerpiece day of Iowa Tech Week, where attendees hear where technology is heading from the Iowans building it and network with peers facing similar challenges.",
-    "source": "https://www.technologyiowa.org/techweek/"
+    "source": "https://www.technologyiowa.org/iowa-technology-summit-2026/"
   },
   {
     "name": "Iowa Startup Week",
@@ -3448,32 +3448,6 @@
     "url": "https://www.integrate.io/blog/data-conferences-mississippi/",
     "description": "The Mississippi AI Collaborative's two-day annual conference at Jackson State University, convening researchers, educators and industry around applied artificial intelligence.",
     "source": "https://www.integrate.io/blog/data-conferences-mississippi/"
-  },
-  {
-    "name": "Iowa Artificial Intelligence Summit for Industry",
-    "type": "summit",
-    "topics": [
-      "ai",
-      "insurance",
-      "healthcare",
-      "industry"
-    ],
-    "city": "Des Moines",
-    "region": "Iowa",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "May",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "2026-05-06",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "industry technology leaders, AI practitioners",
-    "url": "https://www.technologyiowa.org/events/list/",
-    "description": "A Technology Association of Iowa summit focused on moving past AI hype to real-world implementation, with peer learning drawn from Iowa's insurance, healthcare and manufacturing sectors.",
-    "source": "https://www.technologyiowa.org/events/list/?shortcode=8530495e&eventDisplay=past"
   },
   {
     "name": "First Look Forum",

@@ -1,7 +1,7 @@
 {
   "generated_on": "2026-08-26",
-  "event_count": 810,
-  "city_count": 218,
+  "event_count": 894,
+  "city_count": 236,
   "events": [
     {
       "name": "Global Game Jam - Abilene Christian University",
@@ -577,6 +577,34 @@
       "source_file": "review-additions"
     },
     {
+      "name": "Tech Homecoming",
+      "type": "career-fair",
+      "topics": [
+        "careers",
+        "hiring",
+        "networking"
+      ],
+      "city": "Ann Arbor",
+      "region": "Michigan",
+      "country": "United States",
+      "venue": "Venue by 4M",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "2026-09-22",
+      "next_date_end": "2026-09-22",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "tech job seekers, recent graduates, experienced professionals",
+      "url": "https://a2tech360.com/events/tech-homecoming-2025/",
+      "description": "Ann Arbor SPARK's evening hiring mixer connecting top local tech companies with job seekers, from new graduates to experienced engineers. Free for job seekers, with free headshots, door prizes, food and drinks.",
+      "source": "https://a2tech360.com/events/tech-homecoming-2025/",
+      "sort_date": "2026-09-22",
+      "id": "tech-homecoming-ann-arbor",
+      "source_file": "review-additions"
+    },
+    {
       "name": "Day of Data Detroit",
       "type": "conference",
       "topics": [
@@ -634,6 +662,33 @@
       "sort_date": "",
       "id": "gdg-ann-arbor-ann-arbor",
       "source_file": "review-additions"
+    },
+    {
+      "name": "SANS AI Cybersecurity Summit",
+      "type": "summit",
+      "topics": [
+        "security",
+        "ai"
+      ],
+      "city": "Arlington",
+      "region": "Virginia",
+      "country": "United States",
+      "venue": "",
+      "cadence": "biannual",
+      "month": "November",
+      "next_date": "2026-11-02",
+      "next_date_end": "2026-11-03",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security leaders, AI practitioners",
+      "url": "https://www.sans.org/cyber-security-training-events/",
+      "description": "A SANS summit focused on securing AI systems and applying AI to defensive security operations.",
+      "source": "https://www.sans.org/cyber-security-training-events/",
+      "sort_date": "2026-11-02",
+      "id": "sans-ai-cybersecurity-summit-arlington",
+      "source_file": "categories"
     },
     {
       "name": "BSides NoVA",
@@ -1206,6 +1261,34 @@
       "source_file": "us-east"
     },
     {
+      "name": "BSidesAugusta",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec",
+        "threat hunting"
+      ],
+      "city": "Augusta",
+      "region": "Georgia",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-10-24",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, cyber operations professionals, students",
+      "url": "https://bsides.org/event/bsidesaugusta-augusta-ga-usa-3/",
+      "description": "Long-running Augusta BSides conference, drawing on the region's Army Cyber and NSA Georgia security community.",
+      "source": "https://bsides.org/events/",
+      "sort_date": "2026-10-24",
+      "id": "bsidesaugusta-augusta",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "EWF Annual Conference",
       "type": "conference",
       "topics": [
@@ -1775,6 +1858,35 @@
       "source_file": "categories"
     },
     {
+      "name": "Maker Faire Baton Rouge",
+      "type": "festival",
+      "topics": [
+        "makers",
+        "diy",
+        "stem",
+        "hardware"
+      ],
+      "city": "Baton Rouge",
+      "region": "Louisiana",
+      "country": "United States",
+      "venue": "Main Library at Goodwood",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-10-17",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "makers, families, engineers, artists, students",
+      "url": "https://batonrouge.makerfaire.com/",
+      "description": "Family-friendly Louisiana showcase of invention and resourcefulness where engineers, artists, scientists and crafters demonstrate their projects.",
+      "source": "https://makerfaire.com/upcoming-faires/",
+      "sort_date": "2026-10-17",
+      "id": "maker-faire-baton-rouge-baton-rouge",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "Innovate QA",
       "type": "conference",
       "topics": [
@@ -2084,6 +2196,33 @@
       "sort_date": "2026-09-18",
       "id": "vthacks-blacksburg",
       "source_file": "categories"
+    },
+    {
+      "name": "Global Game Jam - The Sheep's Meow at Bloomfield College",
+      "type": "game-jam",
+      "topics": [
+        "game development",
+        "design"
+      ],
+      "city": "Bloomfield",
+      "region": "New Jersey",
+      "country": "United States",
+      "venue": "Bloomfield College",
+      "cadence": "annual",
+      "month": "January",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-01-30",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "game developers, designers, students",
+      "url": "https://globalgamejam.org/jam-sites/2026/2026-sheeps-meow-onlinevirtual-bloomfield-college-person",
+      "description": "New Jersey Global Game Jam site run by The Sheep's Meow at Bloomfield College, offering both in-person and virtual participation over the jam weekend.",
+      "source": "https://globalgamejam.org/jam-sites/2026",
+      "sort_date": "2026-01-30",
+      "id": "global-game-jam-the-sheep-s-meow-at-bloomfield-college-bloomfield",
+      "source_file": "review-additions-3"
     },
     {
       "name": "GOVIT Leadership Summit & Symposium",
@@ -2740,6 +2879,33 @@
       "source_file": "us-west"
     },
     {
+      "name": "BSides Bozeman",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec"
+      ],
+      "city": "Bozeman",
+      "region": "Montana",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-10-03",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security professionals, researchers, practitioners",
+      "url": "https://www.bsidesbozeman.com/",
+      "description": "Montana's community security conference, themed 'Exploring the Uncharted', with hands-on workshops, technical talks and networking for the regional infosec community.",
+      "source": "https://www.bsidesbozeman.com/",
+      "sort_date": "2026-10-03",
+      "id": "bsides-bozeman-bozeman",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "INTERFACE Montana",
       "type": "conference",
       "topics": [
@@ -2822,6 +2988,35 @@
       "source": "https://www.mthightech.org/events/2026-investing-in-montana-summit",
       "sort_date": "2026-06-25",
       "id": "investing-in-montana-summit-bozeman",
+      "source_file": "us-west"
+    },
+    {
+      "name": "Emerging Technologies Summit",
+      "type": "summit",
+      "topics": [
+        "quantum",
+        "emerging-tech",
+        "security",
+        "research"
+      ],
+      "city": "Bozeman",
+      "region": "Montana",
+      "country": "United States",
+      "venue": "EngineWorks, Montana State University",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "150",
+      "cost": "free",
+      "audience": "researchers, technologists, security professionals",
+      "url": "https://www.mthightech.org/events/emerging-technologies-summit-msu-qcore-fbi",
+      "description": "A half-day summit on emerging technologies co-hosted by the FBI and Montana State University's QCORE quantum research centre.",
+      "source": "https://www.mthightech.org/events/emerging-technologies-summit-msu-qcore-fbi",
+      "sort_date": "",
+      "id": "emerging-technologies-summit-bozeman",
       "source_file": "us-west"
     },
     {
@@ -3195,6 +3390,34 @@
       "source_file": "us-east"
     },
     {
+      "name": "JumpStart Expo & Pitch Night",
+      "type": "demo-day",
+      "topics": [
+        "makers",
+        "entrepreneurship",
+        "hardware"
+      ],
+      "city": "Burlington",
+      "region": "Vermont",
+      "country": "United States",
+      "venue": "Generator Makerspace, 40 Sears Ln",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-08",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "makers, entrepreneurs, general public",
+      "url": "https://generatorvt.com/jumpstart-expo/",
+      "description": "Public showcase where entrepreneurs graduating from Generator Makerspace's JumpStart program pitch their product businesses to the Burlington community.",
+      "source": "https://generatorvt.com/jumpstart-expo/",
+      "sort_date": "2026-04-08",
+      "id": "jumpstart-expo-pitch-night-burlington",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "LaunchVT Demo Night",
       "type": "demo-day",
       "topics": [
@@ -3222,6 +3445,35 @@
       "sort_date": "",
       "id": "launchvt-demo-night-burlington",
       "source_file": "review-additions-2"
+    },
+    {
+      "name": "Generator Makerspace Workshops",
+      "type": "workshop",
+      "topics": [
+        "makers",
+        "fabrication",
+        "electronics",
+        "3d printing"
+      ],
+      "city": "Burlington",
+      "region": "Vermont",
+      "country": "United States",
+      "venue": "Generator Makerspace, 40 Sears Ln",
+      "cadence": "rolling",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "makers, hobbyists, students, tool users",
+      "url": "https://generatorvt.com/",
+      "description": "Year-round skill-building classes and tool certifications at Vermont's community makerspace, covering digital fabrication, electronics and shop equipment.",
+      "source": "https://generatorvt.com/",
+      "sort_date": "",
+      "id": "generator-makerspace-workshops-burlington",
+      "source_file": "review-additions-3"
     },
     {
       "name": "TechExit.io Calgary",
@@ -3363,6 +3615,34 @@
       "sort_date": "",
       "id": "calgaryhacks-calgary",
       "source_file": "canada"
+    },
+    {
+      "name": "TransportationCamp New England",
+      "type": "unconference",
+      "topics": [
+        "transportation tech",
+        "mobility",
+        "civic tech"
+      ],
+      "city": "Cambridge",
+      "region": "Massachusetts",
+      "country": "United States",
+      "venue": "MIT Stata Center",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-10-17",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "planners, software developers, engineers, students, policy makers",
+      "url": "https://transportationcamp.org/events/new-england-2026",
+      "description": "Participant-driven unconference at MIT where attendees propose and lead four blocks of breakout sessions on transportation, mobility and the software behind them.",
+      "source": "https://transportationcamp.org/events/new-england-2026",
+      "sort_date": "2026-10-17",
+      "id": "transportationcamp-new-england-cambridge",
+      "source_file": "review-additions-3"
     },
     {
       "name": "HackHarvard",
@@ -3680,6 +3960,34 @@
       "source_file": "us-east"
     },
     {
+      "name": "Pathways to Progress",
+      "type": "conference",
+      "topics": [
+        "workforce",
+        "tech careers",
+        "education"
+      ],
+      "city": "Charleston",
+      "region": "West Virginia",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "2027-04-29",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "employers, educators, policymakers, workforce leaders",
+      "url": "https://generationwv.org/pathways-to-progress/",
+      "description": "A full-day Generation WV conference on building career pathways in West Virginia, with programming spanning technology, healthcare, energy and education employers.",
+      "source": "https://generationwv.org/pathways-to-progress/",
+      "sort_date": "2027-04-29",
+      "id": "pathways-to-progress-charleston",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "iFiveK",
       "type": "festival",
       "topics": [
@@ -3733,6 +4041,62 @@
       "sort_date": "2026-11-07",
       "id": "bsides-charleston-charleston",
       "source_file": "categories"
+    },
+    {
+      "name": "SecureWV",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec",
+        "defense"
+      ],
+      "city": "Charleston",
+      "region": "West Virginia",
+      "country": "United States",
+      "venue": "Charleston Coliseum & Convention Center",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-10-22",
+      "next_date_end": "2026-10-23",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "1700",
+      "cost": "paid",
+      "audience": "security practitioners, defenders, students",
+      "url": "https://securewv.org/",
+      "description": "West Virginia's statewide cybersecurity conference, themed around the work that continues after hours, with keynotes, hands-on defensive sessions and regional community networking.",
+      "source": "https://securewv.org/",
+      "sort_date": "2026-10-22",
+      "id": "securewv-charleston",
+      "source_file": "review-additions-3"
+    },
+    {
+      "name": "Charleston Digital Connect",
+      "type": "meetup-series",
+      "topics": [
+        "networking",
+        "startups",
+        "charleston-tech"
+      ],
+      "city": "Charleston",
+      "region": "South Carolina",
+      "country": "United States",
+      "venue": "Flagship @ CTC, 997 Morrison Dr",
+      "cadence": "monthly",
+      "month": "Varies",
+      "next_date": "2026-09-17",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "Charleston technology professionals, founders, job seekers",
+      "url": "https://www.charlestondigital.com/",
+      "description": "Charleston Digital Corridor's recurring morning networking session at the Charleston Tech Center, running alongside its AI Academy classes and SBDC workshops.",
+      "source": "https://www.charlestondigital.com/",
+      "sort_date": "2026-09-17",
+      "id": "charleston-digital-connect-charleston",
+      "source_file": "review-additions-2"
     },
     {
       "name": "Global Game Jam - College of Charleston",
@@ -3962,6 +4326,34 @@
       "source_file": "review-additions-2"
     },
     {
+      "name": "Emergence Office Hours",
+      "type": "meetup-series",
+      "topics": [
+        "bioscience",
+        "startups",
+        "regulatory"
+      ],
+      "city": "Charlottetown",
+      "region": "Prince Edward Island",
+      "country": "Canada",
+      "venue": "",
+      "cadence": "monthly",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2025-11-27",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "bioscience founders and early-stage companies",
+      "url": "https://peibioalliance.com/event/emergence-office-hours/",
+      "description": "Recurring drop-in sessions from Emergence, PEI's bioscience incubator, covering clinical trials, regulatory pathways and commercialization for early-stage companies.",
+      "source": "https://peibioalliance.com/events/",
+      "sort_date": "2025-11-27",
+      "id": "emergence-office-hours-charlottetown",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "Tennessee Quantum Hackathon",
       "type": "hackathon",
       "topics": [
@@ -4074,6 +4466,34 @@
       "sort_date": "",
       "id": "chattanooga-entrepreneur-week-chattanooga",
       "source_file": "us-central"
+    },
+    {
+      "name": "INTERFACE Wyoming",
+      "type": "conference",
+      "topics": [
+        "it infrastructure",
+        "cybersecurity",
+        "cloud"
+      ],
+      "city": "Cheyenne",
+      "region": "Wyoming",
+      "country": "United States",
+      "venue": "Little America Hotel & Resort, Grand Ballroom",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-09",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "IT professionals, security leaders, public sector technologists",
+      "url": "https://f2fevents.com/event/wyo26/",
+      "description": "One-day regional IT conference with CPE-accredited seminars, three theater tracks and an exhibit floor covering information security, infrastructure, cloud and disaster recovery.",
+      "source": "https://f2fevents.com/event/wyo26/",
+      "sort_date": "2026-07-09",
+      "id": "interface-wyoming-cheyenne",
+      "source_file": "review-additions-3"
     },
     {
       "name": "TechChicago Week",
@@ -4560,6 +4980,36 @@
       "source_file": "review-additions-2"
     },
     {
+      "name": "Code Platoon",
+      "type": "bootcamp",
+      "topics": [
+        "software engineering",
+        "python",
+        "javascript",
+        "devops",
+        "veterans"
+      ],
+      "city": "Chicago",
+      "region": "Illinois",
+      "country": "United States",
+      "venue": "One South Dearborn, 20th Floor",
+      "cadence": "rolling",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "veterans, military spouses, active-duty service members",
+      "url": "https://www.codeplatoon.org/",
+      "description": "Nonprofit Chicago coding bootcamp for the military community, running 15-week full-time and 28-week part-time fullstack cohorts plus a 28-week AI cloud and DevOps track.",
+      "source": "https://www.codeplatoon.org/",
+      "sort_date": "",
+      "id": "code-platoon-chicago",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "RevolutionUC",
       "type": "hackathon",
       "topics": [
@@ -4868,6 +5318,34 @@
       "sort_date": "2027-04-12",
       "id": "space-symposium-colorado-springs",
       "source_file": "categories"
+    },
+    {
+      "name": "BSides COS",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec",
+        "defense"
+      ],
+      "city": "Colorado Springs",
+      "region": "Colorado",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-10-24",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, defense and aerospace technologists",
+      "url": "https://bsides.org/event/bsides-cos-2026/",
+      "description": "Colorado Springs' BSides security conference, serving the region's concentration of defense, space and aerospace security practitioners.",
+      "source": "https://bsides.org/events/",
+      "sort_date": "2026-10-24",
+      "id": "bsides-cos-colorado-springs",
+      "source_file": "review-additions-3"
     },
     {
       "name": "BSides CMH",
@@ -5266,6 +5744,64 @@
       "source_file": "review-additions-2"
     },
     {
+      "name": "Speed Venture Summit",
+      "type": "demo-day",
+      "topics": [
+        "startups",
+        "venture-capital",
+        "fundraising"
+      ],
+      "city": "Concord",
+      "region": "New Hampshire",
+      "country": "United States",
+      "venue": "The Hotel Concord",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-10-13",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "early-stage founders, New England investors",
+      "url": "http://nhtechalliance.org/speed-venture-summit",
+      "description": "Speed-dating for fundraising: early-stage New England startups rotate through 10-minute one-on-one meetings with regional investors. Run by the NH Tech Foundation.",
+      "source": "http://nhtechalliance.org/speed-venture-summit",
+      "sort_date": "2026-10-13",
+      "id": "speed-venture-summit-concord",
+      "source_file": "review-additions-2"
+    },
+    {
+      "name": "Computing Foundations Workshop Series",
+      "type": "workshop",
+      "topics": [
+        "unix shell",
+        "git",
+        "python",
+        "r",
+        "research computing"
+      ],
+      "city": "Cookeville",
+      "region": "Tennessee",
+      "country": "United States",
+      "venue": "Bruner Hall Room 126, Tennessee Tech University",
+      "cadence": "biannual",
+      "month": "August-November",
+      "next_date": "2026-08-27",
+      "next_date_end": "2026-11-19",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "20",
+      "cost": "free",
+      "audience": "students, faculty, staff, researchers",
+      "url": "https://www.rcd.tntech.edu/2026-08-27-tntech",
+      "description": "Tennessee Tech Research Computing & Data's Carpentries-affiliated series of hands-on Thursday evening workshops in Unix shell, Git, Python and R, capped at 20 participants per session.",
+      "source": "https://carpentries.org/workshops/upcoming-workshops/",
+      "sort_date": "2026-08-27",
+      "id": "computing-foundations-workshop-series-cookeville",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "SANS Miami",
       "type": "bootcamp",
       "topics": [
@@ -5380,6 +5916,33 @@
       "sort_date": "2026-11-07",
       "id": "south-dallas-maker-faire-dallas",
       "source_file": "categories"
+    },
+    {
+      "name": "BSidesDFW",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec"
+      ],
+      "city": "Dallas",
+      "region": "Texas",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-07",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, students, researchers",
+      "url": "https://bsides.org/event/bsidesdfw-5/",
+      "description": "The Dallas-Fort Worth metroplex BSides conference, a one-day community security event with talks, villages and CTF activity.",
+      "source": "https://bsides.org/events/",
+      "sort_date": "2026-11-07",
+      "id": "bsidesdfw-dallas",
+      "source_file": "review-additions-3"
     },
     {
       "name": "TechCon 365 Dallas",
@@ -6035,6 +6598,34 @@
       "source_file": "us-central"
     },
     {
+      "name": "Iowa Technology Summit",
+      "type": "summit",
+      "topics": [
+        "it-leadership",
+        "ai",
+        "innovation"
+      ],
+      "city": "Des Moines",
+      "region": "Iowa",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-07",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "technology leaders, practitioners",
+      "url": "https://www.technologyiowa.org/iowa-technology-summit-2026/",
+      "description": "The centerpiece day of Iowa Tech Week, where attendees hear where technology is heading from the Iowans building it and network with peers facing similar challenges.",
+      "source": "https://www.technologyiowa.org/iowa-technology-summit-2026/",
+      "sort_date": "2026-04-07",
+      "id": "iowa-technology-summit-des-moines",
+      "source_file": "us-central"
+    },
+    {
       "name": "Iowa Tech Week",
       "type": "tech-week",
       "topics": [
@@ -6543,6 +7134,33 @@
       "source_file": "us-central"
     },
     {
+      "name": "BSidesCT",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec"
+      ],
+      "city": "Fairfield",
+      "region": "Connecticut",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "2026-09-26",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, students, researchers",
+      "url": "https://bsides.org/event/bsidesct-3/",
+      "description": "Connecticut's statewide BSides information security conference, held in Fairfield.",
+      "source": "https://bsides.org/events/",
+      "sort_date": "2026-09-26",
+      "id": "bsidesct-fairfield",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "Prairie Capital Summit",
       "type": "summit",
       "topics": [
@@ -6628,6 +7246,34 @@
       "sort_date": "2026-06-08",
       "id": "agtech-week-fargo",
       "source_file": "us-central"
+    },
+    {
+      "name": "StartupBREW Fargo",
+      "type": "meetup-series",
+      "topics": [
+        "startups",
+        "entrepreneurship",
+        "networking"
+      ],
+      "city": "Fargo",
+      "region": "North Dakota",
+      "country": "United States",
+      "venue": "The Prairie Den, 118 Broadway N",
+      "cadence": "weekly",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "entrepreneurs, innovators, creatives, community members",
+      "url": "https://www.emergingprairie.com/startupbrew-fargo/",
+      "description": "Emerging Prairie's weekly Wednesday-morning coffee meetup from 8 to 9:30am: thirty minutes of Coffee Club mingling, then a short speaker slot and a twenty-minute Q&A that deliberately favours dialogue over presentation.",
+      "source": "https://www.emergingprairie.com/startupbrew-fargo/",
+      "sort_date": "",
+      "id": "startupbrew-fargo-fargo",
+      "source_file": "review-additions-2"
     },
     {
       "name": "Maker Faire NW Arkansas",
@@ -6914,6 +7560,33 @@
       "source_file": "canada"
     },
     {
+      "name": "BSides Fredericton",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec"
+      ],
+      "city": "Fredericton",
+      "region": "New Brunswick",
+      "country": "Canada",
+      "venue": "Fredericton Inn",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-10-27",
+      "next_date_end": "2026-10-28",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, students, researchers",
+      "url": "https://bsidesfredericton.ca/",
+      "description": "Community-driven New Brunswick security conference built on the BSides framework, with an intentionally intimate format of discussions, demonstrations and participant interaction.",
+      "source": "https://bsidesfredericton.ca/",
+      "sort_date": "2026-10-27",
+      "id": "bsides-fredericton-fredericton",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "Ignite Summit",
       "type": "summit",
       "topics": [
@@ -6940,6 +7613,35 @@
       "sort_date": "2026-10-20",
       "id": "ignite-summit-fredericton",
       "source_file": "canada"
+    },
+    {
+      "name": "NBIF Breakthru",
+      "type": "demo-day",
+      "topics": [
+        "startups",
+        "cleantech",
+        "ai",
+        "pitch"
+      ],
+      "city": "Fredericton",
+      "region": "New Brunswick",
+      "country": "Canada",
+      "venue": "",
+      "cadence": "annual",
+      "month": "March",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "early-stage New Brunswick founders, investors",
+      "url": "https://nbif.ca/breakthru/",
+      "description": "New Brunswick Innovation Foundation's flagship startup competition: bootcamps and mentorship leading to a live finale where five finalists pitch for equity investment.",
+      "source": "https://nbif.ca/breakthru/",
+      "sort_date": "",
+      "id": "nbif-breakthru-fredericton",
+      "source_file": "review-additions-3"
     },
     {
       "name": "SwampHacks",
@@ -7051,6 +7753,33 @@
       "sort_date": "2026-09-19",
       "id": "redactecon-grand-junction",
       "source_file": "us-west"
+    },
+    {
+      "name": "BSidesGreenville",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec"
+      ],
+      "city": "Greenville",
+      "region": "South Carolina",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "August",
+      "next_date": "2026-08-29",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, students, researchers",
+      "url": "https://bsides.org/event/bsidesgreenville-2/",
+      "description": "Upstate South Carolina's community-run information security conference in the global BSides network.",
+      "source": "https://bsides.org/events/",
+      "sort_date": "2026-08-29",
+      "id": "bsidesgreenville-greenville",
+      "source_file": "review-additions-3"
     },
     {
       "name": "Linux Foundation Member Summit",
@@ -7503,6 +8232,35 @@
       "source_file": "us-east"
     },
     {
+      "name": "PTC Annual Conference",
+      "type": "conference",
+      "topics": [
+        "telecom",
+        "digital infrastructure",
+        "data centers",
+        "ai"
+      ],
+      "city": "Honolulu",
+      "region": "Hawaii",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "January",
+      "next_date": "2027-01-17",
+      "next_date_end": "2027-01-20",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "8000",
+      "cost": "paid",
+      "audience": "telecom executives, technologists, infrastructure providers",
+      "url": "https://www.ptc.org/",
+      "description": "Pacific Telecommunications Council's four-day Honolulu conference drawing 8,000+ attendees from over 75 countries across subsea cable, data center, hyperscaler and connectivity sectors.",
+      "source": "https://www.ptc.org/",
+      "sort_date": "2027-01-17",
+      "id": "ptc-annual-conference-honolulu",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "Hawaii Tech Week",
       "type": "tech-week",
       "topics": [
@@ -7530,6 +8288,91 @@
       "sort_date": "2026-08-31",
       "id": "hawaii-tech-week-honolulu",
       "source_file": "us-west"
+    },
+    {
+      "name": "INTERFACE Honolulu",
+      "type": "conference",
+      "topics": [
+        "it infrastructure",
+        "cybersecurity",
+        "cloud"
+      ],
+      "city": "Honolulu",
+      "region": "Hawaii",
+      "country": "United States",
+      "venue": "Sheraton Waikiki, Hawaii Ballroom",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-21",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "IT professionals, security leaders, public sector technologists",
+      "url": "https://f2fevents.com/event/hnl26/",
+      "description": "One-day Hawaii IT conference with CPE-accredited keynotes, three concurrent theater tracks and advisory council roundtables on security, cloud and disaster recovery.",
+      "source": "https://f2fevents.com/event/hnl26/",
+      "sort_date": "2026-05-21",
+      "id": "interface-honolulu-honolulu",
+      "source_file": "review-additions-3"
+    },
+    {
+      "name": "Eahou Fest",
+      "type": "festival",
+      "topics": [
+        "indigenous tech",
+        "data governance",
+        "community",
+        "art"
+      ],
+      "city": "Honolulu",
+      "region": "Hawaii",
+      "country": "United States",
+      "venue": "Various venues in Moiliili",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-01",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "indigenous technologists, organizers, cultural practitioners",
+      "url": "https://eahoufest.com/",
+      "description": "Three-day Purple Maia conference-meets-festival in Moiliili weaving technology, art, music and education, with design labs on indigenous tech, data governance and cooperative economics.",
+      "source": "https://eahoufest.com/",
+      "sort_date": "2026-05-01",
+      "id": "eahou-fest-honolulu",
+      "source_file": "review-additions-3"
+    },
+    {
+      "name": "East Meets West",
+      "type": "conference",
+      "topics": [
+        "startups",
+        "venture capital",
+        "tech"
+      ],
+      "city": "Honolulu",
+      "region": "Hawaii",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-08",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "founders, investors, technologists",
+      "url": "http://emwhawaii.com",
+      "description": "Blue Startups' annual gathering billed as Hawaii's largest tech conference, connecting Pacific-region founders and investors across the US and Asia.",
+      "source": "https://www.bluestartups.com/",
+      "sort_date": "2026-04-08",
+      "id": "east-meets-west-honolulu",
+      "source_file": "review-additions-3"
     },
     {
       "name": "Hawaii International Conference on System Sciences",
@@ -7588,6 +8431,35 @@
       "sort_date": "",
       "id": "htdc-events-honolulu",
       "source_file": "us-west"
+    },
+    {
+      "name": "Michigan Tech Career Fair",
+      "type": "career-fair",
+      "topics": [
+        "engineering",
+        "computing",
+        "tech careers",
+        "recruiting"
+      ],
+      "city": "Houghton",
+      "region": "Michigan",
+      "country": "United States",
+      "venue": "Michigan Technological University",
+      "cadence": "biannual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "1200",
+      "cost": "free",
+      "audience": "engineering and computing students, employers and recruiters",
+      "url": "https://www.mtu.edu/career/",
+      "description": "Michigan Technological University's fall and spring recruiting fairs, drawing 1,200+ recruiters to Houghton for full-time and internship hiring in engineering and computing.",
+      "source": "https://www.mtu.edu/career/",
+      "sort_date": "",
+      "id": "michigan-tech-career-fair-houghton",
+      "source_file": "review-additions-3"
     },
     {
       "name": "Houston Day of Data",
@@ -8131,6 +9003,34 @@
       "source_file": "us-central"
     },
     {
+      "name": "IND(Venture) Indiana Venture Summit",
+      "type": "summit",
+      "topics": [
+        "venture-capital",
+        "startups",
+        "investment"
+      ],
+      "city": "Indianapolis",
+      "region": "Indiana",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "investors, founders",
+      "url": "https://techpoint.org/tech-events/indventure-indiana-venture-summit/",
+      "description": "TechPoint's annual tech startup and venture capital summit connecting Indiana founders with regional and national investors.",
+      "source": "https://www.every.io/blog-post/startups-events-indiana",
+      "sort_date": "",
+      "id": "ind-venture-indiana-venture-summit-indianapolis",
+      "source_file": "us-central"
+    },
+    {
       "name": "Vintage Computer Festival Southwest",
       "type": "festival",
       "topics": [
@@ -8330,6 +9230,34 @@
       "source_file": "us-central"
     },
     {
+      "name": "Silicon Couloir Chance Meetings",
+      "type": "meetup-series",
+      "topics": [
+        "startups",
+        "networking",
+        "entrepreneurship"
+      ],
+      "city": "Jackson",
+      "region": "Wyoming",
+      "country": "United States",
+      "venue": "",
+      "cadence": "monthly",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "entrepreneurs, business owners, mentors, community leaders",
+      "url": "https://siliconcouloir.com/chance-meetings/",
+      "description": "Free first-Monday evening gathering running since 2012, pairing a 30-40 minute themed program with open networking for the Teton region startup community.",
+      "source": "https://siliconcouloir.com/chance-meetings/",
+      "sort_date": "",
+      "id": "silicon-couloir-chance-meetings-jackson",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "Mississippi Digital Government Summit",
       "type": "summit",
       "topics": [
@@ -8385,6 +9313,33 @@
       "sort_date": "2026-08-26",
       "id": "jersey-city-entrepreneurs-the-venture-garden-jersey-city",
       "source_file": "review-additions"
+    },
+    {
+      "name": "BSides Flood City",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec"
+      ],
+      "city": "Johnstown",
+      "region": "Pennsylvania",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-12",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, students, researchers",
+      "url": "https://bsides.org/event/bsides-flood-city/",
+      "description": "Western Pennsylvania's BSides security conference, held in Johnstown for the regional infosec community.",
+      "source": "https://bsides.org/events/",
+      "sort_date": "2026-11-12",
+      "id": "bsides-flood-city-johnstown",
+      "source_file": "review-additions-3"
     },
     {
       "name": "DevFest KC",
@@ -8697,6 +9652,34 @@
       "sort_date": "2027-04-04",
       "id": "diamondhacks-la-jolla",
       "source_file": "us-west"
+    },
+    {
+      "name": "John P. Ellbogen $50K Entrepreneurship Competition",
+      "type": "demo-day",
+      "topics": [
+        "startups",
+        "student entrepreneurship",
+        "pitch"
+      ],
+      "city": "Laramie",
+      "region": "Wyoming",
+      "country": "United States",
+      "venue": "University of Wyoming College of Business",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "University of Wyoming and Wyoming community college students",
+      "url": "https://ellbogen50k.org/",
+      "description": "Wyoming's flagship student venture competition, running since 2000, awarding $50,000 in cash prizes plus business consulting, C-level mentorship and investor introductions.",
+      "source": "https://www.uwyo.edu/research/innovation/impact307/resources-partners.html",
+      "sort_date": "",
+      "id": "john-p-ellbogen-50k-entrepreneurship-competition-laramie",
+      "source_file": "review-additions-3"
     },
     {
       "name": "DEF CON",
@@ -9213,6 +10196,34 @@
       "source_file": "categories"
     },
     {
+      "name": "Oracle CloudWorld",
+      "type": "conference",
+      "topics": [
+        "cloud",
+        "database",
+        "enterprise"
+      ],
+      "city": "Las Vegas",
+      "region": "Nevada",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "2026-09-15",
+      "next_date_end": "2026-09-18",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "Oracle customers, database and cloud engineers",
+      "url": "https://www.oracle.com/cloudworld/",
+      "description": "Oracle's annual customer and developer conference covering its cloud infrastructure, database and enterprise applications.",
+      "source": "https://eventbrowse.com/event/oracle-cloudworld-2026/",
+      "sort_date": "2026-09-15",
+      "id": "oracle-cloudworld-las-vegas",
+      "source_file": "categories"
+    },
+    {
       "name": "Ai4",
       "type": "conference",
       "topics": [
@@ -9464,6 +10475,62 @@
       "sort_date": "2026-07-22",
       "id": "nebraska-code-lincoln",
       "source_file": "us-central"
+    },
+    {
+      "name": "MakeShift Maker Meetup",
+      "type": "meetup-series",
+      "topics": [
+        "makers",
+        "fabrication",
+        "electronics"
+      ],
+      "city": "Lincoln",
+      "region": "Nebraska",
+      "country": "United States",
+      "venue": "MakeShift, 1135 N. 22nd St",
+      "cadence": "weekly",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "makers, hobbyists, engineers, artists",
+      "url": "https://makeshiftlincoln.org/",
+      "description": "Free Monday-evening open meetup at Lincoln's community makerspace, serving as the entry point to its tools, training and maker community.",
+      "source": "https://makeshiftlincoln.org/",
+      "sort_date": "",
+      "id": "makeshift-maker-meetup-lincoln",
+      "source_file": "review-additions-3"
+    },
+    {
+      "name": "Lincoln AI",
+      "type": "meetup-series",
+      "topics": [
+        "ai",
+        "machine learning",
+        "llms"
+      ],
+      "city": "Lincoln",
+      "region": "Nebraska",
+      "country": "United States",
+      "venue": "Don't Panic Labs, 330 S 21st St",
+      "cadence": "monthly",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "400",
+      "cost": "free",
+      "audience": "developers, data scientists, AI practitioners",
+      "url": "https://www.meetup.com/lincoln-ai/",
+      "description": "Monthly Lincoln meetup of 400+ members hosted at Don't Panic Labs, covering how AI and machine learning work in practice, from LLM internals to applied use cases.",
+      "source": "https://www.meetup.com/lincoln-ai/",
+      "sort_date": "",
+      "id": "lincoln-ai-lincoln",
+      "source_file": "review-additions-3"
     },
     {
       "name": "Arkansas IT Symposium",
@@ -9889,6 +10956,34 @@
       "source": "https://www.mlh.com/seasons/2027/events",
       "sort_date": "2026-10-17",
       "id": "la-hacks-ai-hackathon-los-angeles",
+      "source_file": "categories"
+    },
+    {
+      "name": "Tech Week Los Angeles",
+      "type": "tech-week",
+      "topics": [
+        "startups",
+        "venture-capital",
+        "media-tech"
+      ],
+      "city": "Los Angeles",
+      "region": "California",
+      "country": "United States",
+      "venue": "Distributed across the city",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-10-12",
+      "next_date_end": "2026-10-18",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "freemium",
+      "audience": "founders, investors, operators",
+      "url": "https://www.tech-week.com/calendar",
+      "description": "The Los Angeles edition of the a16z Tech Week network, with a week of community-hosted startup events across the city.",
+      "source": "https://www.tech-week.com/",
+      "sort_date": "2026-10-12",
+      "id": "tech-week-los-angeles-los-angeles",
       "source_file": "categories"
     },
     {
@@ -11789,6 +12884,34 @@
       "source_file": "review-additions"
     },
     {
+      "name": "BayPIGgies (Bay Area Python Interest Group)",
+      "type": "meetup-series",
+      "topics": [
+        "python",
+        "data",
+        "open source"
+      ],
+      "city": "Mountain View",
+      "region": "California",
+      "country": "United States",
+      "venue": "Rotating Bay Area venues",
+      "cadence": "monthly",
+      "month": "Varies",
+      "next_date": "2026-08-27",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "python developers, data scientists, students",
+      "url": "https://www.meetup.com/baypiggies/",
+      "description": "The Bay Area Python Interest Group, formed in 1999 and part of the Python Software Foundation Meetup Pro network. Meets the fourth Thursday of every other month for lightning talks and technical presentations; free to attend.",
+      "source": "https://www.meetup.com/baypiggies/",
+      "sort_date": "2026-08-27",
+      "id": "baypiggies-bay-area-python-interest-group-mountain-view",
+      "source_file": "review-additions"
+    },
+    {
       "name": "Vintage Computer Festival West",
       "type": "festival",
       "topics": [
@@ -11844,6 +12967,35 @@
       "sort_date": "2026-05-19",
       "id": "google-i-o-mountain-view",
       "source_file": "categories"
+    },
+    {
+      "name": "Hacker Dojo Events",
+      "type": "meetup-series",
+      "topics": [
+        "ai",
+        "software engineering",
+        "startups",
+        "hardware"
+      ],
+      "city": "Mountain View",
+      "region": "California",
+      "country": "United States",
+      "venue": "Hacker Dojo, 855 Maude Ave",
+      "cadence": "weekly",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "freemium",
+      "audience": "developers, founders, hardware hackers, students",
+      "url": "https://www.meetup.com/hackerdojo/",
+      "description": "Hacker Dojo is a Mountain View community hackerspace running near-daily talks, workshops, study groups, DevHouses, demo nights and hackathons. Over 20,000 members and 135+ events on the calendar at any time; most sessions are free to attend.",
+      "source": "https://www.meetup.com/hackerdojo/",
+      "sort_date": "",
+      "id": "hacker-dojo-events-mountain-view",
+      "source_file": "review-additions"
     },
     {
       "name": "Hacker Dojo",
@@ -12216,6 +13368,34 @@
       "sort_date": "",
       "id": "the-carpentries-workshops-multiple-cities",
       "source_file": "review-additions"
+    },
+    {
+      "name": "MITRE Embedded Capture the Flag",
+      "type": "ctf",
+      "topics": [
+        "embedded security",
+        "hardware",
+        "capture the flag"
+      ],
+      "city": "Multiple cities, US & Canada",
+      "region": "Massachusetts",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "January-April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-01-14",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "high school and university teams, embedded security researchers",
+      "url": "https://ectf.mitre.org/",
+      "description": "MITRE's semester-long embedded security competition where teams design a secure system, hand it off, then attack rival implementations on physical hardware, ending in an April award ceremony.",
+      "source": "https://ectf.mitre.org/",
+      "sort_date": "2026-01-14",
+      "id": "mitre-embedded-capture-the-flag-multiple-cities-us-canada",
+      "source_file": "review-additions-3"
     },
     {
       "name": "Meeting in the Millyard",
@@ -12756,6 +13936,63 @@
       "source_file": "review-additions-2"
     },
     {
+      "name": "Idea Village Pitch Night",
+      "type": "demo-day",
+      "topics": [
+        "startups",
+        "pitch",
+        "gulf south"
+      ],
+      "city": "New Orleans",
+      "region": "Louisiana",
+      "country": "United States",
+      "venue": "House of Blues",
+      "cadence": "biannual",
+      "month": "June and November",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-06-18",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "founders, investors, students, policymakers",
+      "url": "https://ideavillage.org/pitch-night-recap",
+      "description": "Twice-yearly Gulf South startup showcase where IDEAinstitute founders pitch alongside an alumni showcase competition and an entrepreneur marketplace.",
+      "source": "https://ideavillage.org/pitch-night-recap",
+      "sort_date": "2026-06-18",
+      "id": "idea-village-pitch-night-new-orleans",
+      "source_file": "review-additions-3"
+    },
+    {
+      "name": "Nolacon",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "malware",
+        "social engineering",
+        "forensics"
+      ],
+      "city": "New Orleans",
+      "region": "Louisiana",
+      "country": "United States",
+      "venue": "Astor Crowne Plaza, 739 Canal Street",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-15",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "information security professionals and enthusiasts",
+      "url": "https://nolacon.com/",
+      "description": "New Orleans infosec conference pairing two days of training with three conference days on malware, exploits and social engineering, alongside a CTF and lockpick and solder villages.",
+      "source": "https://nolacon.com/",
+      "sort_date": "2026-05-15",
+      "id": "nolacon-new-orleans",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "BSides NOLA",
       "type": "conference",
       "topics": [
@@ -12840,6 +14077,35 @@
       "sort_date": "",
       "id": "the-idea-village-demo-day-new-orleans",
       "source_file": "review-additions-2"
+    },
+    {
+      "name": "Coastal Innovation Challenge",
+      "type": "demo-day",
+      "topics": [
+        "climate tech",
+        "coastal restoration",
+        "ai",
+        "startups"
+      ],
+      "city": "New Orleans",
+      "region": "Louisiana",
+      "country": "United States",
+      "venue": "The Idea Village, 900 Camp Street",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "early-stage coastal and climate tech founders",
+      "url": "https://ideavillage.org/coastal-innovation-challenge",
+      "description": "Shell GameChanger and Idea Village challenge selecting up to four startups working on coastal restoration, sustainable construction, remote sensing and autonomous underwater vehicles, with a $150,000 non-dilutive award.",
+      "source": "https://ideavillage.org/coastal-innovation-challenge",
+      "sort_date": "",
+      "id": "coastal-innovation-challenge-new-orleans",
+      "source_file": "review-additions-3"
     },
     {
       "name": "ETHConf",
@@ -13012,6 +14278,34 @@
       "sort_date": "2026-11-16",
       "id": "jsnation-us-new-york",
       "source_file": "us-east"
+    },
+    {
+      "name": "Open Source in Finance Forum",
+      "type": "conference",
+      "topics": [
+        "open-source",
+        "fintech",
+        "finance"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-04",
+      "next_date_end": "2026-11-05",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "financial services engineers, open source leads",
+      "url": "https://events.linuxfoundation.org/about/calendar/",
+      "description": "FINOS and Linux Foundation forum on open source adoption inside banks and financial institutions.",
+      "source": "https://events.linuxfoundation.org/about/calendar/",
+      "sort_date": "2026-11-04",
+      "id": "open-source-in-finance-forum-new-york",
+      "source_file": "categories"
     },
     {
       "name": "Open Source in Finance Forum New York",
@@ -13214,6 +14508,62 @@
       "source_file": "categories"
     },
     {
+      "name": "ETHGlobal New York",
+      "type": "hackathon",
+      "topics": [
+        "web3",
+        "ethereum",
+        "blockchain"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "Metropolitan Pavilion",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-06-12",
+      "status": "recurring-tbd",
+      "attendance": "500",
+      "cost": "free",
+      "audience": "web3 developers, founders",
+      "url": "https://ethglobal.com/events/newyork2026",
+      "description": "A 36-hour onchain hackathon where hundreds of developers build Ethereum applications for six-figure prize pools.",
+      "source": "https://ethglobal.com/events",
+      "sort_date": "2026-06-12",
+      "id": "ethglobal-new-york-new-york",
+      "source_file": "categories"
+    },
+    {
+      "name": "Tech Week New York",
+      "type": "tech-week",
+      "topics": [
+        "startups",
+        "venture-capital",
+        "fintech"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "Distributed across the city",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-06-01",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "freemium",
+      "audience": "founders, investors, operators",
+      "url": "https://www.tech-week.com/calendar",
+      "description": "New York's edition of the a16z Tech Week network, a distributed week of founder and investor events.",
+      "source": "https://www.tech-week.com/",
+      "sort_date": "2026-06-01",
+      "id": "tech-week-new-york-new-york",
+      "source_file": "categories"
+    },
+    {
       "name": "New York Tech Week",
       "type": "tech-week",
       "topics": [
@@ -13268,6 +14618,34 @@
       "source": "https://globalgamejam.org/jam-sites/2026",
       "sort_date": "2026-01-30",
       "id": "global-game-jam-nyu-game-center-new-york",
+      "source_file": "review-additions-2"
+    },
+    {
+      "name": "Global Game Jam - Parsons School of Design",
+      "type": "game-jam",
+      "topics": [
+        "game-development",
+        "game-design",
+        "students"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "Parsons School of Design, Design and Technology",
+      "cadence": "annual",
+      "month": "January",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-01-30",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "game developers, designers, artists, students",
+      "url": "https://globalgamejam.org/jam-sites/2026/2026-parsons-dt-global-game-jam",
+      "description": "The Parsons Design and Technology Global Game Jam site in Manhattan, running the international 48-hour jam weekend.",
+      "source": "https://globalgamejam.org/jam-sites/2026",
+      "sort_date": "2026-01-30",
+      "id": "global-game-jam-parsons-school-of-design-new-york",
       "source_file": "review-additions-2"
     },
     {
@@ -13526,6 +14904,34 @@
       "source_file": "categories"
     },
     {
+      "name": "Security BSides Delaware",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec",
+        "ctf"
+      ],
+      "city": "Newark",
+      "region": "Delaware",
+      "country": "United States",
+      "venue": "Fintech Innovation Hub, University of Delaware",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-13",
+      "next_date_end": "2026-11-14",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "130",
+      "cost": "paid",
+      "audience": "security professionals, students, first-time speakers",
+      "url": "http://bsidesdelaware.com/",
+      "description": "Delaware's multi-day community information security conference, running since 2010, with CTF competitions, villages, workshops and a first-time speaker track.",
+      "source": "http://bsidesdelaware.com/",
+      "sort_date": "2026-11-13",
+      "id": "security-bsides-delaware-newark",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "GDEX",
       "type": "expo",
       "topics": [
@@ -13583,6 +14989,34 @@
       "source_file": "categories"
     },
     {
+      "name": "Diamond Challenge",
+      "type": "demo-day",
+      "topics": [
+        "youth entrepreneurship",
+        "social innovation",
+        "pitch"
+      ],
+      "city": "Newark",
+      "region": "Delaware",
+      "country": "United States",
+      "venue": "132 E. Delaware Avenue",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "high school students, mentors, judges",
+      "url": "https://www.diamondchallenge.org/",
+      "description": "University of Delaware Horn Entrepreneurship's global high school venture competition, with business and social innovation tracks and a Newark-hosted Limitless World Summit finale awarding $100,000+.",
+      "source": "https://www.diamondchallenge.org/",
+      "sort_date": "",
+      "id": "diamond-challenge-newark",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "The Newark Summit",
       "type": "summit",
       "topics": [
@@ -13638,6 +15072,34 @@
       "sort_date": "2026-10-13",
       "id": "forge-summit-north-little-rock",
       "source_file": "us-central"
+    },
+    {
+      "name": "Global Game Jam - Gay Gaming Professionals",
+      "type": "game-jam",
+      "topics": [
+        "game development",
+        "lgbtq",
+        "community"
+      ],
+      "city": "Northridge",
+      "region": "California",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "January",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-01-30",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "LGBTQ game developers and allies",
+      "url": "https://globalgamejam.org/jam-sites/2026/2026-gay-gaming-professionals-onlinevirtual-only",
+      "description": "Gay Gaming Professionals' Global Game Jam site, run virtually out of Northridge, California for LGBTQ game developers and allies.",
+      "source": "https://globalgamejam.org/jam-sites/2026",
+      "sort_date": "2026-01-30",
+      "id": "global-game-jam-gay-gaming-professionals-northridge",
+      "source_file": "review-additions-3"
     },
     {
       "name": "ThunderPlains",
@@ -13725,6 +15187,34 @@
       "source_file": "us-central"
     },
     {
+      "name": "INTERFACE Omaha",
+      "type": "conference",
+      "topics": [
+        "it infrastructure",
+        "cybersecurity",
+        "cloud"
+      ],
+      "city": "Omaha",
+      "region": "Nebraska",
+      "country": "United States",
+      "venue": "CHI Health Center Omaha, South Ballroom",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-05",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "IT professionals, cybersecurity practitioners, project managers",
+      "url": "https://f2fevents.com/event/neb26/",
+      "description": "One-day Nebraska IT conference supported by twelve regional professional associations, with CPE-accredited seminars on security, infrastructure, cloud and disaster recovery.",
+      "source": "https://f2fevents.com/event/neb26/",
+      "sort_date": "2026-11-05",
+      "id": "interface-omaha-omaha",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "Startup Weekend Omaha",
       "type": "hackathon",
       "topics": [
@@ -13779,6 +15269,64 @@
       "sort_date": "2026-04-17",
       "id": "midwest-entrepreneurship-conference-omaha",
       "source_file": "us-central"
+    },
+    {
+      "name": "Silicon Prairie Startup Week",
+      "type": "startup-week",
+      "topics": [
+        "startups",
+        "venture capital",
+        "entrepreneurship"
+      ],
+      "city": "Omaha",
+      "region": "Nebraska",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2025-10-06",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "freemium",
+      "audience": "founders, investors, innovators",
+      "url": "https://siliconprairienews.com/events/silicon-prairie-startup-week-2025/",
+      "description": "Week-long Nebraska celebration of entrepreneurship staged across Omaha, Lincoln, Ashland and Council Bluffs, including the 10-Hour Challenge, a $10,000 pitch competition and VC office hours.",
+      "source": "https://siliconprairienews.com/events/silicon-prairie-startup-week-2025/",
+      "sort_date": "2025-10-06",
+      "id": "silicon-prairie-startup-week-omaha",
+      "source_file": "review-additions-3"
+    },
+    {
+      "name": "CodeCrush",
+      "type": "bootcamp",
+      "topics": [
+        "cybersecurity",
+        "robotics",
+        "ai",
+        "python",
+        "youth"
+      ],
+      "city": "Omaha",
+      "region": "Nebraska",
+      "country": "United States",
+      "venue": "University of Nebraska Omaha, Pacific Street Campus",
+      "cadence": "biannual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "8th and 9th grade female students and their teachers",
+      "url": "https://www.aiminstitute.org/codecrush",
+      "description": "AIM Institute's residential iSTEM immersion running two cohorts a year plus a summer summit, with hands-on workshops in cybersecurity, robotics, AI, Python and mobile app development.",
+      "source": "https://www.aiminstitute.org/codecrush",
+      "sort_date": "",
+      "id": "codecrush-omaha",
+      "source_file": "review-additions-3"
     },
     {
       "name": "STAREAST",
@@ -14610,6 +16158,34 @@
       "source_file": "categories"
     },
     {
+      "name": "TransportationCamp PHL",
+      "type": "unconference",
+      "topics": [
+        "transportation tech",
+        "mobility",
+        "urbanism"
+      ],
+      "city": "Philadelphia",
+      "region": "Pennsylvania",
+      "country": "United States",
+      "venue": "Drexel University, Papadakis Integrated Sciences Building",
+      "cadence": "annual",
+      "month": "March",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-03-21",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "transportation professionals, students, technologists",
+      "url": "https://transportationcamp.org/events/phl2026",
+      "description": "Philadelphia unconference on the intersection of transportation, technology and urbanism, organized by YPT, WTS and MASITE/ITE with an attendee-proposed session grid.",
+      "source": "https://transportationcamp.org/events/phl2026",
+      "sort_date": "2026-03-21",
+      "id": "transportationcamp-phl-philadelphia",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "Code4Lib",
       "type": "conference",
       "topics": [
@@ -15151,6 +16727,63 @@
       "source_file": "us-west"
     },
     {
+      "name": "Maine Blue Economy Week",
+      "type": "conference",
+      "topics": [
+        "blue economy",
+        "ocean tech",
+        "aquaculture",
+        "startups"
+      ],
+      "city": "Portland",
+      "region": "Maine",
+      "country": "United States",
+      "venue": "Holiday Inn Portland",
+      "cadence": "annual",
+      "month": "September-October",
+      "next_date": "2026-09-30",
+      "next_date_end": "2026-10-02",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "founders, funders, researchers, students, marine industry",
+      "url": "https://roux.northeastern.edu/event/maine-blue-economy-week/",
+      "description": "Three-day conference on Maine's ocean innovation economy, presented by the Roux Institute with Gulf of Maine Research Institute, University of Maine and Bigelow Laboratory.",
+      "source": "https://roux.northeastern.edu/event/maine-blue-economy-week/",
+      "sort_date": "2026-09-30",
+      "id": "maine-blue-economy-week-portland",
+      "source_file": "review-additions-3"
+    },
+    {
+      "name": "Open Door Leadership Series",
+      "type": "meetup-series",
+      "topics": [
+        "leadership",
+        "careers",
+        "tech ecosystem"
+      ],
+      "city": "Portland",
+      "region": "Maine",
+      "country": "United States",
+      "venue": "The Roux Institute, 100 Fore Street",
+      "cadence": "monthly",
+      "month": "Varies",
+      "next_date": "2026-09-30",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "technologists, business leaders, students",
+      "url": "https://roux.northeastern.edu/events/",
+      "description": "Monthly morning interview series at Northeastern's Roux Institute where Maine CEOs and founders discuss career trajectory, management style and lessons learned.",
+      "source": "https://roux.northeastern.edu/events/",
+      "sort_date": "2026-09-30",
+      "id": "open-door-leadership-series-portland",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "devopsdays Portland",
       "type": "conference",
       "topics": [
@@ -15207,6 +16840,34 @@
       "sort_date": "2026-07-29",
       "id": "forcelandia-portland",
       "source_file": "review-additions-2"
+    },
+    {
+      "name": "Maine Entrepreneurs Summit",
+      "type": "summit",
+      "topics": [
+        "startups",
+        "entrepreneurship",
+        "innovation"
+      ],
+      "city": "Portland",
+      "region": "Maine",
+      "country": "United States",
+      "venue": "USM Abromson Center",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-12",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "founders, investors, ecosystem builders",
+      "url": "https://www.mced.biz/events",
+      "description": "Maine Center for Entrepreneurs' annual statewide summit for the innovation and startup community, held at the University of Southern Maine's Abromson Center in Portland.",
+      "source": "https://www.mced.biz/events",
+      "sort_date": "2026-05-12",
+      "id": "maine-entrepreneurs-summit-portland",
+      "source_file": "review-additions-3"
     },
     {
       "name": "Agile Open Northwest",
@@ -16170,6 +17831,34 @@
       "source_file": "us-east"
     },
     {
+      "name": "CyberConVA",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "risk",
+        "enterprise"
+      ],
+      "city": "Richmond",
+      "region": "Virginia",
+      "country": "United States",
+      "venue": "Dewey Gottwald Center, Science Museum of Virginia",
+      "cadence": "annual",
+      "month": "February",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-02-12",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "CISOs, security engineers, IT leaders",
+      "url": "https://rvatech.com/rvatech-events/cyberconva-2026/",
+      "description": "rvatech's annual Virginia cybersecurity conference at the Science Museum of Virginia, a full day of security leadership and practitioner sessions.",
+      "source": "https://rvatech.com/events/premier-conferences/",
+      "sort_date": "2026-02-12",
+      "id": "cyberconva-richmond",
+      "source_file": "us-east"
+    },
+    {
       "name": "BSides Roanoke",
       "type": "conference",
       "topics": [
@@ -16392,6 +18081,35 @@
       "sort_date": "2025-02-22",
       "id": "brickhack-rochester",
       "source_file": "review-additions"
+    },
+    {
+      "name": "RIT University-Wide Career Fair",
+      "type": "career-fair",
+      "topics": [
+        "tech careers",
+        "engineering",
+        "computing",
+        "recruiting"
+      ],
+      "city": "Rochester",
+      "region": "New York",
+      "country": "United States",
+      "venue": "Rochester Institute of Technology",
+      "cadence": "biannual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "633",
+      "cost": "free",
+      "audience": "students across all majors, employers and recruiters",
+      "url": "https://www.rit.edu/careerservices/",
+      "description": "RIT's flagship all-majors recruiting fair, the largest of the on-campus career fairs that together drew 633 employers last year, alongside discipline-specific fairs for engineering, packaging and creative industries.",
+      "source": "https://www.rit.edu/careerservices/",
+      "sort_date": "",
+      "id": "rit-university-wide-career-fair-rochester",
+      "source_file": "review-additions-3"
     },
     {
       "name": "NY SMART I-Corridor Semiconductor Summit",
@@ -17620,6 +19338,34 @@
       "source_file": "us-west"
     },
     {
+      "name": "Showerhacks",
+      "type": "hackathon",
+      "topics": [
+        "ai",
+        "hackathon",
+        "students"
+      ],
+      "city": "San Francisco",
+      "region": "California",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-10-03",
+      "next_date_end": "2026-10-03",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "students, hackers, AI builders",
+      "url": "https://dev.events/hackathons/NA/US",
+      "description": "A one-day AI hackathon in San Francisco where teams build and demo projects in a single sitting.",
+      "source": "https://dev.events/hackathons/NA/US",
+      "sort_date": "2026-10-03",
+      "id": "showerhacks-san-francisco",
+      "source_file": "us-west"
+    },
+    {
       "name": "The AI Conference",
       "type": "conference",
       "topics": [
@@ -18302,6 +20048,35 @@
       "source_file": "us-west"
     },
     {
+      "name": "OPI Summit on DPU/IPUs",
+      "type": "summit",
+      "topics": [
+        "networking",
+        "hardware",
+        "data-center",
+        "open-source"
+      ],
+      "city": "San Jose",
+      "region": "California",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-10-15",
+      "next_date_end": "2026-10-15",
+      "last_date": "2025-10-16",
+      "status": "upcoming",
+      "attendance": "200",
+      "cost": "paid",
+      "audience": "data center architects, network engineers, silicon vendors",
+      "url": "https://opiproject.org/",
+      "description": "The Open Programmable Infrastructure Project's summit on DPUs and IPUs, covering programmable infrastructure hardware and the software stacks around it.",
+      "source": "https://dev.events/NA/US/CA/San_Jose",
+      "sort_date": "2026-10-15",
+      "id": "opi-summit-on-dpu-ipus-san-jose",
+      "source_file": "us-west"
+    },
+    {
       "name": "WeAreDevelopers World Congress",
       "type": "conference",
       "topics": [
@@ -18328,6 +20103,35 @@
       "source": "https://dev.events/NA/US/CA/San_Jose",
       "sort_date": "2026-09-23",
       "id": "wearedevelopers-world-congress-san-jose",
+      "source_file": "us-west"
+    },
+    {
+      "name": "OpenSearchCon North America",
+      "type": "conference",
+      "topics": [
+        "search",
+        "open-source",
+        "data",
+        "observability"
+      ],
+      "city": "San Jose",
+      "region": "California",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "2026-09-22",
+      "next_date_end": "2026-09-24",
+      "last_date": "2025-09-24",
+      "status": "upcoming",
+      "attendance": "700",
+      "cost": "paid",
+      "audience": "search engineers, data engineers, open source contributors",
+      "url": "https://events.linuxfoundation.org/",
+      "description": "The community conference for the OpenSearch project, covering search relevance, vector search, observability and analytics at scale.",
+      "source": "https://dev.events/NA/US/CA/San_Jose",
+      "sort_date": "2026-09-22",
+      "id": "opensearchcon-north-america-san-jose",
       "source_file": "us-west"
     },
     {
@@ -19334,6 +21138,62 @@
       "source_file": "review-additions"
     },
     {
+      "name": "SeattleJS",
+      "type": "meetup-series",
+      "topics": [
+        "javascript",
+        "web-development"
+      ],
+      "city": "Seattle",
+      "region": "Washington",
+      "country": "United States",
+      "venue": "Varies",
+      "cadence": "monthly",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "7259",
+      "cost": "free",
+      "audience": "web and JavaScript developers",
+      "url": "https://www.meetup.com/seattlejs/",
+      "description": "Seattle's longest-running web and JavaScript meetup, running biweekly one-hour hackathon-plus-presentation nights and weekly code kata sessions in person and online.",
+      "source": "https://www.meetup.com/seattlejs/",
+      "sort_date": "",
+      "id": "seattlejs-seattle",
+      "source_file": "review-additions"
+    },
+    {
+      "name": "GeekWire Seattle AI Summit",
+      "type": "summit",
+      "topics": [
+        "ai",
+        "startups",
+        "policy",
+        "research"
+      ],
+      "city": "Seattle",
+      "region": "Washington",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "800",
+      "cost": "paid",
+      "audience": "AI founders, researchers, investors, executives",
+      "url": "https://www.geekwire.com/calendar-event/seattleaiweek-ai-summit-2026/",
+      "description": "The flagship day of Seattle AI Week, a GeekWire-run summit of cross-sector conversations on where the region's AI ecosystem goes next.",
+      "source": "https://www.geekwire.com/calendar-event/seattleaiweek-ai-summit-2026/",
+      "sort_date": "",
+      "id": "geekwire-seattle-ai-summit-seattle",
+      "source_file": "us-west"
+    },
+    {
       "name": "New Tech Seattle",
       "type": "meetup-series",
       "topics": [
@@ -19363,6 +21223,34 @@
       "source_file": "us-west"
     },
     {
+      "name": "AI Builder Lab Meetup",
+      "type": "meetup-series",
+      "topics": [
+        "ai",
+        "software development",
+        "startups"
+      ],
+      "city": "Sioux Falls",
+      "region": "South Dakota",
+      "country": "United States",
+      "venue": "Startup Sioux Falls, 100 E 6th St",
+      "cadence": "monthly",
+      "month": "Varies",
+      "next_date": "2026-09-17",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "developers, AI builders, founders",
+      "url": "https://www.startupsiouxfalls.com/event/ai-builder-lab-meetup/",
+      "description": "Third-Thursday technical deep dive at Startup Sioux Falls for developers exploring AI tooling and turning AI projects into products.",
+      "source": "https://www.startupsiouxfalls.com/event/ai-builder-lab-meetup/",
+      "sort_date": "2026-09-17",
+      "id": "ai-builder-lab-meetup-sioux-falls",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "Innovation Expo Sioux Falls",
       "type": "expo",
       "topics": [
@@ -19389,6 +21277,34 @@
       "sort_date": "2026-09-17",
       "id": "innovation-expo-sioux-falls-sioux-falls",
       "source_file": "us-central"
+    },
+    {
+      "name": "Founders Meetup Sioux Falls",
+      "type": "meetup-series",
+      "topics": [
+        "startups",
+        "founders",
+        "networking"
+      ],
+      "city": "Sioux Falls",
+      "region": "South Dakota",
+      "country": "United States",
+      "venue": "Startup Sioux Falls, 100 E 6th St",
+      "cadence": "monthly",
+      "month": "Varies",
+      "next_date": "2026-09-16",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "founders and creatives who have started a business",
+      "url": "https://www.startupsiouxfalls.com/event/founders-meetup-1-3/",
+      "description": "Third-Wednesday morning gathering at Startup Sioux Falls exclusively for people who have founded a business, running monthly through the year.",
+      "source": "https://www.startupsiouxfalls.com/event/founders-meetup-1-3/",
+      "sort_date": "2026-09-16",
+      "id": "founders-meetup-sioux-falls-sioux-falls",
+      "source_file": "review-additions-3"
     },
     {
       "name": "Startup Sioux Falls Founders Meetup",
@@ -19447,6 +21363,34 @@
       "source_file": "us-central"
     },
     {
+      "name": "TechConnect WV Women in Tech Conference",
+      "type": "conference",
+      "topics": [
+        "women in tech",
+        "entrepreneurship",
+        "diversity"
+      ],
+      "city": "South Charleston",
+      "region": "West Virginia",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "women in tech, entrepreneurs, industry leaders",
+      "url": "https://techconnectwv.org/programs",
+      "description": "TechConnect WV's first-of-its-kind statewide event for women in West Virginia technology, with keynotes, expert panels and workshops. Venue and dates are still being announced by the organizer.",
+      "source": "https://techconnectwv.org/programs",
+      "sort_date": "",
+      "id": "techconnect-wv-women-in-tech-conference-south-charleston",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "CodeMash East",
       "type": "conference",
       "topics": [
@@ -19473,6 +21417,33 @@
       "sort_date": "2027-06-17",
       "id": "codemash-east-spotsylvania",
       "source_file": "us-east"
+    },
+    {
+      "name": "BSidesSGF",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec"
+      ],
+      "city": "Springfield",
+      "region": "Missouri",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "March",
+      "next_date": "2027-03-30",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, students, researchers",
+      "url": "https://bsides.org/event/bsidessgf-springfield-mo-usa/",
+      "description": "Southwest Missouri's BSides information security conference, held in Springfield.",
+      "source": "https://bsides.org/events/",
+      "sort_date": "2027-03-30",
+      "id": "bsidessgf-springfield",
+      "source_file": "review-additions-3"
     },
     {
       "name": "Build48",
@@ -19502,6 +21473,61 @@
       "sort_date": "2027-03-20",
       "id": "build48-st-john-s",
       "source_file": "review-additions-2"
+    },
+    {
+      "name": "BSides St. John's",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec"
+      ],
+      "city": "St. John's",
+      "region": "Newfoundland and Labrador",
+      "country": "Canada",
+      "venue": "",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "2026-09-17",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, students, researchers",
+      "url": "https://bsides.org/event/bsides-st-johns-2/",
+      "description": "Newfoundland's community-run information security conference, part of the global BSides network, held annually in St. John's.",
+      "source": "https://bsides.org/events/",
+      "sort_date": "2026-09-17",
+      "id": "bsides-st-john-s-st-john-s",
+      "source_file": "review-additions-3"
+    },
+    {
+      "name": "techNL Industry Awards",
+      "type": "awards",
+      "topics": [
+        "awards",
+        "community",
+        "innovation"
+      ],
+      "city": "St. John's",
+      "region": "Newfoundland and Labrador",
+      "country": "Canada",
+      "venue": "JAG Soundhouse",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-16",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "NL tech companies, founders, employees",
+      "url": "https://technl.ca/news-events/",
+      "description": "An awards night celebrating Newfoundland and Labrador's technology companies, teams and individuals, hosted by techNL.",
+      "source": "https://technl.ca/news-events/",
+      "sort_date": "2026-04-16",
+      "id": "technl-industry-awards-st-john-s",
+      "source_file": "canada"
     },
     {
       "name": "Digital Offshore Conference",
@@ -19786,6 +21812,33 @@
       "sort_date": "",
       "id": "mntech-connect-st-paul",
       "source_file": "us-central"
+    },
+    {
+      "name": "BSidesStPete",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec"
+      ],
+      "city": "St. Petersburg",
+      "region": "Florida",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "January",
+      "next_date": "2027-01-29",
+      "next_date_end": "2027-01-30",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, students, researchers",
+      "url": "https://bsides.org/event/bsidesstpete-2/",
+      "description": "Two-day Tampa Bay area BSides security conference held in St. Petersburg.",
+      "source": "https://bsides.org/events/",
+      "sort_date": "2027-01-29",
+      "id": "bsidesstpete-st-petersburg",
+      "source_file": "review-additions-3"
     },
     {
       "name": "Florida Technology Summit",
@@ -21330,6 +23383,35 @@
       "source_file": "categories"
     },
     {
+      "name": "UIUCTF",
+      "type": "ctf",
+      "topics": [
+        "capture the flag",
+        "reverse engineering",
+        "cryptography",
+        "web security"
+      ],
+      "city": "Urbana-Champaign",
+      "region": "Illinois",
+      "country": "United States",
+      "venue": "University of Illinois Urbana-Champaign",
+      "cadence": "annual",
+      "month": "August",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-08-08",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "university and high school CTF teams",
+      "url": "https://uiuc.tf/",
+      "description": "48-hour jeopardy-style CTF run by SIGPwny at the University of Illinois, with pwn, reversing, crypto, OSINT and web categories plus separate open and high school divisions.",
+      "source": "https://uiuc.tf/",
+      "sort_date": "2026-08-08",
+      "id": "uiuctf-urbana-champaign",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "Maker Faire Bay Area",
       "type": "festival",
       "topics": [
@@ -21727,6 +23809,34 @@
       "source_file": "review-additions-2"
     },
     {
+      "name": "seL4 Summit",
+      "type": "summit",
+      "topics": [
+        "open-source",
+        "formal-verification",
+        "embedded"
+      ],
+      "city": "Vancouver",
+      "region": "British Columbia",
+      "country": "Canada",
+      "venue": "",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "2026-09-01",
+      "next_date_end": "2026-09-03",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "OS researchers, embedded and safety-critical engineers",
+      "url": "https://events.linuxfoundation.org/about/calendar/",
+      "description": "The annual summit for the formally verified seL4 microkernel and its use in safety- and security-critical systems.",
+      "source": "https://events.linuxfoundation.org/about/calendar/",
+      "sort_date": "2026-09-01",
+      "id": "sel4-summit-vancouver",
+      "source_file": "categories"
+    },
+    {
       "name": "Vancouver Game Garden",
       "type": "festival",
       "topics": [
@@ -22064,6 +24174,91 @@
       "source_file": "canada"
     },
     {
+      "name": "VIATEC AI Meetup",
+      "type": "meetup-series",
+      "topics": [
+        "ai",
+        "community",
+        "business"
+      ],
+      "city": "Victoria",
+      "region": "British Columbia",
+      "country": "Canada",
+      "venue": "",
+      "cadence": "monthly",
+      "month": "Varies",
+      "next_date": "2026-09-10",
+      "next_date_end": "2026-09-10",
+      "last_date": "2026-08-27",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "freemium",
+      "audience": "developers, business leaders, AI practitioners",
+      "url": "https://members.viatec.ca/event-calendar",
+      "description": "VIATEC's recurring AI meetup in Victoria, alternating between a technology track for builders and a business track for adopters.",
+      "source": "https://members.viatec.ca/event-calendar",
+      "sort_date": "2026-09-10",
+      "id": "viatec-ai-meetup-victoria",
+      "source_file": "canada"
+    },
+    {
+      "name": "VIATEC Awards",
+      "type": "awards",
+      "topics": [
+        "awards",
+        "startups",
+        "community"
+      ],
+      "city": "Victoria",
+      "region": "British Columbia",
+      "country": "Canada",
+      "venue": "Victoria Conference Centre",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-02",
+      "status": "recurring-tbd",
+      "attendance": "500",
+      "cost": "paid",
+      "audience": "Victoria tech companies, founders, employees",
+      "url": "https://members.viatec.ca/event-calendar/Details/the-2026-viatec-awards-1587488",
+      "description": "The Victoria region's annual technology awards gala, honouring achievement across 14 categories in front of 500+ members of the local tech community.",
+      "source": "https://members.viatec.ca/news/Details/viatec-celebrates-region-s-tech-leaders-at-2026-viatec-awards-gala-322567",
+      "sort_date": "2026-04-02",
+      "id": "viatec-awards-victoria",
+      "source_file": "canada"
+    },
+    {
+      "name": "SANS Virginia Beach",
+      "type": "bootcamp",
+      "topics": [
+        "cybersecurity",
+        "incident response",
+        "red team",
+        "cloud security"
+      ],
+      "city": "Virginia Beach",
+      "region": "Virginia",
+      "country": "United States",
+      "venue": "Hilton Virginia Beach Oceanfront",
+      "cadence": "annual",
+      "month": "August-September",
+      "next_date": "2026-08-24",
+      "next_date_end": "2026-09-04",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "cybersecurity professionals pursuing GIAC certifications",
+      "url": "https://www.sans.org/cyber-security-training-events/virginia-beach-2026/",
+      "description": "Two-week SANS training event offering 18 courses across defensive operations, incident response, red team tactics and security leadership, with evening talks and networking events.",
+      "source": "https://www.sans.org/cyber-security-training-events/virginia-beach-2026/",
+      "sort_date": "2026-08-24",
+      "id": "sans-virginia-beach-virginia-beach",
+      "source_file": "review-additions-3"
+    },
+    {
       "name": "VCF Swap Meet",
       "type": "expo",
       "topics": [
@@ -22090,6 +24285,35 @@
       "source": "https://vcfed.org/events/vcf-swap-meet/",
       "sort_date": "2026-10-17",
       "id": "vcf-swap-meet-wall",
+      "source_file": "review-additions-2"
+    },
+    {
+      "name": "Vintage Computer Festival East",
+      "type": "festival",
+      "topics": [
+        "retro-computing",
+        "computer-history",
+        "hardware",
+        "restoration"
+      ],
+      "city": "Wall",
+      "region": "New Jersey",
+      "country": "United States",
+      "venue": "InfoAge Science and History Museums",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-17",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "retro-computing hobbyists, collectors, restorers, families",
+      "url": "https://vcfed.org/events/vintage-computer-festival-east/",
+      "description": "The East Coast's largest vintage computing festival: three days of exhibits, classes, talks, a repair workshop, consignment and vendors on the InfoAge museum campus.",
+      "source": "https://vcfed.org/events/vintage-computer-festival-east/",
+      "sort_date": "2026-04-17",
+      "id": "vintage-computer-festival-east-wall",
       "source_file": "review-additions-2"
     },
     {
@@ -22120,6 +24344,34 @@
       "sort_date": "2027-02-06",
       "id": "districtcon-washington",
       "source_file": "us-east"
+    },
+    {
+      "name": "TransportationCamp DC",
+      "type": "unconference",
+      "topics": [
+        "transportation tech",
+        "mobility",
+        "policy"
+      ],
+      "city": "Washington",
+      "region": "District of Columbia",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "January",
+      "next_date": "2027-01-09",
+      "next_date_end": "",
+      "last_date": "2026-01-10",
+      "status": "upcoming",
+      "attendance": "400",
+      "cost": "paid",
+      "audience": "advocates, practitioners, politicians, business leaders, students",
+      "url": "https://t4america.org/transportation-camp/",
+      "description": "The largest TransportationCamp, run by Transportation for America, where 400+ attendees voted on and led 50+ original sessions on safety, emissions and reconnecting communities.",
+      "source": "https://t4america.org/transportation-camp/",
+      "sort_date": "2027-01-09",
+      "id": "transportationcamp-dc-washington",
+      "source_file": "review-additions-3"
     },
     {
       "name": "DC Startup & Tech Week",
@@ -22576,6 +24828,36 @@
       "source_file": "review-additions-2"
     },
     {
+      "name": "Elevate Conference",
+      "type": "conference",
+      "topics": [
+        "agtech",
+        "ai",
+        "robotics",
+        "computer-vision",
+        "agriculture"
+      ],
+      "city": "Wheatland",
+      "region": "North Dakota",
+      "country": "United States",
+      "venue": "Grand Farm Innovation Campus",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-28",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "ag industry leaders, startups, investors, researchers, growers",
+      "url": "https://grandfarm.com/elevate/",
+      "description": "A one-day summit on applying AI to real farm work, covering predictive analytics, automation, sensing and computer vision, closing with a public Field Day of farm tours at the Grand Farm campus outside Fargo.",
+      "source": "https://grandfarm.com/elevate/",
+      "sort_date": "2026-07-28",
+      "id": "elevate-conference-wheatland",
+      "source_file": "review-additions-2"
+    },
+    {
       "name": "Maker Faire Yukon",
       "type": "festival",
       "topics": [
@@ -22744,6 +25026,91 @@
       "sort_date": "2026-02-09",
       "id": "bank-technology-operations-conference-showcase-wichita",
       "source_file": "us-central"
+    },
+    {
+      "name": "BSidesNEPA",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec"
+      ],
+      "city": "Wilkes Barre",
+      "region": "Pennsylvania",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "2026-09-12",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, students, researchers",
+      "url": "https://bsides.org/event/bsidesnepa-northeast-pennsylvania/",
+      "description": "Northeast Pennsylvania's BSides security conference, a community-driven day of talks and villages in Wilkes Barre.",
+      "source": "https://bsides.org/events/",
+      "sort_date": "2026-09-12",
+      "id": "bsidesnepa-wilkes-barre",
+      "source_file": "review-additions-3"
+    },
+    {
+      "name": "IS: Life Sciences",
+      "type": "summit",
+      "topics": [
+        "life sciences",
+        "biotech",
+        "medtech",
+        "startups"
+      ],
+      "city": "Wilmington",
+      "region": "Delaware",
+      "country": "United States",
+      "venue": "Delaware Innovation Space",
+      "cadence": "annual",
+      "month": "December",
+      "next_date": "2026-12-10",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "founders, investors, industry leaders, ecosystem partners",
+      "url": "https://innovationspace.org/event/is-life-sciences/",
+      "description": "One-day Delaware Innovation Space summit showcasing novel therapeutics, platform biotechnologies, drug delivery systems and advanced-materials medical devices to the regional life sciences ecosystem.",
+      "source": "https://innovationspace.org/event/is-life-sciences/",
+      "sort_date": "2026-12-10",
+      "id": "is-life-sciences-wilmington",
+      "source_file": "review-additions-3"
+    },
+    {
+      "name": "Startup302",
+      "type": "demo-day",
+      "topics": [
+        "startups",
+        "fintech",
+        "life sciences",
+        "climate"
+      ],
+      "city": "Wilmington",
+      "region": "Delaware",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "underrepresented startup founders, investors",
+      "url": "https://startup302.org/",
+      "description": "Delaware Prosperity Partnership's funding competition awarding $3,000-$25,000 non-dilutive grants across FinTech, Environmental Impact and Life Sciences tracks, ending in live pitches held in Delaware.",
+      "source": "https://startup302.org/",
+      "sort_date": "",
+      "id": "startup302-wilmington",
+      "source_file": "review-additions-3"
     },
     {
       "name": "MasseyHacks",

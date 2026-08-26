@@ -91,11 +91,23 @@ function normalise(raw, file) {
 const files = readdirSync(RAW_DIR).filter((f) => f.endsWith('.json')).sort();
 if (!files.length) { console.error('No raw data files found in data/raw/'); process.exit(1); }
 
-/** Two records are the same event if they agree on (name, city) OR on (url, city). */
+/**
+ * Two records are the same event if they agree on (name, city) or on (page, city).
+ *
+ * "Page" means host AND path, not host alone. Matching on the host would fold
+ * every event a single organisation runs in its home city into one record —
+ * PEI BioAlliance publishes four distinct events under peibioalliance.com in
+ * Charlottetown, and host-only matching silently collapsed all four. Two
+ * records pointing at the very same page in the same city are still merged,
+ * which is what catches one event filed twice under different titles.
+ */
 function keysFor(e) {
   const city = slug(e.city);
-  const url = e.url.toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/[/?#].*$/, '');
-  return [`n:${slug(e.name)}|${city}`, `u:${url}|${city}`];
+  const page = e.url.toLowerCase()
+    .replace(/^https?:\/\/(www\.)?/, '')
+    .replace(/[?#].*$/, '')
+    .replace(/\/+$/, '');
+  return [`n:${slug(e.name)}|${city}`, `u:${page}|${city}`];
 }
 
 /** Richer record wins: a confirmed future date first, then more populated fields. */
