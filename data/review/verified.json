@@ -1227,10 +1227,10 @@
     "netsuitesuiteworld|lasvegas": {
       "name": "NetSuite SuiteWorld",
       "city": "Las Vegas",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "3r1",
-      "evidence": "no reachable page publishing future dates"
+      "cycle": "unblockA",
+      "evidence": "The stored URL netsuite.com/portal/events/suiteworld/main.shtml is 403 to curl - as is every netsuite.com path including the homepage - so this is host-wide WAF behaviour rather than a dead page. Oracle's newsroom (www.oracle.com/news/, HTTP 200) links the event to https://www.netsuitesuiteworld.com/home.shtml and states 'Oracle's annual conference for the NetSuite community is heading to Vegas October 25-28.' That canonical event site returns 200 with JSON-LD \"startDate\": \"2026-10-25T09:00:00+0000\" and \"endDate\": \"2026-10-28T09:00:00+0000\", page title 'SuiteWorld | Las Vegas | NetSuite', and body copy 'October 25-28, 2026'. Matches stored 2026-10-25 / 2026-10-28 and city Las Vegas. No patch emitted for the URL because a 403 to curl does not establish the stored link is dead for browsers."
     },
     "hrtechlasvegas|lasvegas": {
       "name": "HR Tech Las Vegas",
@@ -2523,10 +2523,10 @@
     "rowdyhacks|sanantonio": {
       "name": "Rowdy Hacks",
       "city": "San Antonio",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "3r2b",
-      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+      "cycle": "unblockA",
+      "evidence": "rowdyhacks.org returns 200 via curl but is client-rendered with no date in the HTML. Corroborated by MLH: mlh.io/seasons/2027/events event record slug 'rowdy-hacks', startsAt 2026-10-03, endsAt 2026-10-04, dateRange 'OCT 03 - 04', venue city San Antonio, Texas, US; MLH links out to https://rowdyhacks.org/ (same URL as the record). Matches stored 2026-10-03 / 2026-10-04 and city San Antonio. Date sourced from MLH, not the organiser."
     },
     "pybay|sanfrancisco": {
       "name": "PyBay",
@@ -2563,10 +2563,10 @@
     "sapconnect|lasvegas": {
       "name": "SAP Connect",
       "city": "Las Vegas",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "3r2b",
-      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+      "cycle": "unblockA",
+      "evidence": "www.sap.com is 403 to curl on every path and UA tried (/events.html, /events/sap-connect.html, /about/events/sap-connect.html, events.sap.com; plain, --compressed, --http1.1 and a Firefox UA all 403). Confirmed instead from SAP's own readable properties: community.sap.com search for 'SAP Connect 2026' returns an SAP post stating 'registration is officially live for Success Connect at SAP Connect! The event will take place October 5-7, 2026 in Las Vegas. In its second year...'. news.sap.com corroborates the series and the city - its SAP Connect tag page carries six October 2025 articles describing 'the inaugural SAP Connect event in Las Vegas, Nevada', so 2026 is the second edition. Matches stored 2026-10-05 / 2026-10-07 and city Las Vegas."
     },
     "lesbianswhotechalliessummit|newyork": {
       "name": "Lesbians Who Tech + Allies Summit",
@@ -2691,18 +2691,18 @@
     "sbuhacks|stonybrook": {
       "name": "SBUHacks",
       "city": "Stony Brook",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "3r2b",
-      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+      "cycle": "unblockA",
+      "evidence": "hack.sbcs.io returns 200 (title 'SBUHacks 2026') but carries no date - the page still shows 'This website is currently under construction' copy. Corroborated by MLH: mlh.io/seasons/2027/events event record slug 'sbuhacks-5f', startsAt 2026-10-09, endsAt 2026-10-11, dateRange 'OCT 09 - 11', venue Stony Brook, New York, US, linking out to https://hack.sbcs.io/ (same URL as the record). Matches stored 2026-10-09 / 2026-10-11 and city Stony Brook. Date sourced from MLH, not the organiser."
     },
     "codered|houston": {
       "name": "CodeRED",
       "city": "Houston",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "3r2b",
-      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+      "cycle": "unblockA",
+      "evidence": "uhcode.red returns 200 (title 'CodeRED | University of Houston Hackathon') but is a client-rendered shell with no date. Corroborated by MLH: mlh.io/seasons/2027/events event record slug 'codered-orion', name 'CodeRED Orion', startsAt 2026-10-10T13:00:00Z, endsAt 2026-10-11T20:00:00Z, dateRange 'OCT 10 - 11', venue Houston, Texas, US, linking out to https://uhcode.red/ (same URL as the record). Matches stored 2026-10-10 / 2026-10-11 and city Houston. Date sourced from MLH, not the organiser."
     },
     "dayofdatapittsburgh|pittsburgh": {
       "name": "Day of Data Pittsburgh",
@@ -2715,10 +2715,10 @@
     "dev2next|lonetree": {
       "name": "dev2next",
       "city": "Lone Tree",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "3r2b",
-      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+      "cycle": "unblockA",
+      "evidence": "dev2next.com serves an empty Rails/JS shell (2799 bytes, <div id=\"contents\"></div>, no server-rendered copy). Chased its JS asset https://www.dev2next.com/main.js, which contains the literal string 'Lone Tree, CO - October 12 - 15, 2026' along with the venue 'Denver Marriott South at Park Meadows, Lone Tree, CO 80124'. Matches stored 2026-10-12 / 2026-10-15 and city Lone Tree exactly."
     },
     "latechweek|losangeles": {
       "name": "LA Tech Week",
@@ -2811,10 +2811,10 @@
     "hackharvard|cambridge": {
       "name": "HackHarvard",
       "city": "Cambridge",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "3r2b",
-      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+      "cycle": "unblockA",
+      "evidence": "hhuh.io returns 200 with title 'HackHarvard 2026' and live 2026 application copy (portal.hhuh.io sign-in says accounts from previous years are archived), but no date in the HTML text - the date is baked into an image. Downloaded and read https://hhuh.io/newsite/assets/logo-stuff-with-date.png, which reads 'October 16-18 2026 - Cambridge, MA'. Matches stored 2026-10-16 / 2026-10-18 and city Cambridge exactly. Not an MLH member event (absent from mlh.io/seasons/2027/events) and no 2026 Devpost listing yet (devpost.com/api/hackathons?search=hackharvard lists editions through 2024 only), so the organiser's own logo asset is the source."
     },
     "datainthed|detroit": {
       "name": "Data in the D",
@@ -3051,10 +3051,10 @@
     "microsoftignite|sanfrancisco": {
       "name": "Microsoft Ignite",
       "city": "San Francisco",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passB",
-      "evidence": "ignite.microsoft.com renders an empty body via fetch (JS-only shell); /en-US/home, /en-US/, /en-US/sessions and news.microsoft.com/ignite-2026 are empty or 404. No readable page states dates or city"
+      "cycle": "unblockA",
+      "evidence": "ignite.microsoft.com returns 200; the dates live in the Next.js flight data. Page metadata reads 'Join Microsoft Ignite, November 17-20, 2026. Register now.', the hero tag is 'Nov 17-20, 2026' with eyebrow 'San Francisco, Moscone Center', and the FAQ drawer states 'Microsoft Ignite is at the Moscone Center in San Francisco, November 17-20, 2026, with an optional pre-day on November 16. The online event is November 17-19, 2026.' The 17-19 string refers only to the online / Hub-only track, not the in-person conference. Matches stored 2026-11-17 / 2026-11-20 and city San Francisco."
     },
     "rvatechwomenintechnologyconference|richmond": {
       "name": "rvatech/Women in Technology Conference",
@@ -3155,10 +3155,10 @@
     "gartneridentityaccessmanagementsummit|lasvegas": {
       "name": "Gartner Identity & Access Management Summit",
       "city": "Las Vegas",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passB",
-      "evidence": "gartner.com returns HTTP 403 to fetch on the summit landing page, /agenda, /why-attend, /register and on the conference calendar. No readable page"
+      "cycle": "unblockA",
+      "evidence": "gartner.com/en/conferences/na/identity-access-management-us returns 200 via curl with JSON-LD \"startDate\":\"2026-12-07\" and \"endDate\":\"2026-12-09\", page title 'Gartner Identity & Access Management Summit 2026 in Las Vegas, NV', and body copy 'December 7 - 9, 2026'. Matches stored 2026-12-07 / 2026-12-09 and city Las Vegas."
     },
     "islifesciences|wilmington": {
       "name": "IS: Life Sciences",
@@ -3627,10 +3627,10 @@
     "aiproductsummitsiliconvalley|sanjose": {
       "name": "AI Product Summit Silicon Valley",
       "city": "San Jose",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passB",
-      "evidence": "world.productledalliance.com main calendar lists no 'AI Product Summit' in San Jose; the nearest entry is a 'Chief Product Officer Summit' San Jose on 'Apr 14, 2027' while the record says 2027-04-15. /location/san-jose and /events both return 404. Cannot settle whether the recorded event exists under this name"
+      "cycle": "unblockA",
+      "evidence": "The stored URL world.productledalliance.com is the portfolio index; the event's own page is https://world.productledalliance.com/location/ai, title 'AI Product Summit | Silicon Valley', which returns 200 with JSON-LD \"startDate\":\"2027-04-15T07:00:00.000Z\" and \"endDate\":\"2027-04-15T07:00:00.000Z\" (07:00Z is midnight America/Los_Angeles, so a single day, April 15 2027) and body copy 'April 15, 2027'. Its page data carries \"city\":\"San Jose\", and the index page's event record agrees (dateFrom/dateTo 1807772400000, timezone America/Los_Angeles). Matches stored 2027-04-15 / 2027-04-15 and city San Jose. Note the sibling Chief Product Officer Summit Silicon Valley runs the day before, April 14 2027 - a different event."
     },
     "lahacks|losangeles": {
       "name": "LA Hacks",
@@ -3691,10 +3691,10 @@
     "stareast|orlando": {
       "name": "STAREAST",
       "city": "Orlando",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passB",
-      "evidence": "stareast.techwell.com returns HTTP 403 to fetch on / and /program/schedule; techwell.com and techwell.com/conferences also 403. No readable page"
+      "cycle": "unblockA",
+      "evidence": "stareast.techwell.com returns 200 via curl with page title 'STAREAST Software Testing Conference | April 25-30, 2027 | Orlando, FL & Online' and body copy 'April 25 - 30, 2027' plus 'STAREAST 2027 will be held at the Rosen Centre Hotel in Orlando, Florida for in-person attendees'. Matches stored 2027-04-25 / 2027-04-30 and city Orlando."
     },
     "tokioconf|portland": {
       "name": "TokioConf",
@@ -3835,10 +3835,10 @@
     "aiconusa|seattle": {
       "name": "AI Con USA",
       "city": "Seattle",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passB",
-      "evidence": "aiconusa.techwell.com returns HTTP 403 to fetch; techwell.com and techwell.com/conferences also 403. No readable page settles 2027-06-06..11"
+      "cycle": "unblockA",
+      "evidence": "aiconusa.techwell.com returns 200 via curl with page title 'AI Con USA | June 6-11, 2027 | Seattle, WA and Online' and body copy 'June 6-11, 2027'; the venue is described as a Seattle hotel close to Lake Union and Elliott Bay. Matches stored 2027-06-06 / 2027-06-11 and city Seattle."
     },
     "cttechweek|multiplecities": {
       "name": "CT Tech Week",
@@ -4523,10 +4523,10 @@
     "hackutd|richardson": {
       "name": "HackUTD",
       "city": "Richardson",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passA",
-      "evidence": "zeroday.hackutd.co reads 'HackUTD 2026 - Zero Day. Coming soon; applications will open soon' with no date; hackutd.co main site also announces only 'Fall 2026'"
+      "cycle": "unblockA",
+      "evidence": "zeroday.hackutd.co returns 200 with title 'HackUTD 2026 - Zero Day' but no date in the HTML. Corroborated by MLH: mlh.io/seasons/2027/events event record slug 'hackutd-06', startsAt 2026-11-07, endsAt 2026-11-08, dateRange 'NOV 07 - 08', venue Richardson, Texas, US, linking out to https://zeroday.hackutd.co (same URL as the record). Matches stored 2026-11-07 / 2026-11-08 and city Richardson. Date sourced from MLH, not the organiser."
     },
     "torontogameexpo|toronto": {
       "name": "Toronto Game Expo",
@@ -4619,10 +4619,10 @@
     "hackumass|amherst": {
       "name": "HackUMass",
       "city": "Amherst",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passA",
-      "evidence": "hackumass.com reachable and headed 'HackUMass XIV' with venue (Integrative Learning Center, Amherst MA) but publishes no dates; only 'Schedule (XIII)' from the prior edition and 'Pre-Register Now!'"
+      "cycle": "unblockA",
+      "evidence": "hackumass.com returns 200 but its only date string is a stale 'November 8 - 10, 2024' left over in the page, so the organiser site is not yet updated for this edition. Corroborated by MLH: mlh.io/seasons/2027/events event record slug 'hackumass-19', startsAt 2026-11-13, endsAt 2026-11-15, dateRange 'NOV 13 - 15', venue Amherst, MA, US, linking out to https://www.hackumass.com/ (same URL as the record). Matches stored 2026-11-13 / 2026-11-15 and city Amherst. Date sourced from MLH, not the organiser."
     },
     "newenglanddrupalcamp|providence": {
       "name": "New England Drupal Camp",

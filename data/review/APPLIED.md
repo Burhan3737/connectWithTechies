@@ -207,3 +207,7 @@
 - passC-fixes.json: UPDATE SecureWorld St. Louis (St. Louis) — secureworld.io/events/st-louis-mo-2026 gives the event date as 2026-09-02, distinct from the 2026-07-08 call-for-speakers deadline. — next_date: "" -> "2026-09-02"; next_date_end: "" -> "2026-09-02"; status: "recurring-tbd" -> "upcoming"
 - passC-fixes.json: UPDATE Small Satellite Conference (Salt Lake City) — smallsat.org publishes save-the-dates following the 40th annual (Aug 23-26, 2026 at the Salt Palace Convention Center): August 15-18, 2027, then 2028 and 2029. — next_date: "" -> "2027-08-15"; next_date_end: "" -> "2027-08-18"; status: "recurring-tbd" -> "upcoming"
 - passC-fixes.json: UPDATE TennoCon (London) — tennocon.com recaps the concluded 2026 event and announces 'July 16-17 2027' with a live countdown to it. — next_date: "" -> "2027-07-16"; next_date_end: "" -> "2027-07-17"; status: "recurring-tbd" -> "upcoming"
+
+## 2026-08-26
+
+- unblockA-netsuite.json: UPDATE NetSuite SuiteWorld (Las Vegas) — Dates and city were already correct (JSON-LD on the event site gives startDate 2026-10-25, endDate 2026-10-28, Las Vegas). Only the link needed work: the stored netsuite.com/portal/... path sits behind a host-wide WAF, while netsuitesuiteworld.com is the event's own canonical site, is the one Oracle's newsroom links to, and loads cleanly. — url: "https://www.netsuite.com/portal/events/suiteworld/main.shtml" -> "https://www.netsuitesuiteworld.com/"; source: "https://dev.events/NA/US/NV" -> "https://www.netsuitesuiteworld.com/"

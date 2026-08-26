@@ -1,0 +1,11 @@
+[
+  {
+    "match": { "name": "NetSuite SuiteWorld", "city": "Las Vegas" },
+    "action": "update",
+    "reason": "Dates and city were already correct (JSON-LD on the event site gives startDate 2026-10-25, endDate 2026-10-28, Las Vegas). Only the link needed work: the stored netsuite.com/portal/... path sits behind a host-wide WAF, while netsuitesuiteworld.com is the event's own canonical site, is the one Oracle's newsroom links to, and loads cleanly.",
+    "set": {
+      "url": "https://www.netsuitesuiteworld.com/",
+      "source": "https://www.netsuitesuiteworld.com/"
+    }
+  }
+]

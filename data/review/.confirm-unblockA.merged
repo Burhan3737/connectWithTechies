@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Rowdy Hacks",
+    "city": "San Antonio",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "rowdyhacks.org returns 200 via curl but is client-rendered with no date in the HTML. Corroborated by MLH: mlh.io/seasons/2027/events event record slug 'rowdy-hacks', startsAt 2026-10-03, endsAt 2026-10-04, dateRange 'OCT 03 - 04', venue city San Antonio, Texas, US; MLH links out to https://rowdyhacks.org/ (same URL as the record). Matches stored 2026-10-03 / 2026-10-04 and city San Antonio. Date sourced from MLH, not the organiser."
+  },
+  {
+    "name": "Lesbians Who Tech + Allies Summit",
+    "city": "New York",
+    "status": "blocked",
+    "cycle": "unblockA",
+    "evidence": "Still unreadable via curl. lwtsquad.com sits behind a SiteGround SG-Captcha proof-of-work JS challenge: every path returns HTTP 202, 169 bytes, header 'SG-Captcha: challenge', body a meta-refresh to /.well-known/sgcaptcha/. Tried https://lwtsquad.com/, /feed/, /wp-json/wp/v2/pages, /favicon.ico, /wp-sitemap.xml, plus the parent organisation at https://lesbianswhotech.org/, https://www.lesbianswhotech.org/newyork/ and https://lesbianswhotech.org/summit/ (all 202 challenge), and summit.lesbianswhotech.org (DNS failure). Also attempted the captcha handshake with a cookie jar (fetch /.well-known/sgcaptcha/?r=%2F then retry) - it returns a JS proof-of-work token curl cannot solve. No date or city evidence obtained; stored 2026-10-05 / 2026-10-08 remains unverified."
+  },
+  {
+    "name": "SAP Connect",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "www.sap.com is 403 to curl on every path and UA tried (/events.html, /events/sap-connect.html, /about/events/sap-connect.html, events.sap.com; plain, --compressed, --http1.1 and a Firefox UA all 403). Confirmed instead from SAP's own readable properties: community.sap.com search for 'SAP Connect 2026' returns an SAP post stating 'registration is officially live for Success Connect at SAP Connect! The event will take place October 5-7, 2026 in Las Vegas. In its second year...'. news.sap.com corroborates the series and the city - its SAP Connect tag page carries six October 2025 articles describing 'the inaugural SAP Connect event in Las Vegas, Nevada', so 2026 is the second edition. Matches stored 2026-10-05 / 2026-10-07 and city Las Vegas."
+  },
+  {
+    "name": "SBUHacks",
+    "city": "Stony Brook",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "hack.sbcs.io returns 200 (title 'SBUHacks 2026') but carries no date - the page still shows 'This website is currently under construction' copy. Corroborated by MLH: mlh.io/seasons/2027/events event record slug 'sbuhacks-5f', startsAt 2026-10-09, endsAt 2026-10-11, dateRange 'OCT 09 - 11', venue Stony Brook, New York, US, linking out to https://hack.sbcs.io/ (same URL as the record). Matches stored 2026-10-09 / 2026-10-11 and city Stony Brook. Date sourced from MLH, not the organiser."
+  },
+  {
+    "name": "CodeRED",
+    "city": "Houston",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "uhcode.red returns 200 (title 'CodeRED | University of Houston Hackathon') but is a client-rendered shell with no date. Corroborated by MLH: mlh.io/seasons/2027/events event record slug 'codered-orion', name 'CodeRED Orion', startsAt 2026-10-10T13:00:00Z, endsAt 2026-10-11T20:00:00Z, dateRange 'OCT 10 - 11', venue Houston, Texas, US, linking out to https://uhcode.red/ (same URL as the record). Matches stored 2026-10-10 / 2026-10-11 and city Houston. Date sourced from MLH, not the organiser."
+  },
+  {
+    "name": "dev2next",
+    "city": "Lone Tree",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "dev2next.com serves an empty Rails/JS shell (2799 bytes, <div id=\"contents\"></div>, no server-rendered copy). Chased its JS asset https://www.dev2next.com/main.js, which contains the literal string 'Lone Tree, CO - October 12 - 15, 2026' along with the venue 'Denver Marriott South at Park Meadows, Lone Tree, CO 80124'. Matches stored 2026-10-12 / 2026-10-15 and city Lone Tree exactly."
+  },
+  {
+    "name": "HackHarvard",
+    "city": "Cambridge",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "hhuh.io returns 200 with title 'HackHarvard 2026' and live 2026 application copy (portal.hhuh.io sign-in says accounts from previous years are archived), but no date in the HTML text - the date is baked into an image. Downloaded and read https://hhuh.io/newsite/assets/logo-stuff-with-date.png, which reads 'October 16-18 2026 - Cambridge, MA'. Matches stored 2026-10-16 / 2026-10-18 and city Cambridge exactly. Not an MLH member event (absent from mlh.io/seasons/2027/events) and no 2026 Devpost listing yet (devpost.com/api/hackathons?search=hackharvard lists editions through 2024 only), so the organiser's own logo asset is the source."
+  },
+  {
+    "name": "NetSuite SuiteWorld",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "The stored URL netsuite.com/portal/events/suiteworld/main.shtml is 403 to curl - as is every netsuite.com path including the homepage - so this is host-wide WAF behaviour rather than a dead page. Oracle's newsroom (www.oracle.com/news/, HTTP 200) links the event to https://www.netsuitesuiteworld.com/home.shtml and states 'Oracle's annual conference for the NetSuite community is heading to Vegas October 25-28.' That canonical event site returns 200 with JSON-LD \"startDate\": \"2026-10-25T09:00:00+0000\" and \"endDate\": \"2026-10-28T09:00:00+0000\", page title 'SuiteWorld | Las Vegas | NetSuite', and body copy 'October 25-28, 2026'. Matches stored 2026-10-25 / 2026-10-28 and city Las Vegas. No patch emitted for the URL because a 403 to curl does not establish the stored link is dead for browsers."
+  },
+  {
+    "name": "HackUTD",
+    "city": "Richardson",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "zeroday.hackutd.co returns 200 with title 'HackUTD 2026 - Zero Day' but no date in the HTML. Corroborated by MLH: mlh.io/seasons/2027/events event record slug 'hackutd-06', startsAt 2026-11-07, endsAt 2026-11-08, dateRange 'NOV 07 - 08', venue Richardson, Texas, US, linking out to https://zeroday.hackutd.co (same URL as the record). Matches stored 2026-11-07 / 2026-11-08 and city Richardson. Date sourced from MLH, not the organiser."
+  },
+  {
+    "name": "HackUMass",
+    "city": "Amherst",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "hackumass.com returns 200 but its only date string is a stale 'November 8 - 10, 2024' left over in the page, so the organiser site is not yet updated for this edition. Corroborated by MLH: mlh.io/seasons/2027/events event record slug 'hackumass-19', startsAt 2026-11-13, endsAt 2026-11-15, dateRange 'NOV 13 - 15', venue Amherst, MA, US, linking out to https://www.hackumass.com/ (same URL as the record). Matches stored 2026-11-13 / 2026-11-15 and city Amherst. Date sourced from MLH, not the organiser."
+  },
+  {
+    "name": "Microsoft Ignite",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "ignite.microsoft.com returns 200; the dates live in the Next.js flight data. Page metadata reads 'Join Microsoft Ignite, November 17-20, 2026. Register now.', the hero tag is 'Nov 17-20, 2026' with eyebrow 'San Francisco, Moscone Center', and the FAQ drawer states 'Microsoft Ignite is at the Moscone Center in San Francisco, November 17-20, 2026, with an optional pre-day on November 16. The online event is November 17-19, 2026.' The 17-19 string refers only to the online / Hub-only track, not the in-person conference. Matches stored 2026-11-17 / 2026-11-20 and city San Francisco."
+  },
+  {
+    "name": "Gartner Identity & Access Management Summit",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "gartner.com/en/conferences/na/identity-access-management-us returns 200 via curl with JSON-LD \"startDate\":\"2026-12-07\" and \"endDate\":\"2026-12-09\", page title 'Gartner Identity & Access Management Summit 2026 in Las Vegas, NV', and body copy 'December 7 - 9, 2026'. Matches stored 2026-12-07 / 2026-12-09 and city Las Vegas."
+  },
+  {
+    "name": "CypherCon",
+    "city": "Milwaukee",
+    "status": "blocked",
+    "cycle": "unblockA",
+    "evidence": "Still unreadable via curl. cyphercon.com sits behind a SiteGround SG-Captcha proof-of-work JS challenge: every path returns HTTP 202, 169 bytes, header 'SG-Captcha: challenge'. Tried https://cyphercon.com/, https://www.cyphercon.com/, /2027, /schedule, /tickets, /feed/, /wp-json/wp/v2/pages, /favicon.ico and /wp-sitemap.xml - all 202. Attempted the captcha handshake with a cookie jar; /.well-known/sgcaptcha/?r=%2F returns a JS proof-of-work token curl cannot solve. Subdomains tickets.cyphercon.com and my.cyphercon.com do not resolve. Tried the Milwaukee venue as a corroborating source: bairdcenter.com (formerly the Wisconsin Center) exposes an Events Calendar REST API at /wp-json/tribe/events/v1/events - it returns 36 events with the published calendar ending 2026-11-28, no 2027 listings and no CypherCon match. No date or city evidence obtained; stored 2027-03-24 / 2027-03-25 remains unverified."
+  },
+  {
+    "name": "AI Product Summit Silicon Valley",
+    "city": "San Jose",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "The stored URL world.productledalliance.com is the portfolio index; the event's own page is https://world.productledalliance.com/location/ai, title 'AI Product Summit | Silicon Valley', which returns 200 with JSON-LD \"startDate\":\"2027-04-15T07:00:00.000Z\" and \"endDate\":\"2027-04-15T07:00:00.000Z\" (07:00Z is midnight America/Los_Angeles, so a single day, April 15 2027) and body copy 'April 15, 2027'. Its page data carries \"city\":\"San Jose\", and the index page's event record agrees (dateFrom/dateTo 1807772400000, timezone America/Los_Angeles). Matches stored 2027-04-15 / 2027-04-15 and city San Jose. Note the sibling Chief Product Officer Summit Silicon Valley runs the day before, April 14 2027 - a different event."
+  },
+  {
+    "name": "Midwest Gaming Classic",
+    "city": "Milwaukee",
+    "status": "blocked",
+    "cycle": "unblockA",
+    "evidence": "Still unreadable via curl. www.midwestgamingclassic.com sits behind a Cloudflare managed challenge: HTTP 403 with the 'Just a moment...' interstitial on every attempt. Tried https://www.midwestgamingclassic.com/, http:// (redirects to https, 403), the apex midwestgamingclassic.com, /schedule/, /index.php, /robots.txt, /feed/, /sitemap.xml and /wp-json/wp/v2/pages - all 403. The tickets.midwestgamingclassic.com subdomain does return 200 but renders only 'MGC Ticket System - PRIMARY SERVER (NONE)' with no date, and its subpaths 404. Tried the Milwaukee venue as a corroborating source: bairdcenter.com Events Calendar REST API at /wp-json/tribe/events/v1/events returns 36 events with the published calendar ending 2026-11-28 - no 2027 listings, no Midwest Gaming Classic match. No date or city evidence obtained; stored 2027-04-23 / 2027-04-25 remains unverified."
+  },
+  {
+    "name": "STAREAST",
+    "city": "Orlando",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "stareast.techwell.com returns 200 via curl with page title 'STAREAST Software Testing Conference | April 25-30, 2027 | Orlando, FL & Online' and body copy 'April 25 - 30, 2027' plus 'STAREAST 2027 will be held at the Rosen Centre Hotel in Orlando, Florida for in-person attendees'. Matches stored 2027-04-25 / 2027-04-30 and city Orlando."
+  },
+  {
+    "name": "AI Con USA",
+    "city": "Seattle",
+    "status": "confirmed",
+    "cycle": "unblockA",
+    "evidence": "aiconusa.techwell.com returns 200 via curl with page title 'AI Con USA | June 6-11, 2027 | Seattle, WA and Online' and body copy 'June 6-11, 2027'; the venue is described as a Seattle hotel close to Lake Union and Elliott Bay. Matches stored 2027-06-06 / 2027-06-11 and city Seattle."
+  }
+]
