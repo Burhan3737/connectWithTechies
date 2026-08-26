@@ -50,7 +50,10 @@ for (const f of rawFiles) {
   });
 }
 
-const patchFiles = readdirSync(REVIEW_DIR).filter((f) => f.endsWith('.json')).sort();
+// confirm-*.json and verified.json belong to the ledger, not the patcher.
+const patchFiles = readdirSync(REVIEW_DIR)
+  .filter((f) => f.endsWith('.json') && !/^confirm-/.test(f) && f !== 'verified.json')
+  .sort();
 if (!patchFiles.length) { console.log('No patch files in data/review/ — nothing to do.'); process.exit(0); }
 
 let applied = 0, removed = 0, unmatched = 0, noop = 0;

@@ -1,0 +1,24 @@
+[
+  {
+    "match": { "name": "TokioConf", "city": "Portland" },
+    "action": "update",
+    "reason": "The record advertised 26-27 April 2027, a date the organiser has never published. tokioconf.com says only 'April 2027, Portland, Oregon', 'We are planning the next TokioConf to be in downtown Portland, Oregon towards the end of April', and asks visitors to 'Sign up to be notified when TokioConf 2027 dates are finalized'. The specific dates came from dev.events, an aggregator. Cleared to the usual month, which is all that is actually known.",
+    "set": {
+      "next_date": "",
+      "next_date_end": "",
+      "status": "recurring-tbd",
+      "month": "April",
+      "source": "https://tokioconf.com/"
+    }
+  },
+  {
+    "match": { "name": "Atlantic Technology Summit", "city": "Halifax" },
+    "action": "remove",
+    "reason": "Unverifiable and mis-linked. Its url is the CIPS homepage, and cips.ca names only the CIPS Ontario Women in Technology Conference and IT Professionalism Week — no Atlantic Technology Summit anywhere on the site. The record's date came from a 10times.com listing, an aggregator, not from an organiser. A listing whose own link does not describe the event gives a user nothing."
+  },
+  {
+    "match": { "name": "InnovateNB Awards", "city": "Fredericton" },
+    "action": "remove",
+    "reason": "Phantom record. Its url is the NBIF homepage, and nbif.ca names only the Breakthru Pitch Competition and the Innovation Voucher Fund — no 'InnovateNB Awards', and /en/events/ 404s. The date was sourced from an Eventbrite *search* URL rather than a specific listing. NBIF Breakthru is already in the dataset as its own record, so nothing real is lost."
+  }
+]

@@ -2129,31 +2129,6 @@
     "source": "https://igniteatlantic.com/event/atlantic-venture-forum-2026/"
   },
   {
-    "name": "Atlantic Technology Summit",
-    "type": "summit",
-    "topics": [
-      "ai",
-      "it-leadership",
-      "enterprise"
-    ],
-    "city": "Halifax",
-    "region": "Nova Scotia",
-    "country": "Canada",
-    "venue": "Cineplex Cinemas Park Lane",
-    "cadence": "annual",
-    "month": "November",
-    "next_date": "2026-11-18",
-    "next_date_end": "2026-11-18",
-    "last_date": "",
-    "status": "upcoming",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "IT professionals, technology leaders, public sector",
-    "url": "https://cips.ca/",
-    "description": "A one-day technology summit organized by CIPS for Atlantic Canada's IT community; the 2026 theme is moving fast with AI without breaking trust.",
-    "source": "https://10times.com/e13z-r3dg-2rp4"
-  },
-  {
     "name": "XP Game Connect Atlantic",
     "type": "conference",
     "topics": [
@@ -2454,31 +2429,6 @@
     "audience": "founders, investors, economic development leaders",
     "url": "https://myignite.ca/",
     "description": "Ignite Fredericton's annual innovation summit, bringing the capital region's startup, research and business communities together for keynotes and workshops.",
-    "source": "https://www.eventbrite.ca/d/canada--fredericton/technology/"
-  },
-  {
-    "name": "InnovateNB Awards",
-    "type": "awards",
-    "topics": [
-      "awards",
-      "innovation",
-      "startups"
-    ],
-    "city": "Fredericton",
-    "region": "New Brunswick",
-    "country": "Canada",
-    "venue": "Fredericton Convention Centre",
-    "cadence": "annual",
-    "month": "November",
-    "next_date": "2026-11-26",
-    "next_date_end": "2026-11-26",
-    "last_date": "",
-    "status": "upcoming",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "New Brunswick innovators, founders, researchers",
-    "url": "https://nbif.ca/",
-    "description": "An awards night celebrating New Brunswick's innovators, startups and researchers, held at the Fredericton Convention Centre.",
     "source": "https://www.eventbrite.ca/d/canada--fredericton/technology/"
   },
   {

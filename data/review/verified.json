@@ -3031,6 +3031,910 @@
       "checked_on": "2026-08-26",
       "cycle": "3r2b",
       "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "nctechawardscelebration|raleigh": {
+      "name": "NC TECH Awards Celebration",
+      "city": "Raleigh",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "nctech.org signature-events page lists 'NC TECH Awards Celebration - November 16 - Sheraton Imperial Hotel Raleigh-Durham Airport at Research Triangle Park'; matches 2026-11-16"
+    },
+    "qconsanfrancisco|sanfrancisco": {
+      "name": "QCon San Francisco",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "qconsf.com shows 'Nov 16-18, 2026' conference plus 'Nov 19-20, 2026' training at Hyatt Regency SF; record span 11-16..11-20 covers conference plus training days"
+    },
+    "microsoftignite|sanfrancisco": {
+      "name": "Microsoft Ignite",
+      "city": "San Francisco",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "ignite.microsoft.com renders an empty body via fetch (JS-only shell); /en-US/home, /en-US/, /en-US/sessions and news.microsoft.com/ignite-2026 are empty or 404. No readable page states dates or city"
+    },
+    "rvatechwomenintechnologyconference|richmond": {
+      "name": "rvatech/Women in Technology Conference",
+      "city": "Richmond",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "rvatech.com premier-conferences page lists the Women in Technology Conference for 'November 17, 2026'; city not printed on the page but rvatech events are Richmond"
+    },
+    "atlantictechnologysummit|halifax": {
+      "name": "Atlantic Technology Summit",
+      "city": "Halifax",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "orchestrator",
+      "evidence": "cips.ca names no such event; record removed as unverifiable and mis-linked."
+    },
+    "foundersretreat|fortransom": {
+      "name": "Founders Retreat",
+      "city": "Fort Ransom",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "emergingprairie.com homepage: 'Founders: join us November 18-20' for the Founders Retreat; matches 2026-11-18..20. City not printed; the /founders-retreat/ subpage is stale and still shows the Oct 2-4 2024 edition"
+    },
+    "bsidesottawa|ottawa": {
+      "name": "BSides Ottawa",
+      "city": "Ottawa",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "bsidesottawa.ca (via www redirect): 'Join us November 19-20 for two days of talks, villages...' at Ottawa Conference and Event Centre, 200 Coventry Road, Ottawa ON. Record had a single-day 11-19 event; end date patched to 2026-11-20"
+    },
+    "floridatechnologysummit|stpetersburg": {
+      "name": "Florida Technology Summit",
+      "city": "St. Petersburg",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "technologysummit.net/florida.html: 'The 7th Annual Florida Technology Summit will be held on November 19th, 2026 at the Hilton St. Petersburg Carillon Park'"
+    },
+    "mongodblocaltoronto|toronto": {
+      "name": "MongoDB.local Toronto",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "mongodb.com event page: When 'November 19, 2026', Location 'Toronto, ON'"
+    },
+    "nhtechallianceproductoftheyear|concord": {
+      "name": "NH Tech Alliance Product of the Year",
+      "city": "Concord",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "nhtechalliance.org: 'Thursday, November 19th, 2026' at Bank of New Hampshire Stage, 16 S Main St., Concord, NH"
+    },
+    "tagchairsgala|atlanta": {
+      "name": "TAG Chairs' Gala",
+      "city": "Atlanta",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "members.tagonline.org calendar lists TAG Chairs Gala 2026 on Thursday, November 19, 2026, 6:00-11:00 PM; TAG is Atlanta-based"
+    },
+    "hackwestern|london": {
+      "name": "Hack Western",
+      "city": "London",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "hackwestern.com shows 'November 20-22, 2026'; Hack Western is hosted at Western University, London ON"
+    },
+    "innovatenbawards|fredericton": {
+      "name": "InnovateNB Awards",
+      "city": "Fredericton",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "orchestrator",
+      "evidence": "nbif.ca names only Breakthru and the Innovation Voucher Fund; record removed as a phantom."
+    },
+    "djangogirlsnewyorkcity|newyork": {
+      "name": "Django Girls New York City",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "djangogirls.org/en/events/ upcoming list shows New York City on 28th November 2026, the only upcoming US 2026 workshop"
+    },
+    "houstondayofdata|houston": {
+      "name": "Houston Day of Data",
+      "city": "Houston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "stored sqlsaturday.com url forwards to dayofdata.org/2026-12-05-dayofdata1162/ which shows 'Houston Day of Data 2026 (#1162)', 05 December 2026, Microsoft, 750 Town And Country Blvd, Houston TX"
+    },
+    "gartneridentityaccessmanagementsummit|lasvegas": {
+      "name": "Gartner Identity & Access Management Summit",
+      "city": "Las Vegas",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "gartner.com returns HTTP 403 to fetch on the summit landing page, /agenda, /why-attend, /register and on the conference calendar. No readable page"
+    },
+    "islifesciences|wilmington": {
+      "name": "IS: Life Sciences",
+      "city": "Wilmington",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "innovationspace.org event page shows 'December 10 @ 8:30 am - 6:00 pm' for 2026, matching the recorded date. Venue/city not printed on the page; InnovationSpace is at the Wilmington DE Experimental Station"
+    },
+    "bsidesphilly|philadelphia": {
+      "name": "BSides Philly",
+      "city": "Philadelphia",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "bsidesphilly.org renders only its title via fetch; the bsides.org global event listing shows BSides Philly 'December 11 @ 08:00 - 18:00' 2026 at Live! Casino & Hotel Philadelphia, 900 Packer Ave, Philadelphia PA - matches 2026-12-11"
+    },
+    "bsidesrdu|raleigh": {
+      "name": "BSides RDU",
+      "city": "Raleigh",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "bsidesrdu.org returns 403 to fetch; the bsides.org event listing shows BSides RDU 'December 18' 2026, Raleigh/Durham NC - matches 2026-12-18. Note bsides.org flags the entry as 'Unconfirmed'"
+    },
+    "deltahacks|hamilton": {
+      "name": "DeltaHacks",
+      "city": "Hamilton",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "deltahacks.com shows 'Jan 9 - 10, 2027', 'Official Event @ McMaster University' (Hamilton ON); corroborated by the MLH 2027 season listing 'JAN 09 - 10, Hamilton, Ontario'"
+    },
+    "transportationcampdc|washington": {
+      "name": "TransportationCamp DC",
+      "city": "Washington",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "t4america.org/transportation-camp/: 'Mark your calendar for Saturday, January 9, 2027' in Washington, DC"
+    },
+    "workplaceninjasus|scottsdale": {
+      "name": "Workplace Ninjas US",
+      "city": "Scottsdale",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "dev.events Arizona listing shows 'Workplace Ninjas 2027 US', 'Jan 11-13 27', Scottsdale AZ"
+    },
+    "codemash|sandusky": {
+      "name": "CodeMash",
+      "city": "Sandusky",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "codemash.org shows CodeMash Great Lakes January 12-15, 2027 at Kalahari Resort, Sandusky, Ohio"
+    },
+    "uofthacks|toronto": {
+      "name": "UofTHacks",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "uofthacks.com hero shows 'January 2027 | In-person event' (its FAQ text is stale from UofTHacks 13); the MLH 2027 season listing gives 'JAN 15 - 17', Toronto, Ontario - matches the record"
+    },
+    "uottahack|ottawa": {
+      "name": "uOttaHack",
+      "city": "Ottawa",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "2027.uottahack.ca renders only 'uOttaHack 9' with no dates; the MLH 2027 season listing shows uOttaHack 9 'JAN 15 - 17', Ottawa, Ontario - matches the record"
+    },
+    "nwhacks|vancouver": {
+      "name": "nwHacks",
+      "city": "Vancouver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "nwhacks.io shows 'January 16-17, 2027' at UBC Life Sciences Institute, Vancouver BC"
+    },
+    "ptcannualconference|honolulu": {
+      "name": "PTC Annual Conference",
+      "city": "Honolulu",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "ptc.org header shows PTC 27 on 17-20 January 2027 in Honolulu, Hawaii"
+    },
+    "cactusforce|scottsdale": {
+      "name": "Cactusforce",
+      "city": "Scottsdale",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "cactusforce.com: 'Thursday, January 21st and Friday, January 22nd, 2027' at SkySong Innovation Center, Scottsdale Arizona"
+    },
+    "hackville|mississauga": {
+      "name": "Hackville",
+      "city": "Mississauga",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "hackville.io still shows the Jan 17-18 2026 edition with a 2027 interest form; the MLH 2027 season listing shows 'Hackville 2027, JAN 22 - 24, Missisauga, Ontario' - matches the record"
+    },
+    "globalgamejam|multiplecities": {
+      "name": "Global Game Jam",
+      "city": "Multiple cities",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "globalgamejam.org shows '25 - 31 January 2027'"
+    },
+    "bsidesstpete|stpetersburg": {
+      "name": "BSidesStPete",
+      "city": "St. Petersburg",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "bsides.org event page: 'Start: January 29, 2027', 'End: January 30, 2027', St. Petersburg, FL USA"
+    },
+    "ellehacks|toronto": {
+      "name": "ElleHacks",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "ellehacks.com is a JS shell showing only the title; the MLH 2027 season listing shows ElleHacks 'JAN 29 - 31', Toronto, Ontario - matches the record"
+    },
+    "floridadrupalcamp|orlando": {
+      "name": "Florida DrupalCamp",
+      "city": "Orlando",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "fldrupal.camp: 'January 29-30, 2027 in Orlando at Northbridge University (formerly Florida Technical College)'"
+    },
+    "ugahacks|athens": {
+      "name": "UGAHacks",
+      "city": "Athens",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "ugahacks.com shows only 'UGAHacks 12 Pre-registration Now Open!' with no dates; the MLH 2027 season listing gives 'FEB 05 - 07', Athens, Georgia - matches the record"
+    },
+    "districtcon|washington": {
+      "name": "DistrictCon",
+      "city": "Washington",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "districtcon.org: 'February 6-7, 2027 @ the Capital Hilton in Washington, D.C.'"
+    },
+    "hackncstate|raleigh": {
+      "name": "Hack_NCState",
+      "city": "Raleigh",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "hackncstate.org shows 'Feb 6th and 7th' 2027 at Talley Student Union on NC State main campus, Raleigh"
+    },
+    "hackbrown|providence": {
+      "name": "Hack@Brown",
+      "city": "Providence",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "hackatbrown.org shows 'FEBRUARY 6-7, 2027'; MLH lists Feb 5-7 (including the Friday kickoff), Providence RI. The organiser page matches the recorded 02-06..02-07"
+    },
+    "innovateher|westlafayette": {
+      "name": "InnovateHer",
+      "city": "West Lafayette",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "innovateherhacks.org: 'Date: February 6-7, 2027', 'Location: TBD' - dates match; venue not yet published (the event is at Purdue, West Lafayette)"
+    },
+    "spartahack|eastlansing": {
+      "name": "SpartaHack",
+      "city": "East Lansing",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "spartahack.com: 'Feb 6-7, 2027', 'East Lansing, Michigan', MSU STEM Building"
+    },
+    "itexpo|fortlauderdale": {
+      "name": "ITEXPO",
+      "city": "Fort Lauderdale",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "itexpo.com/east: 'February 9-11, 2027 | Fort Lauderdale, Florida', Broward County Convention Center"
+    },
+    "makeuoft|toronto": {
+      "name": "MakeUofT",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "makeuoft.ca itself still says 'TBD, 2027' at the Myhal Centre, U of T St. George; the MLH 2027 season listing gives MakeUofT 'FEB 13 - 14', Toronto, Ontario - matches the record"
+    },
+    "aaaiconferenceonartificialintelligence|montreal": {
+      "name": "AAAI Conference on Artificial Intelligence",
+      "city": "Montreal",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "aaai.org/conference/aaai/aaai-27/: 'February 16 - February 23, 2027', Montreal, Canada (Palais des Congres de Montreal)"
+    },
+    "sfhacks|sanfrancisco": {
+      "name": "SF Hacks",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "sfhacks.io returns 403 to fetch; the MLH 2027 season listing shows SF Hacks 'FEB 19 - 21', San Francisco, CA - matches the record"
+    },
+    "cuhackit|clemson": {
+      "name": "CUhackit",
+      "city": "Clemson",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "cuhack.it renders only 'CUhackit 2027'; the MLH 2027 season listing shows 'FEB 20 - 21', Clemson, SC - matches the record"
+    },
+    "linuxfoundationmembersummit|halfmoonbay": {
+      "name": "Linux Foundation Member Summit",
+      "city": "Half Moon Bay",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "events.linuxfoundation.org calendar: 'Feb 22-23, 2027 Half Moon Bay, United States'"
+    },
+    "confoomontreal|montreal": {
+      "name": "ConFoo Montreal",
+      "city": "Montreal",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "confoo.ca/en/2027: 'February 24-26, 2027', Montreal, Canada, Hotel Bonaventure"
+    },
+    "platformconlivedaysanfrancisco|sanfrancisco": {
+      "name": "PlatformCon Live Day San Francisco",
+      "city": "San Francisco",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "platformcon.com world tour lists 'PC Live Day San Francisco 24 February 2027' as a single day; the record had a two-day span ending 2027-02-25, so the end date is patched to 2027-02-24"
+    },
+    "hackillinois|urbanachampaign": {
+      "name": "HackIllinois",
+      "city": "Urbana-Champaign",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "hackillinois.org only says 'Stay tuned for Hack 2027'; the MLH 2027 season listing shows HackIllinois 'FEB 26 - 28', Urbana, Illinois - matches the record"
+    },
+    "hacklytics|atlanta": {
+      "name": "Hacklytics",
+      "city": "Atlanta",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "hacklytics.io: 'Feb. 26 - 28, 2027', Klaus Advanced Computing Building, Georgia Tech Campus, Atlanta"
+    },
+    "hackhers|newbrunswick": {
+      "name": "HackHERS",
+      "city": "New Brunswick",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "ruhackhers.org (HackHERS 2027): 'February 27-28th', College Avenue Student Center, Rutgers, New Brunswick NJ"
+    },
+    "revolutionuc|cincinnati": {
+      "name": "RevolutionUC",
+      "city": "Cincinnati",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "revolutionuc.com only says 'Spring 2027'; the MLH 2027 season listing shows RevolutionUC 'FEB 27 - 28', Cincinnati, Ohio - matches the record"
+    },
+    "wichacks|rochester": {
+      "name": "WiCHacks",
+      "city": "Rochester",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "wichacks.io is a JS shell with no dates; the MLH 2027 season listing shows WiCHacks 'FEB 27 - 28', Rochester, New York - matches the record"
+    },
+    "dvconus|sanjose": {
+      "name": "DVCon U.S.",
+      "city": "San Jose",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "dvcon.org: 'March 1 - 4, 2027 | Santa Clara, CA, United States' at the Hyatt Regency Santa Clara. Dates match; the city was recorded as San Jose and is patched to Santa Clara"
+    },
+    "legalweeknewyork|newyork": {
+      "name": "Legalweek New York",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "event.law.com/legalweek: 'March 1 - 3, 2027 | North Javits Center | New York, NY'"
+    },
+    "henhacks|newark": {
+      "name": "HenHacks",
+      "city": "Newark",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "henhackshackathon.com: 'March 6-7, 2027', University of Delaware Newark campus, in-person only"
+    },
+    "kenthackenough|kent": {
+      "name": "Kent Hack Enough",
+      "city": "Kent",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "khe.io (Kent Hack Enough 2027): 'March 6-7, 2027', Design Innovation Hub, Kent, OH 44243"
+    },
+    "3rdcoastventuresummit|neworleans": {
+      "name": "3rd Coast Venture Summit",
+      "city": "New Orleans",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "3rdcoastventuresummit.com: 'MARCH 9-10, 2027' in New Orleans"
+    },
+    "sxswedu|austin": {
+      "name": "SXSW EDU",
+      "city": "Austin",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "sxswedu.com: 'March 13-16, 2027 | Austin, TX'"
+    },
+    "vive|nashville": {
+      "name": "ViVE",
+      "city": "Nashville",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "hlth.com/events/vive/: March 14-17 2027 at Music City Center, 201 Rep. John Lewis Way S, Nashville TN"
+    },
+    "sxsw|austin": {
+      "name": "SXSW",
+      "city": "Austin",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "sxsw.com: 'March 15-21, 2027 | Austin, TX'"
+    },
+    "build48|stjohns": {
+      "name": "Build48",
+      "city": "St. John's",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "genesiscentre.ca/build48: 'March 20 + 21, 2027', venue 'To be announced', St. John's NL. Caveat: a schedule block lower on the same page still shows Saturday March 28 / Sunday March 29 from a prior edition, so worth a re-check nearer the date"
+    },
+    "cyberbaysummit|tampa": {
+      "name": "CyberBay Summit",
+      "city": "Tampa",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "cyberbay.org/summit/: 'March 22-24, 2027', JW Marriott Tampa Water Street, Tampa FL (the site root gives no dates)"
+    },
+    "drupalconnorthamerica|orlando": {
+      "name": "DrupalCon North America",
+      "city": "Orlando",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "events.drupal.org lists 'DrupalCon Orlando, 22-25 March 2027' as the North American edition"
+    },
+    "cyphercon|milwaukee": {
+      "name": "CypherCon",
+      "city": "Milwaukee",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "cyphercon.com returns an empty body via fetch on /, /schedule/ and /2027/ (JS-only site); no readable page states 2027 dates"
+    },
+    "bsidessgf|springfield": {
+      "name": "BSidesSGF",
+      "city": "Springfield",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "bsides.org event page: 'March 30, 2027', Springfield, MO, USA - single day, matches the record"
+    },
+    "devopsdayslosangeles|losangeles": {
+      "name": "devopsdays Los Angeles",
+      "city": "Los Angeles",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "devopsdays.org 2027-los-angeles: 'Friday, Apr 2, 2027 - Friday, Apr 2, 2027' at Pasadena Convention Center, 300 E Green St, Pasadena CA. Dates match; the venue is in Pasadena while the event is branded Los Angeles"
+    },
+    "diamondhacks|lajolla": {
+      "name": "Diamondhacks",
+      "city": "La Jolla",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "diamondhacks.acmucsd.com: 'April 3-4, 2027 Hosted by ACM at UC San Diego' (CSE Buildings and Jacobs Hall). The record had 2027-04-04..04-05, so both dates are patched one day earlier"
+    },
+    "devnexus|atlanta": {
+      "name": "Devnexus",
+      "city": "Atlanta",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "devnexus.com: 'April 5-7, 2027', Georgia World Congress Center, Atlanta GA"
+    },
+    "productledsummitdenver|denver": {
+      "name": "Product-Led Summit Denver",
+      "city": "Denver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "world.productledalliance.com calendar: 'Apr 07 & 08, 2027' in Denver"
+    },
+    "hackku|lawrence": {
+      "name": "HackKU",
+      "city": "Lawrence",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "hackku.org returned HTTP 429 on repeated fetches; the MLH 2027 season listing shows HackKU27 'APR 09 - 11', Lawrence, Kansas - matches the record"
+    },
+    "marihacks|montreal": {
+      "name": "MariHacks",
+      "city": "Montreal",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "marihacks.com renders only its heading; the MLH 2027 season listing shows MariHacks 'APR 09 - 10', Montreal, Quebec - matches the record"
+    },
+    "wehack|richardson": {
+      "name": "WEHack",
+      "city": "Richardson",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "wehackutd.com says 'WEHack 2027 Coming Soon / Spring 2027' with no dates; the MLH 2027 season listing shows WEHack 'APR 10 - 11', Richardson, TX - matches the record"
+    },
+    "hpsfconference|montreal": {
+      "name": "HPSF Conference",
+      "city": "Montreal",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "events.linuxfoundation.org calendar: 'HPSF Conference, Apr 12-16, 2027 Montreal, Canada'"
+    },
+    "twiliosignal|sanfrancisco": {
+      "name": "Twilio SIGNAL",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "signal.twilio.com: 'Save the date | San Francisco SIGNAL 2027 ... Join us on April 13-14, 2027'. Flagged as a save-the-date page, so worth re-checking once the agenda opens"
+    },
+    "aiproductsummitsiliconvalley|sanjose": {
+      "name": "AI Product Summit Silicon Valley",
+      "city": "San Jose",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "world.productledalliance.com main calendar lists no 'AI Product Summit' in San Jose; the nearest entry is a 'Chief Product Officer Summit' San Jose on 'Apr 14, 2027' while the record says 2027-04-15. /location/san-jose and /events both return 404. Cannot settle whether the recorded event exists under this name"
+    },
+    "lahacks|losangeles": {
+      "name": "LA Hacks",
+      "city": "Los Angeles",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "lahacks.com says only 'Mid-April 2027' at UCLA Pauley Pavilion; the MLH 2027 season listing shows LA Hacks 27 'APR 16 - 18', Los Angeles, California - matches the record"
+    },
+    "ifivek|charleston": {
+      "name": "iFiveK",
+      "city": "Charleston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "charlestondigital.com/community/ifivek: 'SEE YOU AT THE START LINE APRIL 22, 2027', Charleston Tech Center, downtown Charleston SC"
+    },
+    "techsponewyork|newyork": {
+      "name": "TECHSPO New York",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "techsponyc.com: 'April 22-23, 2027' at the New York Marriott at the Brooklyn Bridge Hotel, New York City NY"
+    },
+    "midwestgamingclassic|milwaukee": {
+      "name": "Midwest Gaming Classic",
+      "city": "Milwaukee",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "midwestgamingclassic.com returns HTTP 403 to fetch on both / and /info/; the Wisconsin State Fair expo-center calendar returned an empty body. No readable page settles 2027-04-23..25"
+    },
+    "miraawards|indianapolis": {
+      "name": "Mira Awards",
+      "city": "Indianapolis",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "techpoint.org/mira-awards/: 'The 2027 Mira Awards will take place Friday, April 23 at the brand-new Signia by Hilton Indianapolis'"
+    },
+    "bsidescharm|baltimore": {
+      "name": "BSidesCharm",
+      "city": "Baltimore",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "bsidescharm.org: '24-25 April 2027', Sheraton Baltimore North, 903 Dulaney Valley Rd, Towson MD (Baltimore area)"
+    },
+    "imagineritcreativityandinnovationfestival|rochester": {
+      "name": "Imagine RIT: Creativity and Innovation Festival",
+      "city": "Rochester",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "rit.edu/imagine/: 'April 24, 2027, 10 a.m. - 5 p.m.', 30 Lomb Memorial Drive, Rochester NY"
+    },
+    "stareast|orlando": {
+      "name": "STAREAST",
+      "city": "Orlando",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "stareast.techwell.com returns HTTP 403 to fetch on / and /program/schedule; techwell.com and techwell.com/conferences also 403. No readable page"
+    },
+    "tokioconf|portland": {
+      "name": "TokioConf",
+      "city": "Portland",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "orchestrator",
+      "evidence": "tokioconf.com publishes no 2027 dates - 'towards the end of April', 'sign up when dates are finalized'. Stored dates came from dev.events; cleared."
+    },
+    "startupgrindglobalconference|redwoodcity": {
+      "name": "Startup Grind Global Conference",
+      "city": "Redwood City",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "startupgrind.tech/conference/: 'Startup Grind Conference | Apr. 27-28, 2027 | Silicon Valley', venue Fox Theatre, 2215 Broadway, Redwood City CA"
+    },
+    "agntconmcpconnorthamerica|sanfrancisco": {
+      "name": "AGNTCon + MCPCon North America",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "dev.events San Francisco listing shows 'AGNTCon + MCPCon North America 2027', 'Apr 28-29 27', San Francisco CA"
+    },
+    "midcamp|chicago": {
+      "name": "MidCamp",
+      "city": "Chicago",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "midcamp.org news: 'Mark your calendars. MidCamp is returning April 28-30, 2027!'. The 2027 venue is not yet named; the 2026 edition is at DePaul University, Chicago"
+    },
+    "stripesessions|sanfrancisco": {
+      "name": "Stripe Sessions",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "stripe.com/sessions: 'Join us 28-30 April in San Francisco' for Sessions 2027"
+    },
+    "unitingtheprairies|saskatoon": {
+      "name": "Uniting the Prairies",
+      "city": "Saskatoon",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "unitingtheprairies.com: 'April 28-29, 2027 | Remai Modern, Saskatoon'"
+    },
+    "pathwaystoprogress|charleston": {
+      "name": "Pathways to Progress",
+      "city": "Charleston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "generationwv.org: 'Pathways to Progress will return on April 29, 2027, in Charleston, WV'"
+    },
+    "universityofidahoengineeringdesignexpo|moscow": {
+      "name": "University of Idaho Engineering Design EXPO",
+      "city": "Moscow",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "uidaho.edu/engr/expo: 'April 29 and 30, 2027' on the University of Idaho campus, Moscow ID"
+    },
+    "finovatespring|sandiego": {
+      "name": "FinovateSpring",
+      "city": "San Diego",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "informaconnect.com/finovatespring/: 'May 3-5, 2027' at Gaylord Pacific Resort & Convention Center, San Diego CA"
+    },
+    "pgconfdev|montreal": {
+      "name": "PGConf.dev",
+      "city": "Montreal",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "2027.pgconf.dev: 'May 11th - 14th, 2027' in 'Montreal, QC, Canada' at Plaza Centre-Ville"
+    },
+    "northsec|montreal": {
+      "name": "NorthSec",
+      "city": "Montreal",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "nsec.io: 'May 17-23, 2027', Montreal, Bonsecours Market, 350 St-Paul East (training May 17-19, conference May 20-21, CTF May 21-23)"
+    },
+    "opensourcesummitnorthamerica|vancouver": {
+      "name": "Open Source Summit North America",
+      "city": "Vancouver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "events.linuxfoundation.org calendar: 'Open Source Summit North America, May 17-19, 2027 Vancouver, Canada'"
+    },
+    "digsouthtechventureaisummit|charleston": {
+      "name": "DIG SOUTH Tech, Venture & AI Summit",
+      "city": "Charleston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "digsouth.com/techsummit/: 'May 20-21, 2027 Charleston', Simons Center for the Arts, College of Charleston, 54 St. Philip Street"
+    },
+    "daytonhamvention|xenia": {
+      "name": "Dayton Hamvention",
+      "city": "Xenia",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "hamvention.org: 'May 21-23, 2027' at the Greene County Fair and Expo Center, Xenia OH 45385"
+    },
+    "quantumtechusa|boston": {
+      "name": "Quantum.Tech USA",
+      "city": "Boston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "alphaevents.com/events-quantumtechus: 'May 25 - 26, 2027 | Encore Boston Harbor | Boston, United States' (branded Quantum.Tech World 2027, co-located with Compute.Tech)"
+    },
+    "redhatsummit|boston": {
+      "name": "Red Hat Summit",
+      "city": "Boston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "redhat.com/en/summit: 'Red Hat Summit, happening May 25-27, 2027' at the Boston Convention and Exhibition Center"
+    },
+    "interface|quebeccity": {
+      "name": "Interface",
+      "city": "Quebec City",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "interfaceqc.com header: 'Interface | 1-3 juin 2027' (June 1-3, 2027), Quebec City"
+    },
+    "aiconusa|seattle": {
+      "name": "AI Con USA",
+      "city": "Seattle",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "aiconusa.techwell.com returns HTTP 403 to fetch; techwell.com and techwell.com/conferences also 403. No readable page settles 2027-06-06..11"
+    },
+    "cttechweek|multiplecities": {
+      "name": "CT Tech Week",
+      "city": "Multiple cities",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "cttechweek.com: 'CT Tech Week returns June 7-11, 2027. Connecticut's biggest week in tech and innovation ... across the state'"
+    },
+    "snowflakesummit|sanfrancisco": {
+      "name": "Snowflake Summit",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "snowflake.com/summit/: 'JUNE 7 - 10, 2027' at MOSCONE CENTER, San Francisco"
+    },
+    "xpgamesummit|toronto": {
+      "name": "XP Game Summit",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "xpgamesummit.com: 'XP Game Summit returns June 10-11, 2027', 'toronto, canada'"
+    },
+    "ethconf|newyork": {
+      "name": "ETHConf",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "ethglobal.com/events lists 'June 14-16, Mon-Wed, ETHConf 2027, New York City, United States, Conference'"
+    },
+    "productledsummitseattle|seattle": {
+      "name": "Product-Led Summit Seattle",
+      "city": "Seattle",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "world.productledalliance.com calendar: 'Jun 16 & 17, 2027' in Seattle"
+    },
+    "codemasheast|spotsylvania": {
+      "name": "CodeMash East",
+      "city": "Spotsylvania",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "codemash.org: 'CodeMash East, June 17-18, 2027', Kalahari Resort, Spotsylvania, Virginia"
+    },
+    "vintagecomputerfestivalsouthwest|irving": {
+      "name": "Vintage Computer Festival Southwest",
+      "city": "Irving",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "vcfsw.org: 'June 25-27, 2027, The Westin Dallas Fort Worth Airport, 4545 W John Carpenter Fwy, Irving, TX 75063'"
+    },
+    "startupfest|montreal": {
+      "name": "Startupfest",
+      "city": "Montreal",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "startupfest.com: 'July 7-9, 2027 | Montreal', venue Grand Quay in the Old Port"
+    },
+    "opensauce|sanmateo": {
+      "name": "Open Sauce",
+      "city": "San Mateo",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "opensauce.com: 'July 17-18, 2027', 'San Mateo County Event Center - CA'"
+    },
+    "techchicagoweek|chicago": {
+      "name": "TechChicago Week",
+      "city": "Chicago",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "gotechchicago.com/week/: 'July 19-25, 2027' in Chicago"
+    },
+    "techmentorcybersecuritylivemicrosofthq|redmond": {
+      "name": "TechMentor & Cybersecurity Live! @ Microsoft HQ",
+      "city": "Redmond",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "techmentorevents.com microsofthq-2027: 'TechMentor & CyberSecurity Live! @Microsoft HQ | August 9-13, 2027 | Microsoft Headquarters, Redmond, WA'"
+    },
+    "meetshow|moncton": {
+      "name": "MEET Show",
+      "city": "Moncton",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "meetshow.ca: 'The MEET Show will return May 3-4, 2028' at the Moncton Coliseum"
     }
   },
   "updated_on": "2026-08-26"

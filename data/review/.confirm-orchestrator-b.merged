@@ -1,0 +1,8 @@
+[
+  { "name": "TokioConf", "city": "Portland", "status": "corrected", "cycle": "orchestrator",
+    "evidence": "tokioconf.com publishes no 2027 dates - 'towards the end of April', 'sign up when dates are finalized'. Stored dates came from dev.events; cleared." },
+  { "name": "Atlantic Technology Summit", "city": "Halifax", "status": "corrected", "cycle": "orchestrator",
+    "evidence": "cips.ca names no such event; record removed as unverifiable and mis-linked." },
+  { "name": "InnovateNB Awards", "city": "Fredericton", "status": "corrected", "cycle": "orchestrator",
+    "evidence": "nbif.ca names only Breakthru and the Innovation Voucher Fund; record removed as a phantom." }
+]

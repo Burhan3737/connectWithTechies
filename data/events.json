@@ -1,6 +1,6 @@
 {
   "generated_on": "2026-08-26",
-  "event_count": 894,
+  "event_count": 892,
   "city_count": 236,
   "events": [
     {
@@ -7532,34 +7532,6 @@
       "source_file": "categories"
     },
     {
-      "name": "InnovateNB Awards",
-      "type": "awards",
-      "topics": [
-        "awards",
-        "innovation",
-        "startups"
-      ],
-      "city": "Fredericton",
-      "region": "New Brunswick",
-      "country": "Canada",
-      "venue": "Fredericton Convention Centre",
-      "cadence": "annual",
-      "month": "November",
-      "next_date": "2026-11-26",
-      "next_date_end": "2026-11-26",
-      "last_date": "",
-      "status": "upcoming",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "New Brunswick innovators, founders, researchers",
-      "url": "https://nbif.ca/",
-      "description": "An awards night celebrating New Brunswick's innovators, startups and researchers, held at the Fredericton Convention Centre.",
-      "source": "https://www.eventbrite.ca/d/canada--fredericton/technology/",
-      "sort_date": "2026-11-26",
-      "id": "innovatenb-awards-fredericton",
-      "source_file": "canada"
-    },
-    {
       "name": "BSides Fredericton",
       "type": "conference",
       "topics": [
@@ -7807,34 +7779,6 @@
       "sort_date": "2027-02-22",
       "id": "linux-foundation-member-summit-half-moon-bay",
       "source_file": "categories"
-    },
-    {
-      "name": "Atlantic Technology Summit",
-      "type": "summit",
-      "topics": [
-        "ai",
-        "it-leadership",
-        "enterprise"
-      ],
-      "city": "Halifax",
-      "region": "Nova Scotia",
-      "country": "Canada",
-      "venue": "Cineplex Cinemas Park Lane",
-      "cadence": "annual",
-      "month": "November",
-      "next_date": "2026-11-18",
-      "next_date_end": "2026-11-18",
-      "last_date": "",
-      "status": "upcoming",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "IT professionals, technology leaders, public sector",
-      "url": "https://cips.ca/",
-      "description": "A one-day technology summit organized by CIPS for Atlantic Canada's IT community; the 2026 theme is moving fast with AI without breaking trust.",
-      "source": "https://10times.com/e13z-r3dg-2rp4",
-      "sort_date": "2026-11-18",
-      "id": "atlantic-technology-summit-halifax",
-      "source_file": "canada"
     },
     {
       "name": "DevOpsDays Halifax",
@@ -9639,8 +9583,8 @@
       "venue": "UC San Diego",
       "cadence": "annual",
       "month": "April",
-      "next_date": "2027-04-04",
-      "next_date_end": "2027-04-05",
+      "next_date": "2027-04-03",
+      "next_date_end": "2027-04-04",
       "last_date": "2026-04-05",
       "status": "upcoming",
       "attendance": "400",
@@ -9649,7 +9593,7 @@
       "url": "https://diamondhacks.acmucsd.com/",
       "description": "ACM at UC San Diego's MLH-affiliated weekend hackathon, welcoming first-time hackers with workshops, mentors and beginner tracks.",
       "source": "https://www.mlh.com/events",
-      "sort_date": "2027-04-04",
+      "sort_date": "2027-04-03",
       "id": "diamondhacks-la-jolla",
       "source_file": "us-west"
     },
@@ -15690,7 +15634,7 @@
       "cadence": "annual",
       "month": "November",
       "next_date": "2026-11-19",
-      "next_date_end": "2026-11-19",
+      "next_date_end": "2026-11-20",
       "last_date": "",
       "status": "upcoming",
       "attendance": "",
@@ -16615,35 +16559,6 @@
       "source_file": "review-additions-2"
     },
     {
-      "name": "TokioConf",
-      "type": "conference",
-      "topics": [
-        "rust",
-        "async",
-        "open-source",
-        "systems-programming"
-      ],
-      "city": "Portland",
-      "region": "Oregon",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "April",
-      "next_date": "2027-04-26",
-      "next_date_end": "2027-04-27",
-      "last_date": "2026-04-27",
-      "status": "upcoming",
-      "attendance": "300",
-      "cost": "paid",
-      "audience": "rust developers, systems programmers",
-      "url": "https://tokioconf.com/",
-      "description": "A Portland conference for the Rust async ecosystem built around the Tokio runtime, with talks on concurrency, networking and systems programming.",
-      "source": "https://dev.events/NA/US/OR",
-      "sort_date": "2027-04-26",
-      "id": "tokioconf-portland",
-      "source_file": "us-west"
-    },
-    {
       "name": "BSides PDX",
       "type": "conference",
       "topics": [
@@ -16868,6 +16783,35 @@
       "sort_date": "2026-05-12",
       "id": "maine-entrepreneurs-summit-portland",
       "source_file": "review-additions-3"
+    },
+    {
+      "name": "TokioConf",
+      "type": "conference",
+      "topics": [
+        "rust",
+        "async",
+        "open-source",
+        "systems-programming"
+      ],
+      "city": "Portland",
+      "region": "Oregon",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-27",
+      "status": "recurring-tbd",
+      "attendance": "300",
+      "cost": "paid",
+      "audience": "rust developers, systems programmers",
+      "url": "https://tokioconf.com/",
+      "description": "A Portland conference for the Rust async ecosystem built around the Tokio runtime, with talks on concurrency, networking and systems programming.",
+      "source": "https://tokioconf.com/",
+      "sort_date": "2026-04-27",
+      "id": "tokioconf-portland",
+      "source_file": "us-west"
     },
     {
       "name": "Agile Open Northwest",
@@ -19009,7 +18953,7 @@
       "cadence": "annual",
       "month": "February",
       "next_date": "2027-02-24",
-      "next_date_end": "2027-02-25",
+      "next_date_end": "2027-02-24",
       "last_date": "",
       "status": "upcoming",
       "attendance": "",
@@ -19961,35 +19905,6 @@
       "source_file": "categories"
     },
     {
-      "name": "DVCon U.S.",
-      "type": "conference",
-      "topics": [
-        "semiconductors",
-        "verification",
-        "eda",
-        "hardware"
-      ],
-      "city": "San Jose",
-      "region": "California",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "March",
-      "next_date": "2027-03-01",
-      "next_date_end": "2027-03-04",
-      "last_date": "2026-02-23",
-      "status": "upcoming",
-      "attendance": "1200",
-      "cost": "paid",
-      "audience": "chip design and verification engineers, EDA vendors",
-      "url": "https://dvcon.org/",
-      "description": "The Design and Verification Conference and Exhibition, the main technical event for SystemVerilog, UVM and hardware verification methodology.",
-      "source": "https://dev.events/NA/US/CA/Santa_Clara",
-      "sort_date": "2027-03-01",
-      "id": "dvcon-u-s-san-jose",
-      "source_file": "us-west"
-    },
-    {
       "name": "PyTorch Conference",
       "type": "conference",
       "topics": [
@@ -20248,6 +20163,35 @@
       "source": "https://utahjs.com/conference",
       "sort_date": "2026-09-18",
       "id": "utahjs-conference-sandy",
+      "source_file": "us-west"
+    },
+    {
+      "name": "DVCon U.S.",
+      "type": "conference",
+      "topics": [
+        "semiconductors",
+        "verification",
+        "eda",
+        "hardware"
+      ],
+      "city": "Santa Clara",
+      "region": "California",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "March",
+      "next_date": "2027-03-01",
+      "next_date_end": "2027-03-04",
+      "last_date": "2026-02-23",
+      "status": "upcoming",
+      "attendance": "1200",
+      "cost": "paid",
+      "audience": "chip design and verification engineers, EDA vendors",
+      "url": "https://dvcon.org/",
+      "description": "The Design and Verification Conference and Exhibition, the main technical event for SystemVerilog, UVM and hardware verification methodology.",
+      "source": "https://dev.events/NA/US/CA/Santa_Clara",
+      "sort_date": "2027-03-01",
+      "id": "dvcon-u-s-santa-clara",
       "source_file": "us-west"
     },
     {

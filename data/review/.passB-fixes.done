@@ -1,0 +1,26 @@
+[
+{
+  "match": { "name": "BSides Ottawa", "city": "Ottawa" },
+  "action": "update",
+  "reason": "bsidesottawa.ca (reached via the www redirect) says 'Join us November 19-20 for two days of talks, villages, hands-on activities, challenges and cybersecurity community in the National Capital Region' at the Ottawa Conference and Event Centre, 200 Coventry Road. The record had it as a one-day event ending 2026-11-19.",
+  "set": { "next_date_end": "2026-11-20" }
+},
+{
+  "match": { "name": "PlatformCon Live Day San Francisco", "city": "San Francisco" },
+  "action": "update",
+  "reason": "platformcon.com world tour section lists 'PC Live Day San Francisco 24 February 2027' as a single-day stop; the record carried a two-day span ending 2027-02-25.",
+  "set": { "next_date_end": "2027-02-24" }
+},
+{
+  "match": { "name": "DVCon U.S.", "city": "San Jose" },
+  "action": "update",
+  "reason": "dvcon.org shows 'March 1 - 4, 2027 | Santa Clara, CA, United States' with the venue given as the Hyatt Regency Santa Clara. Dates were correct; the city was recorded as San Jose.",
+  "set": { "city": "Santa Clara", "region": "California" }
+},
+{
+  "match": { "name": "Diamondhacks", "city": "La Jolla" },
+  "action": "update",
+  "reason": "diamondhacks.acmucsd.com shows 'April 3-4, 2027 Hosted by ACM at UC San Diego' (CSE Buildings and Jacobs Hall). The record had 2027-04-04 to 2027-04-05, one day late at both ends.",
+  "set": { "next_date": "2027-04-03", "next_date_end": "2027-04-04" }
+}
+]
