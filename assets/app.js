@@ -109,12 +109,17 @@
     return 99;
   }
 
+  /* Match on the raw string and escape each fragment separately. Searching the
+     escaped string instead would let a needle land inside an entity like
+     "&amp;" and split it, producing broken markup. */
   function highlight(text, needle) {
-    var out = esc(text);
-    if (!needle) return out;
-    var i = fold(out).indexOf(fold(needle));
-    if (i < 0) return out;
-    return out.slice(0, i) + '<mark>' + out.slice(i, i + needle.length) + '</mark>' + out.slice(i + needle.length);
+    var raw = String(text == null ? '' : text);
+    if (!needle) return esc(raw);
+    var i = fold(raw).indexOf(fold(needle));
+    if (i < 0) return esc(raw);
+    return esc(raw.slice(0, i)) +
+      '<mark>' + esc(raw.slice(i, i + needle.length)) + '</mark>' +
+      esc(raw.slice(i + needle.length));
   }
 
   /* ------------------------------------------------------------ url state */

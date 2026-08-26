@@ -97,6 +97,20 @@ fire($('#q'), 'input');
 await new Promise((r) => setTimeout(r, 180));
 ok(rows().length === allCount, 'clearing search restores the board');
 
+console.log('\nSearch does not corrupt escaped characters');
+// Many event names contain "&". Highlighting must not split the &amp; entity,
+// and nothing in the data may ever reach the DOM as live markup.
+$('#q').value = 'amp';
+fire($('#q'), 'input');
+await new Promise((r) => setTimeout(r, 180));
+ok(!$('#board').innerHTML.includes('&<mark>amp</mark>;'), 'ampersand entities survive highlighting');
+ok($$('#board script').length === 0, 'no script element is ever produced from data');
+const ampRows = rows().length;
+ok(true, 'ampersand query rendered', `${ampRows} rows`);
+$('#q').value = '';
+fire($('#q'), 'input');
+await new Promise((r) => setTimeout(r, 180));
+
 console.log('\nCity multi-select');
 fire($('#cityq'), 'focus');
 await tick();
