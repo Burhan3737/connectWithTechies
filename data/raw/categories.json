@@ -5274,7 +5274,7 @@
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-05",
-    "next_date_end": "2026-10-08",
+    "next_date_end": "2026-10-07",
     "last_date": "",
     "status": "upcoming",
     "attendance": "",
@@ -5282,7 +5282,7 @@
     "audience": "LGBTQ+ technologists and allies",
     "url": "https://lwtsquad.com/",
     "description": "The largest LGBTQ+ technology conference, combining technical talks, career fairs and community programming.",
-    "source": "https://womenhack.com/women-in-tech-events-2026/"
+    "source": "https://lwtsquad.com/lwt-summit-2026/"
   },
   {
     "name": "WiCyS Conference",

@@ -1,0 +1,101 @@
+[
+  {
+    "match": { "name": "Lesbians Who Tech + Allies Summit", "city": "New York" },
+    "action": "update",
+    "reason": "lwtsquad.com/lwt-summit-2026/ gives LWTSUMMIT as October 5-7 2026 in New York — October 5 a full standalone day, with curated programming on the 6th and 7th. The record ended it on October 8, a day too long.",
+    "set": { "next_date_end": "2026-10-07", "source": "https://lwtsquad.com/lwt-summit-2026/" }
+  },
+  {
+    "match": { "name": "CypherCon", "city": "Milwaukee" },
+    "action": "update",
+    "reason": "CypherCon 10 confirmed as March 24-25 2027 at the Baird Center, Milwaukee, with pre-conference workshops Monday and Tuesday and BSidesMKE on the Friday. Stored dates were already exact; adding the venue.",
+    "set": { "venue": "Baird Center", "source": "https://cyphercon.com/travel/" }
+  },
+  {
+    "match": { "name": "Midwest Gaming Classic", "city": "Milwaukee" },
+    "action": "update",
+    "reason": "Confirmed April 23-25 2027 at the Baird Center — Preview Night the 23rd, Full Show the 24th, Family Day the 25th. Stored dates were exact; adding the venue.",
+    "set": { "venue": "Baird Center", "source": "https://www.midwestgamingclassic.com/" }
+  },
+  {
+    "match": { "name": "Cambridge Science Festival", "city": "Cambridge" },
+    "action": "update",
+    "reason": "The MIT Museum, which has produced the festival since 2007, gives the re-imagined 2026 edition as September 23-29 2026, built around the Cambridge Science Carnival. The record held only a 2025 last_date and no next edition.",
+    "set": {
+      "next_date": "2026-09-23", "next_date_end": "2026-09-29", "status": "upcoming",
+      "venue": "MIT Museum and venues across Cambridge", "month": "September",
+      "source": "https://cambridgesciencefestival.org/"
+    }
+  },
+  {
+    "match": { "name": "New Mexico Tech Summit", "city": "Albuquerque" },
+    "action": "update",
+    "reason": "NMTC's Tech Summit is September 24 2026 at Sandia Resort & Casino, 30 Rainbow Rd, Albuquerque, drawing 700+ attendees from industry, state government, education and non-profits. The record carried no date at all.",
+    "set": {
+      "next_date": "2026-09-24", "next_date_end": "2026-09-24", "status": "upcoming",
+      "venue": "Sandia Resort & Casino", "month": "September", "attendance": "700",
+      "source": "https://nmtechcouncil.org/new-mexico-tech-summit/"
+    }
+  },
+  {
+    "match": { "name": "Propelify Innovation Festival", "city": "Hoboken" },
+    "action": "update",
+    "reason": "The City of Hoboken announced the ninth annual Propelify at Maxwell Place Park on June 27 2026 — already past. The record carried no date and had the month as October, which is wrong: this is a June festival.",
+    "set": {
+      "last_date": "2026-06-27", "month": "June", "venue": "Maxwell Place Park",
+      "status": "recurring-tbd",
+      "source": "https://www.hobokennj.gov/news/the-city-of-hoboken-announces-ninth-annual-propelify-innovation-festival-at-maxwell-place-park"
+    }
+  },
+  {
+    "match": { "name": "Boston TechJam", "city": "Boston" },
+    "action": "update",
+    "reason": "MassTLC's Boston TechJam ran June 13 2026 at City Hall Plaza — an outdoor tech festival with live music, food trucks and networking. Already past. The record carried no date at all.",
+    "set": {
+      "last_date": "2026-06-13", "month": "June", "venue": "City Hall Plaza",
+      "status": "recurring-tbd", "source": "https://www.masstlc.org/"
+    }
+  },
+  {
+    "match": { "name": "Atlantic Venture Forum", "city": "Halifax" },
+    "action": "update",
+    "reason": "Confirmed June 17-18 2026 at the Halifax Convention Centre, matching the stored last_date. Repointed from Ignite's event page, which is behind a captcha, to the forum's own domain — which is already advertising #AVF2027.",
+    "set": {
+      "url": "https://atlanticventureforum.ca/", "venue": "Halifax Convention Centre",
+      "source": "https://atlanticventureforum.ca/"
+    }
+  },
+  {
+    "match": { "name": "Yukon Innovation Week", "city": "Whitehorse" },
+    "action": "update",
+    "reason": "Yukon Innovation Week ran July 6-10 2026 at Yukonstruct in Whitehorse — already past. The record's last_date was a year stale at 2025-05-22, and its month was May; this is a July event.",
+    "set": {
+      "last_date": "2026-07-06", "month": "July", "venue": "Yukonstruct",
+      "status": "recurring-tbd", "source": "https://meetingsyukon.com/events/"
+    }
+  },
+  {
+    "match": { "name": "Phoenix Technology Summit", "city": "Phoenix" },
+    "action": "update",
+    "reason": "ElevateIT's Phoenix Technology Summit ran March 19 2026 at the Phoenix Convention Center, South Ballroom — a one-day IT operations, cybersecurity and data infrastructure conference. Already past. The record carried no date and 'Varies' as its month.",
+    "set": {
+      "last_date": "2026-03-19", "month": "March", "venue": "Phoenix Convention Center, South Ballroom",
+      "status": "recurring-tbd", "source": "https://eitevents.com/event_pages/phoenix-technology-summit-2026/"
+    }
+  },
+  {
+    "match": { "name": "Arkansas IT Symposium", "city": "Little Rock" },
+    "action": "update",
+    "reason": "Confirmed May 6 2026, 8:30am-4:30pm at the Statehouse Convention Center in downtown Little Rock, matching the stored last_date. Repointed off the 10times.com aggregator listing — which is Cloudflare-walled — onto the symposium's own site.",
+    "set": {
+      "url": "https://www.arkansasitsymposium.com/", "venue": "Statehouse Convention Center",
+      "source": "https://www.arkansasitsymposium.com/"
+    }
+  },
+  {
+    "match": { "name": "Yukonstruct Maker Academy", "city": "Whitehorse" },
+    "action": "update",
+    "reason": "Verified as a rolling programme rather than one annual event: Yukonstruct runs a series of Maker Academy bootcamps (weekend sewing, bent-shaft paddle making, Shaker-style side table) alongside Maker Madness camps and Repair Cafes. Cadence corrected from annual to rolling so it no longer implies a single yearly edition.",
+    "set": { "cadence": "rolling", "month": "Varies", "source": "https://yukonstruct.com/calendar/" }
+  }
+]

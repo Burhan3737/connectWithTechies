@@ -1139,10 +1139,10 @@
     "propelifyinnovationfestival|hoboken": {
       "name": "Propelify Innovation Festival",
       "city": "Hoboken",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "3r1",
-      "evidence": "no reachable page publishing future dates"
+      "cycle": "search-unblock",
+      "evidence": "hobokennj.gov: ninth annual Propelify, June 27 2026, Maxwell Place Park. Record's month said October - it is a June festival."
     },
     "hawaiitechweek|honolulu": {
       "name": "Hawaii Tech Week",
@@ -2571,10 +2571,10 @@
     "lesbianswhotechalliessummit|newyork": {
       "name": "Lesbians Who Tech + Allies Summit",
       "city": "New York",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "3r2b",
-      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+      "cycle": "search-unblock",
+      "evidence": "lwtsquad.com/lwt-summit-2026/: Oct 5-7 2026 New York. Record ended Oct 8; end date corrected."
     },
     "advertisingweeknewyork|newyork": {
       "name": "Advertising Week New York",
@@ -3531,10 +3531,10 @@
     "cyphercon|milwaukee": {
       "name": "CypherCon",
       "city": "Milwaukee",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passB",
-      "evidence": "cyphercon.com returns an empty body via fetch on /, /schedule/ and /2027/ (JS-only site); no readable page states 2027 dates"
+      "cycle": "search-unblock",
+      "evidence": "CypherCon 10: March 24-25 2027, Baird Center Milwaukee. Stored dates exact; venue added."
     },
     "bsidessgf|springfield": {
       "name": "BSidesSGF",
@@ -3651,10 +3651,10 @@
     "midwestgamingclassic|milwaukee": {
       "name": "Midwest Gaming Classic",
       "city": "Milwaukee",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passB",
-      "evidence": "midwestgamingclassic.com returns HTTP 403 to fetch on both / and /info/; the Wisconsin State Fair expo-center calendar returned an empty body. No readable page settles 2027-04-23..25"
+      "cycle": "search-unblock",
+      "evidence": "April 23-25 2027, Baird Center. Preview Night 23rd, Full Show 24th, Family Day 25th. Stored dates exact."
     },
     "miraawards|indianapolis": {
       "name": "Mira Awards",
@@ -4755,10 +4755,10 @@
     "arkansasitsymposium|littlerock": {
       "name": "Arkansas IT Symposium",
       "city": "Little Rock",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "10times.com/e1r1-x1p3-k4zx returns HTTP 403 to fetch"
+      "cycle": "search-unblock",
+      "evidence": "May 6 2026, Statehouse Convention Center Little Rock - matches stored last_date. URL moved off the Cloudflare-walled 10times listing."
     },
     "atlassianteam|anaheim": {
       "name": "Atlassian Team",
@@ -4779,18 +4779,18 @@
     "alphalabdemoday|pittsburgh": {
       "name": "AlphaLab Demo Day",
       "city": "Pittsburgh",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "alphalab.org returns an empty body to fetch on both www and apex host - JS-only shell, nothing readable"
+      "cycle": "search-unblock",
+      "evidence": "Real and active: AlphaLab's 2026 cohort of 20 startups presented to 300+ founders, investors and mentors. No date published for the next demo day, so it correctly stays undated."
     },
     "atlanticventureforum|halifax": {
       "name": "Atlantic Venture Forum",
       "city": "Halifax",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "igniteatlantic.com returns an empty body to fetch on both the event path and the homepage"
+      "cycle": "search-unblock",
+      "evidence": "June 17-18 2026, Halifax Convention Centre - matches stored last_date. URL moved to atlanticventureforum.ca, already advertising AVF2027."
     },
     "banktechnologyoperationsconferenceshowcase|wichita": {
       "name": "Bank Technology & Operations Conference & Showcase",
@@ -5147,10 +5147,10 @@
     "cambridgesciencefestival|cambridge": {
       "name": "Cambridge Science Festival",
       "city": "Cambridge",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "cambridgesciencefestival.org returns an empty body to fetch on both www and trailing-slash forms"
+      "cycle": "search-unblock",
+      "evidence": "MIT Museum: re-imagined 2026 festival Sept 23-29 2026. Record had no next edition."
     },
     "centralohiosoftwaresymposium|columbus": {
       "name": "Central Ohio Software Symposium",
@@ -5923,10 +5923,10 @@
     "indiecade|losangeles": {
       "name": "IndieCade",
       "city": "Los Angeles",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "indiecade.com returns an empty body to fetch on both www and apex forms"
+      "cycle": "search-unblock",
+      "evidence": "Checked; no in-person Los Angeles date is published. The 2025 festival ran Jan 16-30 2026 with a streamed awards ceremony, and only a Playable Theatre Symposium (Mar 23-24) and Game Educators Symposium (May 1) are dated for 2026. Left undated rather than adopting the conflicting Oct 10-12 / Oct 15 dates that only aggregators carry."
     },
     "innovate901|memphis": {
       "name": "Innovate 901",
@@ -6275,10 +6275,10 @@
     "newmexicotechsummit|albuquerque": {
       "name": "New Mexico Tech Summit",
       "city": "Albuquerque",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "nmtechcouncil.org/new-mexico-tech-summit returns an empty body to fetch on repeated attempts"
+      "cycle": "search-unblock",
+      "evidence": "NMTC Tech Summit Sept 24 2026, Sandia Resort & Casino, 700+ attendees. Record had no date."
     },
     "nicarconference|indianapolis": {
       "name": "NICAR Conference",
@@ -6411,10 +6411,10 @@
     "phoenixtechnologysummit|phoenix": {
       "name": "Phoenix Technology Summit",
       "city": "Phoenix",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "eitevents.com event page returns an empty body to fetch on repeated attempts"
+      "cycle": "search-unblock",
+      "evidence": "ElevateIT Phoenix Technology Summit March 19 2026, Phoenix Convention Center South Ballroom. Record had no date."
     },
     "platformcalgarycommunityconnect|calgary": {
       "name": "Platform Calgary Community Connect",
@@ -7139,18 +7139,18 @@
     "yukoninnovationweek|whitehorse": {
       "name": "Yukon Innovation Week",
       "city": "Whitehorse",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "yukoninnovationweek.com returns an empty body to fetch"
+      "cycle": "search-unblock",
+      "evidence": "July 6-10 2026 at Yukonstruct. Record's last_date was a year stale and its month was May."
     },
     "yukonstructmakeracademy|whitehorse": {
       "name": "Yukonstruct Maker Academy",
       "city": "Whitehorse",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "yukonstruct.com/calendar returns an empty body to fetch"
+      "cycle": "search-unblock",
+      "evidence": "A rolling series of Maker Academy bootcamps plus Maker Madness camps and Repair Cafes, not one annual event. Cadence corrected to rolling."
     },
     "baltimorehealthtechstartupsymposium|baltimore": {
       "name": "Baltimore Health Tech Startup Symposium",
@@ -7171,10 +7171,10 @@
     "bostontechjam|boston": {
       "name": "Boston TechJam",
       "city": "Boston",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "mtlc.co/events returns an empty body to fetch"
+      "cycle": "search-unblock",
+      "evidence": "MassTLC Boston TechJam ran June 13 2026 at City Hall Plaza. Record had no date."
     },
     "investinginmontanasummit|bozeman": {
       "name": "Investing in Montana Summit",

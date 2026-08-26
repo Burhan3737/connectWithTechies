@@ -980,7 +980,7 @@
     "city": "Milwaukee",
     "region": "Wisconsin",
     "country": "United States",
-    "venue": "Baird Center, 400 W Wisconsin Ave",
+    "venue": "Baird Center",
     "cadence": "annual",
     "month": "March",
     "next_date": "2027-03-24",
@@ -992,7 +992,7 @@
     "audience": "security professionals, hackers, executives",
     "url": "https://cyphercon.com",
     "description": "Wisconsin's largest technology, cybersecurity and hacker conference, celebrating its 10th anniversary in 2027 with 125+ talks, hands-on 'Wards' villages and workshops.",
-    "source": "https://cyphercon.com/"
+    "source": "https://cyphercon.com/travel/"
   },
   {
     "name": "BSides MKE",
@@ -1055,7 +1055,7 @@
     "city": "Milwaukee",
     "region": "Wisconsin",
     "country": "United States",
-    "venue": "Wisconsin Center",
+    "venue": "Baird Center",
     "cadence": "annual",
     "month": "April",
     "next_date": "2027-04-23",
@@ -3242,9 +3242,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "IT professionals, government technologists",
-    "url": "https://10times.com/e1r1-x1p3-k4zx",
+    "url": "https://www.arkansasitsymposium.com/",
     "description": "Arkansas's annual IT symposium at the Statehouse Convention Center in Little Rock, gathering state IT practitioners and vendors for sessions and an exhibit hall.",
-    "source": "https://10times.com/e1r1-x1p3-k4zx"
+    "source": "https://www.arkansasitsymposium.com/"
   },
   {
     "name": "Arkansas Digital Government Summit",

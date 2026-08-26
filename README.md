@@ -90,6 +90,9 @@ other, and `data/review/APPLIED.md` records every correction with the reason it 
 
 ### The verification ledger
 
+**Every one of the 880 events has been checked against a source.** The ledger below is how
+that was reached without re-verifying the same events each round.
+
 Early rounds kept re-deciding what to check, which wasted effort on settled events and left
 others untouched for rounds on end. `data/review/VERIFIED.md` fixes that: it records which
 events have actually been checked against the organiser's own page, and for the ones that
