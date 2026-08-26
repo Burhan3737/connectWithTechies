@@ -1395,7 +1395,7 @@
     "attendance": "",
     "cost": "free",
     "audience": "university students",
-    "url": "https://www.hoyahacks.com/",
+    "url": "https://hoyahacks.georgetown.domains/",
     "description": "Georgetown University's student hackathon in Washington DC, part of the MLH season.",
     "source": "https://www.mlh.com/seasons/2027/events"
   },
@@ -2346,30 +2346,6 @@
     "source": "https://www.allbsides.com/"
   },
   {
-    "name": "BSides Albany",
-    "type": "conference",
-    "topics": [
-      "security",
-      "community"
-    ],
-    "city": "Albany",
-    "region": "New York",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "June",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "2026-06-06",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "freemium",
-    "audience": "security practitioners, students",
-    "url": "https://bsidesalbany.org",
-    "description": "Albany's Security BSides, serving New York's Capital Region.",
-    "source": "https://www.allbsides.com/"
-  },
-  {
     "name": "BSides Des Moines",
     "type": "conference",
     "topics": [
@@ -3157,30 +3133,6 @@
     "source": "https://pycon.org/"
   },
   {
-    "name": "PyTennessee",
-    "type": "conference",
-    "topics": [
-      "python",
-      "open-source"
-    ],
-    "city": "Nashville",
-    "region": "Tennessee",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "Varies",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "Python developers in the southeast",
-    "url": "https://www.pytennessee.org/",
-    "description": "Nashville's regional Python conference, a weekend of community talks and tutorials.",
-    "source": "https://pycon.org/"
-  },
-  {
     "name": "North Bay Python",
     "type": "conference",
     "topics": [
@@ -3449,7 +3401,7 @@
     "attendance": "",
     "cost": "paid",
     "audience": "ML engineers, researchers",
-    "url": "https://events.linuxfoundation.org/about/calendar/",
+    "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/",
     "description": "The annual conference for the PyTorch machine learning framework, part of the Linux Foundation's Open Source AI Week in the Bay Area.",
     "source": "https://events.linuxfoundation.org/about/calendar/"
   },
@@ -5560,31 +5512,6 @@
     "url": "https://outintech.com/",
     "description": "A nonprofit community for LGBTQ+ people in tech, running recurring city chapter mixers, mentorship and digital-corps volunteering events.",
     "source": "https://outintech.com/"
-  },
-  {
-    "name": "BITCON",
-    "type": "conference",
-    "topics": [
-      "diversity",
-      "careers",
-      "community"
-    ],
-    "city": "Atlanta",
-    "region": "Georgia",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "Varies",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "Black technologists, students, recruiters",
-    "url": "https://www.blacksintechnology.net/",
-    "description": "The annual conference of Blacks In Technology, a global community platform for Black people in technology, with technical, career and community tracks.",
-    "source": "https://www.blacksintechnology.net/"
   },
   {
     "name": "WomenHack",

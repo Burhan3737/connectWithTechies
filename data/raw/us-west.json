@@ -797,7 +797,7 @@
     "attendance": "3000",
     "cost": "paid",
     "audience": "ML engineers, researchers, open source contributors",
-    "url": "https://events.linuxfoundation.org/pytorch-conference/",
+    "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/",
     "description": "The Linux Foundation's flagship open source AI event, with keynotes and deep dives on PyTorch training, inference and the surrounding ecosystem.",
     "source": "https://events.linuxfoundation.org/pytorch-conference/"
   },
@@ -1183,7 +1183,7 @@
     "attendance": "2000",
     "cost": "paid",
     "audience": "AI infrastructure engineers, chip designers, data center architects",
-    "url": "https://www.aiinfrasummit.com/",
+    "url": "https://www.ai-infra-summit.com/",
     "description": "A Silicon Valley summit on the hardware and systems layer of AI - accelerators, interconnects, memory, networking and data centre design.",
     "source": "https://dev.events/NA/US/CA/Santa_Clara"
   },
@@ -2572,7 +2572,7 @@
     "attendance": "500",
     "cost": "paid",
     "audience": "women in security, risk and privacy leadership",
-    "url": "https://www.ewf-usa.com/",
+    "url": "https://www.ewfglobal.com/",
     "description": "The Executive Women's Forum annual conference for women leaders in information security, risk management and privacy.",
     "source": "https://dev.events/NA/US/CO"
   },

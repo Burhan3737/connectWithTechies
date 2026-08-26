@@ -1,0 +1,37 @@
+[
+  {
+    "match": { "name": "Minneapolis Technology Summit", "city": "Minneapolis" },
+    "action": "update",
+    "reason": "Verified on eitevents.com/event_pages/minneapolis-technology-summit-2026/ — the page states 'October 22, 2026' at 'Hyatt Regency Minneapolis | Great Lakes Ballroom (4th Floor)'. The record held 2026-10-08, two weeks early, which would have sent someone on the wrong day.",
+    "set": {
+      "next_date": "2026-10-22",
+      "next_date_end": "2026-10-22",
+      "venue": "Hyatt Regency Minneapolis, Great Lakes Ballroom",
+      "status": "upcoming"
+    }
+  },
+  {
+    "match": { "name": "BITCON", "city": "Atlanta" },
+    "action": "remove",
+    "reason": "Verified on bitcon.blacksintechnology.net — BITCON is a virtual conference, not an in-person one: 'this year we are virtual and serving our global audience of over 40,000 members across 20 countries.' This directory only lists events you physically attend, and the record's Atlanta city was wrong. Blacks In Technology is a real and active organisation; only this listing is out of scope."
+  },
+  {
+    "match": { "name": "Columbus Startup Week", "city": "Columbus" },
+    "action": "update",
+    "reason": "Verified on sparkworksinnovation.com — the 2026 edition ran 'May 5-8, 2026' at 'Columbus, OH | COhatch Polaris'. That is in the past as of today, so the date moves to last_date and no next edition is announced. URL repointed from the redirecting sprkwrks.com to the event page itself.",
+    "set": {
+      "url": "https://sparkworksinnovation.com/event/columbus-startup-week-22/page/home-columbus-startup-week",
+      "venue": "COhatch Polaris",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-05",
+      "status": "recurring-tbd",
+      "source": "https://sparkworksinnovation.com/event/columbus-startup-week-22/page/home-columbus-startup-week"
+    }
+  },
+  {
+    "match": { "name": "Startup Week Columbus", "city": "Columbus" },
+    "action": "remove",
+    "reason": "Duplicate of 'Columbus Startup Week' in the same city. startupcolumbus.com 301s to the same SparkWorks event page the other record now points at, so these are one event recorded twice under transposed names by two different researchers."
+  }
+]

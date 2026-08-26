@@ -98,7 +98,7 @@
     "attendance": "1000",
     "cost": "free",
     "audience": "university students",
-    "url": "https://hacknyu.org/",
+    "url": "https://hacknyu.github.io/",
     "description": "One of the largest collegiate hackathons in New York, where over a thousand students, creators and leaders come together for a weekend to design, code and build projects.",
     "source": "https://hacknyu.org/"
   },
@@ -511,7 +511,7 @@
     "attendance": "500",
     "cost": "free",
     "audience": "XR developers, designers, students, researchers",
-    "url": "https://www.mitrealityhack.com/",
+    "url": "https://www.realityhackatmit.com/",
     "description": "A multi-day XR hackathon and community gathering at MIT where teams build augmented and virtual reality projects with hardware loaned by major headset makers.",
     "source": "https://www.mitrealityhack.com/faqs"
   },
@@ -2803,31 +2803,6 @@
     "source": "https://www.ohiotechsummit.org/"
   },
   {
-    "name": "Startup Week Columbus",
-    "type": "startup-week",
-    "topics": [
-      "startups",
-      "entrepreneurship",
-      "networking"
-    ],
-    "city": "Columbus",
-    "region": "Ohio",
-    "country": "United States",
-    "venue": "COhatch Polaris and venues across Columbus",
-    "cadence": "annual",
-    "month": "May",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "2026-05-05",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "freemium",
-    "audience": "founders, investors, small business owners",
-    "url": "https://www.startupcolumbus.com/",
-    "description": "A multi-day Columbus startup week of founder workshops, pitch sessions and community programming hosted across the city's coworking and startup venues.",
-    "source": "https://www.eventbrite.com/e/startup-week-columbus-tickets-1987080855329"
-  },
-  {
     "name": "Stir Trek",
     "type": "conference",
     "topics": [
@@ -3055,7 +3030,7 @@
     "source": "https://www.techlifecolumbus.com/tech-conferences/"
   },
   {
-    "name": "CIO Tomorrow",
+    "name": "Tech Tomorrow",
     "type": "conference",
     "topics": [
       "it-leadership",
@@ -3075,7 +3050,7 @@
     "attendance": "",
     "cost": "paid",
     "audience": "CIOs, IT executives",
-    "url": "https://cio-tomorrow.com/",
+    "url": "https://techtomorrow.events/",
     "description": "A Central Ohio conference for CIOs and senior IT leaders, with keynotes and peer sessions on enterprise technology strategy.",
     "source": "https://www.techlifecolumbus.com/tech-conferences/"
   },

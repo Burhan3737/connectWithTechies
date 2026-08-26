@@ -1,0 +1,74 @@
+[
+  {
+    "match": { "name": "BITCON", "city": "Atlanta" },
+    "action": "update",
+    "reason": "blacksintechnology.net now responds (transient failure), but the org homepage is not the conference. WebFetch confirmed the dedicated BITCON conference site at bitcon.blacksintechnology.net loads and describes 'BITCON, the Blacks In Technology annual conference'.",
+    "set": { "url": "https://bitcon.blacksintechnology.net/" }
+  },
+  {
+    "match": { "name": "BSides Albany", "city": "Albany" },
+    "action": "remove",
+    "reason": "Domain is gone: bsidesalbany.org, bsidesalbany.com and bsidesalbany.net all return NXDOMAIN (getaddrinfo ENOTFOUND). The official BSides chapter list (bsides.org/chapters/) still lists 'BSides Albany, NY' but publishes no website, only an @albany.edu contact address. No successor site found and no upcoming date in the record.",
+    "set": {}
+  },
+  {
+    "match": { "name": "HackNYU", "city": "New York" },
+    "action": "update",
+    "reason": "hacknyu.org refuses connections (ECONNREFUSED 167.71.252.160:443) and hacknyu.com is a parked HugeDomains sale page. The official HackNYU club site at hacknyu.github.io loads and self-identifies as HackNYU. Event is not defunct: hacknyu-2025.devpost.com shows the Feb 8-9 2025 edition at NYU Tandon with 642 participants (no 2026 devpost edition exists).",
+    "set": { "url": "https://hacknyu.github.io/" }
+  },
+  {
+    "match": { "name": "CIO Tomorrow", "city": "Columbus" },
+    "action": "update",
+    "reason": "cio-tomorrow.com redirects to techtomorrow.events, which states 'Tech Tomorrow 2026 debuts as the reimagined CIO Tomorrow', building on a 24-year legacy. Columbus OH, September 9 2026 - matches the record's next_date. Successor brand, so name updated too.",
+    "set": { "name": "Tech Tomorrow", "url": "https://techtomorrow.events/" }
+  },
+  {
+    "match": { "name": "Columbus Startup Week", "city": "Columbus" },
+    "action": "update",
+    "reason": "sprkwrks.com redirects to sparkworksinnovation.com (org homepage, not the event). SparkWorks Innovation runs the event; its current event page verified by WebFetch as 'Columbus Startup Week 2027', Columbus OH, April 13-15 2027, COhatch Polaris.",
+    "set": { "url": "https://sparkworksinnovation.com/event/columbus-startup-week-2027-35/page/home-columbus-startup-week-t1786550944" }
+  },
+  {
+    "match": { "name": "Startup Week Columbus", "city": "Columbus" },
+    "action": "update",
+    "reason": "startupcolumbus.com redirects to a stale SparkWorks page for the 2022 edition (columbus-startup-week-22). Repointed to the verified current SparkWorks event page for Columbus Startup Week 2027 (Columbus OH, April 13-15 2027).",
+    "set": { "url": "https://sparkworksinnovation.com/event/columbus-startup-week-2027-35/page/home-columbus-startup-week-t1786550944" }
+  },
+  {
+    "match": { "name": "EWF Annual Conference", "city": "Aurora" },
+    "action": "update",
+    "reason": "ewf-usa.com redirects to ewfglobal.com. WebFetch confirms the Executive Women's Forum rebranded its domain to ewfglobal.com and still runs the EWF Annual Conference (~700 attendees).",
+    "set": { "url": "https://www.ewfglobal.com/" }
+  },
+  {
+    "match": { "name": "PyTennessee", "city": "Nashville" },
+    "action": "remove",
+    "reason": "pytennessee.org now redirects to ptuptowntheatre.com, which serves an Indonesian-language online casino/slots site (MAHA168) - the domain has been lost to a squatter, with no Python content. No successor Nashville event: pytn.org is a different, brand-new all-virtual conference ('the first edition of PyTN', October 20 2026, no city). Record has no next_date or last_date.",
+    "set": {}
+  },
+  {
+    "match": { "name": "Reality Hack at MIT", "city": "Cambridge" },
+    "action": "update",
+    "reason": "mitrealityhack.com redirects to realityhackatmit.com, verified as the live official site: Reality Hack at MIT, MIT campus Cambridge MA, next edition January 2027.",
+    "set": { "url": "https://www.realityhackatmit.com/" }
+  },
+  {
+    "match": { "name": "AI Infra Summit", "city": "Santa Clara" },
+    "action": "update",
+    "reason": "aiinfrasummit.com redirects to the new domain ai-infra-summit.com, verified as AI Infra Summit 2026, Santa Clara Convention Center, September 15-17 2026 - matches the record's next_date.",
+    "set": { "url": "https://www.ai-infra-summit.com/" }
+  },
+  {
+    "match": { "name": "Hoya Hacks", "city": "Washington" },
+    "action": "update",
+    "reason": "hoyahacks.com redirects to hoyahacks.georgetown.domains, verified live: HoyaHacks 2027, Georgetown University, Washington DC, January 22-24 2027, registration open.",
+    "set": { "url": "https://hoyahacks.georgetown.domains/" }
+  },
+  {
+    "match": { "name": "PyTorch Conference", "city": "San Jose" },
+    "action": "update",
+    "reason": "The Linux Foundation URL redirects to the renamed pytorch-conference-north-america page, verified as 'PyTorch Conference North America', San Jose CA, October 20-21 2026 - matches the record's next_date.",
+    "set": { "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/" }
+  }
+]
