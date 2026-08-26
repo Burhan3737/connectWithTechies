@@ -1,0 +1,11 @@
+[
+  {
+    "match": { "name": "Innovation Expo Sioux Falls", "city": "Sioux Falls" },
+    "action": "update",
+    "reason": "Flagged as suspicious because startupsiouxfalls.com/events/ showed nothing on 2026-09-17. The calendar is simply windowed to the current month — the event is real and the date is right. Eventbrite confirms 'Innovation Expo 2026 - Sioux Falls', Thursday September 17, 1 PM - 5 PM, The District, 4521 West Empire Place, Sioux Falls SD 57106. URL repointed from the organiser's generic calendar, where the event is not visible, to the listing that actually shows it.",
+    "set": {
+      "url": "https://www.eventbrite.com/e/innovation-expo-2026-sioux-falls-tickets-1989860061008",
+      "venue": "The District, 4521 West Empire Place"
+    }
+  }
+]

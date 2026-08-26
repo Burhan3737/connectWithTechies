@@ -1,0 +1,32 @@
+[
+  {
+    "match": { "name": "Mile High Dreamin'", "city": "Denver" },
+    "action": "update",
+    "reason": "Organiser domain milehighdreamin.com 302-redirects to www and now serves only a bare 'LWC Communities' welcome page with no event content; /events, /2026, /about and /index.html all return 404. No 2026 edition is published anywhere on the organiser site, and dev.events' Colorado listing (which carries CppCon, Explore DDD, BSidesDen, RedacteCON, Rocky Mountain Ruby) does not list it. Clearing the unconfirmed date rather than sending anyone to Denver today.",
+    "set": { "next_date": "", "next_date_end": "", "last_date": "2026-08-26", "status": "recurring-tbd" }
+  },
+  {
+    "match": { "name": "DrupalCamp Colorado", "city": "Denver" },
+    "action": "update",
+    "reason": "drupal-colorado.org event listing states 'August 26 - 28, 2026' for DrupalCamp Colorado 2026; record had it starting a day late on 2026-08-27.",
+    "set": { "next_date": "2026-08-26", "next_date_end": "2026-08-28" }
+  },
+  {
+    "match": { "name": "KCD SF Bay Area", "city": "San Francisco" },
+    "action": "update",
+    "reason": "CNCF's own KCD calendar (cncf.io/kcds/) lists 'KCD San Francisco Bay Area 2026 - September 1, 2026, Mountain View, United States'. Record had both the date (2026-09-02) and the city (San Francisco) wrong.",
+    "set": { "next_date": "2026-09-01", "next_date_end": "2026-09-01", "city": "Mountain View", "region": "California" }
+  },
+  {
+    "match": { "name": "Day of Data Detroit", "city": "Detroit" },
+    "action": "update",
+    "reason": "sqlsaturday.com/2026-09-12-sqlsaturday1164/ redirects to dayofdata.org/2026-09-12-dayofdata1164/, which gives the venue as Ann Arbor District Library - Downtown, 343 South Fifth Avenue, Ann Arbor, MI 48104. Date 2026-09-12 confirmed; the event is held in Ann Arbor, not Detroit.",
+    "set": { "city": "Ann Arbor", "region": "Michigan" }
+  },
+  {
+    "match": { "name": "Digital Okanagan", "city": "Kelowna" },
+    "action": "update",
+    "reason": "meetup.com/digitalokanagan/ shows the 2026-09-24 'Geek Beers hangout at the Kal' at The Kal, 3004 30th Ave, Vernon, BC (as is the preceding 2026-08-27 meetup). Date confirmed; venue is in Vernon, not Kelowna.",
+    "set": { "city": "Vernon", "region": "British Columbia" }
+  }
+]
