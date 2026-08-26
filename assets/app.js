@@ -168,7 +168,9 @@
     out.sort(function (a, b) {
       if (state.sort === 'name') return a.name.localeCompare(b.name);
       if (state.sort === 'city') {
-        var c = a.city.localeCompare(b.city);
+        // Region breaks the tie, so Bloomington IN and Bloomington MN stay
+        // as two contiguous groups rather than interleaving.
+        var c = a.city.localeCompare(b.city) || a.region.localeCompare(b.region);
         return c !== 0 ? c : cmpDate(a, b, 1);
       }
       return cmpDate(a, b, dir);
