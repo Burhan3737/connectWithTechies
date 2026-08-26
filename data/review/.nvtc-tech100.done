@@ -1,0 +1,14 @@
+[
+  {
+    "match": { "name": "NVTC Tech100 Celebration", "city": "Reston" },
+    "action": "update",
+    "reason": "nvtc.org/events/ JSON-LD for 'Tech100 Celebration' gives startDate 2026-12-15T18:00 and endDate 2026-12-15T20:00 at 'Hilton McLean, Tysons Corner', 7920 Jones Branch Dr., addressLocality McLean, VA. The date was right; the city was Reston. This is the same mislocation already fixed on the NVTC Cyber Summit - both were filed under the council's Reston base rather than the venue.",
+    "set": {
+      "city": "McLean",
+      "region": "Virginia",
+      "venue": "Hilton McLean, Tysons Corner",
+      "next_date_end": "2026-12-15",
+      "source": "https://www.nvtc.org/events/"
+    }
+  }
+]

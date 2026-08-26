@@ -211,3 +211,7 @@
 ## 2026-08-26
 
 - unblockA-netsuite.json: UPDATE NetSuite SuiteWorld (Las Vegas) — Dates and city were already correct (JSON-LD on the event site gives startDate 2026-10-25, endDate 2026-10-28, Las Vegas). Only the link needed work: the stored netsuite.com/portal/... path sits behind a host-wide WAF, while netsuitesuiteworld.com is the event's own canonical site, is the one Oracle's newsroom links to, and loads cleanly. — url: "https://www.netsuite.com/portal/events/suiteworld/main.shtml" -> "https://www.netsuitesuiteworld.com/"; source: "https://dev.events/NA/US/NV" -> "https://www.netsuitesuiteworld.com/"
+
+## 2026-08-26
+
+- nvtc-tech100.json: UPDATE NVTC Tech100 Celebration (McLean) — nvtc.org/events/ JSON-LD for 'Tech100 Celebration' gives startDate 2026-12-15T18:00 and endDate 2026-12-15T20:00 at 'Hilton McLean, Tysons Corner', 7920 Jones Branch Dr., addressLocality McLean, VA. The date was right; the city was Reston. This is the same mislocation already fixed on the NVTC Cyber Summit - both were filed under the council's Reston base rather than the venue. — city: "Reston" -> "McLean"; venue: "" -> "Hilton McLean, Tysons Corner"

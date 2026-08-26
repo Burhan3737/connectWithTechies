@@ -1,0 +1,88 @@
+[
+  {
+    "match": { "name": "BSides Fort Wayne", "city": "Fort Wayne" },
+    "action": "update",
+    "reason": "bsidesfortwayne.org banner: 'We are excited to announce a Fall Event on November 11th 2026 @ Brotherhood Mutual! Get Tickets here!'. The June 6th 2026 conference is past; this is the newly published next in-person date.",
+    "set": { "next_date": "2026-11-11", "next_date_end": "2026-11-11", "status": "upcoming" }
+  },
+  {
+    "match": { "name": "BSides NOLA", "city": "New Orleans" },
+    "action": "update",
+    "reason": "bsidesnola.notion.site (the target of nolabsides.com), read via Notion's public loadPageChunk endpoint: 'BSidesNOLA May 11, 2027 tickets ON SALE NOW!' with a ticketleap link to bsidesnola-2027-may-pre-release, alongside 'BSidesNOLA 2026 may be over'.",
+    "set": { "next_date": "2027-05-11", "next_date_end": "2027-05-11", "status": "upcoming" }
+  },
+  {
+    "match": { "name": "GeekWire Seattle AI Summit", "city": "Seattle" },
+    "action": "update",
+    "reason": "geekwire.com/calendar-event/seattleaiweek-ai-summit-2026/ JSON-LD gives startDate 2026-10-27T09:00-07:00 and endDate 2026-10-27T18:00-07:00, venue 'Conference Center, 2211 Alaskan Way, Seattle, WA 98121'.",
+    "set": { "next_date": "2026-10-27", "next_date_end": "2026-10-27", "status": "upcoming" }
+  },
+  {
+    "match": { "name": "Houston Tech Rodeo", "city": "Houston" },
+    "action": "remove",
+    "reason": "Squatted domain. houstonexponential.org now serves only Indonesian online-slot spam ('SCATTER911 | Link RTP Situs Slot Gacor 777 Hari Ini Depo Receh', October 5 2025) promoting Pragmatic Play / PG Soft casino games. The event's own domain houstontechrodeo.com is also lost - it now serves 'The Original Ice Ball Maker Australia'. No surviving organiser page names the event."
+  },
+  {
+    "match": { "name": "Innovation Week Saskatchewan", "city": "Saskatoon" },
+    "action": "update",
+    "reason": "The stored innovationsask.ca homepage never names the event (not on the homepage nor /events/). The organiser's dedicated page innovationsask.ca/events/innovation-week/ is titled 'Innovation Week in Saskatchewan - Innovation Saskatchewan' and shows the May 11-15, 2026 programme. No forward date is published, so only the URL changes.",
+    "set": { "url": "https://innovationsask.ca/events/innovation-week/" }
+  },
+  {
+    "match": { "name": "Metabridge Live", "city": "Kelowna" },
+    "action": "remove",
+    "reason": "Squatted domain. metabridge.ca (www redirects there) now returns a page titled 'Magpie Bridge Slot Review | Game by Aspect Gaming' - wholly online-casino slot review content. Nothing on the domain refers to Metabridge Live, Kelowna, or a tech conference."
+  },
+  {
+    "match": { "name": "MnTech Connect", "city": "St. Paul" },
+    "action": "update",
+    "reason": "mntech.org/tech-connect/ leads with 'Save the Date for 2027! Thursday, April 1, 2027 8-5pm | Saint Paul RiverCentre'; the April 9 2026 edition is recapped in the past tense.",
+    "set": { "next_date": "2027-04-01", "next_date_end": "2027-04-01", "status": "upcoming" }
+  },
+  {
+    "match": { "name": "New Tech Seattle", "city": "Seattle" },
+    "action": "update",
+    "reason": "The stored geekwire.com/calendar/ is GeekWire's generic community calendar and never names the event (zero occurrences of 'New Tech'). The organiser's own site newtechnorthwest.com is live and lists 'New Tech Seattle September 2026 Meetup - September 15, 2026' and 'Join us at the next monthly New Tech Seattle event'.",
+    "set": { "url": "https://www.newtechnorthwest.com/" }
+  },
+  {
+    "match": { "name": "ODSC East", "city": "Boston" },
+    "action": "update",
+    "reason": "odsc.com/ is a generic root shared with the ODSC West record. odsc.com/boston/ resolves to odsc.ai/east/, which publishes 'Center, Boston, MA | May 10-12th, 2027'.",
+    "set": { "url": "https://odsc.ai/east/", "next_date": "2027-05-10", "next_date_end": "2027-05-12", "status": "upcoming" }
+  },
+  {
+    "match": { "name": "ODSC West", "city": "San Francisco" },
+    "action": "update",
+    "reason": "odsc.com/california/ resolves to odsc.ai/west/, titled 'ODSC AI West 2026 - California', hero 'Oct 27 - Oct 29 / SAN FRANCISCO / 3 days - 7 tracks - 250+ speakers'.",
+    "set": { "url": "https://odsc.ai/west/", "next_date": "2026-10-27", "next_date_end": "2026-10-29", "status": "upcoming" }
+  },
+  {
+    "match": { "name": "PegJam", "city": "Winnipeg" },
+    "action": "update",
+    "reason": "The stored newmediamanitoba.com homepage never names PegJam (nor does /events/). The organiser's own event page newmediamanitoba.com/event/pegjam-2026/ names it - 'the 9th annual Winnipeg Game Jam, aka PegJam', run with the Winnipeg Game Collective, JSON-LD startDate 2026-02-19. That edition is past, so only the URL changes.",
+    "set": { "url": "https://newmediamanitoba.com/event/pegjam-2026/" }
+  },
+  {
+    "match": { "name": "TartanHacks", "city": "Pittsburgh" },
+    "action": "update",
+    "reason": "www.tartanhacks.com is dead - Vercel returns HTTP 402 'Payment required / DEPLOYMENT_DISABLED', and tartanhacks.org returns 522. The event is not dead: organiser ScottyLabs at scottylabs.org is live (footer (c) 2026, 2026 recruitment open) and its homepage headline 'We host Pittsburgh's largest annual hackathon,' sits beside the TartanHacks logo asset.",
+    "set": { "url": "https://www.scottylabs.org/" }
+  },
+  {
+    "match": { "name": "THAT Conference Texas", "city": "Round Rock" },
+    "action": "remove",
+    "reason": "Defunct. thatconference.com's homepage is now entirely a wind-down notice: 'After 15 incredible years... we're taking a pause to reimagine THAT Conference... While we won't be hosting THAT Conference, this isn't goodbye', linking to /blog/its-time-we-took-a-pause. No Texas edition is scheduled and /tx/2026 returns 404."
+  },
+  {
+    "match": { "name": "THAT Conference Wisconsin", "city": "Wisconsin Dells" },
+    "action": "remove",
+    "reason": "Defunct. Same notice on thatconference.com - the organiser has paused the conference indefinitely ('we won't be hosting THAT Conference'). No Wisconsin edition is scheduled and /wi/2026 returns 404."
+  },
+  {
+    "match": { "name": "VSLive! @ Microsoft HQ", "city": "Redmond" },
+    "action": "update",
+    "reason": "The stored microsofthq-2026 page shows July 27-31 2026, now past. vslive.com/events/microsofthq-2027/home.aspx is live, titled 'Microsoft HQ 2027 -- Visual Studio Live!', advertising 'AUG 2-6, 2027' with 'campus experiences waiting for you in Redmond, WA'.",
+    "set": { "url": "https://vslive.com/events/microsofthq-2027/home.aspx", "next_date": "2027-08-02", "next_date_end": "2027-08-06", "status": "upcoming" }
+  }
+]

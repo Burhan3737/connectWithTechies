@@ -1,7 +1,7 @@
 {
   "generated_on": "2026-08-26",
-  "event_count": 885,
-  "city_count": 237,
+  "event_count": 884,
+  "city_count": 236,
   "events": [
     {
       "name": "Global Game Jam - Abilene Christian University",
@@ -11189,31 +11189,31 @@
       "source_file": "review-additions-2"
     },
     {
-      "name": "NVTC Cyber Summit & Cyber50 Awards",
-      "type": "summit",
+      "name": "NVTC Tech100 Celebration",
+      "type": "awards",
       "topics": [
-        "cybersecurity",
-        "govtech",
-        "awards"
+        "awards",
+        "networking",
+        "govtech"
       ],
       "city": "McLean",
       "region": "Virginia",
       "country": "United States",
-      "venue": "",
+      "venue": "Hilton McLean, Tysons Corner",
       "cadence": "annual",
-      "month": "October",
-      "next_date": "2026-10-28",
-      "next_date_end": "2026-10-28",
-      "last_date": "2025-10-29",
+      "month": "December",
+      "next_date": "2026-12-15",
+      "next_date_end": "2026-12-15",
+      "last_date": "2025-12-16",
       "status": "upcoming",
       "attendance": "",
       "cost": "paid",
-      "audience": "cybersecurity executives, government contractors",
+      "audience": "technology executives, investors",
       "url": "https://www.nvtc.org/events/",
-      "description": "The Northern Virginia Technology Council's annual cybersecurity summit paired with the Cyber50 awards honouring the region's leading cyber companies and executives.",
+      "description": "An awards night recognising the 100 companies and leaders having the biggest impact on Northern Virginia's technology community.",
       "source": "https://www.nvtc.org/events/",
-      "sort_date": "2026-10-28",
-      "id": "nvtc-cyber-summit-cyber50-awards-mclean",
+      "sort_date": "2026-12-15",
+      "id": "nvtc-tech100-celebration-mclean",
       "source_file": "us-east"
     },
     {
@@ -17407,34 +17407,6 @@
       "sort_date": "2026-04-10",
       "id": "techstars-startup-weekend-reno-reno",
       "source_file": "us-west"
-    },
-    {
-      "name": "NVTC Tech100 Celebration",
-      "type": "awards",
-      "topics": [
-        "awards",
-        "networking",
-        "govtech"
-      ],
-      "city": "Reston",
-      "region": "Virginia",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "December",
-      "next_date": "2026-12-15",
-      "next_date_end": "2026-12-15",
-      "last_date": "2025-12-16",
-      "status": "upcoming",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "technology executives, investors",
-      "url": "https://www.nvtc.org/events/",
-      "description": "An awards night recognising the 100 companies and leaders having the biggest impact on Northern Virginia's technology community.",
-      "source": "https://www.nvtc.org/events/",
-      "sort_date": "2026-12-15",
-      "id": "nvtc-tech100-celebration-reston",
-      "source_file": "us-east"
     },
     {
       "name": "WEHack",

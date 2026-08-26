@@ -80,15 +80,50 @@ writeFileSync(STATE, JSON.stringify(state, null, 2) + '\n', 'utf8');
 
 const { events } = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8'));
 
+/**
+ * Entries are keyed on (name, city), so a patch that corrects an event's city
+ * orphans its own ledger entry and the event resurfaces as unchecked — which
+ * is exactly backwards, since correcting the city means someone just verified
+ * it. Fall back to matching on name alone, but only when that name is unique
+ * on both sides, then re-key the entry so the drift is repaired for good.
+ */
+const nameCount = new Map();
+for (const e of events) nameCount.set(norm(e.name), (nameCount.get(norm(e.name)) || 0) + 1);
+
+const ledgerByName = new Map();
+for (const [k, v] of Object.entries(state.entries)) {
+  const n = norm(v.name);
+  if (!ledgerByName.has(n)) ledgerByName.set(n, []);
+  ledgerByName.get(n).push([k, v]);
+}
+
 const seen = new Set();
 const buckets = { confirmed: [], corrected: [], blocked: [], unchecked: [] };
+let rekeyed = 0;
 
 for (const e of events) {
   const k = key(e.name, e.city);
   seen.add(k);
-  const hit = state.entries[k];
+  let hit = state.entries[k];
+
+  if (!hit) {
+    const candidates = ledgerByName.get(norm(e.name)) || [];
+    if (candidates.length === 1 && nameCount.get(norm(e.name)) === 1) {
+      const [oldKey, entry] = candidates[0];
+      delete state.entries[oldKey];
+      hit = { ...entry, city: e.city };
+      state.entries[k] = hit;
+      rekeyed++;
+    }
+  }
+
   if (!hit) { buckets.unchecked.push({ e }); continue; }
   buckets[hit.status].push({ e, hit });
+}
+
+if (rekeyed) {
+  writeFileSync(STATE, JSON.stringify(state, null, 2) + '\n', 'utf8');
+  console.log(`Re-keyed ${rekeyed} entr${rekeyed === 1 ? 'y' : 'ies'} whose event city was corrected after verification.`);
 }
 
 // Ledger rows whose event is no longer in the dataset (removed by a patch).

@@ -3448,14 +3448,6 @@
       "cycle": "passB",
       "evidence": "wichacks.io is a JS shell with no dates; the MLH 2027 season listing shows WiCHacks 'FEB 27 - 28', Rochester, New York - matches the record"
     },
-    "dvconus|sanjose": {
-      "name": "DVCon U.S.",
-      "city": "San Jose",
-      "status": "corrected",
-      "checked_on": "2026-08-26",
-      "cycle": "passB",
-      "evidence": "dvcon.org: 'March 1 - 4, 2027 | Santa Clara, CA, United States' at the Hyatt Regency Santa Clara. Dates match; the city was recorded as San Jose and is patched to Santa Clara"
-    },
     "legalweeknewyork|newyork": {
       "name": "Legalweek New York",
       "city": "New York",
@@ -3952,14 +3944,6 @@
       "cycle": "passA",
       "evidence": "techcon365.com home page: 'Seattle, Washington ... August 24-28, 2026, Seattle Convention Center' — matches record (fetched via curl; WebFetch got 403)"
     },
-    "baypiggiesbayareapythoninterestgroup|mountainview": {
-      "name": "BayPIGgies (Bay Area Python Interest Group)",
-      "city": "Mountain View",
-      "status": "corrected",
-      "checked_on": "2026-08-26",
-      "cycle": "passA",
-      "evidence": "meetup.com/baypiggies shows next meeting Thu, Aug 27 6:30 PM PDT at West Valley Branch Library, 1243 San Tomas Aquino Rd, San Jose, CA. Date correct, city was wrong (Mountain View -> San Jose)"
-    },
     "computingfoundationsworkshopseries|cookeville": {
       "name": "Computing Foundations Workshop Series",
       "city": "Cookeville",
@@ -4247,14 +4231,6 @@
       "checked_on": "2026-08-26",
       "cycle": "passA",
       "evidence": "githubuniverse.com: 'GitHub Universe 2026 ... october 28-29 / fort mason center, san francisco, CA' — matches record"
-    },
-    "nvtccybersummitcyber50awards|reston": {
-      "name": "NVTC Cyber Summit & Cyber50 Awards",
-      "city": "Reston",
-      "status": "corrected",
-      "checked_on": "2026-08-26",
-      "cycle": "passA",
-      "evidence": "nvtc.org/events/ lists 'NVTC Cyber Summit & Cyber50 Awards, Oct 28, 2026 | McLean, VA'. Date correct; city was wrong (Reston -> McLean)"
     },
     "shpenationalconvention|indianapolis": {
       "name": "SHPE National Convention",
@@ -4827,10 +4803,10 @@
     "bearhacks|mississauga": {
       "name": "BearHacks",
       "city": "Mississauga",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "bearhacks.com returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "bearhacks.com loads (HTTP 200), title 'BearHacks 2026'. It is a React shell, so I read the app bundle /assets/index-CkbZRNgR.js: it carries the hero copy 'April 24th - 26th - Sheridan HMC Campus' and the FAQ line 'Sheridan College's Hazel McCallion Campus in Mississauga, Ontario, Canada', confirming the Mississauga venue. The April 2026 edition is past and no forward date is published, so nothing to patch."
     },
     "bigdataanalyticssummitcanada|toronto": {
       "name": "Big Data & Analytics Summit Canada",
@@ -4947,10 +4923,10 @@
     "bsidesfortwayne|fortwayne": {
       "name": "BSides Fort Wayne",
       "city": "Fort Wayne",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "bsidesfortwayne.org returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "bsidesfortwayne.org loads (HTTP 200). Banner text: 'We are excited to announce a Fall Event on November 11th 2026 @ Brotherhood Mutual! Get Tickets here!'. The main June 6th 2026 conference is past; the newly published next in-person date is 2026-11-11 in Fort Wayne. Patch emitted."
     },
     "bsideshalifax|halifax": {
       "name": "BSides Halifax",
@@ -5024,21 +5000,13 @@
       "cycle": "passC",
       "evidence": "bsidessatx.com live, San Antonio TX at St. Mary's University; says 'Returning in 2027' with no dates set"
     },
-    "bsidesicsot|miami": {
-      "name": "BSides ICS/OT",
-      "city": "Miami",
-      "status": "corrected",
-      "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "bsidesics.org: event runs the day before S4; 2026 edition was Miami but the site now advertises 'BSidesICS/OT 2027 Tampa, FL' (details TBA) - next edition city is Tampa, not Miami"
-    },
     "bsidesnola|neworleans": {
       "name": "BSides NOLA",
       "city": "New Orleans",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "nolabsides.com 301-redirects to bsidesnola.notion.site, which returns only a JS shell ('Notion') with no readable content"
+      "cycle": "unblockB",
+      "evidence": "nolabsides.com redirects to bsidesnola.notion.site, which renders JS-only to curl. Read the page content through Notion's public loadPageChunk endpoint for page 315249e7-315f-8022-98e5-c97d61538355: 'BSidesNOLA May 11, 2027 tickets ON SALE NOW!' with a ticketleap link to bsidesnola-2027-may-pre-release, alongside 'BSidesNOLA 2026 may be over, but the knowledge sharing continues.' Newly published date 2027-05-11, New Orleans. Patch emitted."
     },
     "bsidesseattle|seattle": {
       "name": "BSides Seattle",
@@ -5243,10 +5211,10 @@
     "codeforamericasummit|washington": {
       "name": "Code for America Summit",
       "city": "Washington",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "summit.codeforamerica.org returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "summit.codeforamerica.org loads (HTTP 200). Hero reads 'Marriott Marquis / Chicago / May 7-8, 2026' and the post-event note says 'We're so glad you joined us at our first Summit in Chicago! ... See you in 2027 in Washington, D.C.!' - so the stored city Washington DC matches the next edition. No 2027 dates published yet, nothing to patch."
     },
     "codeforbostonhacknight|cambridge": {
       "name": "Code for Boston Hack Night",
@@ -5363,10 +5331,10 @@
     "cybersecuritystrongertogetherconference|washington": {
       "name": "Cybersecurity, Stronger Together Conference",
       "city": "Washington",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "cyberconference.cps.gwu.edu returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "cyberconference.cps.gwu.edu loads (HTTP 200) and names the event: 'Cybersecurity, Stronger Together Conference 2026: Converging Threats and Shared Defenses', run by GW's College of Professional Studies at 805 21st Street NW, Washington DC 20052. The 2026 edition is written up in the past tense ('brought together top experts') and no 2027 date is posted. Right event, right city, no date available."
     },
     "dakotacon|madison": {
       "name": "DakotaCon",
@@ -5403,10 +5371,10 @@
     "developerweeknewyork|newyork": {
       "name": "DeveloperWeek New York",
       "city": "New York",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "developerweek.com/newyork returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "developerweek.com/newyork loads (HTTP 200) and describes DeveloperWeek New York in New York City, NY. JSON-LD startDate 2026-06-09 / endDate 2026-06-10; that edition is past as of 2026-08-26 and the site has not rolled over to a 2027 edition, so there is no forward date to store. Link and city are correct."
     },
     "cybersecuritysummitchicago|chicago": {
       "name": "Cybersecurity Summit Chicago",
@@ -5539,10 +5507,10 @@
     "emergingtechnologiessummit|bozeman": {
       "name": "Emerging Technologies Summit",
       "city": "Bozeman",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "mthightech.org event page returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "mthightech.org event page loads (HTTP 200), titled 'Emerging Technologies Summit - MT High Tech Business Alliance'. JSON-LD startDate 2026-05-28T09:00-0600; venue text references MSU / QCORE / Bozeman. That date is past and no next edition is announced. Right event, right city."
     },
     "empoweringinnovationspiritconference|whitehorse": {
       "name": "Empowering Innovation Spirit Conference",
@@ -5627,10 +5595,10 @@
     "geekwireseattleaisummit|seattle": {
       "name": "GeekWire Seattle AI Summit",
       "city": "Seattle",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "geekwire.com calendar-event page returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "geekwire.com/calendar-event/seattleaiweek-ai-summit-2026/ loads (HTTP 200), title '#SeattleAIWeek AI Summit 2026'. JSON-LD startDate 2026-10-27T09:00-07:00 / endDate 2026-10-27T18:00-07:00, venue 'Conference Center, 2211 Alaskan Way, Seattle, WA 98121'. That is a future date not currently stored. Patch emitted."
     },
     "generatormakerspaceworkshops|burlington": {
       "name": "Generator Makerspace Workshops",
@@ -5872,21 +5840,13 @@
       "cycle": "passC",
       "evidence": "meetup.com/halifax-indie-devs-play-and-tell loads, Halifax NS, 487 members, monthly Play & Tell at Halifax Central Library - active recurring series"
     },
-    "hawaiiinternationalconferenceonsystemsciences|honolulu": {
-      "name": "Hawaii International Conference on System Sciences",
-      "city": "Honolulu",
-      "status": "corrected",
-      "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "hicss.hawaii.edu announces HICSS January 5-8 2027 at the Hilton Waikoloa Village on the Big Island - date now published and venue is Waikoloa, not Honolulu"
-    },
     "houstontechrodeo|houston": {
       "name": "Houston Tech Rodeo",
       "city": "Houston",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "houstonexponential.org returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "SQUATTED. houstonexponential.org returns HTTP 200 but the page is titled 'houstonexponential -' and its only content is Indonesian online-slot spam ('SCATTER911 | Link RTP Situs Slot Gacor 777 Hari Ini Depo Receh', posted October 5, 2025) promoting Pragmatic Play / PG Soft casino games. The event's own domain houstontechrodeo.com is gone too - it now serves 'The Original Ice Ball Maker Australia | Say No To Ice Cubes!'. No surviving organiser page names the event. Removal patch emitted."
     },
     "htdcevents|honolulu": {
       "name": "HTDC Events",
@@ -5995,10 +5955,10 @@
     "innovationweeksaskatchewan|saskatoon": {
       "name": "Innovation Week Saskatchewan",
       "city": "Saskatoon",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "innovationsask.ca returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "innovationsask.ca loads (HTTP 200) but neither the homepage nor /events/ mentions Innovation Week anywhere - the stored link never names the event. The organiser does run it and has a dedicated page: innovationsask.ca/events/innovation-week/ ('Innovation Week in Saskatchewan - Innovation Saskatchewan', 'May 11-15, 2026', province-wide with sessions in Saskatoon and Regina). That edition is past, so only the URL is patched."
     },
     "insurtechamericasymposium|hartford": {
       "name": "InsurTech America Symposium",
@@ -6064,14 +6024,6 @@
       "cycle": "passC",
       "evidence": "ellbogen50k.org live, University of Wyoming competition (Laramie); 2026 finalists posted and 2026/27 application open, no dates"
     },
-    "jsconfnorthamerica|baltimore": {
-      "name": "JSConf North America",
-      "city": "Baltimore",
-      "status": "corrected",
-      "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "jsconf.com is an unmaintained federation homepage (2019/2017 links) that points to events.linuxfoundation.org/jsconf-north-america; that page shows JSConf North America Oct 14-16 2025 at the Hyatt Regency Chesapeake Bay, Cambridge MD - not Baltimore"
-    },
     "jumpstartexpopitchnight|burlington": {
       "name": "JumpStart Expo & Pitch Night",
       "city": "Burlington",
@@ -6079,14 +6031,6 @@
       "checked_on": "2026-08-26",
       "cycle": "passC",
       "evidence": "generatorvt.com/jumpstart-expo live, 40 Sears Ln Burlington VT; Wednesday April 8 2026 edition past, no next date"
-    },
-    "kentuckydigitalgovernmentsummit|louisville": {
-      "name": "Kentucky Digital Government Summit",
-      "city": "Louisville",
-      "status": "corrected",
-      "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "events.govtech.com Kentucky summit page places the event at the Marriott Griffin Gate Golf Resort, 1800 Newtown Pike, LEXINGTON KY (June 10 2026, now complete) - the recorded city Louisville is wrong"
     },
     "latinasintech|multiplecities": {
       "name": "Latinas in Tech",
@@ -6147,10 +6091,10 @@
     "metabridgelive|kelowna": {
       "name": "Metabridge Live",
       "city": "Kelowna",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "metabridge.ca returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "SQUATTED. www.metabridge.ca redirects to metabridge.ca and returns HTTP 200 with the title 'Magpie Bridge Slot Review | Game by Aspect Gaming'; the entire page is online-casino slot review content (reels, rows, paylines, volatility, RTP, betting range). Nothing on the domain refers to Metabridge Live, Kelowna, or a tech conference. Removal patch emitted."
     },
     "michigandevfest|detroit": {
       "name": "Michigan DevFest",
@@ -6235,10 +6179,10 @@
     "mntechconnect|stpaul": {
       "name": "MnTech Connect",
       "city": "St. Paul",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "mntech.org/tech-connect returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "mntech.org/tech-connect/ loads (HTTP 200) and leads with 'Save the Date for 2027! Thursday, April 1, 2027 8-5pm | Saint Paul RiverCentre'. The 2026 edition (April 9, Saint Paul RiverCentre) is recapped in the past tense. Newly published date 2027-04-01, city St. Paul confirmed by the venue. Patch emitted."
     },
     "mpchacks|montreal": {
       "name": "MPC Hacks",
@@ -6315,10 +6259,10 @@
     "mntechtwincitiesstartupcommunityevents|minneapolis": {
       "name": "MnTech Twin Cities Startup Community Events",
       "city": "Minneapolis",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "mntech.org returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "mntech.org loads (HTTP 200), title 'MnTech | Fueling the Success of Minnesota's Tech Ecosystem'. It is the correct organiser hub for the recurring Minnesota tech community series (Coffee Connect, Tech On Tap, WLiT) and carries a run of 2026 in-person event dates. Correct link for a meetup-series record; no single next date applies."
     },
     "neworleansentrepreneurweek|neworleans": {
       "name": "New Orleans Entrepreneur Week",
@@ -6379,18 +6323,18 @@
     "odsceast|boston": {
       "name": "ODSC East",
       "city": "Boston",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "odsc.com returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "odsc.com/ is a generic landing page shared with the ODSC West record. odsc.com/boston/ redirects to odsc.ai/east/ (HTTP 200), which states 'Center, Boston, MA | May 10-12th, 2027'. Newly published dates 2027-05-10 to 2027-05-12 in Boston, plus an event-specific URL. Patch emitted."
     },
     "odscwest|sanfrancisco": {
       "name": "ODSC West",
       "city": "San Francisco",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "odsc.com returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "odsc.com/california/ redirects to odsc.ai/west/ (HTTP 200), title 'ODSC AI West 2026 - California', hero reads 'Oct 27 - Oct 29 / SAN FRANCISCO / 3 days - 7 tracks - 250+ speakers / Register Now'. Newly published dates 2026-10-27 to 2026-10-29 in San Francisco, plus an event-specific URL replacing the shared odsc.com root. Patch emitted."
     },
     "ohiotechsummit|columbus": {
       "name": "Ohio Tech Summit",
@@ -6427,18 +6371,18 @@
     "outintech|multiplecities": {
       "name": "Out in Tech",
       "city": "Multiple cities",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "outintech.com returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "outintech.com loads (HTTP 200), title 'Out In Tech'. It is the correct organiser for the LGBTQ+ tech chapter meetup series, advertising the 2026 Out in Tech Leadership Institute as an in-person 'two and a half immersive days in New York City' plus chapter counts and an events index. Correct link for a multi-city meetup-series record; no single date applies."
     },
     "pegjam|winnipeg": {
       "name": "PegJam",
       "city": "Winnipeg",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "newmediamanitoba.com returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "newmediamanitoba.com loads (HTTP 200) but neither the homepage nor /events/ mentions PegJam - the stored link never names the event. The event is alive: the site's own search returns newmediamanitoba.com/event/pegjam-2026/ ('PegJam 2026', JSON-LD startDate 2026-02-19T15:30-06:00), described as 'the 9th annual Winnipeg Game Jam, aka PegJam' run with the Winnipeg Game Collective. That edition is past, so only the URL is patched."
     },
     "peibioalliancesummersocial|charlottetown": {
       "name": "PEI BioAlliance Summer Social",
@@ -6755,10 +6699,10 @@
     "tartanhacks|pittsburgh": {
       "name": "TartanHacks",
       "city": "Pittsburgh",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "tartanhacks.com returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "www.tartanhacks.com is dead: HTTP 402 'Payment required / DEPLOYMENT_DISABLED' from Vercel (78-byte body); tartanhacks.org answers HTTP 522. The event itself is not dead - organiser ScottyLabs (scottylabs.org) is live, footer '(c) 2026' with 2026 recruitment open, and its homepage headline is 'We host Pittsburgh's largest annual hackathon,' rendered next to /assets/tartanhacks-logo-gWC8J4Rv.svg. URL patched to the live organiser page; no date is published there."
     },
     "techforgoodconference|chicago": {
       "name": "Tech For Good Conference",
@@ -6835,10 +6779,10 @@
     "techqueria|multiplecities": {
       "name": "Techqueria",
       "city": "Multiple cities",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "techqueria.org returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "techqueria.org loads (HTTP 200), title 'Hola! - Techqueria'. Correct organiser for the Latine-in-tech community, with a chapters index and an 'Events / Techqueria Summit 2026' nav entry covering in-person events across the US. Correct link for a multi-city meetup-series record; no single date applies."
     },
     "techspoboston|boston": {
       "name": "TECHSPO Boston",
@@ -6875,10 +6819,10 @@
     "techstarsstartupweekendlondonontario|london": {
       "name": "Techstars Startup Weekend London Ontario",
       "city": "London",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "techalliance.ca event page returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "techalliance.ca page loads (HTTP 200), titled 'Techstars Startup Weekend London Ontario | TechAlliance of Southwestern Ontario'; its meta description reads 'TechAlliance is bringing Techstars Startup Weekend to London, Ontario for the first time. Build, pitch and launch your startup idea in 54 hours.' The 2026 edition already ran - TechAlliance's news post dated June 3, 2026 is titled 'London's Techstars Startup Weekend 2026 fuels next wave of founders in a 54-hour sprint'. No next date published. Right event, right city."
     },
     "tennocon|london": {
       "name": "TennoCon",
@@ -6899,18 +6843,18 @@
     "thatconferencetexas|roundrock": {
       "name": "THAT Conference Texas",
       "city": "Round Rock",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "thatconference.com returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "DEFUNCT. thatconference.com loads (HTTP 200) and the entire homepage is a wind-down notice: 'After 15 incredible years of bringing together thousands of geeks... we're taking a pause to reimagine THAT Conference... While we won't be hosting THAT Conference, this isn't goodbye', linking to /blog/its-time-we-took-a-pause. No Texas edition is scheduled and /tx/2026 returns 404. Removal patch emitted."
     },
     "thatconferencewisconsin|wisconsindells": {
       "name": "THAT Conference Wisconsin",
       "city": "Wisconsin Dells",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "thatconference.com returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "DEFUNCT. Same source as the Texas record - thatconference.com's homepage is now only the pause notice ('While we won't be hosting THAT Conference, this isn't goodbye'), with no Wisconsin edition scheduled and /wi/2026 returning 404. Removal patch emitted."
     },
     "thebigdif|hamilton": {
       "name": "The Big DiF",
@@ -6931,10 +6875,10 @@
     "thenewarksummit|newark": {
       "name": "The Newark Summit",
       "city": "Newark",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "thenewarksummit.com returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "thenewarksummit.com redirects to /2026/ and loads (HTTP 200), titled 'The Newark Summit'. Copy reads 'See Who Attended Our 3rd Annual Gathering on Feb 9, 2026' and invites people to 'Join Our 4th' annual gathering; the site is actively maintained (news items dated Aug 25, 2026) and the contact block gives a Newark NJ 07102 address. Right event, right city. No 4th-edition date published yet."
     },
     "theideavillagedemoday|neworleans": {
       "name": "The Idea Village Demo Day",
@@ -7019,10 +6963,10 @@
     "urbanfuturescocreatingclimateresilienceinnychackathon|newyork": {
       "name": "Urban Futures: Co-Creating Climate Resilience in NYC Hackathon",
       "city": "New York",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "amnh.org hackathon page returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "amnh.org page loads (HTTP 200), title 'Hackathon 2026 NYC - Urban Futures: Climate Resilience | AMNH'. The January 15-17, 2026 edition is past and the page now states '2027 hackathon dates, and the link to apply will be posted later this year. Dates: To be announced.' Location given as 'American Museum of Natural History, New York'. Right event, right city, no date yet."
     },
     "utahtechcalendarcommunitymeetups|saltlakecity": {
       "name": "Utah Tech Calendar Community Meetups",
@@ -7091,10 +7035,10 @@
     "vslivemicrosofthq|redmond": {
       "name": "VSLive! @ Microsoft HQ",
       "city": "Redmond",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "vslive.com event page returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "The stored microsofthq-2026 page shows July 27-31, 2026, now past. vslive.com/events/microsofthq-2027/home.aspx exists and loads (HTTP 200), titled 'Microsoft HQ 2027 -- Visual Studio Live!', advertising 'AUG 2-6, 2027' with 'campus experiences waiting for you in Redmond, WA' and the Hyatt Regency Bellevue as conference hotel. URL and newly published dates 2027-08-02 to 2027-08-06 patched."
     },
     "wetechalliancecommunityevents|windsor": {
       "name": "WEtech Alliance Community Events",
@@ -7179,10 +7123,10 @@
     "yhack|newhaven": {
       "name": "YHack",
       "city": "New Haven",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "yhack.org returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "yhack.org loads (HTTP 200), title 'YHack - Spring 2026', describing 'Yale's flagship hackathon, bringing together 600+ college builders for 24 hours of weekend hacking'. The March 28-29, 2026 edition is past and the page now says 'View projects and subscribe for YHack 2027 updates!' - alive, but no 2027 date published. Right event, right city (Yale, New Haven)."
     },
     "yquantum|newhaven": {
       "name": "YQuantum",
@@ -7211,10 +7155,10 @@
     "baltimorehealthtechstartupsymposium|baltimore": {
       "name": "Baltimore Health Tech Startup Symposium",
       "city": "Baltimore",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "ventures.jhu.edu event page returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "ventures.jhu.edu event page loads (HTTP 200), titled 'Baltimore Health Tech Startup Symposium - Johns Hopkins Technology Ventures'. JSON-LD gives startDate 2026-05-01T09:30-04:00 / endDate 2026-05-01T11:30-04:00; that edition is already past and no next edition is published. Right event, right city (Johns Hopkins, Baltimore). No date to patch in."
     },
     "bostonpythonusergroup|cambridge": {
       "name": "Boston Python User Group",
@@ -7235,10 +7179,10 @@
     "investinginmontanasummit|bozeman": {
       "name": "Investing in Montana Summit",
       "city": "Bozeman",
-      "status": "blocked",
+      "status": "confirmed",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "mthightech.org event page returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "mthightech.org/events/2026-investing-in-montana-summit loads (HTTP 200), title '2026 Investing in Montana Summit'. JSON-LD startDate 2026-06-25T10:00-0600, venue 'AC Hotel by Marriott Bozeman Downtown, 110 North Tracy Avenue' - confirms Bozeman. Date is past and no next edition is announced."
     },
     "itsnorthernlightsconference|siouxfalls": {
       "name": "ITS Northern Lights Conference",
@@ -7259,10 +7203,10 @@
     "newtechseattle|seattle": {
       "name": "New Tech Seattle",
       "city": "Seattle",
-      "status": "blocked",
+      "status": "corrected",
       "checked_on": "2026-08-26",
-      "cycle": "passC",
-      "evidence": "geekwire.com/calendar returns HTTP 403 to fetch"
+      "cycle": "unblockB",
+      "evidence": "The stored link geekwire.com/calendar/ loads (HTTP 200) but is GeekWire's generic community calendar - the string 'New Tech' appears zero times on it, so the link never names the event. The organiser's own site newtechnorthwest.com is live and lists 'New Tech Seattle September 2026 Meetup - September 15, 2026' plus 'Join us at the next monthly New Tech Seattle event'. URL patched to the organiser; left undated because it is a monthly series."
     },
     "techweeknewyork|newyork": {
       "name": "Tech Week New York",
@@ -7295,6 +7239,70 @@
       "checked_on": "2026-08-26",
       "cycle": "passC",
       "evidence": "techstars.com/communities/startup-weekend live but is the generic global programme page - no Reno event or date listed; link quality flagged"
+    },
+    "jsconfnorthamerica|cambridge": {
+      "name": "JSConf North America",
+      "city": "Cambridge",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "passC",
+      "evidence": "jsconf.com is an unmaintained federation homepage (2019/2017 links) that points to events.linuxfoundation.org/jsconf-north-america; that page shows JSConf North America Oct 14-16 2025 at the Hyatt Regency Chesapeake Bay, Cambridge MD - not Baltimore"
+    },
+    "kentuckydigitalgovernmentsummit|lexington": {
+      "name": "Kentucky Digital Government Summit",
+      "city": "Lexington",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "passC",
+      "evidence": "events.govtech.com Kentucky summit page places the event at the Marriott Griffin Gate Golf Resort, 1800 Newtown Pike, LEXINGTON KY (June 10 2026, now complete) - the recorded city Louisville is wrong"
+    },
+    "nvtccybersummitcyber50awards|mclean": {
+      "name": "NVTC Cyber Summit & Cyber50 Awards",
+      "city": "McLean",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "passA",
+      "evidence": "nvtc.org/events/ lists 'NVTC Cyber Summit & Cyber50 Awards, Oct 28, 2026 | McLean, VA'. Date correct; city was wrong (Reston -> McLean)"
+    },
+    "baypiggiesbayareapythoninterestgroup|sanjose": {
+      "name": "BayPIGgies (Bay Area Python Interest Group)",
+      "city": "San Jose",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "passA",
+      "evidence": "meetup.com/baypiggies shows next meeting Thu, Aug 27 6:30 PM PDT at West Valley Branch Library, 1243 San Tomas Aquino Rd, San Jose, CA. Date correct, city was wrong (Mountain View -> San Jose)"
+    },
+    "dvconus|santaclara": {
+      "name": "DVCon U.S.",
+      "city": "Santa Clara",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "passB",
+      "evidence": "dvcon.org: 'March 1 - 4, 2027 | Santa Clara, CA, United States' at the Hyatt Regency Santa Clara. Dates match; the city was recorded as San Jose and is patched to Santa Clara"
+    },
+    "bsidesicsot|tampa": {
+      "name": "BSides ICS/OT",
+      "city": "Tampa",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "passC",
+      "evidence": "bsidesics.org: event runs the day before S4; 2026 edition was Miami but the site now advertises 'BSidesICS/OT 2027 Tampa, FL' (details TBA) - next edition city is Tampa, not Miami"
+    },
+    "hawaiiinternationalconferenceonsystemsciences|waikoloa": {
+      "name": "Hawaii International Conference on System Sciences",
+      "city": "Waikoloa",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "passC",
+      "evidence": "hicss.hawaii.edu announces HICSS January 5-8 2027 at the Hilton Waikoloa Village on the Big Island - date now published and venue is Waikoloa, not Honolulu"
+    },
+    "nvtctech100celebration|mclean": {
+      "name": "NVTC Tech100 Celebration",
+      "city": "McLean",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "orchestrator",
+      "evidence": "nvtc.org JSON-LD: Tech100 Celebration, 2026-12-15 18:00-20:00, Hilton McLean Tysons Corner, McLean VA. Date correct, city was Reston."
     }
   },
   "updated_on": "2026-08-26"
