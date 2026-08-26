@@ -88,6 +88,29 @@ Reviewers never edit `data/raw/` directly. They write patch files to `data/revie
 `scripts/apply-patches.mjs` applies — so cycles can run in parallel without clobbering each
 other, and `data/review/APPLIED.md` records every correction with the reason it was made.
 
+### The verification ledger
+
+Early rounds kept re-deciding what to check, which wasted effort on settled events and left
+others untouched for rounds on end. `data/review/VERIFIED.md` fixes that: it records which
+events have actually been checked against the organiser's own page, and for the ones that
+could not be, exactly what blocked them.
+
+| status | meaning |
+|---|---|
+| `confirmed` | read the page, record correct as stored — skip |
+| `corrected` | read the page, record was wrong, patched — skip |
+| `blocked` | attempted, page unreadable by fetch — needs a web search or a human with a browser |
+| _absent_ | never checked — verify first |
+
+A reviewer writes `data/review/confirm-<pass>.json` for **every** row it attempts, whatever
+the outcome, and `node scripts/ledger.mjs` merges those in and regenerates both the ledger
+and `data/review/TO-VERIFY.tsv` — the working list of everything unchecked or blocked,
+dated events first and soonest first. A stronger outcome or a newer check date always wins,
+so a re-check refreshes a stale entry rather than being discarded.
+
+The `blocked` list is the useful by-product: it is precisely the set where a web search
+would earn its cost, rather than being spent re-reading pages that already answered.
+
 ## What counts as an event here
 
 Anything you physically go to, where you meet people and the subject is technology.
