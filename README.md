@@ -8,7 +8,7 @@ organiser's own page.
 Every listing links to the organiser, not to a ticket reseller, and no date in the dataset
 was written down without someone fetching the page it came from.
 
-**894 events · 236 cities · 63 states, provinces and territories · 745 US / 149 Canada**
+**885 events · 237 cities · 63 states, provinces and territories**
 
 Coverage is complete for every US state and every Canadian province. Two jurisdictions are
 genuinely empty — the **Northwest Territories** and **Nunavut**. That is not an oversight:
@@ -158,10 +158,8 @@ yet. Dropping them from *Upcoming* would hide most of the calendar, so:
 
 - **Dates move.** Every listing carries the organiser's own link and that link is the
   source of truth. Confirm there before booking travel.
-- **869 of 894 links resolve** to a live page under automated probing. Of the remainder,
-  about 35 return 403 or 429 — Gartner, RSAC, ODSC, ServiceNow and SecTor among them.
-  They are fine in a browser; they just block bots. A handful more are servers that fail
-  intermittently and were confirmed live by hand.
+- **877 of 885 links resolve.** The eight that do not are bot walls at Gartner-class
+  vendors (SAP, NetSuite, ServiceNow) plus two rate limiters, all fine in a browser.
 - Where a chapter network genuinely has no per-city page (some DevOpsDays and Nerd Nite
   chapters), the listing points at the network's main site.
 - Attendance figures are approximate and only present where an organiser published one.

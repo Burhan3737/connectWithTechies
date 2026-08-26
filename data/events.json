@@ -1,7 +1,7 @@
 {
   "generated_on": "2026-08-26",
-  "event_count": 892,
-  "city_count": 236,
+  "event_count": 885,
+  "city_count": 237,
   "events": [
     {
       "name": "Global Game Jam - Abilene Christian University",
@@ -378,6 +378,34 @@
       "source_file": "review-additions"
     },
     {
+      "name": "Alaska Digital Government Summit",
+      "type": "summit",
+      "topics": [
+        "govtech",
+        "public-sector",
+        "cybersecurity"
+      ],
+      "city": "Anchorage",
+      "region": "Alaska",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "2026-10-08",
+      "next_date_end": "2026-10-08",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "300",
+      "cost": "free",
+      "audience": "public sector technology professionals, government IT leaders",
+      "url": "https://events.govtech.com/Alaska-Digital-Government-Summit",
+      "description": "A Government Technology summit bringing together Alaska's public sector technology professionals and industry partners to improve services and security for Alaskans.",
+      "source": "https://events.govtech.com/Alaska-Digital-Government-Summit",
+      "sort_date": "2026-10-08",
+      "id": "alaska-digital-government-summit-anchorage",
+      "source_file": "us-west"
+    },
+    {
       "name": "Alaska Entrepreneurship Week",
       "type": "startup-week",
       "topics": [
@@ -460,34 +488,6 @@
       "source": "https://summit.aksbdc.org/",
       "sort_date": "2026-03-06",
       "id": "alaska-sbdc-summit-anchorage",
-      "source_file": "us-west"
-    },
-    {
-      "name": "Alaska Digital Government Summit",
-      "type": "summit",
-      "topics": [
-        "govtech",
-        "public-sector",
-        "cybersecurity"
-      ],
-      "city": "Anchorage",
-      "region": "Alaska",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "300",
-      "cost": "free",
-      "audience": "public sector technology professionals, government IT leaders",
-      "url": "https://events.govtech.com/Alaska-Digital-Government-Summit",
-      "description": "A Government Technology summit bringing together Alaska's public sector technology professionals and industry partners to improve services and security for Alaskans.",
-      "source": "https://events.govtech.com/Alaska-Digital-Government-Summit",
-      "sort_date": "",
-      "id": "alaska-digital-government-summit-anchorage",
       "source_file": "us-west"
     },
     {
@@ -1830,34 +1830,6 @@
       "source_file": "categories"
     },
     {
-      "name": "JSConf North America",
-      "type": "conference",
-      "topics": [
-        "javascript",
-        "web",
-        "open-source"
-      ],
-      "city": "Baltimore",
-      "region": "Maryland",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "JavaScript developers",
-      "url": "https://jsconf.com/",
-      "description": "The North American edition of the loosely federated JSConf network of independently run JavaScript conferences.",
-      "source": "https://jsconf.com/",
-      "sort_date": "",
-      "id": "jsconf-north-america-baltimore",
-      "source_file": "categories"
-    },
-    {
       "name": "Maker Faire Baton Rouge",
       "type": "festival",
       "topics": [
@@ -1885,34 +1857,6 @@
       "sort_date": "2026-10-17",
       "id": "maker-faire-baton-rouge-baton-rouge",
       "source_file": "review-additions-3"
-    },
-    {
-      "name": "Innovate QA",
-      "type": "conference",
-      "topics": [
-        "software-testing",
-        "qa",
-        "automation"
-      ],
-      "city": "Bellevue",
-      "region": "Washington",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "200",
-      "cost": "paid",
-      "audience": "QA engineers, test automation specialists",
-      "url": "https://dev.events/NA/US/WA/Bellevue/tech",
-      "description": "An annual software quality conference on the Seattle eastside covering test automation, quality engineering practice and AI in testing.",
-      "source": "https://dev.events/NA/US/WA/Bellevue/tech",
-      "sort_date": "",
-      "id": "innovate-qa-bellevue",
-      "source_file": "us-west"
     },
     {
       "name": "NWA Tech Summit",
@@ -2245,7 +2189,7 @@
       "attendance": "",
       "cost": "paid",
       "audience": "government IT leaders",
-      "url": "https://dev.events/NA/US/MN/tech",
+      "url": "https://fusionlp.org/govit-2026",
       "description": "A Minnesota summit and symposium for public-sector technology leaders on government IT modernization, security and service delivery.",
       "source": "https://dev.events/NA/US/MN/tech",
       "sort_date": "2026-11-08",
@@ -2324,10 +2268,10 @@
       "venue": "Boise Centre",
       "cadence": "annual",
       "month": "September",
-      "next_date": "",
-      "next_date_end": "",
+      "next_date": "2026-09-01",
+      "next_date_end": "2026-09-01",
       "last_date": "2026-09-01",
-      "status": "recurring-tbd",
+      "status": "upcoming",
       "attendance": "400",
       "cost": "free",
       "audience": "state and local government IT leaders, public sector technologists",
@@ -3582,7 +3526,7 @@
       "attendance": "",
       "cost": "free",
       "audience": "founders, operators, students, ecosystem partners",
-      "url": "https://platformcalgary.com/",
+      "url": "https://platformcalgary.com/events/",
       "description": "Platform Calgary's monthly networking and thought-leadership series bringing the city's innovation community together at the Platform Innovation Centre.",
       "source": "https://calgary.tech/2026/02/14/platform-calgary-kicks-off-2026-community-connect-series/",
       "sort_date": "2026-02-19",
@@ -3789,6 +3733,34 @@
       "sort_date": "2025-01-23",
       "id": "reality-hack-at-mit-cambridge",
       "source_file": "us-east"
+    },
+    {
+      "name": "JSConf North America",
+      "type": "conference",
+      "topics": [
+        "javascript",
+        "web",
+        "open-source"
+      ],
+      "city": "Cambridge",
+      "region": "Maryland",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "JavaScript developers",
+      "url": "https://events.linuxfoundation.org/jsconf-north-america/",
+      "description": "The North American edition of the loosely federated JSConf network of independently run JavaScript conferences.",
+      "source": "https://jsconf.com/",
+      "sort_date": "",
+      "id": "jsconf-north-america-cambridge",
+      "source_file": "categories"
     },
     {
       "name": "Code for Boston Hack Night",
@@ -4670,6 +4642,34 @@
       "source_file": "us-central"
     },
     {
+      "name": "Cybersecurity Summit Chicago",
+      "type": "summit",
+      "topics": [
+        "cybersecurity",
+        "ciso",
+        "risk"
+      ],
+      "city": "Chicago",
+      "region": "Illinois",
+      "country": "United States",
+      "venue": "Hyatt Regency Chicago",
+      "cadence": "annual",
+      "month": "March",
+      "next_date": "2026-09-15",
+      "next_date_end": "2026-09-15",
+      "last_date": "2026-03-03",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "CISOs, security practitioners, executives",
+      "url": "https://cybersecuritysummit.com",
+      "description": "A one-day executive cybersecurity summit at the Hyatt Regency Chicago connecting security leaders with solution providers and peer practitioners.",
+      "source": "https://xl.net/blog/top-tech-conferences-chicago/",
+      "sort_date": "2026-09-15",
+      "id": "cybersecurity-summit-chicago-chicago",
+      "source_file": "us-central"
+    },
+    {
       "name": "ElixirConf US",
       "type": "conference",
       "topics": [
@@ -4781,34 +4781,6 @@
       "sort_date": "2026-05-16",
       "id": "bsides-312-chicago",
       "source_file": "categories"
-    },
-    {
-      "name": "Cybersecurity Summit Chicago",
-      "type": "summit",
-      "topics": [
-        "cybersecurity",
-        "ciso",
-        "risk"
-      ],
-      "city": "Chicago",
-      "region": "Illinois",
-      "country": "United States",
-      "venue": "Hyatt Regency Chicago",
-      "cadence": "annual",
-      "month": "March",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-03-03",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "CISOs, security practitioners, executives",
-      "url": "https://cybersecuritysummit.com",
-      "description": "A one-day executive cybersecurity summit at the Hyatt Regency Chicago connecting security leaders with solution providers and peer practitioners.",
-      "source": "https://xl.net/blog/top-tech-conferences-chicago/",
-      "sort_date": "2026-03-03",
-      "id": "cybersecurity-summit-chicago-chicago",
-      "source_file": "us-central"
     },
     {
       "name": "Tech For Good Conference",
@@ -5348,6 +5320,34 @@
       "source_file": "review-additions-3"
     },
     {
+      "name": "QA or the Highway",
+      "type": "conference",
+      "topics": [
+        "software-testing",
+        "qa",
+        "automation"
+      ],
+      "city": "Columbus",
+      "region": "Ohio",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "2027-06-11",
+      "next_date_end": "2027-06-11",
+      "last_date": "2026-06-12",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "QA engineers, testers, developers",
+      "url": "https://qaorthehwy.com/",
+      "description": "A one-day Midwest software testing conference in Columbus, with practitioner talks on manual and automated quality engineering.",
+      "source": "https://www.techlifecolumbus.com/tech-conferences/",
+      "sort_date": "2027-06-11",
+      "id": "qa-or-the-highway-columbus",
+      "source_file": "us-east"
+    },
+    {
       "name": "BSides CMH",
       "type": "conference",
       "topics": [
@@ -5513,34 +5513,6 @@
       "source": "https://www.techlifecolumbus.com/tech-conferences/",
       "sort_date": "2026-09-09",
       "id": "tech-tomorrow-columbus",
-      "source_file": "us-east"
-    },
-    {
-      "name": "QA or the Highway",
-      "type": "conference",
-      "topics": [
-        "software-testing",
-        "qa",
-        "automation"
-      ],
-      "city": "Columbus",
-      "region": "Ohio",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "June",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-06-12",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "QA engineers, testers, developers",
-      "url": "https://qaorthehwy.com/",
-      "description": "A one-day Midwest software testing conference in Columbus, with practitioner talks on manual and automated quality engineering.",
-      "source": "https://www.techlifecolumbus.com/tech-conferences/",
-      "sort_date": "2026-06-12",
-      "id": "qa-or-the-highway-columbus",
       "source_file": "us-east"
     },
     {
@@ -6071,17 +6043,17 @@
       "venue": "",
       "cadence": "annual",
       "month": "May",
-      "next_date": "",
-      "next_date_end": "",
+      "next_date": "2027-05-15",
+      "next_date_end": "2027-05-15",
       "last_date": "2026-05-23",
-      "status": "recurring-tbd",
+      "status": "upcoming",
       "attendance": "",
       "cost": "freemium",
       "audience": "security practitioners, defence sector",
       "url": "https://bsidesdayton.com",
       "description": "Dayton's Security BSides, close to the Wright-Patterson defence technology community.",
       "source": "https://www.allbsides.com/",
-      "sort_date": "2026-05-23",
+      "sort_date": "2027-05-15",
       "id": "bsides-dayton-dayton",
       "source_file": "categories"
     },
@@ -6112,6 +6084,35 @@
       "sort_date": "2026-10-03",
       "id": "hack-dearborn-dearborn",
       "source_file": "categories"
+    },
+    {
+      "name": "Rocky Mountain Technology Summit",
+      "type": "summit",
+      "topics": [
+        "it-leadership",
+        "cybersecurity",
+        "ai",
+        "enterprise"
+      ],
+      "city": "Denver",
+      "region": "Colorado",
+      "country": "United States",
+      "venue": "Embassy Suites Denver Downtown",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-05-25",
+      "next_date_end": "2027-05-25",
+      "last_date": "2026-05-12",
+      "status": "upcoming",
+      "attendance": "500",
+      "cost": "free",
+      "audience": "IT and security executives, technology managers",
+      "url": "https://technologysummit.net/rocky.html",
+      "description": "A one-day B2B summit for Colorado's technology and security community, with executive panels, vendor showcases and CPE-eligible sessions.",
+      "source": "https://technologysummit.net/rocky.html",
+      "sort_date": "2027-05-25",
+      "id": "rocky-mountain-technology-summit-denver",
+      "source_file": "us-west"
     },
     {
       "name": "Product-Led Summit Denver",
@@ -6340,35 +6341,6 @@
       "source": "https://dev.events/NA/US/CO",
       "sort_date": "2026-08-26",
       "id": "drupalcamp-colorado-denver",
-      "source_file": "us-west"
-    },
-    {
-      "name": "Rocky Mountain Technology Summit",
-      "type": "summit",
-      "topics": [
-        "it-leadership",
-        "cybersecurity",
-        "ai",
-        "enterprise"
-      ],
-      "city": "Denver",
-      "region": "Colorado",
-      "country": "United States",
-      "venue": "Embassy Suites Denver Downtown",
-      "cadence": "annual",
-      "month": "May",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-05-12",
-      "status": "recurring-tbd",
-      "attendance": "500",
-      "cost": "free",
-      "audience": "IT and security executives, technology managers",
-      "url": "https://technologysummit.net/rocky.html",
-      "description": "A one-day B2B summit for Colorado's technology and security community, with executive panels, vendor showcases and CPE-eligible sessions.",
-      "source": "https://technologysummit.net/rocky.html",
-      "sort_date": "2026-05-12",
-      "id": "rocky-mountain-technology-summit-denver",
       "source_file": "us-west"
     },
     {
@@ -6936,6 +6908,34 @@
       "source_file": "categories"
     },
     {
+      "name": "GameCon Canada",
+      "type": "expo",
+      "topics": [
+        "gaming",
+        "esports",
+        "community"
+      ],
+      "city": "Edmonton",
+      "region": "Alberta",
+      "country": "Canada",
+      "venue": "",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "2027-06-25",
+      "next_date_end": "2027-06-27",
+      "last_date": "2026-06-19",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "gamers, indie developers, esports players",
+      "url": "https://gameconcanada.com/",
+      "description": "Edmonton's gaming convention with indie showcases, esports tournaments, tabletop halls and creator panels.",
+      "source": "https://mobilesyrup.com/2026/04/23/the-ultimate-list-of-canadian-video-game-events/",
+      "sort_date": "2027-06-25",
+      "id": "gamecon-canada-edmonton",
+      "source_file": "canada"
+    },
+    {
       "name": "Upper Bound",
       "type": "conference",
       "topics": [
@@ -7018,34 +7018,6 @@
       "source": "https://www.bsidesedmonton.org/",
       "sort_date": "2026-09-24",
       "id": "bsides-edmonton-edmonton",
-      "source_file": "canada"
-    },
-    {
-      "name": "GameCon Canada",
-      "type": "expo",
-      "topics": [
-        "gaming",
-        "esports",
-        "community"
-      ],
-      "city": "Edmonton",
-      "region": "Alberta",
-      "country": "Canada",
-      "venue": "",
-      "cadence": "annual",
-      "month": "June",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-06-19",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "gamers, indie developers, esports players",
-      "url": "https://gameconcanada.com/",
-      "description": "Edmonton's gaming convention with indie showcases, esports tournaments, tabletop halls and creator panels.",
-      "source": "https://mobilesyrup.com/2026/04/23/the-ultimate-list-of-canadian-video-game-events/",
-      "sort_date": "2026-06-19",
-      "id": "gamecon-canada-edmonton",
       "source_file": "canada"
     },
     {
@@ -8319,35 +8291,6 @@
       "source_file": "review-additions-3"
     },
     {
-      "name": "Hawaii International Conference on System Sciences",
-      "type": "conference",
-      "topics": [
-        "information-systems",
-        "research",
-        "academic",
-        "ai"
-      ],
-      "city": "Honolulu",
-      "region": "Hawaii",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "January",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "1000",
-      "cost": "paid",
-      "audience": "academics, information systems researchers, PhD students",
-      "url": "https://hicss.hawaii.edu/",
-      "description": "One of the longest-running information systems research conferences, held annually in Hawaii each January with peer-reviewed tracks across computing and IS disciplines.",
-      "source": "https://en.wikipedia.org/wiki/Hawaii_International_Conference_on_System_Sciences",
-      "sort_date": "",
-      "id": "hawaii-international-conference-on-system-sciences-honolulu",
-      "source_file": "us-west"
-    },
-    {
       "name": "HTDC Events",
       "type": "meetup-series",
       "topics": [
@@ -9089,6 +9032,35 @@
       "source_file": "review-additions-2"
     },
     {
+      "name": "Mississippi Digital Government Summit",
+      "type": "summit",
+      "topics": [
+        "govtech",
+        "cybersecurity",
+        "ai",
+        "data-governance"
+      ],
+      "city": "Jackson",
+      "region": "Mississippi",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "2026-09-09",
+      "next_date_end": "2026-09-09",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "state and local government IT leaders",
+      "url": "https://events.govtech.com/Mississippi-Digital-Government-Summit",
+      "description": "A summit bringing Mississippi state and local government leaders together on cybersecurity, AI, data governance and digital service delivery.",
+      "source": "https://events.govtech.com/Mississippi-Digital-Government-Summit",
+      "sort_date": "2026-09-09",
+      "id": "mississippi-digital-government-summit-jackson",
+      "source_file": "us-central"
+    },
+    {
       "name": "CONNECT: Networking for Entrepreneurs",
       "type": "meetup-series",
       "topics": [
@@ -9200,35 +9172,6 @@
       "sort_date": "",
       "id": "silicon-couloir-chance-meetings-jackson",
       "source_file": "review-additions-3"
-    },
-    {
-      "name": "Mississippi Digital Government Summit",
-      "type": "summit",
-      "topics": [
-        "govtech",
-        "cybersecurity",
-        "ai",
-        "data-governance"
-      ],
-      "city": "Jackson",
-      "region": "Mississippi",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "free",
-      "audience": "state and local government IT leaders",
-      "url": "https://events.govtech.com/Mississippi-Digital-Government-Summit",
-      "description": "A summit bringing Mississippi state and local government leaders together on cybersecurity, AI, data governance and digital service delivery.",
-      "source": "https://events.govtech.com/Mississippi-Digital-Government-Summit",
-      "sort_date": "",
-      "id": "mississippi-digital-government-summit-jackson",
-      "source_file": "us-central"
     },
     {
       "name": "Jersey City Entrepreneurs: The Venture Garden",
@@ -9932,7 +9875,7 @@
       "attendance": "",
       "cost": "paid",
       "audience": "developers, AI-assisted builders, founders",
-      "url": "https://dev.events/NA/US/NV",
+      "url": "https://vibecodingcon.ai",
       "description": "A conference on AI-assisted software development practice - agentic coding tools, prompt-driven engineering and shipping software with LLMs.",
       "source": "https://dev.events/NA/US/NV",
       "sort_date": "2026-10-27",
@@ -9962,9 +9905,9 @@
       "attendance": "25000",
       "cost": "paid",
       "audience": "Oracle customers, developers, IT leaders",
-      "url": "https://www.oracle.com/openworld/",
+      "url": "https://www.oracle.com/ai-world/",
       "description": "Oracle's flagship annual conference, rebranded from CloudWorld, covering AI, data platforms, business applications, cloud infrastructure and databases.",
-      "source": "https://dev.events/NA/US/NV",
+      "source": "https://www.oracle.com/ai-world/",
       "sort_date": "2026-10-25",
       "id": "oracle-ai-world-las-vegas",
       "source_file": "us-west"
@@ -10137,34 +10080,6 @@
       "source": "https://www.sans.org/cyber-security-training-events/",
       "sort_date": "2026-09-21",
       "id": "sans-network-security-las-vegas",
-      "source_file": "categories"
-    },
-    {
-      "name": "Oracle CloudWorld",
-      "type": "conference",
-      "topics": [
-        "cloud",
-        "database",
-        "enterprise"
-      ],
-      "city": "Las Vegas",
-      "region": "Nevada",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "September",
-      "next_date": "2026-09-15",
-      "next_date_end": "2026-09-18",
-      "last_date": "",
-      "status": "upcoming",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "Oracle customers, database and cloud engineers",
-      "url": "https://www.oracle.com/cloudworld/",
-      "description": "Oracle's annual customer and developer conference covering its cloud infrastructure, database and enterprise applications.",
-      "source": "https://eventbrowse.com/event/oracle-cloudworld-2026/",
-      "sort_date": "2026-09-15",
-      "id": "oracle-cloudworld-las-vegas",
       "source_file": "categories"
     },
     {
@@ -10392,6 +10307,35 @@
       "source_file": "review-additions-2"
     },
     {
+      "name": "Kentucky Digital Government Summit",
+      "type": "summit",
+      "topics": [
+        "govtech",
+        "cybersecurity",
+        "ai",
+        "public-sector"
+      ],
+      "city": "Lexington",
+      "region": "Kentucky",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "state and local government IT leaders",
+      "url": "https://events.govtech.com/kentucky-digital-government-summit",
+      "description": "A Government Technology summit for Kentucky state and local public-sector technology leaders on modernization, cybersecurity, AI and digital services.",
+      "source": "https://events.govtech.com/kentucky-digital-government-summit",
+      "sort_date": "",
+      "id": "kentucky-digital-government-summit-lexington",
+      "source_file": "us-central"
+    },
+    {
       "name": "Nebraska.Code()",
       "type": "conference",
       "topics": [
@@ -10477,6 +10421,35 @@
       "source_file": "review-additions-3"
     },
     {
+      "name": "Arkansas Digital Government Summit",
+      "type": "summit",
+      "topics": [
+        "govtech",
+        "cybersecurity",
+        "ai",
+        "public-sector"
+      ],
+      "city": "Little Rock",
+      "region": "Arkansas",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "2026-10-13",
+      "next_date_end": "2026-10-13",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "state and local government IT leaders",
+      "url": "https://events.govtech.com/arkansas-digital-government-summit",
+      "description": "A Government Technology summit for Arkansas public-sector technology leaders covering modernization, cybersecurity, AI and digital service delivery.",
+      "source": "https://events.govtech.com/arkansas-digital-government-summit",
+      "sort_date": "2026-10-13",
+      "id": "arkansas-digital-government-summit-little-rock",
+      "source_file": "us-central"
+    },
+    {
       "name": "Arkansas IT Symposium",
       "type": "conference",
       "topics": [
@@ -10505,33 +10478,33 @@
       "source_file": "us-central"
     },
     {
-      "name": "Arkansas Digital Government Summit",
-      "type": "summit",
+      "name": "HackUSU",
+      "type": "hackathon",
       "topics": [
-        "govtech",
-        "cybersecurity",
-        "ai",
-        "public-sector"
+        "hackathon",
+        "students",
+        "software",
+        "hardware"
       ],
-      "city": "Little Rock",
-      "region": "Arkansas",
+      "city": "Logan",
+      "region": "Utah",
       "country": "United States",
-      "venue": "",
+      "venue": "Huntsman Hall, Utah State University",
       "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "",
+      "month": "February",
+      "next_date": "2027-02-19",
+      "next_date_end": "2027-02-20",
+      "last_date": "2026-02-27",
+      "status": "upcoming",
+      "attendance": "600",
       "cost": "free",
-      "audience": "state and local government IT leaders",
-      "url": "https://events.govtech.com/arkansas-digital-government-summit",
-      "description": "A Government Technology summit for Arkansas public-sector technology leaders covering modernization, cybersecurity, AI and digital service delivery.",
-      "source": "https://events.govtech.com/arkansas-digital-government-summit",
-      "sort_date": "",
-      "id": "arkansas-digital-government-summit-little-rock",
-      "source_file": "us-central"
+      "audience": "college students, high school seniors",
+      "url": "https://huntsman.usu.edu/hackusu/",
+      "description": "Utah's largest collegiate hackathon, a 24-hour innovation challenge at Utah State University with workshops, industry mentors and prizes.",
+      "source": "https://huntsman.usu.edu/hackusu/",
+      "sort_date": "2027-02-19",
+      "id": "hackusu-logan",
+      "source_file": "us-west"
     },
     {
       "name": "BSidesCache",
@@ -10562,33 +10535,32 @@
       "source_file": "us-west"
     },
     {
-      "name": "HackUSU",
-      "type": "hackathon",
+      "name": "TennoCon",
+      "type": "festival",
       "topics": [
-        "hackathon",
-        "students",
-        "software",
-        "hardware"
+        "gaming",
+        "game-development",
+        "community"
       ],
-      "city": "Logan",
-      "region": "Utah",
-      "country": "United States",
-      "venue": "Huntsman Hall, Utah State University",
+      "city": "London",
+      "region": "Ontario",
+      "country": "Canada",
+      "venue": "RBC Place London",
       "cadence": "annual",
-      "month": "February",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-02-27",
-      "status": "recurring-tbd",
-      "attendance": "600",
-      "cost": "free",
-      "audience": "college students, high school seniors",
-      "url": "https://huntsman.usu.edu/hackusu/",
-      "description": "Utah's largest collegiate hackathon, a 24-hour innovation challenge at Utah State University with workshops, industry mentors and prizes.",
-      "source": "https://huntsman.usu.edu/hackusu/",
-      "sort_date": "2026-02-27",
-      "id": "hackusu-logan",
-      "source_file": "us-west"
+      "month": "July",
+      "next_date": "2027-07-16",
+      "next_date_end": "2027-07-17",
+      "last_date": "2026-07-11",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "gamers, developers, Warframe community",
+      "url": "https://www.tennocon.com/en",
+      "description": "Digital Extremes' annual community convention in its home city of London, Ontario, with developer panels, studio reveals and dev-to-player sessions.",
+      "source": "https://mobilesyrup.com/2026/04/23/the-ultimate-list-of-canadian-video-game-events/",
+      "sort_date": "2027-07-16",
+      "id": "tennocon-london",
+      "source_file": "canada"
     },
     {
       "name": "Hack Western",
@@ -10616,34 +10588,6 @@
       "source": "https://www.hackwestern.com/",
       "sort_date": "2026-11-20",
       "id": "hack-western-london",
-      "source_file": "canada"
-    },
-    {
-      "name": "TennoCon",
-      "type": "festival",
-      "topics": [
-        "gaming",
-        "game-development",
-        "community"
-      ],
-      "city": "London",
-      "region": "Ontario",
-      "country": "Canada",
-      "venue": "RBC Place London",
-      "cadence": "annual",
-      "month": "July",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-07-11",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "gamers, developers, Warframe community",
-      "url": "https://www.tennocon.com/en",
-      "description": "Digital Extremes' annual community convention in its home city of London, Ontario, with developer panels, studio reveals and dev-to-player sessions.",
-      "source": "https://mobilesyrup.com/2026/04/23/the-ultimate-list-of-canadian-video-game-events/",
-      "sort_date": "2026-07-11",
-      "id": "tennocon-london",
       "source_file": "canada"
     },
     {
@@ -11076,35 +11020,6 @@
       "source_file": "us-central"
     },
     {
-      "name": "Kentucky Digital Government Summit",
-      "type": "summit",
-      "topics": [
-        "govtech",
-        "cybersecurity",
-        "ai",
-        "public-sector"
-      ],
-      "city": "Louisville",
-      "region": "Kentucky",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "free",
-      "audience": "state and local government IT leaders",
-      "url": "https://events.govtech.com/kentucky-digital-government-summit",
-      "description": "A Government Technology summit for Kentucky state and local public-sector technology leaders on modernization, cybersecurity, AI and digital services.",
-      "source": "https://events.govtech.com/kentucky-digital-government-summit",
-      "sort_date": "",
-      "id": "kentucky-digital-government-summit-louisville",
-      "source_file": "us-central"
-    },
-    {
       "name": "HackWesTX",
       "type": "hackathon",
       "topics": [
@@ -11272,6 +11187,34 @@
       "sort_date": "2026-09-10",
       "id": "nh-tech-alliance-cybersecurity-summit-manchester",
       "source_file": "review-additions-2"
+    },
+    {
+      "name": "NVTC Cyber Summit & Cyber50 Awards",
+      "type": "summit",
+      "topics": [
+        "cybersecurity",
+        "govtech",
+        "awards"
+      ],
+      "city": "McLean",
+      "region": "Virginia",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-10-28",
+      "next_date_end": "2026-10-28",
+      "last_date": "2025-10-29",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "cybersecurity executives, government contractors",
+      "url": "https://www.nvtc.org/events/",
+      "description": "The Northern Virginia Technology Council's annual cybersecurity summit paired with the Cyber50 awards honouring the region's leading cyber companies and executives.",
+      "source": "https://www.nvtc.org/events/",
+      "sort_date": "2026-10-28",
+      "id": "nvtc-cyber-summit-cyber50-awards-mclean",
+      "source_file": "us-east"
     },
     {
       "name": "DelTech Conference",
@@ -11442,35 +11385,6 @@
       "source": "https://www.mlh.com/seasons/2027/events",
       "sort_date": "2026-09-25",
       "id": "shellhacks-miami",
-      "source_file": "categories"
-    },
-    {
-      "name": "BSides ICS/OT",
-      "type": "conference",
-      "topics": [
-        "security",
-        "ics",
-        "ot",
-        "critical-infrastructure"
-      ],
-      "city": "Miami",
-      "region": "Florida",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "February",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-02-23",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "freemium",
-      "audience": "industrial control and OT security engineers",
-      "url": "https://bsidesics.org",
-      "description": "A BSides edition dedicated to industrial control systems and operational technology security, held alongside the Miami ICS security week.",
-      "source": "https://www.allbsides.com/",
-      "sort_date": "2026-02-23",
-      "id": "bsides-ics-ot-miami",
       "source_file": "categories"
     },
     {
@@ -12828,34 +12742,6 @@
       "source_file": "review-additions"
     },
     {
-      "name": "BayPIGgies (Bay Area Python Interest Group)",
-      "type": "meetup-series",
-      "topics": [
-        "python",
-        "data",
-        "open source"
-      ],
-      "city": "Mountain View",
-      "region": "California",
-      "country": "United States",
-      "venue": "Rotating Bay Area venues",
-      "cadence": "monthly",
-      "month": "Varies",
-      "next_date": "2026-08-27",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "upcoming",
-      "attendance": "",
-      "cost": "free",
-      "audience": "python developers, data scientists, students",
-      "url": "https://www.meetup.com/baypiggies/",
-      "description": "The Bay Area Python Interest Group, formed in 1999 and part of the Python Software Foundation Meetup Pro network. Meets the fourth Thursday of every other month for lightning talks and technical presentations; free to attend.",
-      "source": "https://www.meetup.com/baypiggies/",
-      "sort_date": "2026-08-27",
-      "id": "baypiggies-bay-area-python-interest-group-mountain-view",
-      "source_file": "review-additions"
-    },
-    {
       "name": "Vintage Computer Festival West",
       "type": "festival",
       "topics": [
@@ -13428,6 +13314,33 @@
       "source_file": "us-east"
     },
     {
+      "name": "BSides Nashville",
+      "type": "conference",
+      "topics": [
+        "security",
+        "community"
+      ],
+      "city": "Nashville",
+      "region": "Tennessee",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-04-23",
+      "next_date_end": "2027-04-23",
+      "last_date": "2026-05-15",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "freemium",
+      "audience": "security practitioners, students",
+      "url": "https://bsidesnash.org",
+      "description": "Nashville's Security BSides, with a strong healthcare security presence.",
+      "source": "https://www.allbsides.com/",
+      "sort_date": "2027-04-23",
+      "id": "bsides-nashville-nashville",
+      "source_file": "categories"
+    },
+    {
       "name": "ViVE",
       "type": "conference",
       "topics": [
@@ -13570,33 +13483,6 @@
       "source_file": "us-central"
     },
     {
-      "name": "BSides Nashville",
-      "type": "conference",
-      "topics": [
-        "security",
-        "community"
-      ],
-      "city": "Nashville",
-      "region": "Tennessee",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "May",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-05-15",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "freemium",
-      "audience": "security practitioners, students",
-      "url": "https://bsidesnash.org",
-      "description": "Nashville's Security BSides, with a strong healthcare security presence.",
-      "source": "https://www.allbsides.com/",
-      "sort_date": "2026-05-15",
-      "id": "bsides-nashville-nashville",
-      "source_file": "categories"
-    },
-    {
       "name": "DataTune",
       "type": "conference",
       "topics": [
@@ -13623,34 +13509,6 @@
       "source": "https://datatuneconf.com/",
       "sort_date": "2026-03-06",
       "id": "datatune-nashville",
-      "source_file": "us-central"
-    },
-    {
-      "name": "Music City Tech",
-      "type": "conference",
-      "topics": [
-        "software-development",
-        "agile",
-        "data"
-      ],
-      "city": "Nashville",
-      "region": "Tennessee",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "September",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2021-09-15",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "developers, agile coaches, data professionals",
-      "url": "https://musiccitytech.com",
-      "description": "A three-day event running simultaneous conferences - Music City Code, Music City Agile and Music City Data - with keynotes, seminars, panels, open spaces and lightning talks.",
-      "source": "https://musiccitytech.com/",
-      "sort_date": "2021-09-15",
-      "id": "music-city-tech-nashville",
       "source_file": "us-central"
     },
     {
@@ -13880,6 +13738,36 @@
       "source_file": "review-additions-2"
     },
     {
+      "name": "New Orleans Entrepreneur Week",
+      "type": "startup-week",
+      "topics": [
+        "startups",
+        "entrepreneurship",
+        "climate",
+        "healthtech",
+        "culture"
+      ],
+      "city": "New Orleans",
+      "region": "Louisiana",
+      "country": "United States",
+      "venue": "Loyola University New Orleans and citywide",
+      "cadence": "annual",
+      "month": "March",
+      "next_date": "2027-03-08",
+      "next_date_end": "2027-03-13",
+      "last_date": "2026-03-09",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "founders, small business owners, investors",
+      "url": "https://www.noew.org",
+      "description": "NOEW's 15th year ran six days of citywide workshops, founder meetups and a two-day Summit at Loyola, spotlighting Louisiana's hospitality, health, energy, culture and climate innovation sectors.",
+      "source": "https://www.noew.org/",
+      "sort_date": "2027-03-08",
+      "id": "new-orleans-entrepreneur-week-new-orleans",
+      "source_file": "us-central"
+    },
+    {
       "name": "Idea Village Pitch Night",
       "type": "demo-day",
       "topics": [
@@ -13962,36 +13850,6 @@
       "sort_date": "2026-05-13",
       "id": "bsides-nola-new-orleans",
       "source_file": "categories"
-    },
-    {
-      "name": "New Orleans Entrepreneur Week",
-      "type": "startup-week",
-      "topics": [
-        "startups",
-        "entrepreneurship",
-        "climate",
-        "healthtech",
-        "culture"
-      ],
-      "city": "New Orleans",
-      "region": "Louisiana",
-      "country": "United States",
-      "venue": "Loyola University New Orleans and citywide",
-      "cadence": "annual",
-      "month": "March",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-03-09",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "free",
-      "audience": "founders, small business owners, investors",
-      "url": "https://www.noew.org",
-      "description": "NOEW's 15th year ran six days of citywide workshops, founder meetups and a two-day Summit at Loyola, spotlighting Louisiana's hospitality, health, energy, culture and climate innovation sectors.",
-      "source": "https://www.noew.org/",
-      "sort_date": "2026-03-09",
-      "id": "new-orleans-entrepreneur-week-new-orleans",
-      "source_file": "us-central"
     },
     {
       "name": "The Idea Village Demo Day",
@@ -15016,34 +14874,6 @@
       "sort_date": "2026-10-13",
       "id": "forge-summit-north-little-rock",
       "source_file": "us-central"
-    },
-    {
-      "name": "Global Game Jam - Gay Gaming Professionals",
-      "type": "game-jam",
-      "topics": [
-        "game development",
-        "lgbtq",
-        "community"
-      ],
-      "city": "Northridge",
-      "region": "California",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "January",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-01-30",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "free",
-      "audience": "LGBTQ game developers and allies",
-      "url": "https://globalgamejam.org/jam-sites/2026/2026-gay-gaming-professionals-onlinevirtual-only",
-      "description": "Gay Gaming Professionals' Global Game Jam site, run virtually out of Northridge, California for LGBTQ game developers and allies.",
-      "source": "https://globalgamejam.org/jam-sites/2026",
-      "sort_date": "2026-01-30",
-      "id": "global-game-jam-gay-gaming-professionals-northridge",
-      "source_file": "review-additions-3"
     },
     {
       "name": "ThunderPlains",
@@ -16159,34 +15989,6 @@
       "source_file": "review-additions-2"
     },
     {
-      "name": "RailsConf",
-      "type": "conference",
-      "topics": [
-        "ruby",
-        "rails",
-        "web"
-      ],
-      "city": "Philadelphia",
-      "region": "Pennsylvania",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "discontinued",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "Ruby on Rails developers",
-      "url": "https://rubycentral.org/conferences/",
-      "description": "After nearly twenty years, Ruby Central retired RailsConf following its 2025 Philadelphia edition; RubyConf is now the organisation's flagship event.",
-      "source": "https://rubycentral.org/conferences/",
-      "sort_date": "",
-      "id": "railsconf-philadelphia",
-      "source_file": "categories"
-    },
-    {
       "name": "PennApps",
       "type": "hackathon",
       "topics": [
@@ -16441,35 +16243,6 @@
       "source": "https://the-tartan.org/2026/02/09/students-compete-in-tartanhacks/",
       "sort_date": "2026-02-06",
       "id": "tartanhacks-pittsburgh",
-      "source_file": "us-east"
-    },
-    {
-      "name": "Abstractions",
-      "type": "conference",
-      "topics": [
-        "software",
-        "design",
-        "devops",
-        "community"
-      ],
-      "city": "Pittsburgh",
-      "region": "Pennsylvania",
-      "country": "United States",
-      "venue": "David L. Lawrence Convention Center",
-      "cadence": "biannual",
-      "month": "August",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2019-08-21",
-      "status": "discontinued",
-      "attendance": "1500",
-      "cost": "paid",
-      "audience": "developers, designers, devops engineers, managers",
-      "url": "https://abstractions.io/",
-      "description": "A cross-discipline software conference run by Code & Supply that drew developers, designers, DevOps engineers and community leaders to Pittsburgh for three days of talks. No edition has been announced since 2019.",
-      "source": "https://abstractions.io/",
-      "sort_date": "2019-08-21",
-      "id": "abstractions-pittsburgh",
       "source_file": "us-east"
     },
     {
@@ -17636,31 +17409,31 @@
       "source_file": "us-west"
     },
     {
-      "name": "NVTC Cyber Summit & Cyber50 Awards",
-      "type": "summit",
+      "name": "NVTC Tech100 Celebration",
+      "type": "awards",
       "topics": [
-        "cybersecurity",
-        "govtech",
-        "awards"
+        "awards",
+        "networking",
+        "govtech"
       ],
       "city": "Reston",
       "region": "Virginia",
       "country": "United States",
       "venue": "",
       "cadence": "annual",
-      "month": "October",
-      "next_date": "2026-10-28",
-      "next_date_end": "2026-10-28",
-      "last_date": "2025-10-29",
+      "month": "December",
+      "next_date": "2026-12-15",
+      "next_date_end": "2026-12-15",
+      "last_date": "2025-12-16",
       "status": "upcoming",
       "attendance": "",
       "cost": "paid",
-      "audience": "cybersecurity executives, government contractors",
+      "audience": "technology executives, investors",
       "url": "https://www.nvtc.org/events/",
-      "description": "The Northern Virginia Technology Council's annual cybersecurity summit paired with the Cyber50 awards honouring the region's leading cyber companies and executives.",
+      "description": "An awards night recognising the 100 companies and leaders having the biggest impact on Northern Virginia's technology community.",
       "source": "https://www.nvtc.org/events/",
-      "sort_date": "2026-10-28",
-      "id": "nvtc-cyber-summit-cyber50-awards-reston",
+      "sort_date": "2026-12-15",
+      "id": "nvtc-tech100-celebration-reston",
       "source_file": "us-east"
     },
     {
@@ -17859,6 +17632,33 @@
       "source_file": "review-additions"
     },
     {
+      "name": "BSidesROC",
+      "type": "conference",
+      "topics": [
+        "security",
+        "community"
+      ],
+      "city": "Rochester",
+      "region": "New York",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "March",
+      "next_date": "2027-03-20",
+      "next_date_end": "2027-03-20",
+      "last_date": "2026-03-21",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "freemium",
+      "audience": "security practitioners, students",
+      "url": "https://bsidesroc.com",
+      "description": "Rochester's Security BSides, one of the longest-running BSides chapters in upstate New York.",
+      "source": "https://www.allbsides.com/",
+      "sort_date": "2027-03-20",
+      "id": "bsidesroc-rochester",
+      "source_file": "categories"
+    },
+    {
       "name": "WiCHacks",
       "type": "hackathon",
       "topics": [
@@ -17936,7 +17736,7 @@
       "attendance": "",
       "cost": "paid",
       "audience": "IT professionals, technology managers",
-      "url": "https://dev.events/NA/US/MI/tech",
+      "url": "https://www.mitechcon.org",
       "description": "A three-day Michigan technology conference for IT professionals covering infrastructure, security and cloud operations.",
       "source": "https://dev.events/NA/US/MI/tech",
       "sort_date": "2026-10-28",
@@ -17970,33 +17770,6 @@
       "sort_date": "2026-10-14",
       "id": "rochester-security-summit-rochester",
       "source_file": "review-additions"
-    },
-    {
-      "name": "BSidesROC",
-      "type": "conference",
-      "topics": [
-        "security",
-        "community"
-      ],
-      "city": "Rochester",
-      "region": "New York",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "March",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-03-21",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "freemium",
-      "audience": "security practitioners, students",
-      "url": "https://bsidesroc.com",
-      "description": "Rochester's Security BSides, one of the longest-running BSides chapters in upstate New York.",
-      "source": "https://www.allbsides.com/",
-      "sort_date": "2026-03-21",
-      "id": "bsidesroc-rochester",
-      "source_file": "categories"
     },
     {
       "name": "BrickHack",
@@ -18171,6 +17944,34 @@
       "source_file": "us-west"
     },
     {
+      "name": "Small Satellite Conference",
+      "type": "conference",
+      "topics": [
+        "space",
+        "satellites",
+        "aerospace"
+      ],
+      "city": "Salt Lake City",
+      "region": "Utah",
+      "country": "United States",
+      "venue": "Salt Palace Convention Center",
+      "cadence": "annual",
+      "month": "August",
+      "next_date": "2027-08-15",
+      "next_date_end": "2027-08-18",
+      "last_date": "2026-08-23",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "aerospace engineers, satellite operators, researchers",
+      "url": "https://smallsat.org/",
+      "description": "The leading annual technical conference for small satellite design, launch and constellation operations, run with Utah State University.",
+      "source": "https://smallsat.org/",
+      "sort_date": "2027-08-15",
+      "id": "small-satellite-conference-salt-lake-city",
+      "source_file": "categories"
+    },
+    {
       "name": "KubeCon + CloudNativeCon North America",
       "type": "conference",
       "topics": [
@@ -18286,34 +18087,6 @@
       "source_file": "us-west"
     },
     {
-      "name": "Small Satellite Conference",
-      "type": "conference",
-      "topics": [
-        "space",
-        "satellites",
-        "aerospace"
-      ],
-      "city": "Salt Lake City",
-      "region": "Utah",
-      "country": "United States",
-      "venue": "Salt Palace Convention Center",
-      "cadence": "annual",
-      "month": "August",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-08-23",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "aerospace engineers, satellite operators, researchers",
-      "url": "https://smallsat.org/",
-      "description": "The leading annual technical conference for small satellite design, launch and constellation operations, run with Utah State University.",
-      "source": "https://smallsat.org/",
-      "sort_date": "2026-08-23",
-      "id": "small-satellite-conference-salt-lake-city",
-      "source_file": "categories"
-    },
-    {
       "name": "BSides SLC",
       "type": "conference",
       "topics": [
@@ -18367,34 +18140,6 @@
       "source": "https://www.siliconslopes.com/c/events/summit-2026-innovation-doesn-t-slow-down",
       "sort_date": "2026-02-04",
       "id": "silicon-slopes-summit-salt-lake-city",
-      "source_file": "us-west"
-    },
-    {
-      "name": "HackTheU",
-      "type": "hackathon",
-      "topics": [
-        "hackathon",
-        "students",
-        "software"
-      ],
-      "city": "Salt Lake City",
-      "region": "Utah",
-      "country": "United States",
-      "venue": "University of Utah",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "400",
-      "cost": "free",
-      "audience": "college students, beginners",
-      "url": "https://hacktheu.org/",
-      "description": "The University of Utah's 24-hour hackathon, running since 2016, open to students of all experience levels with mentorship and workshops.",
-      "source": "https://hacktheu.org/",
-      "sort_date": "",
-      "id": "hacktheu-salt-lake-city",
       "source_file": "us-west"
     },
     {
@@ -18737,6 +18482,34 @@
       "sort_date": "",
       "id": "techcon-socal-san-diego",
       "source_file": "us-west"
+    },
+    {
+      "name": "AI Engineer World's Fair",
+      "type": "conference",
+      "topics": [
+        "ai",
+        "agents",
+        "software-engineering"
+      ],
+      "city": "San Francisco",
+      "region": "California",
+      "country": "United States",
+      "venue": "Marriott Marquis",
+      "cadence": "annual",
+      "month": "June-July",
+      "next_date": "2027-06-29",
+      "next_date_end": "2027-07-02",
+      "last_date": "2026-06-29",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "AI engineers, founders, product builders",
+      "url": "https://www.ai.engineer/",
+      "description": "A practitioner conference for the emerging AI engineering discipline, with tracks on agents, evals, RAG and production LLM systems.",
+      "source": "https://www.ai.engineer/",
+      "sort_date": "2027-06-29",
+      "id": "ai-engineer-world-s-fair-san-francisco",
+      "source_file": "categories"
     },
     {
       "name": "Data + AI Summit",
@@ -19282,34 +19055,6 @@
       "source_file": "us-west"
     },
     {
-      "name": "Showerhacks",
-      "type": "hackathon",
-      "topics": [
-        "ai",
-        "hackathon",
-        "students"
-      ],
-      "city": "San Francisco",
-      "region": "California",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "October",
-      "next_date": "2026-10-03",
-      "next_date_end": "2026-10-03",
-      "last_date": "",
-      "status": "upcoming",
-      "attendance": "",
-      "cost": "free",
-      "audience": "students, hackers, AI builders",
-      "url": "https://dev.events/hackathons/NA/US",
-      "description": "A one-day AI hackathon in San Francisco where teams build and demo projects in a single sitting.",
-      "source": "https://dev.events/hackathons/NA/US",
-      "sort_date": "2026-10-03",
-      "id": "showerhacks-san-francisco",
-      "source_file": "us-west"
-    },
-    {
       "name": "The AI Conference",
       "type": "conference",
       "topics": [
@@ -19364,6 +19109,34 @@
       "source": "https://dev.events/NA/US/CA/San_Francisco/tech",
       "sort_date": "2026-09-29",
       "id": "fully-connected-san-francisco",
+      "source_file": "us-west"
+    },
+    {
+      "name": "Showerhacks",
+      "type": "hackathon",
+      "topics": [
+        "ai",
+        "hackathon",
+        "students"
+      ],
+      "city": "San Francisco",
+      "region": "California",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2026-09-26",
+      "next_date_end": "2026-09-26",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "students, hackers, AI builders",
+      "url": "https://showerhacks.org",
+      "description": "A one-day AI hackathon in San Francisco where teams build and demo projects in a single sitting.",
+      "source": "https://dev.events/hackathons/NA/US",
+      "sort_date": "2026-09-26",
+      "id": "showerhacks-san-francisco",
       "source_file": "us-west"
     },
     {
@@ -19505,34 +19278,6 @@
       "sort_date": "2026-08-26",
       "id": "tailscaleup-san-francisco",
       "source_file": "us-west"
-    },
-    {
-      "name": "AI Engineer World's Fair",
-      "type": "conference",
-      "topics": [
-        "ai",
-        "agents",
-        "software-engineering"
-      ],
-      "city": "San Francisco",
-      "region": "California",
-      "country": "United States",
-      "venue": "Marriott Marquis",
-      "cadence": "annual",
-      "month": "June-July",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-06-29",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "AI engineers, founders, product builders",
-      "url": "https://www.ai.engineer/",
-      "description": "A practitioner conference for the emerging AI engineering discipline, with tracks on agents, evals, RAG and production LLM systems.",
-      "source": "https://www.ai.engineer/",
-      "sort_date": "2026-06-29",
-      "id": "ai-engineer-world-s-fair-san-francisco",
-      "source_file": "categories"
     },
     {
       "name": "Figma Config",
@@ -20048,6 +19793,34 @@
       "sort_date": "2026-09-22",
       "id": "opensearchcon-north-america-san-jose",
       "source_file": "us-west"
+    },
+    {
+      "name": "BayPIGgies (Bay Area Python Interest Group)",
+      "type": "meetup-series",
+      "topics": [
+        "python",
+        "data",
+        "open source"
+      ],
+      "city": "San Jose",
+      "region": "California",
+      "country": "United States",
+      "venue": "Rotating Bay Area venues",
+      "cadence": "monthly",
+      "month": "Varies",
+      "next_date": "2026-08-27",
+      "next_date_end": "",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "python developers, data scientists, students",
+      "url": "https://www.meetup.com/baypiggies/",
+      "description": "The Bay Area Python Interest Group, formed in 1999 and part of the Python Software Foundation Meetup Pro network. Meets the fourth Thursday of every other month for lightning talks and technical presentations; free to attend.",
+      "source": "https://www.meetup.com/baypiggies/",
+      "sort_date": "2026-08-27",
+      "id": "baypiggies-bay-area-python-interest-group-san-jose",
+      "source_file": "review-additions"
     },
     {
       "name": "Open Sauce",
@@ -20704,7 +20477,7 @@
       "attendance": "200",
       "cost": "paid",
       "audience": "data professionals, DBAs, analysts",
-      "url": "https://dev.events/NA/US/WA/Seattle",
+      "url": "https://dayofdata.org/2026-11-12-dayofdata1155",
       "description": "A single-day community data conference in Seattle running alongside the larger data platform summit week.",
       "source": "https://dev.events/NA/US/WA/Seattle",
       "sort_date": "2026-11-12",
@@ -21390,6 +21163,35 @@
       "source_file": "review-additions-3"
     },
     {
+      "name": "Digital Offshore Conference",
+      "type": "conference",
+      "topics": [
+        "ocean-tech",
+        "energy",
+        "digital-transformation",
+        "iot"
+      ],
+      "city": "St. John's",
+      "region": "Newfoundland and Labrador",
+      "country": "Canada",
+      "venue": "",
+      "cadence": "annual",
+      "month": "March",
+      "next_date": "2027-04-27",
+      "next_date_end": "2027-04-28",
+      "last_date": "2026-03-10",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "offshore energy operators, ocean tech vendors, engineers",
+      "url": "https://www.digitaloffshore.ca/overview",
+      "description": "A St. John's conference on digital transformation in the offshore energy and ocean industries, with industry insights, networking and innovation showcases.",
+      "source": "https://www.digitaloffshore.ca/overview",
+      "sort_date": "2027-04-27",
+      "id": "digital-offshore-conference-st-john-s",
+      "source_file": "canada"
+    },
+    {
       "name": "Build48",
       "type": "hackathon",
       "topics": [
@@ -21471,35 +21273,6 @@
       "source": "https://technl.ca/news-events/",
       "sort_date": "2026-04-16",
       "id": "technl-industry-awards-st-john-s",
-      "source_file": "canada"
-    },
-    {
-      "name": "Digital Offshore Conference",
-      "type": "conference",
-      "topics": [
-        "ocean-tech",
-        "energy",
-        "digital-transformation",
-        "iot"
-      ],
-      "city": "St. John's",
-      "region": "Newfoundland and Labrador",
-      "country": "Canada",
-      "venue": "",
-      "cadence": "annual",
-      "month": "March",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-03-10",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "offshore energy operators, ocean tech vendors, engineers",
-      "url": "https://www.digitaloffshore.ca/overview",
-      "description": "A St. John's conference on digital transformation in the offshore energy and ocean industries, with industry insights, networking and innovation showcases.",
-      "source": "https://www.digitaloffshore.ca/overview",
-      "sort_date": "2026-03-10",
-      "id": "digital-offshore-conference-st-john-s",
       "source_file": "canada"
     },
     {
@@ -21588,6 +21361,34 @@
       "source_file": "us-central"
     },
     {
+      "name": "SecureWorld St. Louis",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "ciso",
+        "compliance"
+      ],
+      "city": "St. Louis",
+      "region": "Missouri",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "Varies",
+      "next_date": "2026-09-02",
+      "next_date_end": "2026-09-02",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "CISOs, security practitioners",
+      "url": "https://www.secureworld.io/events/st-louis-mo-2026",
+      "description": "A regional edition of the SecureWorld cybersecurity conference series, offering keynotes, CPE-earning sessions and an exhibit hall for Missouri security leaders.",
+      "source": "https://www.secureworld.io/events/st-louis-mo-2026",
+      "sort_date": "2026-09-02",
+      "id": "secureworld-st-louis-st-louis",
+      "source_file": "us-central"
+    },
+    {
       "name": "STL TechWeek",
       "type": "tech-week",
       "topics": [
@@ -21643,34 +21444,6 @@
       "source": "https://www.bsidesstl.org/",
       "sort_date": "2025-09-27",
       "id": "bsidesstl-st-louis",
-      "source_file": "us-central"
-    },
-    {
-      "name": "SecureWorld St. Louis",
-      "type": "conference",
-      "topics": [
-        "cybersecurity",
-        "ciso",
-        "compliance"
-      ],
-      "city": "St. Louis",
-      "region": "Missouri",
-      "country": "United States",
-      "venue": "",
-      "cadence": "annual",
-      "month": "Varies",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "CISOs, security practitioners",
-      "url": "https://www.secureworld.io/events/st-louis-mo-2026",
-      "description": "A regional edition of the SecureWorld cybersecurity conference series, offering keynotes, CPE-earning sessions and an exhibit hall for Missouri security leaders.",
-      "source": "https://www.secureworld.io/events/st-louis-mo-2026",
-      "sort_date": "",
-      "id": "secureworld-st-louis-st-louis",
       "source_file": "us-central"
     },
     {
@@ -21917,7 +21690,7 @@
       "attendance": "100",
       "cost": "invite-only",
       "audience": "CISOs, security executives",
-      "url": "https://dev.events/NA/US/UT",
+      "url": "https://cisofireside.org",
       "description": "An invitation-oriented gathering of security executives at Sundance for off-the-record discussion of security strategy and risk.",
       "source": "https://dev.events/NA/US/UT",
       "sort_date": "2026-11-05",
@@ -22123,6 +21896,35 @@
       "source_file": "us-east"
     },
     {
+      "name": "BSides ICS/OT",
+      "type": "conference",
+      "topics": [
+        "security",
+        "ics",
+        "ot",
+        "critical-infrastructure"
+      ],
+      "city": "Tampa",
+      "region": "Florida",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "February",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-02-23",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "freemium",
+      "audience": "industrial control and OT security engineers",
+      "url": "https://bsidesics.org",
+      "description": "A BSides edition dedicated to industrial control systems and operational technology security, held alongside the Miami ICS security week.",
+      "source": "https://www.allbsides.com/",
+      "sort_date": "2026-02-23",
+      "id": "bsides-ics-ot-tampa",
+      "source_file": "categories"
+    },
+    {
       "name": "Tampa Bay Tech Community Events",
       "type": "meetup-series",
       "topics": [
@@ -22206,6 +22008,35 @@
       "source": "https://xpgamesummit.com/",
       "sort_date": "2027-06-10",
       "id": "xp-game-summit-toronto",
+      "source_file": "canada"
+    },
+    {
+      "name": "Big Data & Analytics Summit Canada",
+      "type": "summit",
+      "topics": [
+        "data",
+        "analytics",
+        "ai",
+        "machine-learning"
+      ],
+      "city": "Toronto",
+      "region": "Ontario",
+      "country": "Canada",
+      "venue": "Sheraton Toronto Airport Hotel & Conference Centre",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "2027-06-08",
+      "next_date_end": "2027-06-09",
+      "last_date": "2026-06-09",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "data leaders, analytics practitioners, AI teams",
+      "url": "https://bigdatasummitcanada.com/",
+      "description": "Canada's long-running data and analytics conference, covering machine learning, data governance, predictive analytics and generative AI strategy across regulated industries.",
+      "source": "https://bigdatasummitcanada.com/",
+      "sort_date": "2027-06-08",
+      "id": "big-data-analytics-summit-canada-toronto",
       "source_file": "canada"
     },
     {
@@ -22725,35 +22556,6 @@
       "source": "https://mobilesyrup.com/2026/04/23/the-ultimate-list-of-canadian-video-game-events/",
       "sort_date": "2026-06-11",
       "id": "toronto-games-week-toronto",
-      "source_file": "canada"
-    },
-    {
-      "name": "Big Data & Analytics Summit Canada",
-      "type": "summit",
-      "topics": [
-        "data",
-        "analytics",
-        "ai",
-        "machine-learning"
-      ],
-      "city": "Toronto",
-      "region": "Ontario",
-      "country": "Canada",
-      "venue": "Sheraton Toronto Airport Hotel & Conference Centre",
-      "cadence": "annual",
-      "month": "June",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-06-09",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "paid",
-      "audience": "data leaders, analytics practitioners, AI teams",
-      "url": "https://bigdatasummitcanada.com/",
-      "description": "Canada's long-running data and analytics conference, covering machine learning, data governance, predictive analytics and generative AI strategy across regulated industries.",
-      "source": "https://bigdatasummitcanada.com/",
-      "sort_date": "2026-06-09",
-      "id": "big-data-analytics-summit-canada-toronto",
       "source_file": "canada"
     },
     {
@@ -23517,7 +23319,7 @@
       "attendance": "150",
       "cost": "paid",
       "audience": "data professionals, DBAs, analysts",
-      "url": "https://dev.events/NA/US/WA",
+      "url": "https://dayofdata.org/2026-11-07-dayofdata1149/",
       "description": "A regional community data conference in Vancouver, Washington covering the Microsoft data platform, analytics and reporting.",
       "source": "https://dev.events/NA/US/WA",
       "sort_date": "2026-11-06",
@@ -23893,34 +23695,6 @@
       "source_file": "canada"
     },
     {
-      "name": "Global Game Jam - AAPI in Gaming",
-      "type": "game-jam",
-      "topics": [
-        "game-development",
-        "diversity",
-        "game-design"
-      ],
-      "city": "Vancouver",
-      "region": "British Columbia",
-      "country": "Canada",
-      "venue": "",
-      "cadence": "annual",
-      "month": "January",
-      "next_date": "",
-      "next_date_end": "",
-      "last_date": "2026-01-30",
-      "status": "recurring-tbd",
-      "attendance": "",
-      "cost": "free",
-      "audience": "game developers, artists and writers, with a focus on the AAPI community",
-      "url": "https://globalgamejam.org/jam-sites/2026/2026-aapi-gaming",
-      "description": "Vancouver's AAPI in Gaming Global Game Jam site, running the international 48-hour jam with a focus on welcoming Asian American and Pacific Islander creators.",
-      "source": "https://globalgamejam.org/jam-sites/2026",
-      "sort_date": "2026-01-30",
-      "id": "global-game-jam-aapi-in-gaming-vancouver",
-      "source_file": "review-additions-2"
-    },
-    {
       "name": "Polyglot Unconference",
       "type": "unconference",
       "topics": [
@@ -24201,6 +23975,35 @@
       "sort_date": "2026-08-24",
       "id": "sans-virginia-beach-virginia-beach",
       "source_file": "review-additions-3"
+    },
+    {
+      "name": "Hawaii International Conference on System Sciences",
+      "type": "conference",
+      "topics": [
+        "information-systems",
+        "research",
+        "academic",
+        "ai"
+      ],
+      "city": "Waikoloa",
+      "region": "Hawaii",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "January",
+      "next_date": "2027-01-05",
+      "next_date_end": "2027-01-08",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "1000",
+      "cost": "paid",
+      "audience": "academics, information systems researchers, PhD students",
+      "url": "https://hicss.hawaii.edu/",
+      "description": "One of the longest-running information systems research conferences, held annually in Hawaii each January with peer-reviewed tracks across computing and IS disciplines.",
+      "source": "https://en.wikipedia.org/wiki/Hawaii_International_Conference_on_System_Sciences",
+      "sort_date": "2027-01-05",
+      "id": "hawaii-international-conference-on-system-sciences-waikoloa",
+      "source_file": "us-west"
     },
     {
       "name": "VCF Swap Meet",

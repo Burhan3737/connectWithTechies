@@ -1,0 +1,19 @@
+[
+  {
+    "match": { "name": "Oracle AI World", "city": "Las Vegas" },
+    "action": "update",
+    "reason": "oracle.com/cloudworld/ now 301s to oracle.com/ai-world/ - Oracle CloudWorld has been renamed Oracle AI World. The live page states 'October 25-28 | Las Vegas'. Repointed from the retired /openworld/ path to the current one.",
+    "set": {
+      "url": "https://www.oracle.com/ai-world/",
+      "next_date": "2026-10-25",
+      "next_date_end": "2026-10-28",
+      "status": "upcoming",
+      "source": "https://www.oracle.com/ai-world/"
+    }
+  },
+  {
+    "match": { "name": "Oracle CloudWorld", "city": "Las Vegas" },
+    "action": "remove",
+    "reason": "Duplicate of Oracle AI World under the retired name. Oracle renamed the event: oracle.com/cloudworld/ 301s to oracle.com/ai-world/, and both records now carry the same dates (Oct 25-28 2026, Las Vegas). The dedup missed it because the two records pointed at different paths on the same host."
+  }
+]

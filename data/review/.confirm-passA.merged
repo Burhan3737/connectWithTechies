@@ -1,0 +1,800 @@
+[
+  {
+    "name": "SANS Virginia Beach",
+    "city": "Virginia Beach",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "sans.org/cyber-security-training-events/virginia-beach-2026/ shows 'Mon, Aug 24 - Fri, Sep 4, 2026', Virginia Beach, Virginia — matches record"
+  },
+  {
+    "name": "TechCon 365 / DataCon / PWRCon Seattle",
+    "city": "Seattle",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "techcon365.com home page: 'Seattle, Washington ... August 24-28, 2026, Seattle Convention Center' — matches record (fetched via curl; WebFetch got 403)"
+  },
+  {
+    "name": "BayPIGgies (Bay Area Python Interest Group)",
+    "city": "Mountain View",
+    "status": "corrected",
+    "cycle": "passA",
+    "evidence": "meetup.com/baypiggies shows next meeting Thu, Aug 27 6:30 PM PDT at West Valley Branch Library, 1243 San Tomas Aquino Rd, San Jose, CA. Date correct, city was wrong (Mountain View -> San Jose)"
+  },
+  {
+    "name": "Computing Foundations Workshop Series",
+    "city": "Cookeville",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "rcd.tntech.edu/2026-08-27-tntech shows select Thursdays Aug 27 - Nov 19 2026, Bruner Hall, Cookeville TN — matches record"
+  },
+  {
+    "name": "BSidesGreenville",
+    "city": "Greenville",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsides.org event page shows Date: August 29, Greenville, SC USA — matches record"
+  },
+  {
+    "name": "seL4 Summit",
+    "city": "Vancouver",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "sel4.systems/Summit/2026/ shows 'Vancouver, Canada, 1 - 3 September 2026' — matches record"
+  },
+  {
+    "name": "Zeek Workshop Berkeley",
+    "city": "Berkeley",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "zeek.org promo banner: 'Zeek Workshop - Berkeley, September 10-11, 2026' — matches record (curl bypassed the 403 that blocked earlier passes)"
+  },
+  {
+    "name": "BSidesNEPA",
+    "city": "Wilkes Barre",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsides.org event page shows Date: September 12, Wilkes Barre, PA United States — matches record"
+  },
+  {
+    "name": "Best of Tech Awards",
+    "city": "Cleveland",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "greatercle.com/tech/ 'Best of Tech Day & Awards ... Date: September 14, 2026' — matches record (curl bypassed the 403)"
+  },
+  {
+    "name": "Oracle CloudWorld",
+    "city": "Las Vegas",
+    "status": "corrected",
+    "cycle": "passA",
+    "evidence": "oracle.com/cloudworld/ now titled 'Oracle AI World 2026'; JSON-LD startDate 2026-10-25 endDate 2026-10-28, hero 'October 25-28 | Las Vegas'. Record had Sep 15-18 — wrong by six weeks"
+  },
+  {
+    "name": "Founders Meetup Sioux Falls",
+    "city": "Sioux Falls",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "startupsiouxfalls.com series calendar JSON lists next occurrence 2026-09-16 (then 10-21, 11-18) — matches record"
+  },
+  {
+    "name": "AI Builder Lab Meetup",
+    "city": "Sioux Falls",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "startupsiouxfalls.com series calendar JSON lists next occurrence 2026-09-17 (then 10-15, 11-19) — matches record"
+  },
+  {
+    "name": "BSides St. John's",
+    "city": "St. John's",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsides.org event page shows Date: September 17, venue in Canada — matches record"
+  },
+  {
+    "name": "Charleston Digital Connect",
+    "city": "Charleston",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "charlestondigital.com upcoming events lists 'Charleston Digital Connect Sep 17, 8:30AM' — matches record"
+  },
+  {
+    "name": "HackMIT",
+    "city": "Cambridge",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "hackmit.org is a React SPA; its JS bundle FAQ says 'HackMIT will take place over the weekend of Saturday, September 19th and Sunday, September 20th', meta description 'at MIT in Cambridge, Massachusetts' — matches record"
+  },
+  {
+    "name": "Elevate Festival",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "elevatefestival.ca: 'Elevate Festival returns to Toronto from September 22-24, 2026' — matches record (curl bypassed the block)"
+  },
+  {
+    "name": "Tech Homecoming",
+    "city": "Ann Arbor",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "a2tech360.com page (still at the /tech-homecoming-2025/ slug) is headed 'Tech Homecoming 2026' and shows 'September 22, 2026 | 4 p.m. - 7 p.m.', presented by Ann Arbor SPARK — matches record"
+  },
+  {
+    "name": "BSidesCT",
+    "city": "Fairfield",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsides.org event page shows Date: September 26, Fairfield, CT, USA — matches record"
+  },
+  {
+    "name": "Maine Blue Economy Week",
+    "city": "Portland",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "roux.northeastern.edu event page shows September 30 - October 2, Holiday Inn, 100 Fore Street, Portland, ME — matches record"
+  },
+  {
+    "name": "Open Door Leadership Series",
+    "city": "Portland",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "roux.northeastern.edu/events/ lists 'Open Door with Glenn Prickett' September 30, 2026 @ 7:00 pm, 100 Fore Street, Portland — matches record"
+  },
+  {
+    "name": "BigRed//Hacks",
+    "city": "Ithaca",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bigredhacks.com is an SPA; its JS bundle FAQ states 'BigRed//Hacks 2026 will take place October 2nd - 4th on Cornell University's Ithaca Campus' — matches record"
+  },
+  {
+    "name": "Manufacturing Day at WSU Tech",
+    "city": "Wichita",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "wsutech.edu/wsutechevents/ shows 'Manufacturing Day 2026, Friday, October 2, 2026, 9 AM - 2 PM, WSU Tech NCAT, 4004 N. Webb Road, Wichita, KS' — matches record"
+  },
+  {
+    "name": "OpenSearchCon North America",
+    "city": "San Jose",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "events.linuxfoundation.org/about/calendar/ lists 'OpenSearchCon North America, Sep 22-24, 2026, San Jose, United States' — matches record"
+  },
+  {
+    "name": "BSides Bozeman",
+    "city": "Bozeman",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsidesbozeman.com: 'Saturday, October 3, 2026 9:00 AM - 5:00 PM, Bozeman, Montana' — matches record"
+  },
+  {
+    "name": "MHacks",
+    "city": "Ann Arbor",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "mhacks.org: 'MHACKS 2026 ... October 3-4, 2026 - Ann Arbor, Michigan' — matches record (curl bypassed the earlier block)"
+  },
+  {
+    "name": "Rowdy Hacks",
+    "city": "San Antonio",
+    "status": "blocked",
+    "cycle": "passA",
+    "evidence": "rowdyhacks.org and /schedule fetched OK (Next.js) but publish no event date anywhere in HTML or JS chunks — only 'registration deadline October 2nd'. Countdown target not in markup. Cannot settle Oct 3-4"
+  },
+  {
+    "name": "Lesbians Who Tech + Allies Summit",
+    "city": "New York",
+    "status": "blocked",
+    "cycle": "passA",
+    "evidence": "lwtsquad.com and lesbianswhotech.org both return HTTP 202 with a 169-byte bot-challenge stub; no readable content on any path tried"
+  },
+  {
+    "name": "SAP Connect",
+    "city": "Las Vegas",
+    "status": "blocked",
+    "cycle": "passA",
+    "evidence": "sap.com/events.html and sap.com/events/sap-connect.html both return HTTP 403 to WebFetch and to curl with a browser UA"
+  },
+  {
+    "name": "StartupCincy Week",
+    "city": "Cincinnati",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "startupcincyweek.com hero: 'OCTOBER 5 - 8, 2026 | CINCINNATI, OHIO' — matches record (curl bypassed the earlier block)"
+  },
+  {
+    "name": "Hack Knight",
+    "city": "Flushing",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "hackknight.org is a React SPA; its JS bundle renders 'October 9th - 11th, 2026' — dates match record. Venue city not stated on the page"
+  },
+  {
+    "name": "HackNC",
+    "city": "Chapel Hill",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "hacknc.com titled 'HackNC 2026'; countdown aria-label reads 'Countdown to October 9, 2026 Eastern Time'. Start date matches record; end date (Oct 11) not separately stated on the page"
+  },
+  {
+    "name": "Knight Hacks",
+    "city": "Orlando",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "knighthacks.org (2026.knighthacks.org): 'Knight Hacks IX, October 9 - 11, 2026, University of Central Florida' — matches record"
+  },
+  {
+    "name": "SBUHacks",
+    "city": "Stony Brook",
+    "status": "blocked",
+    "cycle": "passA",
+    "evidence": "hack.sbcs.io reachable but is an explicit placeholder: 'Stay tuned for updates on: the exact date and location of the event'. Only 'October 2026' given, so Oct 9-11 cannot be confirmed or corrected"
+  },
+  {
+    "name": "CodeRED",
+    "city": "Houston",
+    "status": "blocked",
+    "cycle": "passA",
+    "evidence": "uhcode.red reachable (SPA, bundle read) but lists only past hackathons through 'CodeRED Astra (Fall 2025)'; no 2026 edition or date published anywhere on the site"
+  },
+  {
+    "name": "dev2next",
+    "city": "Lone Tree",
+    "status": "blocked",
+    "cycle": "passA",
+    "evidence": "dev2next.com returns a 2.8KB Rails/Turbo shell with no body content on /, /registration, /sessions, /venue; no date in markup or meta tags"
+  },
+  {
+    "name": "Tech Week Los Angeles",
+    "city": "Los Angeles",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "tech-week.com/calendar: 'SF October 5-11, LA October 12-18' — matches record"
+  },
+  {
+    "name": "OPI Summit on DPU/IPUs",
+    "city": "San Jose",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "opiproject.org events: 'October 15, 2026 * San Jose, CA ... October 15 @ 8:00 am - 2:00 pm' — matches record"
+  },
+  {
+    "name": "HackHarvard",
+    "city": "Cambridge",
+    "status": "blocked",
+    "cycle": "passA",
+    "evidence": "hhuh.io reachable and headed 'HackHarvard 2026' but publishes no dates at all — About/Tracks/FAQ carry no date, sponsors 'Coming Soon'"
+  },
+  {
+    "name": "SwampHacks",
+    "city": "Gainesville",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "swamphacks.com SPA bundle FAQ: 'SwampHacks will be 36-hours beginning October 16 evening and going until October 18 afternoon' — matches record"
+  },
+  {
+    "name": "LA Hacks AI Hackathon",
+    "city": "Los Angeles",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "ai.lahacks.com SPA bundle: 'October 17-18, 2026 | James West Alumni Center (JWAC), UCLA' — matches record"
+  },
+  {
+    "name": "Maker Faire Baton Rouge",
+    "city": "Baton Rouge",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "batonrouge.makerfaire.com: 'Main Library at Goodwood, October 17th, 2026' — matches record"
+  },
+  {
+    "name": "TransportationCamp New England",
+    "city": "Cambridge",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "transportationcamp.org/events/new-england-2026: 'Saturday, October 17, 2026 ... at MIT's Stata Center' — matches record"
+  },
+  {
+    "name": "SecureWV",
+    "city": "Charleston",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "securewv.org: 'October 22-23, 2026, Charleston Coliseum & Convention Center' — matches record"
+  },
+  {
+    "name": "BSides COS",
+    "city": "Colorado Springs",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsides.org/event/bsides-cos-2026/ shows Date: October 24 — matches record"
+  },
+  {
+    "name": "BSidesAugusta",
+    "city": "Augusta",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsides.org page titled 'BSidesAugusta - Augusta, GA, USA' shows Date: October 24 — matches record"
+  },
+  {
+    "name": "Ocean Exchange",
+    "city": "Fort Lauderdale",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "oceanexchange.org: 'October 25-27, 2026 Ocean Exchange Event in Fort Lauderdale' — matches record"
+  },
+  {
+    "name": "Austin Tech Week",
+    "city": "Austin",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "austintech.com: 'Austin Tech Week October 26 - 30, 2026' — matches record"
+  },
+  {
+    "name": "IBM TechXchange Conference",
+    "city": "Atlanta",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "ibm.com/community/ibm-techxchange-conference/ shows '26-29 October' and 'Atlanta, GA' — matches record"
+  },
+  {
+    "name": "New Mexico Tech Week",
+    "city": "Albuquerque",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "newmexicotechweek.com: 'October 26-31, 2026 - New Mexico' — matches record"
+  },
+  {
+    "name": "BSides Fredericton",
+    "city": "Fredericton",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsidesfredericton.ca: 'Conference is October 27-28 2026!' — matches record"
+  },
+  {
+    "name": "Open Source in Finance Forum",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "events.linuxfoundation.org/about/calendar/ lists 'Open Source in Finance Forum New York, Nov 4-5, 2026, New York, United States' — matches record"
+  },
+  {
+    "name": "Open Source in Finance Forum New York",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "events.linuxfoundation.org/about/calendar/ lists 'Open Source in Finance Forum New York, Nov 4-5, 2026, New York, United States' — matches record"
+  },
+  {
+    "name": "TechCon 365 Dallas",
+    "city": "Dallas",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "techcon365.com home page: 'Dallas, Texas TechCon 365 November 2-6, 2026, Irving Convention Center' — dates match record"
+  },
+  {
+    "name": "Speed Venture Summit",
+    "city": "Concord",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "nhtechalliance.org/speed-venture-summit: 'October 13th, 2026, 3:00 - 5:00 PM, The Hotel Concord' — matches record"
+  },
+  {
+    "name": "InsurTech Hartford Connect & Protect",
+    "city": "Hartford",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "insurtechhartford.com upcoming events lists 'Insurtech Hartford: Connect & Protect, Oct 27, 2026, Hartford, CT' — matches record"
+  },
+  {
+    "name": "InsurTech Hartford Innovation Challenge Awards",
+    "city": "Hartford",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "insurtechhartford.com lists 'Innovation Challenge Awards Ceremony, Oct 27, 2026, Nassau Office, Hartford' — matches record"
+  },
+  {
+    "name": "New York State Innovation Summit",
+    "city": "Buffalo",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "nysinnovationsummit.com: 'October 27 & 28, 2026', Buffalo Convention Center, Buffalo, New York — matches record"
+  },
+  {
+    "name": "SAINTCON",
+    "city": "Provo",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "saintcon.org: 'October 27 to 30, 2026 - UVCC - Provo, UT' — matches record"
+  },
+  {
+    "name": "GitHub Universe",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "githubuniverse.com: 'GitHub Universe 2026 ... october 28-29 / fort mason center, san francisco, CA' — matches record"
+  },
+  {
+    "name": "NVTC Cyber Summit & Cyber50 Awards",
+    "city": "Reston",
+    "status": "corrected",
+    "cycle": "passA",
+    "evidence": "nvtc.org/events/ lists 'NVTC Cyber Summit & Cyber50 Awards, Oct 28, 2026 | McLean, VA'. Date correct; city was wrong (Reston -> McLean)"
+  },
+  {
+    "name": "SHPE National Convention",
+    "city": "Indianapolis",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "shpe.org Future Conventions table: 'October 28-31, 2026 | Indianapolis, IN' — matches record"
+  },
+  {
+    "name": "BC Technology Impact Awards",
+    "city": "Vancouver",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "wearebctech.com/technology-impact-awards-tias/: 'October 29, 2026 | Parq Vancouver' — matches record"
+  },
+  {
+    "name": "DataConnect Conference",
+    "city": "Columbus",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "dataconnectconf.com: 'Columbus, Ohio | October 29-30, 2026' — matches record"
+  },
+  {
+    "name": "LASCON",
+    "city": "Austin",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "lascon.org: '2026 Conference dates will be Thursday and Friday, October 29-30, 2026', Norris Conference Centers - Austin — matches record"
+  },
+  {
+    "name": "NM TechFest",
+    "city": "Albuquerque",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "nmtechfest.com: 'TechFest 2026 ... October 29-30, 2026 | Innovation District | Downtown Albuquerque' — matches record"
+  },
+  {
+    "name": "Northeast Dreamin'",
+    "city": "Concord",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "northeastdreamin.com shows 'October 29-30, 2026' and 'Concord, NH' — matches record"
+  },
+  {
+    "name": "BSides NoVA",
+    "city": "Arlington",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsidesnova.org: 'SAVE THE DATE. OCTOBER 30 - 31, 2026 ... back for our 10th year! Join us October 30-31' — dates match record"
+  },
+  {
+    "name": "Pittsburgh TechFest",
+    "city": "Pittsburgh",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "pghtech.org/events calendar lists 'Pittsburgh TechFest 2026' on 30 Oct — matches record"
+  },
+  {
+    "name": "Triangle InfoSeCon",
+    "city": "Raleigh",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "triangleinfosecon.com: 'Triangle InfoSeCon, Friday, October 30, 2026, Raleigh Convention Center' — matches record"
+  },
+  {
+    "name": "Digital Summit Raleigh",
+    "city": "Raleigh",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "digitalsummit.com locations list: 'Raleigh, NC | November 2-3, 2026' — matches record"
+  },
+  {
+    "name": "Global Summit AI Vancouver",
+    "city": "Vancouver",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "globalsummit.ca: 'AI Summit | Vancouver | November 2-3, 2026' — matches record"
+  },
+  {
+    "name": "OWASP Global AppSec USA",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "owasp.org/events/: 'OWASP Global AppSec USA 2026 - San Francisco, CA, November 2-6, 2026' — matches record"
+  },
+  {
+    "name": "ElasticON San Francisco",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "elastic.co/elasticon city list: 'San Francisco AI focused November 4, 2026' — matches record"
+  },
+  {
+    "name": "INTERFACE Omaha",
+    "city": "Omaha",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "f2fevents.com/event/neb26/: 'INTERFACE Omaha | November 5th, 2026' — matches record"
+  },
+  {
+    "name": "Prompt Victoria AI Conference",
+    "city": "Victoria",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "members.viatec.ca event detail page: 'Thursday, November 5, 2026 (8:00 AM - 5:30 PM)' — matches record"
+  },
+  {
+    "name": "WordCamp Canada",
+    "city": "Vancouver",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "canada.wordcamp.org/2026/: 'November 5-6, 2026 - Vancouver, BC' — matches record"
+  },
+  {
+    "name": "Texas Linux Fest",
+    "city": "Austin",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "texaslinuxfest.org: 'Join us at our upcoming 2026 Texas Linux Fest Nov 6-7, 2026' — dates match record (2026 venue not yet named)"
+  },
+  {
+    "name": "BSides Charleston",
+    "city": "Charleston",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsidescharleston.org: 'November 7, 2026, Beatty Center | College of Charleston' — matches record"
+  },
+  {
+    "name": "BSidesDFW",
+    "city": "Dallas",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsides.org/event/bsidesdfw-5/ shows Date: November 7 — matches record"
+  },
+  {
+    "name": "HackRPI",
+    "city": "Troy",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "hackrpi.com: 'HackRPI 2026 will take place on Sat. November 7th and Sun. November 8th' and 'November 7, 8th - Troy, NY' — matches record"
+  },
+  {
+    "name": "Iowa Code Camp",
+    "city": "Des Moines",
+    "status": "corrected",
+    "cycle": "passA",
+    "evidence": "iowacodecamp.com header: 'Iowa Code Camp November 7, 2026, Ankeny, IA'. Date correct; city was wrong (Des Moines -> Ankeny, a separate suburb)"
+  },
+  {
+    "name": "Showerhacks",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "passA",
+    "evidence": "Organiser site showerhacks.org (found via the dev.events listing stored as the url) shows 'September 26th 2026, 10AM - 10PM, San Francisco'. Record had Oct 3 - a week late. Aggregator url also replaced with the organiser's"
+  },
+  {
+    "name": "HackTX",
+    "city": "Austin",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "hacktx.com SPA bundle countdown targets '2026-10-24T00:00:00' and the FAQ says walk-in registration 'Saturday, October 24th' (Oct 24 2026 is a Saturday); the FAQ's '2025' year is stale copy. Dates match record"
+  },
+  {
+    "name": "NetSuite SuiteWorld",
+    "city": "Las Vegas",
+    "status": "blocked",
+    "cycle": "passA",
+    "evidence": "netsuite.com/portal/events/suiteworld/main.shtml returns 403 to both WebFetch and curl with a browser UA; suiteworld.com does not connect"
+  },
+  {
+    "name": "HashiConf",
+    "city": "Atlanta",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "hashicorp.com/en/conferences/hashiconf: 'Atlanta | October 26-29, 2026' - matches record"
+  },
+  {
+    "name": "Vibe Coding Con",
+    "city": "Las Vegas",
+    "status": "corrected",
+    "cycle": "passA",
+    "evidence": "Organiser site vibecodingcon.ai shows 'October 27-28, 2026' at 'Red Rock Resort, Las Vegas' - dates and city correct, but the stored url was a dev.events regional listing page, not the event; replaced with the organiser's"
+  },
+  {
+    "name": "Michigan Technology Conference",
+    "city": "Rochester",
+    "status": "corrected",
+    "cycle": "passA",
+    "evidence": "Organiser site mitechcon.org shows 'October 28-30, 2026 - Workshops Wednesday - Conference Thursday and Friday' at 'Oakland University, Rochester, Michigan' - dates and city correct, but the stored url was a dev.events regional listing; replaced with the organiser's"
+  },
+  {
+    "name": "SANS AI Cybersecurity Summit",
+    "city": "Arlington",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "sans.org training-events list shows 'SANS AI Cybersecurity Summit Fall 2026, Mon, Nov 2 - Tue, Nov 3, 2026, Arlington, VA, US and Virtual' - matches record"
+  },
+  {
+    "name": "Kentucky Entrepreneur Hall of Fame Induction Celebration",
+    "city": "Lexington",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "awesomeinc.org/events lists 'Kentucky Entrepreneur Hall of Fame 2026 Induction Celebration Dinner, November 4, 2026, Central Bank Center, 430 W Vine St, Lexington, KY' - matches record"
+  },
+  {
+    "name": "SAAS NORTH",
+    "city": "Ottawa",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "saasnorth.com: 'November 4-5, 2026 at the Shaw Centre in Ottawa, Canada' - matches record"
+  },
+  {
+    "name": "CISO Fireside",
+    "city": "Sundance",
+    "status": "corrected",
+    "cycle": "passA",
+    "evidence": "Organiser site cisofireside.org: 'One track, one room, Thursday, November 5, 2026' at 'Sundance Resort, Utah' - date and city correct, but the stored url was a dev.events regional listing; replaced with the organiser's"
+  },
+  {
+    "name": "Hackaday Superconference",
+    "city": "Pasadena",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "Eventbrite listing: 'Friday, November 6-Sunday, November 8' and 'Hackaday Superconference November 6th, November 7th, and 8th in Pasadena, California', ArtCenter South Campus - matches record"
+  },
+  {
+    "name": "MDEV",
+    "city": "Madison",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "mdevconf.com JSON-LD: startDate 2026-11-06T09:00:00-0600, endDate 2026-11-07T17:00:00-0600, Alliant Energy Center, addressLocality Madison - matches record"
+  },
+  {
+    "name": "PNW Day of Data",
+    "city": "Vancouver",
+    "status": "corrected",
+    "cycle": "passA",
+    "evidence": "Organiser page dayofdata.org/2026-11-07-dayofdata1149/ shows the main event 07 November 2026 at Washington State University Vancouver, Vancouver, Washington, with an optional all-day Friday pre-conference (Nov 6), so the Nov 6-7 span is right; the stored url was a dev.events regional listing and was replaced with the organiser's"
+  },
+  {
+    "name": "DevFest KC",
+    "city": "Kansas City",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "gdg.community.dev/gdg-kansas-city/ lists 'DevFest KC 2026' on November 7, 2026, Kansas City - matches record"
+  },
+  {
+    "name": "HackUTD",
+    "city": "Richardson",
+    "status": "blocked",
+    "cycle": "passA",
+    "evidence": "zeroday.hackutd.co reads 'HackUTD 2026 - Zero Day. Coming soon; applications will open soon' with no date; hackutd.co main site also announces only 'Fall 2026'"
+  },
+  {
+    "name": "Toronto Game Expo",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "torontogameexpo.ca: 'GAME EXPO NOVEMBER 7 and 8, 2026, Exhibition Place' / 'Better Living Centre, Exhibition Place', Toronto - matches record"
+  },
+  {
+    "name": "Vintage Computer Festival Montreal",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "vcfed.org/events/vcf-montreal/: 'VCF Montreal 2026 Version 2.0 - WHEN: Nov. 7-8, 2026', repeated in the site-wide Upcoming Events box - matches record"
+  },
+  {
+    "name": "GOVIT Leadership Summit & Symposium",
+    "city": "Bloomington",
+    "status": "corrected",
+    "cycle": "passA",
+    "evidence": "Organiser page fusionlp.org/govit-2026: 'November 8-10, 2026 DoubleTree by Hilton, Bloomington, MN' - dates and city correct, but the stored url was a dev.events regional listing; replaced with the organiser's"
+  },
+  {
+    "name": "Accelerate Conference",
+    "city": "Flowood",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "accelerate.innovate.ms: 'Save the Date: November 10-11, 2026' at 'The Refuge Hotel and Conference Center at Sheraton Flowood, 2200 Refuge Blvd, Flowood, MS 39232' - matches record"
+  },
+  {
+    "name": "Montreal International Game Summit (MIGS)",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "migs.biz/en/: 'MONTREAL, canada nov 10 - 11, 2026' and 'Join us at Grand Quay, November 10 - 11, 9AM - 5PM, for the 2026 Montreal International Game Summit' - matches record"
+  },
+  {
+    "name": "BSides Flood City",
+    "city": "Johnstown",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsides.org/event/bsides-flood-city/ shows Date: November 12 - matches record"
+  },
+  {
+    "name": "Pacific Northwest Software Symposium",
+    "city": "Seattle",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "nofluffjuststuff.com tour list: 'Pacific Northwest Software Symposium, November 12 - 13, 2026' (Seattle) - matches record"
+  },
+  {
+    "name": "Seattle Day of Data",
+    "city": "Seattle",
+    "status": "corrected",
+    "cycle": "passA",
+    "evidence": "Organiser page dayofdata.org/2026-11-12-dayofdata1155 shows '12 November 2026', Seattle - date and city correct, but the stored url was a dev.events city listing; replaced with the organiser's"
+  },
+  {
+    "name": "SpiceWorld",
+    "city": "Austin",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "spiceworks.com/spiceworld/: 'SpiceWorld 2026 returns to Austin on Nov. 12-13!' - matches record"
+  },
+  {
+    "name": "CyberForce Competition",
+    "city": "Tinley Park",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "cyberforce.energy.gov 2026 Competition page: 'competition in 2026 for competing Blue team participants on November 13-14, 2026 at the Tinley Park Convention Center' - matches record"
+  },
+  {
+    "name": "Global Day of Coderetreat",
+    "city": "Multiple cities",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "coderetreat.org: 'Join us on the Global Day of Coderetreat on Nov 13, 2026 - Nov 14, 2026' - matches record"
+  },
+  {
+    "name": "HackUMass",
+    "city": "Amherst",
+    "status": "blocked",
+    "cycle": "passA",
+    "evidence": "hackumass.com reachable and headed 'HackUMass XIV' with venue (Integrative Learning Center, Amherst MA) but publishes no dates; only 'Schedule (XIII)' from the prior edition and 'Pre-Register Now!'"
+  },
+  {
+    "name": "New England Drupal Camp",
+    "city": "Providence",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "nedcamp.org: 'November 13-14, 2026', held 'in Providence on the lovely RIC campus' (Rhode Island College) - matches record"
+  },
+  {
+    "name": "San Diego CyberCon",
+    "city": "San Diego",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "sdcybercon.org: 'When: CONFERENCE, Fri Nov 13, 2026' - matches record"
+  },
+  {
+    "name": "Security BSides Delaware",
+    "city": "Newark",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "bsidesdelaware.com: 'Security BSides Delaware is November 13 - 14, 2026 @ The University of Delaware' (Newark, DE) - matches record"
+  },
+  {
+    "name": "Live! 360 Tech Con",
+    "city": "Orlando",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "live360events.com/events/orlando-2026/: 'November 15-20, 2026 | ROYAL PACIFIC RESORT AT UNIVERSAL ORLANDO' - matches record"
+  },
+  {
+    "name": "SC Conference (Supercomputing)",
+    "city": "Chicago",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "sc26.supercomputing.org meta description: 'The International Conference for High Performance Computing, Networking, Storage, and Analysis - 15-20 Nov 2026 - Chicago, IL' - matches record"
+  },
+  {
+    "name": "JSNation US",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "passA",
+    "evidence": "jsnation.us: 'November 16 (hybrid in New York) and November 19 (remote), 2026', with in-person days Nov 17-18 in NYC - span matches record"
+  }
+]

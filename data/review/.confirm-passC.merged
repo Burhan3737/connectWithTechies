@@ -1,0 +1,2319 @@
+[
+  {
+    "name": "43North Speaker Series",
+    "city": "Buffalo",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "luma.com/43north loads, lists 43North speaker-series/fireside events in Buffalo; no dated next edition published"
+  },
+  {
+    "name": "Abstractions",
+    "city": "Pittsburgh",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "abstractions.io still advertises 'August 21-23, 2019 in Pittsburgh' as the upcoming edition; site frozen 7 years with no forward activity - no further edition ever held"
+  },
+  {
+    "name": "AccelerateOTT",
+    "city": "Ottawa",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "accelerateott.ca live, 'Ottawa's Premier Entrepreneurship Event', references AccelerateOTT 2026 waitlist but publishes no calendar dates"
+  },
+  {
+    "name": "Agile Open Northwest",
+    "city": "Portland",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "agileopennorthwest.org live, AONW 2026 was March 6-7 in Portland (already past); no next edition date published yet"
+  },
+  {
+    "name": "AgTech Week",
+    "city": "Fargo",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "agtechweekfargo.com live, Fargo ND, says only 'Coming June 2027' with no specific days"
+  },
+  {
+    "name": "AI Engineer World's Fair",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "ai.engineer announces 'JUN 29-JUL 2 2027' at Moscone West, San Francisco - date now published"
+  },
+  {
+    "name": "Alabama Public Sector Cybersecurity Summit",
+    "city": "Montgomery",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "events.govtech.com page live for Montgomery (Embassy Suites, 300 Tallapoosa St); 2026 edition marked complete, 'Join us next year' - no 2027 date yet"
+  },
+  {
+    "name": "Alaska Digital Government Summit",
+    "city": "Anchorage",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "events.govtech.com page announces October 8 2026 at Marriott Anchorage Downtown - date now published"
+  },
+  {
+    "name": "Alaska SBDC Summit",
+    "city": "Anchorage",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "summit.aksbdc.org live, Alaska SBDC summit at The Wildbirch Hotel (Anchorage); last edition March 6 2026 already past, no next date"
+  },
+  {
+    "name": "Apple Worldwide Developers Conference",
+    "city": "Cupertino",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "developer.apple.com/wwdc26/ live and describes WWDC26 (keynote, sessions, group labs); no dates for the next edition published yet"
+  },
+  {
+    "name": "Arizona Tech Week",
+    "city": "Phoenix",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "arizonaascent.com page describes Arizona Tech Week 2026 across Phoenix/Scottsdale/Tempe/Tucson, anchor events April 7-9 2026 (past); no next edition dated"
+  },
+  {
+    "name": "Arizona Technology Summit",
+    "city": "Scottsdale",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "technologysummit.net/arizona.html live, 17th Annual summit at Grand Hyatt Scottsdale Resort, Scottsdale AZ; Aug 25 2026 edition just past, no next date"
+  },
+  {
+    "name": "Arkansas Digital Government Summit",
+    "city": "Little Rock",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "events.govtech.com page announces Tuesday October 13 2026 at Little Rock Marriott - date now published, registration open"
+  },
+  {
+    "name": "Arkansas IT Symposium",
+    "city": "Little Rock",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "10times.com/e1r1-x1p3-k4zx returns HTTP 403 to fetch"
+  },
+  {
+    "name": "Atlassian Team",
+    "city": "Anaheim",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "events.atlassian.com/team live: Team '26 at Anaheim Convention Center, May 5-7 2026 (past); no next edition date yet"
+  },
+  {
+    "name": "AWS Summit Toronto",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "aws.amazon.com summit page for Toronto, Metro Toronto Convention Centre; June 2-3 2026 edition marked concluded, no next date"
+  },
+  {
+    "name": "AlphaLab Demo Day",
+    "city": "Pittsburgh",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "alphalab.org returns an empty body to fetch on both www and apex host - JS-only shell, nothing readable"
+  },
+  {
+    "name": "Atlantic Venture Forum",
+    "city": "Halifax",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "igniteatlantic.com returns an empty body to fetch on both the event path and the homepage"
+  },
+  {
+    "name": "Bank Technology & Operations Conference & Showcase",
+    "city": "Wichita",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "ksbankers.com page live, KBA conference at Hyatt Regency Wichita; Feb 9-10 2026 edition past, no next date published"
+  },
+  {
+    "name": "BearHacks",
+    "city": "Mississauga",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "bearhacks.com returns HTTP 403 to fetch"
+  },
+  {
+    "name": "Big Data & Analytics Summit Canada",
+    "city": "Toronto",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "bigdatasummitcanada.com announces 12th Annual summit June 8-9 2027 in Toronto - date now published"
+  },
+  {
+    "name": "Big Sky Dev Con",
+    "city": "Bozeman",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bigskydevconf.com live, Montana Programmers conference in Bozeman; July 24-25 2026 edition past, no next date"
+  },
+  {
+    "name": "Black Tech Week",
+    "city": "Cincinnati",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "blacktechweek.com live, Cincinnati (Queen City); July 14-16 2026 edition past, no next date published"
+  },
+  {
+    "name": "Blockchain Futurist Conference",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "futuristconference.com live, Toronto edition promoted for 2026 with early-bird tickets but no calendar dates given"
+  },
+  {
+    "name": "Boise Code Camp",
+    "city": "Boise",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "boisecodecamp.com resolves and serves the Boise Code Camp page (minimal/JS-rendered body); no date published"
+  },
+  {
+    "name": "BrickHack",
+    "city": "Rochester",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "brickhack.io live, RIT hackathon in Rochester NY; latest listed edition Feb 22-23 2025 at RIT SHED, no next date yet"
+  },
+  {
+    "name": "BSides 312",
+    "city": "Chicago",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsides312.org live, Chicago (Irish American Heritage Center); explicitly 'Date: TBD, 2027', check back in November"
+  },
+  {
+    "name": "BSides Boulder",
+    "city": "Boulder",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidesboulder.org live, Boulder CO; June 13 2026 edition wrapped ('see you next year'), no next date"
+  },
+  {
+    "name": "BSides Buffalo",
+    "city": "Buffalo",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidesbuffalo.org live, 'held annually in Buffalo, NY'; June 6 2026 edition past, no next date"
+  },
+  {
+    "name": "BSides Charlotte",
+    "city": "Charlotte",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidesclt.org live, Charlotte NC 501(c)3; March 28-29 2026 edition past, no next date"
+  },
+  {
+    "name": "BSides Chicago",
+    "city": "Chicago",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsideschicago.org live, Chicago; site says the con is taking 2026 off and returns in 2027, no dates given"
+  },
+  {
+    "name": "BSides Dayton",
+    "city": "Dayton",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "bsidesdayton.com announces Saturday May 15 2027, 9:30am-5pm (Dayton area, Fairborn OH venue) - date now published"
+  },
+  {
+    "name": "BSides Des Moines",
+    "city": "Des Moines",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidesdsm.org live, Des Moines area (Ankeny venue); June 13 2026 edition past, no next date"
+  },
+  {
+    "name": "BSides Detroit",
+    "city": "Detroit",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidesdetroit.org live, Detroit; May 30 2026 edition past (sold out), no next date"
+  },
+  {
+    "name": "BSides Fort Wayne",
+    "city": "Fort Wayne",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "bsidesfortwayne.org returns HTTP 403 to fetch"
+  },
+  {
+    "name": "BSides Halifax",
+    "city": "Halifax",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "halifaxbsides.ca live, Halifax NS; Nov 13 2025 edition sold out, organisers collecting feedback to plan 2026 - no date yet"
+  },
+  {
+    "name": "BSides Knoxville",
+    "city": "Knoxville",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "10-sec.org/bsides-knoxville live, Knoxville TN; May 22 2026 edition past, no next date"
+  },
+  {
+    "name": "BSides Las Vegas",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsideslv.org live, Las Vegas at The Tuscany; Aug 3-5 2026 edition just past, no next date"
+  },
+  {
+    "name": "BSides London Canada",
+    "city": "London",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsideslondon.ca live, explicitly London Ontario Canada; May 23 2026 edition past, no next date"
+  },
+  {
+    "name": "BSides MKE",
+    "city": "Milwaukee",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidesmke.org live, Milwaukee WI; April 3 2026 edition past, no next date"
+  },
+  {
+    "name": "BSides Nashville",
+    "city": "Nashville",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "bsidesnash.org announces April 23 2027, doors 8:30am, Nashville TN - date now published"
+  },
+  {
+    "name": "BSides Regina",
+    "city": "Regina",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidesregina.ca live, Regina SK; March 18-19 2026 edition past, no next date"
+  },
+  {
+    "name": "BSides Roanoke",
+    "city": "Roanoke",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidesroa.org live, Roanoke VA; June 5 2026 edition past, no next date"
+  },
+  {
+    "name": "BSides SATX",
+    "city": "San Antonio",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidessatx.com live, San Antonio TX at St. Mary's University; says 'Returning in 2027' with no dates set"
+  },
+  {
+    "name": "BSides ICS/OT",
+    "city": "Miami",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "bsidesics.org: event runs the day before S4; 2026 edition was Miami but the site now advertises 'BSidesICS/OT 2027 Tampa, FL' (details TBA) - next edition city is Tampa, not Miami"
+  },
+  {
+    "name": "BSides NOLA",
+    "city": "New Orleans",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "nolabsides.com 301-redirects to bsidesnola.notion.site, which returns only a JS shell ('Notion') with no readable content"
+  },
+  {
+    "name": "BSides Seattle",
+    "city": "Seattle",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidesseattle.com live, Seattle-area con (Feb 27-28 2026 at Building 92, Redmond WA - metro naming as with other BSides rows); edition past, no next date"
+  },
+  {
+    "name": "BSides SLC",
+    "city": "Salt Lake City",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidesslc.org live, Salt Lake City area (Sandy UT venue); April 9-10 2026 edition past, no next date"
+  },
+  {
+    "name": "BSides South Florida",
+    "city": "Fort Lauderdale",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidessouthflorida.org live, Marriott Harbor Beach Resort (Fort Lauderdale); next edition announced only as 'May 2027' with no exact dates"
+  },
+  {
+    "name": "BSides South Jersey",
+    "city": "Glassboro",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidessouthjersey.org live, Rowan University, Glassboro NJ; April 18 2026 edition past, 2027 section says details coming soon"
+  },
+  {
+    "name": "BSides Tampa",
+    "city": "Tampa",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidestampa.net live, USF Marshall Student Center Tampa FL; May 15-16 2026 edition past, no next date"
+  },
+  {
+    "name": "BSidesKC",
+    "city": "Kansas City",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsideskc.org live, Kansas City Kansas Community College, Kansas City KS; main event 4/25/2026 past, no next date"
+  },
+  {
+    "name": "BSidesROC",
+    "city": "Rochester",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "bsidesroc.com announces Saturday March 20 2027 for the next Security B-Sides Rochester - date now published"
+  },
+  {
+    "name": "BSidesSF",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidessf.org live, San Francisco; 'BSidesSF 2026 is happening -- March 21-22' already past, no next date"
+  },
+  {
+    "name": "BSidesSTL",
+    "city": "St. Louis",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "bsidesstl.org live, Saint Louis MO; organisers state no 2026 conference (blockers) and aim to resume in 2027 - no dates"
+  },
+  {
+    "name": "Cal Hacks",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "calhacks.io live, Cal Hacks 12.0 at Palace of Fine Arts, San Francisco, Oct 24-26 2025 (past); no next edition dated"
+  },
+  {
+    "name": "Calagator Portland Tech Calendar",
+    "city": "Portland",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "calagator.org live, 'unified calendar for the technology community of Portland, Oregon', actively listing events into Sept 2026"
+  },
+  {
+    "name": "CalgaryHacks",
+    "city": "Calgary",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "calgaryhacks2026.devpost.com describes the University of Calgary ICT Building hackathon, Feb 14-15 2026, now marked 'This hackathon has ended'; no next edition page yet"
+  },
+  {
+    "name": "Canadian Game Awards",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "canadiangameawards.ca live, 6th edition at John Bassett Theatre Toronto, May 21 2026 (past); no next date"
+  },
+  {
+    "name": "CascadiaJS",
+    "city": "Seattle",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "cascadiajs.com live, Seattle; June 2026 edition sold out and past, 'See you in 2027' with no dates"
+  },
+  {
+    "name": "CDL Super Session",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "creativedestructionlab.com/super-session live, annual Toronto showcase of graduating CDL companies; page still on June 24 2025 edition, no next date"
+  },
+  {
+    "name": "CED Venture Connect",
+    "city": "Durham",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "cednc.org/venture-connect live, Durham NC; VC26 was March 24-25 2026 (past), no next date"
+  },
+  {
+    "name": "Central Ohio InfoSec Summit",
+    "city": "Columbus",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "infosecsummit.com live, Hilton Columbus Downtown, Columbus OH; June 8-10 2026 edition past, no next date"
+  },
+  {
+    "name": "Cambridge Science Festival",
+    "city": "Cambridge",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "cambridgesciencefestival.org returns an empty body to fetch on both www and trailing-slash forms"
+  },
+  {
+    "name": "Central Ohio Software Symposium",
+    "city": "Columbus",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nofluffjuststuff.com/columbus live and describes the Columbus OH NFJS symposium; latest listed edition Sep 29-Oct 1 2023, 2026 NFJS tour partners shown, no new Columbus date"
+  },
+  {
+    "name": "ChaTech Tech Tuesdays",
+    "city": "Chattanooga",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "chatech.org live, Chattanooga tech council, lists 'Tech Tuesdays' under Communities; recent 2026 content, no fixed dates published"
+  },
+  {
+    "name": "Chattanooga Entrepreneur Week",
+    "city": "Chattanooga",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "chabusiness.org (Small Business Resource Center, Chattanooga) live and carries a Chattanooga Entrepreneur Week section; no dates published"
+  },
+  {
+    "name": "Chi Hack Night",
+    "city": "Chicago",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "chihacknight.org live, Chicago weekly civic-tech event, sessions listed through Aug 2026"
+  },
+  {
+    "name": "Cincy AI Week",
+    "city": "Cincinnati",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "joinaiweek.com/cincy live, Cincinnati OH; June 9-11 2026 sold out and past, 'Returning June 2027' with no exact dates"
+  },
+  {
+    "name": "Circuit Hacking Monday at Noisebridge",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "noisebridge.net wiki live (last edited June 7 2026), San Francisco hackerspace, Circuit Hacking Monday listed as weekly Mondays 7pm"
+  },
+  {
+    "name": "Coastal Innovation Challenge",
+    "city": "New Orleans",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "ideavillage.org/coastal-innovation-challenge live, Idea Village New Orleans (900 Camp St); 'Applications open soon', no dates"
+  },
+  {
+    "name": "Code for America Summit",
+    "city": "Washington",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "summit.codeforamerica.org returns HTTP 403 to fetch"
+  },
+  {
+    "name": "Code for Boston Hack Night",
+    "city": "Cambridge",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "codeforboston.org live, weekly Tuesday 7pm hack nights, in-person first and third Tuesdays at the CIC; recurring, no fixed dates"
+  },
+  {
+    "name": "Code Platoon",
+    "city": "Chicago",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "codeplatoon.org live, veteran/military-spouse coding bootcamp, One South Dearborn Chicago IL; rolling cohorts, no dates published"
+  },
+  {
+    "name": "Code4Lib",
+    "city": "Philadelphia",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "2026.code4lib.org live, Philadelphia PA, March 2-5 2026 edition past; no 2027 site/date yet"
+  },
+  {
+    "name": "CodeCrush",
+    "city": "Omaha",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "aiminstitute.org/codecrush live, AIM Institute Omaha NE iSTEM immersion; two cohorts a year, no calendar dates published"
+  },
+  {
+    "name": "Colorado Technology Association APEX Awards",
+    "city": "Denver",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "coloradotechnology.org/apex-awards live, Denver CO; Feb 18 2026 Colorado Tech Summit + APEX Awards past (sold out), no next date"
+  },
+  {
+    "name": "ConHacks",
+    "city": "Waterloo",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "conhacks.io live, Conestoga College Waterloo Campus; April 28-30 2026 edition past, ConHacks 2027 referenced without dates"
+  },
+  {
+    "name": "ConUHacks",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "conuhacks.io live, Concordia University downtown Montreal; ConUHacks X Jan 24-25 2026 past, no next date"
+  },
+  {
+    "name": "Critical Effect",
+    "city": "Washington",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "securityandtechnology.org event page live, Akin DC 2001 K Street NW Washington DC; June 17-18 2026 edition past, no next date"
+  },
+  {
+    "name": "CTA Tech Week",
+    "city": "Washington",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "cta.tech/events/tech-week live, Washington DC; April 21-22 2026 edition past, no next date"
+  },
+  {
+    "name": "CTO Craft Con Toronto",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "conference.ctocraft.com/toronto live, Toronto; after two years the site says 'Returning in 2027' with no dates"
+  },
+  {
+    "name": "Cultivate Conference",
+    "city": "Fargo",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "grandfarm.com/cultivate live, Grand Farm flagship ag-tech conference (Fargo ND); page marks the June 11 2026 edition as past, no next date"
+  },
+  {
+    "name": "Cultivator Community Night",
+    "city": "Regina",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "cultivator.ca/events live, Regina SK incubator; 'Community Night 2026' held Feb 4 2026, no next Community Night dated"
+  },
+  {
+    "name": "CyberConVA",
+    "city": "Richmond",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "rvatech.com CyberConVA page live, Richmond VA; Feb 12 2026 edition past, no next date"
+  },
+  {
+    "name": "CyberSci National Finals",
+    "city": "Ottawa",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "cybersecuritychallenge.ca live; 2026 National Finals hosted in Ottawa June 12-15 2026 (past), no next date"
+  },
+  {
+    "name": "Cybersecurity, Stronger Together Conference",
+    "city": "Washington",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "cyberconference.cps.gwu.edu returns HTTP 403 to fetch"
+  },
+  {
+    "name": "DakotaCon",
+    "city": "Madison",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "dakotacon.org live, DakotaCon 13 in Madison SD (DSU); March 27-28 2026 edition past, no next date"
+  },
+  {
+    "name": "Data Science DC",
+    "city": "Washington",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "meetup.com/data-science-dc loads, Washington DC group with 17k members; NO upcoming events and latest listed meetup is Aug 2024 - group appears dormant, flagged for a later pass"
+  },
+  {
+    "name": "DataTune",
+    "city": "Nashville",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "datatuneconf.com live, Nashville TN; '2026 by the numbers' recap and 'Returning March 2027' with no exact dates"
+  },
+  {
+    "name": "Desert Dev Lab Hackathon",
+    "city": "Albuquerque",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nmtechtalks.com live (c 2026), New Mexico tech network naming 'Desert Dev Lab software hackathon' as one of two annual events; no dates published"
+  },
+  {
+    "name": "DeveloperWeek New York",
+    "city": "New York",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "developerweek.com/newyork returns HTTP 403 to fetch"
+  },
+  {
+    "name": "Cybersecurity Summit Chicago",
+    "city": "Chicago",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "cybersecuritysummit.com upcoming-summits list shows 'Sep 15 Chicago' under September 15, 2026 - date now published"
+  },
+  {
+    "name": "DevFest Charlotte",
+    "city": "Charlotte",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "gdg.community.dev/gdg-charlotte live, 1133 members, ran GDG Charlotte DevFest 2025; currently 'no upcoming events'"
+  },
+  {
+    "name": "DevFestMN",
+    "city": "Minneapolis",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "devfest.mn live, U of Minnesota Health Sciences Education Center, Minneapolis; page still on the Dec 6 2025 edition, no next date"
+  },
+  {
+    "name": "devopsdays Raleigh",
+    "city": "Raleigh",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "devopsdays.org/events/2026-raleigh live, McKimmon Center Raleigh NC; April 30-May 1 2026 edition past, no next date"
+  },
+  {
+    "name": "DevOpsDays Detroit",
+    "city": "Detroit",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "devopsdays.org/events lists Detroit only under 'TBD' (slug /events/2025-detroit) with no date assigned"
+  },
+  {
+    "name": "DFW Startup Week",
+    "city": "Dallas",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "dfwstartupweek.com live, Dallas-Fort Worth; Aug 2-6 2026 edition just past, no next date"
+  },
+  {
+    "name": "Diamond Challenge",
+    "city": "Newark",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "diamondchallenge.org live, Horn Entrepreneurship, 132 E. Delaware Ave Newark DE; 2025 finalists shown, no dates published"
+  },
+  {
+    "name": "Digital Offshore Conference",
+    "city": "St. John's",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "digitaloffshore.ca/overview announces DO27 for April 27-28 2027 in St. John's (DO26 March 10-11 2026 closed) - date now published"
+  },
+  {
+    "name": "Digital Summit Tampa",
+    "city": "Tampa",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "digitalsummit.com live, series page lists 'Tampa | March 23-24' 2026 (past); no next Tampa date"
+  },
+  {
+    "name": "DevOpsDays Kansas City",
+    "city": "Overland Park",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "devopsdays.org/events/2026-kansas-city live, Lifted Logic, 5600 W 95th St, Overland Park KS; May 28-29 2026 edition past, no next date"
+  },
+  {
+    "name": "DevOpsDays Chicago",
+    "city": "Chicago",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "devopsdays.org/events lists Chicago under 'TBD' pointing at /events/2027-chicago with no date assigned"
+  },
+  {
+    "name": "DjangoCon US",
+    "city": "Chicago",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "djangocon.us live (DEFNA), promoting tickets for 2026 and events through 2028; 2025 edition was Chicago, no 2026 city or dates posted yet"
+  },
+  {
+    "name": "Eahou Fest",
+    "city": "Honolulu",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "eahoufest.com live, conference-meets-festival in Moiliili, Oahu (Honolulu); May 1-3 2026 edition past, no next date"
+  },
+  {
+    "name": "East Meets West",
+    "city": "Honolulu",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "emwhawaii.com live, East Meets West conference in Hawaii; April 8-9 2026 edition past, no next date"
+  },
+  {
+    "name": "Elevate Conference",
+    "city": "Wheatland",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "grandfarm.com/elevate live, Grand Farm Innovation Campus 3717 153rd Ave SE Wheatland ND; July 28 2026 edition marked as taken place, no next date"
+  },
+  {
+    "name": "Emergence Office Hours",
+    "city": "Charlottetown",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "peibioalliance.com event page loads and describes an Emergence Office Hours session (PEI BioAlliance, Charlottetown); the instance shown (Nov 27 2025) is marked passed, no next date"
+  },
+  {
+    "name": "Emerging Technologies Summit",
+    "city": "Bozeman",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "mthightech.org event page returns HTTP 403 to fetch"
+  },
+  {
+    "name": "Empowering Innovation Spirit Conference",
+    "city": "Whitehorse",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "entreprenorth.ca page live, 2026 Empowering Innovation Spirit Conference in Whitehorse YT, August 24-26 2026 - that edition concludes today, no later date published"
+  },
+  {
+    "name": "ETHGlobal New York",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "ethglobal.com/events/newyork2026 live, New York City; June 12-14 2026 edition past, no next date"
+  },
+  {
+    "name": "Figma Config",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "config.figma.com live; SF edition June 23-25 2026 already wrapped (Config India Oct 15 2026 is a separate city), no next SF date"
+  },
+  {
+    "name": "First Look Forum",
+    "city": "Milwaukee",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "mcservices.com page loads and does describe First Look Forum (April 16 2026, Quarles & Brady, 411 E Wisconsin Ave Milwaukee) but it is an IT vendor's blog listicle, not the organiser's site - link quality flagged"
+  },
+  {
+    "name": "FITC Toronto",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "fitc.ca/event/to26_ip live, FITC Toronto 25th anniversary, April 27-28 2026 (past); no next date"
+  },
+  {
+    "name": "Forcelandia",
+    "city": "Portland",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "forcelandia.com live, Salesforce developer community event Portland OR; July 29-30 2026 edition past, no next date"
+  },
+  {
+    "name": "GameCon Canada",
+    "city": "Edmonton",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "gameconcanada.com headlines 'JUNE 25th - 27th 2027' for the Edmonton expo - date now published"
+  },
+  {
+    "name": "Gamerella",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "gamerella.ca live, inclusive game jam in Montreal; announces 'November 14th & 15th' with no year stated, so no date recorded"
+  },
+  {
+    "name": "GDG Ann Arbor",
+    "city": "Ann Arbor",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "gdg.community.dev/gdg-ann-arbor live, 615 members, Ann Arbor MI; active (last meetup Apr 28 2026, next listed item is Michigan DevFest Nov 13 2026 - a separate event, so no series date set)"
+  },
+  {
+    "name": "GDG Providence",
+    "city": "Providence",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "gdg.community.dev/gdg-providence live, 606 members, Providence RI; last event June 25 2026, currently 'no upcoming events'"
+  },
+  {
+    "name": "GeekWire Seattle AI Summit",
+    "city": "Seattle",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "geekwire.com calendar-event page returns HTTP 403 to fetch"
+  },
+  {
+    "name": "Generator Makerspace Workshops",
+    "city": "Burlington",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "generatorvt.com live, Generator makerspace in Burlington VT with a workshops programme; no fixed dates published on the landing page"
+  },
+  {
+    "name": "Genspace Community Biology Programs",
+    "city": "Brooklyn",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "genspace.org live, community biology lab at 132 32nd Street Suite 108, Brooklyn NY, lists classes/public programs/residencies; no dates published"
+  },
+  {
+    "name": "Global Game Jam - NYU Game Center",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "globalgamejam.org 2026 jam-site page live for NYU Game Center, Brooklyn NYC, Jan 30-Feb 1 2026 (past, registration closed)"
+  },
+  {
+    "name": "Global Game Jam - AAPI in Gaming",
+    "city": "Vancouver",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "globalgamejam.org 2026 jam-site page states 'This site is Online/Virtual only' - there is no in-person Vancouver venue behind this listing"
+  },
+  {
+    "name": "Google I/O",
+    "city": "Mountain View",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "io.google/2026 live with keynotes and session library; no venue or dates for the next edition published"
+  },
+  {
+    "name": "GopherCon",
+    "city": "Seattle",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "gophercon.com live, Seattle Convention Center Summit; Aug 3-6 2026 edition just past, 2027 CFS not yet open"
+  },
+  {
+    "name": "H2O Conference",
+    "city": "Halifax",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "h2oconference.ca live, Canada's ocean-technology conference in Halifax NS; June 8-11 2026 edition past, no next date"
+  },
+  {
+    "name": "Global Game Jam - Gay Gaming Professionals",
+    "city": "Northridge",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "globalgamejam.org 2026 jam-site page is titled '(Online/Virtual Only)' and runs on Discord; Northridge CA is the organiser's base, not a venue"
+  },
+  {
+    "name": "Global Game Jam - The Sheep's Meow at Bloomfield College",
+    "city": "Bloomfield",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "globalgamejam.org 2026 jam-site page live, hybrid with in-person venue Center for Technology + Creativity, 198 Liberty St, Bloomfield NJ; Jan 26-Feb 1 2026 (past)"
+  },
+  {
+    "name": "Global Game Jam - Abilene Christian University",
+    "city": "Abilene",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "globalgamejam.org 2026 jam-site page live, hybrid at 1601 College, Abilene TX; Jan 26-Feb 1 2026 (past)"
+  },
+  {
+    "name": "Global Game Jam - College of Charleston",
+    "city": "Charleston",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "globalgamejam.org 2026 jam-site page live, hybrid at Harbor Walk East Innovation Center, 360 Concord St, Charleston SC; Jan 30-Feb 1 2026 (past)"
+  },
+  {
+    "name": "Global Game Jam - Parsons School of Design",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "globalgamejam.org 2026 jam-site page live, hybrid at Vera List Center, The New School, 6 E 16th St, New York NY; Jan 30-Feb 1 2026 (past)"
+  },
+  {
+    "name": "Global Game Jam - RPI Game Development Club",
+    "city": "Troy",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "globalgamejam.org 2026 jam-site page live, hybrid at Sage Labs, 1800 6th Avenue, Troy NY; GGJ26 weekend (past)"
+  },
+  {
+    "name": "Global Game Jam - University of Montana",
+    "city": "Missoula",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "globalgamejam.org 2026 jam-site page live, hybrid at McGill Hall Room 223, 32 Campus Drive, Missoula MT; Jan 30-Feb 1 2026 (past)"
+  },
+  {
+    "name": "Global Game Jam Albuquerque",
+    "city": "Albuquerque",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "globalgamejam.org 2026 jam-site page live, hybrid at Mesa Del Sol, 5700 University Blvd SE, Albuquerque NM; Jan 30-Feb 1 2026 (past)"
+  },
+  {
+    "name": "Global Game Jam San Antonio",
+    "city": "San Antonio",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "globalgamejam.org 2026 jam-site page live, hybrid at Shenanigans Gaming, 5251 Timberhill Dr, San Antonio TX; Jan 26-Feb 1 2026 (past)"
+  },
+  {
+    "name": "Hack Arizona",
+    "city": "Tucson",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "hack.arizona.edu live, University of Arizona student hackathon in Tucson; 'Hack Arizona 2026 has successfully concluded', no next date"
+  },
+  {
+    "name": "Hack the 6ix",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "hackthe6ix.com live, 12th edition, Toronto; July 17-19 2026 edition past, no next date"
+  },
+  {
+    "name": "Hackabull",
+    "city": "Tampa",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "hackabull.com live, USF's 36-hour hackathon (Tampa); Hackabull 2026 was April 25-26 (past), no next date"
+  },
+  {
+    "name": "HackDuke: Code for Good",
+    "city": "Durham",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "hackduke.org live, Duke University (Durham NC) org whose flagship hackathon is Code for Good; no dates published, newest assets dated 2023"
+  },
+  {
+    "name": "HackED",
+    "city": "Edmonton",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "hacked-2026.devpost.com live, U of Alberta Computer Engineering Club, Donadeo Innovation Centre Edmonton; Feb 20-22 2026 marked ended, no next date"
+  },
+  {
+    "name": "Hacker Dojo",
+    "city": "Mountain View",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "hackerdojo.org live (c 2009-2026), hackerspace at 855 Maude Ave, Mountain View CA, open 10am-9pm; no fixed workshop dates on site"
+  },
+  {
+    "name": "Hacker Dojo Events",
+    "city": "Mountain View",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "meetup.com/hackerdojo loads, Mountain View CA, 20,317 members with 135 upcoming events listed - active recurring series, no single next date"
+  },
+  {
+    "name": "HackHCC",
+    "city": "Houston",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "mlh.com 2026 season list shows HackHCC as in-person in Houston TX on May 22-23 (past); no next date"
+  },
+  {
+    "name": "HackNYU",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "hacknyu.github.io live, official NYU student org running the 48-hour hackathon in New York; no dates published"
+  },
+  {
+    "name": "HackPrinceton",
+    "city": "Princeton",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "hackprinceton.com live with MLH 2026 season badge and Apr 18 deadline (past); no next edition dated"
+  },
+  {
+    "name": "Hackers Teaching Hackers",
+    "city": "Canal Winchester",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "hthackers.com live, annual infosec con at BrewDog DogTap, Canal Winchester OH; 2026.hthackers.com exists ('HTH 2026: Spaceballs') but publishes no dates yet"
+  },
+  {
+    "name": "HackRU",
+    "city": "New Brunswick",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "hackru.org resolves and serves the HackRU site (JS-rendered, title 'HackRU F25'); Rutgers New Brunswick hackathon, no date readable"
+  },
+  {
+    "name": "HackTheU",
+    "city": "Salt Lake City",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "hacktheu.org is frozen on the 2020/2021 edition - MLH 2021 trust badge, FAQ referencing 'fall hackathon 2020', dates 'October 16-18' with no current year; no forward activity in ~5 years"
+  },
+  {
+    "name": "HackUSU",
+    "city": "Logan",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "huntsman.usu.edu/hackusu announces February 19-20 2027 at 3500 Old Main Hill, Logan UT, registration open - date now published"
+  },
+  {
+    "name": "Halifax Indie Devs Play and Tell",
+    "city": "Halifax",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "meetup.com/halifax-indie-devs-play-and-tell loads, Halifax NS, 487 members, monthly Play & Tell at Halifax Central Library - active recurring series"
+  },
+  {
+    "name": "Hawaii International Conference on System Sciences",
+    "city": "Honolulu",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "hicss.hawaii.edu announces HICSS January 5-8 2027 at the Hilton Waikoloa Village on the Big Island - date now published and venue is Waikoloa, not Honolulu"
+  },
+  {
+    "name": "Houston Tech Rodeo",
+    "city": "Houston",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "houstonexponential.org returns HTTP 403 to fetch"
+  },
+  {
+    "name": "HTDC Events",
+    "city": "Honolulu",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "htdc.org/events live, HTDC Honolulu (521 Ala Moana Blvd), actively listing events through September 2026"
+  },
+  {
+    "name": "HudsonAlpha Tech Challenge",
+    "city": "Huntsville",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "hudsonalpha.org/techchallenge live, 800 Hudson Way NW Huntsville AL; March 6-8 2026 edition past, no next date"
+  },
+  {
+    "name": "Idaho Digital Government Summit",
+    "city": "Boise",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "events.govtech.com Idaho summit page announces Tuesday September 1 2026 at Boise Centre, 850 W Front St, registration open - date now published"
+  },
+  {
+    "name": "Idaho Technology Council Trade Show & Conference",
+    "city": "Boise",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "idahotechcouncil.org page live for the Explore Idaho Tech Trade Show & Conference at Boise Centre, but banner reads 'This event has been postponed' - no date"
+  },
+  {
+    "name": "Idea Village Pitch Night",
+    "city": "New Orleans",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "ideavillage.org pitch-night page live, New Orleans; June 18 2026 edition recapped and 'Pitch Night returns in November 2026' with no exact date"
+  },
+  {
+    "name": "IdeaFunding",
+    "city": "Tucson",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "startuptucson.com/ideafunding live, Arizona's longest-running pitch competition in Tucson; 2026 cycle closed (main stage March 26 2026), no next date"
+  },
+  {
+    "name": "IgniteND",
+    "city": "Valley City",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "edutech.nd.gov/ignitend live, two-day conference at Valley City State University; June 2-3 2026 edition past, no next date"
+  },
+  {
+    "name": "ImmerseGT",
+    "city": "Atlanta",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "immersegt.org live, XR hackathon at Georgia Tech, Atlanta; April 10-12 2026 edition past, no next date"
+  },
+  {
+    "name": "IND(Venture) Indiana Venture Summit",
+    "city": "Indianapolis",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "techpoint.org event page live and describes the Indiana Venture Summit in Indianapolis; page body still carries the July 12-13 2023 edition, no new date"
+  },
+  {
+    "name": "IndieCade",
+    "city": "Los Angeles",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "indiecade.com returns an empty body to fetch on both www and apex forms"
+  },
+  {
+    "name": "Innovate 901",
+    "city": "Memphis",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "innovate901.com live, high-school startup pitch at Crosstown Concourse, 1350 Concourse Ave, Memphis TN; Jan 17 2026 pitch event past, no next date"
+  },
+  {
+    "name": "Innovate New Mexico Technology Showcase",
+    "city": "Albuquerque",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "innovatenewmexico.com/2026showcase live, Lobo Rainforest Building, downtown Albuquerque; no dates published for the 2026 showcase"
+  },
+  {
+    "name": "Innovate QA",
+    "city": "Bellevue",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "dev.events/NA/US/WA/Bellevue/tech is a generic Bellevue conference directory and does not list 'Innovate QA' anywhere; a dev.events site search for the name also returns nothing - the link does not describe the event"
+  },
+  {
+    "name": "Innovation Week Saskatchewan",
+    "city": "Saskatoon",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "innovationsask.ca returns HTTP 403 to fetch"
+  },
+  {
+    "name": "InsurTech America Symposium",
+    "city": "Hartford",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "insurtechamericasymposium.com live, Connecticut Convention Center Hartford; April 13-14 2026 edition past, 2027 early registration open without dates"
+  },
+  {
+    "name": "INTERFACE Anchorage",
+    "city": "Anchorage",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "f2fevents.com/event/anc26 live, Dena'ina Convention Center Anchorage; April 22 2026 edition past, 'will return in 2027' with no date"
+  },
+  {
+    "name": "INTERFACE Honolulu",
+    "city": "Honolulu",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "f2fevents.com/event/hnl26 live, Sheraton Waikiki Honolulu; May 21 2026 edition past, 'will return in 2027' with no date"
+  },
+  {
+    "name": "INTERFACE Montana",
+    "city": "Bozeman",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "f2fevents.com/event/mnt26 live, MSU Strand Union Building Bozeman MT; July 29 2026 edition past, 'will return in 2027' with no date"
+  },
+  {
+    "name": "INTERFACE Wyoming",
+    "city": "Cheyenne",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "f2fevents.com/event/wyo26 live, Little America Hotel & Resort Cheyenne WY; July 9 2026 edition past, 'will return in 2027' with no date"
+  },
+  {
+    "name": "Iowa Tech Week",
+    "city": "Des Moines",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "technologyiowa.org/techweek live, Des Moines IA; April 6-9 2026 edition past, no next date"
+  },
+  {
+    "name": "JAMHacks",
+    "city": "Waterloo",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "jamhacks.ca live, JAMHacks 10 at University of Waterloo; June 12-14 2026 edition past, no next date"
+  },
+  {
+    "name": "John P. Ellbogen $50K Entrepreneurship Competition",
+    "city": "Laramie",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "ellbogen50k.org live, University of Wyoming competition (Laramie); 2026 finalists posted and 2026/27 application open, no dates"
+  },
+  {
+    "name": "JSConf North America",
+    "city": "Baltimore",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "jsconf.com is an unmaintained federation homepage (2019/2017 links) that points to events.linuxfoundation.org/jsconf-north-america; that page shows JSConf North America Oct 14-16 2025 at the Hyatt Regency Chesapeake Bay, Cambridge MD - not Baltimore"
+  },
+  {
+    "name": "JumpStart Expo & Pitch Night",
+    "city": "Burlington",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "generatorvt.com/jumpstart-expo live, 40 Sears Ln Burlington VT; Wednesday April 8 2026 edition past, no next date"
+  },
+  {
+    "name": "Kentucky Digital Government Summit",
+    "city": "Louisville",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "events.govtech.com Kentucky summit page places the event at the Marriott Griffin Gate Golf Resort, 1800 Newtown Pike, LEXINGTON KY (June 10 2026, now complete) - the recorded city Louisville is wrong"
+  },
+  {
+    "name": "Latinas in Tech",
+    "city": "Multiple cities",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "latinasintech.org live ('Connecting, supporting and empowering Latina women working in tech'); JS-rendered chapter/event lists not readable, no dates published in the served HTML"
+  },
+  {
+    "name": "LaunchVT Demo Night",
+    "city": "Burlington",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "lccvermont.org/launchvt live, 110 Main Street Burlington VT, describes Demo Night as Vermont's largest pitch competition; 'Demo Night 2026' referenced with no date"
+  },
+  {
+    "name": "Lincoln AI",
+    "city": "Lincoln",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "meetup.com/lincoln-ai loads, Lincoln NE, 417 members; last meeting Aug 18 2026 at Don't Panic Labs, no upcoming event scheduled"
+  },
+  {
+    "name": "Maine Entrepreneurs Summit",
+    "city": "Portland",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "mced.biz/events live (Maine Center for Entrepreneurs, Portland ME); Maine Entrepreneurs Summit listed for May 12 2026 (past), no next date"
+  },
+  {
+    "name": "MakeShift Maker Meetup",
+    "city": "Lincoln",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "makeshiftlincoln.org live, makerspace at 1135 N. 22nd St Lincoln NE, weekly Monday Meetups 5:30-7pm; recurring, no fixed dates"
+  },
+  {
+    "name": "MasseyHacks",
+    "city": "Windsor",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "masseyhacks.ca resolves and serves the MasseyHacks XII page (JS-rendered, no readable body); no date available"
+  },
+  {
+    "name": "McHacks",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "mchacks.ca live, McHacks 13 at McGill downtown campus Montreal; Jan 17-18 2026 edition past, no next date"
+  },
+  {
+    "name": "Metabridge Live",
+    "city": "Kelowna",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "metabridge.ca returns HTTP 403 to fetch"
+  },
+  {
+    "name": "Michigan DevFest",
+    "city": "Detroit",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "midevfest.com resolves and serves 'Michigan DevFest 2026' (JS-rendered, no readable body); GDG Ann Arbor lists a 'Michigan DevFest + AI Hackathon 2026' on Nov 13 2026 but the host city is unconfirmed, so no date recorded"
+  },
+  {
+    "name": "Michigan Tech Week",
+    "city": "Detroit",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "michigantechweek.com live, MTW26 at Michigan Central, Detroit, May 19-21 2026 (past); no next date"
+  },
+  {
+    "name": "Michigan Tech Career Fair",
+    "city": "Houghton",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "mtu.edu/career live (c 2026), Michigan Technological University career services, Houghton MI; references the Fall Career Fair but publishes no dates on this page"
+  },
+  {
+    "name": "Microsoft Reactor Redmond",
+    "city": "Redmond",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "meetup.com/microsoft-reactor-redmond loads, Redmond WA, 24,168 members with 37 upcoming events - active recurring series, no single next date"
+  },
+  {
+    "name": "Minnebar",
+    "city": "Minneapolis",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "minnestar.org live and active (Minnedemo42 scheduled Oct 1 2026); no Minnebar date announced"
+  },
+  {
+    "name": "Mississippi Digital Government Summit",
+    "city": "Jackson",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "events.govtech.com Mississippi summit page announces September 9 2026 at Sheraton Flowood The Refuge (Jackson metro), registration open - date now published"
+  },
+  {
+    "name": "Mississippi AI Collaborative Annual Conference",
+    "city": "Jackson",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "integrate.io blog listicle loads and describes the conference at the Mississippi E-Center, Jackson State University, June 16-17 2026 (past); third-party vendor blog rather than the organiser's site - link quality flagged"
+  },
+  {
+    "name": "Mississippi Technology Expo",
+    "city": "Jackson",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "eventbrite listing live for the 2026 Mississippi Technology Expo at Mississippi Trade Mart, Jackson MS, April 9 2026 - marked 'Event ended', no next date"
+  },
+  {
+    "name": "MIT $100K Entrepreneurship Competition",
+    "city": "Cambridge",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "mit100k.org live, describes the MIT $100K (Pitch/Accelerate/Launch) at MIT, Cambridge MA; only 'usually September, March, May', no dates"
+  },
+  {
+    "name": "MITRE Embedded Capture the Flag",
+    "city": "Multiple cities, US & Canada",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "ectf.mitre.org live; 2026 cycle ran Jan 14 kickoff to Apr 24 award ceremony (past) and the competition 'can be done 100% remotely', so no city-bound next date"
+  },
+  {
+    "name": "MnTech Connect",
+    "city": "St. Paul",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "mntech.org/tech-connect returns HTTP 403 to fetch"
+  },
+  {
+    "name": "MPC Hacks",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "mpchacks.com resolves and serves 'MPC Hacks: Inter-University Hackathon' (JS-rendered, no readable body); no date available"
+  },
+  {
+    "name": "Music City Tech",
+    "city": "Nashville",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "musiccitytech.com is frozen on the September 15-17 2021 edition (Music City Code/Agile/Data tracks) with no forward activity in five years"
+  },
+  {
+    "name": "NBIF Breakthru",
+    "city": "Fredericton",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nbif.ca/breakthru live, NBIF Fredericton NB; programme 'returns in 2026, with a live finale in March 2027' - no exact date"
+  },
+  {
+    "name": "NC TECH Outlook for Tech",
+    "city": "Charlotte",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nctech.org signature-events page lists Outlook for Tech on February 12 (2026) at The Revelry, North End Charlotte - past, no next date"
+  },
+  {
+    "name": "NC TECH TECHFEST",
+    "city": "Durham",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nctech.org signature-events page lists TECHFEST May 13-14 (2026) at Durham Convention Center/Durham Armory - past, no next date"
+  },
+  {
+    "name": "Nebraska.Code()",
+    "city": "Lincoln",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nebraska-code.com live, Lincoln NE; July 22-24 2026 edition past, no next date"
+  },
+  {
+    "name": "Nerd Nite New York",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nerdnite.com live global directory listing a New York chapter; link is the global site rather than the city page and no New York date is published"
+  },
+  {
+    "name": "Nerd Nite San Francisco",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nerdnite.com live global directory listing a San Francisco chapter; link is the global site rather than the city page and no San Francisco date is published"
+  },
+  {
+    "name": "Nerd Nite Washington DC",
+    "city": "Washington",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nerdnite.com live global directory listing a Washington DC chapter; link is the global site rather than the city page and no DC date is published"
+  },
+  {
+    "name": "MnTech Twin Cities Startup Community Events",
+    "city": "Minneapolis",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "mntech.org returns HTTP 403 to fetch"
+  },
+  {
+    "name": "New Orleans Entrepreneur Week",
+    "city": "New Orleans",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "noew.org carries a 'SAVE THE DATE' for NOEW 2027 on March 8-13 2027 in New Orleans (2026 ran March 9-14) - date now published"
+  },
+  {
+    "name": "New Mexico Tech Summit",
+    "city": "Albuquerque",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "nmtechcouncil.org/new-mexico-tech-summit returns an empty body to fetch on repeated attempts"
+  },
+  {
+    "name": "NICAR Conference",
+    "city": "Indianapolis",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "ire.org NICAR 2026 page live, JW Marriott, 10 S. West St, Indianapolis; March 5-8 2026 edition past, no 2027 date announced"
+  },
+  {
+    "name": "Nolacon",
+    "city": "New Orleans",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nolacon.com live, New Orleans infosec con with archives back to 2014; May 15-17 2026 edition past, no next date"
+  },
+  {
+    "name": "North American Games Industry Summit (NAGIS)",
+    "city": "Edmonton",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nagis.ca live, B2B games summit in Edmonton AB; June 2026 edition past (2026 event report posted), no next date"
+  },
+  {
+    "name": "North Bay Python",
+    "city": "Petaluma",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "northbaypython.org live, Reis River Ranch, Petaluma CA; April 25-26 2026 edition past, no next date"
+  },
+  {
+    "name": "North Forge FabLab Open House",
+    "city": "Winnipeg",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "northforge.ca live, 'FabLab Open House (Public Tours) every Tuesday night 6 PM, 312 William Ave' Winnipeg, with Sept/Oct 2026 tour dates listed - recurring, no single next date"
+  },
+  {
+    "name": "ODSC East",
+    "city": "Boston",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "odsc.com returns HTTP 403 to fetch"
+  },
+  {
+    "name": "ODSC West",
+    "city": "San Francisco",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "odsc.com returns HTTP 403 to fetch"
+  },
+  {
+    "name": "Ohio Tech Summit",
+    "city": "Columbus",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "ohiotechsummit.org live, Columbus OH; May 14 2026 edition sold out and past, no next date"
+  },
+  {
+    "name": "Oklahoma Innovation Day",
+    "city": "Oklahoma City",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "oklahoma.gov OCAST page live; OKC edition April 22-23 2026 (past), no next OKC date"
+  },
+  {
+    "name": "Orlando Code Camp",
+    "city": "Orlando",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "orlandocodecamp.com live, 18th annual, Seminole State College (Orlando metro); April 11 2026 edition past, no next date"
+  },
+  {
+    "name": "Ottawa Innovation Week",
+    "city": "Ottawa",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "investottawa.ca/innovation-week live, Ottawa; June 8-12 2026 edition past, no next date"
+  },
+  {
+    "name": "Out in Tech",
+    "city": "Multiple cities",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "outintech.com returns HTTP 403 to fetch"
+  },
+  {
+    "name": "PegJam",
+    "city": "Winnipeg",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "newmediamanitoba.com returns HTTP 403 to fetch"
+  },
+  {
+    "name": "PEI BioAlliance Summer Social",
+    "city": "Charlottetown",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "peibioalliance.com/events live, Charlottetown PEI; 'Summer Social 2026' listed for July 14 2026 (past), nothing upcoming"
+  },
+  {
+    "name": "PennApps",
+    "city": "Philadelphia",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "pennapps.com live (UPenn, Philadelphia), says the hackathon runs in the spring semester with applications in October; no dates published"
+  },
+  {
+    "name": "Philly Tech Week",
+    "city": "Philadelphia",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "phillytechweek.com live, Philadelphia; May 4-8 2026 edition past, no next date"
+  },
+  {
+    "name": "Phoenix Technology Summit",
+    "city": "Phoenix",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "eitevents.com event page returns an empty body to fetch on repeated attempts"
+  },
+  {
+    "name": "Platform Calgary Community Connect",
+    "city": "Calgary",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "platformcalgary.com homepage never mentions Community Connect; the events page (platformcalgary.com/events/) lists it as a flagship event on the third Thursday of every month"
+  },
+  {
+    "name": "Portland Retro Gaming Expo",
+    "city": "Portland",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "retrogamingexpo.com live, Portland OR, posting PRGE 2026 guest announcements through July 2026; countdown only, no readable dates"
+  },
+  {
+    "name": "Propelify Innovation Festival",
+    "city": "Hoboken",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "propelify.com returns an empty body to fetch on both www and apex forms"
+  },
+  {
+    "name": "Puget Sound Programming Python (PuPPy)",
+    "city": "Seattle",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "meetup.com/psppython loads, Seattle WA, 10,912 members with regular hack nights - active recurring series, no single next date"
+  },
+  {
+    "name": "PyCascades",
+    "city": "Vancouver",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "pycascades.com live, next edition stated as Vancouver BC; 'occurs each year around early spring' with no dates announced"
+  },
+  {
+    "name": "PyCon US",
+    "city": "Long Beach",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "pycon.org live, 'PyCon US 2026 and 2027 will be held in Long Beach, California'; no exact dates on the page"
+  },
+  {
+    "name": "PyLadies",
+    "city": "Multiple cities",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "pyladies.com/locations live, ~220 chapter locations listed, footer 2007-2026; no dates published"
+  },
+  {
+    "name": "PyOhio",
+    "city": "Cleveland",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "pyohio.org live, Cleveland State University Student Center; July 25-26 2026 edition past, no next date"
+  },
+  {
+    "name": "QA or the Highway",
+    "city": "Columbus",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "qaorthehwy.com announces June 11 2027 for the Columbus OH conference - date now published"
+  },
+  {
+    "name": "RailsConf",
+    "city": "Philadelphia",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "rubycentral.org/conferences states 'After nearly 20 years, RailsConf 2025 was the final gathering of its kind' - the conference is discontinued"
+  },
+  {
+    "name": "RubyConf",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "rubycentral.org/conferences lists RubyConf 2026 in Las Vegas July 14-16 2026 (past); no next date"
+  },
+  {
+    "name": "Recurse Center",
+    "city": "Brooklyn",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "recurse.com live, Brooklyn NY (with remote option); 'new batches start every six weeks', no fixed dates"
+  },
+  {
+    "name": "Refresh Miami",
+    "city": "Miami",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "refreshmiami.com live and active (events listed through Aug-Nov 2026), Miami/South Florida tech community"
+  },
+  {
+    "name": "RIT University-Wide Career Fair",
+    "city": "Rochester",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "rit.edu/careerservices live, Rochester NY, lists the University-Wide Career Fair under Events with 2026 news; no dated next fair published"
+  },
+  {
+    "name": "Rocky Mountain Technology Summit",
+    "city": "Denver",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "technologysummit.net/rocky.html announces the 9th annual summit for May 25 2027, 9am-4pm at Embassy Suites Denver Downtown - date now published"
+  },
+  {
+    "name": "RVAsec",
+    "city": "Richmond",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "rvasec.com live, Richmond VA; June 9-10 2026 edition past, no next date"
+  },
+  {
+    "name": "Sacramento Summer Startup Party",
+    "city": "Sacramento",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "startupsac.com live and active in Sacramento (weekly startup-events roundups through Aug 2026), but the Summer Startup Party is not named anywhere on the page - link quality flagged"
+  },
+  {
+    "name": "San Francisco Python Meetup Group",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "meetup.com/sfpython loads, San Francisco CA, 13,241 members, '20+ developer focused live events' a year - active recurring series"
+  },
+  {
+    "name": "SANS NetWars Tournament",
+    "city": "Multiple cities",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "sans.org/cyber-ranges live and describes the NetWars tournament suite; schedule sits behind a separate page, no dates or cities published here"
+  },
+  {
+    "name": "Seattle Tech Week",
+    "city": "Seattle",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "seattletechweek.com 301s to the organiser's Luma page, which says 'Dates for Seattle Tech Week 2027 are TBD - Subscribe to be the first to know'"
+  },
+  {
+    "name": "SeattleJS",
+    "city": "Seattle",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "meetup.com/seattlejs loads, Seattle WA, 7,259 members with 45 upcoming events - active recurring series"
+  },
+  {
+    "name": "SecureWorld St. Louis",
+    "city": "St. Louis",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "secureworld.io/events/st-louis-mo-2026 gives event date 2026-09-02 (distinct from the 2026-07-08 call-for-speakers deadline) - upcoming date now published"
+  },
+  {
+    "name": "SF Climate Week",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "sfclimateweek.org live, San Francisco Bay Area; April 18-26 2026 edition past, no next date"
+  },
+  {
+    "name": "SheHacks+",
+    "city": "London",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "shehacks.ca live, Western University London ON; Jan 9-11 2026 edition past, no next date"
+  },
+  {
+    "name": "Silicon Couloir Chance Meetings",
+    "city": "Jackson",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "siliconcouloir.com/chance-meetings live, Teton/Jackson WY networking event on 'the first Monday of most months, 5-7pm' - recurring, no dates on the page"
+  },
+  {
+    "name": "Silicon Prairie Startup Week",
+    "city": "Omaha",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "siliconprairienews.com event page live, Nebraska (Lincoln and Omaha); the URL is the 2025 edition, Oct 6-11 2025, past - no 2026 page or date"
+  },
+  {
+    "name": "Silicon Slopes Summit",
+    "city": "Salt Lake City",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "siliconslopes.com resolves and serves the Silicon Slopes page (JS-only body, 'For Utahns, By Utahns'); no summit date readable"
+  },
+  {
+    "name": "Slate Summit",
+    "city": "Nashville",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "technolutions.com/slatesummit2026 live, Music City Center Nashville TN; June 24-26 2026 edition past, no next date"
+  },
+  {
+    "name": "Small Satellite Conference",
+    "city": "Salt Lake City",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "smallsat.org lists save-the-dates after the 40th annual (Aug 23-26 2026, Salt Palace Convention Center): August 15-18 2027, then 2028 and 2029 - next date now published"
+  },
+  {
+    "name": "Southeast Cybersecurity Summit",
+    "city": "Birmingham",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "secybersecurity.com live, Birmingham Jefferson Convention Complex; April 15-16 2026 edition past, no next date"
+  },
+  {
+    "name": "Startup Sioux Falls Founders Meetup",
+    "city": "Sioux Falls",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "startupsiouxfalls.com/events live with 42 events listed, Founders Meetup held Aug 19 2026, Sioux Falls SD - recurring, no single next date"
+  },
+  {
+    "name": "Startup Weekend Omaha",
+    "city": "Omaha",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "techstars.com/communities/startup-weekend live and describes the three-day format, but lists no Omaha event or date - generic programme page, link quality flagged"
+  },
+  {
+    "name": "Startup302",
+    "city": "Wilmington",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "startup302.org live, Delaware funding competition; 'Stay Tuned for 2026 Info' with no dates, latest winners listed 2024"
+  },
+  {
+    "name": "StartupBREW Fargo",
+    "city": "Fargo",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "emergingprairie.com/startupbrew-fargo live, weekly Wednesday 8:00-9:30am networking at 118 Broadway N, Fargo ND - recurring, no fixed dates"
+  },
+  {
+    "name": "Stir Trek",
+    "city": "Columbus",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "stirtrek.com live, AMC Easton 30 Columbus OH; May 1 2026 edition past, no next date"
+  },
+  {
+    "name": "Summerfest Tech",
+    "city": "Milwaukee",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "summerfest-tech.com live, 639 E. Summerfest Place Milwaukee WI, 2026 agenda/speakers pages present but no dates published"
+  },
+  {
+    "name": "Tampa Bay Tech Community Events",
+    "city": "Tampa",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "tampa.dev live, Tampa Bay tech events aggregator, actively listing events through early September 2026"
+  },
+  {
+    "name": "TartanHacks",
+    "city": "Pittsburgh",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "tartanhacks.com returns HTTP 403 to fetch"
+  },
+  {
+    "name": "Tech For Good Conference",
+    "city": "Chicago",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "techforgoodconference.org live, University of Chicago; Feb 27-28 2026 edition past, no next date"
+  },
+  {
+    "name": "Tech Thursday Winnipeg",
+    "city": "Winnipeg",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "eventbrite collection live and active for Winnipeg Tech Thursday (events listed through Aug 2026) - recurring, no single next date"
+  },
+  {
+    "name": "Tech Week Boston",
+    "city": "Boston",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "tech-week.com/calendar/boston live, Boston; May 26-31 2026 edition past, no next date"
+  },
+  {
+    "name": "TechCon SoCal",
+    "city": "San Diego",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "startupsd.org TechCon SoCal 2026 page live, San Diego, May 21-22 2026 marked 'This event has passed'; no next date"
+  },
+  {
+    "name": "TechConnect WV Women in Tech Conference",
+    "city": "South Charleston",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "techconnectwv.org/programs live, 1740 Union Carbide Drive, South Charleston WV; lists 'Women and Tech Conference (coming spring 2026)' with no exact date"
+  },
+  {
+    "name": "TechFest Louisville",
+    "city": "Louisville",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "techfestlou.com live, Louisville KY; Aug 20-21 2026 edition just past (sold out), no next date"
+  },
+  {
+    "name": "Techlahoma Community Meetups",
+    "city": "Oklahoma City",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "meetup.com/oklahoma-city-techlahoma loads, Oklahoma City OK, 1,363 members, upcoming events incl. ThunderPlains Oct 21 2026 - active recurring series"
+  },
+  {
+    "name": "techNL Industry Awards",
+    "city": "St. John's",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "technl.ca/news-events live, St. John's NL; techNL Industry Awards 2026 held April 17 2026 (past), no next date"
+  },
+  {
+    "name": "techNL Innovation Week",
+    "city": "St. John's",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "technl.ca live and current (2026 news), carries an 'Innovation Week 2026' section in navigation; no dates published"
+  },
+  {
+    "name": "Techqueria",
+    "city": "Multiple cities",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "techqueria.org returns HTTP 403 to fetch"
+  },
+  {
+    "name": "TECHSPO Boston",
+    "city": "Boston",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "techspoboston.com live, Hyatt Regency Boston; May 12-13 2026 edition past, no next date. Note: injected casino-spam links in the page footer"
+  },
+  {
+    "name": "TECHSPO Phoenix",
+    "city": "Phoenix",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "techspophoenix.com live, Hyatt Regency Phoenix, 122 N 2nd St; June 11-12 2026 edition past, no next date"
+  },
+  {
+    "name": "TECHSPO Toronto",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "techspotoronto.ca live, Marriott Downtown at CF Toronto Eaton Centre; April 15-16 2026 edition past, no next date. Note: heavy injected casino/pharma spam in the page footer"
+  },
+  {
+    "name": "TECHSPO Vancouver",
+    "city": "Vancouver",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "techspovancouver.ca live, Paradox Hotel Vancouver BC; April 20-21 2026 edition past, no next date. Note: injected casino spam (Hungarian-language links) in the footer"
+  },
+  {
+    "name": "Techstars Startup Weekend London Ontario",
+    "city": "London",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "techalliance.ca event page returns HTTP 403 to fetch"
+  },
+  {
+    "name": "TennoCon",
+    "city": "London",
+    "status": "corrected",
+    "cycle": "passC",
+    "evidence": "tennocon.com recaps the concluded 2026 event and announces 'July 16-17 2027' with a countdown - date now published"
+  },
+  {
+    "name": "Texas Dreamin'",
+    "city": "Austin",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "texasdreamin.org live, AT&T Executive Conference Center Austin TX; July 9-10 2026 edition past, no next date"
+  },
+  {
+    "name": "THAT Conference Texas",
+    "city": "Round Rock",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "thatconference.com returns HTTP 403 to fetch"
+  },
+  {
+    "name": "THAT Conference Wisconsin",
+    "city": "Wisconsin Dells",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "thatconference.com returns HTTP 403 to fetch"
+  },
+  {
+    "name": "The Big DiF",
+    "city": "Hamilton",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "innovationfactory.ca live, Hamilton ON; 'The Big DiF' 16th annual open house held May 14 2026 (past), no next date"
+  },
+  {
+    "name": "The Carpentries Workshops",
+    "city": "Multiple cities",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "carpentries.org/workshops live (c 2026) and describes the workshop programme; individual workshop listings sit behind a further link, no dates on this page"
+  },
+  {
+    "name": "The Newark Summit",
+    "city": "Newark",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "thenewarksummit.com returns HTTP 403 to fetch"
+  },
+  {
+    "name": "The Idea Village Demo Day",
+    "city": "New Orleans",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "ideavillage.org live, New Orleans LA, carries a 'Demo Day 2026' section; no dates published"
+  },
+  {
+    "name": "TOJam",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "tojam.ca live, free 3-day game jam in Toronto; May 8-10 2026 edition past and the jam-dates block gives only 'May 2027' with no exact days"
+  },
+  {
+    "name": "Toronto Games Week",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "torontogamesweek.com live, Toronto; 4th edition concluded ('Thanks for another incredible Toronto Games Week! Stay tuned for next year'), no dates"
+  },
+  {
+    "name": "Toronto JavaScript",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "meetup.com/torontojs loads, Toronto ON, 13,001 members with recurring monthly TechTalks - active series, no single next date"
+  },
+  {
+    "name": "Toronto Tech Week",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "torontotechweek.com live, Toronto; TTW 2026 concluded (post-event recap, 'See you in 2027'), no dates for 2027"
+  },
+  {
+    "name": "TransportationCamp PHL",
+    "city": "Philadelphia",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "transportationcamp.org/events/phl2026 live, Philadelphia unconference; March 21 2026 edition past, no next date"
+  },
+  {
+    "name": "TreeHacks",
+    "city": "Stanford",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "treehacks.com live, Stanford University; Feb 13-15 2026 edition past, no next date"
+  },
+  {
+    "name": "Twin Cities Software Symposium",
+    "city": "Minneapolis",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nofluffjuststuff.com/minneapolis live, Minneapolis MN; June 4-5 2026 edition past, no next date"
+  },
+  {
+    "name": "UC Berkeley AI Hackathon",
+    "city": "Berkeley",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "live.hackberkeley.org live, MLK Student Union, Berkeley CA; June 20-21 2026 edition past, no next date"
+  },
+  {
+    "name": "UIUCTF",
+    "city": "Urbana-Champaign",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "uiuc.tf live, run by SIGPwny at University of Illinois Urbana-Champaign; 2026 quest began 2026-08-08 for 48h (past), no next date"
+  },
+  {
+    "name": "Urban Futures: Co-Creating Climate Resilience in NYC Hackathon",
+    "city": "New York",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "amnh.org hackathon page returns HTTP 403 to fetch"
+  },
+  {
+    "name": "Utah Tech Calendar Community Meetups",
+    "city": "Salt Lake City",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "utahtechcalendar.com live, 'updated nightly' calendar of in-person Utah tech events across Salt Lake City/Provo/Lehi/Ogden, listings into 2027"
+  },
+  {
+    "name": "Vancouver Game Garden",
+    "city": "Vancouver",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "vangamegarden.com live, free indie games showcase in Vancouver BC; June 13-14 2026 edition past, no next date"
+  },
+  {
+    "name": "Vancouver Startup Week",
+    "city": "Vancouver",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "vanstartupweek.ca live, Vancouver BC; VSW 2026 ran May 20-23 2026 (thank-you page up), no next date"
+  },
+  {
+    "name": "VIATEC Awards",
+    "city": "Victoria",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "members.viatec.ca event page live, Victoria BC; the 2026 VIATEC Awards were April 1 2026 (past), no next date"
+  },
+  {
+    "name": "Vintage Computer Festival East",
+    "city": "Wall",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "vcfed.org VCF East page live, InfoAge Science and History Museums, 2201 Marconi Road, Wall NJ; April 17-19 2026 edition past, no next date"
+  },
+  {
+    "name": "Vintage Computer Festival Southeast",
+    "city": "Atlanta",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "vcfed.org VCF Southeast page live, Marriott Renaissance Waverly, 2450 Galleria Pkwy, Atlanta GA; July 31-Aug 2 2026 edition past, no next date"
+  },
+  {
+    "name": "Vintage Computer Festival West",
+    "city": "Mountain View",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "vcfed.org VCF West page live, Computer History Museum, Mountain View CA; Aug 1-2 2026 edition just past, no next date"
+  },
+  {
+    "name": "VMware Explore",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "vmware.com/explore resolves and serves the VMware Explore page (JS-only body); no date readable"
+  },
+  {
+    "name": "VSLive! @ Microsoft HQ",
+    "city": "Redmond",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "vslive.com event page returns HTTP 403 to fetch"
+  },
+  {
+    "name": "WEtech Alliance Community Events",
+    "city": "Windsor",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "wetech-alliance.com/events live, Windsor ON (and Chatham-Kent), 12 upcoming events listed through September 2026 - active recurring series"
+  },
+  {
+    "name": "WiCyS Conference",
+    "city": "National Harbor",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "wicys.org live and current (Virtual 2026, RSAC 2026, Career Fair 2026); WiCyS 2027 referenced with neither city nor dates announced"
+  },
+  {
+    "name": "WildHacks",
+    "city": "Evanston",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "wildhacks.net resolves and serves 'WildHacks 2026' with an MLH 2026 season badge (JS-rendered body); no date readable"
+  },
+  {
+    "name": "Women in Tech WNY",
+    "city": "Buffalo",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "info.techbuffalo.org/witwny live, Buffalo/Western New York; Thursday March 26 2026 edition past, no next date"
+  },
+  {
+    "name": "WomenHack",
+    "city": "Multiple cities",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "womenhack.com live (c 2026), lists recruiting events across San Francisco, New York, Toronto, Edmonton and other cities; event dates shown without years"
+  },
+  {
+    "name": "WordCamp New York City",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "nyc.wordcamp.org/2026 live, says 'WordCamp New York City 2026 is in the early planning stages' - no venue or dates yet"
+  },
+  {
+    "name": "WordCamp Santa Clarita",
+    "city": "Santa Clarita",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "santaclarita.wordcamp.org/2027 live, Santa Clarita CA; notice says the event has been postponed to Spring 2027 with no dates set"
+  },
+  {
+    "name": "WTM Montreal",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "wtmmontreal.com live, Women Techmakers Montreal (non-profit since 2015); WTM Day April 18 2026 past, no next date"
+  },
+  {
+    "name": "XP Game Connect Atlantic",
+    "city": "Halifax",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "xpgaming.biz page live, one-day B2B games event for Atlantic Canada, Halifax venues (Old Triangle, Pacifico); June 4-5 2026 edition past, no next date"
+  },
+  {
+    "name": "Yale Healthcare Hackathon",
+    "city": "New Haven",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "ventures.yale.edu page live, Yale Ventures, 101 College Street, New Haven CT; '2026 Healthcare Hackathon' registration link but no dates"
+  },
+  {
+    "name": "YHack",
+    "city": "New Haven",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "yhack.org returns HTTP 403 to fetch"
+  },
+  {
+    "name": "YQuantum",
+    "city": "New Haven",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "yquantum.dev live, Yale Undergraduate Quantum Computing / Yale Quantum Institute, New Haven CT; April 4-5 2026 edition past, no next date"
+  },
+  {
+    "name": "Yukon Innovation Week",
+    "city": "Whitehorse",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "yukoninnovationweek.com returns an empty body to fetch"
+  },
+  {
+    "name": "Yukonstruct Maker Academy",
+    "city": "Whitehorse",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "yukonstruct.com/calendar returns an empty body to fetch"
+  },
+  {
+    "name": "Baltimore Health Tech Startup Symposium",
+    "city": "Baltimore",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "ventures.jhu.edu event page returns HTTP 403 to fetch"
+  },
+  {
+    "name": "Boston Python User Group",
+    "city": "Cambridge",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "meetup.com/bostonpython loads, Cambridge MA, 10,176 members with regular Python Over Coffee / office hours - active recurring series"
+  },
+  {
+    "name": "Boston TechJam",
+    "city": "Boston",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "mtlc.co/events returns an empty body to fetch"
+  },
+  {
+    "name": "Investing in Montana Summit",
+    "city": "Bozeman",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "mthightech.org event page returns HTTP 403 to fetch"
+  },
+  {
+    "name": "ITS Northern Lights Conference",
+    "city": "Sioux Falls",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "itsmn.starchapter.com page live, Holiday Inn Sioux Falls City Centre, 100 W 8th Street, Sioux Falls SD; May 12-14 2026 edition past (sold out), no next date"
+  },
+  {
+    "name": "Midwest Entrepreneurship Conference",
+    "city": "Omaha",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "unomaha.edu CIEF page live, Omaha NE; April 17 2026 edition past, no next date"
+  },
+  {
+    "name": "New Tech Seattle",
+    "city": "Seattle",
+    "status": "blocked",
+    "cycle": "passC",
+    "evidence": "geekwire.com/calendar returns HTTP 403 to fetch"
+  },
+  {
+    "name": "Tech Week New York",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "tech-week.com/calendar loads (Tech Week 2026) but currently lists only SF Oct 5-11 and LA Oct 12-18, no New York edition, and tech-week.com/calendar/new-york 404s - link quality flagged, no date"
+  },
+  {
+    "name": "Techstars Startup Weekend",
+    "city": "Multiple cities",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "techstars.com/communities/startup-weekend live, describes the three-day format and 'hundreds of events all over the world' with 2026 blog posts; no dates or city list on the page"
+  },
+  {
+    "name": "Techstars Startup Weekend Anchorage",
+    "city": "Anchorage",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "techstars.com/communities/startup-weekend live but is the generic global programme page - no Anchorage event or date listed; link quality flagged"
+  },
+  {
+    "name": "Techstars Startup Weekend Reno",
+    "city": "Reno",
+    "status": "confirmed",
+    "cycle": "passC",
+    "evidence": "techstars.com/communities/startup-weekend live but is the generic global programme page - no Reno event or date listed; link quality flagged"
+  }
+]

@@ -1864,30 +1864,5 @@
     "url": "https://globalgamejam.org/jam-sites/2026/abilene-christian-university",
     "description": "West Texas's Global Game Jam site at Abilene Christian University, joining the worldwide 48-hour game-making weekend.",
     "source": "https://globalgamejam.org/jam-sites/2026"
-  },
-  {
-    "name": "Global Game Jam - AAPI in Gaming",
-    "type": "game-jam",
-    "topics": [
-      "game-development",
-      "diversity",
-      "game-design"
-    ],
-    "city": "Vancouver",
-    "region": "British Columbia",
-    "country": "Canada",
-    "venue": "",
-    "cadence": "annual",
-    "month": "January",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "2026-01-30",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "free",
-    "audience": "game developers, artists and writers, with a focus on the AAPI community",
-    "url": "https://globalgamejam.org/jam-sites/2026/2026-aapi-gaming",
-    "description": "Vancouver's AAPI in Gaming Global Game Jam site, running the international 48-hour jam with a focus on welcoming Asian American and Pacific Islander creators.",
-    "source": "https://globalgamejam.org/jam-sites/2026"
   }
 ]

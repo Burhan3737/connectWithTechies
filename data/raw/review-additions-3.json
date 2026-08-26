@@ -1213,31 +1213,6 @@
     "source": "https://globalgamejam.org/jam-sites/2026"
   },
   {
-    "name": "Global Game Jam - Gay Gaming Professionals",
-    "type": "game-jam",
-    "topics": [
-      "game development",
-      "lgbtq",
-      "community"
-    ],
-    "city": "Northridge",
-    "region": "California",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "January",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "2026-01-30",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "free",
-    "audience": "LGBTQ game developers and allies",
-    "url": "https://globalgamejam.org/jam-sites/2026/2026-gay-gaming-professionals-onlinevirtual-only",
-    "description": "Gay Gaming Professionals' Global Game Jam site, run virtually out of Northridge, California for LGBTQ game developers and allies.",
-    "source": "https://globalgamejam.org/jam-sites/2026"
-  },
-  {
     "name": "BSidesGreenville",
     "type": "conference",
     "topics": [

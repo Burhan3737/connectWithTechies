@@ -1,0 +1,68 @@
+[
+  {
+    "match": { "name": "BayPIGgies (Bay Area Python Interest Group)", "city": "Mountain View" },
+    "action": "update",
+    "reason": "meetup.com/baypiggies lists the next meeting as Thu, Aug 27 6:30 PM PDT at the West Valley Branch Library, 1243 San Tomas Aquino Rd, San Jose, CA 95117. The date is right; the venue is in San Jose, not Mountain View.",
+    "set": { "city": "San Jose" }
+  },
+  {
+    "match": { "name": "Oracle CloudWorld", "city": "Las Vegas" },
+    "action": "update",
+    "reason": "oracle.com/cloudworld/ now serves 'Oracle AI World 2026' (CloudWorld kept as an alias keyword). Its JSON-LD Event block gives startDate 2026-10-25 and endDate 2026-10-28, and the hero reads 'October 25-28 | Las Vegas'. The stored Sep 15-18 is six weeks early.",
+    "set": { "next_date": "2026-10-25", "next_date_end": "2026-10-28" }
+  },
+  {
+    "match": { "name": "Showerhacks", "city": "San Francisco" },
+    "action": "update",
+    "reason": "The stored url was a dev.events regional hackathon listing, not the event. The organiser's own site showerhacks.org shows 'September 26th 2026, 10AM - 10PM, San Francisco, 400 People' - a one-day event a week earlier than the stored Oct 3.",
+    "set": { "next_date": "2026-09-26", "next_date_end": "2026-09-26", "url": "https://showerhacks.org" }
+  },
+  {
+    "match": { "name": "Vibe Coding Con", "city": "Las Vegas" },
+    "action": "update",
+    "reason": "The stored url was https://dev.events/NA/US/NV, a regional aggregator listing rather than the event page. The organiser's site vibecodingcon.ai confirms 'October 27-28, 2026' at Red Rock Resort, Las Vegas, matching the stored dates and city.",
+    "set": { "url": "https://vibecodingcon.ai" }
+  },
+  {
+    "match": { "name": "Michigan Technology Conference", "city": "Rochester" },
+    "action": "update",
+    "reason": "The stored url was https://dev.events/NA/US/MI/tech, a regional aggregator listing. The organiser's site mitechcon.org confirms 'October 28-30, 2026 - Workshops Wednesday, Conference Thursday and Friday' at Oakland University, Rochester, Michigan, matching the stored dates and city.",
+    "set": { "url": "https://www.mitechcon.org" }
+  },
+  {
+    "match": { "name": "NVTC Cyber Summit & Cyber50 Awards", "city": "Reston" },
+    "action": "update",
+    "reason": "nvtc.org/events/ lists 'NVTC Cyber Summit & Cyber50 Awards, Oct 28, 2026 | McLean, VA'. The date is right; the city is McLean, not Reston.",
+    "set": { "city": "McLean" }
+  },
+  {
+    "match": { "name": "CISO Fireside", "city": "Sundance" },
+    "action": "update",
+    "reason": "The stored url was https://dev.events/NA/US/UT, a regional aggregator listing. The organiser's site cisofireside.org confirms 'One track, one room, Thursday, November 5, 2026' at Sundance Resort, Utah, matching the stored date and city.",
+    "set": { "url": "https://cisofireside.org" }
+  },
+  {
+    "match": { "name": "PNW Day of Data", "city": "Vancouver" },
+    "action": "update",
+    "reason": "The stored url was https://dev.events/NA/US/WA, a regional aggregator listing. The organiser's page (sqlsaturday.com/oregon redirects to dayofdata.org/2026-11-07-dayofdata1149/) shows the main event on 07 November 2026 at Washington State University Vancouver, Vancouver, Washington, with an optional all-day Friday pre-conference - so the stored Nov 6-7 span and city are correct.",
+    "set": { "url": "https://dayofdata.org/2026-11-07-dayofdata1149/" }
+  },
+  {
+    "match": { "name": "Iowa Code Camp", "city": "Des Moines" },
+    "action": "update",
+    "reason": "iowacodecamp.com header reads 'Iowa Code Camp November 7, 2026, Ankeny, IA'. The date is right; the event is in Ankeny, a separate city north of Des Moines.",
+    "set": { "city": "Ankeny" }
+  },
+  {
+    "match": { "name": "GOVIT Leadership Summit & Symposium", "city": "Bloomington" },
+    "action": "update",
+    "reason": "The stored url was https://dev.events/NA/US/MN/tech, a regional aggregator listing. The organiser's page fusionlp.org/govit-2026 confirms 'November 8-10, 2026, DoubleTree by Hilton, Bloomington, MN', matching the stored dates and city.",
+    "set": { "url": "https://fusionlp.org/govit-2026" }
+  },
+  {
+    "match": { "name": "Seattle Day of Data", "city": "Seattle" },
+    "action": "update",
+    "reason": "The stored url was https://dev.events/NA/US/WA/Seattle, a city aggregator listing. The organiser's page dayofdata.org/2026-11-12-dayofdata1155 confirms '12 November 2026' in Seattle, matching the stored date and city.",
+    "set": { "url": "https://dayofdata.org/2026-11-12-dayofdata1155" }
+  }
+]

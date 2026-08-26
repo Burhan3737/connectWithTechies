@@ -1,0 +1,149 @@
+[
+  { "match": { "name": "Abstractions", "city": "Pittsburgh" },
+    "action": "remove",
+    "reason": "abstractions.io still advertises 'August 21-23, 2019 in Pittsburgh, PA' as the upcoming edition, with a 2019 sponsor prospectus and no forward activity in seven years. No further edition was ever held." },
+
+  { "match": { "name": "AI Engineer World's Fair", "city": "San Francisco" },
+    "action": "update",
+    "reason": "ai.engineer headlines 'JUN 29-JUL 2 2027' for the World's Fair returning to Moscone West, San Francisco.",
+    "set": { "next_date": "2027-06-29", "next_date_end": "2027-07-02", "status": "upcoming" } },
+
+  { "match": { "name": "Alaska Digital Government Summit", "city": "Anchorage" },
+    "action": "update",
+    "reason": "events.govtech.com/Alaska-Digital-Government-Summit announces October 8, 2026 at the Marriott Anchorage Downtown, registration open.",
+    "set": { "next_date": "2026-10-08", "next_date_end": "2026-10-08", "status": "upcoming" } },
+
+  { "match": { "name": "Arkansas Digital Government Summit", "city": "Little Rock" },
+    "action": "update",
+    "reason": "events.govtech.com/arkansas-digital-government-summit announces Tuesday, October 13, 2026 at the Little Rock Marriott, 3 Statehouse Plaza, registration open.",
+    "set": { "next_date": "2026-10-13", "next_date_end": "2026-10-13", "status": "upcoming" } },
+
+  { "match": { "name": "Big Data & Analytics Summit Canada", "city": "Toronto" },
+    "action": "update",
+    "reason": "bigdatasummitcanada.com announces the 12th Annual summit for Tuesday June 8 and Wednesday June 9, 2027 in Toronto.",
+    "set": { "next_date": "2027-06-08", "next_date_end": "2027-06-09", "status": "upcoming" } },
+
+  { "match": { "name": "BSides Dayton", "city": "Dayton" },
+    "action": "update",
+    "reason": "bsidesdayton.com announces Saturday, May 15, 2027, 9:30 AM to 5:00 PM, with sponsorship open.",
+    "set": { "next_date": "2027-05-15", "next_date_end": "2027-05-15", "status": "upcoming" } },
+
+  { "match": { "name": "BSides ICS/OT", "city": "Miami" },
+    "action": "update",
+    "reason": "bsidesics.org now advertises 'BSidesICS/OT 2027 Tampa, FL' (details TBA) as the next edition; the Miami record reflects the 2026 edition, which ran the day before S4 in Miami.",
+    "set": { "city": "Tampa", "region": "Florida" } },
+
+  { "match": { "name": "BSides Nashville", "city": "Nashville" },
+    "action": "update",
+    "reason": "bsidesnash.org announces Friday, April 23, 2027, doors at 8:30 AM.",
+    "set": { "next_date": "2027-04-23", "next_date_end": "2027-04-23", "status": "upcoming" } },
+
+  { "match": { "name": "BSidesROC", "city": "Rochester" },
+    "action": "update",
+    "reason": "bsidesroc.com announces Saturday, March 20, 2027 for the next Security B-Sides Rochester.",
+    "set": { "next_date": "2027-03-20", "next_date_end": "2027-03-20", "status": "upcoming" } },
+
+  { "match": { "name": "Cybersecurity Summit Chicago", "city": "Chicago" },
+    "action": "update",
+    "reason": "cybersecuritysummit.com lists Chicago under Upcoming Summits for September 15, 2026.",
+    "set": { "next_date": "2026-09-15", "next_date_end": "2026-09-15", "status": "upcoming" } },
+
+  { "match": { "name": "Digital Offshore Conference", "city": "St. John's" },
+    "action": "update",
+    "reason": "digitaloffshore.ca/overview announces DO27 for April 27-28, 2027 in St. John's (DO26 ran March 10-11, 2026 and its registration is closed).",
+    "set": { "next_date": "2027-04-27", "next_date_end": "2027-04-28", "status": "upcoming" } },
+
+  { "match": { "name": "GameCon Canada", "city": "Edmonton" },
+    "action": "update",
+    "reason": "gameconcanada.com headlines 'JUNE 25th - 27th 2027' for the Edmonton expo, with tickets on sale.",
+    "set": { "next_date": "2027-06-25", "next_date_end": "2027-06-27", "status": "upcoming" } },
+
+  { "match": { "name": "Global Game Jam - AAPI in Gaming", "city": "Vancouver" },
+    "action": "remove",
+    "reason": "The globalgamejam.org 2026 jam-site page states 'This site is Online/Virtual only' and runs on Discord; Vancouver, BC is the organiser's location, not a venue. There is no in-person Vancouver event behind this listing." },
+
+  { "match": { "name": "Global Game Jam - Gay Gaming Professionals", "city": "Northridge" },
+    "action": "remove",
+    "reason": "The globalgamejam.org 2026 jam-site page is titled '2026 Gay Gaming Professionals (Online/Virtual Only)' and runs on Discord; Northridge, CA is the organiser's base, not a venue. There is no in-person event behind this listing." },
+
+  { "match": { "name": "HackTheU", "city": "Salt Lake City" },
+    "action": "remove",
+    "reason": "hacktheu.org is frozen on the 2020/2021 edition: an MLH 2021 trust badge, an FAQ referring to the 'fall hackathon 2020', and 'October 16-18' with no current year. No forward activity in roughly five years." },
+
+  { "match": { "name": "HackUSU", "city": "Logan" },
+    "action": "update",
+    "reason": "huntsman.usu.edu/hackusu announces February 19-20, 2027 at 3500 Old Main Hill, Logan UT, with registration open to college and high school students.",
+    "set": { "next_date": "2027-02-19", "next_date_end": "2027-02-20", "status": "upcoming" } },
+
+  { "match": { "name": "Hawaii International Conference on System Sciences", "city": "Honolulu" },
+    "action": "update",
+    "reason": "hicss.hawaii.edu announces HICSS for January 5-8, 2027 at the Hilton Waikoloa Village on the Big Island - Waikoloa, not Honolulu.",
+    "set": { "next_date": "2027-01-05", "next_date_end": "2027-01-08", "status": "upcoming", "city": "Waikoloa", "region": "Hawaii" } },
+
+  { "match": { "name": "Idaho Digital Government Summit", "city": "Boise" },
+    "action": "update",
+    "reason": "events.govtech.com/Idaho-Digital-Government-Summit announces Tuesday, September 1, 2026 at Boise Centre, 850 W Front Street, with a full agenda and open registration.",
+    "set": { "next_date": "2026-09-01", "next_date_end": "2026-09-01", "status": "upcoming" } },
+
+  { "match": { "name": "Innovate QA", "city": "Bellevue" },
+    "action": "remove",
+    "reason": "The recorded URL is dev.events/NA/US/WA/Bellevue/tech, a generic directory of Bellevue tech conferences that does not list 'Innovate QA' anywhere; a dev.events site search for the name also returns nothing. The link does not describe the event and no organiser page could be found." },
+
+  { "match": { "name": "JSConf North America", "city": "Baltimore" },
+    "action": "update",
+    "reason": "jsconf.com is an unmaintained federation homepage (newest links are JSConf EU 2019 and JSConf China 2017); its only JSConf North America pointer is events.linuxfoundation.org/jsconf-north-america, which shows the conference at the Hyatt Regency Chesapeake Bay, Cambridge MD (Oct 14-16, 2025), not Baltimore.",
+    "set": { "url": "https://events.linuxfoundation.org/jsconf-north-america/", "city": "Cambridge", "region": "Maryland" } },
+
+  { "match": { "name": "Kentucky Digital Government Summit", "city": "Louisville" },
+    "action": "update",
+    "reason": "events.govtech.com/kentucky-digital-government-summit places the summit at the Marriott Griffin Gate Golf Resort & Spa, 1800 Newtown Pike, Lexington KY (the June 10, 2026 edition is marked complete). The recorded city Louisville is wrong.",
+    "set": { "city": "Lexington", "region": "Kentucky" } },
+
+  { "match": { "name": "Mississippi Digital Government Summit", "city": "Jackson" },
+    "action": "update",
+    "reason": "events.govtech.com/Mississippi-Digital-Government-Summit announces September 9, 2026 at the Sheraton Flowood The Refuge Hotel & Conference Center in the Jackson metro, registration open.",
+    "set": { "next_date": "2026-09-09", "next_date_end": "2026-09-09", "status": "upcoming" } },
+
+  { "match": { "name": "Music City Tech", "city": "Nashville" },
+    "action": "remove",
+    "reason": "musiccitytech.com is frozen on the September 15-17, 2021 edition (Music City Code / Agile / Data tracks) with 2021 keynote speakers and sponsors and no forward activity in five years." },
+
+  { "match": { "name": "New Orleans Entrepreneur Week", "city": "New Orleans" },
+    "action": "update",
+    "reason": "noew.org carries a 'SAVE THE DATE' for NOEW 2027 on March 8-13, 2027 (the 2026 edition ran March 9-14).",
+    "set": { "next_date": "2027-03-08", "next_date_end": "2027-03-13", "status": "upcoming" } },
+
+  { "match": { "name": "Platform Calgary Community Connect", "city": "Calgary" },
+    "action": "update",
+    "reason": "The platformcalgary.com homepage never mentions Community Connect; the organisation's events page lists it as a flagship event held the third Thursday of every month.",
+    "set": { "url": "https://platformcalgary.com/events/" } },
+
+  { "match": { "name": "QA or the Highway", "city": "Columbus" },
+    "action": "update",
+    "reason": "qaorthehwy.com announces June 11, 2027 for the Columbus conference (tickets 'coming soon', sponsorship open).",
+    "set": { "next_date": "2027-06-11", "next_date_end": "2027-06-11", "status": "upcoming" } },
+
+  { "match": { "name": "RailsConf", "city": "Philadelphia" },
+    "action": "remove",
+    "reason": "rubycentral.org/conferences states 'After nearly 20 years, RailsConf 2025 was the final gathering of its kind.' The conference is discontinued; only RubyConf continues." },
+
+  { "match": { "name": "Rocky Mountain Technology Summit", "city": "Denver" },
+    "action": "update",
+    "reason": "technologysummit.net/rocky.html announces the 9th Annual summit for May 25, 2027, 9am-4pm at the Embassy Suites Denver Downtown, Crestone Ballroom.",
+    "set": { "next_date": "2027-05-25", "next_date_end": "2027-05-25", "status": "upcoming" } },
+
+  { "match": { "name": "SecureWorld St. Louis", "city": "St. Louis" },
+    "action": "update",
+    "reason": "secureworld.io/events/st-louis-mo-2026 gives the event date as 2026-09-02, distinct from the 2026-07-08 call-for-speakers deadline.",
+    "set": { "next_date": "2026-09-02", "next_date_end": "2026-09-02", "status": "upcoming" } },
+
+  { "match": { "name": "Small Satellite Conference", "city": "Salt Lake City" },
+    "action": "update",
+    "reason": "smallsat.org publishes save-the-dates following the 40th annual (Aug 23-26, 2026 at the Salt Palace Convention Center): August 15-18, 2027, then 2028 and 2029.",
+    "set": { "next_date": "2027-08-15", "next_date_end": "2027-08-18", "status": "upcoming" } },
+
+  { "match": { "name": "TennoCon", "city": "London" },
+    "action": "update",
+    "reason": "tennocon.com recaps the concluded 2026 event and announces 'July 16-17 2027' with a live countdown to it.",
+    "set": { "next_date": "2027-07-16", "next_date_end": "2027-07-17", "status": "upcoming" } }
+]

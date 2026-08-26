@@ -752,7 +752,7 @@
       "govtech",
       "awards"
     ],
-    "city": "Reston",
+    "city": "McLean",
     "region": "Virginia",
     "country": "United States",
     "venue": "",
@@ -1099,32 +1099,6 @@
     "url": "https://www.pghtech.org/events",
     "description": "A monthly Pittsburgh Technology Council community meetup for AI builders and researchers, with short talks and open networking.",
     "source": "https://www.pghtech.org/events"
-  },
-  {
-    "name": "Abstractions",
-    "type": "conference",
-    "topics": [
-      "software",
-      "design",
-      "devops",
-      "community"
-    ],
-    "city": "Pittsburgh",
-    "region": "Pennsylvania",
-    "country": "United States",
-    "venue": "David L. Lawrence Convention Center",
-    "cadence": "biannual",
-    "month": "August",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "2019-08-21",
-    "status": "discontinued",
-    "attendance": "1500",
-    "cost": "paid",
-    "audience": "developers, designers, devops engineers, managers",
-    "url": "https://abstractions.io/",
-    "description": "A cross-discipline software conference run by Code & Supply that drew developers, designers, DevOps engineers and community leaders to Pittsburgh for three days of talks. No edition has been announced since 2019.",
-    "source": "https://abstractions.io/"
   },
   {
     "name": "RenderATL",
@@ -2274,31 +2248,6 @@
     "source": "https://technolutions.com/slatesummit2026"
   },
   {
-    "name": "Music City Tech",
-    "type": "conference",
-    "topics": [
-      "software",
-      "agile",
-      "data"
-    ],
-    "city": "Nashville",
-    "region": "Tennessee",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "September",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "2021-09-15",
-    "status": "discontinued",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "developers, agile practitioners, data professionals",
-    "url": "https://musiccitytech.com/",
-    "description": "A three-day Nashville event running Music City Code, Music City Agile and Music City Data as simultaneous conferences with keynotes, open spaces and lightning talks. No edition has been announced since 2021.",
-    "source": "https://musiccitytech.com/"
-  },
-  {
     "name": "DIG SOUTH Tech, Venture & AI Summit",
     "type": "summit",
     "topics": [
@@ -2919,10 +2868,10 @@
     "venue": "",
     "cadence": "annual",
     "month": "June",
-    "next_date": "",
-    "next_date_end": "",
+    "next_date": "2027-06-11",
+    "next_date_end": "2027-06-11",
     "last_date": "2026-06-12",
-    "status": "recurring-tbd",
+    "status": "upcoming",
     "attendance": "",
     "cost": "paid",
     "audience": "QA engineers, testers, developers",
