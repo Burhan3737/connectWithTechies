@@ -1,0 +1,642 @@
+[
+  {
+    "name": "BSides Calgary",
+    "city": "Calgary",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Bare bsidescalgary.org does not resolve; www host loads and shows BSides Calgary 2026 at Contemporary Calgary, May 25-26 2026."
+  },
+  {
+    "name": "BSides Harrisburg",
+    "city": "Harrisburg",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Bare bsideshbg.com dead; www host live and announces BSidesHBG 2027 on May 21 2027 at the PA Farm Show Complex."
+  },
+  {
+    "name": "BSides San Diego",
+    "city": "San Diego",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Bare bsidessd.org does not resolve; www host loads and is the official BSides San Diego site with 2026 event details."
+  },
+  {
+    "name": "BSides Vancouver",
+    "city": "Vancouver",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Bare bsidesvancouver.com does not resolve; www host loads, run by Mainland Advanced Research Society, 2026 edition held at SFU Harbour Centre."
+  },
+  {
+    "name": "Central Iowa Software Symposium",
+    "city": "Des Moines",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "NFJS tour listing gives the stop path as /desmoines (not /des-moines); page confirms Sept 17-18 2026 at the West Des Moines Marriott."
+  },
+  {
+    "name": "Data Streaming Summit",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "datastreamingsummit.io has no DNS record and no archive history; the real official site is datastreaming-summit.org. 2026 edition Oct 7-8 at Hotel Nikko SF; the 2025 edition was Se"
+  },
+  {
+    "name": "DrupalCamp Colorado",
+    "city": "Denver",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "drupalcampcolorado.org is unreachable; drupal.org's event listing gives the camp's official site as drupal-colorado.org, confirming Aug 27-28 2026 at the Lowry Conference Center, D"
+  },
+  {
+    "name": "Florida Technology & Innovation Solution Summit",
+    "city": "Tampa",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "The /fltechinnovationsummit26/ vanity path 404s. Florida Chamber's event index now lists the 2027 summit page: Aug 25 2027 at the Grand Hyatt Tampa Bay."
+  },
+  {
+    "name": "Fully Connected",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "wandb.ai/site/fully-connected/ 404s; fullyconnected.com and the W&B events page both now redirect to CoreWeave. Confirmed Sept 29 - Oct 1 2026 at Moscone South, San Francisco."
+  },
+  {
+    "name": "GTM Hackathon",
+    "city": "Lehi",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "getmobly.com/gtm-hackathon was taken down after the Feb 2 2026 edition (404) and no successor page is published; pointed at the organiser's live site pending a 2027 edition page."
+  },
+  {
+    "name": "Montreal Games Week",
+    "city": "Montreal",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "The /en path 404s; the root domain loads and confirms the 2026 edition runs Nov 10-16 2026."
+  },
+  {
+    "name": "DevOpsDays Boston",
+    "city": "Boston",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Confirmed on devopsdays.org/events/2026-boston/welcome/: Oct 19-20 2026 at the Microsoft NERD Center in Cambridge MA. Merged the last_date carried by the removed Cambridge duplicat"
+  },
+  {
+    "name": "BSidesOK",
+    "city": "Glenpool",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "bsidesok.com content confirms the 2026 event ran Apr 8-10 2026 at the Glenpool Conference Center; corrected the start date from 2026-04-06."
+  },
+  {
+    "name": "Microsoft Build",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Verified: Build 2026 was moved from Seattle to San Francisco and held June 2-3 2026 at Fort Mason Center, shortened to two days and application-only in person. The dataset's city a"
+  },
+  {
+    "name": "Nerd Nite Austin",
+    "city": "Austin",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Nerd Nite chapters live at <city>.nerdnite.com; austin.nerdnite.com verified live with current event listings."
+  },
+  {
+    "name": "Nerd Nite Chicago",
+    "city": "Chicago",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "chicago.nerdnite.com verified live with its own event listings."
+  },
+  {
+    "name": "Nerd Nite Denver",
+    "city": "Denver",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "denver.nerdnite.com verified live with its own ticket links."
+  },
+  {
+    "name": "Nerd Nite Seattle",
+    "city": "Seattle",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "seattle.nerdnite.com verified live with its own event schedule."
+  },
+  {
+    "name": "Nerd Nite Toronto",
+    "city": "Toronto",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "toronto.nerdnite.com verified live with its own event listings."
+  },
+  {
+    "name": "Nerd Nite Vancouver",
+    "city": "Vancouver",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "vancouver.nerdnite.com verified live with its own event listings at The Fox Cabaret."
+  },
+  {
+    "name": "Papers We Love Boston",
+    "city": "Boston",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Papers We Love publishes per-chapter pages at /chapter/<slug>/; Boston page fetched and verified."
+  },
+  {
+    "name": "Papers We Love Chicago",
+    "city": "Chicago",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Chapter listed in the paperswelove.org/chapter/ index with its own page."
+  },
+  {
+    "name": "Papers We Love Denver",
+    "city": "Denver",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Chapter listed in the paperswelove.org/chapter/ index with its own page."
+  },
+  {
+    "name": "Papers We Love Montreal",
+    "city": "Montreal",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Chapter listed in the paperswelove.org/chapter/ index; page loads but carries little chapter-specific content, so the chapter may be dormant."
+  },
+  {
+    "name": "Papers We Love New York",
+    "city": "New York",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "New York chapter page fetched and verified - the original Papers We Love chapter, meets monthly."
+  },
+  {
+    "name": "Papers We Love Portland",
+    "city": "Portland",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Chapter listed in the paperswelove.org/chapter/ index with its own page."
+  },
+  {
+    "name": "Papers We Love San Francisco",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "San Francisco chapter page fetched and verified - meets monthly at Antithesis's downtown office, RSVPs via Luma."
+  },
+  {
+    "name": "Papers We Love Seattle",
+    "city": "Seattle",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Chapter listed in the paperswelove.org/chapter/ index with its own page."
+  },
+  {
+    "name": "Papers We Love Toronto",
+    "city": "Toronto",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Chapter listed in the paperswelove.org/chapter/ index with its own page."
+  },
+  {
+    "name": "Papers We Love Washington DC",
+    "city": "Washington",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Washington DC / Northern Virginia chapter page fetched and verified."
+  },
+  {
+    "name": "Maker Faire NW Arkansas",
+    "city": "Fayetteville",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Own site nwa.makerfaire.com verified: Sept 12 2026 at the Fayetteville Public Library, so the host city is Fayetteville, not Bentonville."
+  },
+  {
+    "name": "Maker Faire Brownsville",
+    "city": "Brownsville",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Runs inside BTX Space Fest; its own page verified: Sept 24-26 2026 at the George Ramirez Performing Arts Academy, Brownsville."
+  },
+  {
+    "name": "Maker Faire Orange County",
+    "city": "Costa Mesa",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Own site oc.makerfaire.com verified: Sept 12-13 2026 at the OC Fair & Event Center, Costa Mesa."
+  },
+  {
+    "name": "South Dallas Maker Faire",
+    "city": "Dallas",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "fortworth.makerfaire.com 301-redirects to southdallas.makerfaire.com; the faire has been rebranded South Dallas Maker Faire and its own site makes no mention of Fort Worth. Date un"
+  },
+  {
+    "name": "Maker Faire Louisville",
+    "city": "Louisville",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Own site louisville.makerfaire.com verified: Oct 17 2026 at the UofL Engineering Student Success and Research Building."
+  },
+  {
+    "name": "Maker Faire Orlando",
+    "city": "Orlando",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Own site makerfaireorlando.com verified: Nov 7-8 2026 at the Central Florida Fairgrounds & Expo Halls."
+  },
+  {
+    "name": "Maker Faire Rochester",
+    "city": "Rochester",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Own site rochester.makerfaire.com verified: Nov 21 2026 at the RIT Gordon Field House."
+  },
+  {
+    "name": "Maker Faire Happy Valley",
+    "city": "State College",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Own site happyvalley.makerfaire.com verified: Oct 3-4 2026 at Axemann Brewery, Bellefonte, in the Happy Valley / Central PA region."
+  },
+  {
+    "name": "Maker Faire Waterloo",
+    "city": "Waterloo",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Own site waterloomakerfaire.org verified: Sept 13 2026 at Waterloo Public Square, Uptown Waterloo."
+  },
+  {
+    "name": "SANS DFIR Summit & Training",
+    "city": "Arlington",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Per-event SANS page verified: Oct 15-22 2026 (summit 15-16, training 17-22) at the Hilton Arlington Rosslyn."
+  },
+  {
+    "name": "SANS DC Metro",
+    "city": "Bethesda",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Per-event SANS page verified: SANS DC Metro September 2026, Sept 28 - Oct 3 2026 at The Bethesdan Hotel, Bethesda MD."
+  },
+  {
+    "name": "SANS Miami",
+    "city": "Coral Gables",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Per-event SANS page verified: Oct 26-31 2026 at the Hyatt Regency Coral Gables."
+  },
+  {
+    "name": "SANS Network Security",
+    "city": "Las Vegas",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Per-event SANS page verified: Sept 21-26 2026 at Caesars Palace, Las Vegas."
+  },
+  {
+    "name": "SANS Raleigh",
+    "city": "Raleigh",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Per-event SANS page verified: Nov 2-7 2026 at the Embassy Suites Raleigh-Durham Research Triangle in Cary NC."
+  },
+  {
+    "name": "SANS San Francisco",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Per-event SANS page verified: Nov 2-7 2026 at the Hilton Financial District San Francisco."
+  },
+  {
+    "name": "BSides Bloomington",
+    "city": "Bloomington",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Own site bsidesbloomington.org verified live, 2026 edition at the Bloomington Convention Center; replaces the generic allbsides.com directory link."
+  },
+  {
+    "name": "BSides CMH",
+    "city": "Columbus",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Own site bsidescolumbus.com verified live: Nov 4-6 2026 with sessions Nov 5-6, presented by GuidePoint Security; replaces the generic allbsides.com link."
+  },
+  {
+    "name": "BSides Peoria",
+    "city": "Peoria",
+    "status": "corrected",
+    "cycle": "cycle1-links",
+    "checked_on": "2026-08-26",
+    "evidence": "Own site bsidespeoria.com verified live: Oct 24 2026 at Bradley University, Peoria IL; replaces the generic allbsides.com link."
+  },
+  {
+    "name": "SecTor",
+    "city": "Toronto",
+    "status": "corrected",
+    "cycle": "cycle3-accuracy",
+    "checked_on": "2026-08-26",
+    "evidence": "TASK B RESOLVED. blackhat.com/sector (read through a text-extraction proxy, the site 403s bots directly) states SecTor 2026 runs 'October 6-8, 2026' at the Metro Toronto Convention"
+  },
+  {
+    "name": "NVIDIA GTC",
+    "city": "San Jose",
+    "status": "corrected",
+    "cycle": "cycle3-accuracy",
+    "checked_on": "2026-08-26",
+    "evidence": "nvidia.com/gtc shows GTC 2027 as 'March 15-18' in San Jose ('The GTC AI conference returns to San Jose in March'). Confirmed verbatim on a second read of the same page. Dataset end"
+  },
+  {
+    "name": "DEF CON",
+    "city": "Las Vegas",
+    "status": "corrected",
+    "cycle": "cycle3-accuracy",
+    "checked_on": "2026-08-26",
+    "evidence": "defcon.org states DEF CON 34 concluded Aug 6-9 2026 at LVCC West Hall and that DEF CON 35 is scheduled for August 5-8, 2027 in Las Vegas at LVCC West Hall. Dataset had next_date em"
+  },
+  {
+    "name": "Black Hat USA",
+    "city": "Las Vegas",
+    "status": "corrected",
+    "cycle": "cycle3-accuracy",
+    "checked_on": "2026-08-26",
+    "evidence": "blackhat.com/us-27 (read through a text-extraction proxy; blackhat.com 403s bots) publishes Black Hat USA 2027 as 'July 31-August 5, 2027'. The blackhat.com event list carries the "
+  },
+  {
+    "name": "Space Symposium",
+    "city": "Colorado Springs",
+    "status": "corrected",
+    "cycle": "cycle3-accuracy",
+    "checked_on": "2026-08-26",
+    "evidence": "spacesymposium.org (read through a text-extraction proxy; the site 403s bots directly) publishes the next Space Symposium as April 12-15, 2027 at The Broadmoor, Colorado Springs, C"
+  },
+  {
+    "name": "ServiceNow Knowledge",
+    "city": "Las Vegas",
+    "status": "corrected",
+    "cycle": "cycle3-accuracy",
+    "checked_on": "2026-08-26",
+    "evidence": "servicenow.com/events/knowledge.html (read through a text-extraction proxy; the page 403s bots directly) states 'Knowledge 2027 is May 4-6 in Las Vegas', marking the 20th anniversa"
+  },
+  {
+    "name": "FIRST Championship",
+    "city": "Houston",
+    "status": "corrected",
+    "cycle": "cycle3-accuracy",
+    "checked_on": "2026-08-26",
+    "evidence": "firstinspires.org/programs/first-championship gives the most recent FIRST Championship as April 29 - May 2, 2026 in Houston, Texas; no later edition is published yet. Dataset corre"
+  },
+  {
+    "name": "C2 Montreal",
+    "city": "Montreal",
+    "status": "corrected",
+    "cycle": "cycle3-accuracy",
+    "checked_on": "2026-08-26",
+    "evidence": "c2montreal.com states 'In 2026, C2 Montreal will be taking a pause from its annual May gathering' while a new format is explored, and lists no future dates. Not discontinued, so ke"
+  },
+  {
+    "name": "NY Tech Meetup",
+    "city": "New York City",
+    "status": "corrected",
+    "cycle": "cycle3-retry",
+    "checked_on": "2026-08-26",
+    "evidence": "Implausible attendance for the event type. meetup.com/ny-tech shows '52,297 members' - the dataset's 52000 is the group's cumulative membership count, not the turnout at any single"
+  },
+  {
+    "name": "BITCON",
+    "city": "Atlanta",
+    "status": "corrected",
+    "cycle": "cycle4-links",
+    "checked_on": "2026-08-26",
+    "evidence": "blacksintechnology.net now responds (transient failure), but the org homepage is not the conference. WebFetch confirmed the dedicated BITCON conference site at bitcon.blacksintechn"
+  },
+  {
+    "name": "HackNYU",
+    "city": "New York City",
+    "status": "corrected",
+    "cycle": "cycle4-links",
+    "checked_on": "2026-08-26",
+    "evidence": "hacknyu.org refuses connections (ECONNREFUSED 167.71.252.160:443) and hacknyu.com is a parked HugeDomains sale page. The official HackNYU club site at hacknyu.github.io loads and s"
+  },
+  {
+    "name": "Tech Tomorrow",
+    "city": "Columbus",
+    "status": "corrected",
+    "cycle": "cycle4-links",
+    "checked_on": "2026-08-26",
+    "evidence": "cio-tomorrow.com redirects to techtomorrow.events, which states 'Tech Tomorrow 2026 debuts as the reimagined CIO Tomorrow', building on a 24-year legacy. Columbus OH, September 9 2"
+  },
+  {
+    "name": "Columbus Startup Week",
+    "city": "Columbus",
+    "status": "corrected",
+    "cycle": "cycle4-links",
+    "checked_on": "2026-08-26",
+    "evidence": "sprkwrks.com redirects to sparkworksinnovation.com (org homepage, not the event). SparkWorks Innovation runs the event; its current event page verified by WebFetch as 'Columbus Sta"
+  },
+  {
+    "name": "Startup Week Columbus",
+    "city": "Columbus",
+    "status": "corrected",
+    "cycle": "cycle4-links",
+    "checked_on": "2026-08-26",
+    "evidence": "startupcolumbus.com redirects to a stale SparkWorks page for the 2022 edition (columbus-startup-week-22). Repointed to the verified current SparkWorks event page for Columbus Start"
+  },
+  {
+    "name": "EWF Annual Conference",
+    "city": "Aurora",
+    "status": "corrected",
+    "cycle": "cycle4-links",
+    "checked_on": "2026-08-26",
+    "evidence": "ewf-usa.com redirects to ewfglobal.com. WebFetch confirms the Executive Women's Forum rebranded its domain to ewfglobal.com and still runs the EWF Annual Conference (~700 attendees"
+  },
+  {
+    "name": "Reality Hack at MIT",
+    "city": "Cambridge",
+    "status": "corrected",
+    "cycle": "cycle4-links",
+    "checked_on": "2026-08-26",
+    "evidence": "mitrealityhack.com redirects to realityhackatmit.com, verified as the live official site: Reality Hack at MIT, MIT campus Cambridge MA, next edition January 2027."
+  },
+  {
+    "name": "AI Infra Summit",
+    "city": "Santa Clara",
+    "status": "corrected",
+    "cycle": "cycle4-links",
+    "checked_on": "2026-08-26",
+    "evidence": "aiinfrasummit.com redirects to the new domain ai-infra-summit.com, verified as AI Infra Summit 2026, Santa Clara Convention Center, September 15-17 2026 - matches the record's next"
+  },
+  {
+    "name": "Hoya Hacks",
+    "city": "Washington",
+    "status": "corrected",
+    "cycle": "cycle4-links",
+    "checked_on": "2026-08-26",
+    "evidence": "hoyahacks.com redirects to hoyahacks.georgetown.domains, verified live: HoyaHacks 2027, Georgetown University, Washington DC, January 22-24 2027, registration open."
+  },
+  {
+    "name": "PyTorch Conference",
+    "city": "San Jose",
+    "status": "corrected",
+    "cycle": "cycle4-links",
+    "checked_on": "2026-08-26",
+    "evidence": "The Linux Foundation URL redirects to the renamed pytorch-conference-north-america page, verified as 'PyTorch Conference North America', San Jose CA, October 20-21 2026 - matches t"
+  },
+  {
+    "name": "Minneapolis Technology Summit",
+    "city": "Minneapolis",
+    "status": "corrected",
+    "cycle": "cycle4-followups",
+    "checked_on": "2026-08-26",
+    "evidence": "Verified on eitevents.com/event_pages/minneapolis-technology-summit-2026/"
+  },
+  {
+    "name": "TECHSPO Chicago",
+    "city": "Chicago",
+    "status": "corrected",
+    "cycle": "cycle4-final",
+    "checked_on": "2026-08-26",
+    "evidence": "techspochicago.com is flaky"
+  },
+  {
+    "name": "Nashville Microsoft Community Day",
+    "city": "Nashville",
+    "status": "corrected",
+    "cycle": "r2-redirects",
+    "checked_on": "2026-08-26",
+    "evidence": "Verified via communitydays.org/event/2026-09-11/nashville-microsoft-community-day"
+  },
+  {
+    "name": "Berkeley SkyDeck Demo Day",
+    "city": "Berkeley",
+    "status": "corrected",
+    "cycle": "r2-redirects",
+    "checked_on": "2026-08-26",
+    "evidence": "skydeck.berkeley.edu/demo-day/ redirects to demo-day-fall-2020, an article dated 04 February 2020"
+  },
+  {
+    "name": "Polyglot Unconference",
+    "city": "Vancouver",
+    "status": "corrected",
+    "cycle": "cycle3r2-b",
+    "checked_on": "2026-08-26",
+    "evidence": "polyglotconf.com (organiser site) still advertises 'May 25th 2019, Vancouver' as its event; /2026 and /about return 404. No 2026 edition is published anywhere on the organiser's si"
+  },
+  {
+    "name": "BSides PDX",
+    "city": "Portland",
+    "status": "corrected",
+    "cycle": "cycle3r2-b",
+    "checked_on": "2026-08-26",
+    "evidence": "bsidespdx.org states verbatim 'BSidesPDX 2026 will be on Fri Oct 23rd & Sat Oct 24th, 2026' - a two-day event. Start date 2026-10-23 is correct but the record ends it the same day."
+  },
+  {
+    "name": "Mile High Dreamin'",
+    "city": "Denver",
+    "status": "corrected",
+    "cycle": "cycle3r2-a",
+    "checked_on": "2026-08-26",
+    "evidence": "Organiser domain milehighdreamin.com 302-redirects to www and now serves only a bare 'LWC Communities' welcome page with no event content; /events, /2026, /about and /index.html al"
+  },
+  {
+    "name": "KCD SF Bay Area",
+    "city": "Mountain View",
+    "status": "corrected",
+    "cycle": "cycle3r2-a",
+    "checked_on": "2026-08-26",
+    "evidence": "CNCF's own KCD calendar (cncf.io/kcds/) lists 'KCD San Francisco Bay Area 2026 - September 1, 2026, Mountain View, United States'. Record had both the date (2026-09-02) and the cit"
+  },
+  {
+    "name": "Day of Data Detroit",
+    "city": "Ann Arbor",
+    "status": "corrected",
+    "cycle": "cycle3r2-a",
+    "checked_on": "2026-08-26",
+    "evidence": "sqlsaturday.com/2026-09-12-sqlsaturday1164/ redirects to dayofdata.org/2026-09-12-dayofdata1164/, which gives the venue as Ann Arbor District Library - Downtown, 343 South Fifth Av"
+  },
+  {
+    "name": "Digital Okanagan",
+    "city": "Vernon",
+    "status": "corrected",
+    "cycle": "cycle3r2-a",
+    "checked_on": "2026-08-26",
+    "evidence": "meetup.com/digitalokanagan/ shows the 2026-09-24 'Geek Beers hangout at the Kal' at The Kal, 3004 30th Ave, Vernon, BC (as is the preceding 2026-08-27 meetup). Date confirmed; venu"
+  },
+  {
+    "name": "Innovation Expo Sioux Falls",
+    "city": "Sioux Falls",
+    "status": "corrected",
+    "cycle": "r2-siouxfalls",
+    "checked_on": "2026-08-26",
+    "evidence": "Flagged as suspicious because startupsiouxfalls.com/events/ showed nothing on 2026-09-17. The calendar is simply windowed to the current month"
+  },
+  {
+    "name": "VIATEC AI Meetup",
+    "city": "Victoria",
+    "status": "corrected",
+    "cycle": "r2-newly-exposed",
+    "checked_on": "2026-08-26",
+    "evidence": "members.viatec.ca/tech-events 404s. The live calendar is members.viatec.ca/event-calendar, which confirms the stored 2026-09-10 date: 'VIATEC AI Meetup"
+  },
+  {
+    "name": "Iowa Technology Summit",
+    "city": "Des Moines",
+    "status": "corrected",
+    "cycle": "r2-newly-exposed",
+    "checked_on": "2026-08-26",
+    "evidence": "technologyiowa.org/events/list/ 404s. The Technology Association of Iowa publishes a dedicated page for this event at /iowa-technology-summit-2026/, which is a better link than the"
+  }
+]

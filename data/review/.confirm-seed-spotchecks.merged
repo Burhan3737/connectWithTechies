@@ -1,0 +1,458 @@
+[
+  {
+    "name": "Product-Led Summit Toronto",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Difinity Conference Toronto",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "BSides Toronto",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "GoSec",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "BSides Vancouver Island",
+    "city": "Victoria",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "BarCamp Philly",
+    "city": "Philadelphia",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "MLconf",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "NY SMART I-Corridor Semiconductor Summit",
+    "city": "Rochester",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "The Montgomery Summit",
+    "city": "Santa Monica",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Ocean Exchange",
+    "city": "Savannah",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Rochester Security Summit",
+    "city": "Rochester",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "5 Across Pitch Competition",
+    "city": "Lexington",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Code & Supply",
+    "city": "Pittsburgh",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "BSides Pittsburgh",
+    "city": "Pittsburgh",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "SouthEast LinuxFest",
+    "city": "Charlotte",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Open Source 101 Charlotte",
+    "city": "Charlotte",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "RIHub Pizza & Pitches",
+    "city": "Providence",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "MIT Bitcoin Expo",
+    "city": "Cambridge",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "MIT $100K",
+    "city": "Cambridge",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "NYC Resistor Craft Night",
+    "city": "Brooklyn",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Hack Midwest",
+    "city": "Kansas City",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Knox Game Jam",
+    "city": "Knoxville",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "DevSpace Conference",
+    "city": "Huntsville",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Space and Missile Defense Symposium",
+    "city": "Huntsville",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Birmingham Women in Technology",
+    "city": "Birmingham",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Tennessee Quantum Hackathon",
+    "city": "Chattanooga",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "TENWEST Festival",
+    "city": "Tucson",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "PodCamp Toronto",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Boston Festival of Indie Games",
+    "city": "Boston",
+    "status": "confirmed",
+    "cycle": "4a",
+    "evidence": "spot-check: URL loaded, page described the right event, city matched",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Sloss.tech",
+    "city": "Birmingham",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "CodeStock",
+    "city": "Knoxville",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "CyberBay",
+    "city": "Tampa",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Scenic City Summit",
+    "city": "Chattanooga",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "a2Tech360",
+    "city": "Ann Arbor",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "YYC DataCon",
+    "city": "Calgary",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "InsurTech America",
+    "city": "Hartford",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "SecKC",
+    "city": "Kansas City",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "GDG Brooklyn",
+    "city": "Brooklyn",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Innovation Depot Founders Round Table",
+    "city": "Birmingham",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "CO.LAB",
+    "city": "Chattanooga",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "BSides Idaho Falls",
+    "city": "Idaho Falls",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "IdeaFunding",
+    "city": "Lincoln",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "tech SAVannah",
+    "city": "Savannah",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "TechMentor",
+    "city": "Redmond",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Jersey City Entrepreneurs",
+    "city": "Jersey City",
+    "status": "confirmed",
+    "cycle": "2",
+    "evidence": "spot-check by the researcher after merge",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Minneapolis Technology Summit",
+    "city": "Minneapolis",
+    "status": "corrected",
+    "cycle": "orchestrator",
+    "evidence": "eitevents.com page states October 22 2026, Hyatt Regency; record had October 8",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Columbus Startup Week",
+    "city": "Columbus",
+    "status": "corrected",
+    "cycle": "orchestrator",
+    "evidence": "sparkworksinnovation.com states May 5-8 2026 at COhatch Polaris; now past",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "TECHSPO Chicago",
+    "city": "Chicago",
+    "status": "corrected",
+    "cycle": "orchestrator",
+    "evidence": "techspo.co schedule lists Chicago May 19-20 2026; own domain flaky",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Meeting in the Millyard",
+    "city": "Nashua",
+    "status": "confirmed",
+    "cycle": "orchestrator",
+    "evidence": "NH Tech Alliance calendar lists MITM27 May 18-20 2027, matches record",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "SIGGRAPH",
+    "city": "Los Angeles",
+    "status": "confirmed",
+    "cycle": "orchestrator",
+    "evidence": "s2026.siggraph.org confirms 19-23 July 2026 at LA Convention Center; 2027 city unpublished",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Berkeley SkyDeck Demo Day",
+    "city": "Berkeley",
+    "status": "corrected",
+    "cycle": "orchestrator",
+    "evidence": "/demo-day/ redirected to a Feb 2020 article; repointed to live root",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Nashville Microsoft Community Day",
+    "city": "Nashville",
+    "status": "confirmed",
+    "cycle": "orchestrator",
+    "evidence": "communitydays.org states September 11 2026, Nelson Andrews Leadership Center",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Innovation Expo Sioux Falls",
+    "city": "Sioux Falls",
+    "status": "corrected",
+    "cycle": "orchestrator",
+    "evidence": "Eventbrite confirms Thursday 17 September 1-5 PM at The District",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "VIATEC AI Meetup",
+    "city": "Victoria",
+    "status": "corrected",
+    "cycle": "orchestrator",
+    "evidence": "members.viatec.ca/event-calendar confirms 10 September 2026 Business Track",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Iowa Technology Summit",
+    "city": "Des Moines",
+    "status": "corrected",
+    "cycle": "orchestrator",
+    "evidence": "technologyiowa.org publishes a dedicated 2026 page; old /events/list/ 404s",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "Google Cloud Next",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "orchestrator",
+    "evidence": "cloud.google.com/next 301s to the stored URL; it is the canonical entry point",
+    "checked_on": "2026-08-26"
+  },
+  {
+    "name": "SecTor",
+    "city": "Toronto",
+    "status": "corrected",
+    "cycle": "orchestrator",
+    "evidence": "blackhat.com/sector via text proxy: October 6-8 2026, Metro Toronto Convention Centre",
+    "checked_on": "2026-08-26"
+  }
+]

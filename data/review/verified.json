@@ -1,0 +1,3037 @@
+{
+  "entries": {
+    "bsidescalgary|calgary": {
+      "name": "BSides Calgary",
+      "city": "Calgary",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Bare bsidescalgary.org does not resolve; www host loads and shows BSides Calgary 2026 at Contemporary Calgary, May 25-26 2026."
+    },
+    "bsidesharrisburg|harrisburg": {
+      "name": "BSides Harrisburg",
+      "city": "Harrisburg",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Bare bsideshbg.com dead; www host live and announces BSidesHBG 2027 on May 21 2027 at the PA Farm Show Complex."
+    },
+    "bsidessandiego|sandiego": {
+      "name": "BSides San Diego",
+      "city": "San Diego",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Bare bsidessd.org does not resolve; www host loads and is the official BSides San Diego site with 2026 event details."
+    },
+    "bsidesvancouver|vancouver": {
+      "name": "BSides Vancouver",
+      "city": "Vancouver",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Bare bsidesvancouver.com does not resolve; www host loads, run by Mainland Advanced Research Society, 2026 edition held at SFU Harbour Centre."
+    },
+    "centraliowasoftwaresymposium|desmoines": {
+      "name": "Central Iowa Software Symposium",
+      "city": "Des Moines",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "NFJS tour listing gives the stop path as /desmoines (not /des-moines); page confirms Sept 17-18 2026 at the West Des Moines Marriott."
+    },
+    "datastreamingsummit|sanfrancisco": {
+      "name": "Data Streaming Summit",
+      "city": "San Francisco",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "datastreamingsummit.io has no DNS record and no archive history; the real official site is datastreaming-summit.org. 2026 edition Oct 7-8 at Hotel Nikko SF; the 2025 edition was Se"
+    },
+    "drupalcampcolorado|denver": {
+      "name": "DrupalCamp Colorado",
+      "city": "Denver",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "drupalcampcolorado.org is unreachable; drupal.org's event listing gives the camp's official site as drupal-colorado.org, confirming Aug 27-28 2026 at the Lowry Conference Center, D"
+    },
+    "floridatechnologyinnovationsolutionsummit|tampa": {
+      "name": "Florida Technology & Innovation Solution Summit",
+      "city": "Tampa",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "The /fltechinnovationsummit26/ vanity path 404s. Florida Chamber's event index now lists the 2027 summit page: Aug 25 2027 at the Grand Hyatt Tampa Bay."
+    },
+    "fullyconnected|sanfrancisco": {
+      "name": "Fully Connected",
+      "city": "San Francisco",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "wandb.ai/site/fully-connected/ 404s; fullyconnected.com and the W&B events page both now redirect to CoreWeave. Confirmed Sept 29 - Oct 1 2026 at Moscone South, San Francisco."
+    },
+    "gtmhackathon|lehi": {
+      "name": "GTM Hackathon",
+      "city": "Lehi",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "getmobly.com/gtm-hackathon was taken down after the Feb 2 2026 edition (404) and no successor page is published; pointed at the organiser's live site pending a 2027 edition page."
+    },
+    "montrealgamesweek|montreal": {
+      "name": "Montreal Games Week",
+      "city": "Montreal",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "The /en path 404s; the root domain loads and confirms the 2026 edition runs Nov 10-16 2026."
+    },
+    "devopsdaysboston|boston": {
+      "name": "DevOpsDays Boston",
+      "city": "Boston",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Confirmed on devopsdays.org/events/2026-boston/welcome/: Oct 19-20 2026 at the Microsoft NERD Center in Cambridge MA. Merged the last_date carried by the removed Cambridge duplicat"
+    },
+    "bsidesok|glenpool": {
+      "name": "BSidesOK",
+      "city": "Glenpool",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "bsidesok.com content confirms the 2026 event ran Apr 8-10 2026 at the Glenpool Conference Center; corrected the start date from 2026-04-06."
+    },
+    "microsoftbuild|sanfrancisco": {
+      "name": "Microsoft Build",
+      "city": "San Francisco",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Verified: Build 2026 was moved from Seattle to San Francisco and held June 2-3 2026 at Fort Mason Center, shortened to two days and application-only in person. The dataset's city a"
+    },
+    "nerdniteaustin|austin": {
+      "name": "Nerd Nite Austin",
+      "city": "Austin",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Nerd Nite chapters live at <city>.nerdnite.com; austin.nerdnite.com verified live with current event listings."
+    },
+    "nerdnitechicago|chicago": {
+      "name": "Nerd Nite Chicago",
+      "city": "Chicago",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "chicago.nerdnite.com verified live with its own event listings."
+    },
+    "nerdnitedenver|denver": {
+      "name": "Nerd Nite Denver",
+      "city": "Denver",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "denver.nerdnite.com verified live with its own ticket links."
+    },
+    "nerdniteseattle|seattle": {
+      "name": "Nerd Nite Seattle",
+      "city": "Seattle",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "seattle.nerdnite.com verified live with its own event schedule."
+    },
+    "nerdnitetoronto|toronto": {
+      "name": "Nerd Nite Toronto",
+      "city": "Toronto",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "toronto.nerdnite.com verified live with its own event listings."
+    },
+    "nerdnitevancouver|vancouver": {
+      "name": "Nerd Nite Vancouver",
+      "city": "Vancouver",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "vancouver.nerdnite.com verified live with its own event listings at The Fox Cabaret."
+    },
+    "papersweloveboston|boston": {
+      "name": "Papers We Love Boston",
+      "city": "Boston",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Papers We Love publishes per-chapter pages at /chapter/<slug>/; Boston page fetched and verified."
+    },
+    "paperswelovechicago|chicago": {
+      "name": "Papers We Love Chicago",
+      "city": "Chicago",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Chapter listed in the paperswelove.org/chapter/ index with its own page."
+    },
+    "paperswelovedenver|denver": {
+      "name": "Papers We Love Denver",
+      "city": "Denver",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Chapter listed in the paperswelove.org/chapter/ index with its own page."
+    },
+    "paperswelovemontreal|montreal": {
+      "name": "Papers We Love Montreal",
+      "city": "Montreal",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Chapter listed in the paperswelove.org/chapter/ index; page loads but carries little chapter-specific content, so the chapter may be dormant."
+    },
+    "paperswelovenewyork|newyork": {
+      "name": "Papers We Love New York",
+      "city": "New York",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "New York chapter page fetched and verified - the original Papers We Love chapter, meets monthly."
+    },
+    "papersweloveportland|portland": {
+      "name": "Papers We Love Portland",
+      "city": "Portland",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Chapter listed in the paperswelove.org/chapter/ index with its own page."
+    },
+    "paperswelovesanfrancisco|sanfrancisco": {
+      "name": "Papers We Love San Francisco",
+      "city": "San Francisco",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "San Francisco chapter page fetched and verified - meets monthly at Antithesis's downtown office, RSVPs via Luma."
+    },
+    "papersweloveseattle|seattle": {
+      "name": "Papers We Love Seattle",
+      "city": "Seattle",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Chapter listed in the paperswelove.org/chapter/ index with its own page."
+    },
+    "paperswelovetoronto|toronto": {
+      "name": "Papers We Love Toronto",
+      "city": "Toronto",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Chapter listed in the paperswelove.org/chapter/ index with its own page."
+    },
+    "paperswelovewashingtondc|washington": {
+      "name": "Papers We Love Washington DC",
+      "city": "Washington",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Washington DC / Northern Virginia chapter page fetched and verified."
+    },
+    "makerfairenwarkansas|fayetteville": {
+      "name": "Maker Faire NW Arkansas",
+      "city": "Fayetteville",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Own site nwa.makerfaire.com verified: Sept 12 2026 at the Fayetteville Public Library, so the host city is Fayetteville, not Bentonville."
+    },
+    "makerfairebrownsville|brownsville": {
+      "name": "Maker Faire Brownsville",
+      "city": "Brownsville",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Runs inside BTX Space Fest; its own page verified: Sept 24-26 2026 at the George Ramirez Performing Arts Academy, Brownsville."
+    },
+    "makerfaireorangecounty|costamesa": {
+      "name": "Maker Faire Orange County",
+      "city": "Costa Mesa",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Own site oc.makerfaire.com verified: Sept 12-13 2026 at the OC Fair & Event Center, Costa Mesa."
+    },
+    "southdallasmakerfaire|dallas": {
+      "name": "South Dallas Maker Faire",
+      "city": "Dallas",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "fortworth.makerfaire.com 301-redirects to southdallas.makerfaire.com; the faire has been rebranded South Dallas Maker Faire and its own site makes no mention of Fort Worth. Date un"
+    },
+    "makerfairelouisville|louisville": {
+      "name": "Maker Faire Louisville",
+      "city": "Louisville",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Own site louisville.makerfaire.com verified: Oct 17 2026 at the UofL Engineering Student Success and Research Building."
+    },
+    "makerfaireorlando|orlando": {
+      "name": "Maker Faire Orlando",
+      "city": "Orlando",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Own site makerfaireorlando.com verified: Nov 7-8 2026 at the Central Florida Fairgrounds & Expo Halls."
+    },
+    "makerfairerochester|rochester": {
+      "name": "Maker Faire Rochester",
+      "city": "Rochester",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Own site rochester.makerfaire.com verified: Nov 21 2026 at the RIT Gordon Field House."
+    },
+    "makerfairehappyvalley|statecollege": {
+      "name": "Maker Faire Happy Valley",
+      "city": "State College",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Own site happyvalley.makerfaire.com verified: Oct 3-4 2026 at Axemann Brewery, Bellefonte, in the Happy Valley / Central PA region."
+    },
+    "makerfairewaterloo|waterloo": {
+      "name": "Maker Faire Waterloo",
+      "city": "Waterloo",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Own site waterloomakerfaire.org verified: Sept 13 2026 at Waterloo Public Square, Uptown Waterloo."
+    },
+    "sansdfirsummittraining|arlington": {
+      "name": "SANS DFIR Summit & Training",
+      "city": "Arlington",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Per-event SANS page verified: Oct 15-22 2026 (summit 15-16, training 17-22) at the Hilton Arlington Rosslyn."
+    },
+    "sansdcmetro|bethesda": {
+      "name": "SANS DC Metro",
+      "city": "Bethesda",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Per-event SANS page verified: SANS DC Metro September 2026, Sept 28 - Oct 3 2026 at The Bethesdan Hotel, Bethesda MD."
+    },
+    "sansmiami|coralgables": {
+      "name": "SANS Miami",
+      "city": "Coral Gables",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Per-event SANS page verified: Oct 26-31 2026 at the Hyatt Regency Coral Gables."
+    },
+    "sansnetworksecurity|lasvegas": {
+      "name": "SANS Network Security",
+      "city": "Las Vegas",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Per-event SANS page verified: Sept 21-26 2026 at Caesars Palace, Las Vegas."
+    },
+    "sansraleigh|raleigh": {
+      "name": "SANS Raleigh",
+      "city": "Raleigh",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Per-event SANS page verified: Nov 2-7 2026 at the Embassy Suites Raleigh-Durham Research Triangle in Cary NC."
+    },
+    "sanssanfrancisco|sanfrancisco": {
+      "name": "SANS San Francisco",
+      "city": "San Francisco",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Per-event SANS page verified: Nov 2-7 2026 at the Hilton Financial District San Francisco."
+    },
+    "bsidesbloomington|bloomington": {
+      "name": "BSides Bloomington",
+      "city": "Bloomington",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Own site bsidesbloomington.org verified live, 2026 edition at the Bloomington Convention Center; replaces the generic allbsides.com directory link."
+    },
+    "bsidescmh|columbus": {
+      "name": "BSides CMH",
+      "city": "Columbus",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Own site bsidescolumbus.com verified live: Nov 4-6 2026 with sessions Nov 5-6, presented by GuidePoint Security; replaces the generic allbsides.com link."
+    },
+    "bsidespeoria|peoria": {
+      "name": "BSides Peoria",
+      "city": "Peoria",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle1-links",
+      "evidence": "Own site bsidespeoria.com verified live: Oct 24 2026 at Bradley University, Peoria IL; replaces the generic allbsides.com link."
+    },
+    "sector|toronto": {
+      "name": "SecTor",
+      "city": "Toronto",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3-accuracy",
+      "evidence": "TASK B RESOLVED. blackhat.com/sector (read through a text-extraction proxy, the site 403s bots directly) states SecTor 2026 runs 'October 6-8, 2026' at the Metro Toronto Convention"
+    },
+    "nvidiagtc|sanjose": {
+      "name": "NVIDIA GTC",
+      "city": "San Jose",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3-accuracy",
+      "evidence": "nvidia.com/gtc shows GTC 2027 as 'March 15-18' in San Jose ('The GTC AI conference returns to San Jose in March'). Confirmed verbatim on a second read of the same page. Dataset end"
+    },
+    "defcon|lasvegas": {
+      "name": "DEF CON",
+      "city": "Las Vegas",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3-accuracy",
+      "evidence": "defcon.org states DEF CON 34 concluded Aug 6-9 2026 at LVCC West Hall and that DEF CON 35 is scheduled for August 5-8, 2027 in Las Vegas at LVCC West Hall. Dataset had next_date em"
+    },
+    "blackhatusa|lasvegas": {
+      "name": "Black Hat USA",
+      "city": "Las Vegas",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3-accuracy",
+      "evidence": "blackhat.com/us-27 (read through a text-extraction proxy; blackhat.com 403s bots) publishes Black Hat USA 2027 as 'July 31-August 5, 2027'. The blackhat.com event list carries the "
+    },
+    "spacesymposium|coloradosprings": {
+      "name": "Space Symposium",
+      "city": "Colorado Springs",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3-accuracy",
+      "evidence": "spacesymposium.org (read through a text-extraction proxy; the site 403s bots directly) publishes the next Space Symposium as April 12-15, 2027 at The Broadmoor, Colorado Springs, C"
+    },
+    "servicenowknowledge|lasvegas": {
+      "name": "ServiceNow Knowledge",
+      "city": "Las Vegas",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3-accuracy",
+      "evidence": "servicenow.com/events/knowledge.html (read through a text-extraction proxy; the page 403s bots directly) states 'Knowledge 2027 is May 4-6 in Las Vegas', marking the 20th anniversa"
+    },
+    "firstchampionship|houston": {
+      "name": "FIRST Championship",
+      "city": "Houston",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3-accuracy",
+      "evidence": "firstinspires.org/programs/first-championship gives the most recent FIRST Championship as April 29 - May 2, 2026 in Houston, Texas; no later edition is published yet. Dataset corre"
+    },
+    "c2montreal|montreal": {
+      "name": "C2 Montreal",
+      "city": "Montreal",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3-accuracy",
+      "evidence": "c2montreal.com states 'In 2026, C2 Montreal will be taking a pause from its annual May gathering' while a new format is explored, and lists no future dates. Not discontinued, so ke"
+    },
+    "nytechmeetup|newyorkcity": {
+      "name": "NY Tech Meetup",
+      "city": "New York City",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3-retry",
+      "evidence": "Implausible attendance for the event type. meetup.com/ny-tech shows '52,297 members' - the dataset's 52000 is the group's cumulative membership count, not the turnout at any single"
+    },
+    "bitcon|atlanta": {
+      "name": "BITCON",
+      "city": "Atlanta",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle4-links",
+      "evidence": "blacksintechnology.net now responds (transient failure), but the org homepage is not the conference. WebFetch confirmed the dedicated BITCON conference site at bitcon.blacksintechn"
+    },
+    "hacknyu|newyorkcity": {
+      "name": "HackNYU",
+      "city": "New York City",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle4-links",
+      "evidence": "hacknyu.org refuses connections (ECONNREFUSED 167.71.252.160:443) and hacknyu.com is a parked HugeDomains sale page. The official HackNYU club site at hacknyu.github.io loads and s"
+    },
+    "techtomorrow|columbus": {
+      "name": "Tech Tomorrow",
+      "city": "Columbus",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle4-links",
+      "evidence": "cio-tomorrow.com redirects to techtomorrow.events, which states 'Tech Tomorrow 2026 debuts as the reimagined CIO Tomorrow', building on a 24-year legacy. Columbus OH, September 9 2"
+    },
+    "columbusstartupweek|columbus": {
+      "name": "Columbus Startup Week",
+      "city": "Columbus",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle4-links",
+      "evidence": "sprkwrks.com redirects to sparkworksinnovation.com (org homepage, not the event). SparkWorks Innovation runs the event; its current event page verified by WebFetch as 'Columbus Sta"
+    },
+    "startupweekcolumbus|columbus": {
+      "name": "Startup Week Columbus",
+      "city": "Columbus",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle4-links",
+      "evidence": "startupcolumbus.com redirects to a stale SparkWorks page for the 2022 edition (columbus-startup-week-22). Repointed to the verified current SparkWorks event page for Columbus Start"
+    },
+    "ewfannualconference|aurora": {
+      "name": "EWF Annual Conference",
+      "city": "Aurora",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle4-links",
+      "evidence": "ewf-usa.com redirects to ewfglobal.com. WebFetch confirms the Executive Women's Forum rebranded its domain to ewfglobal.com and still runs the EWF Annual Conference (~700 attendees"
+    },
+    "realityhackatmit|cambridge": {
+      "name": "Reality Hack at MIT",
+      "city": "Cambridge",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle4-links",
+      "evidence": "mitrealityhack.com redirects to realityhackatmit.com, verified as the live official site: Reality Hack at MIT, MIT campus Cambridge MA, next edition January 2027."
+    },
+    "aiinfrasummit|santaclara": {
+      "name": "AI Infra Summit",
+      "city": "Santa Clara",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle4-links",
+      "evidence": "aiinfrasummit.com redirects to the new domain ai-infra-summit.com, verified as AI Infra Summit 2026, Santa Clara Convention Center, September 15-17 2026 - matches the record's next"
+    },
+    "hoyahacks|washington": {
+      "name": "Hoya Hacks",
+      "city": "Washington",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle4-links",
+      "evidence": "hoyahacks.com redirects to hoyahacks.georgetown.domains, verified live: HoyaHacks 2027, Georgetown University, Washington DC, January 22-24 2027, registration open."
+    },
+    "pytorchconference|sanjose": {
+      "name": "PyTorch Conference",
+      "city": "San Jose",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle4-links",
+      "evidence": "The Linux Foundation URL redirects to the renamed pytorch-conference-north-america page, verified as 'PyTorch Conference North America', San Jose CA, October 20-21 2026 - matches t"
+    },
+    "minneapolistechnologysummit|minneapolis": {
+      "name": "Minneapolis Technology Summit",
+      "city": "Minneapolis",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle4-followups",
+      "evidence": "Verified on eitevents.com/event_pages/minneapolis-technology-summit-2026/"
+    },
+    "techspochicago|chicago": {
+      "name": "TECHSPO Chicago",
+      "city": "Chicago",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle4-final",
+      "evidence": "techspochicago.com is flaky"
+    },
+    "nashvillemicrosoftcommunityday|nashville": {
+      "name": "Nashville Microsoft Community Day",
+      "city": "Nashville",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "r2-redirects",
+      "evidence": "Verified via communitydays.org/event/2026-09-11/nashville-microsoft-community-day"
+    },
+    "berkeleyskydeckdemoday|berkeley": {
+      "name": "Berkeley SkyDeck Demo Day",
+      "city": "Berkeley",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "r2-redirects",
+      "evidence": "skydeck.berkeley.edu/demo-day/ redirects to demo-day-fall-2020, an article dated 04 February 2020"
+    },
+    "polyglotunconference|vancouver": {
+      "name": "Polyglot Unconference",
+      "city": "Vancouver",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3r2-b",
+      "evidence": "polyglotconf.com (organiser site) still advertises 'May 25th 2019, Vancouver' as its event; /2026 and /about return 404. No 2026 edition is published anywhere on the organiser's si"
+    },
+    "bsidespdx|portland": {
+      "name": "BSides PDX",
+      "city": "Portland",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3r2-b",
+      "evidence": "bsidespdx.org states verbatim 'BSidesPDX 2026 will be on Fri Oct 23rd & Sat Oct 24th, 2026' - a two-day event. Start date 2026-10-23 is correct but the record ends it the same day."
+    },
+    "milehighdreamin|denver": {
+      "name": "Mile High Dreamin'",
+      "city": "Denver",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3r2-a",
+      "evidence": "Organiser domain milehighdreamin.com 302-redirects to www and now serves only a bare 'LWC Communities' welcome page with no event content; /events, /2026, /about and /index.html al"
+    },
+    "kcdsfbayarea|mountainview": {
+      "name": "KCD SF Bay Area",
+      "city": "Mountain View",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3r2-a",
+      "evidence": "CNCF's own KCD calendar (cncf.io/kcds/) lists 'KCD San Francisco Bay Area 2026 - September 1, 2026, Mountain View, United States'. Record had both the date (2026-09-02) and the cit"
+    },
+    "dayofdatadetroit|annarbor": {
+      "name": "Day of Data Detroit",
+      "city": "Ann Arbor",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3r2-a",
+      "evidence": "sqlsaturday.com/2026-09-12-sqlsaturday1164/ redirects to dayofdata.org/2026-09-12-dayofdata1164/, which gives the venue as Ann Arbor District Library - Downtown, 343 South Fifth Av"
+    },
+    "digitalokanagan|vernon": {
+      "name": "Digital Okanagan",
+      "city": "Vernon",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "cycle3r2-a",
+      "evidence": "meetup.com/digitalokanagan/ shows the 2026-09-24 'Geek Beers hangout at the Kal' at The Kal, 3004 30th Ave, Vernon, BC (as is the preceding 2026-08-27 meetup). Date confirmed; venu"
+    },
+    "innovationexposiouxfalls|siouxfalls": {
+      "name": "Innovation Expo Sioux Falls",
+      "city": "Sioux Falls",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "r2-siouxfalls",
+      "evidence": "Flagged as suspicious because startupsiouxfalls.com/events/ showed nothing on 2026-09-17. The calendar is simply windowed to the current month"
+    },
+    "viatecaimeetup|victoria": {
+      "name": "VIATEC AI Meetup",
+      "city": "Victoria",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "r2-newly-exposed",
+      "evidence": "members.viatec.ca/tech-events 404s. The live calendar is members.viatec.ca/event-calendar, which confirms the stored 2026-09-10 date: 'VIATEC AI Meetup"
+    },
+    "iowatechnologysummit|desmoines": {
+      "name": "Iowa Technology Summit",
+      "city": "Des Moines",
+      "status": "corrected",
+      "checked_on": "2026-08-26",
+      "cycle": "r2-newly-exposed",
+      "evidence": "technologyiowa.org/events/list/ 404s. The Technology Association of Iowa publishes a dedicated page for this event at /iowa-technology-summit-2026/, which is a better link than the"
+    },
+    "productledsummittoronto|toronto": {
+      "name": "Product-Led Summit Toronto",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "difinityconferencetoronto|toronto": {
+      "name": "Difinity Conference Toronto",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "bsidestoronto|toronto": {
+      "name": "BSides Toronto",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "gosec|montreal": {
+      "name": "GoSec",
+      "city": "Montreal",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "bsidesvancouverisland|victoria": {
+      "name": "BSides Vancouver Island",
+      "city": "Victoria",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "barcampphilly|philadelphia": {
+      "name": "BarCamp Philly",
+      "city": "Philadelphia",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "mlconf|newyork": {
+      "name": "MLconf",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "nysmarticorridorsemiconductorsummit|rochester": {
+      "name": "NY SMART I-Corridor Semiconductor Summit",
+      "city": "Rochester",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "themontgomerysummit|santamonica": {
+      "name": "The Montgomery Summit",
+      "city": "Santa Monica",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "oceanexchange|savannah": {
+      "name": "Ocean Exchange",
+      "city": "Savannah",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "rochestersecuritysummit|rochester": {
+      "name": "Rochester Security Summit",
+      "city": "Rochester",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "5acrosspitchcompetition|lexington": {
+      "name": "5 Across Pitch Competition",
+      "city": "Lexington",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "codesupply|pittsburgh": {
+      "name": "Code & Supply",
+      "city": "Pittsburgh",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "bsidespittsburgh|pittsburgh": {
+      "name": "BSides Pittsburgh",
+      "city": "Pittsburgh",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "southeastlinuxfest|charlotte": {
+      "name": "SouthEast LinuxFest",
+      "city": "Charlotte",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "opensource101charlotte|charlotte": {
+      "name": "Open Source 101 Charlotte",
+      "city": "Charlotte",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "rihubpizzapitches|providence": {
+      "name": "RIHub Pizza & Pitches",
+      "city": "Providence",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "mitbitcoinexpo|cambridge": {
+      "name": "MIT Bitcoin Expo",
+      "city": "Cambridge",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "mit100k|cambridge": {
+      "name": "MIT $100K",
+      "city": "Cambridge",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "nycresistorcraftnight|brooklyn": {
+      "name": "NYC Resistor Craft Night",
+      "city": "Brooklyn",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "hackmidwest|kansascity": {
+      "name": "Hack Midwest",
+      "city": "Kansas City",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "knoxgamejam|knoxville": {
+      "name": "Knox Game Jam",
+      "city": "Knoxville",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "devspaceconference|huntsville": {
+      "name": "DevSpace Conference",
+      "city": "Huntsville",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "spaceandmissiledefensesymposium|huntsville": {
+      "name": "Space and Missile Defense Symposium",
+      "city": "Huntsville",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "birminghamwomenintechnology|birmingham": {
+      "name": "Birmingham Women in Technology",
+      "city": "Birmingham",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "tennesseequantumhackathon|chattanooga": {
+      "name": "Tennessee Quantum Hackathon",
+      "city": "Chattanooga",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "tenwestfestival|tucson": {
+      "name": "TENWEST Festival",
+      "city": "Tucson",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "podcamptoronto|toronto": {
+      "name": "PodCamp Toronto",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "bostonfestivalofindiegames|boston": {
+      "name": "Boston Festival of Indie Games",
+      "city": "Boston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "4a",
+      "evidence": "spot-check: URL loaded, page described the right event, city matched"
+    },
+    "slosstech|birmingham": {
+      "name": "Sloss.tech",
+      "city": "Birmingham",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "codestock|knoxville": {
+      "name": "CodeStock",
+      "city": "Knoxville",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "cyberbay|tampa": {
+      "name": "CyberBay",
+      "city": "Tampa",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "sceniccitysummit|chattanooga": {
+      "name": "Scenic City Summit",
+      "city": "Chattanooga",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "a2tech360|annarbor": {
+      "name": "a2Tech360",
+      "city": "Ann Arbor",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "yycdatacon|calgary": {
+      "name": "YYC DataCon",
+      "city": "Calgary",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "insurtechamerica|hartford": {
+      "name": "InsurTech America",
+      "city": "Hartford",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "seckc|kansascity": {
+      "name": "SecKC",
+      "city": "Kansas City",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "gdgbrooklyn|brooklyn": {
+      "name": "GDG Brooklyn",
+      "city": "Brooklyn",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "innovationdepotfoundersroundtable|birmingham": {
+      "name": "Innovation Depot Founders Round Table",
+      "city": "Birmingham",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "colab|chattanooga": {
+      "name": "CO.LAB",
+      "city": "Chattanooga",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "bsidesidahofalls|idahofalls": {
+      "name": "BSides Idaho Falls",
+      "city": "Idaho Falls",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "ideafunding|lincoln": {
+      "name": "IdeaFunding",
+      "city": "Lincoln",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "techsavannah|savannah": {
+      "name": "tech SAVannah",
+      "city": "Savannah",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "techmentor|redmond": {
+      "name": "TechMentor",
+      "city": "Redmond",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "jerseycityentrepreneurs|jerseycity": {
+      "name": "Jersey City Entrepreneurs",
+      "city": "Jersey City",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "2",
+      "evidence": "spot-check by the researcher after merge"
+    },
+    "meetinginthemillyard|nashua": {
+      "name": "Meeting in the Millyard",
+      "city": "Nashua",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "orchestrator",
+      "evidence": "NH Tech Alliance calendar lists MITM27 May 18-20 2027, matches record"
+    },
+    "siggraph|losangeles": {
+      "name": "SIGGRAPH",
+      "city": "Los Angeles",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "orchestrator",
+      "evidence": "s2026.siggraph.org confirms 19-23 July 2026 at LA Convention Center; 2027 city unpublished"
+    },
+    "googlecloudnext|lasvegas": {
+      "name": "Google Cloud Next",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "orchestrator",
+      "evidence": "cloud.google.com/next 301s to the stored URL; it is the canonical entry point"
+    },
+    "gracehoppercelebration|anaheim": {
+      "name": "Grace Hopper Celebration",
+      "city": "Anaheim",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "renderatl|atlanta": {
+      "name": "RenderATL",
+      "city": "Atlanta",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "atlantatechweek|atlanta": {
+      "name": "Atlanta Tech Week",
+      "city": "Atlanta",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "nsbeannualconvention|baltimore": {
+      "name": "NSBE Annual Convention",
+      "city": "Baltimore",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "isteascdconference|boston": {
+      "name": "ISTE+ASCD Conference",
+      "city": "Boston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "bioitworldconferenceexpo|boston": {
+      "name": "Bio-IT World Conference & Expo",
+      "city": "Boston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "paxeast|boston": {
+      "name": "PAX East",
+      "city": "Boston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "unboundformerlyinbound|boston": {
+      "name": "UNBOUND (formerly INBOUND)",
+      "city": "Boston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "boulderstartupweek|boulder": {
+      "name": "Boulder Startup Week",
+      "city": "Boulder",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "csawcybersecuritygamesandconference|brooklyn": {
+      "name": "CSAW Cybersecurity Games and Conference",
+      "city": "Brooklyn",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "43northfinals|buffalo": {
+      "name": "43North Finals",
+      "city": "Buffalo",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "coloradostartupweek|denver": {
+      "name": "Colorado Startup Week",
+      "city": "Denver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "upperbound|edmonton": {
+      "name": "Upper Bound",
+      "city": "Edmonton",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "gamediscoveryexhibitiongdx|edmonton": {
+      "name": "Game Discovery Exhibition (GDX)",
+      "city": "Edmonton",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "propelifyinnovationfestival|hoboken": {
+      "name": "Propelify Innovation Festival",
+      "city": "Hoboken",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "no reachable page publishing future dates"
+    },
+    "hawaiitechweek|honolulu": {
+      "name": "Hawaii Tech Week",
+      "city": "Honolulu",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "afrotechconference|houston": {
+      "name": "AFROTECH Conference",
+      "city": "Houston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "rallyinnovationconference|indianapolis": {
+      "name": "Rally Innovation Conference",
+      "city": "Indianapolis",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "ciscoliveus|lasvegas": {
+      "name": "Cisco Live US",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "ces|lasvegas": {
+      "name": "CES",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "awsreinvent|lasvegas": {
+      "name": "AWS re:Invent",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "hlthusa|lasvegas": {
+      "name": "HLTH USA",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "devlearnconferenceexpo|lasvegas": {
+      "name": "DevLearn Conference & Expo",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "microsoftpowerplatformcommunityconference|lasvegas": {
+      "name": "Microsoft Power Platform Community Conference",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "oracleaiworld|lasvegas": {
+      "name": "Oracle AI World",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "netsuitesuiteworld|lasvegas": {
+      "name": "NetSuite SuiteWorld",
+      "city": "Las Vegas",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "no reachable page publishing future dates"
+    },
+    "hrtechlasvegas|lasvegas": {
+      "name": "HR Tech Las Vegas",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "money2020usa|lasvegas": {
+      "name": "Money20/20 USA",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "ai4|lasvegas": {
+      "name": "Ai4",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "aweusa|longbeach": {
+      "name": "AWE USA",
+      "city": "Long Beach",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "forwardfest|madison": {
+      "name": "Forward Fest",
+      "city": "Madison",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "metaconnect|menlopark": {
+      "name": "Meta Connect",
+      "city": "Menlo Park",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "emergeamericas|miami": {
+      "name": "eMerge Americas",
+      "city": "Miami",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "adobemax|miamibeach": {
+      "name": "Adobe MAX",
+      "city": "Miami Beach",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "allin|montreal": {
+      "name": "ALL IN",
+      "city": "Montreal",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "googleio|mountainview": {
+      "name": "Google I/O",
+      "city": "Mountain View",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "no reachable page publishing future dates"
+    },
+    "bitcoinconference|nashville": {
+      "name": "Bitcoin Conference",
+      "city": "Nashville",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "theaisummitnewyork|newyork": {
+      "name": "The AI Summit New York",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "newyorktechweek|newyork": {
+      "name": "New York Tech Week",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "nytechmeetup|newyork": {
+      "name": "NY Tech Meetup",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "gartneritsymposiumxpo|orlando": {
+      "name": "Gartner IT Symposium/Xpo",
+      "city": "Orlando",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "scale|pasadena": {
+      "name": "SCaLE",
+      "city": "Pasadena",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "paxunplugged|philadelphia": {
+      "name": "PAX Unplugged",
+      "city": "Philadelphia",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "rhodeislandstartupweek|providence": {
+      "name": "Rhode Island Startup Week",
+      "city": "Providence",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "allthingsopen|raleigh": {
+      "name": "All Things Open",
+      "city": "Raleigh",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "kubeconcloudnativeconnorthamerica|saltlakecity": {
+      "name": "KubeCon + CloudNativeCon North America",
+      "city": "Salt Lake City",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "siliconslopessummit|saltlakecity": {
+      "name": "Silicon Slopes Summit",
+      "city": "Salt Lake City",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "no reachable page publishing future dates"
+    },
+    "asugsvsummit|sandiego": {
+      "name": "ASU+GSV Summit",
+      "city": "San Diego",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "dataaisummit|sanfrancisco": {
+      "name": "Data + AI Summit",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "rsacconference|sanfrancisco": {
+      "name": "RSAC Conference",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "gamedevelopersconference|sanfrancisco": {
+      "name": "Game Developers Conference",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "techcrunchdisrupt|sanfrancisco": {
+      "name": "TechCrunch Disrupt",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "dreamforce|sanfrancisco": {
+      "name": "Dreamforce",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "stepsanfrancisco|sanfrancisco": {
+      "name": "Step San Francisco",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "aibigdataexponorthamerica|sanjose": {
+      "name": "AI & Big Data Expo North America",
+      "city": "San Jose",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "wearedevelopersworldcongress|sanjose": {
+      "name": "WeAreDevelopers World Congress",
+      "city": "San Jose",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "saastrannual|sanmateo": {
+      "name": "SaaStr Annual",
+      "city": "San Mateo",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "developerweek|santaclara": {
+      "name": "DeveloperWeek",
+      "city": "Santa Clara",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "apiworld|santaclara": {
+      "name": "API World",
+      "city": "Santa Clara",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "cvpr|seattle": {
+      "name": "CVPR",
+      "city": "Seattle",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "passdatacommunitysummitwest|seattle": {
+      "name": "PASS Data Community Summit West",
+      "city": "Seattle",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "paxwest|seattle": {
+      "name": "PAX West",
+      "city": "Seattle",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "stltechweek|stlouis": {
+      "name": "STL TechWeek",
+      "city": "St. Louis",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "websummitvancouver|vancouver": {
+      "name": "Web Summit Vancouver",
+      "city": "Vancouver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "dcstartuptechweek|washington": {
+      "name": "DC Startup & Tech Week",
+      "city": "Washington",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "billingtoncybersecuritysummit|washington": {
+      "name": "Billington CyberSecurity Summit",
+      "city": "Washington",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "manitobatechweek|winnipeg": {
+      "name": "Manitoba Tech Week",
+      "city": "Winnipeg",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r1",
+      "evidence": "verified against organiser page (top-78 by attendance)"
+    },
+    "jerseycityentrepreneurstheventuregarden|jerseycity": {
+      "name": "Jersey City Entrepreneurs: The Venture Garden",
+      "city": "Jersey City",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "tailscaleup|sanfrancisco": {
+      "name": "TailscaleUp",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "buffalogamespacegamedevelopmentmeeting|buffalo": {
+      "name": "Buffalo Game Space Game Development Meeting",
+      "city": "Buffalo",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "chmlive|mountainview": {
+      "name": "CHM Live",
+      "city": "Mountain View",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "veteraninnovationhackathon|mountainview": {
+      "name": "Veteran Innovation Hackathon",
+      "city": "Mountain View",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "techtitansawardsgala|plano": {
+      "name": "Tech Titans Awards Gala",
+      "city": "Plano",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "makerfaireyukon|whitehorse": {
+      "name": "Maker Faire Yukon",
+      "city": "Whitehorse",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "santamonicanewtech|santamonica": {
+      "name": "Santa Monica New Tech",
+      "city": "Santa Monica",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "airflowsummit|austin": {
+      "name": "Airflow Summit",
+      "city": "Austin",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "nwatechsummit|bentonville": {
+      "name": "NWA Tech Summit",
+      "city": "Bentonville",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "mississippiaerospacedefensesymposium|flowood": {
+      "name": "Mississippi Aerospace & Defense Symposium",
+      "city": "Flowood",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "connecticutdigitalgovernmentsummit|hartford": {
+      "name": "Connecticut Digital Government Summit",
+      "city": "Hartford",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "kcdsfbayarea|sanfrancisco": {
+      "name": "KCD SF Bay Area",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "connectnetworkingforentrepreneurs|jackson": {
+      "name": "CONNECT: Networking for Entrepreneurs",
+      "city": "Jackson",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "grpconfnorthamerica|mountainview": {
+      "name": "gRPConf North America",
+      "city": "Mountain View",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "rosbythebay|sunnyvale": {
+      "name": "ROS By-The-Bay",
+      "city": "Sunnyvale",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "vancouvermicrosoft365summit|vancouver": {
+      "name": "Vancouver Microsoft 365 Summit",
+      "city": "Vancouver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "railscampwest|otis": {
+      "name": "Rails Camp West",
+      "city": "Otis",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "rustconf|montreal": {
+      "name": "RustConf",
+      "city": "Montreal",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "devopsdaysportland|portland": {
+      "name": "devopsdays Portland",
+      "city": "Portland",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "techsavannahtechtuesday|savannah": {
+      "name": "tech SAVannah Tech Tuesday",
+      "city": "Savannah",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "externaldevelopmentsummitxds|vancouver": {
+      "name": "External Development Summit (XDS)",
+      "city": "Vancouver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "kansascitydeveloperconference|kansascity": {
+      "name": "Kansas City Developer Conference",
+      "city": "Kansas City",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "gntcsummit|nashville": {
+      "name": "GNTC Summit",
+      "city": "Nashville",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "apidaystoronto|toronto": {
+      "name": "apidays Toronto",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "zeekworkshopberkeley|berkeley": {
+      "name": "Zeek Workshop Berkeley",
+      "city": "Berkeley",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "403 or JS-only; no organiser path worked"
+    },
+    "elixirconfus|chicago": {
+      "name": "ElixirConf US",
+      "city": "Chicago",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "nhtechalliancecybersecuritysummit|manchester": {
+      "name": "NH Tech Alliance Cybersecurity Summit",
+      "city": "Manchester",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "ycombinatordemoday|sanfrancisco": {
+      "name": "Y Combinator Demo Day",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "bsidesdenver|denver": {
+      "name": "BSides Denver",
+      "city": "Denver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "hackrice|houston": {
+      "name": "HackRice",
+      "city": "Houston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "cppcon|aurora": {
+      "name": "CppCon",
+      "city": "Aurora",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "gdgbrooklynaifashionhackathon|brooklyn": {
+      "name": "GDG Brooklyn AI Fashion Hackathon",
+      "city": "Brooklyn",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "dayofdatadetroit|detroit": {
+      "name": "Day of Data Detroit",
+      "city": "Detroit",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "hackwestx|lubbock": {
+      "name": "HackWesTX",
+      "city": "Lubbock",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "vintagecomputerfestivalmidwest|schaumburg": {
+      "name": "Vintage Computer Festival Midwest",
+      "city": "Schaumburg",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "alaskaentrepreneurshipweek|anchorage": {
+      "name": "Alaska Entrepreneurship Week",
+      "city": "Anchorage",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "georgiatechallmajorscareerfair|atlanta": {
+      "name": "Georgia Tech All-Majors Career Fair",
+      "city": "Atlanta",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "bestoftechawards|cleveland": {
+      "name": "Best of Tech Awards",
+      "city": "Cleveland",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "403 or JS-only; no organiser path worked"
+    },
+    "splunkconf|denver": {
+      "name": "Splunk .conf",
+      "city": "Denver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "positconf|houston": {
+      "name": "posit::conf",
+      "city": "Houston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "3686|nashville": {
+      "name": "3686",
+      "city": "Nashville",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "vslivesandiego|sandiego": {
+      "name": "VSLive! San Diego",
+      "city": "San Diego",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "newventuresbcdemoday|vancouver": {
+      "name": "New Ventures BC Demo Day",
+      "city": "Vancouver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "cloudnirvanacolumbus|columbus": {
+      "name": "Cloud Nirvana Columbus",
+      "city": "Columbus",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "devopsmidwest|stlouis": {
+      "name": "DevOps Midwest",
+      "city": "St. Louis",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "businessvaluebuildersummit|huntington": {
+      "name": "Business Value Builder Summit",
+      "city": "Huntington",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "ddxinnovationuxconferencesandiego|sandiego": {
+      "name": "DDX Innovation & UX Conference San Diego",
+      "city": "San Diego",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "tampabaywavebluetechxpitchnight|tampa": {
+      "name": "Tampa Bay Wave BlueTech|X Pitch Night",
+      "city": "Tampa",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "autonomousnation|wheatland": {
+      "name": "Autonomous Nation",
+      "city": "Wheatland",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "hackhersgsu|atlanta": {
+      "name": "HackHers @GSU",
+      "city": "Atlanta",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "hophacks|baltimore": {
+      "name": "HopHacks",
+      "city": "Baltimore",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "vthacks|blacksburg": {
+      "name": "VTHacks",
+      "city": "Blacksburg",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "bsidescache|logan": {
+      "name": "BSidesCache",
+      "city": "Logan",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "utahjsconference|sandy": {
+      "name": "UtahJS Conference",
+      "city": "Sandy",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "cipsontariowomenintechnologyconference|toronto": {
+      "name": "CIPS Ontario Women in Technology Conference",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "hackthenorth|waterloo": {
+      "name": "Hack the North",
+      "city": "Waterloo",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "hackmit|cambridge": {
+      "name": "HackMIT",
+      "city": "Cambridge",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "403 or JS-only; no organiser path worked"
+    },
+    "redactecon|grandjunction": {
+      "name": "RedacteCON",
+      "city": "Grand Junction",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "bsidesmontreal|montreal": {
+      "name": "BSides Montreal",
+      "city": "Montreal",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "steelhacks|pittsburgh": {
+      "name": "SteelHacks",
+      "city": "Pittsburgh",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "saltlakecitydayofdata|saltlakecity": {
+      "name": "Salt Lake City Day of Data",
+      "city": "Salt Lake City",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "devfestsaltlakecity|saltlakecity": {
+      "name": "DevFest Salt Lake City",
+      "city": "Salt Lake City",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "dayofdatawinnipeg|winnipeg": {
+      "name": "Day of Data Winnipeg",
+      "city": "Winnipeg",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "starwest|anaheim": {
+      "name": "STARWEST",
+      "city": "Anaheim",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "fullindiesummit|vancouver": {
+      "name": "Full Indie Summit",
+      "city": "Vancouver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "exploreddd|denver": {
+      "name": "Explore DDD",
+      "city": "Denver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "partnervibe|saltlakecity": {
+      "name": "Partner Vibe",
+      "city": "Salt Lake City",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "tulsatechweek|tulsa": {
+      "name": "Tulsa Tech Week",
+      "city": "Tulsa",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "victoriatechweek|victoria": {
+      "name": "Victoria Tech Week",
+      "city": "Victoria",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "prairiedevcon|winnipeg": {
+      "name": "Prairie Dev Con",
+      "city": "Winnipeg",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "devopsdaysdenver|denver": {
+      "name": "devopsdays Denver",
+      "city": "Denver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "nationalcybersummit|huntsville": {
+      "name": "National Cyber Summit",
+      "city": "Huntsville",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "oktane|lasvegas": {
+      "name": "Oktane",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "productledsummitsanfrancisco|sanfrancisco": {
+      "name": "Product-Led Summit San Francisco",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "elevatefestival|toronto": {
+      "name": "Elevate Festival",
+      "city": "Toronto",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "403 or JS-only; no organiser path worked"
+    },
+    "railsworld|austin": {
+      "name": "Rails World",
+      "city": "Austin",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "digitalsummitphiladelphia|philadelphia": {
+      "name": "Digital Summit Philadelphia",
+      "city": "Philadelphia",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "bsidesedmonton|edmonton": {
+      "name": "BSides Edmonton",
+      "city": "Edmonton",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "siliconcouloirpitchday|jackson": {
+      "name": "Silicon Couloir Pitch Day",
+      "city": "Jackson",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "digitalokanagan|kelowna": {
+      "name": "Digital Okanagan",
+      "city": "Kelowna",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "chroma|tulsa": {
+      "name": "CHROMA",
+      "city": "Tulsa",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "securitybsidesalbuquerque|albuquerque": {
+      "name": "Security BSides Albuquerque",
+      "city": "Albuquerque",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "theaipivotconference|anaheim": {
+      "name": "The AI Pivot Conference",
+      "city": "Anaheim",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "hackgt|atlanta": {
+      "name": "HackGT",
+      "city": "Atlanta",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "shellhacks|miami": {
+      "name": "ShellHacks",
+      "city": "Miami",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "bsidesorlando|orlando": {
+      "name": "BSides Orlando",
+      "city": "Orlando",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "makerfairebayarea|vallejo": {
+      "name": "Maker Faire Bay Area",
+      "city": "Vallejo",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "hackumbc|baltimore": {
+      "name": "hackUMBC",
+      "city": "Baltimore",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "bsidescleveland|cleveland": {
+      "name": "BSides Cleveland",
+      "city": "Cleveland",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "divhacks|newyork": {
+      "name": "DivHacks",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "owlhacks|philadelphia": {
+      "name": "OwlHacks",
+      "city": "Philadelphia",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2a",
+      "evidence": "verified against organiser page (near-term date sweep)"
+    },
+    "dayofdatatoronto|toronto": {
+      "name": "Day of Data Toronto",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "cansecwest|vancouver": {
+      "name": "CanSecWest",
+      "city": "Vancouver",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "nctechsummitforwomenintech|asheville": {
+      "name": "NC TECH Summit for Women in Tech",
+      "city": "Asheville",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "boiseentrepreneurweek|boise": {
+      "name": "Boise Entrepreneur Week",
+      "city": "Boise",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "rockymountainruby|boulder": {
+      "name": "Rocky Mountain Ruby",
+      "city": "Boulder",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "devopsdaysdallas|dallas": {
+      "name": "DevOpsDays Dallas",
+      "city": "Dallas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "iowastartupweek|desmoines": {
+      "name": "Iowa Startup Week",
+      "city": "Des Moines",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "devopsconnewyork|newyork": {
+      "name": "DevOpsCon New York",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "renostartupweek|reno": {
+      "name": "Reno Startup Week",
+      "city": "Reno",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "bsidessaskatoon|saskatoon": {
+      "name": "BSides Saskatoon",
+      "city": "Saskatoon",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "jumpstartvcfest|cleveland": {
+      "name": "JumpStart VC Fest",
+      "city": "Cleveland",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "devopsdayshalifax|halifax": {
+      "name": "DevOpsDays Halifax",
+      "city": "Halifax",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "theaiconference|sanfrancisco": {
+      "name": "The AI Conference",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "clojureconj|charlotte": {
+      "name": "Clojure/conj",
+      "city": "Charlotte",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "umbracousfestival|chicago": {
+      "name": "Umbraco US Festival",
+      "city": "Chicago",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "mongodblocalnyc|newyork": {
+      "name": "MongoDB.local NYC",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "techexitiocalgary|calgary": {
+      "name": "TechExit.io Calgary",
+      "city": "Calgary",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "devopsdaysphiladelphia|philadelphia": {
+      "name": "devopsdays Philadelphia",
+      "city": "Philadelphia",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "igniteseattle|seattle": {
+      "name": "Ignite Seattle",
+      "city": "Seattle",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "minnedemo|stpaul": {
+      "name": "Minnedemo",
+      "city": "St. Paul",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "bigredhacks|ithaca": {
+      "name": "BigRed//Hacks",
+      "city": "Ithaca",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "manufacturingdayatwsutech|wichita": {
+      "name": "Manufacturing Day at WSU Tech",
+      "city": "Wichita",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "mhacks|annarbor": {
+      "name": "MHacks",
+      "city": "Ann Arbor",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "bsidesatlanta|atlanta": {
+      "name": "BSides Atlanta",
+      "city": "Atlanta",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "bostondataandaisaturday|boston": {
+      "name": "Boston Data and AI Saturday",
+      "city": "Boston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "hackdearborn|dearborn": {
+      "name": "Hack Dearborn",
+      "city": "Dearborn",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "bsidesmemphis|memphis": {
+      "name": "BSides Memphis",
+      "city": "Memphis",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "girlhacks|newark": {
+      "name": "GirlHacks",
+      "city": "Newark",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "rowdyhacks|sanantonio": {
+      "name": "Rowdy Hacks",
+      "city": "San Antonio",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "pybay|sanfrancisco": {
+      "name": "PyBay",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "offensiveaicon|sandiego": {
+      "name": "Offensive AI Con",
+      "city": "San Diego",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "startupcincyweek|cincinnati": {
+      "name": "StartupCincy Week",
+      "city": "Cincinnati",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "westslopestartupweek|durango": {
+      "name": "West Slope Startup Week",
+      "city": "Durango",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "sapconnect|lasvegas": {
+      "name": "SAP Connect",
+      "city": "Las Vegas",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "lesbianswhotechalliessummit|newyork": {
+      "name": "Lesbians Who Tech + Allies Summit",
+      "city": "New York",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "advertisingweeknewyork|newyork": {
+      "name": "Advertising Week New York",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "sftechweek|sanfrancisco": {
+      "name": "SF Tech Week",
+      "city": "San Francisco",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "mcpdevsummittoronto|toronto": {
+      "name": "MCP Dev Summit Toronto",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "digitalsummitatlanta|atlanta": {
+      "name": "Digital Summit Atlanta",
+      "city": "Atlanta",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "mindtheproductchicago|chicago": {
+      "name": "Mind the Product Chicago",
+      "city": "Chicago",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "scrumdayhouston|houston": {
+      "name": "Scrum Day Houston",
+      "city": "Houston",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "launchwisconsin|milwaukee": {
+      "name": "Launch Wisconsin",
+      "city": "Milwaukee",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "nhtechallianceinnovationsummit|nashua": {
+      "name": "NH Tech Alliance Innovation Summit",
+      "city": "Nashua",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "icscybersecurityconferencenashville|nashville": {
+      "name": "ICS Cybersecurity Conference Nashville",
+      "city": "Nashville",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "prairiecapitalsummit|fargo": {
+      "name": "Prairie Capital Summit",
+      "city": "Fargo",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "elasticonnewyork|newyork": {
+      "name": "ElasticON New York",
+      "city": "New York",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "hacknc|chapelhill": {
+      "name": "HackNC",
+      "city": "Chapel Hill",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "hackknight|flushing": {
+      "name": "Hack Knight",
+      "city": "Flushing",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "knighthacks|orlando": {
+      "name": "Knight Hacks",
+      "city": "Orlando",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "sbuhacks|stonybrook": {
+      "name": "SBUHacks",
+      "city": "Stony Brook",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "codered|houston": {
+      "name": "CodeRED",
+      "city": "Houston",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "dayofdatapittsburgh|pittsburgh": {
+      "name": "Day of Data Pittsburgh",
+      "city": "Pittsburgh",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "dev2next|lonetree": {
+      "name": "dev2next",
+      "city": "Lone Tree",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "latechweek|losangeles": {
+      "name": "LA Tech Week",
+      "city": "Los Angeles",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "pacificnwsoftwarequalityconference|portland": {
+      "name": "Pacific NW Software Quality Conference",
+      "city": "Portland",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "augmentedenterprisesummit|atlanta": {
+      "name": "Augmented Enterprise Summit",
+      "city": "Atlanta",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "forgesummit|northlittlerock": {
+      "name": "Forge Summit",
+      "city": "North Little Rock",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "ventureatlanta|atlanta": {
+      "name": "Venture Atlanta",
+      "city": "Atlanta",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "mongodblocaldallas|irving": {
+      "name": "MongoDB.local Dallas",
+      "city": "Irving",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "deltechconference|memphis": {
+      "name": "DelTech Conference",
+      "city": "Memphis",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "momentumdeveloperconference|cincinnati": {
+      "name": "Momentum Developer Conference",
+      "city": "Cincinnati",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "techfusedesmoines|desmoines": {
+      "name": "Tech Fuse Des Moines",
+      "city": "Des Moines",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "scrumdaymadison|madison": {
+      "name": "Scrum Day Madison",
+      "city": "Madison",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "gdex|newark": {
+      "name": "GDEX",
+      "city": "Newark",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "hackharvard|cambridge": {
+      "name": "HackHarvard",
+      "city": "Cambridge",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "datainthed|detroit": {
+      "name": "Data in the D",
+      "city": "Detroit",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "swamphacks|gainesville": {
+      "name": "SwampHacks",
+      "city": "Gainesville",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "hackthevalley|toronto": {
+      "name": "Hack the Valley",
+      "city": "Toronto",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "lahacksaihackathon|losangeles": {
+      "name": "LA Hacks AI Hackathon",
+      "city": "Los Angeles",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "dayofdataorlando|orlando": {
+      "name": "Day of Data Orlando",
+      "city": "Orlando",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "vcfswapmeet|wall": {
+      "name": "VCF Swap Meet",
+      "city": "Wall",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "airisingconference|columbus": {
+      "name": "AI Rising Conference",
+      "city": "Columbus",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "mainetechweek|portland": {
+      "name": "Maine Tech Week",
+      "city": "Portland",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "sacramentotechweek|sacramento": {
+      "name": "Sacramento Tech Week",
+      "city": "Sacramento",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "oinconnect|sanjose": {
+      "name": "OIN Connect",
+      "city": "San Jose",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "lonestarcybersummit|austin": {
+      "name": "Lone Star Cyber Summit",
+      "city": "Austin",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "ignitesummit|fredericton": {
+      "name": "Ignite Summit",
+      "city": "Fredericton",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "ebrew|portsmouth": {
+      "name": "eBrew",
+      "city": "Portsmouth",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "wisconsinbiohealthsummit|milwaukee": {
+      "name": "Wisconsin Biohealth Summit",
+      "city": "Milwaukee",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "thunderplains|oklahomacity": {
+      "name": "ThunderPlains",
+      "city": "Oklahoma City",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "greatlakessoftwaresymposium|chicago": {
+      "name": "Great Lakes Software Symposium",
+      "city": "Chicago",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "venturedallas|dallas": {
+      "name": "Venture Dallas",
+      "city": "Dallas",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "bsidestc|minneapolis": {
+      "name": "BSides TC",
+      "city": "Minneapolis",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "southwesternontariodrupalcamp|multiplecities": {
+      "name": "Southwestern Ontario Drupal Camp",
+      "city": "Multiple cities",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "seagl|seattle": {
+      "name": "SeaGL",
+      "city": "Seattle",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "hacktx|austin": {
+      "name": "HackTX",
+      "city": "Austin",
+      "status": "blocked",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "403 or JS-only; date rendered only in a hero graphic"
+    },
+    "vermonttechjam|burlington": {
+      "name": "Vermont Tech Jam",
+      "city": "Burlington",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "hackohio|columbus": {
+      "name": "HackOHI/O",
+      "city": "Columbus",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "videogameliveexpovglx|mississauga": {
+      "name": "Video Game Live Expo (VGLX)",
+      "city": "Mississauga",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "aiineducationsummit|mountainview": {
+      "name": "AI in Education Summit",
+      "city": "Mountain View",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "dayofdatastlouis|stlouis": {
+      "name": "Day of Data St. Louis",
+      "city": "St. Louis",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    },
+    "sqlsaturdayminnesota|stpaul": {
+      "name": "SQLSaturday Minnesota",
+      "city": "St. Paul",
+      "status": "confirmed",
+      "checked_on": "2026-08-26",
+      "cycle": "3r2b",
+      "evidence": "verified against organiser page (autumn date sweep)"
+    }
+  },
+  "updated_on": "2026-08-26"
+}
