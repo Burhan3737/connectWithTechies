@@ -156,8 +156,24 @@ fire($('#sort'), 'change');
 await tick();
 const cityHeads = $$('.groupbar').map((h) => h.textContent.trim());
 ok(cityHeads.length > 1, 'city sort groups by city', `${cityHeads.length} groups`);
-ok(cityHeads.join('|') === [...cityHeads].sort((a, b) => a.localeCompare(b)).join('|'),
-  'city groups are alphabetical');
+
+// Compare on (city, region) the way the app sorts. Comparing the joined
+// "City, Region" label instead would wrongly flag Miami before Miami Beach.
+const cityKeyOf = (label) => {
+  const i = label.lastIndexOf(', ');
+  return i < 0 ? [label, ''] : [label.slice(0, i), label.slice(i + 2)];
+};
+let outOfOrder = null;
+for (let i = 1; i < cityHeads.length; i++) {
+  const [ca, ra] = cityKeyOf(cityHeads[i - 1]);
+  const [cb, rb] = cityKeyOf(cityHeads[i]);
+  if ((ca.localeCompare(cb) || ra.localeCompare(rb)) > 0) {
+    outOfOrder = `${cityHeads[i - 1]} before ${cityHeads[i]}`;
+    break;
+  }
+}
+ok(!outOfOrder, 'city groups are in city-then-region order', outOfOrder || '');
+ok(new Set(cityHeads).size === cityHeads.length, 'each city appears as exactly one group');
 
 $('#sort').value = 'date';
 fire($('#sort'), 'change');
