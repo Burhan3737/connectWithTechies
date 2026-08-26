@@ -8,6 +8,14 @@ organiser's own page.
 Every listing links to the organiser, not to a ticket reseller, and no date in the dataset
 was written down without someone fetching the page it came from.
 
+**810 events · 217 cities · 63 states, provinces and territories · 669 US / 141 Canada**
+
+Coverage is complete for every US state and every Canadian province. Two jurisdictions are
+genuinely empty — the **Northwest Territories** and **Nunavut**. That is not an oversight:
+Pinnguaq, the Yellowknife Chamber and Eventbrite listings for both territories were all
+checked, and what is there is national certification training resold into meeting rooms,
+not local community events. Nothing was invented to fill the gap.
+
 ## Run it
 
 Plain HTML/CSS/JS, no build step and no framework. It fetches `data/events.json`, so it has
@@ -115,8 +123,10 @@ yet. Dropping them from *Upcoming* would hide most of the calendar, so:
 
 - **Dates move.** Every listing carries the organiser's own link and that link is the
   source of truth. Confirm there before booking travel.
-- Around 30 URLs return 403 to automated checks — Gartner, RSAC, ODSC, ServiceNow and
-  SecTor among them. They are fine in a browser; they just block bots.
+- **767 of 810 links resolve** to a live page under automated probing. Of the remainder,
+  about 35 return 403 or 429 — Gartner, RSAC, ODSC, ServiceNow and SecTor among them.
+  They are fine in a browser; they just block bots. A handful more are servers that fail
+  intermittently and were confirmed live by hand.
 - Where a chapter network genuinely has no per-city page (some DevOpsDays and Nerd Nite
   chapters), the listing points at the network's main site.
 - Attendance figures are approximate and only present where an organiser published one.
