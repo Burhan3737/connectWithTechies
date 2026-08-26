@@ -46,8 +46,10 @@ data/events.json    the single file the app reads
   country or working link — a listing with a hole in it is worse than no listing
 - **normalises** city names through `scripts/lib/places.mjs`, so "New York City" and
   "New York" do not become two entries in the picker
-- **de-duplicates** on `(name, city)` *and* `(host, city)`, which catches the same event
-  filed under two different titles by two different researchers
+- **de-duplicates** on `(name, city)` *and* `(page, city)`, which catches the same event
+  filed under two different titles by two different researchers. The URL half matches on
+  host **and path** — matching on host alone folded every event a single organisation ran
+  in its home city into one record, and was silently eating 40 real events
 - **recomputes** each event's `upcoming` / `past` / `recurring-tbd` status from today's
   date rather than trusting whatever the researcher wrote
 
@@ -68,9 +70,19 @@ sweep by event *category* rather than geography), then put through four review c
    landing page, events recorded twice under different city names
 2. **Coverage gap filling** — cities with no events, events the first pass dropped for
    want of a verifiable URL
-3. **Date and location accuracy** — the largest events re-verified against their own sites
+3. **Date and location accuracy** — events re-verified against their own sites
 4. **Final link sweep and completeness critique** — what formats and jurisdictions are
    still missing
+
+Cycles 3 and 4 then ran a second round. Round one of the accuracy cycle had only covered
+the 78 largest events by attendance, which left 401 dated upcoming events unverified —
+including the ones happening soonest, where a wrong date costs someone a trip. Round two
+verified 194 of those: **187 were already correct**, and the seven corrections included two
+events dated *that same day*, one of which had the wrong start date and one of which had
+quietly ceased to exist.
+
+Round two of the completeness cycle went after the thinnest jurisdictions and event types,
+and added the TransportationCamp unconference series the first round had missed entirely.
 
 Reviewers never edit `data/raw/` directly. They write patch files to `data/review/`, which
 `scripts/apply-patches.mjs` applies — so cycles can run in parallel without clobbering each
