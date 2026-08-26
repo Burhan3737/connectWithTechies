@@ -7,3 +7,4 @@ dist/
 data/link-report.json
 data/review/MANIFEST.tsv
 data/review/BROKEN-LINKS.tsv
+data/review/HIGH-PROFILE.tsv
