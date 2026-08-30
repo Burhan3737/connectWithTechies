@@ -1,4 +1,4 @@
-# forTechies
+# connectWithTechies
 
 A departures board for tech events across the **United States** and **Canada** — hackathons,
 conferences, tech weeks, CTFs, game jams, unconferences, demo days, awards nights and

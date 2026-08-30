@@ -1,4 +1,4 @@
-/* forTechies — client-side event board.
+/* connectWithTechies — client-side event board.
    No framework, no build step. Reads data/events.json, filters in memory,
    and mirrors the active filters into the URL so a view can be shared. */
 (function () {

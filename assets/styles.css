@@ -1,5 +1,5 @@
 /* ==========================================================================
-   forTechies — "departures board" editorial
+   connectWithTechies — "departures board" editorial
    warm black paper · cream ink · signal orange · ruled rows
    ========================================================================== */
 
@@ -80,12 +80,12 @@ button { font: inherit; color: inherit; }
   margin: clamp(1rem, 3.2vw, 2.1rem) 0 0;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(3.4rem, 15.5vw, 12rem);
+  font-size: clamp(3rem, 13vw, 10rem);
   line-height: .82;
   letter-spacing: -.03em;
   display: flex; flex-wrap: wrap; align-items: baseline;
 }
-.masthead__for {
+.masthead__connect {
   font-style: italic;
   color: var(--signal);
   margin-right: .06em;
