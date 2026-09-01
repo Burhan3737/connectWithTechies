@@ -311,7 +311,7 @@
     "source": "https://dev.events/NA/US/CA/San_Francisco/tech"
   },
   {
-    "name": "MCP Connect San Francisco",
+    "name": "MCP Community Connect",
     "type": "conference",
     "topics": [
       "ai",
@@ -332,9 +332,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "AI engineers, developer tool builders",
-    "url": "https://dev.events/NA/US/CA/San_Francisco/tech",
+    "url": "https://globalai.community/e/bay9vh24",
     "description": "A single-day developer event focused on the Model Context Protocol, agent tooling and integrating LLMs with real systems.",
-    "source": "https://dev.events/NA/US/CA/San_Francisco/tech"
+    "source": "https://globalai.community/e/bay9vh24"
   },
   {
     "name": "Product-Led Summit San Francisco",
@@ -549,22 +549,22 @@
       "mcp",
       "developer-tools"
     ],
-    "city": "San Francisco",
+    "city": "San Jose",
     "region": "California",
     "country": "United States",
     "venue": "",
     "cadence": "annual",
-    "month": "April",
-    "next_date": "2027-04-28",
-    "next_date_end": "2027-04-29",
-    "last_date": "2026-10-22",
+    "month": "October",
+    "next_date": "2026-10-22",
+    "next_date_end": "2026-10-23",
+    "last_date": "",
     "status": "upcoming",
     "attendance": "",
     "cost": "paid",
     "audience": "AI engineers, agent developers",
-    "url": "https://dev.events/NA/US/CA/San_Francisco/tech",
+    "url": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/",
     "description": "A conference series on AI agents and the Model Context Protocol, pairing agent architecture talks with hands-on protocol and tooling sessions.",
-    "source": "https://dev.events/NA/US/CA/San_Francisco/tech"
+    "source": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/"
   },
   {
     "name": "PlatformCon Live Day San Francisco",
@@ -637,9 +637,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "founders, technologists, operators",
-    "url": "https://dev.events/NA/US/CA/San_Francisco/tech",
+    "url": "https://dev.events/conferences/ftw-sf-6m5dion7",
     "description": "A San Francisco technology conference running alongside the autumn AI conference cluster, focused on emerging tech and the future of work.",
-    "source": "https://dev.events/NA/US/CA/San_Francisco/tech"
+    "source": "https://dev.events/conferences/ftw-sf-6m5dion7"
   },
   {
     "name": "SaaStr Annual",

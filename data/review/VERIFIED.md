@@ -4,18 +4,30 @@
 checked against the organiser's own page, so a pass can spend its budget on what is
 still unknown rather than re-confirming what is settled.
 
-Updated 2026-08-26 · dataset holds 880 events.
+Updated 2026-09-01 · dataset holds 883 events.
 
 | status | count | share | meaning |
 |---|---:|---:|---|
-| `confirmed` | 743 | 84.4% | checked against the organiser's page, correct as recorded — **skip these** |
-| `corrected` | 137 | 15.6% | checked, found wrong, patched — **skip these** |
+| `confirmed` | 737 | 83.5% | checked against the organiser's page, correct as recorded — **skip these** |
+| `corrected` | 146 | 16.5% | checked, found wrong, patched — **skip these** |
 | `blocked` | 0 | 0.0% | attempted, page unreadable by fetch — **needs a web search or a human with a browser** |
 | _unchecked_ | 0 | 0.0% | never attempted — **verify these first** |
 
-`data/review/TO-VERIFY.tsv` is the working list: everything unchecked or blocked,
-dated events first and soonest first, because a wrong date on an imminent event is
-the costliest error the dataset can carry.
+## Re-check queue
+
+A verification is a snapshot, not a subscription. `data/review/TO-VERIFY.tsv` is
+regenerated on every run from the rules below, so it refills itself rather than
+sitting empty and reading as "done" when it means "no longer watching".
+
+**13 of 883 events are due for a re-check.**
+
+| reason | count | why it fires |
+|---|---:|---|
+| `rolled` | 13 | the edition ran since it was last checked; next date unknown |
+
+Recurring groups (`weekly`, `monthly`, `rolling`, `quarterly`) are re-checked on a
+180-day clock rather than 90, because for them the useful question is whether the
+group still meets, not what its next date is.
 
 ## How to add to this ledger
 
@@ -33,7 +45,7 @@ Write a JSON array to `data/review/confirm-<yourcycle>.json`:
 Then run `node scripts/ledger.mjs`. Use `corrected` when you also emitted a patch.
 A stronger outcome or a newer date always wins, so re-checks refresh a stale entry.
 
-## Ledger rows with no matching event (33)
+## Ledger rows with no matching event (36)
 
 These were checked, then the event was removed from the dataset by a later patch.
 Kept so the same dead lead is not researched again.
@@ -56,8 +68,10 @@ Kept so the same dead lead is not researched again.
 - **KCD SF Bay Area** — San Francisco (confirmed, 3r2a): verified against organiser page (near-term date sweep)
 - **Day of Data Detroit** — Detroit (confirmed, 3r2a): verified against organiser page (near-term date sweep)
 - **Digital Okanagan** — Kelowna (confirmed, 3r2a): verified against organiser page (near-term date sweep)
+- **Wisconsin Biohealth Summit** — Milwaukee (confirmed, 3r2b): verified against organiser page (autumn date sweep)
 - **Atlantic Technology Summit** — Halifax (corrected, orchestrator): cips.ca names no such event; record removed as unverifiable and mis-linked.
 - **InnovateNB Awards** — Fredericton (corrected, orchestrator): nbif.ca names only Breakthru and the Innovation Voucher Fund; record removed as a phantom.
+- **AGNTCon + MCPCon North America** — San Francisco (confirmed, passB): dev.events San Francisco listing shows 'AGNTCon + MCPCon North America 2027', 'Apr 28-29 27', San Francisco CA
 - **Oracle CloudWorld** — Las Vegas (corrected, passA): oracle.com/cloudworld/ now titled 'Oracle AI World 2026'; JSON-LD startDate 2026-10-25 endDate 2026-10-28, hero 'October 25-28 | Las Vegas'. Record had Sep 15-18 — wrong by six weeks
 - **Abstractions** — Pittsburgh (corrected, passC): abstractions.io still advertises 'August 21-23, 2019 in Pittsburgh' as the upcoming edition; site frozen 7 years with no forward activity - no further edition ever held
 - **Global Game Jam - AAPI in Gaming** — Vancouver (corrected, passC): globalgamejam.org 2026 jam-site page states 'This site is Online/Virtual only' - there is no in-person Vancouver venue behind this listing
@@ -71,6 +85,7 @@ Kept so the same dead lead is not researched again.
 - **THAT Conference Texas** — Round Rock (corrected, unblockB): DEFUNCT. thatconference.com loads (HTTP 200) and the entire homepage is a wind-down notice: 'After 15 incredible years of bringing together thousands of geeks... we're taking a pause to reimagine THAT Conference... While we won't be hosting THAT Conference, this isn't goodbye', linking to /blog/its-time-we-took-a-pause. No Texas edition is scheduled and /tx/2026 returns 404. Removal patch emitted.
 - **THAT Conference Wisconsin** — Wisconsin Dells (corrected, unblockB): DEFUNCT. Same source as the Texas record - thatconference.com's homepage is now only the pause notice ('While we won't be hosting THAT Conference, this isn't goodbye'), with no Wisconsin edition scheduled and /wi/2026 returning 404. Removal patch emitted.
 - **NVTC Cyber Summit & Cyber50 Awards** — McLean (corrected, passA): nvtc.org/events/ lists 'NVTC Cyber Summit & Cyber50 Awards, Oct 28, 2026 | McLean, VA'. Date correct; city was wrong (Reston -> McLean)
+- **AGNTCon + MCPCon North America** — San Jose (corrected, staleness): LF Events: 2026 edition Oct 22-23 San Jose, 2027 edition Apr 28-29 San Francisco. Record had the 2027 date as next, the 2026 date as last, and the wrong city.
 
 ## blocked (0)
 
@@ -78,7 +93,7 @@ Attempted and unreadable by fetch. These are where a web search actually earns i
 
 _none_
 
-## corrected (137)
+## corrected (146)
 
 Checked and patched.
 
@@ -90,8 +105,9 @@ Checked and patched.
 | Arkansas Digital Government Summit | Little Rock | 2026-10-13 | 2026-08-26 | passC | events.govtech.com page announces Tuesday October 13 2026 at Little Rock Marriott - date now published, registration open |
 | Arkansas IT Symposium | Little Rock | — | 2026-08-26 | search-unblock | May 6 2026, Statehouse Convention Center Little Rock - matches stored last_date. URL moved off the Cloudflare-walled 10times listing. |
 | Atlantic Venture Forum | Halifax | — | 2026-08-26 | search-unblock | June 17-18 2026, Halifax Convention Centre - matches stored last_date. URL moved to atlanticventureforum.ca, already advertising AVF2027. |
-| BayPIGgies (Bay Area Python Interest Group) | San Jose | 2026-08-27 | 2026-08-26 | passA | meetup.com/baypiggies shows next meeting Thu, Aug 27 6:30 PM PDT at West Valley Branch Library, 1243 San Tomas Aquino Rd, San Jose, CA. Date correct, city was wrong (Mountain View -> San Jose) |
+| BayPIGgies (Bay Area Python Interest Group) | San Jose | — | 2026-08-26 | passA | meetup.com/baypiggies shows next meeting Thu, Aug 27 6:30 PM PDT at West Valley Branch Library, 1243 San Tomas Aquino Rd, San Jose, CA. Date correct, city was wrong (Mountain View -> San Jose) |
 | Berkeley SkyDeck Demo Day | Berkeley | — | 2026-08-26 | r2-redirects | skydeck.berkeley.edu/demo-day/ redirects to demo-day-fall-2020, an article dated 04 February 2020 |
+| BeyondConf | Detroit | 2026-09-10 | 2026-09-01 | staleness | dev.events conference page JSON-LD: single day 2026-09-10. Moved off the shared Michigan listing. |
 | Big Data & Analytics Summit Canada | Toronto | 2027-06-08 | 2026-08-26 | passC | bigdatasummitcanada.com announces 12th Annual summit June 8-9 2027 in Toronto - date now published |
 | Black Hat USA | Las Vegas | 2027-07-31 | 2026-08-26 | cycle3-accuracy | blackhat.com/us-27 (read through a text-extraction proxy; blackhat.com 403s bots) publishes Black Hat USA 2027 as 'July 31-August 5, 2027'. The blackhat.com event list carries the  |
 | Boston TechJam | Boston | — | 2026-08-26 | search-unblock | MassTLC Boston TechJam ran June 13 2026 at City Hall Plaza. Record had no date. |
@@ -117,18 +133,22 @@ Checked and patched.
 | CISO Fireside | Sundance | 2026-11-05 | 2026-08-26 | passA | Organiser site cisofireside.org: 'One track, one room, Thursday, November 5, 2026' at 'Sundance Resort, Utah' - date and city correct, but the stored url was a dev.events regional listing; replaced with the organiser's |
 | Columbus Startup Week | Columbus | — | 2026-08-26 | cycle4-links | sprkwrks.com redirects to sparkworksinnovation.com (org homepage, not the event). SparkWorks Innovation runs the event; its current event page verified by WebFetch as 'Columbus Sta |
 | Cybersecurity Summit Chicago | Chicago | 2026-09-15 | 2026-08-26 | passC | cybersecuritysummit.com upcoming-summits list shows 'Sep 15 Chicago' under September 15, 2026 - date now published |
+| Data in the D | Detroit | 2026-10-16 | 2026-09-01 | staleness | datainthed.org: October 16-17 2026, Detroit, two-day data conference. |
 | Data Streaming Summit | San Francisco | 2026-10-07 | 2026-08-26 | cycle1-links | datastreamingsummit.io has no DNS record and no archive history; the real official site is datastreaming-summit.org. 2026 edition Oct 7-8 at Hotel Nikko SF; the 2025 edition was Se |
 | Day of Data Detroit | Ann Arbor | 2026-09-12 | 2026-08-26 | cycle3r2-a | sqlsaturday.com/2026-09-12-sqlsaturday1164/ redirects to dayofdata.org/2026-09-12-dayofdata1164/, which gives the venue as Ann Arbor District Library - Downtown, 343 South Fifth Av |
+| Day of Data St Louis | St. Louis | 2026-10-24 | 2026-09-01 | staleness | dayofdata.org: October 24 2026, Microsoft Innovation Hub, free. |
 | DEF CON | Las Vegas | 2027-08-05 | 2026-08-26 | cycle3-accuracy | defcon.org states DEF CON 34 concluded Aug 6-9 2026 at LVCC West Hall and that DEF CON 35 is scheduled for August 5-8, 2027 in Las Vegas at LVCC West Hall. Dataset had next_date em |
+| DevOps Midwest | St. Louis | 2026-09-16 | 2026-09-01 | staleness | sketchdev.io/devopsmidwest: September 16 2026, Webster University St. Louis. |
 | DevOpsDays Boston | Boston | 2026-10-19 | 2026-08-26 | cycle1-links | Confirmed on devopsdays.org/events/2026-boston/welcome/: Oct 19-20 2026 at the Microsoft NERD Center in Cambridge MA. Merged the last_date carried by the removed Cambridge duplicat |
 | Diamondhacks | La Jolla | 2027-04-03 | 2026-08-26 | passB | diamondhacks.acmucsd.com: 'April 3-4, 2027 Hosted by ACM at UC San Diego' (CSE Buildings and Jacobs Hall). The record had 2027-04-04..04-05, so both dates are patched one day earlier |
 | Digital Offshore Conference | St. John's | 2027-04-27 | 2026-08-26 | passC | digitaloffshore.ca/overview announces DO27 for April 27-28 2027 in St. John's (DO26 March 10-11 2026 closed) - date now published |
 | Digital Okanagan | Vernon | 2026-09-24 | 2026-08-26 | cycle3r2-a | meetup.com/digitalokanagan/ shows the 2026-09-24 'Geek Beers hangout at the Kal' at The Kal, 3004 30th Ave, Vernon, BC (as is the preceding 2026-08-27 meetup). Date confirmed; venu |
-| DrupalCamp Colorado | Denver | 2026-08-26 | 2026-08-26 | cycle1-links | drupalcampcolorado.org is unreachable; drupal.org's event listing gives the camp's official site as drupal-colorado.org, confirming Aug 27-28 2026 at the Lowry Conference Center, D |
+| DrupalCamp Colorado | Denver | — | 2026-08-26 | cycle1-links | drupalcampcolorado.org is unreachable; drupal.org's event listing gives the camp's official site as drupal-colorado.org, confirming Aug 27-28 2026 at the Lowry Conference Center, D |
 | DVCon U.S. | Santa Clara | 2027-03-01 | 2026-08-26 | passB | dvcon.org: 'March 1 - 4, 2027 / Santa Clara, CA, United States' at the Hyatt Regency Santa Clara. Dates match; the city was recorded as San Jose and is patched to Santa Clara |
 | EWF Annual Conference | Aurora | 2026-11-04 | 2026-08-26 | cycle4-links | ewf-usa.com redirects to ewfglobal.com. WebFetch confirms the Executive Women's Forum rebranded its domain to ewfglobal.com and still runs the EWF Annual Conference (~700 attendees |
 | FIRST Championship | Houston | — | 2026-08-26 | cycle3-accuracy | firstinspires.org/programs/first-championship gives the most recent FIRST Championship as April 29 - May 2, 2026 in Houston, Texas; no later edition is published yet. Dataset corre |
 | Florida Technology & Innovation Solution Summit | Tampa | 2027-08-25 | 2026-08-26 | cycle1-links | The /fltechinnovationsummit26/ vanity path 404s. Florida Chamber's event index now lists the 2027 summit page: Aug 25 2027 at the Grand Hyatt Tampa Bay. |
+| FTW:SF | San Francisco | 2026-09-29 | 2026-09-01 | staleness | dev.events conference page JSON-LD: 2026-09-29 to 2026-10-01. Moved off the shared city listing. |
 | Fully Connected | San Francisco | 2026-09-29 | 2026-08-26 | cycle1-links | wandb.ai/site/fully-connected/ 404s; fullyconnected.com and the W&B events page both now redirect to CoreWeave. Confirmed Sept 29 - Oct 1 2026 at Moscone South, San Francisco. |
 | GameCon Canada | Edmonton | 2027-06-25 | 2026-08-26 | passC | gameconcanada.com headlines 'JUNE 25th - 27th 2027' for the Edmonton expo - date now published |
 | GeekWire Seattle AI Summit | Seattle | 2026-10-27 | 2026-08-26 | unblockB | geekwire.com/calendar-event/seattleaiweek-ai-summit-2026/ loads (HTTP 200), title '#SeattleAIWeek AI Summit 2026'. JSON-LD startDate 2026-10-27T09:00-07:00 / endDate 2026-10-27T18:00-07:00, venue 'Conference Center, 2211 Alaskan Way, Seattle, WA 98121'. That is a future date not currently stored. Patch emitted. |
@@ -137,6 +157,7 @@ Checked and patched.
 | HackUSU | Logan | 2027-02-19 | 2026-08-26 | passC | huntsman.usu.edu/hackusu announces February 19-20 2027 at 3500 Old Main Hill, Logan UT, registration open - date now published |
 | Hawaii International Conference on System Sciences | Waikoloa | 2027-01-05 | 2026-08-26 | passC | hicss.hawaii.edu announces HICSS January 5-8 2027 at the Hilton Waikoloa Village on the Big Island - date now published and venue is Waikoloa, not Honolulu |
 | Hoya Hacks | Washington | — | 2026-08-26 | cycle4-links | hoyahacks.com redirects to hoyahacks.georgetown.domains, verified live: HoyaHacks 2027, Georgetown University, Washington DC, January 22-24 2027, registration open. |
+| Humanoid Robots Summit North America | Chicago | 2026-11-03 | 2026-09-01 | staleness | November 3-4 2026, Chicago debut. Moved off the shared dev.events city listing. |
 | Idaho Digital Government Summit | Boise | 2026-09-01 | 2026-08-26 | passC | events.govtech.com Idaho summit page announces Tuesday September 1 2026 at Boise Centre, 850 W Front St, registration open - date now published |
 | Innovation Expo Sioux Falls | Sioux Falls | 2026-09-17 | 2026-08-26 | r2-siouxfalls | Flagged as suspicious because startupsiouxfalls.com/events/ showed nothing on 2026-09-17. The calendar is simply windowed to the current month |
 | Innovation Week Saskatchewan | Saskatoon | — | 2026-08-26 | unblockB | innovationsask.ca loads (HTTP 200) but neither the homepage nor /events/ mentions Innovation Week anywhere - the stored link never names the event. The organiser does run it and has a dedicated page: innovationsask.ca/events/innovation-week/ ('Innovation Week in Saskatchewan - Innovation Saskatchewan', 'May 11-15, 2026', province-wide with sessions in Saskatoon and Regina). That edition is past, so only the URL is patched. |
@@ -154,9 +175,11 @@ Checked and patched.
 | Maker Faire Orlando | Orlando | 2026-11-07 | 2026-08-26 | cycle1-links | Own site makerfaireorlando.com verified: Nov 7-8 2026 at the Central Florida Fairgrounds & Expo Halls. |
 | Maker Faire Rochester | Rochester | 2026-11-21 | 2026-08-26 | cycle1-links | Own site rochester.makerfaire.com verified: Nov 21 2026 at the RIT Gordon Field House. |
 | Maker Faire Waterloo | Waterloo | 2026-09-13 | 2026-08-26 | cycle1-links | Own site waterloomakerfaire.org verified: Sept 13 2026 at Waterloo Public Square, Uptown Waterloo. |
+| MCP Community Connect | San Francisco | 2026-09-14 | 2026-09-01 | staleness | Global AI Community + Microsoft Community Hub: MCP Community Connect San Francisco, Monday September 14 2026, full-day MCP conference. Date was already correct; name and URL fixed. |
 | Michigan Technology Conference | Rochester | 2026-10-28 | 2026-08-26 | passA | Organiser site mitechcon.org shows 'October 28-30, 2026 - Workshops Wednesday - Conference Thursday and Friday' at 'Oakland University, Rochester, Michigan' - dates and city correct, but the stored url was a dev.events regional listing; replaced with the organiser's |
 | Microsoft Build | San Francisco | — | 2026-08-26 | cycle1-links | Verified: Build 2026 was moved from Seattle to San Francisco and held June 2-3 2026 at Fort Mason Center, shortened to two days and application-only in person. The dataset's city a |
 | Mile High Dreamin' | Denver | — | 2026-08-26 | cycle3r2-a | Organiser domain milehighdreamin.com 302-redirects to www and now serves only a bare 'LWC Communities' welcome page with no event content; /events, /2026, /about and /index.html al |
+| Milwaukee Tech Hub Code & Coffee | Milwaukee | 2026-09-05 | 2026-09-01 | staleness | mketech.org calendar lists September 5 2026 as upcoming; the date was filed in last_date. |
 | Minneapolis Technology Summit | Minneapolis | 2026-10-22 | 2026-08-26 | cycle4-followups | Verified on eitevents.com/event_pages/minneapolis-technology-summit-2026/ |
 | Mississippi Digital Government Summit | Jackson | 2026-09-09 | 2026-08-26 | passC | events.govtech.com Mississippi summit page announces September 9 2026 at Sheraton Flowood The Refuge (Jackson metro), registration open - date now published |
 | MnTech Connect | St. Paul | 2027-04-01 | 2026-08-26 | unblockB | mntech.org/tech-connect/ loads (HTTP 200) and leads with 'Save the Date for 2027! Thursday, April 1, 2027 8-5pm / Saint Paul RiverCentre'. The 2026 edition (April 9, Saint Paul RiverCentre) is recapped in the past tense. Newly published date 2027-04-01, city St. Paul confirmed by the venue. Patch emitted. |
@@ -216,13 +239,14 @@ Checked and patched.
 | TECHSPO Chicago | Chicago | — | 2026-08-26 | cycle4-final | techspochicago.com is flaky |
 | TennoCon | London | 2027-07-16 | 2026-08-26 | passC | tennocon.com recaps the concluded 2026 event and announces 'July 16-17 2027' with a countdown - date now published |
 | TokioConf | Portland | — | 2026-08-26 | orchestrator | tokioconf.com publishes no 2027 dates - 'towards the end of April', 'sign up when dates are finalized'. Stored dates came from dev.events; cleared. |
+| Umbraco US Festival | Chicago | 2026-09-30 | 2026-09-01 | staleness | umbracofestival.us: September 30 - October 1 2026, 800 Fulton Market Chicago. |
 | VIATEC AI Meetup | Victoria | 2026-09-10 | 2026-08-26 | r2-newly-exposed | members.viatec.ca/tech-events 404s. The live calendar is members.viatec.ca/event-calendar, which confirms the stored 2026-09-10 date: 'VIATEC AI Meetup |
 | Vibe Coding Con | Las Vegas | 2026-10-27 | 2026-08-26 | passA | Organiser site vibecodingcon.ai shows 'October 27-28, 2026' at 'Red Rock Resort, Las Vegas' - dates and city correct, but the stored url was a dev.events regional listing page, not the event; replaced with the organiser's |
 | VSLive! @ Microsoft HQ | Redmond | 2027-08-02 | 2026-08-26 | unblockB | The stored microsofthq-2026 page shows July 27-31, 2026, now past. vslive.com/events/microsofthq-2027/home.aspx exists and loads (HTTP 200), titled 'Microsoft HQ 2027 -- Visual Studio Live!', advertising 'AUG 2-6, 2027' with 'campus experiences waiting for you in Redmond, WA' and the Hyatt Regency Bellevue as conference hotel. URL and newly published dates 2027-08-02 to 2027-08-06 patched. |
 | Yukon Innovation Week | Whitehorse | — | 2026-08-26 | search-unblock | July 6-10 2026 at Yukonstruct. Record's last_date was a year stale and its month was May. |
 | Yukonstruct Maker Academy | Whitehorse | — | 2026-08-26 | search-unblock | A rolling series of Maker Academy bootcamps plus Maker Madness camps and Repair Cafes, not one annual event. Cadence corrected to rolling. |
 
-## confirmed (743)
+## confirmed (737)
 
 Checked and correct as recorded.
 
@@ -240,7 +264,6 @@ Checked and correct as recorded.
 | Advertising Week New York | New York | 2026-10-05 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
 | AFROTECH Conference | Houston | 2026-11-02 | 2026-08-26 | 3r1 | verified against organiser page (top-78 by attendance) |
 | Agile Open Northwest | Portland | — | 2026-08-26 | passC | agileopennorthwest.org live, AONW 2026 was March 6-7 in Portland (already past); no next edition date published yet |
-| AGNTCon + MCPCon North America | San Francisco | 2027-04-28 | 2026-08-26 | passB | dev.events San Francisco listing shows 'AGNTCon + MCPCon North America 2027', 'Apr 28-29 27', San Francisco CA |
 | AgTech Week | Fargo | — | 2026-08-26 | passC | agtechweekfargo.com live, Fargo ND, says only 'Coming June 2027' with no specific days |
 | AI & Big Data Expo North America | San Jose | 2027-06-16 | 2026-08-26 | 3r1 | verified against organiser page (top-78 by attendance) |
 | AI Builder Lab Meetup | Sioux Falls | 2026-09-17 | 2026-08-26 | passA | startupsiouxfalls.com series calendar JSON lists next occurrence 2026-09-17 (then 10-15, 11-19) — matches record |
@@ -338,14 +361,14 @@ Checked and correct as recorded.
 | BSidesCharm | Baltimore | 2027-04-24 | 2026-08-26 | passB | bsidescharm.org: '24-25 April 2027', Sheraton Baltimore North, 903 Dulaney Valley Rd, Towson MD (Baltimore area) |
 | BSidesCT | Fairfield | 2026-09-26 | 2026-08-26 | passA | bsides.org event page shows Date: September 26, Fairfield, CT, USA — matches record |
 | BSidesDFW | Dallas | 2026-11-07 | 2026-08-26 | passA | bsides.org/event/bsidesdfw-5/ shows Date: November 7 — matches record |
-| BSidesGreenville | Greenville | 2026-08-29 | 2026-08-26 | passA | bsides.org event page shows Date: August 29, Greenville, SC USA — matches record |
+| BSidesGreenville | Greenville | — | 2026-08-26 | passA | bsides.org event page shows Date: August 29, Greenville, SC USA — matches record |
 | BSidesKC | Kansas City | — | 2026-08-26 | passC | bsideskc.org live, Kansas City Kansas Community College, Kansas City KS; main event 4/25/2026 past, no next date |
 | BSidesNEPA | Wilkes Barre | 2026-09-12 | 2026-08-26 | passA | bsides.org event page shows Date: September 12, Wilkes Barre, PA United States — matches record |
 | BSidesSF | San Francisco | — | 2026-08-26 | passC | bsidessf.org live, San Francisco; 'BSidesSF 2026 is happening -- March 21-22' already past, no next date |
 | BSidesSGF | Springfield | 2027-03-30 | 2026-08-26 | passB | bsides.org event page: 'March 30, 2027', Springfield, MO, USA - single day, matches the record |
 | BSidesSTL | St. Louis | — | 2026-08-26 | passC | bsidesstl.org live, Saint Louis MO; organisers state no 2026 conference (blockers) and aim to resume in 2027 - no dates |
 | BSidesStPete | St. Petersburg | 2027-01-29 | 2026-08-26 | passB | bsides.org event page: 'Start: January 29, 2027', 'End: January 30, 2027', St. Petersburg, FL USA |
-| Buffalo Game Space Game Development Meeting | Buffalo | 2026-08-27 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
+| Buffalo Game Space Game Development Meeting | Buffalo | — | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | Build48 | St. John's | 2027-03-20 | 2026-08-26 | passB | genesiscentre.ca/build48: 'March 20 + 21, 2027', venue 'To be announced', St. John's NL. Caveat: a schedule block lower on the same page still shows Saturday March 28 / Sunday March 29 from a prior edition, so worth a re-check nearer the date |
 | Business Value Builder Summit | Huntington | 2026-09-17 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | Cactusforce | Scottsdale | 2027-01-21 | 2026-08-26 | passB | cactusforce.com: 'Thursday, January 21st and Friday, January 22nd, 2027' at SkySong Innovation Center, Scottsdale Arizona |
@@ -364,7 +387,7 @@ Checked and correct as recorded.
 | ChaTech Tech Tuesdays | Chattanooga | — | 2026-08-26 | passC | chatech.org live, Chattanooga tech council, lists 'Tech Tuesdays' under Communities; recent 2026 content, no fixed dates published |
 | Chattanooga Entrepreneur Week | Chattanooga | — | 2026-08-26 | passC | chabusiness.org (Small Business Resource Center, Chattanooga) live and carries a Chattanooga Entrepreneur Week section; no dates published |
 | Chi Hack Night | Chicago | — | 2026-08-26 | passC | chihacknight.org live, Chicago weekly civic-tech event, sessions listed through Aug 2026 |
-| CHM Live | Mountain View | 2026-08-27 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
+| CHM Live | Mountain View | — | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | CHROMA | Tulsa | 2026-09-24 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | Cincy AI Week | Cincinnati | — | 2026-08-26 | passC | joinaiweek.com/cincy live, Cincinnati OH; June 9-11 2026 sold out and past, 'Returning June 2027' with no exact dates |
 | CIPS Ontario Women in Technology Conference | Toronto | 2026-09-18 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
@@ -409,13 +432,11 @@ Checked and correct as recorded.
 | CypherCon | Milwaukee | 2027-03-24 | 2026-08-26 | search-unblock | CypherCon 10: March 24-25 2027, Baird Center Milwaukee. Stored dates exact; venue added. |
 | DakotaCon | Madison | — | 2026-08-26 | passC | dakotacon.org live, DakotaCon 13 in Madison SD (DSU); March 27-28 2026 edition past, no next date |
 | Data + AI Summit | San Francisco | 2027-06-21 | 2026-08-26 | 3r1 | verified against organiser page (top-78 by attendance) |
-| Data in the D | Detroit | 2026-10-16 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
 | Data Science DC | Washington | — | 2026-08-26 | passC | meetup.com/data-science-dc loads, Washington DC group with 17k members; NO upcoming events and latest listed meetup is Aug 2024 - group appears dormant, flagged for a later pass |
 | DataConnect Conference | Columbus | 2026-10-29 | 2026-08-26 | passA | dataconnectconf.com: 'Columbus, Ohio / October 29-30, 2026' — matches record |
 | DataTune | Nashville | — | 2026-08-26 | passC | datatuneconf.com live, Nashville TN; '2026 by the numbers' recap and 'Returning March 2027' with no exact dates |
 | Day of Data Orlando | Orlando | 2026-10-17 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
 | Day of Data Pittsburgh | Pittsburgh | 2026-10-10 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
-| Day of Data St. Louis | St. Louis | 2026-10-24 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
 | Day of Data Toronto | Toronto | 2026-09-26 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
 | Day of Data Winnipeg | Winnipeg | 2026-09-19 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | Dayton Hamvention | Xenia | 2027-05-21 | 2026-08-26 | passB | hamvention.org: 'May 21-23, 2027' at the Greene County Fair and Expo Center, Xenia OH 45385 |
@@ -433,7 +454,6 @@ Checked and correct as recorded.
 | DevFestMN | Minneapolis | — | 2026-08-26 | passC | devfest.mn live, U of Minnesota Health Sciences Education Center, Minneapolis; page still on the Dec 6 2025 edition, no next date |
 | DevLearn Conference & Expo | Las Vegas | 2026-11-04 | 2026-08-26 | 3r1 | verified against organiser page (top-78 by attendance) |
 | Devnexus | Atlanta | 2027-04-05 | 2026-08-26 | passB | devnexus.com: 'April 5-7, 2027', Georgia World Congress Center, Atlanta GA |
-| DevOps Midwest | St. Louis | 2026-09-16 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | DevOpsCon New York | New York | 2026-09-28 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
 | DevOpsDays Chicago | Chicago | — | 2026-08-26 | passC | devopsdays.org/events lists Chicago under 'TBD' pointing at /events/2027-chicago with no date assigned |
 | DevOpsDays Dallas | Dallas | 2026-09-28 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
@@ -608,7 +628,7 @@ Checked and correct as recorded.
 | ITEXPO | Fort Lauderdale | 2027-02-09 | 2026-08-26 | passB | itexpo.com/east: 'February 9-11, 2027 / Fort Lauderdale, Florida', Broward County Convention Center |
 | ITS Northern Lights Conference | Sioux Falls | — | 2026-08-26 | passC | itsmn.starchapter.com page live, Holiday Inn Sioux Falls City Centre, 100 W 8th Street, Sioux Falls SD; May 12-14 2026 edition past (sold out), no next date |
 | JAMHacks | Waterloo | — | 2026-08-26 | passC | jamhacks.ca live, JAMHacks 10 at University of Waterloo; June 12-14 2026 edition past, no next date |
-| Jersey City Entrepreneurs: The Venture Garden | Jersey City | 2026-08-26 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
+| Jersey City Entrepreneurs: The Venture Garden | Jersey City | — | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | John P. Ellbogen $50K Entrepreneurship Competition | Laramie | — | 2026-08-26 | passC | ellbogen50k.org live, University of Wyoming competition (Laramie); 2026 finalists posted and 2026/27 application open, no dates |
 | JSNation US | New York | 2026-11-16 | 2026-08-26 | passA | jsnation.us: 'November 16 (hybrid in New York) and November 19 (remote), 2026', with in-person days Nov 17-18 in NYC - span matches record |
 | JumpStart Expo & Pitch Night | Burlington | — | 2026-08-26 | passC | generatorvt.com/jumpstart-expo live, 40 Sears Ln Burlington VT; Wednesday April 8 2026 edition past, no next date |
@@ -636,7 +656,7 @@ Checked and correct as recorded.
 | Maine Tech Week | Portland | 2026-10-19 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
 | Maker Faire Baton Rouge | Baton Rouge | 2026-10-17 | 2026-08-26 | passA | batonrouge.makerfaire.com: 'Main Library at Goodwood, October 17th, 2026' — matches record |
 | Maker Faire Bay Area | Vallejo | 2026-09-25 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
-| Maker Faire Yukon | Whitehorse | 2026-08-29 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
+| Maker Faire Yukon | Whitehorse | — | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | MakeShift Maker Meetup | Lincoln | — | 2026-08-26 | passC | makeshiftlincoln.org live, makerspace at 1135 N. 22nd St Lincoln NE, weekly Monday Meetups 5:30-7pm; recurring, no fixed dates |
 | MakeUofT | Toronto | 2027-02-13 | 2026-08-26 | passB | makeuoft.ca itself still says 'TBD, 2027' at the Myhal Centre, U of T St. George; the MLH 2027 season listing gives MakeUofT 'FEB 13 - 14', Toronto, Ontario - matches the record |
 | Manitoba Tech Week | Winnipeg | 2027-02-21 | 2026-08-26 | 3r1 | verified against organiser page (top-78 by attendance) |
@@ -795,7 +815,7 @@ Checked and correct as recorded.
 | SANS AI Cybersecurity Summit | Arlington | 2026-11-02 | 2026-08-26 | passA | sans.org training-events list shows 'SANS AI Cybersecurity Summit Fall 2026, Mon, Nov 2 - Tue, Nov 3, 2026, Arlington, VA, US and Virtual' - matches record |
 | SANS NetWars Tournament | Multiple cities | — | 2026-08-26 | passC | sans.org/cyber-ranges live and describes the NetWars tournament suite; schedule sits behind a separate page, no dates or cities published here |
 | SANS Virginia Beach | Virginia Beach | 2026-08-24 | 2026-08-26 | passA | sans.org/cyber-security-training-events/virginia-beach-2026/ shows 'Mon, Aug 24 - Fri, Sep 4, 2026', Virginia Beach, Virginia — matches record |
-| Santa Monica New Tech | Santa Monica | 2026-08-30 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
+| Santa Monica New Tech | Santa Monica | — | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | SAP Connect | Las Vegas | 2026-10-05 | 2026-08-26 | unblockA | www.sap.com is 403 to curl on every path and UA tried (/events.html, /events/sap-connect.html, /about/events/sap-connect.html, events.sap.com; plain, --compressed, --http1.1 and a Firefox UA all 403). Confirmed instead from SAP's own readable properties: community.sap.com search for 'SAP Connect 2026' returns an SAP post stating 'registration is officially live for Success Connect at SAP Connect! The event will take place October 5-7, 2026 in Las Vegas. In its second year...'. news.sap.com corroborates the series and the city - its SAP Connect tag page carries six October 2025 articles describing 'the inaugural SAP Connect event in Las Vegas, Nevada', so 2026 is the second edition. Matches stored 2026-10-05 / 2026-10-07 and city Las Vegas. |
 | SBUHacks | Stony Brook | 2026-10-09 | 2026-08-26 | unblockA | hack.sbcs.io returns 200 (title 'SBUHacks 2026') but carries no date - the page still shows 'This website is currently under construction' copy. Corroborated by MLH: mlh.io/seasons/2027/events event record slug 'sbuhacks-5f', startsAt 2026-10-09, endsAt 2026-10-11, dateRange 'OCT 09 - 11', venue Stony Brook, New York, US, linking out to https://hack.sbcs.io/ (same URL as the record). Matches stored 2026-10-09 / 2026-10-11 and city Stony Brook. Date sourced from MLH, not the organiser. |
 | SC Conference (Supercomputing) | Chicago | 2026-11-15 | 2026-08-26 | passA | sc26.supercomputing.org meta description: 'The International Conference for High Performance Computing, Networking, Storage, and Analysis - 15-20 Nov 2026 - Chicago, IL' - matches record |
@@ -844,7 +864,7 @@ Checked and correct as recorded.
 | Startupfest | Montreal | 2027-07-07 | 2026-08-26 | passB | startupfest.com: 'July 7-9, 2027 / Montreal', venue Grand Quay in the Old Port |
 | STARWEST | Anaheim | 2026-09-20 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | SteelHacks | Pittsburgh | 2026-09-19 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
-| Step San Francisco | San Francisco | 2026-08-26 | 2026-08-26 | 3r1 | verified against organiser page (top-78 by attendance) |
+| Step San Francisco | San Francisco | — | 2026-08-26 | 3r1 | verified against organiser page (top-78 by attendance) |
 | Stir Trek | Columbus | — | 2026-08-26 | passC | stirtrek.com live, AMC Easton 30 Columbus OH; May 1 2026 edition past, no next date |
 | STL TechWeek | St. Louis | — | 2026-08-26 | 3r1 | verified against organiser page (top-78 by attendance) |
 | Stripe Sessions | San Francisco | 2027-04-28 | 2026-08-26 | passB | stripe.com/sessions: 'Join us 28-30 April in San Francisco' for Sessions 2027 |
@@ -853,7 +873,7 @@ Checked and correct as recorded.
 | SXSW | Austin | 2027-03-15 | 2026-08-26 | passB | sxsw.com: 'March 15-21, 2027 / Austin, TX' |
 | SXSW EDU | Austin | 2027-03-13 | 2026-08-26 | passB | sxswedu.com: 'March 13-16, 2027 / Austin, TX' |
 | TAG Chairs' Gala | Atlanta | 2026-11-19 | 2026-08-26 | passB | members.tagonline.org calendar lists TAG Chairs Gala 2026 on Thursday, November 19, 2026, 6:00-11:00 PM; TAG is Atlanta-based |
-| TailscaleUp | San Francisco | 2026-08-26 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
+| TailscaleUp | San Francisco | — | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | Tampa Bay Tech Community Events | Tampa | — | 2026-08-26 | passC | tampa.dev live, Tampa Bay tech events aggregator, actively listing events through early September 2026 |
 | Tampa Bay Wave BlueTech|X Pitch Night | Tampa | 2026-09-17 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | Tech For Good Conference | Chicago | — | 2026-08-26 | passC | techforgoodconference.org live, University of Chicago; Feb 27-28 2026 edition past, no next date |
@@ -861,12 +881,12 @@ Checked and correct as recorded.
 | Tech Homecoming | Ann Arbor | 2026-09-22 | 2026-08-26 | passA | a2tech360.com page (still at the /tech-homecoming-2025/ slug) is headed 'Tech Homecoming 2026' and shows 'September 22, 2026 / 4 p.m. - 7 p.m.', presented by Ann Arbor SPARK — matches record |
 | tech SAVannah Tech Tuesday | Savannah | 2026-09-08 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | Tech Thursday Winnipeg | Winnipeg | — | 2026-08-26 | passC | eventbrite collection live and active for Winnipeg Tech Thursday (events listed through Aug 2026) - recurring, no single next date |
-| Tech Titans Awards Gala | Plano | 2026-08-28 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
+| Tech Titans Awards Gala | Plano | — | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | Tech Week Boston | Boston | — | 2026-08-26 | passC | tech-week.com/calendar/boston live, Boston; May 26-31 2026 edition past, no next date |
 | Tech Week Los Angeles | Los Angeles | 2026-10-12 | 2026-08-26 | passA | tech-week.com/calendar: 'SF October 5-11, LA October 12-18' — matches record |
 | Tech Week New York | New York | — | 2026-08-26 | passC | tech-week.com/calendar loads (Tech Week 2026) but currently lists only SF Oct 5-11 and LA Oct 12-18, no New York edition, and tech-week.com/calendar/new-york 404s - link quality flagged, no date |
 | TechChicago Week | Chicago | 2027-07-19 | 2026-08-26 | passB | gotechchicago.com/week/: 'July 19-25, 2027' in Chicago |
-| TechCon 365 / DataCon / PWRCon Seattle | Seattle | 2026-08-24 | 2026-08-26 | passA | techcon365.com home page: 'Seattle, Washington ... August 24-28, 2026, Seattle Convention Center' — matches record (fetched via curl; WebFetch got 403) |
+| TechCon 365 / DataCon / PWRCon Seattle | Seattle | — | 2026-08-26 | passA | techcon365.com home page: 'Seattle, Washington ... August 24-28, 2026, Seattle Convention Center' — matches record (fetched via curl; WebFetch got 403) |
 | TechCon 365 Dallas | Dallas | 2026-11-02 | 2026-08-26 | passA | techcon365.com home page: 'Dallas, Texas TechCon 365 November 2-6, 2026, Irving Convention Center' — dates match record |
 | TechCon SoCal | San Diego | — | 2026-08-26 | passC | startupsd.org TechCon SoCal 2026 page live, San Diego, May 21-22 2026 marked 'This event has passed'; no next date |
 | TechConnect WV Women in Tech Conference | South Charleston | — | 2026-08-26 | passC | techconnectwv.org/programs live, 1740 Union Carbide Drive, South Charleston WV; lists 'Women and Tech Conference (coming spring 2026)' with no exact date |
@@ -916,7 +936,6 @@ Checked and correct as recorded.
 | UC Berkeley AI Hackathon | Berkeley | — | 2026-08-26 | passC | live.hackberkeley.org live, MLK Student Union, Berkeley CA; June 20-21 2026 edition past, no next date |
 | UGAHacks | Athens | 2027-02-05 | 2026-08-26 | passB | ugahacks.com shows only 'UGAHacks 12 Pre-registration Now Open!' with no dates; the MLH 2027 season listing gives 'FEB 05 - 07', Athens, Georgia - matches the record |
 | UIUCTF | Urbana-Champaign | — | 2026-08-26 | passC | uiuc.tf live, run by SIGPwny at University of Illinois Urbana-Champaign; 2026 quest began 2026-08-08 for 48h (past), no next date |
-| Umbraco US Festival | Chicago | 2026-09-30 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
 | UNBOUND (formerly INBOUND) | Boston | 2026-09-16 | 2026-08-26 | 3r1 | verified against organiser page (top-78 by attendance) |
 | Uniting the Prairies | Saskatoon | 2027-04-28 | 2026-08-26 | passB | unitingtheprairies.com: 'April 28-29, 2027 / Remai Modern, Saskatoon' |
 | University of Idaho Engineering Design EXPO | Moscow | 2027-04-29 | 2026-08-26 | passB | uidaho.edu/engr/expo: 'April 29 and 30, 2027' on the University of Idaho campus, Moscow ID |
@@ -933,7 +952,7 @@ Checked and correct as recorded.
 | Venture Atlanta | Atlanta | 2026-10-14 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
 | Venture Dallas | Dallas | 2026-10-22 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
 | Vermont Tech Jam | Burlington | 2026-10-24 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
-| Veteran Innovation Hackathon | Mountain View | 2026-08-28 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
+| Veteran Innovation Hackathon | Mountain View | — | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | VIATEC Awards | Victoria | — | 2026-08-26 | passC | members.viatec.ca event page live, Victoria BC; the 2026 VIATEC Awards were April 1 2026 (past), no next date |
 | Victoria Tech Week | Victoria | 2026-09-21 | 2026-08-26 | 3r2a | verified against organiser page (near-term date sweep) |
 | Video Game Live Expo (VGLX) | Mississauga | 2026-10-24 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
@@ -955,7 +974,6 @@ Checked and correct as recorded.
 | WiCHacks | Rochester | 2027-02-27 | 2026-08-26 | passB | wichacks.io is a JS shell with no dates; the MLH 2027 season listing shows WiCHacks 'FEB 27 - 28', Rochester, New York - matches the record |
 | WiCyS Conference | National Harbor | — | 2026-08-26 | passC | wicys.org live and current (Virtual 2026, RSAC 2026, Career Fair 2026); WiCyS 2027 referenced with neither city nor dates announced |
 | WildHacks | Evanston | — | 2026-08-26 | passC | wildhacks.net resolves and serves 'WildHacks 2026' with an MLH 2026 season badge (JS-rendered body); no date readable |
-| Wisconsin Biohealth Summit | Milwaukee | 2026-10-21 | 2026-08-26 | 3r2b | verified against organiser page (autumn date sweep) |
 | Women in Tech WNY | Buffalo | — | 2026-08-26 | passC | info.techbuffalo.org/witwny live, Buffalo/Western New York; Thursday March 26 2026 edition past, no next date |
 | WomenHack | Multiple cities | — | 2026-08-26 | passC | womenhack.com live (c 2026), lists recruiting events across San Francisco, New York, Toronto, Edmonton and other cities; event dates shown without years |
 | WordCamp Canada | Vancouver | 2026-11-05 | 2026-08-26 | passA | canada.wordcamp.org/2026/: 'November 5-6, 2026 - Vancouver, BC' — matches record |

@@ -1,0 +1,16 @@
+[
+  { "name": "FTW:SF", "city": "San Francisco", "status": "corrected", "cycle": "staleness",
+    "evidence": "dev.events conference page JSON-LD: 2026-09-29 to 2026-10-01. Moved off the shared city listing." },
+  { "name": "BeyondConf", "city": "Detroit", "status": "corrected", "cycle": "staleness",
+    "evidence": "dev.events conference page JSON-LD: single day 2026-09-10. Moved off the shared Michigan listing." },
+  { "name": "Data in the D", "city": "Detroit", "status": "corrected", "cycle": "staleness",
+    "evidence": "datainthed.org: October 16-17 2026, Detroit, two-day data conference." },
+  { "name": "DevOps Midwest", "city": "St. Louis", "status": "corrected", "cycle": "staleness",
+    "evidence": "sketchdev.io/devopsmidwest: September 16 2026, Webster University St. Louis." },
+  { "name": "Day of Data St. Louis", "city": "St. Louis", "status": "corrected", "cycle": "staleness",
+    "evidence": "dayofdata.org: October 24 2026, Microsoft Innovation Hub, free." },
+  { "name": "Umbraco US Festival", "city": "Chicago", "status": "corrected", "cycle": "staleness",
+    "evidence": "umbracofestival.us: September 30 - October 1 2026, 800 Fulton Market Chicago." },
+  { "name": "Humanoid Robots Summit North America", "city": "Chicago", "status": "corrected", "cycle": "staleness",
+    "evidence": "November 3-4 2026, Chicago debut. Moved off the shared dev.events city listing." }
+]

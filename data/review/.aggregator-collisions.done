@@ -1,0 +1,70 @@
+[
+  {
+    "match": { "name": "FTW:SF", "city": "San Francisco" },
+    "action": "update",
+    "reason": "Was sharing dev.events' generic San Francisco listing with two other events, so the build silently merged them and only one survived. Moved onto its own dev.events conference page, whose JSON-LD gives startDate 2026-09-29 and endDate 2026-10-01 — the record had no end date. No official site exists for this one, so the aggregator page is the honest link.",
+    "set": {
+      "url": "https://dev.events/conferences/ftw-sf-6m5dion7",
+      "next_date": "2026-09-29", "next_date_end": "2026-10-01",
+      "source": "https://dev.events/conferences/ftw-sf-6m5dion7"
+    }
+  },
+  {
+    "match": { "name": "BeyondConf", "city": "Detroit" },
+    "action": "update",
+    "reason": "Was sharing dev.events' generic Michigan listing with Data in the D, so the two were merged into one and this record vanished. Its own dev.events page gives startDate and endDate of 2026-09-10, a single day. No official site found, so the aggregator page stands as the link.",
+    "set": {
+      "url": "https://dev.events/conferences/beyond-conf-2026-zldqdtqr",
+      "next_date": "2026-09-10", "next_date_end": "2026-09-10", "status": "upcoming",
+      "source": "https://dev.events/conferences/beyond-conf-2026-zldqdtqr"
+    }
+  },
+  {
+    "match": { "name": "Data in the D", "city": "Detroit" },
+    "action": "update",
+    "reason": "datainthed.org confirms the 2026 conference as October 16-17 2026 in Detroit, a two-day gathering of data professionals. Moved off the shared dev.events Michigan listing onto the organiser's own site.",
+    "set": {
+      "url": "https://www.datainthed.org/", "next_date": "2026-10-16", "next_date_end": "2026-10-17",
+      "status": "upcoming", "source": "https://www.datainthed.org/about-the-2026-conference"
+    }
+  },
+  {
+    "match": { "name": "DevOps Midwest", "city": "St. Louis" },
+    "action": "update",
+    "reason": "Hosted by Sketch Development Services on September 16 2026 at Webster University, St. Louis — a one-day event with keynote from Atlassian and speakers from Google Cloud and Datadog. Moved off the shared dev.events Missouri listing onto the organiser's page.",
+    "set": {
+      "url": "https://www.sketchdev.io/devopsmidwest", "next_date": "2026-09-16",
+      "next_date_end": "2026-09-16", "status": "upcoming", "venue": "Webster University",
+      "source": "https://www.sketchdev.io/devopsmidwest"
+    }
+  },
+  {
+    "match": { "name": "Day of Data St. Louis", "city": "St. Louis" },
+    "action": "update",
+    "reason": "A free in-person event at the Microsoft Innovation Hub on October 24 2026. Moved off the shared dev.events Missouri listing — which it was being merged into DevOps Midwest by — onto its own dayofdata.org page.",
+    "set": {
+      "url": "https://dayofdata.org/2026-10-24-dayofdata1148/", "next_date": "2026-10-24",
+      "next_date_end": "2026-10-24", "status": "upcoming", "cost": "free",
+      "venue": "Microsoft Innovation Hub", "source": "https://dayofdata.org/2026-10-24-dayofdata1148/"
+    }
+  },
+  {
+    "match": { "name": "Umbraco US Festival", "city": "Chicago" },
+    "action": "update",
+    "reason": "umbracofestival.us gives September 30 - October 1 2026 at 800 Fulton Market, Chicago — the largest US event for the Umbraco open source .NET CMS. Moved off the shared dev.events Chicago listing onto the festival's own site.",
+    "set": {
+      "url": "https://umbracofestival.us/", "next_date": "2026-09-30", "next_date_end": "2026-10-01",
+      "status": "upcoming", "venue": "800 Fulton Market", "source": "https://umbracofestival.us/"
+    }
+  },
+  {
+    "match": { "name": "Humanoid Robots Summit North America", "city": "Chicago" },
+    "action": "update",
+    "reason": "Debuting in Chicago on November 3-4 2026. Moved off the shared dev.events Chicago listing — which it was being merged into Umbraco US Festival by — onto its own dev.events conference page; no independent official site was findable.",
+    "set": {
+      "url": "https://dev.events/conferences/humanoid-robots-summit-north-america-2026-vdlot1u0",
+      "next_date": "2026-11-03", "next_date_end": "2026-11-04", "status": "upcoming",
+      "source": "https://dev.events/conferences/humanoid-robots-summit-north-america-2026-vdlot1u0"
+    }
+  }
+]

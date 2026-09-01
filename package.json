@@ -10,7 +10,9 @@
     "check": "node scripts/check-data.mjs",
     "start": "node scripts/serve.mjs",
     "test": "node scripts/smoke-test.mjs",
-    "check:links": "node scripts/check-links.mjs"
+    "check:links": "node scripts/check-links.mjs",
+    "stale": "node scripts/ledger.mjs --report",
+    "ledger": "node scripts/ledger.mjs"
   },
   "license": "MIT",
   "devDependencies": {

@@ -1,0 +1,23 @@
+[
+  {
+    "match": { "name": "Milwaukee Tech Hub Code & Coffee", "city": "Milwaukee" },
+    "action": "update",
+    "reason": "last_date held 2026-09-05, a future date, which is impossible for a held edition. mketech.org's calendar lists September 5 2026 among its upcoming dates, so it is the next occurrence and was simply filed in the wrong field.",
+    "set": {
+      "next_date": "2026-09-05", "next_date_end": "2026-09-05", "last_date": "",
+      "status": "upcoming", "source": "https://www.mketech.org/events/"
+    }
+  },
+  {
+    "match": { "name": "AGNTCon + MCPCon North America", "city": "San Francisco" },
+    "action": "update",
+    "reason": "Three errors, surfaced by last_date holding the future date 2026-10-22. The Linux Foundation and the Agentic AI Foundation both give the 2026 edition as October 22-23 2026 in San Jose and the 2027 edition as April 28-29 2027 in San Francisco. So 2026-10-22 was the next edition mis-filed as a held one, the record was pointing at the 2027 date as if it were next, and the city belonged to the wrong edition. Set to the edition actually coming up, and moved off the dev.events aggregator onto the organiser's own page.",
+    "set": {
+      "city": "San Jose", "region": "California",
+      "next_date": "2026-10-22", "next_date_end": "2026-10-23", "last_date": "",
+      "status": "upcoming", "month": "October",
+      "url": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/",
+      "source": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/"
+    }
+  }
+]

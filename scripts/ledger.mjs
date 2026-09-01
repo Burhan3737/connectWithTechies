@@ -129,15 +129,91 @@ if (rekeyed) {
 // Ledger rows whose event is no longer in the dataset (removed by a patch).
 const stale = Object.entries(state.entries).filter(([k]) => !seen.has(k));
 
-/* ---- write the to-do list ----------------------------------------------- */
+/* ---- staleness scoring --------------------------------------------------- */
 
-const todo = buckets.unchecked.map(({ e }) => e).concat(buckets.blocked.map(({ e }) => e));
-todo.sort((a, b) => {
-  // Dated events first, soonest first — a wrong date on an imminent event is
-  // the costliest error in the dataset. Undated ones follow.
-  const da = a.next_date || '9999', db = b.next_date || '9999';
-  return da.localeCompare(db) || a.name.localeCompare(b.name);
+/**
+ * A verification is a snapshot, not a subscription. These rules decide when a
+ * settled record has to be looked at again, so TO-VERIFY.tsv refills itself
+ * instead of sitting empty and reading as "done" when it means "not watching".
+ */
+const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june',
+  'july', 'august', 'september', 'october', 'november', 'december'];
+const OFTEN = new Set(['weekly', 'monthly', 'rolling', 'quarterly']);
+
+const daysBetween = (a, b) => Math.round((Date.parse(b) - Date.parse(a)) / 86400000);
+
+/** Months until the next occurrence of an event's usual month. 99 if unknown. */
+function monthsAway(e) {
+  const m = String(e.month || '').toLowerCase();
+  const i = MONTHS.findIndex((n) => m.includes(n.slice(0, 3)));
+  if (i < 0) return 99;
+  const now = new Date(today).getMonth();
+  return (i - now + 12) % 12;
+}
+
+const REASONS = {
+  never:    { rank: 1, why: 'never checked' },
+  blocked:  { rank: 2, why: 'previous check could not read the page' },
+  rolled:   { rank: 3, why: 'the edition ran since it was last checked; next date unknown' },
+  imminent: { rank: 4, why: 'happens within 30 days and not looked at for 14 — late changes land here' },
+  window:   { rank: 5, why: 'undated, usual month 2-5 months out, not looked at for 45 days' },
+  aged:     { rank: 6, why: 'not looked at in a long time' },
+};
+
+/**
+ * Every time-based reason carries a minimum interval, so a record checked last
+ * week is not queued again this week. Without them the queue reported 192 items
+ * five days after all 880 had been verified — which would have sent a pass to
+ * re-read pages whose ink was still wet.
+ *
+ * `rolled` is the exception and has no interval: it is event-driven rather than
+ * clock-driven. The edition genuinely happened since we looked, so there is new
+ * information to go and get no matter how recently we checked.
+ */
+function stalenessOf(e, hit) {
+  if (!hit) return 'never';
+  if (hit.status === 'blocked') return 'blocked';
+
+  const age = hit.checked_on ? daysBetween(hit.checked_on, today) : 9999;
+
+  // An edition ran since we last looked and no future date is known, so the
+  // next one has to be found. If a future date is already on the record there
+  // is nothing to go and get, however recently the last edition happened.
+  const knowsNext = e.next_date && e.next_date >= today;
+  if (!knowsNext && e.last_date && hit.checked_on && e.last_date >= hit.checked_on) return 'rolled';
+
+  if (age >= 14 && e.next_date && e.next_date >= today &&
+      daysBetween(today, e.next_date) <= 30) return 'imminent';
+
+  if (age >= 45 && !e.next_date) {
+    const away = monthsAway(e);
+    if (away >= 2 && away <= 5) return 'window';
+  }
+
+  // Recurring groups need a liveness check, not a date check — ask far less often.
+  if (age > (OFTEN.has(e.cadence) ? 180 : 90)) return 'aged';
+  return null;
+}
+
+const queue = [];
+for (const e of events) {
+  const hit = state.entries[key(e.name, e.city)];
+  const reason = stalenessOf(e, hit);
+  if (reason) queue.push({ e, hit, reason });
+}
+
+queue.sort((a, b) => {
+  const r = REASONS[a.reason].rank - REASONS[b.reason].rank;
+  if (r !== 0) return r;
+  const da = a.e.next_date || '9999', db = b.e.next_date || '9999';
+  return da.localeCompare(db) || a.e.name.localeCompare(b.e.name);
 });
+
+const byReason = {};
+for (const q of queue) byReason[q.reason] = (byReason[q.reason] || 0) + 1;
+
+const todo = queue.map((q) => q.e);
+const reasonOf = new Map(queue.map((q) => [q.e, q.reason]));
 
 const statusOf = (e) => {
   const h = state.entries[key(e.name, e.city)];
@@ -145,9 +221,13 @@ const statusOf = (e) => {
 };
 
 writeFileSync(TODO,
-  'status\tname\tcity\tregion\ttype\tnext_date\tnext_end\turl\n' +
-  todo.map((e) => [statusOf(e), e.name, e.city, e.region, e.type,
-    e.next_date || '-', e.next_date_end || '-', e.url].join('\t')).join('\n') + '\n',
+  'reason\tstatus\tname\tcity\tregion\ttype\tcadence\tnext_date\tnext_end\tlast_date\tchecked_on\turl\n' +
+  todo.map((e) => {
+    const h = state.entries[key(e.name, e.city)];
+    return [reasonOf.get(e), statusOf(e), e.name, e.city, e.region, e.type, e.cadence,
+      e.next_date || '-', e.next_date_end || '-', e.last_date || '-',
+      (h && h.checked_on) || '-', e.url].join('\t');
+  }).join('\n') + '\n',
   'utf8');
 
 /* ---- render the human-readable ledger ----------------------------------- */
@@ -172,9 +252,27 @@ md.push(`| \`corrected\` | ${buckets.corrected.length} | ${pct(buckets.corrected
 md.push(`| \`blocked\` | ${buckets.blocked.length} | ${pct(buckets.blocked.length)}% | attempted, page unreadable by fetch — **needs a web search or a human with a browser** |`);
 md.push(`| _unchecked_ | ${buckets.unchecked.length} | ${pct(buckets.unchecked.length)}% | never attempted — **verify these first** |`);
 md.push('');
-md.push('`data/review/TO-VERIFY.tsv` is the working list: everything unchecked or blocked,');
-md.push('dated events first and soonest first, because a wrong date on an imminent event is');
-md.push('the costliest error the dataset can carry.');
+md.push('## Re-check queue');
+md.push('');
+md.push('A verification is a snapshot, not a subscription. `data/review/TO-VERIFY.tsv` is');
+md.push('regenerated on every run from the rules below, so it refills itself rather than');
+md.push('sitting empty and reading as "done" when it means "no longer watching".');
+md.push('');
+if (!queue.length) {
+  md.push('**Queue is empty** — nothing is due for a re-check right now.');
+} else {
+  md.push(`**${queue.length} of ${events.length} events are due for a re-check.**`);
+  md.push('');
+  md.push('| reason | count | why it fires |');
+  md.push('|---|---:|---|');
+  for (const [r, meta] of Object.entries(REASONS)) {
+    if (byReason[r]) md.push(`| \`${r}\` | ${byReason[r]} | ${meta.why} |`);
+  }
+}
+md.push('');
+md.push('Recurring groups (`weekly`, `monthly`, `rolling`, `quarterly`) are re-checked on a');
+md.push('180-day clock rather than 90, because for them the useful question is whether the');
+md.push('group still meets, not what its next date is.');
 md.push('');
 md.push('## How to add to this ledger');
 md.push('');
@@ -223,5 +321,13 @@ writeFileSync(MD, md.join('\n'), 'utf8');
 
 if (!reportOnly) console.log(`Merged ${files} confirmation file(s): ${merged} new, ${upgraded} updated.`);
 console.log(`confirmed ${buckets.confirmed.length} · corrected ${buckets.corrected.length} · blocked ${buckets.blocked.length} · unchecked ${buckets.unchecked.length}`);
-console.log(`TO-VERIFY.tsv holds ${todo.length} events (unchecked + blocked).`);
+if (queue.length) {
+  console.log(`
+Re-check queue: ${queue.length} of ${events.length} events`);
+  for (const [r, meta] of Object.entries(REASONS)) {
+    if (byReason[r]) console.log(`  ${String(byReason[r]).padStart(4)}  ${r.padEnd(9)} ${meta.why}`);
+  }
+} else {
+  console.log('Re-check queue: empty — nothing is due.');
+}
 console.log(`Wrote ${MD} and ${TODO}`);

@@ -24,6 +24,7 @@ const today = process.env.TODAY || new Date().toISOString().slice(0, 10);
 
 const problems = [];
 const dropped = [];
+const rolledOver = [];
 const warn = (file, name, msg) => problems.push(`${file} :: ${name || '(unnamed)'} :: ${msg}`);
 
 class Fatal extends Error {}
@@ -76,11 +77,55 @@ function normalise(raw, file) {
     e.next_date_end = '';
   }
 
+  // last_date means an edition that has been held, so it cannot be in the
+  // future. When it merely duplicates next_date it carries nothing and is
+  // dropped; otherwise it is a real mistake and only reported, because the
+  // right correction (is it a mis-filed next date? a typo'd year?) is a
+  // judgement the build should not make.
+  if (e.last_date && e.last_date > today) {
+    if (e.last_date === e.next_date) {
+      warn(file, e.name, `last_date duplicated next_date (${e.last_date}) — dropped`);
+      e.last_date = '';
+    } else {
+      warn(file, e.name, `last_date ${e.last_date} is in the future; a held edition cannot be`);
+    }
+  }
+
   // Recompute status from dates; the researchers' value is only a fallback.
   const endOfNext = e.next_date_end || e.next_date;
-  if (endOfNext && endOfNext >= today) e.status = 'upcoming';
-  else if (endOfNext && endOfNext < today) e.status = 'past';
-  else if (e.status !== 'discontinued') e.status = e.last_date ? 'recurring-tbd' : 'recurring-tbd';
+
+  if (endOfNext && endOfNext >= today) {
+    e.status = 'upcoming';
+  } else if (endOfNext && endOfNext < today) {
+    /**
+     * The edition has been held. Roll it over rather than parking the record
+     * on `past`.
+     *
+     * Without this an annual event drops out of Upcoming the day after it runs
+     * and never comes back, because nothing goes looking for next year's date —
+     * and Past keeps showing the *previous* edition, since the fresher date is
+     * still sitting unread in next_date. A weekly meetup vanishes entirely for
+     * having met once. Both were observed live: five days after a build,
+     * thirteen events had broken this way, five of them weekly or monthly
+     * groups that meet again within days.
+     *
+     * Rolling over loses nothing — the held date is preserved in last_date —
+     * and it puts the record back in front of people as "usually <month>,
+     * date not yet announced", which is true.
+     */
+    const finished = e.status === 'discontinued' || e.cadence === 'one-off';
+    if (finished) {
+      e.status = 'past';
+    } else {
+      if (!e.last_date || e.next_date > e.last_date) e.last_date = e.next_date;
+      e.next_date = '';
+      e.next_date_end = '';
+      e.status = 'recurring-tbd';
+      rolledOver.push(`${e.name} (${e.city}) — held ${e.last_date}, next edition unannounced`);
+    }
+  } else if (e.status !== 'discontinued') {
+    e.status = 'recurring-tbd';
+  }
 
   e.sort_date = e.next_date || e.last_date || '';
   e.id = `${slug(e.name)}-${slug(e.city)}`.replace(/\s+/g, '-');
@@ -179,6 +224,13 @@ console.log(`Output:     ${events.length} events across ${cities.length} cities`
 console.log(`Upcoming:   ${events.filter((e) => e.status === 'upcoming').length}`);
 console.log(`Past:       ${events.filter((e) => e.status === 'past').length}`);
 console.log(`Recurring:  ${events.filter((e) => e.status === 'recurring-tbd').length}`);
+
+if (rolledOver.length) {
+  console.log(`
+Rolled over ${rolledOver.length} held edition(s) — these need their next date found:`);
+  for (const r of rolledOver.slice(0, 30)) console.log(`  > ${r}`);
+  if (rolledOver.length > 30) console.log(`  ... and ${rolledOver.length - 30} more`);
+}
 
 if (dropped.length) {
   console.log(`\n${dropped.length} record(s) dropped as unusable:`);

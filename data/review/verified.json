@@ -1923,10 +1923,10 @@
     "devopsmidwest|stlouis": {
       "name": "DevOps Midwest",
       "city": "St. Louis",
-      "status": "confirmed",
-      "checked_on": "2026-08-26",
-      "cycle": "3r2a",
-      "evidence": "verified against organiser page (near-term date sweep)"
+      "status": "corrected",
+      "checked_on": "2026-09-01",
+      "cycle": "staleness",
+      "evidence": "sketchdev.io/devopsmidwest: September 16 2026, Webster University St. Louis."
     },
     "businessvaluebuildersummit|huntington": {
       "name": "Business Value Builder Summit",
@@ -2411,10 +2411,10 @@
     "umbracousfestival|chicago": {
       "name": "Umbraco US Festival",
       "city": "Chicago",
-      "status": "confirmed",
-      "checked_on": "2026-08-26",
-      "cycle": "3r2b",
-      "evidence": "verified against organiser page (autumn date sweep)"
+      "status": "corrected",
+      "checked_on": "2026-09-01",
+      "cycle": "staleness",
+      "evidence": "umbracofestival.us: September 30 - October 1 2026, 800 Fulton Market Chicago."
     },
     "mongodblocalnyc|newyork": {
       "name": "MongoDB.local NYC",
@@ -2819,10 +2819,10 @@
     "datainthed|detroit": {
       "name": "Data in the D",
       "city": "Detroit",
-      "status": "confirmed",
-      "checked_on": "2026-08-26",
-      "cycle": "3r2b",
-      "evidence": "verified against organiser page (autumn date sweep)"
+      "status": "corrected",
+      "checked_on": "2026-09-01",
+      "cycle": "staleness",
+      "evidence": "datainthed.org: October 16-17 2026, Detroit, two-day data conference."
     },
     "swamphacks|gainesville": {
       "name": "SwampHacks",
@@ -3019,10 +3019,10 @@
     "dayofdatastlouis|stlouis": {
       "name": "Day of Data St. Louis",
       "city": "St. Louis",
-      "status": "confirmed",
-      "checked_on": "2026-08-26",
-      "cycle": "3r2b",
-      "evidence": "verified against organiser page (autumn date sweep)"
+      "status": "corrected",
+      "checked_on": "2026-09-01",
+      "cycle": "staleness",
+      "evidence": "dayofdata.org: October 24 2026, Microsoft Innovation Hub, free."
     },
     "sqlsaturdayminnesota|stpaul": {
       "name": "SQLSaturday Minnesota",
@@ -7303,7 +7303,55 @@
       "checked_on": "2026-08-26",
       "cycle": "orchestrator",
       "evidence": "nvtc.org JSON-LD: Tech100 Celebration, 2026-12-15 18:00-20:00, Hilton McLean Tysons Corner, McLean VA. Date correct, city was Reston."
+    },
+    "milwaukeetechhubcodecoffee|milwaukee": {
+      "name": "Milwaukee Tech Hub Code & Coffee",
+      "city": "Milwaukee",
+      "status": "corrected",
+      "checked_on": "2026-09-01",
+      "cycle": "staleness",
+      "evidence": "mketech.org calendar lists September 5 2026 as upcoming; the date was filed in last_date."
+    },
+    "agntconmcpconnorthamerica|sanjose": {
+      "name": "AGNTCon + MCPCon North America",
+      "city": "San Jose",
+      "status": "corrected",
+      "checked_on": "2026-09-01",
+      "cycle": "staleness",
+      "evidence": "LF Events: 2026 edition Oct 22-23 San Jose, 2027 edition Apr 28-29 San Francisco. Record had the 2027 date as next, the 2026 date as last, and the wrong city."
+    },
+    "mcpcommunityconnect|sanfrancisco": {
+      "name": "MCP Community Connect",
+      "city": "San Francisco",
+      "status": "corrected",
+      "checked_on": "2026-09-01",
+      "cycle": "staleness",
+      "evidence": "Global AI Community + Microsoft Community Hub: MCP Community Connect San Francisco, Monday September 14 2026, full-day MCP conference. Date was already correct; name and URL fixed."
+    },
+    "ftwsf|sanfrancisco": {
+      "name": "FTW:SF",
+      "city": "San Francisco",
+      "status": "corrected",
+      "checked_on": "2026-09-01",
+      "cycle": "staleness",
+      "evidence": "dev.events conference page JSON-LD: 2026-09-29 to 2026-10-01. Moved off the shared city listing."
+    },
+    "beyondconf|detroit": {
+      "name": "BeyondConf",
+      "city": "Detroit",
+      "status": "corrected",
+      "checked_on": "2026-09-01",
+      "cycle": "staleness",
+      "evidence": "dev.events conference page JSON-LD: single day 2026-09-10. Moved off the shared Michigan listing."
+    },
+    "humanoidrobotssummitnorthamerica|chicago": {
+      "name": "Humanoid Robots Summit North America",
+      "city": "Chicago",
+      "status": "corrected",
+      "checked_on": "2026-09-01",
+      "cycle": "staleness",
+      "evidence": "November 3-4 2026, Chicago debut. Moved off the shared dev.events city listing."
     }
   },
-  "updated_on": "2026-08-26"
+  "updated_on": "2026-09-01"
 }

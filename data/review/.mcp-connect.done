@@ -1,0 +1,12 @@
+[
+  {
+    "match": { "name": "MCP Connect San Francisco", "city": "San Francisco" },
+    "action": "update",
+    "reason": "Surfaced when AGNTCon moved to San Jose and stopped swallowing this record via the shared dev.events URL. Verified as MCP Community Connect, a full-day Model Context Protocol conference in San Francisco on Monday September 14 2026. The stored date was already right; the name was a paraphrase and the link was the aggregator both records had been sharing.",
+    "set": {
+      "name": "MCP Community Connect",
+      "url": "https://globalai.community/e/bay9vh24",
+      "source": "https://globalai.community/e/bay9vh24"
+    }
+  }
+]

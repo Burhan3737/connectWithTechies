@@ -2859,10 +2859,10 @@
     "venue": "Various Milwaukee venues",
     "cadence": "monthly",
     "month": "Varies",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "2026-09-05",
-    "status": "recurring-tbd",
+    "next_date": "2026-09-05",
+    "next_date_end": "2026-09-05",
+    "last_date": "",
+    "status": "upcoming",
     "attendance": "",
     "cost": "free",
     "audience": "developers, technologists, job seekers",
@@ -2956,19 +2956,19 @@
     "city": "St. Louis",
     "region": "Missouri",
     "country": "United States",
-    "venue": "",
+    "venue": "Webster University",
     "cadence": "annual",
     "month": "September",
     "next_date": "2026-09-16",
-    "next_date_end": "2026-09-17",
+    "next_date_end": "2026-09-16",
     "last_date": "",
     "status": "upcoming",
     "attendance": "",
     "cost": "paid",
     "audience": "DevOps engineers, SREs, platform engineers",
-    "url": "https://dev.events/NA/US/MO/tech",
+    "url": "https://www.sketchdev.io/devopsmidwest",
     "description": "A regional two-day DevOps and platform engineering conference held in St. Louis for Midwest infrastructure and delivery teams.",
-    "source": "https://dev.events/NA/US/MO/tech"
+    "source": "https://www.sketchdev.io/devopsmidwest"
   },
   {
     "name": "Day of Data St. Louis",
@@ -2982,7 +2982,7 @@
     "city": "St. Louis",
     "region": "Missouri",
     "country": "United States",
-    "venue": "",
+    "venue": "Microsoft Innovation Hub",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-24",
@@ -2992,9 +2992,9 @@
     "attendance": "",
     "cost": "free",
     "audience": "data professionals, analysts, BI developers",
-    "url": "https://dev.events/NA/US/MO/tech",
+    "url": "https://dayofdata.org/2026-10-24-dayofdata1148/",
     "description": "A free community day of data training in St. Louis covering modern data platforms, analytics and business intelligence tooling.",
-    "source": "https://dev.events/NA/US/MO/tech"
+    "source": "https://dayofdata.org/2026-10-24-dayofdata1148/"
   },
   {
     "name": "Data in the D",
@@ -3018,9 +3018,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "data professionals, analysts, engineers",
-    "url": "https://dev.events/NA/US/MI/tech",
+    "url": "https://www.datainthed.org/",
     "description": "Detroit's community data conference, two days of sessions on data platforms, analytics and AI for Michigan data professionals.",
-    "source": "https://dev.events/NA/US/MI/tech"
+    "source": "https://www.datainthed.org/about-the-2026-conference"
   },
   {
     "name": "BeyondConf",
@@ -3042,9 +3042,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "software developers, technologists",
-    "url": "https://dev.events/NA/US/MI/tech",
+    "url": "https://dev.events/conferences/beyond-conf-2026-zldqdtqr",
     "description": "A one-day Detroit developer conference bringing the southeast Michigan software community together for technical talks and networking.",
-    "source": "https://dev.events/NA/US/MI/tech"
+    "source": "https://dev.events/conferences/beyond-conf-2026-zldqdtqr"
   },
   {
     "name": "Michigan Technology Conference",
@@ -3107,7 +3107,7 @@
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
-    "venue": "",
+    "venue": "800 Fulton Market",
     "cadence": "annual",
     "month": "September-October",
     "next_date": "2026-09-30",
@@ -3117,9 +3117,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "Umbraco and .NET web developers",
-    "url": "https://dev.events/NA/US/IL/Chicago/tech",
+    "url": "https://umbracofestival.us/",
     "description": "The US edition of the Umbraco community festival, two days of sessions for developers and agencies building on the Umbraco .NET CMS.",
-    "source": "https://dev.events/NA/US/IL/Chicago/tech"
+    "source": "https://umbracofestival.us/"
   },
   {
     "name": "Humanoid Robots Summit North America",
@@ -3142,9 +3142,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "robotics engineers, investors, manufacturers",
-    "url": "https://dev.events/NA/US/IL/Chicago/tech",
+    "url": "https://dev.events/conferences/humanoid-robots-summit-north-america-2026-vdlot1u0",
     "description": "A two-day Chicago summit on humanoid robotics, covering hardware platforms, embodied AI and commercial deployment in North America.",
-    "source": "https://dev.events/NA/US/IL/Chicago/tech"
+    "source": "https://dev.events/conferences/humanoid-robots-summit-north-america-2026-vdlot1u0"
   },
   {
     "name": "Scrum Day Houston",

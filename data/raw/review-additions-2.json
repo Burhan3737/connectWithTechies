@@ -786,19 +786,19 @@
     "city": "St. Louis",
     "region": "Missouri",
     "country": "United States",
-    "venue": "",
+    "venue": "Microsoft Innovation Hub",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-24",
-    "next_date_end": "",
+    "next_date_end": "2026-10-24",
     "last_date": "",
     "status": "upcoming",
     "attendance": "",
     "cost": "free",
     "audience": "database professionals, data engineers, analysts",
-    "url": "https://sqlsaturday.com/2026-10-24-sqlsaturday1148/",
+    "url": "https://dayofdata.org/2026-10-24-dayofdata1148/",
     "description": "Free St. Louis community event for database and data professionals across any platform.",
-    "source": "https://www.sqlsaturday.com/"
+    "source": "https://dayofdata.org/2026-10-24-dayofdata1148/"
   },
   {
     "name": "Houston Day of Data",

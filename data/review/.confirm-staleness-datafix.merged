@@ -1,0 +1,6 @@
+[
+  { "name": "Milwaukee Tech Hub Code & Coffee", "city": "Milwaukee", "status": "corrected", "cycle": "staleness",
+    "evidence": "mketech.org calendar lists September 5 2026 as upcoming; the date was filed in last_date." },
+  { "name": "AGNTCon + MCPCon North America", "city": "San Jose", "status": "corrected", "cycle": "staleness",
+    "evidence": "LF Events: 2026 edition Oct 22-23 San Jose, 2027 edition Apr 28-29 San Francisco. Record had the 2027 date as next, the 2026 date as last, and the wrong city." }
+]
