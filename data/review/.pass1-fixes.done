@@ -1,0 +1,41 @@
+[
+  { "match": { "name": "BeyondConf", "city": "Detroit" },
+    "action": "update",
+    "reason": "Organiser site beyondconf.com states 'Date November 5, 2026 / Location The Department at Hudson's - Detroit', with JSON-LD startDate 2026-11-05T13:00:00Z and endDate 2026-11-05T23:00:00Z. The recorded 2026-09-10 came from the dev.events aggregator page, which now errors and appears to have misread the ticket sales cutoff 'Ends Sep 10, 2026' as the event date. Repointing url to the organiser.",
+    "set": { "next_date": "2026-11-05", "next_date_end": "2026-11-05", "url": "https://www.beyondconf.com/" } },
+
+  { "match": { "name": "Buffalo Game Space Game Development Meeting", "city": "Buffalo" },
+    "action": "update",
+    "reason": "meetup.com/buffalo-game-space lists the next 'BGS Game Development (In-Person) Meeting' on Thu Sep 24 2026 7:00 PM EDT at Buffalo Game Space, 2495 Main Street Suite #454, Buffalo NY (JSON-LD startDate 2026-09-24T23:00:00Z). The Sep 10 listing is the separate online-only virtual hangout. Aug 27 2026 was the last in-person meeting.",
+    "set": { "next_date": "2026-09-24", "next_date_end": "2026-09-24", "last_date": "2026-08-27" } },
+
+  { "match": { "name": "CHM Live", "city": "Mountain View" },
+    "action": "update",
+    "reason": "computerhistory.org/events lists the next CHM Live production, 'In Conversation with Boris Cherny, Creator of Claude Code', on Wednesday September 23 2026 7:00 PM at CHM, Mountain View CA. Record still carried the elapsed Aug 27 2026 date.",
+    "set": { "next_date": "2026-09-23", "next_date_end": "2026-09-23", "last_date": "2026-08-27" } },
+
+  { "match": { "name": "CONNECT: Networking for Entrepreneurs", "city": "Jackson" },
+    "action": "update",
+    "reason": "innovate.ms/events lists CONNECT: Networking for Entrepreneurs on Thu October 1 2026 4:30-6:30 PM at Fertile Ground Beer Co., 800 Manship St, Jackson MS (JSON-LD startDate 2026-10-01T16:30:00-05:00). Held the first Thursday monthly; the recorded Sep 3 2026 edition has passed.",
+    "set": { "next_date": "2026-10-01", "next_date_end": "2026-10-01", "last_date": "2026-09-03" } },
+
+  { "match": { "name": "Jersey City Entrepreneurs: The Venture Garden", "city": "Jersey City" },
+    "action": "update",
+    "reason": "meetup.com/jersey-city-entrepreneurs lists the next gathering, 'The Venture Garden, Jersey City (Entrepreneurs Welcome!)', on Sat Sep 19 2026 11:00 AM EDT at Ko Cafe, 722 Grand Street, Jersey City NJ. Record still carried the elapsed Aug 26 2026 date.",
+    "set": { "next_date": "2026-09-19", "next_date_end": "2026-09-19", "last_date": "2026-08-26" } },
+
+  { "match": { "name": "Santa Monica New Tech", "city": "Santa Monica" },
+    "action": "update",
+    "reason": "meetup.com/santa-monica-new-tech lists the next weekly meeting on Sun Sep 13 2026 10:00 AM PDT (JSON-LD startDate 2026-09-13T17:00:00Z), then Sep 20, Sep 27 and Oct 4. Sep 6 and Aug 30 2026 are both in past events, so the recorded Aug 30 date was two meetings stale.",
+    "set": { "next_date": "2026-09-13", "next_date_end": "2026-09-13", "last_date": "2026-09-06" } },
+
+  { "match": { "name": "SecKC", "city": "Kansas City" },
+    "action": "update",
+    "reason": "seckc.org Upcoming Events lists Sep 8 2026 (now past), then October 13 2026, November 10 2026 and December 8 2026 - second Tuesday monthly. Next meeting is 2026-10-13.",
+    "set": { "next_date": "2026-10-13", "next_date_end": "2026-10-13", "last_date": "2026-09-08" } },
+
+  { "match": { "name": "tech SAVannah Tech Tuesday", "city": "Savannah" },
+    "action": "update",
+    "reason": "meetup.com/techsav lists the next Tech Tuesday on Tue Oct 13 2026 5:30 PM EDT at Hop Atomica, 535 E. 39th St., Savannah GA, then Nov 10, Dec 8 and Jan 12 2027. The Sep 8 2026 edition has moved to past events.",
+    "set": { "next_date": "2026-10-13", "next_date_end": "2026-10-13", "last_date": "2026-09-08" } }
+]

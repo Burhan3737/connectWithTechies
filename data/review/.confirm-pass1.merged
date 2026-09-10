@@ -1,0 +1,89 @@
+[
+  { "name": "BayPIGgies (Bay Area Python Interest Group)", "city": "San Jose",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "meetup.com/baypiggies and its /events/ tab show 102 past events and NO upcoming-events section; most recent was 'BayPiggies August 2026' Thu Aug 27 2026 at West Valley Branch Library, San Jose CA. Group states it meets the fourth Thursday of every other month, with special arrangements Oct-Dec around PyBay. The 'Oct 3, 2026' string on the page is a PyBay 2026 announcement inside the August agenda, not a BayPIGgies meeting. baypiggies.net redirects to a static baypiggies-01-23-2025.html stub with no calendar. No next meeting has been announced, so the record's empty next_date is correct." },
+
+  { "name": "Buffalo Game Space Game Development Meeting", "city": "Buffalo",
+    "status": "corrected", "cycle": "pass1",
+    "evidence": "meetup.com/buffalo-game-space lists 'BGS Game Development (In-Person) Meeting' Thu Sep 24 2026 7:00 PM EDT at Buffalo Game Space, 2495 Main Street Suite #454, Buffalo NY (JSON-LD startDate 2026-09-24T23:00:00Z), then Oct 22. The Sep 10 entry is the separate online-only 'Virtual game developer hangout'. Last in-person meeting was Aug 27 2026. Record still carried Aug 27 as next_date." },
+
+  { "name": "CHM Live", "city": "Mountain View",
+    "status": "corrected", "cycle": "pass1",
+    "evidence": "computerhistory.org/events lists the single upcoming CHM Live production: 'In Conversation with Boris Cherny, Creator of Claude Code', Wednesday September 23 2026 7:00 PM, CHM, 1401 N. Shoreline Blvd, Mountain View CA. Record still carried Aug 27 2026." },
+
+  { "name": "CONNECT: Networking for Entrepreneurs", "city": "Jackson",
+    "status": "corrected", "cycle": "pass1",
+    "evidence": "innovate.ms/events calendar lists 'CONNECT: Networking for Entrepreneurs' Thu October 1 2026 4:30-6:30 PM at Fertile Ground Beer Co., 800 Manship St Suite 101, Jackson MS (JSON-LD startDate 2026-10-01T16:30:00-05:00). Page states CONNECT is held the first Thursday of every month; the Sep 3 2026 edition has passed. Jackson city confirmed by the venue address." },
+
+  { "name": "Jersey City Entrepreneurs: The Venture Garden", "city": "Jersey City",
+    "status": "corrected", "cycle": "pass1",
+    "evidence": "meetup.com/jersey-city-entrepreneurs lists 11 upcoming events; the next is 'The Venture Garden, Jersey City (Entrepreneurs Welcome!)' Sat Sep 19 2026 11:00 AM EDT at Ko Cafe, 722 Grand Street, Jersey City NJ, followed by Sep 23, Sep 25 and Sep 26 sessions at other Jersey City cafes. Record still carried Aug 26 2026." },
+
+  { "name": "ROS By-The-Bay", "city": "Sunnyvale",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "meetup.com/ros-by-the-bay shows 26 past events and no upcoming-events section. Most recent: 'ROS By-The-Bay September Meetup at Bosch' Thu Sep 3 2026 6:00 PM PDT at Bosch USA, 384 Santa Trinita Avenue, Sunnyvale CA - which confirms both the Sep 3 last_date and the Sunnyvale city (the Meetup group header says Mountain View, but that is the group's default locale; venues rotate and the latest was Sunnyvale). No next meeting announced, so the record's empty next_date is correct." },
+
+  { "name": "Santa Monica New Tech", "city": "Santa Monica",
+    "status": "corrected", "cycle": "pass1",
+    "evidence": "meetup.com/santa-monica-new-tech lists 52 upcoming events on a weekly Sunday cadence; next is 'Tech Meetup: Virtual Open Coffee Club' Sun Sep 13 2026 10:00 AM PDT (JSON-LD startDate 2026-09-13T17:00:00Z), then Sep 20, Sep 27, Oct 4. Past events include Sep 6 and Aug 30 2026, so the record's Aug 30 next_date was two meetings stale." },
+
+  { "name": "SecKC", "city": "Kansas City",
+    "status": "corrected", "cycle": "pass1",
+    "evidence": "seckc.org 'Upcoming Events' lists SecKC - September 2026 on Sep 8 2026 (now past), then October 13 2026, November 10 2026 and December 8 2026 - second Tuesday monthly. Next meeting is 2026-10-13; the record still carried the elapsed Sep 8 date." },
+
+  { "name": "tech SAVannah Tech Tuesday", "city": "Savannah",
+    "status": "corrected", "cycle": "pass1",
+    "evidence": "meetup.com/techsav lists 5 upcoming Tech Tuesdays, next Tue Oct 13 2026 5:30 PM EDT at Hop Atomica, 535 E. 39th St., Savannah GA, then Nov 10, Dec 8 and Jan 12 2027. The Sep 8 2026 edition has moved to Past events. Record still carried the elapsed Sep 8 date." },
+
+  { "name": "BeyondConf", "city": "Detroit",
+    "status": "corrected", "cycle": "pass1",
+    "evidence": "MAJOR DATE ERROR - record pointed at today. The record's dev.events aggregator URL errors out ('Something went wrong while talking to the server') but still carries JSON-LD startDate 2026-09-10. The organiser's own site beyondconf.com states 'Date November 5, 2026 / Location The Department at Hudson's - Detroit / Capacity 250 Attendees', with JSON-LD startDate 2026-11-05T13:00:00Z, endDate 2026-11-05T23:00:00Z and place name 'The Department at Hudson's Detroit'. The only 'Sep 10, 2026' anywhere on the organiser page is a ticket-tier sales cutoff ('Ends Sep 10, 2026 - 200 spots'), which is almost certainly what the aggregator misread as the event date. Detroit city is correct; date moved to 2026-11-05 and url repointed to the organiser." },
+
+  { "name": "Difinity Conference Toronto", "city": "Toronto",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "difinityconf.com and the organiser's analyticsconf.com are both empty React/Vite shells (486 and 467 bytes; the chased JS bundle carried no dates) but both serve the event's own title, so neither is squatted. The organiser-run Sessionize listing sessionize.com/difinity-conference-toronto-2026 states 'event starts 10 Sep 2026, event ends 11 Sep 2026', location 'Microsoft Toronto, Suite 4400, 81 Bay St., Toronto, ON M5J 0E7', and in the body 'The event is on two dates. 10th of Sep; Pre-conference. 11th of Sep; Main conference.' Dates and Toronto city both confirmed." },
+
+  { "name": "ElixirConf US", "city": "Chicago",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "elixirconf.com title and hero: 'America's Premier Elixir & Phoenix Conference takes place on Sept 10-11, 2026, Chicago & online'; banner 'Sept 4 & 9 - Training | Sept 10-11 - Conference | Chicago & Virtual'. Dates and city correct." },
+
+  { "name": "NH Tech Alliance Cybersecurity Summit", "city": "Manchester",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "nhtechalliance.org/cybersecurity-summit shows '2026 Agenda / Register / September 10th, 2026 / Manchester Community College'. Single-day event on 2026-09-10 in Manchester NH; matches the record." },
+
+  { "name": "VIATEC AI Meetup", "city": "Victoria",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "members.viatec.ca/event-calendar (window 9/10/2026-9/10/2027) lists 'THU September 10 - VIATEC AI Meetup: Business Track, 11:30 AM - 1:30 PM - Leading AI from the Front, with Rachel Krayenhoff of Ingenuity Labs'. Confirms 2026-09-10 and Victoria BC." },
+
+  { "name": "Y Combinator Demo Day", "city": "San Francisco",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "ycombinator.com/demoday states 'The S26 Demo Day will be held on Thursday, September 10th.' Sep 10 2026 is a Thursday. Confirms the record's 2026-09-10." },
+
+  { "name": "Zeek Workshop Berkeley", "city": "Berkeley",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "zeek.org site-wide banner reads 'Zeek Workshop - Berkeley - September 10-11, 2026 - Register', and the Events nav carries an 'Upcoming Berkeley Workshop' entry. Dates and city correct." },
+
+  { "name": "BSides Denver", "city": "Denver",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "bsidesden.org front page: 'BSides Denver 2026 Conference - Fri, Sep 11 | Void Studios', tickets on sale, CFP closed June 30, copyright 2026. Single-day 2026-09-11 in Denver CO as recorded." },
+
+  { "name": "HackRice", "city": "Houston",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "hackrice.com: 'HACKRICE 16 SEPT 11-13 2026', 'Rice University's 16th Annual Hackathon September 11-13, 2026', venue 'Rice Student Center @ Rice University', 'Houston, Texas'; schedule opens 'Friday September 11, 2026 - Off at 4:00 PM'. Dates and city correct." },
+
+  { "name": "Nashville Microsoft Community Day", "city": "Nashville",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "m365nashville.org redirects to communitydays.org/event/2026-09-11/nashville-microsoft-community-day: 'Nashville Microsoft Community Day, September 11, 2026, Nelson Andrews Leadership Center, 3088 Smith Springs Rd, Nashville, TN 37013'. Registration open, 11th annual event. Date and city correct; the short domain still resolves so the url needs no change." },
+
+  { "name": "YYC DataCon", "city": "Calgary",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "yycdata.ca/datacon redirects to /datacon/datacon-2026, titled 'DataCon 2026', repeating 'BMO CENTRE, CALGARY SEPTEMBER 11, 2026' across the hero and ticket callouts. Single-day 2026-09-11 in Calgary AB as recorded." },
+
+  { "name": "BSidesNEPA", "city": "Wilkes Barre",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "bsides.org/event/bsidesnepa-northeast-pennsylvania carries JSON-LD startDate 2026-09-12T00:00:00+00:00 / endDate 2026-09-12T23:59:59+00:00 and a venue block 'BSidesNEPA, Wilkes Barre, PA, United States'. Single-day 2026-09-12 as recorded." },
+
+  { "name": "CppCon", "city": "Aurora",
+    "status": "confirmed", "cycle": "pass1",
+    "evidence": "cppcon.org front page banner reads 'September 12-18. Register today!' for CppCon 2026, and cppcon.org/venue states 'The conference will be held at the Gaylord Rockies in Aurora, Colorado, just outside Denver.' The registration page corroborates with 'CppCon's Community Social ... will be held at lunch on Wednesday, September 16th', which falls inside a Sat Sep 12 - Fri Sep 18 2026 week. Note cppcon.org/schedule still redirects to the stale cppcon2024.sched.com (Sep 14-24 2024); that stale page was not used. Dates 2026-09-12 to 2026-09-18 and city Aurora both correct." }
+]

@@ -1,0 +1,89 @@
+[
+  { "name": "Day of Data Detroit", "city": "Ann Arbor",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "sqlsaturday.com/2026-09-12-sqlsaturday1164/ meta-refreshes to dayofdata.org/2026-09-12-dayofdata1164/, which reads 'Event Date: 12 September 2026', hours 10:30 AM-4:45 PM EDT, at Ann Arbor District Library - Downtown, 343 South Fifth Avenue, Ann Arbor MI. Single day, matches record. Canonical URL is now dayofdata.org; the sqlsaturday.com stub still forwards correctly." },
+
+  { "name": "GDG Brooklyn AI Fashion Hackathon", "city": "Brooklyn",
+    "status": "corrected", "cycle": "pass2",
+    "evidence": "Chapter page gdg.community.dev/gdg-brooklyn lists the event on 2026-09-12; the event detail page carries JSON-LD startDate 2026-09-12T09:30:00-04:00 / endDate 2026-09-12T16:00:00-04:00, so the dates are right. Venue is LUMA Studios, 307 West 38th Street, New York, NY 10018 - that is Manhattan, not Brooklyn. City taken from the GDG chapter name rather than the venue. Patch sets city to New York and fills venue." },
+
+  { "name": "HackWesTX", "city": "Lubbock",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "hackwestx.gdgttu.com titled 'HackWesTX 2026' and shows 'September 12-13, 2026' with venue Texas Tech University, Lubbock, TX. Matches record." },
+
+  { "name": "Maker Faire NW Arkansas", "city": "Fayetteville",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "nwa.makerfaire.com: 'The NWA Maker Faire will be held on September 12th, 2026 from 9:00 am - 4:00 pm. It will be hosted at the Fayetteville Public Library and held in the Event Center.' Single day, matches record." },
+
+  { "name": "Maker Faire Orange County", "city": "Costa Mesa",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "oc.makerfaire.com hero reads 'Sept 12 & 13, 2026' with the venue line 'Center - Costa Mesa, CA'. Two days, matches record." },
+
+  { "name": "Vintage Computer Festival Midwest", "city": "Schaumburg",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "vcfmw.org shows 'September 12-13, 2026' at the Convention Center in Schaumburg, IL. Matches record." },
+
+  { "name": "Maker Faire Waterloo", "city": "Waterloo",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "waterloomakerfaire.org carries JSON-LD startDate 2026-09-13T10:00:00-04:00 and endDate 2026-09-13T17:00:00-04:00, plus prose 'September 13, 2026'. Single day, matches record." },
+
+  { "name": "3686", "city": "Nashville",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "attend3686.com hero repeats 'September 14-16' / 'Nashville, Tennessee', campus headquartered at Brooklyn Bowl. Matches record." },
+
+  { "name": "Alaska Entrepreneurship Week", "city": "Anchorage",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "alaskastartups.com Upcoming Events: 'Alaska Entrepreneurship Week (September 14th-18th, 2026) - an annual celebration of all things entrepreneurship'. Matches record. Programme is statewide with no single venue published; Anchorage left as recorded." },
+
+  { "name": "Best of Tech Awards", "city": "Cleveland",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "greatercle.com/tech says 'Best of Tech Day & Awards ... Date: September 14, 2026'. Two nav links exist (events/2026/09/14/... and events/2026/09/15/...) but both serve the identical event page reading 'Date: September 14, 2026, Time: 1:30 pm - 8:00 pm, Cleveland Museum of Natural History, 1 Wade Oval Dr, Cleveland OH'. The 09/15 slug is a stale permalink, not a date change. Matches record." },
+
+  { "name": "Colorado Startup Week", "city": "Denver",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "costartupweek.com shows 'September 14-18 | Free' and 'HQ: The Link, 930 15th St, Denver, CO'. Matches record." },
+
+  { "name": "Georgia Tech All-Majors Career Fair", "city": "Atlanta",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "career.gatech.edu/career-fair, Fall 2026 All-Majors Career Fair: 'Days: September 14 - September 15, 2026, Time: 10 A.M. - 4 P.M., Location: Campus Recreation Center'. Matches record." },
+
+  { "name": "MCP Community Connect", "city": "San Francisco",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "globalai.community/e/bay9vh24 reads 'Mon, 14 September 2026 - 14:00-20:30 Pacific, GitHub HQ, San Francisco, United States'. Single day, matches record." },
+
+  { "name": "New Ventures BC Demo Day", "city": "Vancouver",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "newventuresbc.com/demo-day: 'Demo Day 2026 - Monday, September 14, 2026', featured companies listed for this edition. Matches record. No public venue address on the page; organiser is at 1055 Dunsmuir Street, Vancouver BC, so the city stands." },
+
+  { "name": "posit::conf", "city": "Houston",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "conf.posit.co redirects to /2026/ titled posit::conf(2026), hero 'Sept. 14-16, Houston, TX', day-by-day schedule Monday September 14 through Wednesday September 16, venue Hilton Americas-Houston. Matches record." },
+
+  { "name": "Splunk .conf", "city": "Denver",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "conf.splunk.com (.conf26) shows 'September 14-17, 2026, Colorado Convention Center, Denver, CO'. Matches record." },
+
+  { "name": "VSLive! San Diego", "city": "San Diego",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "vslive.com upcoming conferences: 'VSLive! San Diego, September 14-18, 2026, Bahia Resort Hotel, San Diego, CA'. Matches record." },
+
+  { "name": "AI Infra Summit", "city": "Santa Clara",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "ai-infra-summit.com titled 'AI Infra Summit 2026 | Sep 15-17, Santa Clara', with JSON-LD startDate 2026-09-15 and endDate 2026-09-17 at the Santa Clara Convention Center. Matches record." },
+
+  { "name": "Cybersecurity Summit Chicago", "city": "Chicago",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "cybersecuritysummit.com upcoming list: 'Tuesday, September 15, 2026 - Chicago - Chicago Marriott Downtown Magnificent Mile'. Single day, matches record. (San Diego on Sept 10 and an online event Sept 16 are separate summits.)" },
+
+  { "name": "Dreamforce", "city": "San Francisco",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "salesforce.com/dreamforce shows 'September 15-17, 2026 | San Francisco and Salesforce+'. Matches record." },
+
+  { "name": "ALL IN", "city": "Montreal",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "allinevent.ai titled 'ALL IN 2026', hero 'SEPT 2026 16-17 - Join ALL IN in Montreal, Canada, September 16-17, 2026'. Matches record." },
+
+  { "name": "Cloud Nirvana Columbus", "city": "Columbus",
+    "status": "confirmed", "cycle": "pass2",
+    "evidence": "cloudnirvana.org/columbus-events Upcoming Events: 'Wednesday, September 16 | 2:00 PM - 6:00 PM | The Conference Center at OCLC - Cloud Nirvana Columbus: Transformation at Scale'. Sept 16 2026 is a Wednesday and every other dated entry on the page is filed under Past Events. Single day, matches record." }
+]

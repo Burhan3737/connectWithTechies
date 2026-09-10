@@ -1,0 +1,6 @@
+[
+  { "match": { "name": "GDG Brooklyn AI Fashion Hackathon", "city": "Brooklyn" },
+    "action": "update",
+    "reason": "The GDG chapter is named Brooklyn but the hackathon is not held there. The event detail page on gdg.community.dev (Runway to Reality: AI Fashion Hackathon) gives the venue as LUMA Studios, 307 West 38th Street, New York, NY 10018 - Midtown Manhattan. Same page's JSON-LD confirms startDate 2026-09-12T09:30:00-04:00 and endDate 2026-09-12T16:00:00-04:00, so the dates are unchanged; only the location was taken from the organiser's chapter name rather than the venue.",
+    "set": { "city": "New York", "region": "New York", "venue": "LUMA Studios, 307 West 38th Street" } }
+]

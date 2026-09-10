@@ -6,13 +6,15 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-data.mjs",
-    "build:strict": "node scripts/build-data.mjs",
-    "check": "node scripts/check-data.mjs",
-    "start": "node scripts/serve.mjs",
-    "test": "node scripts/smoke-test.mjs",
-    "check:links": "node scripts/check-links.mjs",
+    "apply": "node scripts/apply-patches.mjs",
+    "ledger": "node scripts/ledger.mjs",
     "stale": "node scripts/ledger.mjs --report",
-    "ledger": "node scripts/ledger.mjs"
+    "refresh": "node scripts/build-data.mjs && node agent/tools/verify-dates.mjs --write && node scripts/ledger.mjs",
+    "verify:dates": "node agent/tools/verify-dates.mjs",
+    "check:data": "node agent/tools/check-data.mjs",
+    "check:links": "node agent/tools/check-links.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "node scripts/smoke-test.mjs"
   },
   "license": "MIT",
   "devDependencies": {

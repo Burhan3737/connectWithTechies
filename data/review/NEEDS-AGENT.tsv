@@ -1,0 +1,70 @@
+verdict	name	city	next_date	note	url
+ambiguous	Security BSides Albuquerque	Albuquerque	2026-09-25	page loads but the stored date is not on it and it publishes no structured date	https://bsidesabq.org/
+ambiguous	HackUMass	Amherst	2026-11-13	page loads but the stored date is not on it and it publishes no structured date	https://www.hackumass.com/
+ambiguous	UGAHacks	Athens	2027-02-05	page loads but the stored date is not on it and it publishes no structured date	https://ugahacks.com/
+ambiguous	HashiConf	Atlanta	2026-10-26	page loads but the stored date is not on it and it publishes no structured date	https://www.hashicorp.com/en/conferences/hashiconf
+ambiguous	HackGT	Atlanta	2026-09-25	page loads but the stored date is not on it and it publishes no structured date	https://hack.gt/
+ambiguous	IBM TechXchange Conference	Atlanta	2026-10-26	page loads but the stored date is not on it and it publishes no structured date	https://www.ibm.com/community/ibm-techxchange-conference/
+ambiguous	EWF Annual Conference	Aurora	2026-11-04	page loads but the stored date is not on it and it publishes no structured date	https://www.ewfglobal.com/
+ambiguous	SpiceWorld	Austin	2026-11-12	page loads but the stored date is not on it and it publishes no structured date	https://www.spiceworks.com/spiceworld/
+ambiguous	HackTX	Austin	2026-10-24	page loads but the stored date is not on it and it publishes no structured date	https://hacktx.com/
+ambiguous	Boise Entrepreneur Week	Boise	2026-09-28	page loads but the stored date is not on it and it publishes no structured date	https://www.boiseentrepreneurweek.org/
+ambiguous	BSides Bloomington	Bloomington	2026-10-02	page loads but the stored date is not on it and it publishes no structured date	https://www.bsidesbloomington.org/
+ambiguous	BSidesCharm	Baltimore	2027-04-24	page loads but the stored date is not on it and it publishes no structured date	https://www.bsidescharm.org/
+ambiguous	HackHarvard	Cambridge	2026-10-16	page loads but the stored date is not on it and it publishes no structured date	https://hhuh.io/
+ambiguous	HackMIT	Cambridge	2026-09-19	page loads but the stored date is not on it and it publishes no structured date	https://hackmit.org/
+ambiguous	Clojure/conj	Charlotte	2026-09-30	page loads but the stored date is not on it and it publishes no structured date	https://2026.clojure-conj.org/
+ambiguous	SC Conference (Supercomputing)	Chicago	2026-11-15	page loads but the stored date is not on it and it publishes no structured date	https://sc26.supercomputing.org/
+ambiguous	CUhackit	Clemson	2027-02-20	page loads but the stored date is not on it and it publishes no structured date	https://cuhack.it/
+ambiguous	RevolutionUC	Cincinnati	2027-02-27	page loads but the stored date is not on it and it publishes no structured date	https://www.revolutionuc.com/
+ambiguous	Maker Faire Orange County	Costa Mesa	2026-09-12	page loads but the stored date is not on it and it publishes no structured date	https://oc.makerfaire.com/
+ambiguous	Cloud Nirvana Columbus	Columbus	2026-09-16	page loads but the stored date is not on it and it publishes no structured date	https://cloudnirvana.org/
+ambiguous	Product-Led Summit Denver	Denver	2027-04-07	page loads but the stored date is not on it and it publishes no structured date	https://world.productledalliance.com/
+ambiguous	Data in the D	Detroit	2026-10-16	page loads but the stored date is not on it and it publishes no structured date	https://www.datainthed.org/
+ambiguous	Hack Knight	Flushing	2026-10-09	page loads but the stored date is not on it and it publishes no structured date	https://hackknight.org/
+ambiguous	BSides Edmonton	Edmonton	2026-09-24	page loads but the stored date is not on it and it publishes no structured date	https://www.bsidesedmonton.org/
+ambiguous	Ignite Summit	Fredericton	2026-10-20	page loads but the stored date is not on it and it publishes no structured date	https://myignite.ca/
+ambiguous	PTC Annual Conference	Honolulu	2027-01-17	page loads but the stored date is not on it and it publishes no structured date	https://www.ptc.org/
+ambiguous	CodeRED	Houston	2026-10-10	page loads but the stored date is not on it and it publishes no structured date	https://uhcode.red/
+ambiguous	BigRed//Hacks	Ithaca	2026-10-02	page loads but the stored date is not on it and it publishes no structured date	https://www.bigredhacks.com/
+ambiguous	HackKU	Lawrence	2027-04-09	page loads but the stored date is not on it and it publishes no structured date	https://www.hackku.org/
+ambiguous	LA Hacks	Los Angeles	2027-04-16	page loads but the stored date is not on it and it publishes no structured date	https://lahacks.com/
+ambiguous	LA Hacks AI Hackathon	Los Angeles	2026-10-17	page loads but the stored date is not on it and it publishes no structured date	https://ai.lahacks.com/
+ambiguous	Tech Week Los Angeles	Los Angeles	2026-10-12	page loads but the stored date is not on it and it publishes no structured date	https://www.tech-week.com/calendar
+ambiguous	LA Tech Week	Los Angeles	2026-10-12	page loads but the stored date is not on it and it publishes no structured date	https://www.tech-week.com/
+ambiguous	dev2next	Lone Tree	2026-10-12	page loads but the stored date is not on it and it publishes no structured date	https://dev2next.com/
+ambiguous	Midwest Gaming Classic	Milwaukee	2027-04-23	page loads but the stored date is not on it and it publishes no structured date	https://www.midwestgamingclassic.com
+ambiguous	ShellHacks	Miami	2026-09-25	page loads but the stored date is not on it and it publishes no structured date	https://shellhacks.net/
+ambiguous	Launch Wisconsin	Milwaukee	2026-10-06	page loads but the stored date is not on it and it publishes no structured date	https://launchwisconsin.biz
+ambiguous	Hackville	Mississauga	2027-01-22	page loads but the stored date is not on it and it publishes no structured date	https://hackville.io/
+ambiguous	NorthSec	Montreal	2027-05-17	page loads but the stored date is not on it and it publishes no structured date	https://nsec.io/
+ambiguous	Vintage Computer Festival Montreal	Montreal	2026-11-07	page loads but the stored date is not on it and it publishes no structured date	https://vcfed.org/events/vcf-montreal/
+ambiguous	Global Game Jam	Multiple cities	2027-01-25	page loads but the stored date is not on it and it publishes no structured date	https://globalgamejam.org/
+ambiguous	Southwestern Ontario Drupal Camp	Multiple cities	2026-10-23	page loads but the stored date is not on it and it publishes no structured date	https://www.drupal.org/community/events/southwestern-ontario-drupal-camp-2026-10-23
+ambiguous	BSides NOLA	New Orleans	2027-05-11	page loads but the stored date is not on it and it publishes no structured date	https://nolabsides.com
+ambiguous	Django Girls New York City	New York	2026-11-28	page loads but the stored date is not on it and it publishes no structured date	https://djangogirls.org/en/events/
+ambiguous	DrupalCon North America	Orlando	2027-03-22	page loads but the stored date is not on it and it publishes no structured date	https://events.drupal.org/
+ambiguous	Knight Hacks	Orlando	2026-10-09	page loads but the stored date is not on it and it publishes no structured date	https://knighthacks.org/
+ambiguous	uOttaHack	Ottawa	2027-01-15	page loads but the stored date is not on it and it publishes no structured date	https://2027.uottahack.ca/
+ambiguous	WEHack	Richardson	2027-04-10	page loads but the stored date is not on it and it publishes no structured date	https://www.wehackutd.com/
+ambiguous	Rowdy Hacks	San Antonio	2026-10-03	page loads but the stored date is not on it and it publishes no structured date	https://rowdyhacks.org/
+ambiguous	San Diego CyberCon	San Diego	2026-11-13	page loads but the stored date is not on it and it publishes no structured date	https://sdcybercon.org/
+ambiguous	SF Hacks	San Francisco	2027-02-19	page loads but the stored date is not on it and it publishes no structured date	https://sfhacks.io/
+ambiguous	SF Tech Week	San Francisco	2026-10-05	page loads but the stored date is not on it and it publishes no structured date	https://www.tech-week.com/
+ambiguous	Data Streaming Summit	San Francisco	2026-10-07	page loads but the stored date is not on it and it publishes no structured date	https://datastreaming-summit.org/
+ambiguous	OPI Summit on DPU/IPUs	San Jose	2026-10-15	page loads but the stored date is not on it and it publishes no structured date	https://opiproject.org/
+ambiguous	WeAreDevelopers World Congress	San Jose	2026-09-23	page loads but the stored date is not on it and it publishes no structured date	https://www.wearedevelopers.com/world-congress
+ambiguous	OIN Connect	San Jose	2026-10-19	page loads but the stored date is not on it and it publishes no structured date	https://openinventionnetwork.com/
+ambiguous	SBUHacks	Stony Brook	2026-10-09	page loads but the stored date is not on it and it publishes no structured date	https://hack.sbcs.io/
+ambiguous	CyberBay Summit	Tampa	2027-03-22	page loads but the stored date is not on it and it publishes no structured date	https://cyberbay.org
+ambiguous	CyberForce Competition	Tinley Park	2026-11-13	page loads but the stored date is not on it and it publishes no structured date	https://cyberforce.energy.gov/
+ambiguous	ElleHacks	Toronto	2027-01-29	page loads but the stored date is not on it and it publishes no structured date	https://ellehacks.com/
+ambiguous	MakeUofT	Toronto	2027-02-13	page loads but the stored date is not on it and it publishes no structured date	http://makeuoft.ca/
+ambiguous	UofTHacks	Toronto	2027-01-15	page loads but the stored date is not on it and it publishes no structured date	https://uofthacks.com/
+ambiguous	PNW Day of Data	Vancouver	2026-11-06	page loads but the stored date is not on it and it publishes no structured date	https://dayofdata.org/2026-11-07-dayofdata1149/
+unreadable	SwampHacks	Gainesville	2026-10-16	467-byte stub, likely a captcha	https://swamphacks.com/
+unreadable	SAP Connect	Las Vegas	2026-10-05	380-byte stub, likely a captcha	https://www.sap.com/events.html
+unreadable	MariHacks	Montreal	2027-04-09	476-byte stub, likely a captcha	https://www.marihacks.com/
+unreadable	WiCHacks	Rochester	2027-02-27	469-byte stub, likely a captcha	https://wichacks.io/
+unreadable	Difinity Conference Toronto	Toronto	2026-09-10	486-byte stub, likely a captcha	https://difinityconf.com
+unreadable	ServiceNow Knowledge	Las Vegas	2027-05-04	no response	https://www.servicenow.com/events/knowledge.html

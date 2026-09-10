@@ -11,18 +11,41 @@ the most urgent slice and leaves the rest for the next one.
 
 ## The loop
 
+Script first, agents only for what the script cannot settle.
+
 ```
-npm run build     rollover: held editions move to last_date, records return as recurring-tbd
-npm run ledger    regenerate the queue into data/review/TO-VERIFY.tsv
-   -> agents      work the queue, write patches + confirmations
-npm run build     apply, rebuild
-npm run ledger    merge confirmations, queue shrinks
+npm run refresh    build (rollover) -> script confirms ~83% of dated events
+                   -> regenerates the queue
+   -> agents       work only what is left: NEEDS-AGENT.tsv and the queue
+npm run apply      apply their patches
+npm run build
+npm run ledger     merge confirmations, queue shrinks
 ```
 
-## Step 1 — refresh the queue
+An event is researched by an agent **once** and maintained by script thereafter. It
+should only reach an agent again if the script genuinely cannot settle it.
+
+## Step 1 — let the script do what it can first
+
+**Do not dispatch agents before this.** Around 83% of dated events can be confirmed
+without one, and paying an agent to read a page and conclude "nothing changed" is the
+most expensive way to learn nothing.
 
 ```bash
-node scripts/build-data.mjs          # note what rolled over
+npm run refresh    # build (rollover) -> script-confirm -> regenerate the queue
+```
+
+That runs `scripts/build-data.mjs`, then `agent/tools/verify-dates.mjs --write`, then
+`scripts/ledger.mjs`. It leaves behind:
+
+- ledger confirmations for everything it settled — those events are done
+- `data/review/PROPOSED-moves.json` — dates the page has changed. **Review these
+  yourself**; the script proposes, it never applies
+- `data/review/NEEDS-AGENT.tsv` — only what it could not settle
+
+## Step 2 — refresh the queue for agents
+
+```bash
 node scripts/ledger.mjs --limit 60   # trim the working file to the 60 most urgent
 ```
 
@@ -41,7 +64,7 @@ already ordered: wrong-today first, then soonest-first.
 
 Pick a budget that matches the appetite. 40–60 rows is a comfortable single pass.
 
-## Step 2 — split and dispatch
+## Step 3 — split and dispatch
 
 Split the working file into chunks of ~30 rows and dispatch one agent per chunk in
 parallel. Give each agent the section below verbatim, plus its chunk path.
@@ -49,13 +72,13 @@ parallel. Give each agent the section below verbatim, plus its chunk path.
 Do not hand-write a new prompt each time. Everything hard-won about this task is in
 that section, and rewriting it from memory loses it.
 
-## Step 3 — apply
+## Step 4 — apply
 
 ```bash
-node scripts/apply-patches.mjs --dry-run   # read the reasons before trusting them
-node scripts/apply-patches.mjs
-node scripts/build-data.mjs
-node scripts/ledger.mjs                     # merges the confirm-*.json files
+npm run apply -- --dry-run   # read the reasons before trusting them
+npm run apply
+npm run build
+npm run ledger               # merges the confirm-*.json files
 npm test
 ```
 
@@ -76,9 +99,9 @@ Code for America — return 403 to WebFetch while serving curl a 200 for the sam
 Use the helper:
 
 ```bash
-node scripts/fetch-page.mjs <url>            # status, title, extracted date evidence
-node scripts/fetch-page.mjs <url> --text     # plus readable page text
-node scripts/fetch-page.mjs <url> --bundle   # chase JS bundles for React/Next shells
+node agent/tools/fetch-page.mjs <url>            # status, title, extracted date evidence
+node agent/tools/fetch-page.mjs <url> --text     # plus readable page text
+node agent/tools/fetch-page.mjs <url> --bundle   # chase JS bundles for React/Next shells
 ```
 
 It pulls JSON-LD `startDate`/`endDate`, ISO dates, month ranges, venue hints, and the

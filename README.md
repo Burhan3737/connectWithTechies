@@ -8,7 +8,7 @@ organiser's own page.
 Every listing links to the organiser, not to a ticket reseller, and no date in the dataset
 was written down without someone fetching the page it came from.
 
-**880 events · 233 cities · 63 states, provinces and territories**
+**883 events · 233 cities · 63 states, provinces and territories**
 
 Coverage is complete for every US state and every Canadian province. Two jurisdictions are
 genuinely empty — the **Northwest Territories** and **Nunavut**. That is not an oversight:
@@ -55,11 +55,31 @@ data/events.json    the single file the app reads
 
 | command | what it does |
 |---|---|
+| `npm run refresh` | **the maintenance loop** — rollover, script-confirm what it can, regenerate the queue |
+| `npm run stale` | print the re-check queue |
 | `npm run build` | rebuild `data/events.json` and print a validation report |
-| `npm test` | jsdom UI smoke test — 30 checks over rendering, filters, sorting, escaping |
-| `npm run check` | data audit: coverage, near-duplicates, field gaps, date sanity |
+| `npm run apply` | apply reviewer patches from `data/review/` |
+| `npm run ledger` | merge confirmations, regenerate the ledger and queue |
+| `npm run verify:dates` | script-side date confirmation (dry run) |
+| `npm run check:data` | data audit: coverage, near-duplicates, field gaps, date sanity |
 | `npm run check:links` | probe every event URL, report dead links and redirects |
+| `npm test` | jsdom UI smoke test — 30 checks over rendering, filters, sorting, escaping |
 | `npm start` | serve the site locally |
+
+### Layout
+
+```
+scripts/        the deterministic pipeline. Owns data/. Maintainer-run.
+agent/tools/    what agents call — and what replaces agents where possible.
+agent/README.md the division of labour, in full.
+data/review/    the contract surface: queue in, patches and confirmations out.
+```
+
+Agents are for **discovery and judgement**; scripts are for **maintenance**. An event is
+researched by an agent once and maintained by script thereafter — it should only reach an
+agent again if the script genuinely cannot settle it. Measured on this dataset,
+**86% of dated events confirm by script alone**, so routine upkeep costs roughly a sixth
+of what an all-agent pass would.
 
 ## Review cycles
 
@@ -121,13 +141,19 @@ in the ten days after one build, **42 events passed their date**. So the refresh
 runs on its own schedule of decay rather than on someone remembering:
 
 ```
-npm run build     rollover: a held edition moves into last_date and the record
-                  returns as recurring-tbd, instead of vanishing from Upcoming
-npm run ledger    regenerate the re-check queue into data/review/TO-VERIFY.tsv
-     ↓ agents     work the queue, write patches and confirmations
-npm run build     apply, rebuild
-npm run ledger    merge confirmations; the queue shrinks
+npm run refresh    rollover: a held edition moves into last_date and the record
+                   returns as recurring-tbd, instead of vanishing from Upcoming
+                   then the script confirms every date it can read
+                   then the re-check queue is regenerated
+      ↓ agents     work only what the script could not settle
+npm run apply      apply their patches
+npm run build
+npm run ledger     merge confirmations; the queue shrinks
 ```
+
+On a real run of that loop: 883 events in, **429 of 498 dated events confirmed by script**,
+the queue down from 152 to 40, and 69 rows handed to agents. The script half costs nothing
+but wall-clock.
 
 `npm run stale` prints the queue any time. The full procedure — including everything
 learned the hard way about reading these sites — lives in the `refresh-events` skill at

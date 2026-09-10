@@ -12,7 +12,7 @@ import { join, dirname } from 'node:path';
 import { execFile } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { events } = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8'));
 const REPORT = join(ROOT, 'data', 'link-report.json');
 

@@ -1,0 +1,957 @@
+{
+  "probed_on": "2026-09-10",
+  "results": [
+    {
+      "name": "Forge Summit",
+      "city": "North Little Rock",
+      "url": "https://www.forge.institute/events",
+      "host": "forge.institute",
+      "stored": "2026-10-13",
+      "cadence": "annual",
+      "bytes": 348528,
+      "hit": null
+    },
+    {
+      "name": "Empowering Innovation Spirit Conference",
+      "city": "Whitehorse",
+      "url": "https://entreprenorth.ca/events-updates/empowering-innovation-spirit-conference-2026",
+      "host": "entreprenorth.ca",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 287877,
+      "hit": null
+    },
+    {
+      "name": "DevOpsDays Kansas City",
+      "city": "Overland Park",
+      "url": "https://devopsdays.org/events/2026-kansas-city",
+      "host": "devopsdays.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 321,
+      "hit": null
+    },
+    {
+      "name": "CodeMash East",
+      "city": "Spotsylvania",
+      "url": "https://www.codemash.org/",
+      "host": "codemash.org",
+      "stored": "2027-06-17",
+      "cadence": "annual",
+      "bytes": 72479,
+      "hit": null
+    },
+    {
+      "name": "Cal Hacks",
+      "city": "San Francisco",
+      "url": "https://www.calhacks.io/",
+      "host": "calhacks.io",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 546865,
+      "hit": null
+    },
+    {
+      "name": "CodeMash",
+      "city": "Sandusky",
+      "url": "https://www.codemash.org/",
+      "host": "codemash.org",
+      "stored": "2027-01-12",
+      "cadence": "annual",
+      "bytes": 72479,
+      "hit": null
+    },
+    {
+      "name": "BSides Philly",
+      "city": "Philadelphia",
+      "url": "https://bsidesphilly.org",
+      "host": "bsidesphilly.org",
+      "stored": "2026-12-11",
+      "cadence": "annual",
+      "bytes": 63678,
+      "hit": {
+        "id": "jsonld",
+        "start": "2026-12-11",
+        "end": "2026-12-11"
+      }
+    },
+    {
+      "name": "CanSecWest",
+      "city": "Vancouver",
+      "url": "https://www.secwest.net/",
+      "host": "secwest.net",
+      "stored": "2026-09-26",
+      "cadence": "annual",
+      "bytes": 433961,
+      "hit": null
+    },
+    {
+      "name": "New York Tech Week",
+      "city": "New York",
+      "url": "https://www.tech-week.com/calendar/nyc",
+      "host": "tech-week.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 29405,
+      "hit": null
+    },
+    {
+      "name": "Papers We Love New York",
+      "city": "New York",
+      "url": "https://paperswelove.org/chapter/newyork/",
+      "host": "paperswelove.org",
+      "stored": "",
+      "cadence": "monthly",
+      "bytes": 6810,
+      "hit": null
+    },
+    {
+      "name": "Urban Futures: Co-Creating Climate Resilience in NYC Hackathon",
+      "city": "New York",
+      "url": "https://www.amnh.org/learn-teach/higher-education/hackathon-climate-resilience",
+      "host": "amnh.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 328158,
+      "hit": null
+    },
+    {
+      "name": "Global Game Jam - NYU Game Center",
+      "city": "New York",
+      "url": "https://globalgamejam.org/jam-sites/2026/2026-nyu-game-center",
+      "host": "globalgamejam.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 66444,
+      "hit": null
+    },
+    {
+      "name": "Product-Led Summit San Francisco",
+      "city": "San Francisco",
+      "url": "https://world.productledalliance.com/",
+      "host": "world.productledalliance.com",
+      "stored": "2026-09-22",
+      "cadence": "annual",
+      "bytes": 1081437,
+      "hit": null
+    },
+    {
+      "name": "Hack Western",
+      "city": "London",
+      "url": "https://www.hackwestern.com/",
+      "host": "hackwestern.com",
+      "stored": "2026-11-20",
+      "cadence": "annual",
+      "bytes": 16556,
+      "hit": null
+    },
+    {
+      "name": "The AI Summit New York",
+      "city": "New York",
+      "url": "https://newyork.theaisummit.com/",
+      "host": "newyork.theaisummit.com",
+      "stored": "2026-12-09",
+      "cadence": "annual",
+      "bytes": 471294,
+      "hit": {
+        "id": "jsonld",
+        "start": "2026-12-09",
+        "end": "2026-12-10"
+      }
+    },
+    {
+      "name": "Hawaii Tech Week",
+      "city": "Honolulu",
+      "url": "https://hawaiitechweek.com/",
+      "host": "hawaiitechweek.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 378649,
+      "hit": null
+    },
+    {
+      "name": "John P. Ellbogen $50K Entrepreneurship Competition",
+      "city": "Laramie",
+      "url": "https://ellbogen50k.org/",
+      "host": "ellbogen50k.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 65392,
+      "hit": null
+    },
+    {
+      "name": "INTERFACE Omaha",
+      "city": "Omaha",
+      "url": "https://f2fevents.com/event/neb26/",
+      "host": "f2fevents.com",
+      "stored": "2026-11-05",
+      "cadence": "annual",
+      "bytes": 109527,
+      "hit": null
+    },
+    {
+      "name": "TechFest Louisville",
+      "city": "Louisville",
+      "url": "https://techfestlou.com",
+      "host": "techfestlou.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 124849,
+      "hit": null
+    },
+    {
+      "name": "Digital Summit Philadelphia",
+      "city": "Philadelphia",
+      "url": "https://www.digitalsummit.com/",
+      "host": "digitalsummit.com",
+      "stored": "2026-09-23",
+      "cadence": "annual",
+      "bytes": 222080,
+      "hit": null
+    },
+    {
+      "name": "Elevate Festival",
+      "city": "Toronto",
+      "url": "https://elevatefestival.ca/",
+      "host": "elevatefestival.ca",
+      "stored": "2026-09-22",
+      "cadence": "annual",
+      "bytes": 68293,
+      "hit": null
+    },
+    {
+      "name": "MITRE Embedded Capture the Flag",
+      "city": "Multiple cities, US & Canada",
+      "url": "https://ectf.mitre.org/",
+      "host": "ectf.mitre.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 92660,
+      "hit": null
+    },
+    {
+      "name": "Cultivate Conference",
+      "city": "Fargo",
+      "url": "https://grandfarm.com/cultivate/",
+      "host": "grandfarm.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 457386,
+      "hit": null
+    },
+    {
+      "name": "HackUSU",
+      "city": "Logan",
+      "url": "https://huntsman.usu.edu/hackusu/",
+      "host": "huntsman.usu.edu",
+      "stored": "2027-02-19",
+      "cadence": "annual",
+      "bytes": 67436,
+      "hit": null
+    },
+    {
+      "name": "NICAR Conference",
+      "city": "Indianapolis",
+      "url": "https://www.ire.org/training/conferences/nicar-2026/",
+      "host": "ire.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 339237,
+      "hit": null
+    },
+    {
+      "name": "Seattle Day of Data",
+      "city": "Seattle",
+      "url": "https://dayofdata.org/2026-11-12-dayofdata1155",
+      "host": "dayofdata.org",
+      "stored": "2026-11-12",
+      "cadence": "annual",
+      "bytes": 21425,
+      "hit": null
+    },
+    {
+      "name": "Desert Dev Lab Hackathon",
+      "city": "Albuquerque",
+      "url": "https://www.nmtechtalks.com/",
+      "host": "nmtechtalks.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 54769,
+      "hit": null
+    },
+    {
+      "name": "INTERFACE Anchorage",
+      "city": "Anchorage",
+      "url": "https://f2fevents.com/event/anc26/",
+      "host": "f2fevents.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 388767,
+      "hit": null
+    },
+    {
+      "name": "HLTH USA",
+      "city": "Las Vegas",
+      "url": "https://hlth.com/events/usa/",
+      "host": "hlth.com",
+      "stored": "2026-11-15",
+      "cadence": "annual",
+      "bytes": 165364,
+      "hit": {
+        "id": "jsonld",
+        "start": "2026-11-15",
+        "end": "2026-11-18"
+      }
+    },
+    {
+      "name": "BSidesROC",
+      "city": "Rochester",
+      "url": "https://bsidesroc.com",
+      "host": "bsidesroc.com",
+      "stored": "2027-03-20",
+      "cadence": "annual",
+      "bytes": 10095,
+      "hit": null
+    },
+    {
+      "name": "AgTech Week",
+      "city": "Fargo",
+      "url": "https://www.agtechweekfargo.com",
+      "host": "agtechweekfargo.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 306087,
+      "hit": null
+    },
+    {
+      "name": "RVAsec",
+      "city": "Richmond",
+      "url": "https://rvasec.com/",
+      "host": "rvasec.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 106760,
+      "hit": null
+    },
+    {
+      "name": "Hawaii International Conference on System Sciences",
+      "city": "Waikoloa",
+      "url": "https://hicss.hawaii.edu/",
+      "host": "hicss.hawaii.edu",
+      "stored": "2027-01-05",
+      "cadence": "annual",
+      "bytes": 140134,
+      "hit": null
+    },
+    {
+      "name": "ThunderPlains",
+      "city": "Oklahoma City",
+      "url": "https://2026.thunderplainsconf.com",
+      "host": "2026.thunderplainsconf.com",
+      "stored": "2026-10-21",
+      "cadence": "annual",
+      "bytes": 36361,
+      "hit": null
+    },
+    {
+      "name": "SF Tech Week",
+      "city": "San Francisco",
+      "url": "https://www.tech-week.com/",
+      "host": "tech-week.com",
+      "stored": "2026-10-05",
+      "cadence": "annual",
+      "bytes": 29415,
+      "hit": null
+    },
+    {
+      "name": "New Ventures BC Demo Day",
+      "city": "Vancouver",
+      "url": "https://www.newventuresbc.com/demo-day/",
+      "host": "newventuresbc.com",
+      "stored": "2026-09-14",
+      "cadence": "annual",
+      "bytes": 227677,
+      "hit": null
+    },
+    {
+      "name": "Innovate New Mexico Technology Showcase",
+      "city": "Albuquerque",
+      "url": "https://www.innovatenewmexico.com/2026showcase/",
+      "host": "innovatenewmexico.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 67387,
+      "hit": null
+    },
+    {
+      "name": "TennoCon",
+      "city": "London",
+      "url": "https://www.tennocon.com/en",
+      "host": "tennocon.com",
+      "stored": "2027-07-16",
+      "cadence": "annual",
+      "bytes": 22863,
+      "hit": null
+    },
+    {
+      "name": "ASU+GSV Summit",
+      "city": "San Diego",
+      "url": "https://www.asugsvsummit.com/",
+      "host": "asugsvsummit.com",
+      "stored": "2027-04-04",
+      "cadence": "annual",
+      "bytes": 260043,
+      "hit": null
+    },
+    {
+      "name": "Tech For Good Conference",
+      "city": "Chicago",
+      "url": "https://techforgoodconference.org",
+      "host": "techforgoodconference.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 72188,
+      "hit": null
+    },
+    {
+      "name": "Gartner Identity & Access Management Summit",
+      "city": "Las Vegas",
+      "url": "https://www.gartner.com/en/conferences/na/identity-access-management-us",
+      "host": "gartner.com",
+      "stored": "2026-12-07",
+      "cadence": "annual",
+      "bytes": 234797,
+      "hit": {
+        "id": "jsonld",
+        "start": "2026-12-07",
+        "end": "2026-12-09"
+      }
+    },
+    {
+      "name": "Columbus Startup Week",
+      "city": "Columbus",
+      "url": "https://sparkworksinnovation.com/event/columbus-startup-week-22/page/home-columbus-startup-week",
+      "host": "sparkworksinnovation.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 49285,
+      "hit": null
+    },
+    {
+      "name": "Lesbians Who Tech + Allies Summit",
+      "city": "New York",
+      "url": "https://lwtsquad.com/",
+      "host": "lwtsquad.com",
+      "stored": "2026-10-05",
+      "cadence": "annual",
+      "bytes": 665658,
+      "hit": null
+    },
+    {
+      "name": "GopherCon",
+      "city": "Seattle",
+      "url": "https://www.gophercon.com/",
+      "host": "gophercon.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 414529,
+      "hit": null
+    },
+    {
+      "name": "CHM Live",
+      "city": "Mountain View",
+      "url": "https://computerhistory.org/events/",
+      "host": "computerhistory.org",
+      "stored": "",
+      "cadence": "monthly",
+      "bytes": 80147,
+      "hit": null
+    },
+    {
+      "name": "UGAHacks",
+      "city": "Athens",
+      "url": "https://ugahacks.com/",
+      "host": "ugahacks.com",
+      "stored": "2027-02-05",
+      "cadence": "annual",
+      "bytes": 43254,
+      "hit": null
+    },
+    {
+      "name": "Vancouver Startup Week",
+      "city": "Vancouver",
+      "url": "https://www.vanstartupweek.ca/",
+      "host": "vanstartupweek.ca",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 22398,
+      "hit": null
+    },
+    {
+      "name": "PyLadies",
+      "city": "Multiple cities",
+      "url": "https://pyladies.com/locations/",
+      "host": "pyladies.com",
+      "stored": "",
+      "cadence": "monthly",
+      "bytes": 279841,
+      "hit": null
+    },
+    {
+      "name": "Game Developers Conference",
+      "city": "San Francisco",
+      "url": "https://gdconf.com/",
+      "host": "gdconf.com",
+      "stored": "2027-03-01",
+      "cadence": "annual",
+      "bytes": 925648,
+      "hit": {
+        "id": "jsonld",
+        "start": "2027-03-01",
+        "end": "2027-03-05"
+      }
+    },
+    {
+      "name": "Workplace Ninjas US",
+      "city": "Scottsdale",
+      "url": "https://dev.events/NA/US/AZ",
+      "host": "dev.events",
+      "stored": "2027-01-11",
+      "cadence": "annual",
+      "bytes": 31836,
+      "hit": {
+        "id": "jsonld",
+        "start": "2026-12-03",
+        "end": "2026-12-04"
+      }
+    },
+    {
+      "name": "DeveloperWeek",
+      "city": "Santa Clara",
+      "url": "https://www.developerweek.com/",
+      "host": "developerweek.com",
+      "stored": "2027-02-09",
+      "cadence": "annual",
+      "bytes": 276094,
+      "hit": {
+        "id": "jsonld",
+        "start": "2027-02-09",
+        "end": "2027-02-11"
+      }
+    },
+    {
+      "name": "Michigan Tech Week",
+      "city": "Detroit",
+      "url": "https://www.michigantechweek.com",
+      "host": "michigantechweek.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 111061,
+      "hit": null
+    },
+    {
+      "name": "SIGGRAPH",
+      "city": "Los Angeles",
+      "url": "https://s2026.siggraph.org/",
+      "host": "s2026.siggraph.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 96842,
+      "hit": null
+    },
+    {
+      "name": "Billington CyberSecurity Summit",
+      "city": "Washington",
+      "url": "https://billingtoncybersummit.com/",
+      "host": "billingtoncybersummit.com",
+      "stored": "2026-09-08",
+      "cadence": "annual",
+      "bytes": 32649,
+      "hit": null
+    },
+    {
+      "name": "apidays Toronto",
+      "city": "Toronto",
+      "url": "https://www.apidays.global/events/toronto/",
+      "host": "apidays.global",
+      "stored": "2026-09-09",
+      "cadence": "annual",
+      "bytes": 109504,
+      "hit": null
+    },
+    {
+      "name": "NetSuite SuiteWorld",
+      "city": "Las Vegas",
+      "url": "https://www.netsuitesuiteworld.com/",
+      "host": "netsuitesuiteworld.com",
+      "stored": "2026-10-25",
+      "cadence": "annual",
+      "bytes": 54563,
+      "hit": {
+        "id": "jsonld",
+        "start": "2026-10-25",
+        "end": "2026-10-28"
+      }
+    },
+    {
+      "name": "Venture Dallas",
+      "city": "Dallas",
+      "url": "https://www.venturedallas.org",
+      "host": "venturedallas.org",
+      "stored": "2026-10-22",
+      "cadence": "annual",
+      "bytes": 954421,
+      "hit": null
+    },
+    {
+      "name": "Stripe Sessions",
+      "city": "San Francisco",
+      "url": "https://stripe.com/sessions",
+      "host": "stripe.com",
+      "stored": "2027-04-28",
+      "cadence": "annual",
+      "bytes": 145932,
+      "hit": {
+        "id": "jsonld",
+        "start": "2027-05-04",
+        "end": "2027-05-06"
+      }
+    },
+    {
+      "name": "Global Day of Coderetreat",
+      "city": "Multiple cities",
+      "url": "https://www.coderetreat.org/",
+      "host": "coderetreat.org",
+      "stored": "2026-11-13",
+      "cadence": "annual",
+      "bytes": 22425,
+      "hit": null
+    },
+    {
+      "name": "Baltimore Health Tech Startup Symposium",
+      "city": "Baltimore",
+      "url": "https://ventures.jhu.edu/event/baltimore-health-tech-startup-symposium/",
+      "host": "ventures.jhu.edu",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 97900,
+      "hit": null
+    },
+    {
+      "name": "New Orleans Entrepreneur Week",
+      "city": "New Orleans",
+      "url": "https://www.noew.org",
+      "host": "noew.org",
+      "stored": "2027-03-08",
+      "cadence": "annual",
+      "bytes": 299423,
+      "hit": null
+    },
+    {
+      "name": "BSides Buffalo",
+      "city": "Buffalo",
+      "url": "https://www.bsidesbuffalo.org/",
+      "host": "bsidesbuffalo.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 120435,
+      "hit": null
+    },
+    {
+      "name": "Chi Hack Night",
+      "city": "Chicago",
+      "url": "https://chihacknight.org/",
+      "host": "chihacknight.org",
+      "stored": "",
+      "cadence": "weekly",
+      "bytes": 18984,
+      "hit": null
+    },
+    {
+      "name": "BSides Roanoke",
+      "city": "Roanoke",
+      "url": "https://bsidesroa.org",
+      "host": "bsidesroa.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 79205,
+      "hit": null
+    },
+    {
+      "name": "Arkansas Digital Government Summit",
+      "city": "Little Rock",
+      "url": "https://events.govtech.com/arkansas-digital-government-summit",
+      "host": "events.govtech.com",
+      "stored": "2026-10-13",
+      "cadence": "annual",
+      "bytes": 107834,
+      "hit": {
+        "id": "jsonld",
+        "start": "2026-10-13",
+        "end": "2026-10-13"
+      }
+    },
+    {
+      "name": "Cybersecurity, Stronger Together Conference",
+      "city": "Washington",
+      "url": "https://cyberconference.cps.gwu.edu/",
+      "host": "cyberconference.cps.gwu.edu",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 64380,
+      "hit": null
+    },
+    {
+      "name": "Montreal Games Week",
+      "city": "Montreal",
+      "url": "https://www.semainedujeuvideodemontreal.com/",
+      "host": "semainedujeuvideodemontreal.com",
+      "stored": "2026-11-10",
+      "cadence": "annual",
+      "bytes": 34627,
+      "hit": null
+    },
+    {
+      "name": "BSidesCharm",
+      "city": "Baltimore",
+      "url": "https://www.bsidescharm.org/",
+      "host": "bsidescharm.org",
+      "stored": "2027-04-24",
+      "cadence": "annual",
+      "bytes": 148435,
+      "hit": null
+    },
+    {
+      "name": "InnovateHer",
+      "city": "West Lafayette",
+      "url": "https://innovateherhacks.org/",
+      "host": "innovateherhacks.org",
+      "stored": "2027-02-06",
+      "cadence": "annual",
+      "bytes": 14853,
+      "hit": null
+    },
+    {
+      "name": "Recurse Center",
+      "city": "Brooklyn",
+      "url": "https://www.recurse.com/",
+      "host": "recurse.com",
+      "stored": "",
+      "cadence": "rolling",
+      "bytes": 40621,
+      "hit": null
+    },
+    {
+      "name": "CIPS Ontario Women in Technology Conference",
+      "city": "Toronto",
+      "url": "https://cips.ca/event/2026-cips-ontario-3rd-annual-women-in-technology-conference/",
+      "host": "cips.ca",
+      "stored": "2026-09-18",
+      "cadence": "annual",
+      "bytes": 155787,
+      "hit": {
+        "id": "jsonld",
+        "start": "2026-09-18",
+        "end": "2026-09-18"
+      }
+    },
+    {
+      "name": "BrickHack",
+      "city": "Rochester",
+      "url": "https://brickhack.io/",
+      "host": "brickhack.io",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 19984,
+      "hit": null
+    },
+    {
+      "name": "Ignite Summit",
+      "city": "Fredericton",
+      "url": "https://myignite.ca/",
+      "host": "myignite.ca",
+      "stored": "2026-10-20",
+      "cadence": "annual",
+      "bytes": 335575,
+      "hit": null
+    },
+    {
+      "name": "OpenSearchCon North America",
+      "city": "San Jose",
+      "url": "https://events.linuxfoundation.org/",
+      "host": "events.linuxfoundation.org",
+      "stored": "2026-09-22",
+      "cadence": "annual",
+      "bytes": 316130,
+      "hit": null
+    },
+    {
+      "name": "DevOpsDays Detroit",
+      "city": "Detroit",
+      "url": "https://devopsdays.org/events",
+      "host": "devopsdays.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 59379,
+      "hit": null
+    },
+    {
+      "name": "AWE USA",
+      "city": "Long Beach",
+      "url": "https://www.awexr.com/usa-2027/",
+      "host": "awexr.com",
+      "stored": "2027-06-14",
+      "cadence": "annual",
+      "bytes": 79120,
+      "hit": null
+    },
+    {
+      "name": "StartupCincy Week",
+      "city": "Cincinnati",
+      "url": "https://startupcincyweek.com",
+      "host": "startupcincyweek.com",
+      "stored": "2026-10-05",
+      "cadence": "annual",
+      "bytes": 187702,
+      "hit": null
+    },
+    {
+      "name": "Phoenix Technology Summit",
+      "city": "Phoenix",
+      "url": "https://eitevents.com/event_pages/phoenix-technology-summit-2026/",
+      "host": "eitevents.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 816792,
+      "hit": null
+    },
+    {
+      "name": "UofTHacks",
+      "city": "Toronto",
+      "url": "https://uofthacks.com/",
+      "host": "uofthacks.com",
+      "stored": "2027-01-15",
+      "cadence": "annual",
+      "bytes": 125060,
+      "hit": null
+    },
+    {
+      "name": "Women in Tech WNY",
+      "city": "Buffalo",
+      "url": "https://info.techbuffalo.org/witwny",
+      "host": "info.techbuffalo.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 61974,
+      "hit": null
+    },
+    {
+      "name": "Day of Data Toronto",
+      "city": "Toronto",
+      "url": "https://sqlsaturday.com/2026-09-26-sqlsaturday1160/",
+      "host": "sqlsaturday.com",
+      "stored": "2026-09-26",
+      "cadence": "annual",
+      "bytes": 592,
+      "hit": null
+    },
+    {
+      "name": "PGConf.dev",
+      "city": "Montreal",
+      "url": "https://2027.pgconf.dev/",
+      "host": "2027.pgconf.dev",
+      "stored": "2027-05-11",
+      "cadence": "annual",
+      "bytes": 5933,
+      "hit": null
+    },
+    {
+      "name": "HackPrinceton",
+      "city": "Princeton",
+      "url": "https://www.hackprinceton.com/",
+      "host": "hackprinceton.com",
+      "stored": "",
+      "cadence": "biannual",
+      "bytes": 256800,
+      "hit": null
+    },
+    {
+      "name": "Maker Faire NW Arkansas",
+      "city": "Fayetteville",
+      "url": "https://nwa.makerfaire.com/",
+      "host": "nwa.makerfaire.com",
+      "stored": "2026-09-12",
+      "cadence": "annual",
+      "bytes": 104650,
+      "hit": null
+    },
+    {
+      "name": "Victoria Tech Week",
+      "city": "Victoria",
+      "url": "https://luma.com/victoriatechweek2026",
+      "host": "luma.com",
+      "stored": "2026-09-21",
+      "cadence": "annual",
+      "bytes": 655965,
+      "hit": {
+        "id": "jsonld",
+        "start": "2026-09-21",
+        "end": "2026-09-25"
+      }
+    },
+    {
+      "name": "Figma Config",
+      "city": "San Francisco",
+      "url": "https://config.figma.com/",
+      "host": "config.figma.com",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 258985,
+      "hit": null
+    },
+    {
+      "name": "Airflow Summit",
+      "city": "Austin",
+      "url": "https://airflowsummit.org",
+      "host": "airflowsummit.org",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 32073,
+      "hit": null
+    },
+    {
+      "name": "SecTor",
+      "city": "Toronto",
+      "url": "https://www.blackhat.com/sector/2026/",
+      "host": "blackhat.com",
+      "stored": "2026-10-06",
+      "cadence": "annual",
+      "bytes": 22284,
+      "hit": {
+        "id": "jsonld",
+        "start": "2026-10-06",
+        "end": "2026-10-08"
+      }
+    },
+    {
+      "name": "Maine Entrepreneurs Summit",
+      "city": "Portland",
+      "url": "https://www.mced.biz/events",
+      "host": "mced.biz",
+      "stored": "",
+      "cadence": "annual",
+      "bytes": 579434,
+      "hit": null
+    },
+    {
+      "name": "RIHub Pizza & Pitches",
+      "city": "Providence",
+      "url": "https://rihub.org",
+      "host": "rihub.org",
+      "stored": "",
+      "cadence": "monthly",
+      "bytes": 127290,
+      "hit": null
+    }
+  ]
+}
