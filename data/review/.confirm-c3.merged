@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Tech Week Los Angeles",
+    "city": "Los Angeles",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "tech-week.com sits behind a Vercel Security Checkpoint that returns 429 to every fetcher and to WebFetch, so the organiser's official LA Tech Week calendar on Luma was read instead: luma.com/latw, calendar name 'LA Tech Week', blurb 'Welcome to ... Tech Week from October 12-18, 2026'. Cross-checked against the sibling a16z calendars to rule out a copy-paste of another city's window: luma.com/sftw gives 'San Francisco Tech Week from October 5-11, 2026' and luma.com/nytw gives 'New York Tech Week from June 1-7, 2026', so Oct 12-18 is LA's own dates. Matches the stored 2026-10-12..2026-10-18. NOTE: this record and the 'LA Tech Week' record are the same a16z event - same city, same dates, same organiser - flagged to the orchestrator rather than removed unilaterally."
+  },
+  {
+    "name": "LA Tech Week",
+    "city": "Los Angeles",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "Same read as above: tech-week.com returns a Vercel Security Checkpoint (429) to curl and to WebFetch, so the organiser's own LA Tech Week calendar luma.com/latw was used - 'LA Tech Week', 'October 12-18, 2026'. Distinct from SF Tech Week (Oct 5-11 2026) and NY Tech Week (Jun 1-7 2026) on the same platform, so not a mislabelled sibling. Stored 2026-10-12..2026-10-18 and last_date 2025-10-13 are consistent with the annual mid-October LA slot. Duplicate of the 'Tech Week Los Angeles' record; see note there."
+  },
+  {
+    "name": "dev2next",
+    "city": "Lone Tree",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "dev2next.com renders from a JS shell; the date lives in /main.js, which contains the rendered heading 'Lone Tree, CO - October 12 - 15, 2026' and the venue block 'Denver Marriott South at Park Meadows / 10345 Park Meadows Drive / Lone Tree, CO 80124'. Matches stored 2026-10-12..2026-10-15 and city Lone Tree. The other date in the bundle, 'To get the special group rate please book no later than September 21, 2026', is a hotel booking cutoff, not the event - the record correctly did not use it."
+  },
+  {
+    "name": "Midwest Gaming Classic",
+    "city": "Milwaukee",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "midwestgamingclassic.com is behind a Cloudflare interstitial ('Just a moment...', 403) for curl, WebFetch and r.jina.ai alike. Confirmed instead from the indexed title of the organiser's own homepage, which reads verbatim 'April 23-25, 2027 - Midwest Gaming Classic', with the /attend/ and /location/ pages giving Preview Night Fri Apr 23 6pm-12am, Full Show Sat Apr 24 10am-8pm, Family Day Sun Apr 25 10am-5pm at the Baird Center, 400 W. Wisconsin Avenue, Milwaukee. The organiser's own Facebook page carries the same 'April 23-25, 2027 Baird Center Milwaukee WI'. Matches stored 2027-04-23..2027-04-25 and venue Baird Center."
+  },
+  {
+    "name": "Hackville",
+    "city": "Mississauga",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "hackville.io still serves the 2026 edition as its structured data ('startDate':'2026-01-17','endDate':'2026-01-18', FAQ 'The event is scheduled to be on January 17-18, 2026. Hosted at Sheridan College's Hazel McCallion Campus (HMC) near Square One'), but its live banner is 2027-facing: 'For the upcoming 2027 season we would love to hear back from our community' and 'Share your interest to get priority access for Hackville 2027'. No day-level 2027 date is published on the organiser's site yet. MLH's 2027 season calendar (mlh.io/seasons/2027/events, the season registry these organisers submit to; its listing links back to hackville.io) carries 'Hackville 2027, JAN 22 - 24, Mississauga, Ontario, CA, In-Person' - startsAt 2027-01-22, endsAt 2027-01-24, matching the stored 2027-01-22..2027-01-24 exactly. In-person and Mississauga both hold."
+  },
+  {
+    "name": "NorthSec",
+    "city": "Montreal",
+    "status": "corrected",
+    "cycle": "c3",
+    "evidence": "nsec.io homepage: 'NorthSec Conference 2027 / May 10-16, 2027 / Montreal, Canada', with Training May 10-11-12, Conference May 13-14, CTF May 14-15-16, venue 'Bonsecours Market 350 St-Paul East' (matches the stored Marche Bonsecours). Stored window was 2027-05-17..2027-05-23, exactly seven days late. Patched to 2027-05-10..2027-05-16. The page also carries dead leftover JSON-LD ('startDate':'2020-05-10T08:00', 'endDate':'2012-05-17T16:00'); its 05-17 is the plausible source of the wrong stored start, and it was ignored in favour of the human-readable copy."
+  },
+  {
+    "name": "Vintage Computer Festival Montreal",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "vcfed.org/events/vcf-montreal/ redirects to vcfed.org/vcf-montreal/, whose body reads 'VCF Montreal - CLICK HERE FOR VCF Montreal 2026 Version 2.0 - WHEN: Nov. 7-8, 2026 - HOURS: 9:00 to 17:00 Saturday and 9:00 to 15:00 Sunday'. The same page's Upcoming Events sidebar lists several sibling VCF events (VCF MidWest Sep 12-13 2026, VCF Swap Meet NJ Oct 17 2026, Repair Workshop @ InfoAge Sep 19-20) - the Nov 7-8 line is the one explicitly labelled 'VCF Montreal'. Matches stored 2026-11-07..2026-11-08."
+  },
+  {
+    "name": "Global Game Jam",
+    "city": "Multiple cities",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "globalgamejam.org/2026 carries a 'Save the Dates for GGJ 2027' section reading 'The 2027 Global Game Jam will take place from January 25-31, 2027. Prep Week will kick off the week before the jam'. Consistent with globalgamejam.org/about ('The annual event is held the last week in January'). Matches stored 2027-01-25..2027-01-31. Umbrella record is legitimate: /jam-sites/2026 shows hundreds of individual sites worldwide with a site-type filter of In-Person Only / Hybrid / Online-Virtual Only, so 'Multiple cities' plus 'Hundreds of local jam sites' is accurate rather than an organiser's head office."
+  },
+  {
+    "name": "Southwestern Ontario Drupal Camp",
+    "city": "Multiple cities",
+    "status": "corrected",
+    "cycle": "c3",
+    "evidence": "The camp's own site swo.drupalcanada.org: 'Southwestern Ontario Drupal Camp - Oct 23-24, 2026 - Kitchener-Waterloo', 'a day of sessions and networking at the Kitchener Public Library on Friday, followed by Drupal in a Day and contribution time on Saturday'. drupal.org's listing (Akamai 'Client Challenge' to curl; read through WebFetch) independently gives 23-24 Oct 2026, format 'In person', Friday at Kitchener Public Library, 85 Queen Street North, Kitchener ON N2H 2H1, Saturday at Conestoga College Waterloo Campus. Dates confirmed as stored; patched the placeholder city 'Multiple cities' / region 'US & Canada' to Kitchener / Ontario, retargeted the URL from drupal.org to the organiser's own site, and filled the empty venue."
+  },
+  {
+    "name": "BSides NOLA",
+    "city": "New Orleans",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "nolabsides.com redirects to the organisers' Notion site (bsidesnola.notion.site), which renders only via JS; pulled the block content through Notion's loadCachedPageChunkV2 API. The page's own headings read 'BSidesNOLA May 11, 2027 tickets ON SALE NOW!' with a ticket link to events.ticketleap.com/tickets/bsidesnola/bsidesnola-2027-may-pre-release, alongside 'BSidesNOLA 2026 may be over, but the knowledge sharing continues.' Single-day, matching stored 2027-05-11..2027-05-11. Still live, still New Orleans ('an all volunteer run Cybersecurity Event for the Silicon Bayou')."
+  },
+  {
+    "name": "Django Girls New York City",
+    "city": "New York",
+    "status": "corrected",
+    "cycle": "c3",
+    "evidence": "djangogirls.org/en/events/ tiles the workshop as 'New York City - 28th November 2026' and links to /en/nyc/. That event page gives the real span: body text 'It will take place on Novemebr 27th and 28th, 2026 at Fractal Tech Hub, 111 Conselyea St, Brooklyn, New York City', and a schedule of 'Friday, November 27th 2026 - 6:00PM Check-in begins / 7:00PM Official opening and lightning talks / 7:30PM Installation party' followed by 'Saturday, November 28th 2026 - 9:00AM Breakfast ... 6:00PM Wrap up and sendoff'. Attendees are expected Friday evening, so patched start to 2026-11-27 with end 2026-11-28, plus the event URL and Brooklyn venue. The page's banner 'November 27th - 30th, 2026' is contradicted by its own body and schedule and was not used."
+  },
+  {
+    "name": "DrupalCon North America",
+    "city": "Orlando",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "events.drupal.org returns an Akamai 'Client Challenge' page to curl; read through WebFetch instead, which returns the site's own headline 'DrupalCon Orlando, 22-25 March 2027'. Matches stored 2027-03-22..2027-03-25 and city Orlando. Venue in the record (Hyatt Regency Grand Cypress Resort) left unchanged."
+  },
+  {
+    "name": "uOttaHack",
+    "city": "Ottawa",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "2027.uottahack.ca is a React shell whose JS bundle carries no dates, but its own head metadata is explicit: title 'uOttaHack 9' and description / og:description 'The capital's biggest hackathon returns for its ninth showing. uOttaHack 9 takes over the University of Ottawa this January 2027 for a weekend of big ideas. Tickets drop soon'. That confirms edition, month, city, venue and in-person format but not the days. Day-level dates from MLH's 2027 season registry (mlh.io/seasons/2027/events), whose entry 'uOttaHack 9, JAN 15 - 17, Ottawa, Ontario, CA, In-Person' links back to 2027.uottahack.ca and carries startsAt 2027-01-15 / endsAt 2027-01-17 - matching the stored 2027-01-15..2027-01-17 exactly."
+  },
+  {
+    "name": "WEHack",
+    "city": "Richardson",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "wehackutd.com renders 'WEHack 2027 Presents / WEHack 2027 Coming Soon / Spring 2027 / Fill out our Interest Form!' - the organiser has committed to a Spring 2027 edition but has not published days on its own site. MLH's 2027 season registry lists 'WEHack, APR 10 - 11, Richardson, Texas, US, In-Person' (startsAt 2027-04-10, endsAt 2027-04-11), matching the stored 2027-04-10..2027-04-11 exactly and consistent with the organiser's 'Spring 2027'. City Richardson and venue University of Texas at Dallas both hold (UTD is in Richardson, TX)."
+  },
+  {
+    "name": "San Diego CyberCon",
+    "city": "San Diego",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "sdcybercon.org is live and actively maintained (speaker line-up, sponsors, a chapter calendar running through Sep-Oct 2026) but shows no date - it says 'REGISTRATION COMING SOON!', which is why the automated check read as ambiguous. Confirmed from the co-organising nonprofit's listing at sdccoe.org/event/san-diego-cybercon/, whose JSON-LD gives startDate 2026-11-13T08:00:00-08:00 and endDate 2026-11-13T18:00:00-08:00 and whose Website field points back to https://sdcybercon.org/. Single day, matching stored 2026-11-13..2026-11-13."
+  },
+  {
+    "name": "SF Hacks",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "sfhacks.io (redirects to www.sfhacks.io), title 'SF Hacks 2027', renders 'February 2027 - San Francisco' in the hero and 'Event / February 2027 / San Francisco State University / 1600 Holloway Avenue' in the footer, alongside an 'MLH 2027 Season' badge. Month, city, venue and in-person format confirmed on the organiser's own page; days come from MLH's 2027 season registry entry 'SF Hacks, FEB 19 - 21, In-Person' (startsAt 2027-02-19T17:00Z, endsAt 2027-02-21T21:00Z - real submitted times, not a placeholder), matching stored 2027-02-19..2027-02-21."
+  },
+  {
+    "name": "OPI Summit on DPU/IPUs",
+    "city": "San Jose",
+    "status": "corrected",
+    "cycle": "c3",
+    "evidence": "opiproject.org/events/ lists, under October 2026: 'Thu 15 - OPI Summit on DPU/IPUs - October 15 @ 8:00 am - 2:00 pm - The Tech Interactive, 201 S. Market St., San Jose, CA', with the blurb 'The Second OPI Summit on DPU/IPUs will be co-located with the OCP Global summit'. Stored dates 2026-10-15..2026-10-15 and city San Jose are correct and unchanged. Patched only the link and the empty venue: the stored URL was the opiproject.org homepage, which never mentions the summit (its only date is a 2022 press item), which is what made the automated check ambiguous."
+  },
+  {
+    "name": "OIN Connect",
+    "city": "San Jose",
+    "status": "corrected",
+    "cycle": "c3",
+    "evidence": "openinventionnetwork.com/oin-connect-2026/ headlines 'October 19, 2026 - Hayes Mansion | San Jose, CA - #OINConnect', describes it as OIN's inaugural one-day summit open to all OIN Community Members preceding the Linux Foundation Legal Summit on Oct 20-21, and gives the venue address as 200 Edenvale Avenue, San Jose, CA 95136. Stored dates 2026-10-19..2026-10-19 and city San Jose are correct and unchanged. Patched only the link and the empty venue: the stored URL was the OIN corporate homepage, which carries no event date and whose only address is OIN's own office at 4819 Emperor Blvd, Durham NC - the classic head-office trap."
+  },
+  {
+    "name": "CyberBay Summit",
+    "city": "Tampa",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "cyberbay.org/summit/ (the homepage carries no date, hence the ambiguous read) states 'Save the Date for CyberBay Summit 2027 - March 22 - 24 - Tampa, FL' and repeats it under Conference Details: 'Name: The CyberBay Summit 2027 / Date: March 22-24, 2027 / Location: JW Marriott Tampa Water Street / Expected Attendance: 1,000+'. Matches stored 2027-03-22..2027-03-24, city Tampa and venue JW Marriott Tampa Water Street. Site is current - it also carries a 'Highlights from CyberBay Summit 2026' recap and an open call for speakers closing October 30."
+  },
+  {
+    "name": "CyberForce Competition",
+    "city": "Tinley Park",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "The DOE's own page cyberforce.energy.gov/cyberforce-competition/2026-competition/ states 'The annual CyberForce Competition was held as an in-person competition in 2026 for competing Blue team participants on November 13-14, 2026 at the Tinley Park Convention Center', with registration having opened July 20, 2026 and a cap of 100 teams. Matches stored 2026-11-13..2026-11-14, city Tinley Park and venue Tinley Park Convention Center, and confirms in-person format."
+  },
+  {
+    "name": "ElleHacks",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "ellehacks.com is a 1.1KB React shell whose title element is still 'ElleHacks 2026'; its JS bundle renders the current 2027 page - heading 'ElleHacks 2027' with subtitle 'To Be Announced - In-person event', FAQ 'ElleHacks will be hosted at York University (Keele Campus) in Toronto, Ontario, Canada', 'There will be no option to participate in the event virtually', address 'York University, 4700 Keele St, North York, ON M3J 1P3'. So the organiser confirms edition, venue and in-person-only but has not yet posted days. Day-level dates from MLH's 2027 season registry: 'ElleHacks, JAN 29 - 31' (startsAt 2027-01-29, endsAt 2027-01-31), matching stored 2027-01-29..2027-01-31 exactly."
+  },
+  {
+    "name": "MakeUofT",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "makeuoft.ca (the http URL redirects to https) is titled 'MakeUofT 2027' and shows 'University of Toronto - TBD, 2027' in its hero, with the rest of the page still describing the 2026 makeathon (countdown constants Dec 10 2025 / Jan 28 2026 / Feb 14 2026, 'Days Schedule (2026)'), venue 'Myhal Centre for Engineering Innovation and Entrepreneurship, University of Toronto St. George Campus'. The organiser has not yet published 2027 days. MLH's 2027 season registry lists 'MakeUofT, FEB 13 - 14' with real submitted times (startsAt 2027-02-13T14:00Z, endsAt 2027-02-14T21:00Z), matching stored 2027-02-13..2027-02-14 exactly; venue and city unchanged."
+  },
+  {
+    "name": "UofTHacks",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "uofthacks.com, title 'UofTHacks 14', hero reads 'January 2027 | In-person event - UofTHacks 14', 'a memorable 36-hour in-person hackathon'; the FAQ is stale copy still referencing 'UofTHacks 13 ... in January, 2026 ... hosted entirely in-person in the Myhal Centre' and 'we will not have any virtual aspects to this year's event'. Month, edition, venue (Myhal Centre, University of Toronto) and in-person format confirmed on the organiser's page; days from MLH's 2027 season registry entry 'UofTHacks, JAN 15 - 17' (startsAt 2027-01-15, endsAt 2027-01-17), matching stored 2027-01-15..2027-01-17."
+  },
+  {
+    "name": "PNW Day of Data",
+    "city": "Vancouver",
+    "status": "corrected",
+    "cycle": "c3",
+    "evidence": "dayofdata.org/2026-11-07-dayofdata1149/ - the record's own URL - reads 'PNW Day of Data 2026 (#1149) / Event Date : 07 November 2026 / This event is: in-person', 'We are returning to the Washington State University Vancouver campus. WSUV is located in Vancouver, Washington USA', address 14204 NE Salmon Creek Avenue, and closes with 'meet fellow data professionals ... on November 7th!'. The only mention of a Friday is 'Optional Friday all-day pre-conference sessions will be announced soon' - unscheduled. Stored start of 2026-11-06 would have sent someone to WSUV a day early, so patched to 2026-11-07..2026-11-07 and filled the empty venue."
+  },
+  {
+    "name": "SwampHacks",
+    "city": "Gainesville",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "swamphacks.com redirects to xii.swamphacks.com, a 467-byte React shell (the 'likely a captcha' stub the script saw). Chasing its bundle /assets/index-BkqfjGkj.js yields the rendered date 'Oct 16 - 18, 2026' and the ISO form 2026-10-16. Independently, MLH's 2027 season calendar lists 'SwampHacks XII, OCT 16 - 18, Gainesville, Florida, US, In-Person' (startsAt 2026-10-16, endsAt 2026-10-18). Matches stored 2026-10-16..2026-10-18, city Gainesville, venue University of Florida."
+  },
+  {
+    "name": "SAP Connect",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "sap.com returns 403 to curl on every path from this host. Read SAP's own event page through WebFetch instead - www.sap.com/events/connect/attendee-information.html gives 'Dates: October 5-7, 2026', 'Location: Las Vegas, Nevada', across the Las Vegas Convention Center (main venue), Fontainebleau and Resorts World. Matches stored 2026-10-05..2026-10-07 and city Las Vegas, and confirms the event is real and in-person rather than a dev.events scraping artefact. The record's URL (sap.com/events.html, SAP's own generic events index) was left alone since it is the organiser's own domain, but it never names SAP Connect - that is why the automated check could not settle it."
+  },
+  {
+    "name": "MariHacks",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "marihacks.com is a 476-byte shell; its bundle /assets/index-29e2ddfb.js renders 'April, 2027' in the hero, 'an unforgettable hackathon experience in April 2027', 'MariHacks 10.0 is coming in 2027! The exact dates and full schedule will be announced soon, stay tuned!', FAQ 'The 10th edition of MariHacks will be in person at Marianopolis College', 'the entire event will be held in-person at Marianopolis', plus an MLH 2027-season trust badge. Month, city, in-person format and organiser confirmed; the organiser explicitly has not posted days. Day-level dates from MLH's 2027 season registry: 'MariHacks, APR 09 - 10' (startsAt 2027-04-09, endsAt 2027-04-10), matching stored 2027-04-09..2027-04-10 and consistent with the organiser's stated April 2027."
+  },
+  {
+    "name": "WiCHacks",
+    "city": "Rochester",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "wichacks.io is a 469-byte shell (the 'likely a captcha' stub); its bundle /assets/index-5My-y02t.js contains a live countdown target of new Date('2027-02-27T12:00:00-05:00'), i.e. a Feb 27 2027 start in US Eastern time. MLH's 2027 season registry corroborates the full span: 'WiCHacks, FEB 27 - 28' (startsAt 2027-02-27T15:00Z, endsAt 2027-02-28T21:00Z - real submitted times). Matches stored 2027-02-27..2027-02-28, city Rochester, venue Rochester Institute of Technology."
+  },
+  {
+    "name": "Difinity Conference Toronto",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "difinityconf.com is a 486-byte shell; its bundle /assets/index-DNIyKcm-.js renders the countdown label 'Toronto, 10th and 11th Sep 2026' driven by new Date('2026-09-10T00:00:00'), with registration links to shop.radacad.com/group/difinity-toronto-2026/ and a venue card naming 'Microsoft Toronto'. Matches stored 2026-09-10..2026-09-11, city Toronto and venue Microsoft Toronto, Suite 4400, 81 Bay St. The site also markets separate Melbourne and Auckland editions, so the Toronto-specific strings were the ones used."
+  },
+  {
+    "name": "ServiceNow Knowledge",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "c3",
+    "evidence": "www.servicenow.com resets the TLS connection for curl (HTTP 000 on /events/knowledge.html, /events/knowledge/happening.html, /events.html and knowledge.servicenow.com) and returns 403 to WebFetch and to r.jina.ai, so no direct read was possible. Confirmed from the indexed text of ServiceNow's own page www.servicenow.com/events/knowledge.html, which reads 'Knowledge 2027 is May 4-6 in Las Vegas' / 'Knowledge returns May 4-6, 2027 to celebrate 20 years', with the Venetian Resort as the venue. Matches stored 2027-05-04..2027-05-06 and city Las Vegas. Flagging that this rests on the search index of the organiser's own page rather than a direct fetch."
+  }
+]

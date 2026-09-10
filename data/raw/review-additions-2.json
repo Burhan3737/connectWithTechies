@@ -940,10 +940,10 @@
       "open-source",
       "cms"
     ],
-    "city": "Various",
+    "city": "Kitchener",
     "region": "Ontario",
     "country": "Canada",
-    "venue": "",
+    "venue": "Kitchener Public Library (Fri); Conestoga College Waterloo Campus (Sat)",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-23",
@@ -953,7 +953,7 @@
     "attendance": "",
     "cost": "paid",
     "audience": "Drupal developers and site builders in southwestern Ontario",
-    "url": "https://www.drupal.org/community/events/southwestern-ontario-drupal-camp-2026-10-23",
+    "url": "https://swo.drupalcanada.org/",
     "description": "Regional Drupal camp for the southwestern Ontario community, listed on the official Drupal community events calendar for 23-24 October 2026.",
     "source": "https://www.drupal.org/community/events"
   },

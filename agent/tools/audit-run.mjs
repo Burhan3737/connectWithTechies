@@ -47,7 +47,27 @@ try {
   add('note', 'no-baseline', `Could not read data/events.json at ${SINCE}; skipping before/after checks.`);
 }
 
-const byKey = (arr) => new Map(arr.map((e) => [`${norm(e.name)}|${norm(e.city)}`, e]));
+/**
+ * Identity is the name, not name+city.
+ *
+ * Keying on name+city made every legitimate city correction look like a
+ * catastrophe: the record vanished under its old key and reappeared under a new
+ * one, so a single fix reported as one removal, one addition and one skipped
+ * queue row. Correcting a city is the most common repair this dataset needs,
+ * and an audit that calls it data loss is an audit nobody will read.
+ *
+ * Names are near-unique here; where one is not, the city disambiguates.
+ */
+const idOf = (e) => norm(e.name);
+const byKey = (arr) => {
+  const m = new Map();
+  for (const e of arr) {
+    const k = idOf(e);
+    // Two genuinely different events sharing a name are kept apart by city.
+    m.set(m.has(k) ? `${k}|${norm(e.city)}` : k, e);
+  }
+  return m;
+};
 
 /* ---- 1. coverage --------------------------------------------------------- */
 
@@ -101,11 +121,13 @@ if (existsSync(snapshot)) {
 const ledger = existsSync(join(REVIEW, 'verified.json'))
   ? JSON.parse(readFileSync(join(REVIEW, 'verified.json'), 'utf8')).entries : {};
 
+// Match the answer on name alone. A curator that corrects an event's city
+// files its ledger entry under the corrected city, which is right — insisting
+// on the dispatched city would report the fix as a skipped row.
 const answeredToday = new Set(
-  Object.values(ledger).filter((v) => v.checked_on === today)
-    .map((v) => `${norm(v.name)}|${norm(v.city)}`));
+  Object.values(ledger).filter((v) => v.checked_on === today).map((v) => norm(v.name)));
 
-const unanswered = dispatched.filter((d) => !answeredToday.has(`${norm(d.name)}|${norm(d.city)}`));
+const unanswered = dispatched.filter((d) => !answeredToday.has(norm(d.name)));
 if (dispatched.length) {
   add(unanswered.length ? 'blocking' : 'info', 'queue-coverage',
     `${dispatched.length - unanswered.length}/${dispatched.length} dispatched rows have a ledger entry dated ${today}`);
@@ -146,7 +168,7 @@ for (const e of now.events) {
 
 /* ---- 5. duplicates ------------------------------------------------------- */
 
-const nameCity = new Map(), pageCity = new Map();
+const nameCity = new Map(), pageCity = new Map(), sameDay = new Map();
 for (const e of now.events) {
   const nk = `${norm(e.name)}|${norm(e.city)}`;
   const page = String(e.url).toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/[?#].*$/, '').replace(/\/+$/, '');
@@ -158,6 +180,32 @@ for (const e of now.events) {
       `${e.name} and ${pageCity.get(pk).name} share ${page} in ${e.city} — these merge into one on the next build`);
   }
   pageCity.set(pk, e);
+
+  /**
+   * Same host, same city, same start date, different path. The page-key dedup
+   * misses these because the paths differ — Tech Week Los Angeles and LA Tech
+   * Week hid there for weeks.
+   *
+   * But a shared host and start date is also exactly what a tech week and the
+   * events inside it look like: a2Tech360 runs eleven days and Tech Homecoming
+   * is a career fair on its opening day, both on a2tech360.com. So only an
+   * identical type *and* an identical span is treated as a duplicate; anything
+   * else is a warning, because the honest reading is usually "one is part of
+   * the other".
+   */
+  if (e.next_date) {
+    const host = String(e.url).toLowerCase().replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+    const sk = `${host}|${norm(e.city)}|${e.next_date}`;
+    const twin = sameDay.get(sk);
+    if (twin) {
+      const identical = twin.type === e.type && (twin.next_date_end || '') === (e.next_date_end || '');
+      add(identical ? 'blocking' : 'warn', 'duplicate',
+        identical
+          ? `${e.name} and ${twin.name}: same city, type and span on ${e.next_date} via ${host} — one event filed twice`
+          : `${e.name} (${e.type}) and ${twin.name} (${twin.type}) share ${host} and start ${e.next_date} in ${e.city} — check whether one runs inside the other`);
+    }
+    sameDay.set(sk, e);
+  }
 }
 
 /* ---- 6. links the run touched ------------------------------------------- */
@@ -169,7 +217,9 @@ let changedUrls = [];
 if (before) {
   const a = byKey(before.events);
   for (const e of now.events) {
-    const prev = a.get(`${norm(e.name)}|${norm(e.city)}`);
+    // Must use the same key shape byKey builds, or every event reads as new and
+    // the "changed links" probe silently becomes a full re-probe of the dataset.
+    const prev = a.get(idOf(e)) || a.get(`${idOf(e)}|${norm(e.city)}`);
     if (prev && prev.url !== e.url) changedUrls.push(e);
     else if (!prev) changedUrls.push(e);   // newly added: never been probed
   }

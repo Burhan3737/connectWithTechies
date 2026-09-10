@@ -1,0 +1,20 @@
+[
+  {
+    "match": { "name": "PAX West", "city": "Seattle" },
+    "action": "update",
+    "reason": "west.paxsite.com now advertises the next edition: header reads 'SEPTEMBER 3-6, 2027' / 'Sep 3 - 6, 2027 Seattle', and the page's own Event JSON-LD carries startDate 2027-09-03 / endDate 2027-09-07 (offset +08:00, i.e. Sep 3 07:00 - Sep 6 15:00 Pacific). The record's 2026 edition (last_date 2026-09-04) has run, so next_date was empty; filling it from the organiser's page.",
+    "set": { "next_date": "2027-09-03", "next_date_end": "2027-09-06" }
+  },
+  {
+    "match": { "name": "seL4 Summit", "city": "Vancouver" },
+    "action": "update",
+    "reason": "Dates are right (last_date 2026-09-01 matches), but the stored URL was the generic Linux Foundation calendar at events.linuxfoundation.org/about/calendar/, which lists only upcoming events and no longer names seL4 Summit at all - it cannot settle this record. The dedicated organiser page events.linuxfoundation.org/sel4-summit/ returns 200 with JSON-LD startDate 2026-09-01 / endDate 2026-09-03, and sel4.systems confirms Vancouver, Hyatt Regency. Repointing the URL to the event's own page.",
+    "set": { "url": "https://events.linuxfoundation.org/sel4-summit/" }
+  },
+  {
+    "match": { "name": "EWF Annual Conference", "city": "Aurora" },
+    "action": "update",
+    "reason": "Dates confirmed unchanged (2026-11-04 to 2026-11-06), but the stored URL was the ewfglobal.com homepage, which carries no date at all - that is why the automated check flagged this row ambiguous. ewfglobal.com/events/ (page title 'Annual Conference - Executive Women's Forum') states: 'The 2026 Annual Conference is taking place at the Gaylord Rockies Resort in Denver, Colorado, November 4-6, 2026.' Repointing the URL to the page that actually carries the date. City left as Aurora: the Gaylord Rockies Resort & Convention Center is physically in Aurora, CO; the organiser's 'Denver, Colorado' is the metro shorthand.",
+    "set": { "url": "https://www.ewfglobal.com/events/" }
+  }
+]

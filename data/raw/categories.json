@@ -481,8 +481,8 @@
     "venue": "Stony Brook University",
     "cadence": "annual",
     "month": "October",
-    "next_date": "2026-10-09",
-    "next_date_end": "2026-10-11",
+    "next_date": "2026-10-23",
+    "next_date_end": "2026-10-25",
     "last_date": "",
     "status": "upcoming",
     "attendance": "",
@@ -1660,8 +1660,8 @@
     "venue": "Bonsecours Market",
     "cadence": "annual",
     "month": "May",
-    "next_date": "",
-    "next_date_end": "",
+    "next_date": "2027-05-10",
+    "next_date_end": "2027-05-16",
     "last_date": "2026-05-09",
     "status": "recurring-tbd",
     "attendance": "1500",
@@ -2763,31 +2763,6 @@
     "source": "https://www.tech-week.com/"
   },
   {
-    "name": "Tech Week Los Angeles",
-    "type": "tech-week",
-    "topics": [
-      "startups",
-      "venture-capital",
-      "media-tech"
-    ],
-    "city": "Los Angeles",
-    "region": "California",
-    "country": "United States",
-    "venue": "Distributed across the city",
-    "cadence": "annual",
-    "month": "October",
-    "next_date": "2026-10-12",
-    "next_date_end": "2026-10-18",
-    "last_date": "",
-    "status": "upcoming",
-    "attendance": "",
-    "cost": "freemium",
-    "audience": "founders, investors, operators",
-    "url": "https://www.tech-week.com/calendar",
-    "description": "The Los Angeles edition of the a16z Tech Week network, with a week of community-hosted startup events across the city.",
-    "source": "https://www.tech-week.com/"
-  },
-  {
     "name": "Tech Week New York",
     "type": "tech-week",
     "topics": [
@@ -3408,31 +3383,6 @@
     "source": "https://events.linuxfoundation.org/about/calendar/"
   },
   {
-    "name": "Open Source in Finance Forum",
-    "type": "conference",
-    "topics": [
-      "open-source",
-      "fintech",
-      "finance"
-    ],
-    "city": "New York",
-    "region": "New York",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "November",
-    "next_date": "2026-11-04",
-    "next_date_end": "2026-11-05",
-    "last_date": "",
-    "status": "upcoming",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "financial services engineers, open source leads",
-    "url": "https://events.linuxfoundation.org/about/calendar/",
-    "description": "FINOS and Linux Foundation forum on open source adoption inside banks and financial institutions.",
-    "source": "https://events.linuxfoundation.org/about/calendar/"
-  },
-  {
     "name": "gRPConf North America",
     "type": "conference",
     "topics": [
@@ -3453,9 +3403,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "backend and platform engineers",
-    "url": "https://events.linuxfoundation.org/about/calendar/",
+    "url": "https://events.linuxfoundation.org/grpconf/",
     "description": "A single-day Linux Foundation conference for the gRPC remote procedure call framework and its ecosystem.",
-    "source": "https://events.linuxfoundation.org/about/calendar/"
+    "source": "https://events.linuxfoundation.org/grpconf/"
   },
   {
     "name": "seL4 Summit",
@@ -3478,9 +3428,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "OS researchers, embedded and safety-critical engineers",
-    "url": "https://events.linuxfoundation.org/about/calendar/",
+    "url": "https://events.linuxfoundation.org/sel4-summit/",
     "description": "The annual summit for the formally verified seL4 microkernel and its use in safety- and security-critical systems.",
-    "source": "https://events.linuxfoundation.org/about/calendar/"
+    "source": "https://events.linuxfoundation.org/sel4-summit/"
   },
   {
     "name": "Jupyter Day",
@@ -3518,7 +3468,7 @@
     "city": "San Jose",
     "region": "California",
     "country": "United States",
-    "venue": "",
+    "venue": "The Tech Interactive, 201 S. Market St.",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-15",
@@ -3528,7 +3478,7 @@
     "attendance": "",
     "cost": "paid",
     "audience": "network and infrastructure engineers",
-    "url": "https://events.linuxfoundation.org/about/calendar/",
+    "url": "https://opiproject.org/events/",
     "description": "The Open Programmable Infrastructure project's summit on data processing units and infrastructure processing units.",
     "source": "https://events.linuxfoundation.org/about/calendar/"
   },
@@ -4629,9 +4579,9 @@
     "venue": "Seattle Convention Center",
     "cadence": "annual",
     "month": "September",
-    "next_date": "2026-09-04",
-    "next_date_end": "2026-09-07",
-    "last_date": "2025-08-29",
+    "next_date": "2027-09-03",
+    "next_date_end": "2027-09-06",
+    "last_date": "2026-09-04",
     "status": "upcoming",
     "attendance": "70000",
     "cost": "paid",

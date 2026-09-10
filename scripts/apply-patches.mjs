@@ -50,9 +50,13 @@ for (const f of rawFiles) {
   });
 }
 
-// confirm-*.json and verified.json belong to the ledger, not the patcher.
+// The ledger, the audit and the proposed-moves file share this directory but
+// are not patches. PROPOSED-moves.json is excluded on purpose: an automated
+// date change is a suggestion for a person to accept, never something that
+// applies itself by being left in a folder.
+const NOT_PATCHES = new Set(['verified.json', 'AUDIT.json', 'PROPOSED-moves.json']);
 const patchFiles = readdirSync(REVIEW_DIR)
-  .filter((f) => f.endsWith('.json') && !/^confirm-/.test(f) && f !== 'verified.json')
+  .filter((f) => f.endsWith('.json') && !/^confirm-/.test(f) && !NOT_PATCHES.has(f))
   .sort();
 if (!patchFiles.length) { console.log('No patch files in data/review/ — nothing to do.'); process.exit(0); }
 
@@ -62,7 +66,17 @@ const log = [];
 
 for (const pf of patchFiles) {
   const ops = JSON.parse(readFileSync(join(REVIEW_DIR, pf), 'utf8'));
-  if (!Array.isArray(ops)) { console.error(`FATAL: ${pf} must be a JSON array`); process.exit(1); }
+  /**
+   * Not every JSON file here is a patch. The ledger, the audit report and the
+   * proposed-moves file all live alongside them, and this used to die on the
+   * first one it met — a curator run that had gone perfectly could not be
+   * applied because an unrelated report was sitting in the directory.
+   * Anything that is not an array of operations is simply not ours.
+   */
+  if (!Array.isArray(ops)) {
+    console.log(`\n${pf} — not an operation array, skipping`);
+    continue;
+  }
   console.log(`\n${pf} — ${ops.length} operation(s)`);
 
   for (const op of ops) {

@@ -113,12 +113,25 @@ Read only the auditor's counts. Do not re-litigate its findings.
 | auditor says | you do |
 |---|---|
 | 0 blocking | **done.** Report and stop, even with warnings outstanding |
-| 1–3 blocking | hand the report to **one** curator to fix, then re-audit |
-| 4+ blocking | hand the report to curators split by area, then re-audit |
+| 1–3 blocking | usually **apply them yourself** — see below — then re-audit |
+| 4+ blocking, or findings needing research | hand the report to curators, then re-audit |
 | iteration 3 reached | **stop.** Report what is still open and why |
 
-When you go again, the curator's input is the audit report itself, not the queue. It is
-fixing named problems, not re-verifying. Give it the report path and say so explicitly.
+**A finding that arrives with its fix does not need a curator.** The auditor has already
+read the page and verified the correction; dispatching an agent to transcribe an audit
+report into a patch file is exactly the waste this whole design exists to avoid. Write
+the patch yourself, cite the audit as the reason, and re-audit.
+
+Send it back to a curator when the fix genuinely needs work the auditor did not do —
+a date nobody has found yet, a replacement URL, a judgement about whether an event is
+dead. Then the curator's input is the audit report itself, not the queue: it is fixing
+named problems, not re-verifying. Give it the report path and say so explicitly.
+
+**Fix the cause, not just the instance.** If a finding reveals a gap in the curator brief
+or a bug in the tooling, change that too — otherwise the next run reproduces it. Iteration
+1 of the first real cycle produced two: a curator overwriting an elapsed `next_date` and
+destroying the rollover's input, and this audit script reporting every city correction as
+a removal plus a skipped row.
 
 Between iterations, re-run `node agent/tools/snapshot-dispatch.mjs` only if you are
 dispatching from the queue again — a fix-up pass is scoped by the report instead.

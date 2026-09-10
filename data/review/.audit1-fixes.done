@@ -1,0 +1,31 @@
+[
+  {
+    "match": { "name": "PAX West", "city": "Seattle" },
+    "action": "update",
+    "reason": "Audit iteration 1, blocking. The 2027 dates are right, but replacing an elapsed next_date with them destroyed the rollover's input: the build synthesises last_date by rolling an elapsed next_date, and 2026-09-04 was gone before it could. The record then claimed PAX West was last held in August 2025. Setting last_date explicitly restores the edition that actually just ran.",
+    "set": { "last_date": "2026-09-04" }
+  },
+  {
+    "match": { "name": "Tech Week Los Angeles", "city": "Los Angeles" },
+    "action": "remove",
+    "reason": "Audit iteration 1, blocking. Duplicate of 'LA Tech Week' — same city, same dates (2026-10-12..18), same type, same source, same a16z event. The two differ only in url path (/calendar versus /), which is why the page-key dedup missed them. LA Tech Week is kept because it carries the real last_date of 2025-10-13; this record carries nothing the other does not."
+  },
+  {
+    "match": { "name": "Django Girls New York City", "city": "New York" },
+    "action": "update",
+    "reason": "Audit iteration 1, warning. The url was repointed to the workshop's own page but source was left on the superseded index tile, which shows only 28 November and so contradicts the record's own 27-28 range.",
+    "set": { "source": "https://djangogirls.org/en/newyorkcity/" }
+  },
+  {
+    "match": { "name": "gRPConf North America", "city": "Mountain View" },
+    "action": "update",
+    "reason": "Audit iteration 1, warning. url was repointed to the event's own page, but source still pointed at the generic Linux Foundation calendar that no longer lists this event at all.",
+    "set": { "source": "https://events.linuxfoundation.org/grpconf/" }
+  },
+  {
+    "match": { "name": "seL4 Summit", "city": "Vancouver" },
+    "action": "update",
+    "reason": "Audit iteration 1, warning. Same as gRPConf: url was corrected but source was left on the LF calendar which no longer names the summit.",
+    "set": { "source": "https://events.linuxfoundation.org/sel4-summit/" }
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "match": { "name": "NorthSec", "city": "Montreal" },
+    "action": "update",
+    "reason": "nsec.io's own homepage reads 'NorthSec Conference 2027 / May 10-16, 2027 / Montreal, Canada', broken out as Training May 10-11-12, Conference May 13-14 and CTF May 14-15-16, at Bonsecours Market, 350 St-Paul East. The stored window 2027-05-17..2027-05-23 is exactly one week late. Note the page also carries stale leftover JSON-LD ('startDate':'2020-05-10T08:00', 'endDate':'2012-05-17T16:00') whose 05-17 is the likely origin of the wrong stored start; the human-readable copy is the authoritative part.",
+    "set": { "next_date": "2027-05-10", "next_date_end": "2027-05-16" }
+  },
+  {
+    "match": { "name": "Southwestern Ontario Drupal Camp", "city": "Multiple cities" },
+    "action": "update",
+    "reason": "The camp's own site swo.drupalcanada.org states 'Southwestern Ontario Drupal Camp Oct 23-24, 2026 / Kitchener-Waterloo', with Friday sessions at the Kitchener Public Library and Saturday 'Drupal in a Day' at Conestoga College Waterloo Campus. drupal.org's event listing agrees (23-24 Oct 2026, in person, Kitchener Public Library, 85 Queen Street North, Kitchener ON). Dates were already right; the record's placeholder city 'Multiple cities' / region 'US & Canada' hid a single-region event, and the link pointed at drupal.org rather than the organiser's own site.",
+    "set": {
+      "city": "Kitchener",
+      "region": "Ontario",
+      "url": "https://swo.drupalcanada.org/",
+      "venue": "Kitchener Public Library (Fri); Conestoga College Waterloo Campus (Sat)"
+    }
+  },
+  {
+    "match": { "name": "Django Girls New York City", "city": "New York" },
+    "action": "update",
+    "reason": "The workshop's own page djangogirls.org/en/nyc/ prints a full dated schedule: 'Friday, November 27th 2026 - 6:00PM Check-in begins / 7:00PM Official opening & lightning talks / 7:30PM Installation party' then 'Saturday, November 28th 2026 - 9:00AM Breakfast ... 6:00PM Wrap up & sendoff', and the body text says 'It will take place on Novemebr 27th & 28th, 2026 at Fractal Tech Hub, 111 Conselyea St, Brooklyn, New York City.' The event therefore starts Friday 27 Nov, not Saturday 28 Nov. The djangogirls.org/en/events/ index tile shows only '28th November 2026' (the main workshop day), which is what the record had stored. The page's banner line 'November 27th - 30th, 2026' is contradicted by both the body text and the schedule and was not used.",
+    "set": {
+      "next_date": "2026-11-27",
+      "next_date_end": "2026-11-28",
+      "url": "https://djangogirls.org/en/nyc/",
+      "venue": "Fractal Tech Hub, 111 Conselyea St, Brooklyn"
+    }
+  },
+  {
+    "match": { "name": "PNW Day of Data", "city": "Vancouver" },
+    "action": "update",
+    "reason": "dayofdata.org/2026-11-07-dayofdata1149/ (the record's own URL) states 'Event Date : 07 November 2026', 'This event is: in-person', at the Washington State University Vancouver campus, 14204 NE Salmon Creek Avenue, Vancouver WA. The same page says 'Optional Friday all-day pre-conference sessions will be announced soon' - i.e. no Friday date is scheduled yet - so the stored start of 2026-11-06 would send an attendee to WSUV a day early. Collapsed to the single published Saturday.",
+    "set": {
+      "next_date": "2026-11-07",
+      "next_date_end": "2026-11-07",
+      "venue": "Washington State University Vancouver"
+    }
+  },
+  {
+    "match": { "name": "OPI Summit on DPU/IPUs", "city": "San Jose" },
+    "action": "update",
+    "reason": "Dates were already correct and are confirmed: opiproject.org/events/ lists 'OPI Summit on DPU/IPUs - October 15 @ 8:00 am - 2:00 pm - The Tech Interactive, 201 S. Market St., San Jose, CA' under its October 2026 heading, describing it as 'The Second OPI Summit on DPU/IPUs ... co-located with the OCP Global summit'. Only the link and venue changed: the stored URL was the opiproject.org homepage, which never names the summit (this is why the automated check read as ambiguous).",
+    "set": {
+      "url": "https://opiproject.org/events/",
+      "venue": "The Tech Interactive, 201 S. Market St."
+    }
+  },
+  {
+    "match": { "name": "OIN Connect", "city": "San Jose" },
+    "action": "update",
+    "reason": "Dates were already correct and are confirmed: openinventionnetwork.com/oin-connect-2026/ headlines 'October 19, 2026 / Hayes Mansion | San Jose, CA #OINConnect', 'OIN's inaugural one-day summit', address given as 200 Edenvale Avenue, San Jose, CA 95136. Only the link and venue changed: the stored URL was the Open Invention Network corporate homepage, which does not carry the event date and whose only address hint is OIN's own office at 4819 Emperor Blvd, Durham NC.",
+    "set": {
+      "url": "https://openinventionnetwork.com/oin-connect-2026/",
+      "venue": "Hayes Mansion, 200 Edenvale Avenue"
+    }
+  }
+]

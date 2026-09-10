@@ -115,6 +115,11 @@ or the patch will silently fail to apply.
 - Never edit anything in `data/raw/`. `scripts/apply-patches.mjs` is the only thing that does.
 - Never set a `last_date` in the future, or a `next_date_end` before its `next_date`.
 - Prefer the organiser's own page over any aggregator, always.
+- **Replacing an elapsed `next_date` with a future one? Set `last_date` to the elapsed
+  date in the same patch.** The build derives `last_date` by rolling an elapsed
+  `next_date` forward; overwrite it and that input is gone, so the record silently loses
+  the edition that just ran. PAX West got its 2027 dates correctly and then claimed it
+  was last held in 2025, because the 2026 date was overwritten before the roll saw it.
 
 Reply with: rows attempted, confirmed, corrected, blocked, and the most significant
 findings. Do not paste the JSON.

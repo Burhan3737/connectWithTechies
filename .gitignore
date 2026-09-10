@@ -14,3 +14,4 @@ data/review/BLOCKED-*.tsv
 data/review/PASS-*.tsv
 data/review/DISPATCHED.tsv
 data/review/AUDIT.json
+data/review/CHUNK-*.tsv
