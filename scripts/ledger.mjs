@@ -34,6 +34,14 @@ const TODO = join(REVIEW, 'TO-VERIFY.tsv');
 
 const today = process.env.TODAY || new Date().toISOString().slice(0, 10);
 const reportOnly = process.argv.includes('--report');
+/**
+ * A batch-verified dataset expires in a batch, so the queue is naturally lumpy.
+ * Bounding a pass by effort rather than by threshold keeps each run a sane size
+ * without pretending the rest is fine — `--limit` trims the working file only,
+ * and the full count is always reported.
+ */
+const limitArg = process.argv.find((a) => a.startsWith('--limit'));
+const LIMIT = limitArg ? Number(limitArg.split('=')[1] || process.argv[process.argv.indexOf(limitArg) + 1]) : 0;
 
 const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
 const key = (name, city) => `${norm(name)}|${norm(city)}`;
@@ -154,10 +162,11 @@ function monthsAway(e) {
 const REASONS = {
   never:    { rank: 1, why: 'never checked' },
   blocked:  { rank: 2, why: 'previous check could not read the page' },
-  rolled:   { rank: 3, why: 'the edition ran since it was last checked; next date unknown' },
-  imminent: { rank: 4, why: 'happens within 30 days and not looked at for 14 — late changes land here' },
-  window:   { rank: 5, why: 'undated, usual month 2-5 months out, not looked at for 45 days' },
-  aged:     { rank: 6, why: 'not looked at in a long time' },
+  regroup:  { rank: 3, why: 'a group that meets weekly or monthly, showing no next date — wrong on the page today' },
+  imminent: { rank: 4, why: 'coming up, and the check is stale relative to how close it is' },
+  rolled:   { rank: 5, why: 'an annual edition ran since it was checked; next one is far off' },
+  window:   { rank: 6, why: 'undated, usual month 2-5 months out, not looked at for 45 days' },
+  aged:     { rank: 7, why: 'not looked at in a long time' },
 };
 
 /**
@@ -175,15 +184,28 @@ function stalenessOf(e, hit) {
   if (hit.status === 'blocked') return 'blocked';
 
   const age = hit.checked_on ? daysBetween(hit.checked_on, today) : 9999;
+  const until = e.next_date && e.next_date >= today ? daysBetween(today, e.next_date) : null;
+  const ranSinceChecked = e.last_date && hit.checked_on && e.last_date >= hit.checked_on;
 
-  // An edition ran since we last looked and no future date is known, so the
-  // next one has to be found. If a future date is already on the record there
-  // is nothing to go and get, however recently the last edition happened.
-  const knowsNext = e.next_date && e.next_date >= today;
-  if (!knowsNext && e.last_date && hit.checked_on && e.last_date >= hit.checked_on) return 'rolled';
+  // A weekly or monthly group whose last meeting rolled over now shows "date not
+  // yet announced" while it actually meets again within weeks. That is wrong on
+  // the page right now, so it outranks everything except never-checked.
+  if (until === null && ranSinceChecked && OFTEN.has(e.cadence)) return 'regroup';
 
-  if (age >= 14 && e.next_date && e.next_date >= today &&
-      daysBetween(today, e.next_date) <= 30) return 'imminent';
+  /**
+   * Freshness scaled to proximity: a check has to be newer the closer the event
+   * gets, because that is when organisers move things. An event three weeks out
+   * checked last week is fine; the same check on an event two days out is not.
+   *
+   * A flat "within N days" window cannot express that, and it also misreads a
+   * batch-verified dataset — when 883 records are all checked on one day they
+   * all age together, so any flat threshold fires for the whole cohort at once.
+   * Ordering the queue by urgency and working it to a budget handles that far
+   * better than tuning the threshold.
+   */
+  if (until !== null && age > until / 2) return 'imminent';
+
+  if (until === null && ranSinceChecked) return 'rolled';
 
   if (age >= 45 && !e.next_date) {
     const away = monthsAway(e);
@@ -193,6 +215,13 @@ function stalenessOf(e, hit) {
   // Recurring groups need a liveness check, not a date check — ask far less often.
   if (age > (OFTEN.has(e.cadence) ? 180 : 90)) return 'aged';
   return null;
+}
+
+/** Days until the event, for ordering within a reason. Undated sinks. */
+function urgencyOf(e) {
+  if (e.next_date && e.next_date >= today) return daysBetween(today, e.next_date);
+  if (OFTEN.has(e.cadence)) return 0;   // meets again imminently by definition
+  return 9999;
 }
 
 const queue = [];
@@ -205,14 +234,14 @@ for (const e of events) {
 queue.sort((a, b) => {
   const r = REASONS[a.reason].rank - REASONS[b.reason].rank;
   if (r !== 0) return r;
-  const da = a.e.next_date || '9999', db = b.e.next_date || '9999';
-  return da.localeCompare(db) || a.e.name.localeCompare(b.e.name);
+  return urgencyOf(a.e) - urgencyOf(b.e) || a.e.name.localeCompare(b.e.name);
 });
 
 const byReason = {};
 for (const q of queue) byReason[q.reason] = (byReason[q.reason] || 0) + 1;
 
-const todo = queue.map((q) => q.e);
+const working = LIMIT > 0 ? queue.slice(0, LIMIT) : queue;
+const todo = working.map((q) => q.e);
 const reasonOf = new Map(queue.map((q) => [q.e, q.reason]));
 
 const statusOf = (e) => {
@@ -329,5 +358,8 @@ Re-check queue: ${queue.length} of ${events.length} events`);
   }
 } else {
   console.log('Re-check queue: empty — nothing is due.');
+}
+if (LIMIT > 0 && queue.length > LIMIT) {
+  console.log(`  TO-VERIFY.tsv trimmed to the ${LIMIT} most urgent; ${queue.length - LIMIT} remain for the next pass.`);
 }
 console.log(`Wrote ${MD} and ${TODO}`);

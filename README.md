@@ -114,6 +114,48 @@ so a re-check refreshes a stale entry rather than being discarded.
 The `blocked` list is the useful by-product: it is precisely the set where a web search
 would earn its cost, rather than being spent re-reading pages that already answered.
 
+## Keeping it true
+
+A verification is a snapshot, not a subscription. Left alone this dataset rots fast —
+in the ten days after one build, **42 events passed their date**. So the refresh loop
+runs on its own schedule of decay rather than on someone remembering:
+
+```
+npm run build     rollover: a held edition moves into last_date and the record
+                  returns as recurring-tbd, instead of vanishing from Upcoming
+npm run ledger    regenerate the re-check queue into data/review/TO-VERIFY.tsv
+     ↓ agents     work the queue, write patches and confirmations
+npm run build     apply, rebuild
+npm run ledger    merge confirmations; the queue shrinks
+```
+
+`npm run stale` prints the queue any time. The full procedure — including everything
+learned the hard way about reading these sites — lives in the `refresh-events` skill at
+`.claude/skills/refresh-events/SKILL.md`, so a pass does not depend on anyone
+reconstructing it from memory.
+
+### What puts an event back in the queue
+
+| reason | fires when |
+|---|---|
+| `never` | a new record nobody has checked |
+| `blocked` | a previous pass could not read the page |
+| `regroup` | a weekly or monthly group is showing no next date — **wrong on the page today** |
+| `imminent` | the check is stale *relative to how close the event is* |
+| `rolled` | an annual edition ran since it was checked; the next one is far off |
+| `window` | undated, and its usual month is close enough that dates get announced |
+| `aged` | 90 days for a dated event, 180 for a recurring group |
+
+`imminent` scales freshness to proximity rather than using a fixed window: an event
+three weeks out checked last week is fine, the same check on an event two days out is
+not. Recurring groups get the longer clock because the useful question for them is
+whether the group still meets, not what its next date is.
+
+Because all 883 records were verified in one batch they also expire in one batch, so the
+queue is lumpy by nature. `node scripts/ledger.mjs --limit 60` trims the working file to
+the most urgent slice and reports how many remain — bounding a pass by effort rather than
+by fiddling with thresholds until the number looks comfortable.
+
 ## What counts as an event here
 
 Anything you physically go to, where you meet people and the subject is technology.

@@ -11,3 +11,4 @@ data/review/HIGH-PROFILE.tsv
 data/review/TODO-*.tsv
 data/review/TO-VERIFY.tsv
 data/review/BLOCKED-*.tsv
+data/review/PASS-*.tsv
