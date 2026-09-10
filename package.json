@@ -14,7 +14,9 @@
     "check:data": "node agent/tools/check-data.mjs",
     "check:links": "node agent/tools/check-links.mjs",
     "start": "node scripts/serve.mjs",
-    "test": "node scripts/smoke-test.mjs"
+    "test": "node scripts/smoke-test.mjs",
+    "audit": "node agent/tools/audit-run.mjs",
+    "dispatch:snapshot": "node agent/tools/snapshot-dispatch.mjs"
   },
   "license": "MIT",
   "devDependencies": {

@@ -1,78 +1,93 @@
 ---
 name: refresh-events
-description: Run the event-data refresh loop - rebuild, read the staleness queue, send agents to re-verify the most urgent events, apply their patches, and record what was checked. Use when the user asks to refresh, re-verify, update or check the event data, or when `npm run stale` shows a queue worth working.
+description: Run the event-data refresh cycle as orchestrator — script-confirm what can be confirmed, dispatch curator agents for the rest, have an auditor check their work, and loop until the audit is clean or three iterations are spent. Use when the user asks to refresh, re-verify, update or audit the event data, or when `npm run stale` shows a queue worth working.
 ---
 
 # Refreshing the event data
 
-The dataset decays: dates move, editions pass, organisers announce next year. This is
-the loop that keeps it true. It is bounded by effort, not by ambition — one pass works
-the most urgent slice and leaves the rest for the next one.
+You are the **orchestrator**. You dispatch, you read reports, you decide whether to go
+again. You do **not** do the research yourself and you do **not** form your own opinion
+about whether the data is right — that is what the auditor is for, and duplicating it
+just gives you a second opinion you have no way to adjudicate.
 
-## The loop
+Three roles:
 
-Script first, agents only for what the script cannot settle.
+| role | what it does | where it lives |
+|---|---|---|
+| **orchestrator** (you) | runs the cycle, decides whether to loop | this skill |
+| **curator** | researches and updates: dates, links, new events, retirements | `.claude/agents/curator.md` |
+| **auditor** | independently checks the curator's output, reports discrepancies | `.claude/agents/auditor.md` |
+
+## The cycle
 
 ```
-npm run refresh    build (rollover) -> script confirms ~83% of dated events
-                   -> regenerates the queue
-   -> agents       work only what is left: NEEDS-AGENT.tsv and the queue
-npm run apply      apply their patches
-npm run build
-npm run ledger     merge confirmations, queue shrinks
+npm run refresh                script settles ~86% of dated events, no agent
+  ↓
+snapshot the queue             so the auditor knows what was dispatched
+  ↓
+dispatch curator(s)            in parallel, one per chunk
+  ↓
+apply their patches, rebuild
+  ↓
+dispatch auditor               reads AUDIT.json + spot-checks judgement
+  ↓
+YOU decide  ─── blocking findings? ──> hand the report back to a curator, go again
+            └── none? ──────────────> done
 ```
 
-An event is researched by an agent **once** and maintained by script thereafter. It
-should only reach an agent again if the script genuinely cannot settle it.
+**Stop after three iterations regardless.** If it is not clean by then, report what
+remains rather than burning another cycle — a third failure usually means the problem
+needs a person, not another pass.
 
-## Step 1 — let the script do what it can first
+---
 
-**Do not dispatch agents before this.** Around 83% of dated events can be confirmed
-without one, and paying an agent to read a page and conclude "nothing changed" is the
-most expensive way to learn nothing.
+## Step 1 — let the script do what it can
+
+**Do not dispatch anyone before this.** Around 86% of dated events confirm without an
+agent, and paying one to read a page and conclude "nothing changed" is the most expensive
+way to learn nothing.
 
 ```bash
-npm run refresh    # build (rollover) -> script-confirm -> regenerate the queue
+npm run refresh
 ```
 
-That runs `scripts/build-data.mjs`, then `agent/tools/verify-dates.mjs --write`, then
-`scripts/ledger.mjs`. It leaves behind:
+That runs the build (rollover), then `agent/tools/verify-dates.mjs --write`, then the
+ledger. It leaves:
 
 - ledger confirmations for everything it settled — those events are done
 - `data/review/PROPOSED-moves.json` — dates the page has changed. **Review these
   yourself**; the script proposes, it never applies
 - `data/review/NEEDS-AGENT.tsv` — only what it could not settle
 
-## Step 2 — refresh the queue for agents
+## Step 2 — snapshot, then dispatch curators
 
 ```bash
-node scripts/ledger.mjs --limit 60   # trim the working file to the 60 most urgent
+node scripts/ledger.mjs --limit 60          # trim the queue to the most urgent slice
+node agent/tools/snapshot-dispatch.mjs      # record what is about to be handed over
 ```
 
-Read the reason counts it prints. `data/review/TO-VERIFY.tsv` is the working list,
-already ordered: wrong-today first, then soonest-first.
+The snapshot matters: the queue regenerates after every run, so without it the auditor
+cannot tell "the curator skipped this row" from "the curator was never given it", and
+will report the former.
 
-| reason | what it means |
+Split the working file into chunks of ~25 rows and dispatch one `curator` per chunk in
+parallel. Tell each its chunk path and a distinct pass name. The curator definition
+carries everything else — do not rewrite its brief from memory, that is how hard-won
+detail gets lost.
+
+Queue reasons, in the order they are worked:
+
+| reason | meaning |
 |---|---|
-| `never` | new record, no one has checked it |
+| `never` | a new record nobody has checked |
 | `blocked` | a previous pass could not read the page |
-| `regroup` | a weekly/monthly group showing no next date — **wrong on the page right now** |
+| `regroup` | a weekly or monthly group showing no next date — **wrong on the page today** |
 | `imminent` | coming up, and the check is stale relative to how close it is |
-| `rolled` | an annual edition ran; next one is far off |
+| `rolled` | an annual edition ran; the next one is far off |
 | `window` | undated, and its usual month is close enough that dates get announced |
-| `aged` | not looked at in a long time |
+| `aged` | 90 days for a dated event, 180 for a recurring group |
 
-Pick a budget that matches the appetite. 40–60 rows is a comfortable single pass.
-
-## Step 3 — split and dispatch
-
-Split the working file into chunks of ~30 rows and dispatch one agent per chunk in
-parallel. Give each agent the section below verbatim, plus its chunk path.
-
-Do not hand-write a new prompt each time. Everything hard-won about this task is in
-that section, and rewriting it from memory loses it.
-
-## Step 4 — apply
+## Step 3 — apply
 
 ```bash
 npm run apply -- --dry-run   # read the reasons before trusting them
@@ -82,108 +97,34 @@ npm run ledger               # merges the confirm-*.json files
 npm test
 ```
 
-Review removals yourself before applying. Agents have been right about squatted domains
+Read removals yourself before applying. Curators have been right about squatted domains
 and dead conferences, but a removal is the one operation that loses data.
 
----
+## Step 4 — dispatch the auditor
 
-# The agent brief (give this verbatim)
+One `auditor`, after the rebuild. It runs `agent/tools/audit-run.mjs` for everything
+countable, then spot-checks the judgement calls, and writes
+`data/review/AUDIT-REPORT.md`.
 
-You are re-verifying entries in a tech-event directory at `C:\personalProjects\forTechies`.
-A wrong date sends someone to a venue on the wrong day; that is the failure that matters.
+## Step 5 — decide
 
-## Do not use WebFetch as your first tool
+Read only the auditor's counts. Do not re-litigate its findings.
 
-A large set of event hosts — Gartner, TechWell, SAP, NetSuite, Microsoft, Oracle, ODSC,
-Code for America — return 403 to WebFetch while serving curl a 200 for the same URL.
-Use the helper:
+| auditor says | you do |
+|---|---|
+| 0 blocking | **done.** Report and stop, even with warnings outstanding |
+| 1–3 blocking | hand the report to **one** curator to fix, then re-audit |
+| 4+ blocking | hand the report to curators split by area, then re-audit |
+| iteration 3 reached | **stop.** Report what is still open and why |
 
-```bash
-node agent/tools/fetch-page.mjs <url>            # status, title, extracted date evidence
-node agent/tools/fetch-page.mjs <url> --text     # plus readable page text
-node agent/tools/fetch-page.mjs <url> --bundle   # chase JS bundles for React/Next shells
-```
+When you go again, the curator's input is the audit report itself, not the queue. It is
+fixing named problems, not re-verifying. Give it the report path and say so explicitly.
 
-It pulls JSON-LD `startDate`/`endDate`, ISO dates, month ranges, venue hints, and the
-copy Next.js hides inside script flight data. Raw curl if you need it:
+Between iterations, re-run `node agent/tools/snapshot-dispatch.mjs` only if you are
+dispatching from the queue again — a fix-up pass is scoped by the report instead.
 
-```bash
-curl -sL --max-time 25 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" "<url>"
-```
+## Step 6 — report
 
-**Send only the User-Agent.** Adding explicit lowercase `accept` / `accept-language`
-headers flips a 200 into a 403 on WAF-protected hosts — they fingerprint header casing.
-This was measured on rsaconference.com, not guessed.
-
-WebSearch is the right tool when the page is behind a captcha, or when the event has no
-findable site. Use it freely; it is no longer the constraint it once was.
-
-## What to establish for each row
-
-1. **The dates** — does the organiser's own page show this exact start and end?
-2. **The city** — several records have been found pointing at an organiser's head
-   office rather than the venue.
-3. **That it still exists** — a page advertising an older year, or a parked domain,
-   means the record is stale.
-4. For a `regroup` row — a weekly or monthly group — find its **next meeting date**.
-   These are wrong on the page today, so they matter most.
-
-## Things this dataset has taught us
-
-- **Aggregator-sourced dates are where the fabrications live.** dev.events, 10times and
-  Eventbrite *search* URLs have all produced dates the organiser never published. The
-  organiser's own page has been right the overwhelming majority of the time.
-- **Sometimes the organiser's page is the stale one.** HackUMass advertised "November
-  8-10, 2024" while the record was right. launchwisconsin.biz/about/ contradicted its
-  own events page. Cross-check before "correcting" a record to match a stale page.
-- **Watch for squatted domains.** Four have been found: `pytennessee.org` and
-  `houstonexponential.org` now serve online-casino spam, `startupzone.ca` serves
-  Indonesian content, `metabridge.ca` a slot review. Check that the page actually names
-  the event.
-- **Student hackathon sites are usually client-rendered**, with the date only in a hero
-  image. MLH's season listing (`mlh.io/seasons/2027/events`) is the corroborating
-  source — say so in your evidence when a date comes from there rather than the organiser.
-- **Never guess a date.** An unresolved row is a legitimate outcome. Say what you tried.
-
-## Two output files
-
-**1. A ledger entry for EVERY row you attempt**, whatever the outcome —
-`data/review/confirm-<yourpass>.json`:
-
-```json
-[
-  { "name": "EXACT name from the TSV", "city": "EXACT city from the TSV",
-    "status": "confirmed", "cycle": "<yourpass>",
-    "evidence": "gartner.com JSON-LD startDate 2026-12-07, matches record" }
-]
-```
-
-`status` is `confirmed` (read it, record correct), `corrected` (read it, was wrong,
-patch emitted) or `blocked` (could not read any page that settles it — say what you tried).
-
-This file is what stops the next pass repeating your work. Every row you touch must
-appear in it.
-
-**2. A patch, only for rows that were wrong** — `data/review/<yourpass>-fixes.json`:
-
-```json
-{ "match": { "name": "EXACT name", "city": "EXACT city" },
-  "action": "update",
-  "reason": "what the page said and which page",
-  "set": { "next_date": "2026-12-07", "next_date_end": "2026-12-09" } }
-```
-
-- Already happened, no new edition published: clear `next_date`/`next_date_end` to `""`,
-  put the old start in `last_date`, set `status` to `"recurring-tbd"`. (The build does
-  this automatically too — you only need it when correcting a wrong date.)
-- Wrong city: set `city` **and** `region`. Wrong link: set `url`.
-- Confirmed defunct or squatted: `"action": "remove"` with a reason.
-- Only include fields you are actually changing. Write `[]` if nothing was wrong.
-
-Names and cities in **both** files must be copied character-for-character from the TSV,
-or the patch will silently fail to apply.
-
-Do not edit anything in `data/raw/`. Write only those two files.
-
-Reply with: rows attempted, confirmed, corrected, blocked, and the most significant
-corrections. Do not paste the JSON.
+Say plainly: how many iterations it took, what the curator changed, what the auditor
+caught, and what is still open. If you stopped at three iterations with findings
+outstanding, lead with that — it is the most important thing in the report.
