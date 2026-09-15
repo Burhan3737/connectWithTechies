@@ -139,8 +139,15 @@ if (dispatched.length) {
 
 /* ---- 3. evidence quality ------------------------------------------------- */
 
+/**
+ * Only a claim needs evidence. `confirmed` and `corrected` assert something
+ * about the world and have to show their working; `blocked` asserts only that
+ * the page could not be read, and "no response" says that completely. Holding
+ * failures to the same word count just fills the report with noise.
+ */
 const thin = Object.values(ledger)
-  .filter((v) => v.checked_on === today && (!v.evidence || v.evidence.trim().length < 25));
+  .filter((v) => v.checked_on === today && v.status !== 'blocked'
+    && (!v.evidence || v.evidence.trim().length < 25));
 if (thin.length) {
   add('warn', 'thin-evidence',
     `${thin.length} ledger entries from this run have evidence under 25 characters`);
@@ -198,9 +205,24 @@ for (const e of now.events) {
     const sk = `${host}|${norm(e.city)}|${e.next_date}`;
     const twin = sameDay.get(sk);
     if (twin) {
-      const identical = twin.type === e.type && (twin.next_date_end || '') === (e.next_date_end || '');
-      add(identical ? 'blocking' : 'warn', 'duplicate',
-        identical
+      const sameType = twin.type === e.type;
+      const sameSpan = (twin.next_date_end || '') === (e.next_date_end || '');
+      const sameVenue = norm(twin.venue) === norm(e.venue);
+
+      /**
+       * Two events on one host and one morning are usually not a duplicate.
+       * a2Tech360 runs eleven days with a career fair inside it; the Roux
+       * Institute simply had a conference and a breakfast series on the same
+       * date at different addresses. Both were audited and both are legitimate.
+       *
+       * A differing type *and* a differing venue is strong enough evidence of
+       * two real events to say nothing at all — flagging those trained the eye
+       * to skip this check, which is worse than not having it.
+       */
+      if (!sameType && !sameVenue) { sameDay.set(sk, e); continue; }
+
+      add(sameType && sameSpan ? 'blocking' : 'warn', 'duplicate',
+        sameType && sameSpan
           ? `${e.name} and ${twin.name}: same city, type and span on ${e.next_date} via ${host} — one event filed twice`
           : `${e.name} (${e.type}) and ${twin.name} (${twin.type}) share ${host} and start ${e.next_date} in ${e.city} — check whether one runs inside the other`);
     }

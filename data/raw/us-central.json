@@ -1312,8 +1312,8 @@
     "venue": "Kansas City Convention Center",
     "cadence": "annual",
     "month": "September",
-    "next_date": "2026-09-09",
-    "next_date_end": "2026-09-11",
+    "next_date": "2027-08-04",
+    "next_date_end": "2027-08-07",
     "last_date": "",
     "status": "upcoming",
     "attendance": "",
@@ -1321,7 +1321,7 @@
     "audience": "developers, architects, QA, UX designers, PMs",
     "url": "https://www.kcdc.info",
     "description": "KCDC's 18th annual event: a pre-conference workshop day plus two conference days covering programming languages, cloud, AI/ML and architecture, drawing attendees from across the Midwest.",
-    "source": "https://www.kcdc.info/about"
+    "source": "https://kcdc.info/"
   },
   {
     "name": "DevOpsDays Kansas City",

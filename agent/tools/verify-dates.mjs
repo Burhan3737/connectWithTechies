@@ -115,10 +115,44 @@ async function check(e) {
   const body = await fetchBody(e.url);
   if (!body || body.length < 500) return { e, verdict: 'unreadable', note: body ? `${body.length}-byte stub, likely a captcha` : 'no response' };
 
+  /**
+   * Match against readable text only, never the raw HTML.
+   *
+   * Matching the source let hits land inside another event's JSON-LD, an .ics
+   * href query string, and The Events Calendar's own `selected_end_datetime`
+   * view window — which made an ISO match close to self-fulfilling on any
+   * WordPress events page.
+   */
   const text = strip(body);
-  const raw = body.toLowerCase();
-  const hit = renderings(e.next_date).find((r) => text.includes(r) || raw.includes(r));
-  if (hit) return { e, verdict: 'confirmed', note: `page still shows "${hit}"` };
+  const hit = renderings(e.next_date).find((r) => text.includes(r));
+
+  if (hit) {
+    /**
+     * The decoy test: does this page also "confirm" dates the event does not
+     * have? If it does, it is a page the matcher cannot read — a listing of
+     * many events, a calendar grid, a run of unrelated dates — and a hit on the
+     * real date there is a coincidence, not evidence.
+     *
+     * An audit measured this: on listing pages, 32% of confirmations also
+     * matched a fabricated date. Those were being recorded as settled, so
+     * nothing would ever look at them again. An unchecked event is recoverable;
+     * a falsely-confirmed one is not.
+     */
+    const decoys = [7, -21, 35, 14].map((d) => {
+      const dt = new Date(e.next_date);
+      dt.setDate(dt.getDate() + d);
+      return dt.toISOString().slice(0, 10);
+    });
+    const fooled = decoys.filter((d) => renderings(d).some((r) => text.includes(r)));
+    if (fooled.length) {
+      return {
+        e, verdict: 'ambiguous',
+        note: `"${hit}" appears, but so do ${fooled.length} date(s) this event does not have ` +
+              `(e.g. ${fooled[0]}) — the page lists too many dates for a match to mean anything`,
+      };
+    }
+    return { e, verdict: 'confirmed', note: `page shows "${hit}" and no decoy date` };
+  }
 
   // Not found. Only JSON-LD is trusted to say where it went.
   const ld = jsonLdDates(body);
@@ -164,13 +198,28 @@ console.log(`Agent work remaining: ${by('ambiguous').length + by('unreadable').l
 
 if (!WRITE) { console.log('\n(dry run — pass --write to record these)'); process.exit(0); }
 
-const confirmations = by('confirmed').map((r) => ({
-  name: r.e.name, city: r.e.city, status: 'confirmed', checked_on: today,
-  cycle: 'script', evidence: `automated: ${r.note}`,
-}));
-if (confirmations.length) {
-  writeFileSync(join(REVIEW, 'confirm-script.json'), JSON.stringify(confirmations, null, 2) + '\n');
-  console.log(`\nWrote ${confirmations.length} ledger confirmations to data/review/confirm-script.json`);
+/**
+ * Record the failures as well as the successes.
+ *
+ * Writing only confirmations left the ledger unable to withdraw a verdict: an
+ * event this script had previously confirmed, and can no longer confirm, would
+ * keep its old entry and stay off the queue forever. Ambiguous and unreadable
+ * are recorded as `blocked`, which is what they are — attempted, not settled.
+ */
+const entries = [
+  ...by('confirmed').map((r) => ({
+    name: r.e.name, city: r.e.city, status: 'confirmed', checked_on: today,
+    cycle: 'script', evidence: `automated: ${r.note}`,
+  })),
+  ...[...by('ambiguous'), ...by('unreadable')].map((r) => ({
+    name: r.e.name, city: r.e.city, status: 'blocked', checked_on: today,
+    cycle: 'script', evidence: `automated: ${r.note}`,
+  })),
+];
+if (entries.length) {
+  writeFileSync(join(REVIEW, 'confirm-script.json'), JSON.stringify(entries, null, 2) + '\n');
+  console.log(`\nWrote ${entries.length} ledger entries to data/review/confirm-script.json ` +
+    `(${by('confirmed').length} confirmed, ${entries.length - by('confirmed').length} blocked)`);
 }
 
 /**

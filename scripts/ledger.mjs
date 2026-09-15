@@ -72,8 +72,14 @@ if (!reportOnly) {
       };
       // A later, stronger outcome wins: blocked < confirmed < corrected.
       // A re-check on a newer date also wins, so a stale confirmation refreshes.
+      //
+      // A pass re-running itself always wins, in either direction. Without this
+      // a verdict could only ever be strengthened, so a check that grew more
+      // careful could not withdraw its own earlier confidence — which is
+      // precisely what is needed when a matcher turns out to have been fooled.
       if (!prev) { state.entries[k] = next; merged++; continue; }
-      if (RANK[next.status] > RANK[prev.status] || next.checked_on > prev.checked_on) {
+      const sameCycleRedo = next.cycle === prev.cycle && next.checked_on >= prev.checked_on;
+      if (sameCycleRedo || RANK[next.status] > RANK[prev.status] || next.checked_on > prev.checked_on) {
         state.entries[k] = next; upgraded++;
       }
     }

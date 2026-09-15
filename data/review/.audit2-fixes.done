@@ -1,0 +1,32 @@
+[
+  {
+    "match": { "name": "RustConf", "city": "Montreal" },
+    "action": "update",
+    "reason": "Standing audit, blocking. The rollover hid a published next edition. rustconf.com states it twice in body copy — 'SAVE THE DATE: September 7-10, 2027 | Vancouver, Canada + Online' and 'RustConf 2027 is taking place from September 7-10, in Vancouver, Canada' — and the conference has moved city. Two things on that page would have misled a machine: the <title> still reads 'RustConf 2027 - September 8-11 | Montreal', and the JSON-LD describes the just-held 2026 edition (2026-09-08..11).",
+    "set": {
+      "city": "Vancouver", "region": "British Columbia",
+      "next_date": "2027-09-07", "next_date_end": "2027-09-10",
+      "last_date": "2026-09-08", "status": "upcoming", "venue": "",
+      "source": "https://rustconf.com/"
+    }
+  },
+  {
+    "match": { "name": "Kansas City Developer Conference", "city": "Kansas City" },
+    "action": "update",
+    "reason": "Standing audit, blocking. The rollover hid a published next edition. kcdc.info leads with 'Join us for KCDC 2027! Workshops: Wed, Aug 4 · Conference: Thurs, Aug 5 - Fri, Aug 6 · Kids Tech Day: Sat, Aug 7', so the full span is August 4-7 2027.",
+    "set": {
+      "next_date": "2027-08-04", "next_date_end": "2027-08-07",
+      "status": "upcoming", "source": "https://kcdc.info/"
+    }
+  },
+  {
+    "match": { "name": "OpenSearchCon North America", "city": "San Jose" },
+    "action": "update",
+    "reason": "Standing audit, blocking — a genuine false confirmation. The record pointed at the Linux Foundation's root calendar index, and the automated check 'confirmed' its date by matching 'Sep 22, 2026' belonging to a Stuttgart workshop listed on the same page. The stored date happened to be right, but the evidence was another event's. Repointed to the event's own page, whose JSON-LD gives startDate 2026-09-22 and endDate 2026-09-24.",
+    "set": {
+      "url": "https://events.linuxfoundation.org/opensearchcon-north-america/",
+      "next_date_end": "2026-09-24",
+      "source": "https://events.linuxfoundation.org/opensearchcon-north-america/"
+    }
+  }
+]

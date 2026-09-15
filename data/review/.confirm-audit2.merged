@@ -1,0 +1,8 @@
+[
+  { "name": "RustConf", "city": "Vancouver", "status": "corrected", "cycle": "audit2",
+    "evidence": "rustconf.com body: 'September 7-10, 2027 | Vancouver, Canada + Online', stated twice. Title and JSON-LD on that page are both stale." },
+  { "name": "Kansas City Developer Conference", "city": "Kansas City", "status": "corrected", "cycle": "audit2",
+    "evidence": "kcdc.info: KCDC 2027 workshops Aug 4, conference Aug 5-6, Kids Tech Day Aug 7." },
+  { "name": "OpenSearchCon North America", "city": "San Jose", "status": "corrected", "cycle": "audit2",
+    "evidence": "events.linuxfoundation.org/opensearchcon-north-america JSON-LD: 2026-09-22 to 2026-09-24, San Jose." }
+]

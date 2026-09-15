@@ -1,142 +1,247 @@
-# Audit report — 2026-09-10
+# Audit report — 2026-09-15
 
-**Verdict: 7 DISCREPANCIES (2 blocking, 5 warnings)**
+**Verdict: 3 BLOCKING, 6 WARNINGS**
 
-Baseline 1d38833 (883 events / 233 cities) -> working tree (884 / 233).
-Mechanical pass: node agent/tools/audit-run.mjs --since 1d38833. Judgement pass: 12 records
-verified against live pages.
+Standing audit of current state (no curator run since 2026-09-10). The mechanical audit
+against `acb6e0f` returned 0 blocking / 2 warnings; both standing warnings are resolved
+below as false positives. The findings here come from Task 1 (auditing
+`verify-dates.mjs`) and Task 3 (the rollover).
 
-**The mechanical audit's 3 blocking findings are all false positives.** See warning 5 - they are
-an artefact of audit-run.mjs keying on name+city, and both flagged rows have ledger entries under
-their corrected city keys. Do not re-dispatch on account of them.
+**Headline on Task 1:** every stored date I checked by hand was correct — I found no
+event whose date is wrong. But the *evidence* behind a large minority of the 410
+confirmations does not support the verdict, and on one it provably points at a different
+event on a different continent. The check is a good stale-date detector and a poor
+confirmation of correctness.
+
+---
 
 ## Blocking
 
-- **PAX West (Seattle)** - last_date regressed from 2026-09-04 to 2025-08-29, losing the fact that
-  the 2026 edition happened.
-  west.paxsite.com reads "LEVEL 2026 COMPLETE. SEE YOU NEXT YEAR: SEPTEMBER 3-6, 2027". The new
-  next_date 2027-09-03..2027-09-06 is right and well sourced (page JSON-LD startDate 2027-09-03),
-  so that half of the change is sound. The problem is the mechanism: build-data.mjs synthesises
-  last_date at build time by rolling an elapsed next_date, and the baseline events.json got
-  last_date 2026-09-04 that way from raw's next_date "2026-09-04". Overwriting that raw next_date
-  with the 2027 window removed the roll's input, so events.json fell back to raw's stale last_date
-  of 2025-08-29. The record now claims PAX West was last held in August 2025.
-  **Set last_date "2026-09-04" in the PAX West records in data/raw/us-west.json and
-  data/raw/categories.json, then rebuild.** Every other date move this run (Buffalo Game Space,
-  CHM Live, CONNECT, Jersey City, Santa Monica New Tech, SecKC, tech SAVannah) set last_date
-  explicitly; PAX West is the only one that did not.
+### 1. RustConf (Montreal) — rollover hid an announced next edition, and a city move
 
-- **Tech Week Los Angeles / LA Tech Week (Los Angeles)** - curator 3's duplicate call is
-  **confirmed**. Both records are the same a16z event: city Los Angeles, next_date 2026-10-12,
-  next_date_end 2026-10-18, type tech-week, source https://www.tech-week.com/, same
-  freemium/founders framing. They differ only in url (/calendar vs /), which is why the duplicate
-  check did not catch them - it looks for identical URLs in one city. They come from two raw
-  files, categories.json and us-west.json.
-  **Merge into one record.** Keep "LA Tech Week" (the organiser's own name on the a16z calendar
-  luma.com/latw) from us-west.json, which also carries the real last_date 2025-10-13; delete
-  "Tech Week Los Angeles" from data/raw/categories.json and retire its ledger key
-  techweeklosangeles|losangeles.
+Rolled to `recurring-tbd` with `last_date: 2026-09-08`. The 2026 edition did happen
+(rustconf.com: "from September 8-11, 2026, the Rust community gathered in Montreal"), so
+`last_date` is right. But the same page already announces the next one:
+
+> **SAVE THE DATE: September 7-10, 2027 | Vancouver, Canada + Online**
+
+rendered on the page as "see you next year! september 7-10 | vancouver + online". The
+rollover published "we do not know when the next one is" on a page that says exactly when
+it is, and in a different city.
+
+**Set:** `next_date: 2027-09-07`, `next_date_end: 2027-09-10`, `status: upcoming`,
+`city: Montreal -> Vancouver`.
+
+**Caution:** rustconf.com's TITLE tag still reads "RustConf 2027 - September 8-11 |
+Montreal + Online". That is a stale title the organiser forgot to update — the body copy
+is the authority. Do not take the title.
+
+### 2. Kansas City Developer Conference (Kansas City) — rollover hid published 2027 dates
+
+Rolled to `recurring-tbd` with `last_date: 2026-09-09`. kcdc.info's front page currently
+leads with:
+
+> Join us for **KCDC 2027!** Workshops: Wed, Aug 4 · Conference: Thurs, Aug 5 - Fri, Aug 6
+> · Kids Tech Day: Sat, Aug 7
+
+**Set:** `next_date: 2027-08-04`, `next_date_end: 2027-08-07`, `status: upcoming`.
+If the directory records only the conference proper rather than the workshop day, use
+`2027-08-05` to `2027-08-06` — but the page sells all four days as KCDC 2027.
+
+### 3. OpenSearchCon North America (San Jose) — false confirmation
+
+Ledger entry: `automated: page still shows "sep 22, 2026"`, against
+`url: https://events.linuxfoundation.org/` — the Linux Foundation *root events index*.
+
+The string it matched is not this event's date. On that page "sep 22, 2026" occurs as:
+
+> stuttgart physical ai workshop and meetup **sep 22, 2026** | stuttgart, germany
+
+A different event, in Germany. The stored date happens to be right — the same page
+elsewhere says "opensearchcon north america **sep 22-24, 2026** san jose, united states"
+— but the ledger's evidence is for another event entirely, and the record's `url` is an
+index page rather than the event's own page.
+
+**Set:** `url: https://events.linuxfoundation.org/opensearchcon-north-america/`, and
+re-record the ledger evidence against the OpenSearchCon listing itself. `next_date` and
+`next_date_end` (2026-09-22 to 2026-09-24) are correct as stored.
+
+---
 
 ## Warnings
 
-1. **Seven URL repoints left source pointing at the superseded page.** url moved but source did
-   not, on WeAreDevelopers World Congress, gRPConf North America, seL4 Summit, OPI Summit on
-   DPU/IPUs, OIN Connect, EWF Annual Conference and Django Girls New York City. The
-   aggregator-collisions pass set both fields together, so this breaks an established convention.
-   Two cases are more than cosmetic:
-   - **Django Girls New York City** - next_date is now 2026-11-27, but source remains
-     https://djangogirls.org/en/events/, the index tile the curator's own evidence says shows only
-     "28th November 2026". The record's provenance now contradicts the record.
-   - **gRPConf North America** and **seL4 Summit** - source is still
-     https://events.linuxfoundation.org/about/calendar/, the page the same curator established
-     "no longer lists this event at all".
-   **Set source to the page the evidence was actually read from** (the new url in each case, and
-   https://djangogirls.org/en/nyc/ for Django Girls).
+### W1. The confirmation check has no discriminating power on multi-event pages
 
-2. **Open Source AI Week (San Jose) entered the published directory unverified.** This is the
-   entire +1 in the event count, and it is not a discovery: the record was already in
-   data/raw/categories.json at 1d38833 but absent from the baseline data/events.json, so
-   rebuilding resynced it in. It has no ledger entry and sits in TO-VERIFY.tsv as never/unchecked.
-   Its dates do hold up - events.linuxfoundation.org/about/calendar/ lists "Open Source AI Week,
-   Oct 16-25, 2026, Bay Area, United States", matching the stored 2026-10-16..2026-10-25 - but the
-   calendar says **Bay Area**, not San Jose, and the week's constituent events span venues in San
-   Jose (PyTorch Conference NA, Oct 20-21) and San Francisco. **Either give it a proper check next
-   pass or reclassify the city.** The orchestrator should not credit this run with finding a new
-   event.
+This is the systemic finding behind blocking item 3, and it is the answer to "is the
+automated confirmation trustworthy?".
 
-3. **LA Tech Week evidence quotes around a contradiction.** The ledger for
-   techweeklosangeles|losangeles quotes the calendar blurb as "Welcome to ... Tech Week from
-   October 12-18, 2026". The page actually reads "Welcome to **San Francisco** Tech Week from
-   October 12-18, 2026" - a16z's own copy-paste error on luma.com/latw. The conclusion survives:
-   luma.com/sftw independently gives "San Francisco Tech Week from October 5-11, 2026" and
-   luma.com/nytw gives June 1-7, so Oct 12-18 is LA's own window, exactly as the curator argued.
-   But the ellipsis hides the one thing on the page that argues against the verdict. **Restore the
-   elided words in the evidence string** so the next reader sees the conflict and the resolution.
+I ran a decoy test: for 44 of the 410 confirmations whose URL is a listing or calendar
+page, I re-ran the script's own `renderings()` matcher against dates the event *does not
+have* (+7, +14, -21, +35 days). **14 of 44 pages (32%) also "confirmed" a date the event
+does not have.** On those pages a `confirmed` verdict is a coincidence, not evidence:
 
-4. **Southwestern Ontario Drupal Camp publishes as Waterloo while its own venue says Kitchener.**
-   The patch and data/raw/review-additions-2.json both set city "Kitchener", and APPLIED.md records
-   the change as "Various" -> "Kitchener", but data/events.json shows city "Waterloo" and id
-   southwestern-ontario-drupal-camp-waterloo. Cause is scripts/lib/places.mjs, which maps
-   'kitchener' to ['Waterloo', 'Ontario']. Not a curator error, and the underlying facts are right
-   - swo.drupalcanada.org confirms "Oct 23-24, 2026 / Kitchener-Waterloo" with Friday at the
-   Kitchener Public Library - but the published row reads "Waterloo, Ontario" next to venue
-   "Kitchener Public Library (Fri)". **Decide whether the Kitchener->Waterloo alias is intended
-   here**, and if it is, note it in APPLIED.md so the ledger and the raw file stop disagreeing
-   with the output.
+Tennessee Quantum Hackathon, Jersey City Entrepreneurs, Buffalo Game Space, CHM Live,
+TechCrunch Disrupt, BSidesCache, CONNECT: Networking for Entrepreneurs, Partner Vibe,
+The AI Pivot Conference, West Slope Startup Week, Digital Summit Philadelphia,
+Scrum Day Houston, Product-Led Summit San Francisco, Wisconsin Biohealth Summit.
 
-5. **audit-run.mjs reports every city correction as a removal plus a skipped queue row.** All
-   three of its blocking findings this run are spurious:
-   - Mississippi Digital Government Summit (Jackson) - has a ledger entry at
-     mississippidigitalgovernmentsummit|flowood, status corrected, cycle c1.
-   - Southwestern Ontario Drupal Camp (Multiple cities) - has one at
-     southwesternontariodrupalcamp|waterloo, status corrected, cycle c3.
-   The "2 gone" in coverage are the same two records under their old keys; per-city counts move
-   only Jackson 6->5, Flowood 2->3, Multiple cities 12->11, Waterloo 4->5, San Jose 9->10, which
-   accounts for every one of them. No city lost its last event. **Match queue coverage on the
-   dispatched row's identity rather than name+city** (fall back to name-only, or follow the city
-   field of the applied patch), otherwise any correct city fix will keep triggering re-runs.
+Four specific mechanics cause it:
+
+1. **It searches the raw HTML, not just the rendered text** (`raw.includes(r)` in
+   `check()`). Confirmed matches landed in: another event's JSON-LD block —
+   dev.events/NA/US/UT matched UtahJS Conf's `startDate` before reaching BSidesCache's;
+   an `.ics` download href query string (innovationdepot.org); and The Events Calendar's
+   `"selected_end_datetime"`, which is the calendar's own view window, so an ISO match on
+   any WordPress/Tribe events page is close to self-fulfilling (thecompanylab.org).
+2. **Year-less renderings** (`October 14`, `Oct 14`, `10/14`) account for **191 of the
+   410** confirmations. On a page listing a year of events these are near-worthless.
+3. **No proximity constraint.** Nothing requires the matched date to be anywhere near the
+   event's name.
+4. **Text flattening manufactures strings that are not on the page.** Wisconsin Biohealth
+   Summit "confirmed" on `oct 21 2026` — a string that exists only because the flattener
+   joined the date label "Wed Oct 21" to the next event's title "2026 Wisconsin Biohealth
+   Summit".
+
+**Suggested fix for the tool owner:** require the match to fall within roughly 300
+characters of the event name; drop year-less renderings when the page contains more than
+one `startDate`; search the stripped text only, and strip `href` and `datetime`
+attributes and Tribe `selected_*` JSON before matching. Failing all that, downgrade
+listing-page matches from `confirmed` to `ambiguous` and hand them to an agent.
+
+**What this implies for the other ~395:** I verified 26 records by hand and found zero
+wrong dates, so this is not a live data-corruption problem — the dataset is in better
+shape than its evidence trail. But roughly a third of the listing-page confirmations rest
+on evidence that cannot distinguish the right date from a wrong one, and the ledger now
+marks them settled so nothing will look again. Treat `cycle: "script"` confirmations on
+`/events/`, `/calendar/` and aggregator URLs as *unchecked* rather than checked until the
+matcher is tightened. Confirmations on a dedicated event domain that matched a
+year-bearing rendering held up every time I looked and can be trusted.
+
+### W2. Thirteen records point at an aggregator, and were confirmed against it
+
+`url` is a dev.events page for 13 events, and for 10 of those it is a **state index**
+(`dev.events/NA/US/UT`, `/CO`, `/AZ`, `/WI/tech`, and so on), not an event page:
+
+The AI Pivot Conference (Anaheim), Tech Fuse Des Moines, West Slope Startup Week
+(Durango), RedacteCON (Grand Junction), Scrum Day Houston, BSidesCache (Logan),
+Scrum Day Madison, Rails Camp West (Otis), Partner Vibe (Salt Lake City),
+DDX Innovation & UX Conference (San Diego), Workplace Ninjas US (Scottsdale), plus
+Humanoid Robots Summit NA and FTW:SF on dev.events per-event pages.
+
+For these, `source` is also dev.events, so the script re-confirmed the aggregator against
+itself. No organiser page has ever been consulted. The dates all match what dev.events
+publishes, and the one I checked independently is right (RedacteCON: Sep 19 2026,
+Colorado Mesa University Ballroom, Grand Junction), but that is luck rather than process.
+
+**Action:** repoint these at the organiser. RedacteCON's own site is `redactecon.org`;
+most of the others will have one too. Where no organiser page exists, at least use the
+per-event dev.events URL (`dev.events/conferences/...`) rather than the state index, so a
+future confirmation cannot match a neighbouring event.
+
+### W3. SAP Connect (Las Vegas) — confirmation is unreproducible and non-probative
+
+Ledger: `page still shows "october 5"` against `https://www.sap.com/events.html`. That is
+SAP's global event index; a bare "october 5" on it says nothing about a Las Vegas
+conference. It now returns **HTTP 403 with a 380-byte body**, so under the script's own
+`body.length < 500` rule it would be `unreadable` today and the entry cannot be
+reproduced. (403 is a bot wall, not a broken link — not reported as one.) The only
+corroboration for 2026-10-05 to 2026-10-07 is dev.events/NA/US/NV, which is also the
+record's `source`.
+
+**Action:** find SAP Connect's own event page, repoint `url`, and re-verify against it.
+
+### W4. Wisconsin Biohealth Summit (Milwaukee) — `next_date_end` unsupported
+
+Stored `2026-10-21` to `2026-10-22`. mketech.org/events lists it once, as
+"wed oct 21 2026 wisconsin biohealth summit **all day** · baird center", with no Oct 22
+entry. The record's description calls it "a two-day Wisconsin summit". One of the two is
+wrong. **Action:** check the summit's own site; if it is a single day, clear
+`next_date_end` and fix the description.
+
+### W5. Open Source AI Week (San Jose) — city may be wrong
+
+Confirmed on the LF calendar, which lists it as "open source ai week **oct 16-25, 2026
+bay area, united states**". The dataset pins it to San Jose; the 2025 edition was
+San Francisco-centred. The dates are right, the city is a guess dressed as a fact.
+**Action:** confirm the host city from the Open Source AI Week site.
+
+### W6. Tech Homecoming (Ann Arbor) — URL slug is a year behind its content
+
+`url: https://a2tech360.com/events/tech-homecoming-2025/` currently serves
+"Tech Homecoming 2026". It works today, but the moment SPARK publishes a current-year
+slug this record will point at a frozen old page while still reporting `confirmed`.
+**Action:** repoint when a current-year slug appears.
+
+---
 
 ## Checked and sound
 
-Verified against the live page; do not re-check these.
+### The two standing duplicate warnings — both legitimate
 
-- **SBUHacks (Stony Brook), Oct 9-11 -> Oct 23-25** - defensible, and the reasoning is honest.
-  hack.sbcs.io says only "SBUHACKS October 2026 @ Stony Brook University", "This website is
-  currently under construction", and lists "the exact date and location of the event" as still to
-  be announced. mlh.io/seasons/2027/events carries "SBUHacks OCT 23 - 25, Stony Brook, New York,
-  US, In-Person". The stored Oct 9-11 had no source; Hack Knight and Knight Hacks both sit on Oct
-  9-11 in the same chunk, so the carry-over theory is plausible. MLH is already this record's
-  source field, so this is not new aggregator dependence. Accept.
-- **NorthSec (Montreal), 2027-05-17..23 -> 2027-05-10..16** - correct, and the leftover-JSON-LD
-  diagnosis is exactly right. nsec.io reads "NorthSec Conference 2027 / May 10-16, 2027 /
-  Montreal, Canada", Training May 10-11-12, Conference May 13-14, CTF May 14-15-16, Bonsecours
-  Market 350 St-Paul East. The page does carry dead startDate 2020-05-10T08:00 / endDate
-  2012-05-17T16:00, and 05-17 is the stored wrong start.
-- **The MLH-sourced hackathon days do distinguish their provenance.** Spot-read uOttaHack,
-  Hackville, ElleHacks, MakeUofT, SF Hacks, MariHacks, WEHack, LA Hacks, UofTHacks and HackKU:
-  each evidence string states which facts came from the organiser (edition, month, city, venue,
-  in-person format) and says explicitly that the day-level dates came from MLH's 2027 season
-  registry. HackKU additionally flags that its organiser page is behind a Vercel 429 and could not
-  be read. The distinction the curator claims is genuinely in the evidence.
-- **Mississippi Digital Government Summit, Jackson -> Flowood** - correct. The organiser page's
-  JSON-LD gives streetAddress "2200 Refuge Boulevard" and addressLocality "Flowood", and the venue
-  link is the Sheraton Flowood The Refuge Hotel & Conference Center. last_date 2026-09-09 matches
-  startDate 2026-09-09T08:00; the page reads "This Event is now Complete." Jackson still holds 5
-  events, so nothing was orphaned.
-- **WeAreDevelopers World Congress (San Jose) URL change** - correct. The old /world-congress
-  returns title "WeAreDevelopers World Congress - 14-16 July - Berlin - Europe"; the new
-  /world-congress-north-america returns "September 23-25, 2026 - San Jose, CA" with agenda entries
-  dated "Thu, Sep 24". Dates and city in the record were already right.
-- **Random confirmed spot-checks all held**: IBM TechXchange (Atlanta) - ibm.com/events/techxchange
-  shows Monday 26 through Thursday 29 October, Atlanta GA, matching 2026-10-26..29. CyberBay
-  Summit (Tampa) - cyberbay.org/summit/ states "CyberBay Summit 2027 will take place March 22-24,
-  2027, in Tampa, Florida" and "JW Marriott Tampa Water Street", matching 2027-03-22..24. Hawaii
-  Tech Week (Honolulu) - JSON-LD startDate 2026-08-31 / endDate 2026-09-06, on-page "Aug 31 - Sep
-  6, 2026", matching the stored elapsed edition.
-- **No aggregator-sourced date was introduced.** Every date changed this run traces to the
-  organiser (nsec.io, west.paxsite.com, djangogirls.org/en/nyc/, dayofdata.org) or to MLH's season
-  registry with that stated. No dev.events, 10times or Eventbrite search URL became a date source.
-- **Link health**: 11/11 new or changed URLs resolve. tech-week.com returns a Vercel 429 bot wall
-  to every fetcher - not a regression.
-- **Build is idempotent**: re-running scripts/build-data.mjs reproduces the working tree exactly,
-  so events.json is not hand-edited.
+**Resolved. The duplicate check should be taught to stop flagging this shape.**
+
+- **a2Tech360 (tech-week) vs Tech Homecoming (career-fair), Ann Arbor, both 2026-09-22.**
+  Legitimate. a2tech360.com: "Registration is open for a2tech360 2026! **September 22 -
+  October 2, 2026**" — an eleven-day Ann Arbor SPARK series whose own lineup lists eight
+  signature events plus partner events across those dates. Tech Homecoming is one of
+  them: its page reads "Career Fair **September 22, 2026** | 4 p.m. - 7 p.m. | free for
+  job seekers | **Venue by 4M**", and it appears under a2tech360's "Signature Events"
+  navigation. Container and contained, both separately attendable, both correctly
+  recorded (a2Tech360 09-22 to 10-02 at "Multiple venues across Ann Arbor";
+  Tech Homecoming 09-22, single day, Venue by 4M).
+
+- **Maine Blue Economy Week (conference) vs Open Door Leadership Series (meetup-series),
+  Portland, both 2026-09-30.** Legitimate, and not even a container/contained pair — two
+  unrelated Roux Institute events that happen to share a morning. From the Roux events
+  JSON-LD: Maine Blue Economy Week, `2026-09-30` to `2026-10-02`, at "Holiday Inn,
+  Portland, ME"; and "Open Door with Glenn Prickett, Gulf of Maine Research Institute
+  President & CEO", `2026-09-30T08:00` to `09:00`, at "Northeastern University's Roux
+  Institute, 100 Fore Street, Portland". The series continues with Mary Allen Lindemann
+  on 2026-10-28. Both records match their pages, venues included.
+
+**Rule suggestion:** the duplicate check fires on name + city + start date + domain. Add
+a suppression when the two rows have a different `type` **and** a different `venue`, or
+when one row's date range strictly contains the other's. Both cases above satisfy both
+tests.
+
+### Rollovers verified as truthful
+
+- **ElixirConf US (Chicago)**, `last_date: 2026-09-10`. elixirconf.com: "takes place on
+  Sept 10-11, 2026, Chicago & online". Happened; no 2027 edition announced on the page.
+  Rollover correct.
+- **Billington CyberSecurity Summit (Washington)**, `last_date: 2026-09-08`.
+  billingtoncybersummit.com: "September 8-10, 2026 | Walter E. Washington Convention
+  Center | Washington, DC ... thank you to all our speakers, sponsors...". Happened; no
+  2027 date published. Rollover correct.
+
+### Script confirmations verified correct by hand
+
+Date checked against the organiser and found right: Linux Foundation Member Summit
+(Half Moon Bay, Feb 22-23 2027) · HPSF Conference (Montreal, Apr 12-16 2027) · MCP Dev
+Summit Toronto (Oct 5-6 2026) · PyTorch Conference (San Jose, Oct 20-21 2026) ·
+KubeCon + CloudNativeCon NA (Salt Lake City, Nov 9-12 2026) · Open Source Summit NA
+(Vancouver, May 17-19 2027) · Meeting in the Millyard (Nashua — schema
+`startdate 5/18/2027`, `enddate 5/20/2027`) · NC TECH Summit for Women in Tech
+(Asheville, Sep 28-29, Renaissance Asheville Downtown) · NC TECH Awards Celebration
+(Raleigh, Nov 16) · Forge Summit (North Little Rock, Oct 13-14 2026) · TAG Chairs Gala
+(Atlanta, Thu Nov 19) · EWF Annual Conference (Nov 4-6 2026, Gaylord Rockies — the
+organiser writes "Denver", the venue is physically in Aurora, so the stored city stands) ·
+CHM Live (Mountain View, Wed Sep 23 2026, "In Conversation with Boris Cherny") ·
+Tennessee Quantum Hackathon (Chattanooga, Nov 13 2026, Max Fuller Center) · Innovation
+Depot Founders Round Table (Birmingham, Oct 22 2026) · CONNECT: Networking for
+Entrepreneurs (Jackson, Oct 1 2026, Fertile Ground Beer Co.) · Product-Led Summit Toronto
+(Nov 12-13 2026) · Product-Led Summit San Francisco (Sep 22-23 2026) · Digital Summit
+Philadelphia (Sep 23-24), Atlanta (Oct 6-7), Raleigh (Nov 2-3) · Digital Okanagan
+(Vernon, Sep 24 2026) · tech SAVannah Tech Tuesday (Oct 13 2026) · Buffalo Game Space
+(Sep 24 2026, Tri-Main Center) · Victoria Tech Week (Sep 21 2026) · RedacteCON (Grand
+Junction, Sep 19 2026) · Workplace Ninjas US (Scottsdale, Jan 11-13 2027).
+
+Several of these were right for the wrong reason — the matched string belonged to a
+neighbouring event or to markup. They do not need re-checking; the matcher does.
+
+### Not reported as findings
+
+- Gartner IT Symposium/Xpo, Gartner IAM Summit and the SAP pages serve 403 to scripts.
+  Bot walls, not regressions.
+- Event count is unchanged at 882 since `acb6e0f`; nothing added, nothing removed, so
+  there is no coverage loss and no removal to justify.

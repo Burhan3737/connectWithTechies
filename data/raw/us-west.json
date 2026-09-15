@@ -823,9 +823,9 @@
     "attendance": "700",
     "cost": "paid",
     "audience": "search engineers, data engineers, open source contributors",
-    "url": "https://events.linuxfoundation.org/",
+    "url": "https://events.linuxfoundation.org/opensearchcon-north-america/",
     "description": "The community conference for the OpenSearch project, covering search relevance, vector search, observability and analytics at scale.",
-    "source": "https://dev.events/NA/US/CA/San_Jose"
+    "source": "https://events.linuxfoundation.org/opensearchcon-north-america/"
   },
   {
     "name": "WeAreDevelopers World Congress",

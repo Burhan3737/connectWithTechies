@@ -1,0 +1,14 @@
+[
+  {
+    "match": {
+      "name": "Stripe Sessions",
+      "city": "San Francisco"
+    },
+    "action": "update",
+    "reason": "Automated check: the stored date 2027-04-28 no longer appears on https://stripe.com/sessions, and page JSON-LD gives 2027-05-04..2027-05-06. REVIEW BEFORE APPLYING.",
+    "set": {
+      "next_date": "2027-05-04",
+      "next_date_end": "2027-05-06"
+    }
+  }
+]
