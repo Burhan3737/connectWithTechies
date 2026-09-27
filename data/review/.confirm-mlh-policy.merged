@@ -1,0 +1,86 @@
+[
+  {
+    "name": "UofTHacks",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "mlh-policy",
+    "evidence": "organiser: uofthacks.com says January 2027, in-person, Toronto; MLH: 2027-01-15 to 01-17."
+  },
+  {
+    "name": "uOttaHack",
+    "city": "Ottawa",
+    "status": "confirmed",
+    "cycle": "mlh-policy",
+    "evidence": "organiser: 2027.uottahack.ca bundle gives January 2027, Ottawa, in-person; MLH: 2027-01-15 to 01-17."
+  },
+  {
+    "name": "LA Hacks",
+    "city": "Los Angeles",
+    "status": "confirmed",
+    "cycle": "mlh-policy",
+    "evidence": "organiser: lahacks.com says Mid-April 2027 at UCLA Pauley Pavilion, in person; MLH: 2027-04-16 to 04-18."
+  },
+  {
+    "name": "HackUMass",
+    "city": "Amherst",
+    "status": "blocked",
+    "cycle": "mlh-policy",
+    "evidence": "organiser gives no 2027 month - hackumass.com shows only the stale November 2024 dates. MLH alone has 2026-11-13..15, which the MLH rule does not cover without organiser agreement on month."
+  },
+  {
+    "name": "Hackville",
+    "city": "Mississauga",
+    "status": "blocked",
+    "cycle": "mlh-policy",
+    "evidence": "organiser gives no 2027 date - hackville.io still shows the past edition. MLH alone has the days."
+  },
+  {
+    "name": "ElleHacks",
+    "city": "Toronto",
+    "status": "blocked",
+    "cycle": "mlh-policy",
+    "evidence": "organiser says only To Be Announced. MLH alone has the days."
+  },
+  {
+    "name": "UGAHacks",
+    "city": "Athens",
+    "status": "blocked",
+    "cycle": "mlh-policy",
+    "evidence": "organiser site is Under Construction with no date. MLH alone has the days."
+  },
+  {
+    "name": "MakeUofT",
+    "city": "Toronto",
+    "status": "blocked",
+    "cycle": "mlh-policy",
+    "evidence": "organiser says only TBD, 2027 - no month. MLH alone has the days."
+  },
+  {
+    "name": "HackKU",
+    "city": "Lawrence",
+    "status": "blocked",
+    "cycle": "mlh-policy",
+    "evidence": "organiser page never read: Vercel checkpoint (429) to curl, fetch-page and WebFetch. MLH alone has the days."
+  },
+  {
+    "name": "MariHacks",
+    "city": "Montreal",
+    "status": "blocked",
+    "cycle": "mlh-policy",
+    "evidence": "organiser site publishes no date in HTML or bundle. MLH alone has the days."
+  },
+  {
+    "name": "RevolutionUC",
+    "city": "Cincinnati",
+    "status": "blocked",
+    "cycle": "mlh-policy",
+    "evidence": "organiser says only Spring 2027 - a season, not a month. MLH alone has the days."
+  },
+  {
+    "name": "WEHack",
+    "city": "Richardson",
+    "status": "blocked",
+    "cycle": "mlh-policy",
+    "evidence": "organiser says only Spring 2027 - a season, not a month. MLH alone has the days."
+  }
+]

@@ -1,0 +1,20 @@
+[
+  { "match": { "name": "Minnedemo", "city": "Minneapolis" }, "action": "remove",
+    "reason": "Audit iteration 1, blocking. Duplicate of the St. Paul Minnedemo record: minnestar.org/minnedemo/ describes one event, 'Minnedemo42 is Oct 1, 2026', previous edition at the Ordway in St. Paul. This undated Minneapolis copy had been hidden inside Minnebar by the old page-merge rule; splitting it from Minnebar was right, but it duplicates the St. Paul record, which the dedup cannot see because the cities differ." },
+  { "match": { "name": "Partner Vibe", "city": "Provo" }, "action": "update",
+    "reason": "Audit iteration 1, warning. The city was corrected to Provo but the description still said Salt Lake City, and source still pointed at the dev.events listing rather than the organiser's logistics page that settled the city.",
+    "set": { "description": "A partner and channel conference in Provo, Utah for technology service providers and their vendor ecosystem, held at the Provo Marriott Hotel & Conference Center.",
+             "source": "https://partnerin.io/vibe/logistics" } },
+  { "match": { "name": "Cambridge Science Festival", "city": "Cambridge" }, "action": "update",
+    "reason": "Audit iteration 1, warning. The date was corrected to October 4 but month still read September, so the site would group it under the wrong month once undated.",
+    "set": { "month": "October" } },
+  { "match": { "name": "Michigan Technology Conference", "city": "Rochester" }, "action": "update",
+    "reason": "Audit iteration 1, warning. Dates were verified on the organiser's site but source still pointed at the dev.events listing.",
+    "set": { "source": "https://www.mitechcon.org" } },
+  { "match": { "name": "Seattle Day of Data", "city": "Seattle" }, "action": "update",
+    "reason": "Audit iteration 1, warning. Dates were verified on the organiser's page and its source repo, but source still pointed at dev.events.",
+    "set": { "source": "https://dayofdata.org/" } },
+  { "match": { "name": "Chief Product Officer Summit San Francisco", "city": "San Francisco" }, "action": "update",
+    "reason": "Audit iteration 1, warning. last_date came from dev.events (Sept 17); the organiser's page gives Sept 24.",
+    "set": { "last_date": "2026-09-24" } }
+]

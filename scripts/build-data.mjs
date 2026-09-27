@@ -155,11 +155,28 @@ function keysFor(e) {
   return [`n:${slug(e.name)}|${city}`, `u:${page}|${city}`];
 }
 
+/**
+ * Records that share a page are the same event only if their dates agree, or
+ * one name is the other with words added ("Collision" / "Collision
+ * Conference"). Anything less certain is treated as two events.
+ */
+function samePageSameEvent(a, b) {
+  // Compare without spaces: "BSidesCharm" and "BSides Charm" are one event.
+  const na = slug(a.name).replace(/ /g, ''), nb = slug(b.name).replace(/ /g, '');
+  if (na.includes(nb) || nb.includes(na)) return true;
+  if (a.next_date && b.next_date) return a.next_date === b.next_date;
+  if (!a.next_date && !b.next_date && a.last_date && b.last_date) return a.last_date === b.last_date;
+  return false;
+}
+
+const sharedPage = [];
+
 /** Richer record wins: a confirmed future date first, then more populated fields. */
 const score = (x) => (x.next_date ? 100 : 0) +
   Object.values(x).filter((v) => v !== '' && v != null && !(Array.isArray(v) && !v.length)).length;
 
-const byKey = new Map();   // dedup key -> canonical record
+const byKey = new Map();      // name key -> canonical record
+const pageEvents = new Map(); // page key -> every distinct event listed on that page
 const kept = new Set();    // the surviving record objects
 let read = 0, dupes = 0;
 
@@ -177,11 +194,32 @@ for (const f of files) {
     catch (err) { if (err instanceof Fatal) continue; throw err; }
 
     const keys = keysFor(e);
-    const hit = keys.map((k) => byKey.get(k)).find(Boolean);
+    const byName = byKey.get(keys[0]);
+
+    /**
+     * A shared page is not proof of a shared event. A generic listing — an
+     * organisation's /events page, a council calendar — is shared by every event
+     * it lists, and merging on it silently kept one and hid the rest: 27 events
+     * were invisible behind a neighbour, and Tampa Bay Wave's two events flipped
+     * which one was shown depending on which record had more fields filled in.
+     * So a page match only merges when samePageSameEvent agrees. When it cannot
+     * tell, both are kept — a duplicate left in is visible and the audit flags
+     * it; a real event merged away is silent, and nothing does.
+     *
+     * And a page can list many events, so the page key remembers all of them.
+     * Remembering only the first meant every later record was compared against
+     * that one alone: two copies of the Kentucky Entrepreneur Hall of Fame
+     * induction, same page and same venue, were each kept apart from Awesome
+     * Fellowship Demo Day and never compared with each other.
+     */
+    const onPage = pageEvents.get(keys[1]) || [];
+    const hit = byName || onPage.find((x) => samePageSameEvent(e, x)) || null;
 
     if (!hit) {
       kept.add(e);
-      for (const k of keys) byKey.set(k, e);
+      byKey.set(keys[0], e);
+      if (onPage.length) sharedPage.push(`${e.name} and ${onPage[0].name} (${e.city}) share ${e.url}`);
+      pageEvents.set(keys[1], [...onPage, e]);
       continue;
     }
 
@@ -194,9 +232,14 @@ for (const f of files) {
       kept.add(e);
       for (const [k, v] of byKey) if (v === hit) byKey.set(k, e);
     }
-    // Both records' keys now resolve to the survivor, so a third copy found by
-    // either name or url still collapses into the same entry.
-    for (const k of keys) byKey.set(k, winner);
+    // The survivor answers for both names, and replaces the loser on its page,
+    // so a third copy found by either route still collapses into one entry.
+    byKey.set(keys[0], winner);
+    for (const [pk, list] of pageEvents) {
+      if (list.includes(hit)) pageEvents.set(pk, list.map((x) => (x === hit ? winner : x)));
+    }
+    const here = pageEvents.get(keys[1]) || [];
+    if (!here.includes(winner)) pageEvents.set(keys[1], [...here, winner]);
   }
 }
 
@@ -224,6 +267,13 @@ console.log(`Output:     ${events.length} events across ${cities.length} cities`
 console.log(`Upcoming:   ${events.filter((e) => e.status === 'upcoming').length}`);
 console.log(`Past:       ${events.filter((e) => e.status === 'past').length}`);
 console.log(`Recurring:  ${events.filter((e) => e.status === 'recurring-tbd').length}`);
+
+if (sharedPage.length) {
+  console.log(`
+Kept ${sharedPage.length} pair(s) apart that share a page but not a date — each needs its own URL:`);
+  for (const s of sharedPage.slice(0, 30)) console.log(`  = ${s}`);
+  if (sharedPage.length > 30) console.log(`  ... and ${sharedPage.length - 30} more`);
+}
 
 if (rolledOver.length) {
   console.log(`

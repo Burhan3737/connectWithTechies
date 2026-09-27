@@ -1783,7 +1783,7 @@
     "city": "Edmonton",
     "region": "Alberta",
     "country": "Canada",
-    "venue": "Edmonton EXPO Centre",
+    "venue": "Queen Elizabeth II Federal Building",
     "cadence": "annual",
     "month": "July and October",
     "next_date": "2026-10-23",
@@ -1793,7 +1793,7 @@
     "attendance": "125000",
     "cost": "freemium",
     "audience": "indie developers, players, students",
-    "url": "https://www.interactiveartsalberta.org/gdx",
+    "url": "https://www.interactiveartsalberta.org/gdxconference",
     "description": "North America's largest indie games celebration by attendance, pairing a ten-day public exhibition with 125+ exhibitors and a three-day professional development conference.",
     "source": "https://www.interactiveartsalberta.org/gdx"
   },
@@ -2402,7 +2402,7 @@
     "attendance": "",
     "cost": "paid",
     "audience": "founders, investors, economic development leaders",
-    "url": "https://myignite.ca/",
+    "url": "https://myignite.ca/ignite-summit",
     "description": "Ignite Fredericton's annual innovation summit, bringing the capital region's startup, research and business communities together for keynotes and workshops.",
     "source": "https://www.eventbrite.ca/d/canada--fredericton/technology/"
   },

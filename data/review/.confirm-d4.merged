@@ -1,0 +1,212 @@
+[
+  {
+    "name": "HackIllinois",
+    "city": "Urbana-Champaign",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "hackillinois.org redirects to hype.hackillinois.org; its server-rendered Next.js payload passes the countdown component targetDate \"2027-02-26T18:00:00.000Z\" (noon Central, Fri Feb 26 2027), matching next_date. The organiser page gives no end date; the MLH 2027 season listing (mlh.io/seasons/2027/events, websiteUrl hackillinois.org) gives \"HackIllinois FEB 26 - 28, Urbana, Illinois, In-Person\", matching next_date_end 2027-02-28."
+  },
+  {
+    "name": "RevolutionUC",
+    "city": "Cincinnati",
+    "status": "blocked",
+    "cycle": "d4",
+    "evidence": "revolutionuc.com (title \"RevolutionUC 2027\") says only \"Spring 2027...\" and confirms a 24-hour in-person hackathon at University of Cincinnati; no day in HTML or its 6 JS bundles. MLH 2027 season listing shows \"RevolutionUC FEB 27 - 28, Cincinnati, Ohio, In-Person\", agreeing with the record, but the organiser itself has not published the day, so not confirmed. Record left unchanged."
+  },
+  {
+    "name": "WiCHacks",
+    "city": "Rochester",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "wichacks.io is a 469-byte JS shell; its bundle /assets/index-DQxUmtLt.js contains the countdown new Date(\"2027-02-27T12:00:00-05:00\"), matching next_date 2027-02-27. End date from MLH 2027 season listing \"WiCHacks FEB 27 - 28, Rochester, New York, In-Person\" (endsAt 2027-02-28T21:00Z), matching next_date_end."
+  },
+  {
+    "name": "ViVE",
+    "city": "Nashville",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "hlth.com/events/vive/ JSON-LD startDate 2027-03-14, endDate 2027-03-17; hero text \"MARCH 14 - 17, 2027 | NASHVILLE, TN\". The 2027-03-20 decoy is not in the ViVE hero. Matches record."
+  },
+  {
+    "name": "CyberBay Summit",
+    "city": "Tampa",
+    "status": "corrected",
+    "cycle": "d4",
+    "evidence": "Dates correct: cyberbay.org/summit/ reads \"CYBERBAY SUMMIT 2027 EARLY BIRD REGISTRATION NOW OPEN March 22 – 24 Tampa, FL\" and \"March 22-24, 2027\", matching 2027-03-22..24. The stored URL (cyberbay.org homepage) shows no date at all, which is why the checker could not confirm it; patched url to the summit page. Venue (JW Marriott Tampa Water Street) not stated in the fetched summit text; left as is."
+  },
+  {
+    "name": "DrupalCon North America",
+    "city": "Orlando",
+    "status": "corrected",
+    "cycle": "d4",
+    "evidence": "Dates correct: events.drupal.org/orlando2027 (read via WebFetch; curl gets a JS \"Client Challenge\") states \"22 March 2027 - 25 March 2027\" at \"Hyatt Regency Grand Cypress Resort\", Orlando FL, matching record dates and venue. Stored URL was the events.drupal.org homepage listing multiple DrupalCons; patched url to the Orlando 2027 page."
+  },
+  {
+    "name": "ASU+GSV Summit",
+    "city": "San Diego",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "asugsvsummit.com JSON-LD startDate 2027-04-04T12:00-07:00, endDate 2027-04-07T21:00-07:00, location \"Manchester Grand Hyatt San Diego, 1 Market Place\"; script text \"April 4-7, 2027\". Matches record dates and city."
+  },
+  {
+    "name": "Devnexus",
+    "city": "Atlanta",
+    "status": "corrected",
+    "cycle": "d4",
+    "evidence": "devnexus.com (title \"Devnexus 2027\") hero: \"MArch 29-31, 2027 Georgia World Congress Center Atlanta, GA\". Independently, the organiser CFP at sessionize.com/devnexus-2027/ says \"event starts 29 Mar 2027 event ends 31 Mar 2027, GEORGIA WORLD CONGRESS CENTER Atlanta\". Record had 2027-04-05..07, which appears nowhere on the organiser pages. Patched to 2027-03-29..31; last_date 2026-03-10 untouched."
+  },
+  {
+    "name": "RSAC Conference",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "d4",
+    "evidence": "Dates correct: rsaconference.com/usa (title \"RSA Conference 2027\") shows \"April 5 - 8, 2027 San Francisco\", matching 2027-04-05..08. The stored homepage only lists webinar dates (Sep 30, Oct 16, Nov 12 2026), hence the checker failure; patched url to /usa."
+  },
+  {
+    "name": "Product-Led Summit Denver",
+    "city": "Denver",
+    "status": "corrected",
+    "cycle": "d4",
+    "evidence": "Dates correct. On the world.productledalliance.com listing, \"Apr 07 & 08, 2027\" sits immediately before \"Product-Led Summit Denver\" in the summit-series list. Its dedicated page world.productledalliance.com/location/denver has JSON-LD startDate 2027-04-07, endDate 2027-04-08 and hero \"April 07 & 08, 2027 Denver\". Patched url from the multi-event listing to the Denver page."
+  },
+  {
+    "name": "HackKU",
+    "city": "Lawrence",
+    "status": "blocked",
+    "cycle": "d4",
+    "evidence": "hackku.org returns HTTP 429 Vercel Security Checkpoint to curl, fetch-page and WebFetch alike. WebSearch shows the site title \"HackKU27\" but no dates; a KU calendar result is for 2026. MLH 2027 season listing shows \"HackKU27 APR 09 - 11, Lawrence, Kansas, In-Person\", agreeing with record, but no organiser page read. Unchanged."
+  },
+  {
+    "name": "MariHacks",
+    "city": "Montreal",
+    "status": "blocked",
+    "cycle": "d4",
+    "evidence": "marihacks.com is a 476-byte shell; bundle /assets/index-29e2ddfb.js has no dates, only FAQ text \"The 10th edition of MariHacks will be in person at Marianopolis College\" and a 2027 MLH trust badge. WebFetch found no dates. MLH 2027 season listing shows \"MariHacks APR 09 - 10, Montreal, Quebec, In-Person\", agreeing with record, but organiser has not published a day. Unchanged."
+  },
+  {
+    "name": "WEHack",
+    "city": "Richardson",
+    "status": "blocked",
+    "cycle": "d4",
+    "evidence": "wehackutd.com says \"WEHack 2027 Coming Soon Spring 2027 Fill out our Interest Form!\"; no day in HTML or its 6 JS bundles; /schedule is 404. MLH 2027 season listing shows \"WEHack APR 10 - 11, Richardson, TX, In-Person\", agreeing with record, but organiser has not published the day. Unchanged."
+  },
+  {
+    "name": "HPSF Conference",
+    "city": "Montreal",
+    "status": "corrected",
+    "cycle": "d4",
+    "evidence": "Dates correct: events.linuxfoundation.org/hpsf-conference/ JSON-LD startDate 2027-04-12, endDate 2027-04-16; hero \"HPSF Conference April 12-16, 2027 Montreal, QUEBEC\", schedule Monday April 12 to Friday April 16. Stored url was the LF calendar listing ~76 events (source of the 2027-05-17 decoy); patched url to the event page."
+  },
+  {
+    "name": "AI Product Summit Silicon Valley",
+    "city": "San Jose",
+    "status": "corrected",
+    "cycle": "d4",
+    "evidence": "Dates correct: world.productledalliance.com/location/ai/ (title \"AI Product Summit | Silicon Valley\") JSON-LD startDate 2027-04-15, hero \"April 15, 2027 San Jose\". The main listing does NOT show this 2027 edition (its Apr 14, 2027 San Jose entry is the separate Chief Product Officer Summit); it lists \"Apr 15, 2026 AI Product Summit San Jose\" under past events, embedded JSON dateFrom 1776268800000 = 2026-04-15, city San Jose. Patched url to the event page and last_date to 2026-04-15 (was empty)."
+  },
+  {
+    "name": "LA Hacks",
+    "city": "Los Angeles",
+    "status": "blocked",
+    "cycle": "d4",
+    "evidence": "lahacks.com, /about and /sponsor-us all say only \"Mid-April 2027 at UCLA Pauley Pavilion\" (in person, venue matches). No day in HTML or bundles. A third-party listing titles it \"Mid-April, Exact Dates TBC\". MLH 2027 season listing shows \"LA Hacks 27 APR 16 - 18\", consistent with record and with mid-April, but organiser has not published the days. Unchanged."
+  },
+  {
+    "name": "iFiveK",
+    "city": "Charleston",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "charlestondigital.com/community/ifivek hero: \"SEE YOU AT THE START LINE APRIL 22, 2027\", race venue \"Charleston Tech Center in downtown Charleston\". Past-race list includes \"18th Annual Race • April 23rd, 2026\", matching last_date. Matches record."
+  },
+  {
+    "name": "BSides Nashville",
+    "city": "Nashville",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "bsidesnash.org hero: \"BSides Nashville 2027 April 23 Friday • Doors 8:30 AM Marathon Music Works\". May 15, 2026 on the page is the 2026 recap, matching last_date. Matches record 2027-04-23 single day."
+  },
+  {
+    "name": "Midwest Gaming Classic",
+    "city": "Milwaukee",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "midwestgamingclassic.com returns Cloudflare 403 to curl and WebFetch (also /location/, /feed/, wp-json), so the page body was not read directly. Organiser-published evidence via WebSearch: the organiser homepage is indexed with title \"April 23-25, 2027 - Midwest Gaming Classic\"; the organiser Facebook (MGCgaming) post reads \"April 23-25, 2027 - Baird Center - Milwaukee, WI\"; Milwaukee Record reports MGC 2027 \"already booked for April 23-25 at the Baird Center\". Matches record dates and venue."
+  },
+  {
+    "name": "Mira Awards",
+    "city": "Indianapolis",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "techpoint.org/mira-awards/ text: \"The 2027 Mira Awards will take place Friday, April 23 at the brand-new Signia by Hilton Indianapolis\". Matches record date and venue."
+  },
+  {
+    "name": "BSidesCharm",
+    "city": "Baltimore",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "bsidescharm.org serves a JS firewall to curl; WebFetch read it: \"24-25 April 2027\", venue \"Sheraton Baltimore North, 903 Dulaney Valley Rd, Towson, MD 21204\". Matches record dates and venue (Towson, Baltimore County; record city Baltimore left as metro)."
+  },
+  {
+    "name": "MidCamp",
+    "city": "Chicago",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "midcamp.org JSON-LD and title are still for 2026 (May 12-14, 2026 = last_date, the decoy). The same page carries the organiser news post (16 May 2026) \"MidCamp 2027 Dates Are Official: Save the Date for April 28-30, 2027\", matching record 2027-04-28..30. 2027 venue not stated; DePaul left as is."
+  },
+  {
+    "name": "ServiceNow Knowledge",
+    "city": "Las Vegas",
+    "status": "blocked",
+    "cycle": "d4",
+    "evidence": "servicenow.com times out with 0 bytes to curl (HTTP/2 and HTTP/1.1, three URLs incl. knowledge.servicenow.com); WebFetch gets 403. Only aggregators/blogs (conventiongrid, 10times, nowben) report May 4-6, 2027 at The Venetian; one (shaer.io) says dates not yet announced. Agrees with record but no organiser page read. Unchanged."
+  },
+  {
+    "name": "BSides NOLA",
+    "city": "New Orleans",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "nolabsides.com redirects to a Notion site (bsidesnola.notion.site); read via Notion loadCachedPageChunkV2 API: block text \"BSidesNOLA May 11, 2027 tickets ON SALE NOW!\" linking ticketleap \"bsidesnola-2027-may-pre-release\". Matches record 2027-05-11 single day."
+  },
+  {
+    "name": "Interface",
+    "city": "Quebec City",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "interfaceqc.com page title \"Interface | 1–3 juin 2027\"; footer \"Interface - Québec\". Matches record 2027-06-01..03."
+  },
+  {
+    "name": "CT Tech Week",
+    "city": "Multiple cities",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "cttechweek.com meta description, og:description and twitter:description: \"Connecticut's biggest week in tech and innovation. June 7–11, 2027.\" Matches record. Note: raw record has region \"Connecticut\", city \"Various\"; the build folds \"various\" to Multiple cities / US & Canada (scripts/lib/places.mjs), so the published region is less precise than the raw data. Not patched (a patch cannot override that alias)."
+  },
+  {
+    "name": "ETHConf",
+    "city": "New York",
+    "status": "corrected",
+    "cycle": "d4",
+    "evidence": "Dates correct: on ethglobal.com/events the \"Featured\" block has \"June 14 16 Mon — Wed ETHConf 2027 New York City, United States Conference\" with the dates directly before the name. The dedicated site ethconf.com has JSON-LD startDate 2027-06-14T08:30-04:00, endDate 2027-06-16T18:00-04:00, \"June 14-16, 2027 Javits Center, New York\". Patched url from the multi-event listing to ethconf.com and venue to Javits Center (was empty)."
+  },
+  {
+    "name": "Product-Led Summit Seattle",
+    "city": "Seattle",
+    "status": "corrected",
+    "cycle": "d4",
+    "evidence": "Dates correct. On the world.productledalliance.com listing \"Jun 16 & 17, 2027\" sits immediately before \"Product-Led Summit Seattle\" (the May 26 decoy belongs to Amsterdam). Dedicated page /location/seattle has JSON-LD startDate 2027-06-16, endDate 2027-06-17, hero \"June 16 & 17, 2027 Grand Hyatt 721 Pine Street Seattle\". Patched url to the Seattle page and venue (was empty)."
+  },
+  {
+    "name": "SLOSS.tech",
+    "city": "Birmingham",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "sloss.tech hero: \"South's Hottest Tech Conference June 23-25th,2027 Birmingham, AL\"; Lyric Theatre named in agenda. The agenda-at-a-glance (June 24/25/26) and \"2026 Keynote Speakers\" are leftover 2026 content (June 24-26, 2026 was Wed-Fri, as is June 23-25, 2027). Matches record."
+  },
+  {
+    "name": "Black Hat USA",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "d4",
+    "evidence": "blackhat.com homepage has no USA 2027 date. Organiser page blackhat.com/upcoming.html lists \"Black Hat USA 2027 Las Vegas July 31-August 5, 2027 Mandalay Bay Convention Center, Las Vegas\" (date directly after this event name). blackhat.com/us-26/ JSON-LD startDate 2026-08-01 matches last_date. Matches record."
+  }
+]

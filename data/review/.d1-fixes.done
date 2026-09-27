@@ -1,0 +1,153 @@
+[
+  {
+    "match": {
+      "name": "Santa Monica New Tech",
+      "city": "Santa Monica"
+    },
+    "action": "remove",
+    "reason": "Virtual-only. meetup.com/santa-monica-new-tech/events: all 10 past events shown (2026-07-19 to 09-20) and all 30 scheduled (2026-09-27 to 2027-04-18) are 'Tech Meetup: Virtual Open Coffee Club', Meetup eventType ONLINE, venue 'Online event', description 'This is a virtual meeting on Zoom'. No in-person meeting is listed; the record's 'rotating Santa Monica coffee shops' venue is unsupported."
+  },
+  {
+    "match": {
+      "name": "AI Builder Lab Meetup",
+      "city": "Sioux Falls"
+    },
+    "action": "update",
+    "reason": "startupsiouxfalls.com/series/ai-builder-lab-meetup JSON-LD: next occurrence 2026-10-15 4:30-6:00pm CDT (third Thursday).",
+    "set": {
+      "next_date": "2026-10-15",
+      "next_date_end": "2026-10-15"
+    }
+  },
+  {
+    "match": {
+      "name": "Buffalo Game Space Game Development Meeting",
+      "city": "Buffalo"
+    },
+    "action": "update",
+    "reason": "meetup.com/buffalo-game-space: next 'BGS Game Development (In-Person) Meeting' is 2026-10-22 7pm at 2495 Main Street Suite #454. The 2026-10-08 event is the online 'Virtual game developer hangout', not this meeting.",
+    "set": {
+      "next_date": "2026-10-22",
+      "next_date_end": "2026-10-22"
+    }
+  },
+  {
+    "match": {
+      "name": "CHM Live",
+      "city": "Mountain View"
+    },
+    "action": "update",
+    "reason": "computerhistory.org/events lists the next CHM Live production 'Data Are Made, Not Found' Thursday, November 5, 2026 7:00 PM at CHM, 1401 N. Shoreline Blvd, Mountain View. The description referred to a past 27 August 2026 production.",
+    "set": {
+      "next_date": "2026-11-05",
+      "next_date_end": "2026-11-05",
+      "description": "The Computer History Museum's flagship live event series of original productions, interviews and panels exploring historical and current issues in technology, entrepreneurship and innovation."
+    }
+  },
+  {
+    "match": {
+      "name": "Cloud Nirvana Columbus",
+      "city": "Columbus"
+    },
+    "action": "update",
+    "reason": "cloudnirvana.org/columbus-events: the Sept 16 2026 'Cloud Nirvana Columbus: Transformation at Scale' was held at The Conference Center at OCLC (6565 Kilgour Place, Dublin, OH). Venue was blank and url pointed at the multi-city homepage.",
+    "set": {
+      "venue": "The Conference Center at OCLC, 6565 Kilgour Place, Dublin",
+      "url": "https://www.cloudnirvana.org/columbus-events"
+    }
+  },
+  {
+    "match": {
+      "name": "Founders Meetup Sioux Falls",
+      "city": "Sioux Falls"
+    },
+    "action": "update",
+    "reason": "startupsiouxfalls.com/series/founders-meetup-for-anyone-who-has-started-a-business JSON-LD: next occurrence 2026-10-21 9-10am CDT (third Wednesday).",
+    "set": {
+      "next_date": "2026-10-21",
+      "next_date_end": "2026-10-21"
+    }
+  },
+  {
+    "match": {
+      "name": "Jersey City Entrepreneurs: The Venture Garden",
+      "city": "Jersey City"
+    },
+    "action": "update",
+    "reason": "meetup.com/jersey-city-entrepreneurs: the 2026-09-26 in-person session at Nurish was held (status PAST); the 09-30 and 10-02 in-person sessions are CANCELLED and 10-01 is online-only; next active in-person session is 2026-10-03 11am at Ko Cafe, 722 Grand Street.",
+    "set": {
+      "next_date": "2026-10-03",
+      "next_date_end": "2026-10-03",
+      "last_date": "2026-09-26"
+    }
+  },
+  {
+    "match": {
+      "name": "Boise Entrepreneur Week",
+      "city": "Boise"
+    },
+    "action": "update",
+    "reason": "boiseentrepreneurweek.org FAQ: 'General admission is free' with paid VIP and Super VIP passes. Dates Sept 28 - Oct 2 at JUMP confirmed unchanged.",
+    "set": {
+      "cost": "freemium"
+    }
+  },
+  {
+    "match": {
+      "name": "FTW:SF",
+      "city": "San Francisco"
+    },
+    "action": "update",
+    "reason": "Organiser page luma.com/FTW_SF26 (Fintech Is Femme): Sept 29-Oct 1, 2026 at The Green Room, San Francisco; a three-summit fintech series (Fintech Summit, Fintech Is Femme Leadership Summit, Fintech Security Summit). The record's dev.events url and AI/future-of-work description were wrong.",
+    "set": {
+      "url": "https://luma.com/FTW_SF26",
+      "venue": "The Green Room",
+      "topics": [
+        "fintech",
+        "security",
+        "leadership"
+      ],
+      "audience": "fintech founders, operators, investors",
+      "description": "A three-day San Francisco fintech summit series from Fintech Is Femme and partners, combining the Fintech Summit, the Fintech Is Femme Leadership Summit and the Fintech Security Summit for builders, operators and investors."
+    }
+  },
+  {
+    "match": {
+      "name": "Boston Data and AI Saturday",
+      "city": "Boston"
+    },
+    "action": "update",
+    "reason": "dayofdata.org/2026-10-03-dayofdata1150 (the stored sqlsaturday.com URL redirects here): 03 October 2026, in-person, at Microsoft Technology Center, 5 Wayside Rd, Burlington, MA 01803 - not in Boston.",
+    "set": {
+      "city": "Burlington",
+      "region": "Massachusetts",
+      "venue": "Microsoft Technology Center, 5 Wayside Rd",
+      "url": "https://dayofdata.org/2026-10-03-dayofdata1150/"
+    }
+  },
+  {
+    "match": {
+      "name": "West Slope Startup Week",
+      "city": "Durango"
+    },
+    "action": "update",
+    "reason": "Organiser site westslopestartupweek.com ('WEST SLOPE STARTUP WEEK 2026 OCTOBER 5-9, 2026 in DURANGO') replaces the dev.events listing url. Dates unchanged.",
+    "set": {
+      "url": "https://westslopestartupweek.com/"
+    }
+  },
+  {
+    "match": {
+      "name": "Day of Data Pittsburgh",
+      "city": "Pittsburgh"
+    },
+    "action": "update",
+    "reason": "dayofdata.org/2026-10-10-dayofdata1163 (the stored sqlsaturday.com URL redirects here): 10 October 2026, in-person, at Commonwealth Charter Academy, The Waterfront, 162 East Bridge St, Homestead, PA 15120 - Homestead borough, not the City of Pittsburgh.",
+    "set": {
+      "city": "Homestead",
+      "region": "Pennsylvania",
+      "venue": "Commonwealth Charter Academy, The Waterfront, 162 East Bridge St",
+      "url": "https://dayofdata.org/2026-10-10-dayofdata1163/"
+    }
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Michigan Technology Conference",
+    "city": "Rochester",
+    "status": "corrected",
+    "cycle": "moves",
+    "evidence": "mitechcon.org: October 29-30 2026, Oakland University, JSON-LD and body agree."
+  },
+  {
+    "name": "Stripe Sessions",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "moves",
+    "evidence": "stripe.com/sessions: May 4-6 2027, Moscone North & South. Stored 2027-04-28 was the 2026 date year-bumped."
+  }
+]

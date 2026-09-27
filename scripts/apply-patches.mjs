@@ -23,7 +23,32 @@ import { canonPlace } from './lib/places.mjs';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW_DIR = join(ROOT, 'data', 'raw');
 const REVIEW_DIR = join(ROOT, 'data', 'review');
-const dryRun = process.argv.includes('--dry-run');
+/**
+ * This script writes data/raw/, so it must never write by accident.
+ *
+ * It used to ignore any flag it did not recognise, which meant `--help` — the
+ * first thing anyone types at an unfamiliar tool — silently performed a real
+ * apply. A curator did exactly that and applied four passes of patches before
+ * any audit had seen them. Unknown flags are now an error, and `--help` only
+ * prints this usage.
+ */
+const USAGE = `usage: node scripts/apply-patches.mjs [--dry-run]
+
+  (no flags)   apply every patch file in data/review/ to data/raw/
+  --dry-run    report what would change, write nothing
+  --help       show this message
+
+Curators and auditors must not run this without --dry-run. Applying is the
+orchestrator's step, after it has read the patches.`;
+
+const argv = process.argv.slice(2);
+if (argv.includes('--help') || argv.includes('-h')) { console.log(USAGE); process.exit(0); }
+const unknown = argv.filter((a) => a !== '--dry-run');
+if (unknown.length) {
+  console.error(`Unknown option(s): ${unknown.join(' ')}. Nothing was written.\n\n${USAGE}`);
+  process.exit(2);
+}
+const dryRun = argv.includes('--dry-run');
 
 if (!existsSync(REVIEW_DIR)) { mkdirSync(REVIEW_DIR, { recursive: true }); }
 
@@ -83,6 +108,32 @@ for (const pf of patchFiles) {
     const name = op?.match?.name, city = op?.match?.city;
     const hits = index.get(`${norm(name)}|${norm(city)}`);
     if (!hits || !hits.length) {
+      /**
+       * A miss is only a problem if the patch has not already landed. Once a
+       * city correction is applied the record lives under its new city, so a
+       * re-run cannot find it under the old one; once a removal is applied the
+       * record is gone. Both looked identical to a patch that failed to match,
+       * which made a re-run after a partial apply unreadable. Check whether the
+       * intended end state already holds before calling it a miss.
+       */
+      if (op.action === 'remove') {
+        noop++;
+        console.log(`  DONE   ${name} — ${city}  (already removed)`);
+        continue;
+      }
+      const moved = op.set?.city ? index.get(`${norm(name)}|${norm(op.set.city)}`) : null;
+      if (moved && moved.length) {
+        const settled = moved.every(({ file, i }) => {
+          const rec = store.get(file)[i];
+          return rec && Object.entries(op.set).every(([k, v]) =>
+            String(Array.isArray(rec[k]) ? rec[k].join(',') : rec[k]) === String(Array.isArray(v) ? v.join(',') : v));
+        });
+        if (settled) {
+          noop++;
+          console.log(`  DONE   ${name} — ${city} -> ${op.set.city}  (already applied)`);
+          continue;
+        }
+      }
       unmatched++;
       console.log(`  MISS   ${name} — ${city}  (no such record)`);
       continue;

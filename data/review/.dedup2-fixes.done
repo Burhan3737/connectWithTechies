@@ -1,0 +1,7 @@
+[
+  {
+    "match": { "name": "Jupyter Day", "city": "San Jose" },
+    "action": "remove",
+    "reason": "Duplicate of 'Jupyter Day San Jose' — same city, same type, same date (2026-10-19), same Linux Foundation event. The two carry different generic LF URLs (the root and /about/calendar), so the build correctly does not merge them on page; the audit's same-day check flagged them. Neither URL is the event's own page, which the surviving record's never-checked status will send a curator to find."
+  }
+]

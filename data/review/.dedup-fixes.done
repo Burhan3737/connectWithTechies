@@ -1,0 +1,7 @@
+[
+  {
+    "match": { "name": "BSides Columbus", "city": "Columbus" },
+    "action": "remove",
+    "reason": "Duplicate of 'BSides CMH' — the same event on the same site (bsidescolumbus.com, CMH being Columbus's airport code). This copy carries no dates at all; BSides CMH carries the 2026-11-04..06 edition and a last_date. Surfaced when the build stopped merging records on a shared page alone: the two share a page but, with one undated, their dates could not prove they were the same, so both were kept."
+  }
+]

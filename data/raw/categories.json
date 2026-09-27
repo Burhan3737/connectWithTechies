@@ -1484,7 +1484,7 @@
     "city": "New York",
     "region": "New York",
     "country": "United States",
-    "venue": "",
+    "venue": "Javits Center",
     "cadence": "annual",
     "month": "June",
     "next_date": "2027-06-14",
@@ -1494,7 +1494,7 @@
     "attendance": "",
     "cost": "paid",
     "audience": "web3 developers, founders, researchers",
-    "url": "https://ethglobal.com/events",
+    "url": "https://ethconf.com/",
     "description": "ETHGlobal's Ethereum ecosystem conference, held in New York alongside its hackathon programming.",
     "source": "https://ethglobal.com/events"
   },
@@ -1642,7 +1642,7 @@
     "attendance": "40000",
     "cost": "paid",
     "audience": "CISOs, security vendors, practitioners",
-    "url": "https://www.rsaconference.com/",
+    "url": "https://www.rsaconference.com/usa",
     "description": "The largest commercial cybersecurity conference in the world, dominated by vendor exhibits, policy keynotes and enterprise security tracks.",
     "source": "https://moscone.com/events/rsac-2026-conference"
   },
@@ -1826,7 +1826,7 @@
     "city": "Philadelphia",
     "region": "Pennsylvania",
     "country": "United States",
-    "venue": "",
+    "venue": "Live! Casino & Hotel Philadelphia, 900 Packer Ave",
     "cadence": "annual",
     "month": "December",
     "next_date": "2026-12-11",
@@ -3302,7 +3302,7 @@
     "attendance": "",
     "cost": "invite-only",
     "audience": "Linux Foundation members, open source program office leads",
-    "url": "https://events.linuxfoundation.org/about/calendar/",
+    "url": "https://events.linuxfoundation.org/lf-member-summit/",
     "description": "An invitation-oriented gathering of Linux Foundation member organisations focused on open source strategy and governance.",
     "source": "https://events.linuxfoundation.org/about/calendar/"
   },
@@ -3433,31 +3433,6 @@
     "source": "https://events.linuxfoundation.org/sel4-summit/"
   },
   {
-    "name": "Jupyter Day",
-    "type": "conference",
-    "topics": [
-      "open-source",
-      "data-science",
-      "python"
-    ],
-    "city": "San Jose",
-    "region": "California",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "October",
-    "next_date": "2026-10-19",
-    "next_date_end": "2026-10-19",
-    "last_date": "",
-    "status": "upcoming",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "data scientists, notebook users and maintainers",
-    "url": "https://events.linuxfoundation.org/about/calendar/",
-    "description": "A single-day event for the Jupyter notebook ecosystem, held during Open Source AI Week.",
-    "source": "https://events.linuxfoundation.org/about/calendar/"
-  },
-  {
     "name": "OPI Summit on DPU/IPUs",
     "type": "summit",
     "topics": [
@@ -3503,7 +3478,7 @@
     "attendance": "",
     "cost": "paid",
     "audience": "HPC developers, research software engineers",
-    "url": "https://events.linuxfoundation.org/about/calendar/",
+    "url": "https://events.linuxfoundation.org/hpsf-conference/",
     "description": "The High Performance Software Foundation's annual conference for open source scientific and HPC software.",
     "source": "https://events.linuxfoundation.org/about/calendar/"
   },
@@ -5070,8 +5045,8 @@
     "venue": "Salt Palace Convention Center",
     "cadence": "annual",
     "month": "August",
-    "next_date": "2027-08-15",
-    "next_date_end": "2027-08-18",
+    "next_date": "2027-08-01",
+    "next_date_end": "2027-08-04",
     "last_date": "2026-08-23",
     "status": "upcoming",
     "attendance": "",

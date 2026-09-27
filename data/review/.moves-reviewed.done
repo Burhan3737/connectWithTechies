@@ -1,0 +1,28 @@
+[
+  {
+    "match": {
+      "name": "Michigan Technology Conference",
+      "city": "Rochester"
+    },
+    "action": "update",
+    "reason": "Reviewed: mitechcon.org JSON-LD and body both give October 29-30 2026 at Oakland University. The stored October 28 was a day early.",
+    "set": {
+      "next_date": "2026-10-29",
+      "next_date_end": "2026-10-30",
+      "status": "upcoming"
+    }
+  },
+  {
+    "match": {
+      "name": "Stripe Sessions",
+      "city": "San Francisco"
+    },
+    "action": "update",
+    "reason": "Reviewed: stripe.com/sessions gives May 4-6 2027 at Moscone North & South, in JSON-LD and body. The page also still carries the 2026 edition JSON-LD dated 2026-04-28 - the stored 2027-04-28 was that date with the year bumped, never a published date.",
+    "set": {
+      "next_date": "2027-05-04",
+      "next_date_end": "2027-05-06",
+      "status": "upcoming"
+    }
+  }
+]

@@ -70,6 +70,16 @@ event has no findable site.
 - **Two permalinks can serve one event.** `greatercle.com` listed the same event under
   `/2026/09/14/` and `/2026/09/15/`, both serving identical copy reading September 14.
   The second is a stale slug, not a date move.
+- **Student hackathons: MLH counts as confirmation.** Organisers often publish only a
+  month ("Spring 2027", "January 2027") until close to the event, while Major League
+  Hacking's season registry carries exact days. MLH entries are organiser-submitted and
+  link back to the organiser's own domain; wherever both sources existed they agreed.
+  So: if the organiser's page agrees on month, city and in-person, and MLH gives the
+  days, mark it `confirmed` and say in the evidence which facts came from which. Do not
+  mark it `blocked` — that parks it at the top of the queue to be re-derived every
+  cycle. The proximity-scaled re-check will look again as the date nears, which is when
+  organisers publish exact days. This applies to MLH only, not to dev.events, 10times or
+  any other aggregator.
 - **Never guess a date.** An unresolved row is a legitimate outcome. Say what you tried.
 
 ## Your output — exactly two files

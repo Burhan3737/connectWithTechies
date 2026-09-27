@@ -1,0 +1,105 @@
+[
+  {
+    "match": {
+      "name": "CyberBay Summit",
+      "city": "Tampa"
+    },
+    "action": "update",
+    "reason": "cyberbay.org homepage shows no date; cyberbay.org/summit/ shows \"March 22 – 24 Tampa, FL\" for CyberBay Summit 2027. Dates unchanged.",
+    "set": {
+      "url": "https://cyberbay.org/summit/"
+    }
+  },
+  {
+    "match": {
+      "name": "DrupalCon North America",
+      "city": "Orlando"
+    },
+    "action": "update",
+    "reason": "events.drupal.org is a multi-event listing; events.drupal.org/orlando2027 states 22-25 March 2027 at Hyatt Regency Grand Cypress Resort. Dates unchanged.",
+    "set": {
+      "url": "https://events.drupal.org/orlando2027"
+    }
+  },
+  {
+    "match": {
+      "name": "Devnexus",
+      "city": "Atlanta"
+    },
+    "action": "update",
+    "reason": "devnexus.com hero \"March 29-31, 2027 Georgia World Congress Center Atlanta, GA\"; organiser CFP sessionize.com/devnexus-2027/ \"event starts 29 Mar 2027 event ends 31 Mar 2027\". Stored April 5-7 appears on no organiser page.",
+    "set": {
+      "next_date": "2027-03-29",
+      "next_date_end": "2027-03-31"
+    }
+  },
+  {
+    "match": {
+      "name": "RSAC Conference",
+      "city": "San Francisco"
+    },
+    "action": "update",
+    "reason": "rsaconference.com homepage shows only webinar dates; rsaconference.com/usa shows \"April 5 - 8, 2027 San Francisco\". Dates unchanged.",
+    "set": {
+      "url": "https://www.rsaconference.com/usa"
+    }
+  },
+  {
+    "match": {
+      "name": "Product-Led Summit Denver",
+      "city": "Denver"
+    },
+    "action": "update",
+    "reason": "Listing URL replaced with the event page; world.productledalliance.com/location/denver JSON-LD 2027-04-07 to 2027-04-08. Dates unchanged.",
+    "set": {
+      "url": "https://world.productledalliance.com/location/denver"
+    }
+  },
+  {
+    "match": {
+      "name": "HPSF Conference",
+      "city": "Montreal"
+    },
+    "action": "update",
+    "reason": "LF calendar listing replaced with the event page; events.linuxfoundation.org/hpsf-conference/ JSON-LD 2027-04-12 to 2027-04-16, Montreal. Dates unchanged.",
+    "set": {
+      "url": "https://events.linuxfoundation.org/hpsf-conference/"
+    }
+  },
+  {
+    "match": {
+      "name": "AI Product Summit Silicon Valley",
+      "city": "San Jose"
+    },
+    "action": "update",
+    "reason": "world.productledalliance.com/location/ai/ JSON-LD startDate 2027-04-15, \"April 15, 2027 San Jose\". Main listing shows the previous edition \"Apr 15, 2026 AI Product Summit San Jose\" (JSON dateFrom 2026-04-15); last_date was empty.",
+    "set": {
+      "url": "https://world.productledalliance.com/location/ai/",
+      "last_date": "2026-04-15"
+    }
+  },
+  {
+    "match": {
+      "name": "ETHConf",
+      "city": "New York"
+    },
+    "action": "update",
+    "reason": "ethglobal.com/events is a multi-event listing; ethconf.com JSON-LD 2027-06-14 to 2027-06-16, \"June 14-16, 2027 Javits Center, New York\". Dates unchanged.",
+    "set": {
+      "url": "https://ethconf.com/",
+      "venue": "Javits Center"
+    }
+  },
+  {
+    "match": {
+      "name": "Product-Led Summit Seattle",
+      "city": "Seattle"
+    },
+    "action": "update",
+    "reason": "Listing URL replaced with the event page; world.productledalliance.com/location/seattle JSON-LD 2027-06-16 to 2027-06-17, \"Grand Hyatt 721 Pine Street Seattle\". Dates unchanged.",
+    "set": {
+      "url": "https://world.productledalliance.com/location/seattle",
+      "venue": "Grand Hyatt Seattle"
+    }
+  }
+]

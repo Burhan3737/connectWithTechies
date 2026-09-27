@@ -184,7 +184,7 @@ for (const e of now.events) {
   nameCity.set(nk, e);
   if (pageCity.has(pk)) {
     add('warn', 'duplicate',
-      `${e.name} and ${pageCity.get(pk).name} share ${page} in ${e.city} — these merge into one on the next build`);
+      `${e.name} and ${pageCity.get(pk).name} share ${page} in ${e.city} — kept as two events; each needs its own URL`);
   }
   pageCity.set(pk, e);
 

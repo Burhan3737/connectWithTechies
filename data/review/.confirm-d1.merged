@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Digital Okanagan",
+    "city": "Vernon",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "meetup.com/digitalokanagan/events embedded event data: most recent events are PAST 'Geek Beers hangout at the Kal' 2026-09-24 5pm at The Kal, 3004 30th Ave, Vernon (in person) and 'Kelowna Software Projects Night' 2026-09-22; no ACTIVE/upcoming event is posted (page shows 'Events 0'). Record's last_date 2026-09-24 and blank next_date match. Next meeting not yet scheduled - left blank rather than guessed from the monthly Geek Beers pattern."
+  },
+  {
+    "name": "Santa Monica New Tech",
+    "city": "Santa Monica",
+    "status": "corrected",
+    "cycle": "d1",
+    "evidence": "REMOVED as virtual-only. meetup.com/santa-monica-new-tech/events embedded data: every listed event - 10 past (2026-07-19..09-20) and 30 scheduled (2026-09-27..2027-04-18) - is 'Tech Meetup: Virtual Open Coffee Club', eventType ONLINE, venue 'Online event', description 'This is a virtual meeting on Zoom'. The record's 'Sunday morning Open Coffee Club' is this Zoom call; its venue 'Rotating Santa Monica coffee shops' is unsupported by any listed event."
+  },
+  {
+    "name": "VIATEC AI Meetup",
+    "city": "Victoria",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "members.viatec.ca/event-calendar: September month grid shows 'VIATEC AI Meetup: Business Track' in the Sept 10 cell (matches last_date 2026-09-10). The upcoming list (range 9/27/2026-9/27/2027, 'Results: 13', from Sep 29 Startup Canada Tour to Nov 17 Matrix Technology Expo) contains no AI Meetup entry. Blank next_date is correct; no next meeting published."
+  },
+  {
+    "name": "Tampa Bay Wave Hall of Fame Awards",
+    "city": "Tampa",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "tampabaywave.org/events100 under 'ANNUAL EVENTS': '2025 Tampa Bay Wave Hall of Fame Awards and Fundraiser Celebration @ The Florida Aquarium - On December 18, 2025, from 6:00 PM to 9:00 PM ... Florida Aquarium rooftop'. Matches last_date 2025-12-18 and venue. No 2026 edition is published on the page or found by web search; blank next_date is correct."
+  },
+  {
+    "name": "AI Builder Lab Meetup",
+    "city": "Sioux Falls",
+    "status": "corrected",
+    "cycle": "d1",
+    "evidence": "startupsiouxfalls.com/series/ai-builder-lab-meetup (redirect from stored /event/ URL): JSON-LD and list view give next occurrence 'Oct 2026 Thu 15 4:30 pm - 6:00 pm CDT AI Builder Lab Meetup' (startDate 2026-10-15T16:30-05:00), then Nov 19, Dec 17. Record had blank next_date; set to 2026-10-15."
+  },
+  {
+    "name": "Buffalo Game Space Game Development Meeting",
+    "city": "Buffalo",
+    "status": "corrected",
+    "cycle": "d1",
+    "evidence": "meetup.com/buffalo-game-space/events embedded data: next 'BGS Game Development (In-Person) Meeting' (PHYSICAL, Buffalo Game Space, 2495 Main Street Suite #454) is 2026-10-22 19:00. The earlier 2026-10-08 entry is the ONLINE 'Virtual game developer hangout' and was skipped. Last in-person meeting 2026-09-24 matches stored last_date. Set next_date 2026-10-22."
+  },
+  {
+    "name": "Charleston Digital Connect",
+    "city": "Charleston",
+    "status": "blocked",
+    "cycle": "d1",
+    "evidence": "charlestondigital.com/events (and the homepage 'Upcoming Events and Classes') list 9 events from Sep 29 (#743 Tech After Five) to Oct 28 (Claude for Professionals); none is named 'Digital Connect'. /events/digital-connect and /events/charleston-digital-connect return 404; web search found no organiser page for it. Could neither find a next date nor confirm the series continues; record left unchanged. Worth a removal review if it stays absent."
+  },
+  {
+    "name": "CHM Live",
+    "city": "Mountain View",
+    "status": "corrected",
+    "cycle": "d1",
+    "evidence": "computerhistory.org/events: 'CHM Live - Data Are Made, Not Found - Thursday, November 5, 2026 7:00 PM' (the Oct 10 'Cars-Computers on Wheels' is labelled Special Event, not CHM Live). Event page confirms Nov 05, 2026 7pm, check-in 6:30pm, at CHM, 1401 N. Shoreline Blvd, Mountain View. Set next_date 2026-11-05 and removed the stale 'Silicon Gold Rush, 27 August 2026' sentence from the description."
+  },
+  {
+    "name": "Cloud Nirvana Columbus",
+    "city": "Columbus",
+    "status": "corrected",
+    "cycle": "d1",
+    "evidence": "cloudnirvana.org/columbus-events: most recent 'Wednesday, September 16 | 2:00 PM - 6:00 PM | The Conference Center at OCLC - Cloud Nirvana Columbus: Transformation at Scale' (Sep 16 2026 is a Wednesday; matches last_date). No later Columbus date listed. Record's venue was blank; the OCLC Conference Center is at 6565 Kilgour Place, Dublin OH (conference-center.oclc.org). Added venue and pointed url at the Columbus events page. City kept as Columbus because the next venue is unannounced."
+  },
+  {
+    "name": "Founders Meetup Sioux Falls",
+    "city": "Sioux Falls",
+    "status": "corrected",
+    "cycle": "d1",
+    "evidence": "startupsiouxfalls.com/series/founders-meetup-for-anyone-who-has-started-a-business (redirect from stored URL): JSON-LD and list view give next occurrence 'Oct 2026 Wed 21 9:00 am - 10:00 am CDT Founders Meetup' (startDate 2026-10-21T09:00-05:00), then Nov 18, Dec 16. Record had blank next_date; set 2026-10-21."
+  },
+  {
+    "name": "Jersey City Entrepreneurs: The Venture Garden",
+    "city": "Jersey City",
+    "status": "corrected",
+    "cycle": "d1",
+    "evidence": "meetup.com/jersey-city-entrepreneurs/events embedded data: 2026-09-26 11:00 'The Venture Garden, Jersey City' at Nurish (PHYSICAL, status PAST); 09-30 Canard session CANCELLED; 10-01 is the ONLINE 'Venture Garden Virtual Community Meeting' (skipped); 10-02 O Kafe CANCELLED; next ACTIVE in-person is 2026-10-03 11:00 'The Venture Garden, Jersey City (Entrepreneurs Welcome!)' at Ko Cafe, 722 Grand Street. Set next_date 2026-10-03 and last_date 2026-09-26 (today, held)."
+  },
+  {
+    "name": "Boise Entrepreneur Week",
+    "city": "Boise",
+    "status": "corrected",
+    "cycle": "d1",
+    "evidence": "boiseentrepreneurweek.org hero: 'Sept 28 - Oct 2 Jump Building Downtown Boise', copy '2026 BEW expands with fifteen Tracks', (c) 2026; Sep 28 2026 is a Monday, consistent with a Mon-Fri week. Dates and venue (JUMP = Jack's Urban Meeting Place, 1000 W Myrtle St) match. FAQ: 'General admission is free ... VIP and Super VIP passes' - cost changed paid -> freemium."
+  },
+  {
+    "name": "FTW:SF",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "d1",
+    "evidence": "Organiser page luma.com/FTW_SF26 (presented by Fintech Is Femme): JSON-LD startDate 2026-09-29T10:00-07:00, endDate 2026-10-01T17:00-07:00, 'Sept 29-Oct 1', venue 'The Green Room, San Francisco'. Dates match. But it is a fintech summit series (Fintech Summit by Fiat Growth, Fintech Is Femme Leadership Summit, Fintech Security Summit), not the AI/future-of-work event the dev.events-derived description claimed. Corrected url, venue, topics, audience, description."
+  },
+  {
+    "name": "The AI Conference",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "aiconference.com (organiser) JSON-LD startDate 2026-09-29T09:00-07:00, endDate 2026-10-01T18:00-07:00; hero 'THE AI CONFERENCE 2026 ... Sept 29 - Oct 1 SAN FRANCISCO'. Matches record."
+  },
+  {
+    "name": "Clojure/conj",
+    "city": "Charlotte",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "2026.clojure-conj.org: 'When Sept 30 - Oct 2, 2026 / Where Charlotte Convention Center, 501 S College St, Charlotte, NC 28202', in person with an optional free livestream. Matches record dates and venue."
+  },
+  {
+    "name": "Umbraco US Festival",
+    "city": "Chicago",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "umbracofestival.us meta description: 'Join us in Chicago's vibrant Fulton Market September 30 - October 1, 2026'; /location: '800 Fulton Market, 800 W Fulton Market, Chicago'; organiser's Eventbrite ticket listing: 'Wednesday, September 30-Thursday, October 1, 9 AM-5 PM'. Matches record. Note: /location puts the closing party on Wed Sep 30 ('two days well spent'), an internal inconsistency on the organiser site, but the headline date and ticket listing both say Sep 30-Oct 1."
+  },
+  {
+    "name": "CONNECT: Networking for Entrepreneurs",
+    "city": "Jackson",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "innovate.ms/events list view: directly under 'October 2026 / Thu 1' the entry 'CONNECT: Networking for Entrepreneurs October 1 @ 4:30 pm - 6:30 pm Fertile Ground Beer Co. 800 Manship St Suite 101, Jackson, MS' (JSON-LD 2026-10-01T16:30-05:00). The decoy dates are later occurrences of the same series (Nov 5, Dec 3) and separate entries (Venture Atlanta, DelTech, Accelerate). Matches record."
+  },
+  {
+    "name": "BigRed//Hacks",
+    "city": "Ithaca",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "bigredhacks.com JS bundle FAQ 'Where and when is the hackathon?': 'BigRed//Hacks 2026 will take place October 2nd - 4th on Cornell University's Ithaca Campus.' (the September 9 date in the bundle is the application deadline). MLH 2027-season listing agrees: startsAt 2026-10-02, endsAt 2026-10-04, Ithaca, physical. Matches record."
+  },
+  {
+    "name": "BSides Bloomington",
+    "city": "Bloomington",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "Organiser's Sessionize page (sessionize.com/bsides-bloomington-2026): '2 Oct 2026' - '3 Oct 2026', Monroe Convention Center, Bloomington, Indiana; organiser Instagram: 'BSides Bloomington 2026 is happening October 2-3'. bsidesbloomington.org itself shows no date (its 'It's a wrap, 2026' text is a hidden d-none countdown-complete placeholder, not live copy); /venue gives Monroe Convention Center, 302 S. College Ave (the former Bloomington Convention Center) and a 2026 hotel block. Matches record."
+  },
+  {
+    "name": "Manufacturing Day at WSU Tech",
+    "city": "Wichita",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "wsutech.edu/wsutechevents: under 'October 2026' the entry 'Manufacturing Day 2026 - Date: Friday, October 2, 2026, Time: 9 AM - 2 PM, Location: NCAT, 4004 N. Webb Road, Wichita' (JSON-LD 2026-10-2T09:00). The decoy dates belong to other entries (Middle School Days Nov 11-12, Senior Day Nov 13). Matches record."
+  },
+  {
+    "name": "Boston Data and AI Saturday",
+    "city": "Boston",
+    "status": "corrected",
+    "cycle": "d1",
+    "evidence": "Stored sqlsaturday.com URL redirects to dayofdata.org/2026-10-03-dayofdata1150/: 'Boston Data and AI Saturday 2026 (#1150) Event Date: 03 October 2026 - This event is: in-person'. Date correct, but 'The event is taking place at: Microsoft Technology Center, 5 Wayside Rd, Burlington, MA 01803' - about 13 miles from Boston. Set city Burlington, venue, and the live url."
+  },
+  {
+    "name": "MHacks",
+    "city": "Ann Arbor",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "mhacks.org hero: 'MHACKS 2026 ... October 3-4, 2026 - Ann Arbor, Michigan', University of Michigan. The decoy Sat September 12 is the regular-application deadline in the Timeline. MLH listing agrees (2026-10-03..04, Ann Arbor, physical). Matches record."
+  },
+  {
+    "name": "Rowdy Hacks",
+    "city": "San Antonio",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "rowdyhacks.org shows no calendar date, but its FAQ says 'The deadline for registration is October 2nd, at 23:59' and its schedule runs Saturday 09:00 check-in to a Sunday closing ceremony at UTSA Main Campus. MLH 2027-season listing (MLH sanctions the event; websiteUrl rowdyhacks.org): 'Rowdy Hacks' startsAt 2026-10-03T13:00Z, endsAt 2026-10-04T22:00Z, 'OCT 03 - 04', San Antonio, physical. Consistent; matches record."
+  },
+  {
+    "name": "SAP Connect",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "sap.com returns Akamai 403 to both curl and WebFetch (events.html, events/connect.html, attendee-information.html). SAP's own subsidiary page taulia.com/sap-connect-2026: 'SAP Taulia at SAP Connect 2026 - October 5-7, 2026 | Las Vegas, NV and Virtual'. Matches record 2026-10-05..07; in person with a virtual option."
+  },
+  {
+    "name": "SF Tech Week",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "tech-week.com returns a Vercel security checkpoint (HTTP 429) to curl and WebFetch. Organiser's own X account @Techweek_: 'Mark your calendars SF: Oct 5-11th LA: Oct 12-18th'; the San Francisco Tech Week Luma calendar header: 'Welcome to San Francisco Tech Week from October 5-11, 2026'. Matches record 2026-10-05..11."
+  },
+  {
+    "name": "West Slope Startup Week",
+    "city": "Durango",
+    "status": "corrected",
+    "cycle": "d1",
+    "evidence": "Organiser site westslopestartupweek.com (the record only pointed at dev.events): title and hero 'WEST SLOPE STARTUP WEEK 2026 OCTOBER 5-9, 2026 in DURANGO'. The inScript 'October 6-10, 2025' is the previous edition, matching last_date 2025-10-06. Dates match; url updated to the organiser site."
+  },
+  {
+    "name": "Data Streaming Summit",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "datastreaming-summit.org Nuxt payload FAQ 'where-when': 'Data Streaming Summit (DSS) 2026 will take place on October 7-8, 2026 at Hotel Nikko San Francisco (222 Mason Street, San Francisco, CA 94102).' Matches record dates and venue."
+  },
+  {
+    "name": "Hack Knight",
+    "city": "Flushing",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "hackknight.org JS bundle hero: 'HackKnight 2026 - October 9th - 11th, 2026'; schedule days 'Fri Oct 9 / Sat Oct 10 / Sun Oct 11'; countdown target 2026-10-09; default location 'Queens College - CUNY'. MLH listing agrees (2026-10-09..11, Flushing, physical). Matches record."
+  },
+  {
+    "name": "CodeRED",
+    "city": "Houston",
+    "status": "confirmed",
+    "cycle": "d1",
+    "evidence": "uhcode.red 'Register' links to orion.uhcode.red, titled 'CodeRED Orion 2026 | University of Houston Hackathon': JSON-LD startDate 2026-10-10T08:00-05:00, endDate 2026-10-11T12:00-05:00, 'October 10-11, 2026'. Matches record."
+  },
+  {
+    "name": "Day of Data Pittsburgh",
+    "city": "Pittsburgh",
+    "status": "corrected",
+    "cycle": "d1",
+    "evidence": "Stored sqlsaturday.com URL redirects to dayofdata.org/2026-10-10-dayofdata1163/: 'Day of Data Pittsburgh 2026 (#1163) Event Date: 10 October 2026 - This event is: in-person'. Date correct, but the venue is 'Commonwealth Charter Academy, The Waterfront, 162 East Bridge St, Homestead, PA 15120' - Homestead borough, not the City of Pittsburgh. Set city Homestead, venue and the live url."
+  }
+]

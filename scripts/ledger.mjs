@@ -166,9 +166,14 @@ function monthsAway(e) {
 }
 
 const REASONS = {
-  never:    { rank: 1, why: 'never checked' },
-  blocked:  { rank: 2, why: 'previous check could not read the page' },
-  regroup:  { rank: 3, why: 'a group that meets weekly or monthly, showing no next date — wrong on the page today' },
+  // regroup leads: it is the only reason that means "wrong on the page right
+  // now". It used to sit behind blocked, which was fine while blocked was a
+  // handful — then a stricter matcher demoted 143 confirmations to blocked, and
+  // three events that were visibly wrong on the site sank beneath 143 that
+  // were merely unverified.
+  regroup:  { rank: 1, why: 'a group that meets weekly or monthly, showing no next date — wrong on the page today' },
+  never:    { rank: 2, why: 'never checked' },
+  blocked:  { rank: 3, why: 'previous check could not read the page' },
   imminent: { rank: 4, why: 'coming up, and the check is stale relative to how close it is' },
   rolled:   { rank: 5, why: 'an annual edition ran since it was checked; next one is far off' },
   window:   { rank: 6, why: 'undated, usual month 2-5 months out, not looked at for 45 days' },

@@ -741,31 +741,6 @@
     "source": "https://sessions.minnestar.org/"
   },
   {
-    "name": "Minnedemo",
-    "type": "demo-day",
-    "topics": [
-      "startups",
-      "product-demos",
-      "community"
-    ],
-    "city": "Minneapolis",
-    "region": "Minnesota",
-    "country": "United States",
-    "venue": "",
-    "cadence": "quarterly",
-    "month": "Varies",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "free",
-    "audience": "technologists, founders, investors",
-    "url": "https://minnestar.org",
-    "description": "Minnesota's premier 'geek show and tell': a live evening showcase of working technology products built in Minnesota, run by the nonprofit Minnestar.",
-    "source": "https://minnestar.org/events/"
-  },
-  {
     "name": "Twin Cities Software Symposium",
     "type": "conference",
     "topics": [
@@ -877,7 +852,7 @@
     "city": "St. Paul",
     "region": "Minnesota",
     "country": "United States",
-    "venue": "",
+    "venue": "St Paul College, 235 Marshall Avenue",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-24",
@@ -887,7 +862,7 @@
     "attendance": "",
     "cost": "free",
     "audience": "data professionals, DBAs, analysts",
-    "url": "https://sqlsaturday.com",
+    "url": "https://sqlsaturday.com/2026-10-24-sqlsaturday1153/",
     "description": "A free community-run day of training on SQL Server, Azure data services and analytics for Minnesota data professionals.",
     "source": "https://dev.events/NA/US/MN/tech"
   },
@@ -2881,7 +2856,7 @@
     "city": "Milwaukee",
     "region": "Wisconsin",
     "country": "United States",
-    "venue": "",
+    "venue": "Baird Center",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-21",
@@ -2891,7 +2866,7 @@
     "attendance": "",
     "cost": "paid",
     "audience": "biohealth executives, researchers, investors",
-    "url": "https://www.mketech.org/events/",
+    "url": "https://reg.eventmobi.com/2026-wisconsin-biohealth-summit",
     "description": "A two-day Wisconsin summit convening biohealth industry leaders, researchers and investors around life sciences and health technology innovation.",
     "source": "https://www.mketech.org/events/"
   },
@@ -3060,7 +3035,7 @@
     "venue": "",
     "cadence": "annual",
     "month": "October",
-    "next_date": "2026-10-28",
+    "next_date": "2026-10-29",
     "next_date_end": "2026-10-30",
     "last_date": "",
     "status": "upcoming",
@@ -3069,7 +3044,7 @@
     "audience": "IT professionals, technology managers",
     "url": "https://www.mitechcon.org",
     "description": "A three-day Michigan technology conference for IT professionals covering infrastructure, security and cloud operations.",
-    "source": "https://dev.events/NA/US/MI/tech"
+    "source": "https://www.mitechcon.org"
   },
   {
     "name": "GOVIT Leadership Summit & Symposium",
@@ -3132,7 +3107,7 @@
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
-    "venue": "",
+    "venue": "Sheraton Grand Chicago Riverwalk",
     "cadence": "annual",
     "month": "November",
     "next_date": "2026-11-03",
@@ -3142,9 +3117,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "robotics engineers, investors, manufacturers",
-    "url": "https://dev.events/conferences/humanoid-robots-summit-north-america-2026-vdlot1u0",
+    "url": "https://acgrobotus.com/",
     "description": "A two-day Chicago summit on humanoid robotics, covering hardware platforms, embodied AI and commercial deployment in North America.",
-    "source": "https://dev.events/conferences/humanoid-robots-summit-north-america-2026-vdlot1u0"
+    "source": "https://acgrobotus.com/"
   },
   {
     "name": "Scrum Day Houston",

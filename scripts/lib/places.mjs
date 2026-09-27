@@ -25,8 +25,12 @@ export const CITY_ALIASES = new Map(Object.entries({
   'washington d.c.':      ['Washington', 'District of Columbia'],
   'quebec':               ['Quebec City', 'Quebec'],
   'montréal':             ['Montreal', 'Quebec'],
+  // Kitchener is its own city, so it is no longer folded into Waterloo. The
+  // rule every city correction follows is "the town the venue is in", and
+  // SWO Drupal Camp, held at Kitchener Public Library, was being published as
+  // Waterloo. Only the hyphenated regional label, which names no one town,
+  // still maps.
   'kitchener-waterloo':   ['Waterloo', 'Ontario'],
-  'kitchener':            ['Waterloo', 'Ontario'],
   'research triangle park': ['Durham', 'North Carolina'],
   'winston salem':        ['Winston-Salem', 'North Carolina'],
   'various':              ['Multiple cities', 'US & Canada'],
@@ -45,12 +49,26 @@ export const REGION_ALIASES = new Map(Object.entries({
 
 export const titleCity = (s) => String(s || '').trim().replace(/\s+/g, ' ');
 
+/** Placeholders a researcher uses when an event has no single host city. */
+const PLACEHOLDER = /^(various|multiple|nationwide|us & canada|)$/i;
+
 export function canonPlace(city, region) {
   const c = titleCity(city);
   const r = titleCity(region);
   const ck = c.toLowerCase().replace(/\./g, '').replace(/\s+/g, ' ').trim();
-  const hit = CITY_ALIASES.get(`${ck}|${r.toLowerCase()}`) || CITY_ALIASES.get(ck);
-  if (hit) return { city: hit[0], region: hit[1] };
   const rk = r.toLowerCase().replace(/\s+/g, ' ').trim();
+  const hit = CITY_ALIASES.get(`${ck}|${rk}`) || CITY_ALIASES.get(ck);
+
+  /**
+   * A multi-city event is only "US & Canada" if nothing narrower is known.
+   * CT Tech Week runs across Connecticut: its record said city "Various",
+   * region "Connecticut", and the alias replaced both — so a state-wide event
+   * was published as continent-wide and dropped out of every Connecticut
+   * search. Keep a real region when the researcher gave one.
+   */
+  if (hit && hit[0] === 'Multiple cities' && !PLACEHOLDER.test(rk)) {
+    return { city: 'Multiple cities', region: REGION_ALIASES.get(rk) || r };
+  }
+  if (hit) return { city: hit[0], region: hit[1] };
   return { city: c, region: REGION_ALIASES.get(rk) || r };
 }
