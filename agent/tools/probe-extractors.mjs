@@ -16,6 +16,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import { today as todayInDirectory } from '../../scripts/lib/today.mjs';
 
 const run = promisify(execFile);
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -51,7 +52,7 @@ const EXTRACTORS = [
       const m = [...body.matchAll(/"startDate"\s*:\s*"(\d{4}-\d{2}-\d{2})[^"]*"(?:[\s\S]{0,400}?"endDate"\s*:\s*"(\d{4}-\d{2}-\d{2})[^"]*")?/g)];
       if (!m.length) return null;
       // Prefer the earliest future start; a page may list several events.
-      const today = new Date().toISOString().slice(0, 10);
+      const today = todayInDirectory();
       const future = m.map((x) => ({ start: x[1], end: x[2] || x[1] }))
         .filter((x) => x.start >= today)
         .sort((a, b) => a.start.localeCompare(b.start));
@@ -141,5 +142,5 @@ Object.entries(noHit).sort((a, b) => b[1] - a[1]).slice(0, 12)
   .forEach(([h, n]) => console.log(`  ${String(n).padStart(3)}  ${h}`));
 
 writeFileSync(join(ROOT, 'data', 'extractor-probe.json'),
-  JSON.stringify({ probed_on: new Date().toISOString().slice(0, 10), results }, null, 2) + '\n');
+  JSON.stringify({ probed_on: todayInDirectory(), results }, null, 2) + '\n');
 console.log('\nFull result written to data/extractor-probe.json');

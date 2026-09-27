@@ -344,7 +344,7 @@
     "city": "Houston",
     "region": "Texas",
     "country": "United States",
-    "venue": "",
+    "venue": "Hilton Americas-Houston",
     "cadence": "annual",
     "month": "September",
     "next_date": "2026-09-14",
@@ -356,7 +356,7 @@
     "audience": "data scientists, R and Python practitioners",
     "url": "https://conf.posit.co",
     "description": "Posit's annual data science conference, covering open-source R and Python tooling, reproducible reporting and enterprise data science workflows.",
-    "source": "https://dev.events/NA/US/TX/tech"
+    "source": "https://conf.posit.co/2026/"
   },
   {
     "name": "BSides SATX",
@@ -1095,31 +1095,6 @@
     "url": "https://techpoint.org",
     "description": "TechPoint's annual black-tie awards celebration honouring Indiana's best tech startups, companies and technology leaders.",
     "source": "https://www.every.io/blog-post/startups-events-indiana"
-  },
-  {
-    "name": "Indy Women in Tech Summit",
-    "type": "summit",
-    "topics": [
-      "women-in-tech",
-      "leadership",
-      "careers"
-    ],
-    "city": "Indianapolis",
-    "region": "Indiana",
-    "country": "United States",
-    "venue": "Indiana Convention Center",
-    "cadence": "annual",
-    "month": "August",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "women in technology, allies",
-    "url": "https://techpoint.org",
-    "description": "A half-day summit held as part of the Rally conference, headlined by prominent female technology leaders discussing the state of the tech ecosystem.",
-    "source": "https://techpoint.org/digital-innovation/indy-women-in-tech-iwit-summit-returns-august-30-as-part-of-the-inaugural-rally-innovation-conference-in-downtown-indy/"
   },
   {
     "name": "IND(Venture) Indiana Venture Summit",
@@ -2329,7 +2304,7 @@
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
-    "venue": "The Ohio State University",
+    "venue": "Ohio Union, The Ohio State University",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-24",
@@ -2339,7 +2314,7 @@
     "attendance": "",
     "cost": "free",
     "audience": "university students",
-    "url": "https://hack.osu.edu",
+    "url": "https://hack.osu.edu/2026",
     "description": "Ohio State's flagship software-focused student hackathon, part of the OHI/O program that fosters tech culture at OSU and its surrounding communities.",
     "source": "https://hack.osu.edu/"
   },
@@ -2354,7 +2329,7 @@
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
-    "venue": "The Ohio State University",
+    "venue": "Physics Research Building, The Ohio State University",
     "cadence": "annual",
     "month": "March",
     "next_date": "",
@@ -2364,7 +2339,7 @@
     "attendance": "",
     "cost": "free",
     "audience": "university students",
-    "url": "https://hack.osu.edu",
+    "url": "https://hack.osu.edu/make/",
     "description": "OHI/O's hardware-focused making marathon at Ohio State, where student teams build physical prototypes over a weekend.",
     "source": "https://hack.osu.edu/"
   },
@@ -2379,7 +2354,7 @@
     "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
-    "venue": "The Ohio State University",
+    "venue": "Fontana Laboratories, The Ohio State University",
     "cadence": "annual",
     "month": "February",
     "next_date": "",
@@ -2389,7 +2364,7 @@
     "attendance": "",
     "cost": "free",
     "audience": "university students",
-    "url": "https://hack.osu.edu",
+    "url": "https://hack.osu.edu/about-hack-ai/",
     "description": "A two-day OHI/O hackathon at Ohio State where students tackle projects with the help of AI tooling.",
     "source": "https://hack.osu.edu/"
   },
@@ -2834,9 +2809,9 @@
     "venue": "Various Milwaukee venues",
     "cadence": "monthly",
     "month": "Varies",
-    "next_date": "2026-09-05",
-    "next_date_end": "2026-09-05",
-    "last_date": "",
+    "next_date": "2026-10-03",
+    "next_date_end": "2026-10-03",
+    "last_date": "2026-09-05",
     "status": "upcoming",
     "attendance": "",
     "cost": "free",
@@ -2942,7 +2917,7 @@
     "cost": "paid",
     "audience": "DevOps engineers, SREs, platform engineers",
     "url": "https://www.sketchdev.io/devopsmidwest",
-    "description": "A regional two-day DevOps and platform engineering conference held in St. Louis for Midwest infrastructure and delivery teams.",
+    "description": "A regional one-day DevOps and platform engineering conference held in St. Louis for Midwest infrastructure and delivery teams.",
     "source": "https://www.sketchdev.io/devopsmidwest"
   },
   {
@@ -3344,9 +3319,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "researchers, tech entrepreneurs, investors",
-    "url": "https://www.mcservices.com/top-tech-conferences-milwaukee/",
+    "url": "https://today.marquette.edu/calendar/first-look-forum-2/",
     "description": "A Milwaukee pitch event where top-tier researchers and technology entrepreneurs present their latest innovations to potential investors.",
-    "source": "https://www.mcservices.com/top-tech-conferences-milwaukee/"
+    "source": "https://today.marquette.edu/calendar/first-look-forum-2/"
   },
   {
     "name": "AI Week Milwaukee",
@@ -3369,7 +3344,7 @@
     "attendance": "",
     "cost": "varies",
     "audience": "AI practitioners, educators, business leaders",
-    "url": "https://www.mcservices.com/top-tech-conferences-milwaukee/",
+    "url": "https://www.msoe.edu/ai-and-msoe/ai-week-at-msoe/",
     "description": "A week-long series of Milwaukee events exploring the intersection of artificial intelligence, ethics and industry education, hosted across the MSOE campus.",
     "source": "https://www.mcservices.com/top-tech-conferences-milwaukee/"
   },
@@ -3410,18 +3385,18 @@
     "city": "Chicago",
     "region": "Illinois",
     "country": "United States",
-    "venue": "Hyatt Regency Chicago",
-    "cadence": "annual",
-    "month": "March",
-    "next_date": "2026-09-15",
-    "next_date_end": "2026-09-15",
-    "last_date": "2026-03-03",
+    "venue": "",
+    "cadence": "biannual",
+    "month": "April",
+    "next_date": "2027-04-27",
+    "next_date_end": "2027-04-27",
+    "last_date": "2026-09-15",
     "status": "upcoming",
     "attendance": "",
     "cost": "paid",
     "audience": "CISOs, security practitioners, executives",
-    "url": "https://cybersecuritysummit.com",
-    "description": "A one-day executive cybersecurity summit at the Hyatt Regency Chicago connecting security leaders with solution providers and peer practitioners.",
-    "source": "https://xl.net/blog/top-tech-conferences-chicago/"
+    "url": "https://cyberriskalliance.swoogo.com/Chicago2027",
+    "description": "A one-day executive cybersecurity summit in Chicago, held twice a year, connecting security leaders with practitioners and solution providers.",
+    "source": "https://cyberriskalliance.swoogo.com/Chicago2027"
   }
 ]

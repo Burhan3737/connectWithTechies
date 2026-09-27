@@ -1,0 +1,219 @@
+[
+  {
+    "name": "5 Across Pitch Competition",
+    "city": "Lexington",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "Own page awesomeinc.org/events/5across/: 'Join us at the next 5 Across October 14, 2026, Location: 201 E Main St', host The Mane on Main, which matches the record venue. The next edition after that is the December Finals on 2026-12-02 at the Kentucky Theatre. The past-winner index shows 'Sep 2026', consistent with the stored last_date 2026-09-09. Set next_date 2026-10-14 and set url to the series page (was the shared /events listing). The raw record still held the elapsed next_date 2026-09-09, so the patch sets last_date 2026-09-09 alongside the new date."
+  },
+  {
+    "name": "Milwaukee Tech Hub Code & Coffee",
+    "city": "Milwaukee",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "The mketech.org/events calendar lists 'SAT OCT 3 October Code & Coffee 9am-12pm'. Its card links to the organiser's Meetup event (Mitobyte, event 312261431): JSON-LD startDate 2026-10-03T09:00-05:00, endDate 12:00, eventAttendanceMode Offline, venue Fruition MKE, 819 N 27th St, Milwaukee. The raw record held the elapsed next_date 2026-09-05. Set next_date 2026-10-03 and set last_date 2026-09-05 in the same patch so the September session is not lost."
+  },
+  {
+    "name": "Full Indie Meetup",
+    "city": "Vancouver",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "fullindie.com/meetup describes a free in-person meetup 'on the first Tuesday of every month' and lists 'Next Meetup October (No Meeting) November 3rd December 1st' at 'LaSalle College - 2808 Bradfield Court, Vancouver'. The V5M postcode puts it in Vancouver itself, and 2026-11-03 is a Tuesday. Set next_date 2026-11-03, venue, and url to /meetup (was the homepage shared with Full Indie Summit). October not used because the organiser says there is no October meeting."
+  },
+  {
+    "name": "Knox Game Design",
+    "city": "Knoxville",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "Removal patch. knoxgamedesign.org/about/ says 'The group typically meets in the Spring for a game jam kickoff'. Commented-out HTML on that page says meetings moved online, and the monthly posts are podcast episodes. On /category/meetings/, only the April Knox Game Jam kickoff posts (2024, 2025, 2026, at Panera Bread on N. Peters Rd) have a physical 'Where' line. That kickoff is the only in-person gathering, and it is already the separate 'Knox Game Jam' record. Nothing supports the record's claim of 'regular in-person meetings', so there is no own page to point the url at."
+  },
+  {
+    "name": "Steel City AI Innovators Meetup",
+    "city": "Pittsburgh",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "The organiser's own event page, pghtech.org/events/Steel_City_AI_10, says 'When: Wednesday, October 14, 2026 Where: Pittsburgh Technology Council' and 'Monthly hands-on meetups. Always free. 2nd Wed, 5:30pm'. The pghtech.org/events listing also shows instances on 14 Oct and 11 Nov. The raw record held the elapsed next_date 2026-09-09 (second Wednesday of September) with last_date 2026-08-12. Set next_date 2026-10-14 and last_date 2026-09-09 in the same patch, plus venue and url to the own page. There is no series-level page, so this url is the October instance and will need rolling."
+  },
+  {
+    "name": "Awesome Fellowship Demo Day",
+    "city": "Lexington",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "Date and venue confirmed. awesomeinc.org/events lists 'October 15, 2026 Host: Awesome Inc Location: 348 E Main St, Lexington - Awesome Fellowship Fall 2026 Demo Day & Lunch | Powered by Chase'. The organiser's registration link (linkToEvent in its page-data) is Eventbrite event 1997757584714, with JSON-LD 2026-10-15T11:30-04:00 to 13:00. awesomeinc.org/fellowship has no demo-day section, so this organiser-linked Eventbrite event page is the only per-event page. Set url to it and filled next_date_end with 2026-10-15."
+  },
+  {
+    "name": "Jupyter Day San Jose",
+    "city": "San Jose",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "Date confirmed on the organiser's page rather than the aggregator. events.linuxfoundation.org/jupyter-day/ has JSON-LD startDate and endDate 2026-10-19 and reads 'Jupyter Day October 19, 2026 San Jose, CA'. It is in person: /attend/venue-travel/ gives 'San Jose Convention Center 150 W San Carlos St San Jose, CA 95113'. The record's dates were correct. Fixed the url (was the LF homepage), the source (was dev.events) and the empty venue."
+  },
+  {
+    "name": "Pittsburgh Tech 50 Awards",
+    "city": "Pittsburgh",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "Own page pghtech.org/events/Tech50_2026_1 says 'When: Thursday, November 19, 2026 Where: The Event Center @ Rivers Casino'. Agenda: registration 5:00-7:00 PM, awards 7:00-9:30 PM, 30th anniversary edition. This matches the stored 2026-11-19. Set url to the own page (was the shared listing) and filled the empty venue."
+  },
+  {
+    "name": "Chief Product Officer Summit Silicon Valley",
+    "city": "San Jose",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "world.productledalliance.com/location/cposiliconvalley has JSON-LD startDate and endDate 2027-04-14, with the hero text 'April 14, 2027 San Jose' and 'gathering of CPOs in San Jose'. It is in person and invite-based. This matches the stored 2027-04-14. No venue is named yet. Set url and source to this page (were the PLA homepage and dev.events)."
+  },
+  {
+    "name": "Charleston Tech Week",
+    "city": "Charleston",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "Two organiser pages confirm the dates. charlestontechweek.com shows 'JUNE 8-12, 2026' with the 2026 schedule (from Monday June 8, at venues across Charleston and Mount Pleasant) and 'MAY 17-21, 2027'. digsouth.com/techsummit says 'Dig South Anchors Charleston Tech Week - May 17-21, 2027'. The stored next dates 2027-05-17..21 and last_date 2026-06-08 are correct. Moved the url to charlestontechweek.com (was the shared DIG SOUTH page)."
+  },
+  {
+    "name": "24 Hour Startup: AGTECH",
+    "city": "Regina",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "Stored last_date 2025-12-16 was the publish date of Cultivator's recap post (cultivator.ca/events/upcoming_and_past_events lists it as 'December 16, 2025 ... 24 Hour Startup | AGTECH takes on Canadian Western Agribition!'). The event itself was earlier. Western Producer: 'Queensbury Convention Centre in Regina Nov. 28', running from Friday 1:30pm to a Saturday finale. 620 CKRM on 2025-12-01: 'Agribition wrapped up this weekend'. Agribition 2025 ran Nov 24-29. Set last_date 2025-11-28, month November, and venue. The own page cultivator.ca/events/24-hour-startup-agtech says 'When: 2026 Dates Coming Soon!', so next_date stays empty. Set url to that page (was the shared /events)."
+  },
+  {
+    "name": "9D Jam",
+    "city": "Buffalo",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "Removal patch. itch.io/jam/9d-jam-iii, hosted by Buffalo Game Space, says 'It ran from 2026-08-21 to 2026-08-30 ... This jam will be 100% virtual and will have kickoff and closeout in the Buffalo Game Space discord'. 9D Jam II uses the same wording. There is no in-person component, so it is out of scope for this directory. It also does not appear on meetup.com/buffalo-game-space, which lists only the in-person meetings, virtual hangouts and BGSJamXXII."
+  },
+  {
+    "name": "AI Week Milwaukee",
+    "city": "Milwaukee",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "msoe.edu/ai-and-msoe/ai-week-at-msoe/ says 'MSOE AI Week took place April 20-25, 2026', with the keynote day on Saturday April 25, 2026. It ran on the MSOE campus and was presented by NMDSI. This matches the stored last_date 2026-04-20 and venue. No 2027 dates are published, so next_date stays empty. Moved the url from a third-party MC Services blog to the organiser's page."
+  },
+  {
+    "name": "Chief Product Officer Summit San Francisco",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "world.productledalliance.com/location/cposanfrancisco/ has JSON-LD startDate 2026-09-24 and reads 'September 24, 2026 Hyatt Regency San Francisco Airport 1333 Old Bayshore Highway Burlingame'. The stored last_date 2026-09-24 is correct. The page still shows the edition that has just been held and gives no 2027 SF date, so next_date stays empty. City corrected to Burlingame, the town the venue is in; only the event's name says San Francisco. Url and source set to the own page (were the PLA homepage and dev.events). The raw record also still carried next_date/next_date_end 2026-09-17, the date a 10times listing gives, which the organiser never published. The patch clears both and keeps last_date 2026-09-24 explicit."
+  },
+  {
+    "name": "Cultivator Founders Retreat",
+    "city": "Regina",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "cultivator.ca/save-the-date-founders-retreat says 'When: March 25 + 26, 2026 Where: Cultivator HQ - Regina, Saskatchewan', matching the stored last_date 2026-03-25. For the next edition, the event-card image on cultivator.ca/events (the '2027 Events' page) reads 'MAR 2027 / Founders Retreat / Cultivator HQ'. That is month only with no day, so next_date stays empty. Set url to the own page and filled the empty venue."
+  },
+  {
+    "name": "Cultivator STARTup Showcase",
+    "city": "Regina",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "Stored last_date 2024-10-11 was the publish date of the announcement post. That post (cultivator.ca/startup-showcase-start-cohort-11) says 'our first-ever STARTup Showcase on December 11' at Cultivator HQ. The recap '6 Startups Take the Spotlight at STARTup Showcase' confirms it ran, and Eventbrite shows Wed Dec 11, 2024. Set last_date 2024-12-11 and url. No later Showcase appears anywhere: not on Cultivator's upcoming-and-past list, not on the 2027 event cards (which include START C18 Kickoff Jul 24 2027), and search found none for 2025 or 2026. With one edition in about 21 months, the 'biannual' cadence is unproven. It is a candidate for a stale-record review, but I did not remove it because nothing says it was discontinued."
+  },
+  {
+    "name": "Cultivator Startup Summit",
+    "city": "Regina",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "Organiser pages: cultivator.ca/events/startup-summit says 'The when September 9 + 10, 2026!', and saskstartupsummit.com is titled 'Startup Summit | Sept 9 + 10, 2026' with 'Cultivator HQ Regina, SK' (2375 College Ave). It was held: 620 CKRM reported Michele Romanow's keynote on 2026-09-14. For the next edition, the event-card image on cultivator.ca/events ('2027 Events') reads 'SEPT 15+16 2027 Startup Summit Cultivator HQ'. The record had no next_date, and its last_date 2025-09-23 (a recap-post date) missed the 2026 edition. Set last_date 2026-09-09, next 2027-09-15..16, venue, and url (was the shared /events). The 2027 days come from an image on the organiser's own page, with no text source."
+  },
+  {
+    "name": "Hack AI",
+    "city": "Columbus",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "hack.osu.edu/about-hack-ai/ is the own page and is marked 'This event has passed'. It says 'HackAI is a 2-day hackathon ... The event will be held in Fontana Labs', with check-in Saturday at 8:30 AM and a closing ceremony on Sunday. The Lantern (OSU student paper) gives Feb. 21-22, 2026 in Fontana Laboratories, matching the stored last_date 2026-02-21. No 2027 date on hack.osu.edu (its homepage lists HackOHI/O Oct 24-25 2026 and fall events only), so next_date stays empty. Set url to the own page (was the shared homepage) and set venue."
+  },
+  {
+    "name": "Indy Women in Tech Summit",
+    "city": "Indianapolis",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "Removal patch. The summit's own pages are techpoint.org/tech-events/iwit-summit-rally/ (JSON-LD 2023-08-30) and /2025-iwit-summit/ (JSON-LD 2025-11-06, Indianapolis Motor Speedway Pavilion, 'Hosted by Indy Women in Tech'). The IBJ article 'Nonprofit group Indy Women in Tech disbands after 9-year run' reports the organisation dissolved effective Dec. 31, 2025. indywit.com, including /iwit-summit/, does not respond. There will be no further edition. The record's description (Indiana Convention Center, August, part of Rally) came from 2023 and was already out of date."
+  },
+  {
+    "name": "MakeOHI/O",
+    "city": "Columbus",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "hack.osu.edu/make/ redirects to /make/2026/, which reads 'The Ohio State University's annual makeathon. In-person @ Physics Research Building and online March 7 - 8, 2026' and is marked 'This event has passed'. The hack.osu.edu homepage also lists 'MakeOHI/O Hardware Focused Marathon March 7-8, 2026'. This matches the stored last_date 2026-03-07. No 2027 date is published, so next_date stays empty. Set url to /make/ (was the shared homepage) and set venue."
+  },
+  {
+    "name": "PEI BioAlliance Holiday Social",
+    "city": "Charlottetown",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "peibioalliance.com/event/holiday-social-2025/ has JSON-LD startDate 2025-12-10T17:00-04:00 at 'Rodd Charlottetown Hotel - 75 Kent St. Charlottetown'. It is 'free and open to all bioscience sector companies' and annual ('Once again we will be hosting our popular holiday social'). This matches the stored last_date 2025-12-10. /events shows 'There are no upcoming events', so there is no 2026 date yet and next_date stays empty. Set url to the event's own page (was the shared listing). The organiser uses a new slug each year, so this url should roll when the 2026 page appears."
+  },
+  {
+    "name": "rvatech/Data + AI Summit",
+    "city": "Richmond",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "rvatech.com/rvatech-events/2026-rvatech-data-summit/ reads 'Event Details March 26, 2026 Doors Open 8:00 AM ... Hosted at the Science Museum of Virginia - Dewey Gottwald Center 2301 W Leigh Street Richmond'. This matches the stored last_date 2026-03-26 and venue. The series page /events/premier-conferences/data-summit/ has no 2027 edition, and the premier-conferences 'Upcoming' list only has Women in Technology on Nov 17, 2026, so next_date stays empty. Set url to the Data Summit series page (was the shared premier-conferences listing)."
+  },
+  {
+    "name": "Charleston Digital Connect",
+    "city": "Charleston",
+    "status": "blocked",
+    "cycle": "e1",
+    "evidence": "The charlestondigital.com homepage and /events list 9 upcoming items, from Sep 29 (#743 Tech After Five) to Oct 28 (Claude for Professionals). None is 'Digital Connect'. /events/digital-connect and /events/charleston-digital-connect return 404. The site's Sanity dataset (6p5s9hss) is private and queries return empty. A web search for 'Charleston Digital Connect' found only general Digital Corridor pages. No next date found, and nothing shows the series continuing after the Sep 17 session a prior pass saw. Record left unchanged. Recommend a removal review if it is still absent next cycle."
+  },
+  {
+    "name": "HackUMass",
+    "city": "Amherst",
+    "status": "blocked",
+    "cycle": "e1",
+    "evidence": "Orchestrator override of curator e1: organiser gives only a stale November 2024 date, so the MLH rule (organiser must name the month) does not apply; MLH alone has the days. Curator note: The MLH 2027 season registry (mlh.com/seasons/2027/events, organiser-submitted, websiteUrl hackumass.com) lists 'HackUMass', startsAt 2026-11-13, ends"
+  },
+  {
+    "name": "Hackville",
+    "city": "Mississauga",
+    "status": "blocked",
+    "cycle": "e1",
+    "evidence": "Orchestrator override of curator e1: organiser gives still shows its January 2026 edition, no 2027 month, so the MLH rule (organiser must name the month) does not apply; MLH alone has the days. Curator note: The MLH 2027 registry lists 'Hackville 2027', startsAt 2027-01-22, endsAt 2027-01-24, 'Missisauga, Ontario', physical, websiteUrl hackville.io. This m"
+  },
+  {
+    "name": "ElleHacks",
+    "city": "Toronto",
+    "status": "blocked",
+    "cycle": "e1",
+    "evidence": "Orchestrator override of curator e1: organiser gives To Be Announced, so the MLH rule (organiser must name the month) does not apply; MLH alone has the days. Curator note: The organiser's ellehacks.com bundle (assets/index-CIPHbRlt.js) reads 'ElleHacks 2027', 'To Be Announced · In-person event · MLH Official Member', and"
+  },
+  {
+    "name": "UGAHacks",
+    "city": "Athens",
+    "status": "blocked",
+    "cycle": "e1",
+    "evidence": "Orchestrator override of curator e1: organiser gives TBD / Under Construction, so the MLH rule (organiser must name the month) does not apply; MLH alone has the days. Curator note: The MLH 2027 registry (websiteUrl ugahacks.com) lists 'UGAHacks' startsAt 2027-02-05, endsAt 2027-02-07, 'Athens, Georgia', physical. This matches the"
+  },
+  {
+    "name": "MakeUofT",
+    "city": "Toronto",
+    "status": "blocked",
+    "cycle": "e1",
+    "evidence": "Orchestrator override of curator e1: organiser gives TBD, 2027, so the MLH rule (organiser must name the month) does not apply; MLH alone has the days. Curator note: The MLH 2027 registry (websiteUrl makeuoft.ca) lists 'MakeUofT' startsAt 2027-02-13T14:00Z, endsAt 2027-02-14T21:00Z, Toronto, physical. This matches "
+  },
+  {
+    "name": "RevolutionUC",
+    "city": "Cincinnati",
+    "status": "blocked",
+    "cycle": "e1",
+    "evidence": "Orchestrator override of curator e1: organiser gives Spring 2027 - a season, not a month, so the MLH rule (organiser must name the month) does not apply; MLH alone has the days. Curator note: The organiser site revolutionuc.com is titled 'RevolutionUC 2027'. It reads 'RevolutionUC Spring 2027...' and describes a '24-hour in-person student h"
+  },
+  {
+    "name": "HackKU",
+    "city": "Lawrence",
+    "status": "confirmed",
+    "cycle": "e1",
+    "evidence": "Confirmed from the organiser's own source. hackku.org returns a Vercel 429 checkpoint to both curl and WebFetch, so I read the organiser's GitHub repo, the-hackku/hackku27_website (homepage hackku.org, pushed 2026-08-25). constants.ts has dates 'April 9th - 11th, 2027', startDate 2027-04-09T22:00Z ('5 PM CDT Friday') and endDate 2027-04-11T20:00Z. RegistrationForm.tsx says '{dates}, in-person', and the seed locations are in Eaton Hall (KU). The MLH 2027 registry agrees: 'HackKU27' APR 09-11, Lawrence, Kansas, physical. This matches the stored 2027-04-09..11."
+  },
+  {
+    "name": "MariHacks",
+    "city": "Montreal",
+    "status": "corrected",
+    "cycle": "e1",
+    "evidence": "Dates confirmed under the MLH rule. The organiser's marihacks.com bundle (assets/index-29e2ddfb.js) reads 'April, 2027', 'Marianopolis College | In-person Hackathon' and 'MariHacks 10.0 is coming in 2027! The exact dates ... will be announced soon', with a 2027 MLH badge. The MLH 2027 registry (websiteUrl marihacks.com) lists startsAt 2027-04-09, endsAt 2027-04-10, Montreal, physical. This matches the stored 2027-04-09..10. Month, city and in-person come from the organiser. The days come from MLH. The only change was filling the empty venue with Marianopolis College."
+  }
+]

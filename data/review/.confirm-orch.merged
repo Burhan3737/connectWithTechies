@@ -1,0 +1,6 @@
+[
+  { "name": "Nrth Festival", "city": "Toronto", "status": "corrected", "cycle": "orchestrator",
+    "evidence": "elevatefestival.ca 301s to nrth.ca, titled 'Nrth Festival'; 2027 edition Sept 14-16 per curator e3. Renamed from Elevate Festival." },
+  { "name": "Cultivator Community Night", "city": "Regina", "status": "confirmed", "cycle": "orchestrator",
+    "evidence": "Eventbrite confirms the held edition, Wed 28 Jan 2026. No 2027 date in text anywhere: a curator read one off an events-page image, another did not, and search finds none. next_date left empty until published in text." }
+]

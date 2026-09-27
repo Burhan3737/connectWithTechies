@@ -29,6 +29,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import { today as todayInDirectory } from '../../scripts/lib/today.mjs';
 
 const run = promisify(execFile);
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -38,7 +39,7 @@ const { events } = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'u
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
   '(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
 
-const today = process.env.TODAY || new Date().toISOString().slice(0, 10);
+const today = todayInDirectory();
 const args = process.argv.slice(2);
 const has = (f) => args.includes(f);
 const num = (f, d) => { const i = args.indexOf(f); return i > -1 ? Number(args[i + 1]) : d; };
@@ -139,8 +140,8 @@ async function check(e) {
      * a falsely-confirmed one is not.
      */
     const decoys = [7, -21, 35, 14].map((d) => {
-      const dt = new Date(e.next_date);
-      dt.setDate(dt.getDate() + d);
+      const dt = new Date(`${e.next_date}T00:00:00Z`);
+      dt.setUTCDate(dt.getUTCDate() + d);   // pure date arithmetic, pinned to UTC
       return dt.toISOString().slice(0, 10);
     });
     const fooled = decoys.filter((d) => renderings(d).some((r) => text.includes(r)));

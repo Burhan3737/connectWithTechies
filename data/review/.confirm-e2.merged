@@ -1,0 +1,219 @@
+[
+  {
+    "name": "WEHack",
+    "city": "Richardson",
+    "status": "blocked",
+    "cycle": "e2",
+    "evidence": "Orchestrator override of curator e2: organiser says only \"Spring 2027\" - a season, not a month - so the MLH rule (organiser must agree on month) does not apply; MLH alone has 2027-04-10..11. Same ruling as RevolutionUC. Curator note: Organiser wehackutd.com (read 2026-09-27): 'WEHack 2027 Coming Soon - Spring 2027'; its FAQ says the event is held in person at UT Dallas (ECSW building; answer"
+  },
+  {
+    "name": "ServiceNow Knowledge",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "Live servicenow.com hangs curl (TLS renegotiation, 0 bytes after 20-40s) and returns 403 to WebFetch. Read the organiser's own page via Wayback snapshot web.archive.org/web/20260916211454/https://www.servicenow.com/events/knowledge.html: 'Knowledge returns May 4-6, 2027 to celebrate 20 years' and 'Knowledge 2027 is May 4-6 in Las Vegas'. Matches record 2027-05-04 to 2027-05-06, Las Vegas. Venue left blank (only aggregators name Venetian/Wynn)."
+  },
+  {
+    "name": "AGNTCon + MCPCon North America",
+    "city": "San Jose",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "Own page found via the LF calendar: events.linuxfoundation.org/agntcon-mcpcon-north-america/ - JSON-LD startDate 2026-10-22, endDate 2026-10-23, text 'October 22-23, 2026 San Jose McEnery Convention Center', in person (venue & travel, visa letter pages). Dates match the record; url moved off the shared calendar page and venue filled. (Separate page agntcon-mcpcon-north-america-2027 says April 28-29, 2027, San Francisco - consistent with the record description.)"
+  },
+  {
+    "name": "NVTC Cyber Summit & Cyber50 Awards",
+    "city": "McLean",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "nvtc.org/events JSON-LD lists 'NVTC Cyber Summit & Cyber50 Awards' startDate 2026-10-28T13:00 with url nvtc.glueup.com/event/nvtc-cyber-summit-cyber50-awards-186181/. That NVTC registration page reads 'Wednesday, October 28, 2026 (1:00 PM - 6:30 PM) (EDT) // McLean, Virginia', Location 'Appian HQ - Valo Park, 7950 Jones Branch Dr. McLean'. Date and city match; url set to the event's own page and venue filled."
+  },
+  {
+    "name": "3686",
+    "city": "Nashville",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "attend3686.com (Launch Tennessee): 'September 14-16, Nashville, Tennessee'; FAQ 'Where is 3686 2026? ... Germantown ... headquartered at Brooklyn Bowl'; live and in-person only per FAQ. Held edition matches last_date 2026-09-14. No '2027' anywhere on the page; next_date left empty."
+  },
+  {
+    "name": "AI Infra Summit",
+    "city": "Santa Clara",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "ai-infra-summit.com (organiser) JSON-LD for the 2026 edition startDate 2026-09-15 / endDate 2026-09-17 (matches last_date). Title and hero now read 'AI Infra Summit 10X | Aug 31 - Sept 2, 2027, San Jose McEnery Convention Center', 'REGISTER INTEREST FOR 2027'. Next edition is published and moves from Santa Clara to San Jose: next_date 2027-08-31, next_date_end 2027-09-02, city San Jose, venue San Jose McEnery Convention Center."
+  },
+  {
+    "name": "Alaska Entrepreneurship Week",
+    "city": "Anchorage",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "Record url alaskastartups.com is a generic ecosystem directory with no mention of the week. The event's own site is akew.org (found via search; the gov.alaska.gov proclamation page is captcha-walled): 'Alaska Entrepreneurship Week ... September 14 - 18, 2026', statewide with Anchorage events. Held edition matches last_date 2026-09-14. No 2027 dates published. url set to akew.org."
+  },
+  {
+    "name": "ALL IN",
+    "city": "Montreal",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "allinevent.ai (organiser): /pages/2027-tickets reads 'Join us for ALL IN 2027 on September 22-23 at the Palais des congres de Montreal'; press release dated September 18, 2026 (blog/2026-milestone) says 'The fifth edition of ALL IN will take place on September 22-23, 2027, in Montreal'. Record was hiding a published next edition: next_date 2027-09-22, next_date_end 2027-09-23. last_date 2026-09-16 already holds the 2026 edition."
+  },
+  {
+    "name": "apidays Toronto",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "apidays.global/events/toronto/ now reads 'apidays Toronto ... September 2027 - TBA' (month only, no days). Held edition checked in the Wayback snapshot of the same page (2026-08-01): '9-10 September 2026 - Toronto, Canada', matching last_date 2026-09-09. No exact 2027 days published; next_date left empty."
+  },
+  {
+    "name": "Autonomous Nation",
+    "city": "Wheatland",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "grandfarm.com/autonomous-nation/ (Grand Farm, organiser): 'THIS EVENT TOOK PLACE ON SEPTEMBER 17TH, 2026', with the 2026 agenda (morning sessions, afternoon field demos). Matches last_date 2026-09-17. No 2027 date on the page; next_date left empty."
+  },
+  {
+    "name": "Best of Tech Awards",
+    "city": "Cleveland",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "greatercle.com/tech/ (Greater Cleveland Partnership): 'Best of Tech Day & Awards ... Stay tuned for the 2027 Best of Tech Day date', with a 2026 Event Lookbook. Confirms the 2026 edition ran and no 2027 date is published; next_date left empty, last_date 2026-09-14 retained."
+  },
+  {
+    "name": "Billington CyberSecurity Summit",
+    "city": "Washington",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "billingtoncybersummit.com JSON-LD startDate 2026-09-08 / endDate 2026-09-10, 'SEPTEMBER 8-10, 2026 ... CONVENTION CENTER | WASHINGTON, DC' - matches last_date 2026-09-08. No '2027' on the summit page or billingtoncybersecurity.com/events; search surfaces only the separate State & Local summit (March 2027, National Harbor). next_date left empty."
+  },
+  {
+    "name": "BSides Denver",
+    "city": "Denver",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "bsidesden.org: 'BSides Denver 2026 Conference Fri, Sep 11 | Void Studios', CFP closed June 30. Matches last_date 2026-09-11. No 2027 date on the site; next_date left empty."
+  },
+  {
+    "name": "BSides Montreal",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "bsidesmtl.ca: 'BSides Montreal 2026 September 19 2026 Bibliotheque et Archives nationales (BAnQ) | 475 Boul. de Maisonneuve E' - matches last_date 2026-09-19 and venue. No 2027 date published; next_date left empty."
+  },
+  {
+    "name": "BSides Orlando",
+    "city": "Orlando",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "bsidesorlando.org: 'Pre-conference Workshops: September 25th ... Conference: September 26th ... Full Sail University' (2026 copyright). last_date 2026-09-25 is the workshop day of the held edition; city/venue match. No 2027 date published; next_date left empty."
+  },
+  {
+    "name": "BSides St. John's",
+    "city": "St. John's",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "Record url was the bsides.org global directory entry. The chapter's own site bsidesstjohns.com (linked as venue website from bsides.org) reads 'Security BSides St. John's 2026 is September 17! ... Holiday Inn St. John's Conference Centre (180 Portugal Cove Rd)'. Held date matches last_date 2026-09-17. No 2027 date. url set to the chapter site, venue filled."
+  },
+  {
+    "name": "BSides Vancouver Island",
+    "city": "Victoria",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "bsidesvi.com: 'September 25th, 2026 Victoria, British Columbia ... VENUE Victoria Conference Centre 720 Douglas Street' - matches last_date 2026-09-25 and venue. No 2027 date published; next_date left empty."
+  },
+  {
+    "name": "BSidesCT",
+    "city": "Fairfield",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "Record url bsides.org/event/bsidesct-3/ marks the listing 'Unconfirmed' with venue 'multiple locations'. Chapter site bsidesct.org: 'The 11th Annual Security BSides CT ... Saturday, September 26th, 2026, Venue Fairfield University, Fairfield, CT (1073 N Benson Rd)'. Held date matches last_date 2026-09-26. No 2027 date. url set to bsidesct.org, venue filled."
+  },
+  {
+    "name": "BSidesNEPA",
+    "city": "Wilkes Barre",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "Record url was the bsides.org directory entry. Chapter site bsidesnepa.org: 'September 12, 2026 | Wilkes University', full 2026 schedule, tickets via Eventzilla. Held date matches last_date 2026-09-12. No 2027 date. url set to bsidesnepa.org, venue filled."
+  },
+  {
+    "name": "Business Value Builder Summit",
+    "city": "Huntington",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "Record url marshall.edu/icenter/business-value-builder-summit/ now 302-redirects to the generic /icenter/ page (summit page removed). Marshall University News release of 2026-07-29 (marshall.edu/news/2026/07/marshall-university-icenter-to-host-business-value-builder-summit/): 'will host its inaugural Business Value Builder Summit from noon to 6 p.m. Thursday, Sept. 17, at the Dutch Miller Deck at Joan C. Edwards Stadium' - matches last_date 2026-09-17 and venue. url repointed to the surviving organiser page. Inaugural edition; no 2027 announced, next_date left empty."
+  },
+  {
+    "name": "Central Iowa Software Symposium",
+    "city": "Des Moines",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "nofluffjuststuff.com/desmoines JSON-LD startDate 2026-09-17, endDate 2026-09-18; 'September 17 - 18, 2026 - Des Moines, IA', West Des Moines Marriott, in person (optional Zoom). Matches last_date 2026-09-17 and venue. No 2027 date published; next_date left empty."
+  },
+  {
+    "name": "CHROMA",
+    "city": "Tulsa",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "chroma.joingradient.com JSON-LD startDate 2026-09-24T09:30-05:00; 'SEPT 24 ... Gradient - 12 N Cheyenne Ave - Tulsa OK'. Matches last_date 2026-09-24 and venue. No 2027 date published; next_date left empty."
+  },
+  {
+    "name": "CIPS Ontario Women in Technology Conference",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "cips.ca event page JSON-LD startDate 2026-09-18T17:30-04:00, endDate 2026-09-18T20:00 - matches last_date 2026-09-18. No 2027 (4th annual) edition published; next_date left empty."
+  },
+  {
+    "name": "Colorado Startup Week",
+    "city": "Denver",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "costartupweek.com: 'Colorado Startup Week | Sept. 14-18, 2026' with a thank-you message for the 2026 edition. Matches last_date 2026-09-14. No 2027 dates on the site; next_date left empty."
+  },
+  {
+    "name": "CppCon",
+    "city": "Aurora",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "cppcon.org post 'CppCon 2026 Wrap-up and CppCon 2027 Dates!' (Jon Kalb, 2026-09-24): 'announce CppCon 2027 dates, September 18-24, 2027, save the dates now!'. Venue page: 'held at the Gaylord Rockies in Aurora, Colorado'. Record was hiding a published next edition: next_date 2027-09-18, next_date_end 2027-09-24. last_date 2026-09-12 retained."
+  },
+  {
+    "name": "Cybersecurity Summit Chicago",
+    "city": "Chicago",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "cybersecuritysummit.com/summits/ lists Chicago twice a year (Apr 4 + Sep 10 2025; Mar 3 + Sep 15 2026). The Sep 15, 2026 edition (cyberriskalliance.swoogo.com/chicago2026) was at Chicago Marriott Downtown Magnificent Mile, not the Hyatt Regency in the record (Hyatt hosted the March 2026 one). Next edition published at cyberriskalliance.swoogo.com/Chicago2027: 'Tuesday, April 27, 2027 8:00 AM - 6:00 PM CDT, Venue to be Announced, Chicago, IL', in person, 14th edition. Set next_date/end 2027-04-27, url to that page, venue blank (TBA), cadence biannual, month April."
+  },
+  {
+    "name": "Day of Data Detroit",
+    "city": "Ann Arbor",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "Record url sqlsaturday.com/2026-09-12-sqlsaturday1164/ is now a redirect stub to dayofdata.org/2026-09-12-dayofdata1164/, which reads 'held on Saturday, September 12, 2026 at the Ann Arbor District Library Downtown', in-person. Matches last_date 2026-09-12. dayofdata.org lists no 2027 Detroit edition. url set to the final page, venue filled."
+  },
+  {
+    "name": "DDX Innovation & UX Conference San Diego",
+    "city": "San Diego",
+    "status": "corrected",
+    "cycle": "e2",
+    "evidence": "Record url was a dev.events aggregator listing. Organiser page ddxconference.com/sandiego now reads 'DDX Innovation & UX Conference - San Diego - Thursday, 16th of Sept '27', venue 'UC San Diego Park & Market, 1100 Market St.' (the 2026 edition, Sept 17, 2026 per the same organiser page as indexed by search, matches last_date). Set url to the organiser page, next_date/end 2027-09-16, venue."
+  },
+  {
+    "name": "DevOps Midwest",
+    "city": "St. Louis",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "sketchdev.io/devopsmidwest: 'September 16, 2026 at Webster University, St. Louis, MO ... SOLD OUT for 2026. Contact us about the 2027 conference.' Matches last_date 2026-09-16 and venue. No 2027 date; next_date left empty. (Page describes a single day; the record description says two-day - not patched.)"
+  },
+  {
+    "name": "devopsdays Denver",
+    "city": "Denver",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "devopsdays.org/events/2026-denver/welcome/: 'September 22 - 23, 2026, Bierstadt Lagerhaus, 2875 Blake St, Denver' - matches last_date 2026-09-22. /events/2027-denver/welcome/ returns 404; no 2027 edition published."
+  },
+  {
+    "name": "devopsdays Portland",
+    "city": "Portland",
+    "status": "confirmed",
+    "cycle": "e2",
+    "evidence": "devopsdays.org/events/2026-portland-or/welcome/: 'Tuesday, Sep 8, 2026 - Thursday, Sep 10, 2026', Portland State Smith Memorial Student Union - matches last_date 2026-09-08. /events/2027-portland-or/welcome/ returns 404; no 2027 edition published."
+  }
+]

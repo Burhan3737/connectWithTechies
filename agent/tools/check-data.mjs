@@ -7,11 +7,12 @@
 import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { today as todayInDirectory } from '../../scripts/lib/today.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { events, generated_on } = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8'));
 
-const today = process.env.TODAY || new Date().toISOString().slice(0, 10);
+const today = todayInDirectory();
 const line = (s = '') => console.log(s);
 const head = (s) => { line(); line(`[1m${s}[0m`); line('-'.repeat(s.length)); };
 

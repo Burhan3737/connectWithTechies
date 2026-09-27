@@ -8,6 +8,7 @@ import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { canonPlace, titleCity } from './lib/places.mjs';
+import { today as todayInDirectory } from './lib/today.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW_DIR = join(ROOT, 'data', 'raw');
@@ -20,7 +21,7 @@ const COUNTRIES = new Set(['Canada', 'United States']);
 const COSTS = new Set(['free', 'paid', 'freemium', 'invite-only', 'varies']);
 
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
-const today = process.env.TODAY || new Date().toISOString().slice(0, 10);
+const today = todayInDirectory();
 
 const problems = [];
 const dropped = [];
@@ -170,6 +171,7 @@ function samePageSameEvent(a, b) {
 }
 
 const sharedPage = [];
+const sharedPairs = [];   // { a, b } records that share a page but are different events
 
 /** Richer record wins: a confirmed future date first, then more populated fields. */
 const score = (x) => (x.next_date ? 100 : 0) +
@@ -218,7 +220,10 @@ for (const f of files) {
     if (!hit) {
       kept.add(e);
       byKey.set(keys[0], e);
-      if (onPage.length) sharedPage.push(`${e.name} and ${onPage[0].name} (${e.city}) share ${e.url}`);
+      if (onPage.length) {
+        sharedPage.push(`${e.name} and ${onPage[0].name} (${e.city}) share ${e.url}`);
+        sharedPairs.push({ a: e, b: onPage[0] });
+      }
       pageEvents.set(keys[1], [...onPage, e]);
       continue;
     }
@@ -267,6 +272,30 @@ console.log(`Output:     ${events.length} events across ${cities.length} cities`
 console.log(`Upcoming:   ${events.filter((e) => e.status === 'upcoming').length}`);
 console.log(`Past:       ${events.filter((e) => e.status === 'past').length}`);
 console.log(`Recurring:  ${events.filter((e) => e.status === 'recurring-tbd').length}`);
+
+/**
+ * Write the shared-page list as a work item, not just console output.
+ *
+ * Two events on one generic listing are kept apart now, but a link that
+ * does not name the event is still a weak record — a user clicking through
+ * lands on a page of twenty things. Each needs its own URL, and a list that
+ * only exists in terminal scrollback never reaches a curator.
+ */
+{
+  const rows = [];
+  const seen = new Set();
+  for (const { a, b } of sharedPairs) {
+    for (const [x, y] of [[a, b], [b, a]]) {
+      const k = `${x.name}|${x.city}`;
+      if (seen.has(k)) continue;
+      seen.add(k);
+      rows.push([x.name, x.city, x.url, y.name].join('\t'));
+    }
+  }
+  mkdirSync(join(ROOT, 'data', 'review'), { recursive: true });
+  writeFileSync(join(ROOT, 'data', 'review', 'SHARED-PAGES.tsv'),
+    'name\tcity\turl\tshares_with\n' + rows.join('\n') + (rows.length ? '\n' : ''), 'utf8');
+}
 
 if (sharedPage.length) {
   console.log(`

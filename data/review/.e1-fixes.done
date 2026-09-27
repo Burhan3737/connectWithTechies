@@ -1,0 +1,282 @@
+[
+  {
+    "match": {
+      "name": "5 Across Pitch Competition",
+      "city": "Lexington"
+    },
+    "action": "update",
+    "reason": "awesomeinc.org/events/5across/ (the series' own page) and Awesome Inc's Gatsby page-data list the next 5 Across as 'October 14, 2026, Host: The Mane on Main, 201 E Main St, Lexington' (Eventbrite 1980878483869); December Finals 2026-12-02 at the Kentucky Theatre. Record's url was the shared /events listing.",
+    "set": {
+      "next_date": "2026-10-14",
+      "next_date_end": "2026-10-14",
+      "last_date": "2026-09-09",
+      "url": "https://awesomeinc.org/events/5across/"
+    }
+  },
+  {
+    "match": {
+      "name": "Milwaukee Tech Hub Code & Coffee",
+      "city": "Milwaukee"
+    },
+    "action": "update",
+    "reason": "mketech.org/events lists 'SAT OCT 3 October Code & Coffee 9am-12pm', linking to meetup.com/mitobyte/events/312261431 whose JSON-LD is startDate 2026-10-03T09:00-05:00, eventType PHYSICAL, Fruition MKE, 819 N 27th St, Milwaukee.",
+    "set": {
+      "next_date": "2026-10-03",
+      "next_date_end": "2026-10-03",
+      "last_date": "2026-09-05"
+    }
+  },
+  {
+    "match": {
+      "name": "Full Indie Meetup",
+      "city": "Vancouver"
+    },
+    "action": "update",
+    "reason": "fullindie.com/meetup (the meetup's own page): 'Next Meetup: October (No Meeting), November 3rd, December 1st. Location: LaSalle College - 2808 Bradfield Court, Vancouver'. Record's url was the homepage shared with Full Indie Summit.",
+    "set": {
+      "next_date": "2026-11-03",
+      "next_date_end": "2026-11-03",
+      "venue": "LaSalle College Vancouver, 2808 Bradfield Court",
+      "url": "https://www.fullindie.com/meetup"
+    }
+  },
+  {
+    "match": {
+      "name": "Knox Game Design",
+      "city": "Knoxville"
+    },
+    "action": "remove",
+    "reason": "Not a recurring in-person meetup. knoxgamedesign.org/about/ says 'The group typically meets in the Spring for a game jam kickoff' (that kickoff is already listed as the separate 'Knox Game Jam' record); the old in-person meeting paragraph is commented out in the page HTML and reads 'we are experimenting with transitioning the meetings to online'. The monthly items on the site (e.g. 'Microprocessors - Knox Game Design, September 2026') are podcast/presentation episodes, and /category/meetings/ shows only the April jam-kickoff posts with a physical 'Where' (Panera Bread, N. Peters Rd) since 2023."
+  },
+  {
+    "match": {
+      "name": "Steel City AI Innovators Meetup",
+      "city": "Pittsburgh"
+    },
+    "action": "update",
+    "reason": "pghtech.org/events/Steel_City_AI_10: 'Steel City AI Innovators Community & Monthly Meetup, When: Wednesday, October 14, 2026, Where: Pittsburgh Technology Council', '2nd Wed, 5:30pm'. Next listed instance Steel_City_AI_11_1 is 11 Nov. Record's url was the shared pghtech.org/events listing.",
+    "set": {
+      "next_date": "2026-10-14",
+      "next_date_end": "2026-10-14",
+      "last_date": "2026-09-09",
+      "venue": "Pittsburgh Technology Council",
+      "url": "https://www.pghtech.org/events/Steel_City_AI_10"
+    }
+  },
+  {
+    "match": {
+      "name": "Awesome Fellowship Demo Day",
+      "city": "Lexington"
+    },
+    "action": "update",
+    "reason": "Awesome Inc's events data (awesomeinc.org/page-data/events/page-data.json) gives 'Awesome Fellowship Fall 2026 Demo Day & Lunch | Powered by Chase', October 15, 2026, 348 E Main St, linkToEvent eventbrite.com/e/1997757584714; that Eventbrite event page JSON-LD startDate 2026-10-15T11:30-04:00. Replaces the shared /events listing url.",
+    "set": {
+      "url": "https://www.eventbrite.com/e/awesome-fellowship-fall-2026-demo-day-lunch-tickets-1997757584714",
+      "next_date_end": "2026-10-15"
+    }
+  },
+  {
+    "match": {
+      "name": "Jupyter Day San Jose",
+      "city": "San Jose"
+    },
+    "action": "update",
+    "reason": "Organiser page events.linuxfoundation.org/jupyter-day/ JSON-LD startDate/endDate 2026-10-19, 'San Jose, CA', co-located with PyTorch Conference NA; venue page: San Jose Convention Center, 150 W San Carlos St. Record's url was the LF events homepage and its source dev.events.",
+    "set": {
+      "url": "https://events.linuxfoundation.org/jupyter-day/",
+      "source": "https://events.linuxfoundation.org/jupyter-day/",
+      "venue": "San Jose Convention Center, 150 W San Carlos St"
+    }
+  },
+  {
+    "match": {
+      "name": "Pittsburgh Tech 50 Awards",
+      "city": "Pittsburgh"
+    },
+    "action": "update",
+    "reason": "pghtech.org/events/Tech50_2026_1: '2026 Tech 50 Awards, When: Thursday, November 19, 2026, Where: The Event Center @ Rivers Casino', 5:00-9:30 PM. Record's url was the shared pghtech.org/events listing.",
+    "set": {
+      "url": "https://www.pghtech.org/events/Tech50_2026_1",
+      "venue": "The Event Center @ Rivers Casino"
+    }
+  },
+  {
+    "match": {
+      "name": "Chief Product Officer Summit Silicon Valley",
+      "city": "San Jose"
+    },
+    "action": "update",
+    "reason": "Organiser page world.productledalliance.com/location/cposiliconvalley: JSON-LD startDate 2027-04-14, 'April 14, 2027 San Jose'. Record's url was the Product-Led Alliance homepage and source dev.events.",
+    "set": {
+      "url": "https://world.productledalliance.com/location/cposiliconvalley",
+      "source": "https://world.productledalliance.com/location/cposiliconvalley"
+    }
+  },
+  {
+    "match": {
+      "name": "Charleston Tech Week",
+      "city": "Charleston"
+    },
+    "action": "update",
+    "reason": "Charleston Tech Week has its own site, charlestontechweek.com: 'JUNE 8-12, 2026' (2026 schedule) and 'MAY 17-21, 2027'. digsouth.com/techsummit agrees: 'Dig South Anchors Charleston Tech Week - May 17-21, 2027'. Record's url was the DIG SOUTH summit page shared with that event.",
+    "set": {
+      "url": "https://www.charlestontechweek.com/"
+    }
+  },
+  {
+    "match": {
+      "name": "24 Hour Startup: AGTECH",
+      "city": "Regina"
+    },
+    "action": "update",
+    "reason": "2025 edition ran Nov 28-29, 2025, not Dec 16: Western Producer ('took over a meeting room in the Queensbury Convention Centre in Regina Nov. 28 ... 1:30 p.m. on Friday ... finale at 1:30 p.m.' Saturday) and 620 CKRM (Dec 1, 2025: 'Agribition wrapped up this weekend'). 2025-12-16 is the date of Cultivator's recap post. cultivator.ca/events/24-hour-startup-agtech is the event's own page and says '2026 Dates Coming Soon!'.",
+    "set": {
+      "last_date": "2025-11-28",
+      "month": "November",
+      "venue": "Queensbury Convention Centre, Canadian Western Agribition",
+      "url": "https://www.cultivator.ca/events/24-hour-startup-agtech"
+    }
+  },
+  {
+    "match": {
+      "name": "9D Jam",
+      "city": "Buffalo"
+    },
+    "action": "remove",
+    "reason": "Virtual-only. Buffalo Game Space's own itch.io jam pages say 'This jam will be 100% virtual and will have kickoff and closeout in the Buffalo Game Space discord' (itch.io/jam/9d-jam-iii, ran 2026-08-21 to 2026-08-30; same text on 9d-jam-ii, 2025-08-15 to 08-24). The record itself lists venue 'Online'; Buffalo is only the organiser's home city."
+  },
+  {
+    "match": {
+      "name": "AI Week Milwaukee",
+      "city": "Milwaukee"
+    },
+    "action": "update",
+    "reason": "The event's own page is MSOE's msoe.edu/ai-and-msoe/ai-week-at-msoe/: 'MSOE AI Week took place April 20-25, 2026' at Milwaukee School of Engineering. Record's url was an MC Services blog listing shared with First Look Forum.",
+    "set": {
+      "url": "https://www.msoe.edu/ai-and-msoe/ai-week-at-msoe/"
+    }
+  },
+  {
+    "match": {
+      "name": "Chief Product Officer Summit San Francisco",
+      "city": "San Francisco"
+    },
+    "action": "update",
+    "reason": "Organiser page world.productledalliance.com/location/cposanfrancisco/: JSON-LD startDate 2026-09-24, venue 'Hyatt Regency San Francisco Airport, 1333 Old Bayshore Highway, Burlingame'. The venue is in Burlingame, not San Francisco. Raw next_date 2026-09-17 (the 10times date, not the organiser date) is cleared; the held 2026-09-24 edition is kept as last_date. Record's url was the PLA homepage (shared with Product-Led Summit SF) and source dev.events.",
+    "set": {
+      "city": "Burlingame",
+      "region": "California",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-09-24",
+      "venue": "Hyatt Regency San Francisco Airport, 1333 Old Bayshore Highway",
+      "url": "https://world.productledalliance.com/location/cposanfrancisco/",
+      "source": "https://world.productledalliance.com/location/cposanfrancisco/"
+    }
+  },
+  {
+    "match": {
+      "name": "Cultivator Founders Retreat",
+      "city": "Regina"
+    },
+    "action": "update",
+    "reason": "Own page cultivator.ca/save-the-date-founders-retreat: 'Founders Retreat 2026 When: March 25 + 26, 2026 Where: Cultivator HQ - Regina'. Cultivator's 2027 events page card reads 'MAR 2027 Founders Retreat, Cultivator HQ' (month only). Record's url was the shared /events page.",
+    "set": {
+      "url": "https://www.cultivator.ca/save-the-date-founders-retreat",
+      "venue": "Cultivator HQ, 2375 College Ave"
+    }
+  },
+  {
+    "match": {
+      "name": "Cultivator STARTup Showcase",
+      "city": "Regina"
+    },
+    "action": "update",
+    "reason": "The only STARTup Showcase on record was held December 11, 2024 (Cultivator post 'STARTup Showcase - START Cohort 11': 'gearing up for our first-ever STARTup Showcase on December 11'; Eventbrite 'Wed, Dec 11, 2024 at 5:30 PM'). Stored 2024-10-11 is that announcement post's publish date. Url set to the event's own page.",
+    "set": {
+      "last_date": "2024-12-11",
+      "url": "https://www.cultivator.ca/startup-showcase-start-cohort-11"
+    }
+  },
+  {
+    "match": {
+      "name": "Cultivator Startup Summit",
+      "city": "Regina"
+    },
+    "action": "update",
+    "reason": "2026 edition ran September 9 + 10, 2026 at Cultivator HQ Regina (cultivator.ca/events/startup-summit 'The when September 9 + 10, 2026!'; saskstartupsummit.com 'September 9 + 10, 2026 Cultivator HQ Regina, SK'; 620 CKRM 2026-09-14 coverage). Cultivator's 2027 events card: 'SEPT 15+16 2027 Startup Summit, Cultivator HQ'. The stored last_date 2025-09-23 is the 2025 recap post date and missed the 2026 edition.",
+    "set": {
+      "last_date": "2026-09-09",
+      "next_date": "2027-09-15",
+      "next_date_end": "2027-09-16",
+      "venue": "Cultivator HQ, 2375 College Ave",
+      "url": "https://www.cultivator.ca/events/startup-summit"
+    }
+  },
+  {
+    "match": {
+      "name": "Hack AI",
+      "city": "Columbus"
+    },
+    "action": "update",
+    "reason": "Own page hack.osu.edu/about-hack-ai/ describes HackAI 2026 as a 2-day in-person hackathon 'held in Fontana Labs' (with supplementary Zoom links), now marked 'This event has passed'; The Lantern dates it Feb. 21-22, 2026. Record's url was the shared hack.osu.edu homepage.",
+    "set": {
+      "url": "https://hack.osu.edu/about-hack-ai/",
+      "venue": "Fontana Laboratories, The Ohio State University"
+    }
+  },
+  {
+    "match": {
+      "name": "Indy Women in Tech Summit",
+      "city": "Indianapolis"
+    },
+    "action": "remove",
+    "reason": "The organiser has dissolved. Indianapolis Business Journal, 'Nonprofit group Indy Women in Tech disbands after 9-year run' (ibj.com/articles/nonprofit-group-indy-women-in-tech-disbands), reports the board dissolved the organisation effective Dec. 31, 2025. The last summit was the 2025 IWiT Summit on Nov 6, 2025 at the Indianapolis Motor Speedway Pavilion (techpoint.org/tech-events/2025-iwit-summit/). indywit.com no longer responds."
+  },
+  {
+    "match": {
+      "name": "MakeOHI/O",
+      "city": "Columbus"
+    },
+    "action": "update",
+    "reason": "Own page hack.osu.edu/make/ (redirects to /make/2026/): 'MakeOHI/O 2026 ... In-person @ Physics Research Building and online, March 7 - 8, 2026', marked as passed. Record's url was the shared hack.osu.edu homepage.",
+    "set": {
+      "url": "https://hack.osu.edu/make/",
+      "venue": "Physics Research Building, The Ohio State University"
+    }
+  },
+  {
+    "match": {
+      "name": "PEI BioAlliance Holiday Social",
+      "city": "Charlottetown"
+    },
+    "action": "update",
+    "reason": "Own page peibioalliance.com/event/holiday-social-2025/: JSON-LD 2025-12-10T17:00-04:00 to 19:00, Rodd Charlottetown Hotel, 75 Kent Street, free. Record's url was the shared /events listing (also used by the Summer Social).",
+    "set": {
+      "url": "https://peibioalliance.com/event/holiday-social-2025/",
+      "venue": "Rodd Charlottetown Hotel, 75 Kent Street"
+    }
+  },
+  {
+    "match": {
+      "name": "rvatech/Data + AI Summit",
+      "city": "Richmond"
+    },
+    "action": "update",
+    "reason": "Own series page rvatech.com/events/premier-conferences/data-summit/ lists '2026 rvatech/Data + AI Summit March 26, 2026' and the 2026 edition page gives 'March 26, 2026 ... Science Museum of Virginia - Dewey Gottwald Center, 2301 W Leigh Street'. Record's url was the premier-conferences listing shared with the Women in Technology Conference.",
+    "set": {
+      "url": "https://rvatech.com/events/premier-conferences/data-summit/"
+    }
+  },
+  {
+    "match": {
+      "name": "MariHacks",
+      "city": "Montreal"
+    },
+    "action": "update",
+    "reason": "Organiser marihacks.com bundle: 'The 10th edition of MariHacks will be in person at Marianopolis College', 'Marianopolis College | In-person Hackathon', 'April 2027'. Record venue was empty.",
+    "set": {
+      "venue": "Marianopolis College"
+    }
+  }
+]

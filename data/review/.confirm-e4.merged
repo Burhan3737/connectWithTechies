@@ -1,0 +1,205 @@
+[
+  {
+    "name": "SANS Network Security",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "e4",
+    "evidence": "sans.org/cyber-security-training-events/network-security-2026: 'SANS Network Security 2026 Mon, Sep 21 - Sat, Sep 26, 2026 ... Caesars Palace & Virtual (PT) 3570 Las Vegas Blvd South, Las Vegas' - matches last_date 2026-09-21 and venue. Next edition: /network-security-2027/ returns 404 and the SANS events listing shows no Network Security 2027 (only Jan 2027 Live Online / Stay Sharp), so next_date stays empty."
+  },
+  {
+    "name": "Showerhacks",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "showerhacks.org JSON-LD startDate 2026-09-26T10:00-07:00, page text 'September 26th 2026 10AM - 10PM San Francisco', in person (400 people) - matches last_date 2026-09-26. No next edition published. Record month said October; corrected to September."
+  },
+  {
+    "name": "Silicon Couloir Pitch Day",
+    "city": "Jackson",
+    "status": "confirmed",
+    "cycle": "e4",
+    "evidence": "siliconcouloir.com/pitch-day/: 'Silicon Couloir's 15th Annual Pitch Day ... will be held on Thursday, September 24th from 5:00 to 7:00 PM MT at the Center for the Arts in Jackson, WY' - matches last_date 2026-09-24 and venue. The 2026-09-16 ISO string on the page is not the event date. No 2027 date published."
+  },
+  {
+    "name": "Splunk .conf",
+    "city": "Denver",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "conf.splunk.com/about.html: .conf26 'September 14-17, 2026 ... Convention Center in Denver, Colorado' confirms the held edition (last_date 2026-09-14). conf.splunk.com homepage now announces .conf27: 'Join us at the McCormick Place Convention Center October 4-7, 2027' in Chicago. Next edition moves city."
+  },
+  {
+    "name": "Tampa Bay Wave BlueTech|X Pitch Night",
+    "city": "Tampa",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "tampabaywave.org/events100/ lists '2026 BlueTech Pitch Night September 17, 2026'; the organiser's own programme page tampabaywave.org/bluetechx-accelerator/ lists Key Dates 'Aug 3, 2026 Kickoff Week / Sep 17, 2026 Pitch Night' - matches last_date 2026-09-17. No separate registration page exists; the BlueTech|X accelerator page is the event's own page, url set to it. Venue not published."
+  },
+  {
+    "name": "Tech Homecoming",
+    "city": "Ann Arbor",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "The record url a2tech360.com/events/tech-homecoming-2025/ redirects to /tech-homecoming-2026/: 'Career Fair September 22, 2026 | 4 p.m. - 7 p.m. Free for Job Seekers | Venue by 4M', with 'Thanks for joining us in 2026 ... We hope to see you at a2Tech360 2027!' - matches last_date and venue; no 2027 date yet. url updated to the 2026 page."
+  },
+  {
+    "name": "Tulsa Tech Week",
+    "city": "Tulsa",
+    "status": "confirmed",
+    "cycle": "e4",
+    "evidence": "tulsatechweek.ai: 'Sept 21 - 26, 2026 Tulsa, Oklahoma' and 'September 21 - 26, 2026' - matches last_date 2026-09-21. The site has not published a 2027 edition."
+  },
+  {
+    "name": "UNBOUND (formerly INBOUND)",
+    "city": "Boston",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "unbound.hubspot.com: 'Get Ready for UNBOUND 2027 September 8 - 10, 2027 in Boston, MA' (presale sold out, registration reopens Cyber Monday); script data still carries 'Sept 16-18, 2026' for the held edition, matching last_date 2026-09-16."
+  },
+  {
+    "name": "UtahJS Conference",
+    "city": "Sandy",
+    "status": "confirmed",
+    "cycle": "e4",
+    "evidence": "utahjs.com/conference: 'The 2026 Annual UtahJS Conference will be a 1-day conference on Fri., Sep. 18, 2026, held at Jordan Commons in Sandy, Utah' - matches last_date and venue. No 2027 date published."
+  },
+  {
+    "name": "Vintage Computer Festival Midwest",
+    "city": "Schaumburg",
+    "status": "confirmed",
+    "cycle": "e4",
+    "evidence": "vcfmw.org: 'Vintage Computer Festival Midwest 21 When: September 12-13, 2026 ... Where: The Schaumburg Convention Center in Schaumburg, IL' - matches last_date 2026-09-12 and venue. No 2027 date published."
+  },
+  {
+    "name": "VSLive! San Diego",
+    "city": "San Diego",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "vslive.com/events/san-diego-2026/home.aspx: 'Visual Studio Live! San Diego 2026 | September 14-18, 2026 | Bahia Resort Hotel' - matches last_date 2026-09-14. Record url was the vslive.com homepage and source was dev.events; venue was empty. vslive.com homepage upcoming list (Orlando Nov 2026, Las Vegas Mar 2027, Austin May 2027, Redmond Aug 2027) has no San Diego 2027, and /san-diego-2027/ is 404, so next_date stays empty."
+  },
+  {
+    "name": "VTHacks",
+    "city": "Blacksburg",
+    "status": "confirmed",
+    "cycle": "e4",
+    "evidence": "vthacks.com (organiser): 'VTHacks 14 ... SEP 18-20', 'That's a wrap on VTHacks 14!', FAQ 'VTHacks 14 will be hosted in person at Virginia Tech' - matches last_date 2026-09-18, in person. No next edition published."
+  },
+  {
+    "name": "Y Combinator Demo Day",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "ycombinator.com/demoday: 'The F26 Demo Day will be held on Wednesday, December 2nd'. ycombinator.com/blog/2026-demo-days lists four 2026 Demo Days (Winter Mar 24, Spring Jun 16, Summer Sep 10, Fall Dec 2) and 'We look forward to seeing you in person' - confirms last_date 2026-09-10 and gives next_date 2026-12-02. YC now runs four batches a year, so cadence and the 'twice-yearly' description were wrong."
+  },
+  {
+    "name": "YYC DataCon",
+    "city": "Calgary",
+    "status": "confirmed",
+    "cycle": "e4",
+    "evidence": "yycdata.ca/datacon redirects to /datacon/datacon-2026: 'YYC DATACON 2026 BMO CENTRE, CALGARY SEPTEMBER 11, 2026' - matches last_date and venue. No 2027 date published."
+  },
+  {
+    "name": "Zeek Workshop Berkeley",
+    "city": "Berkeley",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "zeek.org/zeek-workshop-berkeley-2026/: 'September 10-11, 2026 | Berkeley, California ... at the David Brower Center' and 'Registration is free and open now'; the registration page repeats 'Date: September 10-11, 2026 Location: David Brower Center 2150 Allston Way'. Confirms last_date 2026-09-10. Record had the generic zeek.org url, dev.events source, no venue and cost 'paid'. A recap post (zeek.org/2026/09/zeek-workshop-berkeley-2026-recap/) confirms it ran. No next workshop announced."
+  },
+  {
+    "name": "Open Source AI Week",
+    "city": "San Jose",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "events.linuxfoundation.org/open-source-ai-week/ JSON-LD startDate 2026-10-16, endDate 2026-10-25; text 'Open Source AI Week October 16-25, 2026 Bay Area, CA' - matches record. Flagship PyTorch Conference North America is 'October 20-21 San Jose, Ca' (JSON-LD 2026-10-20/21), so San Jose is right. url moved off the shared LF calendar to the event's own page."
+  },
+  {
+    "name": "PEI BioAlliance Summer Social",
+    "city": "Charlottetown",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "peibioalliance.com/event/sumer-social-2026/ (the organiser's slug has the typo): 'Sumer Social 2026 July 14 @ 4:30 pm - 6:30 pm ... Peakes Quay Restaurant, 11 Great George Street, Charlottetown', marked 'This event has passed' - matches last_date 2026-07-14 and venue. url moved from the shared events listing to this page. No 2027 date published."
+  },
+  {
+    "name": "Kentucky Entrepreneur Hall of Fame Induction Celebration",
+    "city": "Lexington",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "Event's own site entrepreneurhof.com/induction-dinner/: '2026 Induction Celebration Dinner ... November 4, 2026 Central Bank Center Lexington, KY ... 430 W Vine St.'; its Eventbrite ticket page (by Awesome Inc) JSON-LD startDate 2026-11-04T16:30-05:00 at Central Bank Center - matches next_date and venue. Caution: the flattened text of awesomeinc.org/events appears to pair this title with 'December 2, 2026 ... The Kentucky Theatre', but that is the card layout putting each title after the previous event's details (the Dec 2 Kentucky Theatre details belong to 5 Across December Finals). The event's own site and tickets are unambiguous, so the date was not changed. Only url changed."
+  },
+  {
+    "name": "Cultivator Community Night",
+    "city": "Regina",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "The organiser's Eventbrite ticket page 'Cultivator Community Night 2026' (by Cultivator powered by Conexus): JSON-LD startDate 2026-01-28T18:30-06:00, 'Darke Hall Regina, SK Wednesday, January 28'. The record's 2026-02-04 is the publish date of the recap post on cultivator.ca/events/upcoming_and_past_events, not the event date. Record venue 'Cultivator HQ' was the 2025 venue (cultivator.ca/cultivator-community-night: 'Feb. 1, 2025 Where: Cultivator HQ'). cultivator.ca has no per-event page for 2026 other than the recap, so url set to that; no 2027 date published."
+  },
+  {
+    "name": "Tampa Bay Wave Hall of Fame Awards",
+    "city": "Tampa",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "tampabaywave.org/events100/: 'Tampa Bay Wave Hall of Fame Awards and Fundraiser Celebration @ The Florida Aquarium On December 18, 2025, from 6:00 PM to 9:00 PM ... Florida Aquarium rooftop' - matches last_date and venue. A GlobeNewswire release (Oct 2025, Arnie Bellini honoree) also gives December 18. Note: the linked Eventbrite page is now a password-protected private event reading 'Dec 1-2, 2025', but its indexed title reads 'Thu, Dec 18, 2025', so treated as an edited placeholder. The event's own page is tampabaywave.org/events100/hall-of-fame/; no 2026 date published yet."
+  },
+  {
+    "name": "Buffalo Game Space Game Development Meeting",
+    "city": "Buffalo",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "meetup.com/buffalogamespace/events: past list shows 'BGS Game Development (In-Person) Meeting' on 2026-09-24T19:00 (the record's last_date 2026-08-27 was one meeting stale). Upcoming list shows the next in-person meeting 2026-10-22T19:00, whose page (events/314417095) has JSON-LD startDate 2026-10-22T19:00-04:00 at '2495 Main Street, Suite #454, Buffalo' - matches next_date and venue. Matched on the named in-person meeting, not the 'Virtual game developer hangout' (Oct 8) or 'BGS Virtual Project Night'. url set to that meeting's page, since the group page is shared with 9D Jam."
+  },
+  {
+    "name": "Knox Game Jam",
+    "city": "Knoxville",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "knoxgamedesign.org/2738/knox-game-jam-2026-kickoff/: 'Knox Game Jam 2026 - Kickoff April 3, 2026 ... Submissions close at 2026-04-05 at 9pm EDT ... Kickoff Meeting When: Friday April 3, 2026 at 7pm ... Where: Panera Bread on N. Peters Rd, Knoxville'; itch.io/jam/knox-game-jam-2026 'ran from 2026-04-03 23:00:00 to 2026-04-06 01:00:00' UTC, theme Limited Resources. The record had no dates. In person: the kickoff is physical and entries are shown at the April Knox Game Design meeting; the 48 hours of building are remote. No next jam announced."
+  },
+  {
+    "name": "Mira Awards",
+    "city": "Indianapolis",
+    "status": "confirmed",
+    "cycle": "e4",
+    "evidence": "techpoint.org/mira-awards/: 'The 2027 Mira Awards will take place Friday, April 23 at the brand-new Signia by Hilton Indianapolis' - matches next_date 2027-04-23 and venue. The record url is already this event-specific page (the shared techpoint.org root belongs to Indy Women in Tech Summit), so no url change was needed."
+  },
+  {
+    "name": "HackOHI/O",
+    "city": "Columbus",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "hack.osu.edu/2026 (titled 'HackOHI/O 2026'): 'The Premier Hackathon at Ohio State October 24-25, 2026 Ohio Union & Online', with emphasis on on-site attendance - matches next_date 2026-10-24/25; in person at the Ohio Union (judges virtual). url moved off hack.osu.edu, which is shared with MakeOHI/O and Hack AI."
+  },
+  {
+    "name": "First Look Forum",
+    "city": "Milwaukee",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "today.marquette.edu/calendar/first-look-forum-2/ (Marquette Office of Research and Innovation, host): JSON-LD startDate 2026-04-16T16:00; 'Thursday, April 16, 2026 4:00 p.m. - 7:00 p.m. Location: Quarles & Brady' - matches last_date and venue. The record url was an MC Services blog listing shared with AI Week Milwaukee. No 2027 date published."
+  },
+  {
+    "name": "NVTC Tech100 Celebration",
+    "city": "McLean",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "nvtc.glueup.com/event/tech100-celebration-186183/ (linked from nvtc.org/events/): 'Tuesday, December 15, 2026 (6:00 PM - 8:00 PM) (EST) // McLean, Virginia' and 'Tech100 Celebration on Dec 15, 2026, from 6:00-8:00 PM at the Hilton McLean Tysons Corner' - matches next_date and venue."
+  },
+  {
+    "name": "rvatech/Women in Technology Conference",
+    "city": "Richmond",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "rvatech.com/rvatech-events/rvatech-women-in-technology-conference/: 'Tuesday, November 17 Doors open 8:00 AM Conference 9:00 AM - 4:00 PM ... Venue The Dewey Gottwald Center at the Science Museum of Virginia 2301 W Leigh St, Richmond' - Nov 17 is a Tuesday in 2026, matching next_date 2026-11-17. Venue was empty in the record."
+  },
+  {
+    "name": "DIG SOUTH Tech, Venture & AI Summit",
+    "city": "Charleston",
+    "status": "confirmed",
+    "cycle": "e4",
+    "evidence": "digsouth.com/techsummit/: 'TECH, VENTURE & AI SUMMIT 15th Anniversary Edition! May 20-21, 2027 Charleston' and 'Dig South Anchors Charleston Tech Week - May 17-21, 2027'; the 2026 edition is listed as June 11-12, 2026 - matches next_date 2027-05-20/21 and last_date 2026-06-11. The url stays: /techsummit/ is the summit's own page. Charleston Tech Week is the umbrella week, and that record is the one that needs a different url. The 2027 venue is not stated on the page, so the Stern Student Center venue was left as is."
+  },
+  {
+    "name": "Product-Led Summit San Francisco",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "e4",
+    "evidence": "world.productledalliance.com/location/sanfrancisco ('Product-Led Summit | San Francisco'): JSON-LD startDate 2026-09-22, 'September 22 & 23, 2026 Hyatt Regency San Francisco Airport 1333 Old Bayshore Highway Burlingame' - dates match last_date 2026-09-22, but the venue is physically in Burlingame, not San Francisco. The record url was the Alliance's homepage and source was dev.events. No 2027 SF date in the page's other-locations list."
+  }
+]

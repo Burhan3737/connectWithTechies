@@ -1,0 +1,13 @@
+[
+  { "match": { "name": "Elevate Festival", "city": "Toronto" }, "action": "update",
+    "reason": "Renamed by its organiser: elevatefestival.ca now 301s to nrth.ca, whose page title is 'Home - Nrth Festival'. Listing it under the old name would make it unfindable by anyone searching for what it is called now. Curator e3 left the name alone deliberately, since renaming changes the key patches match on; this rename runs after e3's patch has landed.",
+    "set": { "name": "Nrth Festival",
+             "description": "Canada's flagship innovation festival (formerly Elevate), uniting tech leaders, founders, investors and creatives for three days of keynotes, summits and networking across downtown Toronto." } },
+  { "match": { "name": "DevOps Midwest", "city": "St. Louis" }, "action": "update",
+    "reason": "Curator e2 noted the description called it two-day; the organiser's page shows a single day, September 16 2026.",
+    "set": { "description": "A regional one-day DevOps and platform engineering conference held in St. Louis for Midwest infrastructure and delivery teams." } },
+  { "match": { "name": "GDG Brooklyn AI Fashion Hackathon", "city": "New York" }, "action": "update",
+    "reason": "Curator e3 found the hackathon has its own event page; the record pointed at the chapter page, which now lists no upcoming events. The event page's JSON-LD confirms 2026-09-12.",
+    "set": { "url": "https://gdg.community.dev/events/details/google-gdg-brooklyn-presents-runway-to-reality-ai-fashion-hackathon/",
+             "source": "https://gdg.community.dev/events/details/google-gdg-brooklyn-presents-runway-to-reality-ai-fashion-hackathon/" } }
+]

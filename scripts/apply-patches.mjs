@@ -19,6 +19,7 @@ import { readdirSync, readFileSync, writeFileSync, existsSync, mkdirSync } from 
 import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { canonPlace } from './lib/places.mjs';
+import { today } from './lib/today.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW_DIR = join(ROOT, 'data', 'raw');
@@ -151,7 +152,29 @@ for (const pf of patchFiles) {
       }
 
       const changes = [];
-      for (const [k, v] of Object.entries(op.set || {})) {
+
+      /**
+       * Never let a new next_date erase the edition it replaces.
+       *
+       * In data/raw a held edition often still sits in next_date — the build
+       * rolls it into last_date, but only in its output. Curators read the
+       * built file, see last_date already filled, and patch next_date alone;
+       * the raw held date is overwritten and the edition vanishes. It happened
+       * to PAX West, then to five more events in one cycle despite a written
+       * rule against it, because the rule asked curators to guard against a
+       * mismatch they cannot see. So the patcher guards it: if the date being
+       * replaced has already passed and the patch does not set last_date
+       * itself, the passed date is carried into last_date first.
+       */
+      const set = op.set || {};
+      if ('next_date' in set && !('last_date' in set) && rec.next_date
+          && rec.next_date < today() && rec.next_date !== set.next_date
+          && (!rec.last_date || rec.last_date < rec.next_date)) {
+        changes.push(`last_date: ${JSON.stringify(rec.last_date || '')} -> ${JSON.stringify(rec.next_date)} (carried from the replaced next_date)`);
+        rec.last_date = rec.next_date;
+      }
+
+      for (const [k, v] of Object.entries(set)) {
         const before = Array.isArray(rec[k]) ? rec[k].join(',') : rec[k];
         const after = Array.isArray(v) ? v.join(',') : v;
         if (String(before) === String(after)) continue;
@@ -180,7 +203,7 @@ for (const f of touched) {
 
 if (log.length) {
   const logPath = join(ROOT, 'data', 'review', 'APPLIED.md');
-  const stamp = process.env.TODAY || new Date().toISOString().slice(0, 10);
+  const stamp = today();
   const prior = existsSync(logPath) ? readFileSync(logPath, 'utf8') : '# Applied review patches\n';
   writeFileSync(logPath, `${prior}\n## ${stamp}\n\n${log.map((l) => `- ${l}`).join('\n')}\n`, 'utf8');
   console.log(`appended ${log.length} entries to data/review/APPLIED.md`);

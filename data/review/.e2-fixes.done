@@ -1,0 +1,165 @@
+[
+  {
+    "match": {
+      "name": "AGNTCon + MCPCon North America",
+      "city": "San Jose"
+    },
+    "action": "update",
+    "reason": "Own page events.linuxfoundation.org/agntcon-mcpcon-north-america/ (JSON-LD 2026-10-22..23, San Jose McEnery Convention Center) replaces the shared LF calendar url.",
+    "set": {
+      "url": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/",
+      "venue": "San Jose McEnery Convention Center"
+    }
+  },
+  {
+    "match": {
+      "name": "NVTC Cyber Summit & Cyber50 Awards",
+      "city": "McLean"
+    },
+    "action": "update",
+    "reason": "Event's own NVTC registration page (linked from nvtc.org/events JSON-LD) reads Oct 28, 2026, Appian HQ - Valo Park, 7950 Jones Branch Dr., McLean; replaces the shared events listing url.",
+    "set": {
+      "url": "https://nvtc.glueup.com/event/nvtc-cyber-summit-cyber50-awards-186181/",
+      "venue": "Appian HQ - Valo Park, 7950 Jones Branch Dr."
+    }
+  },
+  {
+    "match": {
+      "name": "AI Infra Summit",
+      "city": "Santa Clara"
+    },
+    "action": "update",
+    "reason": "ai-infra-summit.com announces the 2027 edition 'Aug 31 - Sept 2, 2027, San Jose McEnery Convention Center' (the 2026 edition, Sep 15-17 in Santa Clara, is already last_date).",
+    "set": {
+      "next_date": "2027-08-31",
+      "next_date_end": "2027-09-02",
+      "city": "San Jose",
+      "region": "California",
+      "venue": "San Jose McEnery Convention Center"
+    }
+  },
+  {
+    "match": {
+      "name": "Alaska Entrepreneurship Week",
+      "city": "Anchorage"
+    },
+    "action": "update",
+    "reason": "Event's own site akew.org ('September 14 - 18, 2026') replaces the generic alaskastartups.com directory url.",
+    "set": {
+      "url": "https://akew.org/"
+    }
+  },
+  {
+    "match": {
+      "name": "ALL IN",
+      "city": "Montreal"
+    },
+    "action": "update",
+    "reason": "allinevent.ai/pages/2027-tickets: 'ALL IN 2027 on September 22-23 at the Palais des congres de Montreal'; last_date 2026-09-16 already records the held edition.",
+    "set": {
+      "next_date": "2027-09-22",
+      "next_date_end": "2027-09-23"
+    }
+  },
+  {
+    "match": {
+      "name": "BSides St. John's",
+      "city": "St. John's"
+    },
+    "action": "update",
+    "reason": "Chapter site bsidesstjohns.com (Sept 17, 2026, Holiday Inn St. John's Conference Centre, 180 Portugal Cove Rd) replaces the bsides.org directory url.",
+    "set": {
+      "url": "https://www.bsidesstjohns.com/",
+      "venue": "Holiday Inn St. John's Conference Centre, 180 Portugal Cove Rd"
+    }
+  },
+  {
+    "match": {
+      "name": "BSidesCT",
+      "city": "Fairfield"
+    },
+    "action": "update",
+    "reason": "Chapter site bsidesct.org (Saturday, September 26th, 2026, Fairfield University) replaces the bsides.org directory url, which marked the listing 'Unconfirmed'.",
+    "set": {
+      "url": "https://www.bsidesct.org/",
+      "venue": "Fairfield University, 1073 N Benson Rd"
+    }
+  },
+  {
+    "match": {
+      "name": "BSidesNEPA",
+      "city": "Wilkes Barre"
+    },
+    "action": "update",
+    "reason": "Chapter site bsidesnepa.org (September 12, 2026, Wilkes University) replaces the bsides.org directory url.",
+    "set": {
+      "url": "https://bsidesnepa.org/",
+      "venue": "Wilkes University"
+    }
+  },
+  {
+    "match": {
+      "name": "Business Value Builder Summit",
+      "city": "Huntington"
+    },
+    "action": "update",
+    "reason": "Record url now 302-redirects to the generic marshall.edu/icenter/ page; the Marshall University News release (2026-07-29) is the surviving organiser page for the Sept 17, 2026 summit.",
+    "set": {
+      "url": "https://www.marshall.edu/news/2026/07/marshall-university-icenter-to-host-business-value-builder-summit/"
+    }
+  },
+  {
+    "match": {
+      "name": "CppCon",
+      "city": "Aurora"
+    },
+    "action": "update",
+    "reason": "cppcon.org post 'CppCon 2026 Wrap-up and CppCon 2027 Dates!' announces September 18-24, 2027; last_date 2026-09-12 already records the held edition.",
+    "set": {
+      "next_date": "2027-09-18",
+      "next_date_end": "2027-09-24"
+    }
+  },
+  {
+    "match": {
+      "name": "Cybersecurity Summit Chicago",
+      "city": "Chicago"
+    },
+    "action": "update",
+    "reason": "cyberriskalliance.swoogo.com/Chicago2027: Tuesday, April 27, 2027, Chicago, venue TBA. cybersecuritysummit.com/summits/ shows Chicago runs twice yearly (Mar/Apr and Sep); the Sep 15, 2026 edition was at Chicago Marriott Downtown Magnificent Mile, so the Hyatt Regency venue was wrong.",
+    "set": {
+      "next_date": "2027-04-27",
+      "next_date_end": "2027-04-27",
+      "url": "https://cyberriskalliance.swoogo.com/Chicago2027",
+      "venue": "",
+      "cadence": "biannual",
+      "month": "April"
+    }
+  },
+  {
+    "match": {
+      "name": "Day of Data Detroit",
+      "city": "Ann Arbor"
+    },
+    "action": "update",
+    "reason": "The sqlsaturday.com url is now a redirect stub to dayofdata.org/2026-09-12-dayofdata1164/, which confirms Sept 12, 2026 at the Ann Arbor District Library Downtown.",
+    "set": {
+      "url": "https://dayofdata.org/2026-09-12-dayofdata1164/",
+      "venue": "Ann Arbor District Library Downtown"
+    }
+  },
+  {
+    "match": {
+      "name": "DDX Innovation & UX Conference San Diego",
+      "city": "San Diego"
+    },
+    "action": "update",
+    "reason": "Organiser page ddxconference.com/sandiego replaces the dev.events aggregator url and announces 'Thursday, 16th of Sept '27' at UC San Diego Park & Market, 1100 Market St.",
+    "set": {
+      "url": "https://www.ddxconference.com/sandiego",
+      "next_date": "2027-09-16",
+      "next_date_end": "2027-09-16",
+      "venue": "UC San Diego Park & Market, 1100 Market St."
+    }
+  }
+]

@@ -1,0 +1,253 @@
+[
+  {
+    "match": {
+      "name": "Showerhacks",
+      "city": "San Francisco"
+    },
+    "action": "update",
+    "reason": "showerhacks.org (JSON-LD and hero text) shows the event ran September 26, 2026 in San Francisco; the record's month field said October.",
+    "set": {
+      "month": "September"
+    }
+  },
+  {
+    "match": {
+      "name": "Splunk .conf",
+      "city": "Denver"
+    },
+    "action": "update",
+    "reason": "conf.splunk.com homepage: '.conf27 ... McCormick Place Convention Center October 4-7, 2027' in Chicago. The 2026 edition (Sept 14-17, Colorado Convention Center, Denver per conf.splunk.com/about.html) moves to last_date (2026-09-14) in this patch, since the raw record still holds it in next_date. The conference rotates cities, so the next edition's city and venue change.",
+    "set": {
+      "next_date": "2027-10-04",
+      "next_date_end": "2027-10-07",
+      "last_date": "2026-09-14",
+      "city": "Chicago",
+      "region": "Illinois",
+      "venue": "McCormick Place Convention Center",
+      "month": "October"
+    }
+  },
+  {
+    "match": {
+      "name": "Tampa Bay Wave BlueTech|X Pitch Night",
+      "city": "Tampa"
+    },
+    "action": "update",
+    "reason": "Record shared tampabaywave.org/events100/ with the Hall of Fame Awards. The BlueTech|X accelerator page tampabaywave.org/bluetechx-accelerator/ is this event's own page and carries its date ('Sep 17, 2026 Pitch Night').",
+    "set": {
+      "url": "https://www.tampabaywave.org/bluetechx-accelerator/"
+    }
+  },
+  {
+    "match": {
+      "name": "Tech Homecoming",
+      "city": "Ann Arbor"
+    },
+    "action": "update",
+    "reason": "a2tech360.com/events/tech-homecoming-2025/ now redirects to /events/tech-homecoming-2026/, which confirms September 22, 2026 at Venue by 4M. Point url at the current page rather than the redirecting 2025 slug.",
+    "set": {
+      "url": "https://a2tech360.com/events/tech-homecoming-2026/"
+    }
+  },
+  {
+    "match": {
+      "name": "UNBOUND (formerly INBOUND)",
+      "city": "Boston"
+    },
+    "action": "update",
+    "reason": "unbound.hubspot.com: 'UNBOUND 2027 September 8 - 10, 2027 in Boston, MA'. The 2026 edition (Sept 16-18) moves to last_date (2026-09-16) in this patch.",
+    "set": {
+      "next_date": "2027-09-08",
+      "next_date_end": "2027-09-10",
+      "last_date": "2026-09-16"
+    }
+  },
+  {
+    "match": {
+      "name": "VSLive! San Diego",
+      "city": "San Diego"
+    },
+    "action": "update",
+    "reason": "vslive.com/events/san-diego-2026/home.aspx is the event's own page: 'September 14-18, 2026 Bahia Resort Hotel, San Diego, CA'. The record pointed at the generic vslive.com homepage with a dev.events source and no venue.",
+    "set": {
+      "url": "https://vslive.com/events/san-diego-2026/home.aspx",
+      "source": "https://vslive.com/events/san-diego-2026/home.aspx",
+      "venue": "Bahia Resort Hotel"
+    }
+  },
+  {
+    "match": {
+      "name": "Y Combinator Demo Day",
+      "city": "San Francisco"
+    },
+    "action": "update",
+    "reason": "ycombinator.com/demoday: 'The F26 Demo Day will be held on Wednesday, December 2nd'; ycombinator.com/blog/2026-demo-days lists four Demo Days in 2026 (Mar 24, Jun 16, Sep 10, Dec 2), so the cadence is quarterly, not biannual. S26 (Sep 10) moves to last_date in this patch.",
+    "set": {
+      "next_date": "2026-12-02",
+      "next_date_end": "2026-12-02",
+      "last_date": "2026-09-10",
+      "cadence": "quarterly",
+      "description": "The Demo Day held for each of Y Combinator's four yearly batches, where the batch pitches to an invited in-person investor audience in San Francisco; the F26 batch presents on 2 December 2026."
+    }
+  },
+  {
+    "match": {
+      "name": "Zeek Workshop Berkeley",
+      "city": "Berkeley"
+    },
+    "action": "update",
+    "reason": "zeek.org/zeek-workshop-berkeley-2026/ is the event's own page: September 10-11, 2026 at the David Brower Center, 2150 Allston Way, Berkeley; 'Registration is free'. The record had the zeek.org homepage, an aggregator source, no venue, and cost 'paid'.",
+    "set": {
+      "url": "https://zeek.org/zeek-workshop-berkeley-2026/",
+      "source": "https://zeek.org/zeek-workshop-berkeley-2026/",
+      "venue": "David Brower Center, 2150 Allston Way",
+      "cost": "free"
+    }
+  },
+  {
+    "match": {
+      "name": "Open Source AI Week",
+      "city": "San Jose"
+    },
+    "action": "update",
+    "reason": "The record shared events.linuxfoundation.org/about/calendar/ with AGNTCon + MCPCon. Open Source AI Week has its own page, events.linuxfoundation.org/open-source-ai-week/ (JSON-LD 2026-10-16 to 2026-10-25).",
+    "set": {
+      "url": "https://events.linuxfoundation.org/open-source-ai-week/"
+    }
+  },
+  {
+    "match": {
+      "name": "PEI BioAlliance Summer Social",
+      "city": "Charlottetown"
+    },
+    "action": "update",
+    "reason": "The record shared peibioalliance.com/events/ with the Holiday Social. The Summer Social's own page is peibioalliance.com/event/sumer-social-2026/ (July 14, 2026, Peakes Quay Restaurant).",
+    "set": {
+      "url": "https://peibioalliance.com/event/sumer-social-2026/"
+    }
+  },
+  {
+    "match": {
+      "name": "Kentucky Entrepreneur Hall of Fame Induction Celebration",
+      "city": "Lexington"
+    },
+    "action": "update",
+    "reason": "The record shared awesomeinc.org/events with other Awesome Inc events. The Hall of Fame has its own site: entrepreneurhof.com/induction-dinner/ ('2026 Induction Celebration Dinner, November 4, 2026, Central Bank Center'). The date and venue are unchanged.",
+    "set": {
+      "url": "https://entrepreneurhof.com/induction-dinner/"
+    }
+  },
+  {
+    "match": {
+      "name": "Cultivator Community Night",
+      "city": "Regina"
+    },
+    "action": "update",
+    "reason": "Eventbrite ticket page for 'Cultivator Community Night 2026' (organiser: Cultivator powered by Conexus): Wednesday January 28, 2026, 6:30-10 PM, Darke Hall, Regina. The record's 2026-02-04 was the recap post's publish date on cultivator.ca, and 'Cultivator HQ' was the 2025 venue. url moved from the shared events listing to the 2026 recap page on cultivator.ca.",
+    "set": {
+      "last_date": "2026-01-28",
+      "month": "January",
+      "venue": "Darke Hall",
+      "url": "https://www.cultivator.ca/community-night-2026-big-ideas-bold-founders-and-saskatchewan-innovation-in-action"
+    }
+  },
+  {
+    "match": {
+      "name": "Tampa Bay Wave Hall of Fame Awards",
+      "city": "Tampa"
+    },
+    "action": "update",
+    "reason": "The record shared tampabaywave.org/events100/ with BlueTech|X Pitch Night. The Hall of Fame has its own page at tampabaywave.org/events100/hall-of-fame/. The Dec 18, 2025 date is unchanged.",
+    "set": {
+      "url": "https://www.tampabaywave.org/events100/hall-of-fame/"
+    }
+  },
+  {
+    "match": {
+      "name": "Buffalo Game Space Game Development Meeting",
+      "city": "Buffalo"
+    },
+    "action": "update",
+    "reason": "Meetup: the in-person BGS Game Development Meeting last ran 2026-09-24 (not 2026-08-27), and the next is 2026-10-22 at 2495 Main St Suite 454 (meetup.com/buffalogamespace/events/314417095/). url moved off the group page shared with 9D Jam to the next in-person meeting's page.",
+    "set": {
+      "last_date": "2026-09-24",
+      "url": "https://www.meetup.com/buffalogamespace/events/314417095/"
+    }
+  },
+  {
+    "match": {
+      "name": "Knox Game Jam",
+      "city": "Knoxville"
+    },
+    "action": "update",
+    "reason": "The record carried no dates. The 2026 jam ran April 3-5, 2026: in-person kickoff Friday April 3, 7pm at Panera Bread on N. Peters Rd, Knoxville; submissions closed April 5, 9pm EDT (knoxgamedesign.org/2738/knox-game-jam-2026-kickoff/; itch.io/jam/knox-game-jam-2026). url moved off the knoxgamedesign.org homepage it shared with Knox Game Design.",
+    "set": {
+      "last_date": "2026-04-03",
+      "month": "April",
+      "venue": "Kickoff at Panera Bread, N. Peters Rd",
+      "url": "https://www.knoxgamedesign.org/2738/knox-game-jam-2026-kickoff/"
+    }
+  },
+  {
+    "match": {
+      "name": "HackOHI/O",
+      "city": "Columbus"
+    },
+    "action": "update",
+    "reason": "hack.osu.edu is shared with MakeOHI/O and Hack AI. HackOHI/O's own page is hack.osu.edu/2026: 'October 24-25, 2026 Ohio Union & Online'. The venue is more specific than 'The Ohio State University'.",
+    "set": {
+      "url": "https://hack.osu.edu/2026",
+      "venue": "Ohio Union, The Ohio State University"
+    }
+  },
+  {
+    "match": {
+      "name": "First Look Forum",
+      "city": "Milwaukee"
+    },
+    "action": "update",
+    "reason": "The record url was mcservices.com's 'top tech conferences' blog list, shared with AI Week Milwaukee. The host's own page is today.marquette.edu/calendar/first-look-forum-2/ (April 16, 2026, Quarles & Brady).",
+    "set": {
+      "url": "https://today.marquette.edu/calendar/first-look-forum-2/",
+      "source": "https://today.marquette.edu/calendar/first-look-forum-2/"
+    }
+  },
+  {
+    "match": {
+      "name": "NVTC Tech100 Celebration",
+      "city": "McLean"
+    },
+    "action": "update",
+    "reason": "nvtc.org/events/ is shared with the Cyber Summit & Cyber50 Awards. Tech100's own registration page is nvtc.glueup.com/event/tech100-celebration-186183/ (Dec 15, 2026, Hilton McLean Tysons Corner).",
+    "set": {
+      "url": "https://nvtc.glueup.com/event/tech100-celebration-186183/"
+    }
+  },
+  {
+    "match": {
+      "name": "rvatech/Women in Technology Conference",
+      "city": "Richmond"
+    },
+    "action": "update",
+    "reason": "rvatech.com/events/premier-conferences/ is shared with the Data + AI Summit. The conference's own page is rvatech.com/rvatech-events/rvatech-women-in-technology-conference/ ('Tuesday, November 17 ... The Dewey Gottwald Center at the Science Museum of Virginia'). It also supplies the missing venue.",
+    "set": {
+      "url": "https://rvatech.com/rvatech-events/rvatech-women-in-technology-conference/",
+      "venue": "Dewey Gottwald Center, Science Museum of Virginia"
+    }
+  },
+  {
+    "match": {
+      "name": "Product-Led Summit San Francisco",
+      "city": "San Francisco"
+    },
+    "action": "update",
+    "reason": "world.productledalliance.com/location/sanfrancisco is the event's own page: September 22-23, 2026 at the Hyatt Regency San Francisco Airport, 1333 Old Bayshore Highway, Burlingame. The venue is in Burlingame, not San Francisco. The record had the Alliance homepage (shared with the CPO Summit) and a dev.events source.",
+    "set": {
+      "url": "https://world.productledalliance.com/location/sanfrancisco",
+      "source": "https://world.productledalliance.com/location/sanfrancisco",
+      "city": "Burlingame",
+      "region": "California",
+      "venue": "Hyatt Regency San Francisco Airport, 1333 Old Bayshore Highway"
+    }
+  }
+]

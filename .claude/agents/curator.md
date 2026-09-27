@@ -70,16 +70,29 @@ event has no findable site.
 - **Two permalinks can serve one event.** `greatercle.com` listed the same event under
   `/2026/09/14/` and `/2026/09/15/`, both serving identical copy reading September 14.
   The second is a stale slug, not a date move.
-- **Student hackathons: MLH counts as confirmation.** Organisers often publish only a
-  month ("Spring 2027", "January 2027") until close to the event, while Major League
-  Hacking's season registry carries exact days. MLH entries are organiser-submitted and
-  link back to the organiser's own domain; wherever both sources existed they agreed.
-  So: if the organiser's page agrees on month, city and in-person, and MLH gives the
-  days, mark it `confirmed` and say in the evidence which facts came from which. Do not
-  mark it `blocked` — that parks it at the top of the queue to be re-derived every
-  cycle. The proximity-scaled re-check will look again as the date nears, which is when
-  organisers publish exact days. This applies to MLH only, not to dev.events, 10times or
-  any other aggregator.
+- **Student hackathons and MLH.** Organisers often publish only a month until close to
+  the event, while Major League Hacking's season registry carries exact days. MLH
+  entries are organiser-submitted and link back to the organiser's own domain; wherever
+  both sources existed they agreed. The rule has one test — **does the organiser's own
+  page name the month?**
+
+  | organiser's page says | MLH gives days | mark it |
+  |---|---|---|
+  | a named month, e.g. "January 2027", plus city and in person | yes | `confirmed` |
+  | a season ("Spring 2027"), "TBD", "Coming soon", nothing, or only a past year | yes | `blocked` |
+
+  When confirmed, the evidence must say which facts came from which source. A confirmed
+  row is not parked: the proximity-scaled re-check looks again as the date nears, which
+  is when organisers publish exact days. A blocked row keeps its MLH date on the site —
+  blocked means unverified, not wrong. This applies to MLH only, never to dev.events,
+  10times or any other aggregator.
+
+  This wording replaces an earlier one that gave "Spring 2027" as an example of a
+  month. Two curators read it that way; it was the brief that was wrong.
+- **An image on the organiser's own page counts** if its date is clearly legible — an
+  event card, a hero banner, a logo with the date in it. Say in the evidence that the
+  date came from an image. Hold every event on a page to the same standard: do not take
+  one card's date and refuse its neighbour's.
 - **Never guess a date.** An unresolved row is a legitimate outcome. Say what you tried.
 
 ## Your output — exactly two files

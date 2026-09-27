@@ -1,0 +1,8 @@
+[
+  { "name": "CppCon", "city": "Aurora", "status": "corrected", "cycle": "audit4", "evidence": "Held 2026 edition (Sept 12) restored to last_date; 2027 dates Sept 18-24 per organiser's 2027 dates post." },
+  { "name": "ALL IN", "city": "Montreal", "status": "corrected", "cycle": "audit4", "evidence": "Held 2026 edition (Sept 16) restored to last_date; 2027 dates Sept 22-23 per organiser's tickets page." },
+  { "name": "DDX Innovation & UX Conference San Diego", "city": "San Diego", "status": "corrected", "cycle": "audit4", "evidence": "Held 2026 edition (Sept 17) restored; ddxconference.com/sandiego shows Sept 16 2027." },
+  { "name": "AI Infra Summit", "city": "San Jose", "status": "corrected", "cycle": "audit4", "evidence": "Held 2026 edition (Sept 15, Santa Clara) restored; 2027 is Aug 31-Sep 2 at McEnery, San Jose." },
+  { "name": "Cybersecurity Summit Chicago", "city": "Chicago", "status": "corrected", "cycle": "audit4", "evidence": "Held Sept 2026 edition restored to last_date; next Apr 27 2027 per cyberriskalliance.swoogo.com; description no longer names the March venue." },
+  { "name": "Cultivator Community Night", "city": "Regina", "status": "corrected", "cycle": "audit4", "evidence": "cultivator.ca/events card, read as image by the auditor: 'JAN 28 2027 / Cultivator HQ'. Same standard as Startup Summit's image-card date." }
+]

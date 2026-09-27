@@ -11,6 +11,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { execFile } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { today as todayInDirectory } from '../../scripts/lib/today.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { events } = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8'));
@@ -184,6 +185,6 @@ if (!onlyBad && redirected.length) {
   if (redirected.length > 40) console.log(`  ... and ${redirected.length - 40} more`);
 }
 
-writeFileSync(REPORT, JSON.stringify({ checked_on: new Date().toISOString().slice(0, 10), results }, null, 2) + '\n');
+writeFileSync(REPORT, JSON.stringify({ checked_on: todayInDirectory(), results }, null, 2) + '\n');
 console.log(`\nFull report written to data/link-report.json`);
 process.exitCode = bad.length ? 1 : 0;

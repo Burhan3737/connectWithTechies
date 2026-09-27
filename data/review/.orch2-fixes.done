@@ -1,0 +1,4 @@
+[
+  { "match": { "name": "Kentucky Entrepreneur Hall of Fame Induction", "city": "Lexington" }, "action": "remove",
+    "reason": "Duplicate of 'Kentucky Entrepreneur Hall of Fame Induction Celebration' — same city, same date (2026-11-04), same venue (Central Bank Center). The two were merged while they shared awesomeinc.org/events; when curator e4 gave the other copy its own URL (entrepreneurhof.com/induction-dinner/) they no longer shared a page and split into two listings. This copy keeps the generic listing URL and was never verified." }
+]

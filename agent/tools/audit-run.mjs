@@ -20,6 +20,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync, execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import { today as todayInDirectory } from '../../scripts/lib/today.mjs';
 
 const runP = promisify(execFile);
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -29,7 +30,7 @@ const args = process.argv.slice(2);
 const sinceIdx = args.indexOf('--since');
 const SINCE = sinceIdx > -1 ? args[sinceIdx + 1] : 'HEAD';
 const AS_JSON = args.includes('--json');
-const today = process.env.TODAY || new Date().toISOString().slice(0, 10);
+const today = todayInDirectory();
 
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
 const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
@@ -174,6 +175,84 @@ for (const e of now.events) {
 }
 
 /* ---- 5. duplicates ------------------------------------------------------- */
+
+/**
+ * Near-name duplicates, whatever their URLs.
+ *
+ * The build merges a shared page only when names nest, and the same-day check
+ * below only compares events on one host. Neither sees one event filed under
+ * two nesting names on two different sites — and that is exactly what a curator
+ * produces when it gives one copy of a duplicate its own URL. The Kentucky
+ * Entrepreneur Hall of Fame "Induction" and "Induction Celebration" were merged
+ * while they shared a page, then silently split into two listings the moment
+ * one got a proper link.
+ */
+{
+  // Whole words only: a plain substring test matched "CES" inside "Access".
+  const words = (s) => ` ${String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()} `;
+  const nests = (a, b) => {
+    const wa = words(a), wb = words(b);
+    return wa !== wb && (wa.includes(wb) || wb.includes(wa));
+  };
+  // Undated events are compared on their held edition, so a duplicate does not
+  // hide simply because neither copy has a next date yet.
+  const dayOf = (e) => e.next_date || e.last_date || '';
+  const byCityDay = new Map();
+  for (const e of now.events) {
+    const day = dayOf(e);
+    if (!day) continue;
+    const k = `${norm(e.city)}|${day}`;
+    if (!byCityDay.has(k)) byCityDay.set(k, []);
+    byCityDay.get(k).push(e);
+  }
+  for (const group of byCityDay.values()) {
+    for (let i = 0; i < group.length; i++) {
+      for (let j = i + 1; j < group.length; j++) {
+        if (nests(group[i].name, group[j].name)) {
+          add('blocking', 'duplicate',
+            `${group[i].name} and ${group[j].name}: same city and date (${dayOf(group[i])}) and one name contains the other — one event listed twice`);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * A held edition must never be lost.
+ *
+ * last_date only ever moves forward: an edition, once held, stays held. When it
+ * goes backwards or is emptied, some patch has overwritten the record of an
+ * event that happened. Five events lost their 2026 edition this way in one
+ * cycle, and nothing here noticed — the dates were all well-formed, just older
+ * than they should have been.
+ */
+if (before) {
+  /**
+   * A backwards move is only a loss if nobody meant it. Correcting a wrong
+   * last_date — a blog post's publication date stored as the event's — moves it
+   * backwards too, and that is a fix. The patch log records every field a patch
+   * set deliberately, so a last_date change that appears there is a correction;
+   * one that does not was a side effect of overwriting something else.
+   */
+  const applied = existsSync(join(REVIEW, 'APPLIED.md')) ? readFileSync(join(REVIEW, 'APPLIED.md'), 'utf8') : '';
+  const deliberate = new Set();
+  for (const line of applied.split('\n')) {
+    const m = line.match(/UPDATE (.+?) \([^)]*\) — .*last_date: /);
+    if (m) deliberate.add(norm(m[1]));
+  }
+
+  const prev = byKey(before.events);
+  for (const e of now.events) {
+    const was = prev.get(idOf(e)) || prev.get(`${idOf(e)}|${norm(e.city)}`);
+    if (!was || !was.last_date) continue;
+    if (!e.last_date || e.last_date < was.last_date) {
+      const meant = deliberate.has(norm(e.name));
+      add(meant ? 'info' : 'blocking', meant ? 'last-date-corrected' : 'lost-edition',
+        `${e.name} (${e.city}): last_date went ${was.last_date} -> ${e.last_date || '(empty)'}` +
+        (meant ? ' — set deliberately by a patch' : ' — no patch set it, so a held edition was overwritten'));
+    }
+  }
+}
 
 const nameCity = new Map(), pageCity = new Map(), sameDay = new Map();
 for (const e of now.events) {

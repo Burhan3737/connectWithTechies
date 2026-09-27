@@ -8,7 +8,7 @@ organiser's own page.
 Every listing links to the organiser, not to a ticket reseller, and no date in the dataset
 was written down without someone fetching the page it came from.
 
-**907 events · 239 cities · 63 states, provinces and territories**
+**903 events · 240 cities · 63 states, provinces and territories**
 
 Coverage is complete for every US state and every Canadian province. Two jurisdictions are
 genuinely empty — the **Northwest Territories** and **Nunavut**. That is not an oversight:

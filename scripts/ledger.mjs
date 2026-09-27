@@ -25,6 +25,7 @@
 import { readdirSync, readFileSync, writeFileSync, existsSync, renameSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { today as todayInDirectory } from './lib/today.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const REVIEW = join(ROOT, 'data', 'review');
@@ -32,7 +33,7 @@ const STATE = join(REVIEW, 'verified.json');
 const MD = join(REVIEW, 'VERIFIED.md');
 const TODO = join(REVIEW, 'TO-VERIFY.tsv');
 
-const today = process.env.TODAY || new Date().toISOString().slice(0, 10);
+const today = todayInDirectory();
 const reportOnly = process.argv.includes('--report');
 /**
  * A batch-verified dataset expires in a batch, so the queue is naturally lumpy.
