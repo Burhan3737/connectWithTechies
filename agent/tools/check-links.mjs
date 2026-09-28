@@ -14,7 +14,9 @@ import { fileURLToPath } from 'node:url';
 import { today as todayInDirectory } from '../../scripts/lib/today.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const { events } = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8'));
+// Curated rows only: feed rows (feed_source) are re-read from their source by
+// scripts/feeds/run.mjs, which is their verification.
+const events = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8')).events.filter((e) => !e.feed_source);
 const REPORT = join(ROOT, 'data', 'link-report.json');
 
 const CONCURRENCY = Number(process.env.CONCURRENCY || 8);

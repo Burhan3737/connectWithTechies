@@ -34,7 +34,9 @@ import { today as todayInDirectory } from '../../scripts/lib/today.mjs';
 const run = promisify(execFile);
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const REVIEW = join(ROOT, 'data', 'review');
-const { events } = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8'));
+// Curated rows only: feed rows (feed_source) are re-read from their source by
+// scripts/feeds/run.mjs, which is their verification.
+const events = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8')).events.filter((e) => !e.feed_source);
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
   '(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';

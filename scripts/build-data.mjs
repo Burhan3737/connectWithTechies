@@ -16,7 +16,9 @@ const OUT_FILE = join(ROOT, 'data', 'events.json');
 
 const TYPES = new Set(['conference', 'hackathon', 'workshop', 'tech-week', 'meetup-series',
   'summit', 'expo', 'festival', 'ctf', 'game-jam', 'startup-week', 'demo-day',
-  'unconference', 'career-fair', 'bootcamp', 'awards']);
+  'unconference', 'career-fair', 'bootcamp', 'awards',
+  // One-off gatherings from the feed: talks, socials, happy hours, build nights.
+  'meetup']);
 const COUNTRIES = new Set(['Canada', 'United States']);
 const COSTS = new Set(['free', 'paid', 'freemium', 'invite-only', 'varies']);
 
@@ -134,7 +136,11 @@ function normalise(raw, file) {
   return e;
 }
 
-const files = readdirSync(RAW_DIR).filter((f) => f.endsWith('.json')).sort();
+// feed.json is read last: the curated files are verified by hand and must be
+// in place before any feed record is compared against them.
+const FEED_FILE = 'feed.json';
+const files = readdirSync(RAW_DIR).filter((f) => f.endsWith('.json'))
+  .sort((a, b) => (a === FEED_FILE) - (b === FEED_FILE) || a.localeCompare(b));
 if (!files.length) { console.error('No raw data files found in data/raw/'); process.exit(1); }
 
 /**
@@ -153,6 +159,9 @@ function keysFor(e) {
     .replace(/^https?:\/\/(www\.)?/, '')
     .replace(/[?#].*$/, '')
     .replace(/\/+$/, '');
+  // A feed record is one dated occurrence: "Tech Happy Hour" on two dates is two
+  // events, so its name key carries the date.
+  if (e.feed_source) return [`n:${slug(e.name)}|${city}|${e.next_date}`, `u:${page}|${city}`, `n:${slug(e.name)}|${city}`];
   return [`n:${slug(e.name)}|${city}`, `u:${page}|${city}`];
 }
 
@@ -180,7 +189,7 @@ const score = (x) => (x.next_date ? 100 : 0) +
 const byKey = new Map();      // name key -> canonical record
 const pageEvents = new Map(); // page key -> every distinct event listed on that page
 const kept = new Set();    // the surviving record objects
-let read = 0, dupes = 0;
+let read = 0, dupes = 0, feedCurated = 0;
 
 for (const f of files) {
   const path = join(RAW_DIR, f);
@@ -215,6 +224,15 @@ for (const f of files) {
      * Fellowship Demo Day and never compared with each other.
      */
     const onPage = pageEvents.get(keys[1]) || [];
+
+    // A feed record never replaces a curated one, however many fields it has:
+    // if the curated data already lists the event, the feed's copy is dropped.
+    if (e.feed_source) {
+      const curated = [byKey.get(keys[2]), ...onPage.filter((x) => samePageSameEvent(e, x))]
+        .find((x) => x && !x.feed_source);
+      if (curated) { feedCurated++; continue; }
+    }
+
     const hit = byName || onPage.find((x) => samePageSameEvent(e, x)) || null;
 
     if (!hit) {
@@ -268,6 +286,7 @@ console.log(`Files:      ${files.length} (${files.join(', ')})`);
 console.log(`Read:       ${read} records`);
 console.log(`Dropped:    ${dropped.length} unusable`);
 console.log(`Duplicates: ${dupes} merged`);
+console.log(`Feed:       ${feedCurated} already in the curated data, dropped`);
 console.log(`Output:     ${events.length} events across ${cities.length} cities`);
 console.log(`Upcoming:   ${events.filter((e) => e.status === 'upcoming').length}`);
 console.log(`Past:       ${events.filter((e) => e.status === 'past').length}`);

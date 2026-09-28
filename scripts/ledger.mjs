@@ -93,7 +93,11 @@ writeFileSync(STATE, JSON.stringify(state, null, 2) + '\n', 'utf8');
 
 /* ---- cross-reference against the live dataset --------------------------- */
 
-const { events } = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8'));
+// Feed events (data/raw/feed.json, marked feed_source) are re-read from their
+// source by script on every feed run; nobody verifies them by hand, so they
+// never enter the ledger or the re-check queue.
+const { events: allEvents } = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8'));
+const events = allEvents.filter((e) => !e.feed_source);
 
 /**
  * Entries are keyed on (name, city), so a patch that corrects an event's city

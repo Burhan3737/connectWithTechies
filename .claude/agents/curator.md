@@ -95,7 +95,7 @@ event has no findable site.
   one card's date and refuse its neighbour's.
 - **Never guess a date.** An unresolved row is a legitimate outcome. Say what you tried.
 
-## Your output — exactly two files
+## Your output — two files, and optionally a third
 
 **1. A ledger entry for EVERY row you were given**, whatever the outcome —
 `data/review/confirm-<pass>.json`:
@@ -132,6 +132,18 @@ supports the verdict — "checked, looks fine" is not evidence and will be flagg
 
 Names and cities in **both** files must be copied character-for-character from the input,
 or the patch will silently fail to apply.
+
+**Optional third file — organisers worth following** — `data/review/sources-<pass>.json`.
+If, while researching, you come across an organiser that keeps putting on in-person tech
+events (a university club, an accelerator, a company community calendar) and it publishes
+on Luma, Meetup, or a public `.ics` feed, list it here instead of patching in its one-off
+events. The feed script reads it on every run from then on:
+
+```json
+[{ "url": "https://luma.com/genai-sf", "reason": "SF's largest in-person AI meetup, weekly" }]
+```
+
+Rows in `data/raw/feed.json` (they carry `feed_source`) are the script's. Never patch them.
 
 ## Rules
 

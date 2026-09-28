@@ -26,6 +26,9 @@ thereafter.** An agent should only see it again if the script cannot settle it.
 Measured on this dataset: **83% of dated events confirm by script alone.** Agent work for
 routine maintenance drops by roughly six times.
 
+The same rule runs one level up for organisers: the feed (`scripts/feeds/`) follows every
+registered tech organiser and picks up each event they announce, with no agent involved.
+
 ## Tools
 
 | tool | what it does |
@@ -100,3 +103,23 @@ Only two files per pass, both in `data/review/`:
 
 Agents never edit `data/raw/`. `scripts/apply-patches.mjs` is the only thing that does,
 and it records every change with its reason in `data/review/APPLIED.md`.
+
+And one optional file, for the feed:
+
+- `sources-<pass>.json` — organisers worth following: a Luma calendar, a Meetup group, or
+  any public `.ics` feed. `[{ "url": "https://luma.com/genai-sf", "reason": "..." }]`.
+  The next `npm run feeds` registers each one and reads it on every run from then on.
+  `"tech": false` on a registered organiser retires it.
+
+## The feed, and where agents fit in it
+
+`data/raw/feed.json` holds one-off events — tonight's founders' mixer, next month's
+hackathon — read by `scripts/feeds/run.mjs` from Luma, Meetup, Eventbrite, MLH, Devpost
+and confs.tech. It is maintained entirely by script; its rows never enter the ledger or
+the re-check queue, and agents never patch them.
+
+So when an agent finds a **single event**, it belongs in a curated patch only if it is a
+recurring fixture. When it finds an **organiser** that keeps putting on events — a
+university club, an accelerator, a company's community calendar — that goes in
+`sources-<pass>.json`, and the script keeps up with every event they announce after.
+That is "research once, maintain by script" applied to organisers instead of events.

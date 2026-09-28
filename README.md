@@ -1,14 +1,16 @@
 # connectWithTechies
 
 A departures board for tech events across the **United States** and **Canada** — hackathons,
-conferences, tech weeks, CTFs, game jams, unconferences, demo days, awards nights and
-recurring meetup series. Pick your city, see what is on, click straight through to the
+conferences, tech weeks, CTFs, game jams, unconferences, demo days, awards nights,
+recurring meetup series, and tonight's founders' mixer or AI builders' night: anywhere you
+might meet tech people. Pick your city, see what is on, click straight through to the
 organiser's own page.
 
 Every listing links to the organiser, not to a ticket reseller, and no date in the dataset
 was written down without someone fetching the page it came from.
 
-**903 events · 240 cities · 63 states, provinces and territories**
+**2,453 events · 390 cities · 63 states, provinces and territories** — 903 curated and
+hand-verified, 1,550 from the live feed
 
 Coverage is complete for every US state and every Canadian province. Two jurisdictions are
 genuinely empty — the **Northwest Territories** and **Nunavut**. That is not an oversight:
@@ -34,6 +36,7 @@ Deploying: the app lives at the repo root, so GitHub Pages can serve it straight
 
 ```
 data/raw/*.json     one file per research pass, hand-verified records
+data/raw/feed.json  the live feed — written by scripts/feeds/run.mjs, never by hand
       |
       |  npm run build      merge, validate, normalise, de-duplicate, recompute status
       v
@@ -55,7 +58,9 @@ data/events.json    the single file the app reads
 
 | command | what it does |
 |---|---|
-| `npm run refresh` | **the maintenance loop** — rollover, script-confirm what it can, regenerate the queue |
+| `npm run refresh` | **the maintenance loop** — re-read the feed, rollover, script-confirm what it can, regenerate the queue |
+| `npm run feeds` | re-read every registered organiser and the tech datasets, then rebuild |
+| `npm run feeds:discover` | also search all 30 discovery cities for new events and new organisers (weekly) |
 | `npm run stale` | print the re-check queue |
 | `npm run build` | rebuild `data/events.json` and print a validation report |
 | `npm run apply` | apply reviewer patches from `data/review/` |
@@ -70,6 +75,7 @@ data/events.json    the single file the app reads
 
 ```
 scripts/        the deterministic pipeline. Owns data/. Maintainer-run.
+scripts/feeds/  the live feed: source adapters, relevance gate, runner.
 agent/tools/    what agents call — and what replaces agents where possible.
 agent/README.md the division of labour, in full.
 data/review/    the contract surface: queue in, patches and confirmations out.
@@ -80,6 +86,51 @@ researched by an agent once and maintained by script thereafter — it should on
 agent again if the script genuinely cannot settle it. Measured on this dataset,
 **86% of dated events confirm by script alone**, so routine upkeep costs roughly a sixth
 of what an all-agent pass would.
+
+## The live feed
+
+The curated data is annual fixtures; the feed is everything in between — the hackathon a
+startup announced last week, the AI Collective's city launch, the Tuesday founders' run.
+It is built and maintained by script from several sources, none of which needs an API key:
+
+| source | how it is read | what it gives |
+|---|---|---|
+| **Luma** | the endpoints Luma's own city and calendar pages call | city discovery, then each organiser's calendar, with places and time zones |
+| **Meetup** | the structured data embedded in search and group pages | city discovery (Technology category + startup/developer searches), then each group |
+| **Eventbrite** | schema.org Event data on the Science & Tech city listings | discovery only — Eventbrite organisers publish no feed |
+| **MLH** | the season pages | every in-person student hackathon |
+| **Devpost** | its public hackathon listing | in-person hackathons |
+| **confs.tech** | the open conference dataset on GitHub | US and Canadian tech conferences |
+
+The official APIs were checked first and are closed to this use: Luma's public API only
+lists calendars you manage, Eventbrite retired event search, and Meetup's GraphQL API needs
+OAuth and a paid Pro plan. The Luma and Meetup endpoints used instead are undocumented, so
+they are read gently — one request per host at a time, with pauses, and a six-hour cache —
+and can change without notice.
+
+**Discover once, maintain by script.** A discovery run searches each city and judges the
+organisers behind what it finds. The ones that prove to be tech communities go into
+`data/feeds/registry.json` (340 today: 92 Luma calendars, 248 Meetup groups), and every
+later run re-reads each of them in full — so a new event from a registered organiser appears
+without anyone searching for it, and one they cancel disappears. An agent that finds an
+organiser worth following lists its URL in `data/review/sources-<pass>.json`; the next run
+registers it.
+
+**The gate.** Every event must be in person, in the US or Canada, upcoming, and linked — and
+must pass a relevance judgement (`scripts/feeds/lib/relevance.mjs`) whose bar is
+deliberately low: *could you meet tech people here?* A registered tech organiser gets the
+benefit of the doubt; a general platform's listing needs a tech signal in its title or
+description, and off-topic titles (prayer evenings, book clubs, real-estate investing,
+forex "signals") are dropped even from tech organisers. Every kept event records why in
+`feed_relevance`, and `data/feeds/last-run.json` samples what was dropped and why.
+
+**De-duplication.** One event on several platforms is kept once (MLH and confs.tech first,
+then Luma, Meetup, Devpost, Eventbrite). A weekly group's fifty upcoming sessions become one
+series record carrying the next date. And the curated data always wins: an event already
+curated is never repeated by the feed, and a feed record can never replace a curated one.
+
+Feed rows are re-read from their sources on every run, which is their verification — so
+they never enter the ledger, the re-check queue, or an agent's workload.
 
 ## Review cycles
 
@@ -194,6 +245,7 @@ Anything you physically go to, where you meet people and the subject is technolo
 | `startup-week` | founder and investor oriented city weeks |
 | `summit` / `expo` | industry gatherings and trade shows |
 | `meetup-series` | recurring local groups worth showing up to |
+| `meetup` | a single gathering — a mixer, a builders' night, a talk (from the feed) |
 | `ctf` | capture-the-flag security competitions |
 | `game-jam` | time-boxed game building |
 | `workshop` / `bootcamp` | hands-on teaching formats |

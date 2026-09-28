@@ -10,7 +10,13 @@ import { fileURLToPath } from 'node:url';
 import { today as todayInDirectory } from '../../scripts/lib/today.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const { events, generated_on } = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8'));
+const data = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8'));
+const { generated_on } = data;
+// This audits the curated research. Feed rows (feed_source) are one-off events
+// re-read from their sources on every feed run; repeats of a weekly meetup's
+// name would drown the duplicate checks, so they are counted, not audited.
+const events = data.events.filter((e) => !e.feed_source);
+const feedCount = data.events.length - events.length;
 
 const today = todayInDirectory();
 const line = (s = '') => console.log(s);
@@ -29,7 +35,7 @@ for (const e of events) {
   byType[e.type] = (byType[e.type] || 0) + 1;
 }
 line(`Total events: ${events.length}   Cities: ${Object.keys(byCity).length}   Regions: ${Object.keys(byRegion).length}`);
-line(`Generated on: ${generated_on}`);
+line(`Generated on: ${generated_on}   (plus ${feedCount} feed events, not audited here)`);
 line();
 line('By country: ' + Object.entries(byCountry).map(([k, v]) => `${k} ${v}`).join('   '));
 line();

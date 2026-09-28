@@ -39,11 +39,16 @@ const add = (severity, kind, detail) => findings.push({ severity, kind, detail }
 
 /* ---- load before / after ------------------------------------------------ */
 
-const now = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8'));
+// The audit judges curated rows — the ones curators touch. Feed rows
+// (feed_source) come and go with their sources on every feed run; counting
+// them here would report each expired meetup as a lost event.
+const curatedOnly = (d) => d && { ...d, events: (d.events || []).filter((e) => !e.feed_source) };
+
+const now = curatedOnly(JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8')));
 let before = null;
 try {
-  before = JSON.parse(execFileSync('git', ['show', `${SINCE}:data/events.json`],
-    { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }));
+  before = curatedOnly(JSON.parse(execFileSync('git', ['show', `${SINCE}:data/events.json`],
+    { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 })));
 } catch {
   add('note', 'no-baseline', `Could not read data/events.json at ${SINCE}; skipping before/after checks.`);
 }

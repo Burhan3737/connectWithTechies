@@ -16,3 +16,7 @@ data/review/DISPATCHED.tsv
 data/review/AUDIT.json
 data/review/CHUNK-*.tsv
 data/review/SHARED-PAGES.tsv
+data/.cache/
+
+# Feed run report: rewritten every run, read locally after discovery
+data/feeds/last-run.json

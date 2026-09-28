@@ -51,8 +51,16 @@ way to learn nothing.
 npm run refresh
 ```
 
-That runs the build (rollover), then `agent/tools/verify-dates.mjs --write`, then the
-ledger. It leaves:
+That first re-reads the feed (`scripts/feeds/run.mjs`: every registered organiser plus
+MLH, Devpost and confs.tech — one-off events, script-maintained, never dispatched), then
+runs the build (rollover), then `agent/tools/verify-dates.mjs --write`, then the ledger.
+Once a week, run `npm run feeds:discover` instead of the feed step alone: it searches
+every city on Luma, Meetup and Eventbrite for new events and new organisers to follow.
+Read `data/feeds/last-run.json` afterwards — the organisers it registered and a sample of
+what the relevance gate dropped — and retire any organiser that is not ours with a
+`data/review/sources-<pass>.json` entry carrying `"tech": false`.
+
+The curated half leaves:
 
 - ledger confirmations for everything it settled — those events are done
 - `data/review/PROPOSED-moves.json` — dates the page has changed. **Review these
