@@ -39,7 +39,7 @@ const STRONG = [
   'techcrunch', 'y combinator', 'yc', 'proptech',
   // Third pass, from a random sample of a full run's drops.
   'robot', 'robots', 'humanoid', 'hackaday', '3d printing', '3d printer', 'cnc', 'laser cutter', 'arduino',
-  'raspberry pi', 'product', 'space week', 'aerospace', 'satellite', 'design development', 'design and development',
+  'raspberry pi', 'product people', 'product meetup', 'product happy hour', 'product leaders', 'productcon', 'producttank', 'space week', 'aerospace', 'satellite', 'design development', 'design and development',
   'web design', 'google', 'microsoft', 'nvidia', 'openai', 'anthropic', 'github', 'figma',
 ];
 
@@ -55,6 +55,11 @@ const NEGATIVE = [
   'forex', 'trading signals', 'day trading', 'options trading', 'make money online', 'passive income', 'network marketing',
   'mlm', 'financial freedom', 'credit repair', 'bitcoin mining profits',
   'kids camp', 'toddler', 'baby shower', 'bridal', 'wedding expo',
+  // Paid corporate courses, which Eventbrite often tags "High Tech": a classroom
+  // of trainees, not a room to meet people. Run city by city as "| 1 Day Calgary".
+  '1 day', '1-day', '2 day', '2-day', '3 day', '3-day', 'skills training', 'training course',
+  'certification training', 'negotiation', 'conflict management', 'presentation skills',
+  'cbap', 'pmp', 'six sigma', 'leadership training', 'course in',
 ];
 
 // Phrases whose tech-sounding word means something else: a "business developers"

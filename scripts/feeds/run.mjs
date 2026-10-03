@@ -36,7 +36,8 @@ import * as eventbrite from './adapters/eventbrite.mjs';
 import * as ical from './adapters/ical.mjs';
 import { readCalendar as readLuma } from './adapters/luma.mjs';
 import { readGroup as readMeetup } from './adapters/meetup.mjs';
-import { mlh, devpost, confsTech } from './adapters/datasets.mjs';
+import { mlh, devpost, confsTech, developersEvents, hackClub } from './adapters/datasets.mjs';
+import * as tribe from './adapters/tribe.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const RAW = join(ROOT, 'data', 'raw');
@@ -80,8 +81,9 @@ function take(list, flags) {
   }
 }
 
-log('Datasets: MLH, Devpost, confs.tech');
-for (const [name, fn] of [['mlh', mlh], ['devpost', devpost], ['confstech', confsTech]]) {
+log('Datasets: MLH, Devpost, confs.tech, developers.events, Hack Club');
+for (const [name, fn] of [['mlh', mlh], ['devpost', devpost], ['confstech', confsTech],
+  ['devevents', developersEvents], ['hackclub', hackClub]]) {
   try {
     const list = await fn();
     take(list, { sourceIsTech: true });
@@ -117,12 +119,50 @@ if (DISCOVER) {
 /* ---- 2. organisers: judge, and register the tech ones ------------------- */
 
 const registered = new Map(registry.sources.map((s) => [s.id, s]));
-const techOrg = new Set(registry.sources.filter((s) => s.tech !== false).map((s) => s.id));
+// judgeEvents sources (a city calendar mixing tech with life sciences) are
+// followed, but each of their events must pass the gate on its own merits.
+const techOrg = new Set(registry.sources.filter((s) => s.tech !== false && !s.judgeEvents).map((s) => s.id));
+
+// Eventbrite listings name no organiser, so a candidate's profile page is read
+// before judging it — one throttled request each, hence the cap. Rejections are
+// remembered (tech: false) and not looked at again for RECHECK_DAYS.
+const PROFILE_LIMIT = Number(process.env.FEED_PROFILE_LIMIT || 80);
+const RECHECK_DAYS = 60;
+let profiled = 0;
 
 for (const [id, o] of orgFound) {
   const rawId = id.replace(/^(luma-cal|meetup):/, '');
-  const titles = orgTitles.get(rawId) || orgTitles.get(id) || [];
-  const verdict = judgeOrganiser(o, titles);
+  let titles = orgTitles.get(rawId) || orgTitles.get(id) || [];
+  let candidate = o;
+
+  if (o.needsProfile) {
+    const known = registered.get(id);
+    if (known && (known.tech !== false || daysAgo(known.checked || known.added) < RECHECK_DAYS)) {
+      if (known.tech !== false) techOrg.add(id);
+      continue;
+    }
+    if (profiled >= PROFILE_LIMIT) continue;
+    profiled++;
+    const p = await eventbrite.profile(o).catch(() => null);
+    if (!p) continue;
+    candidate = { ...o, name: p.name, description: p.description, website: p.website };
+    delete candidate.needsProfile;
+    titles = p.titles;
+    const verdict = judgeOrganiser(candidate, titles);
+    // Follow only organisers that keep running events; a one-off is found
+    // again by discovery if they ever run another.
+    const follow = verdict.tech && p.total >= 2;
+    const reason = follow ? verdict.reason : verdict.tech ? `only ${p.total} upcoming event(s)` : verdict.reason;
+    const entry = { ...candidate, tech: follow, reason, added: known?.added || TODAY, checked: TODAY };
+    if (known) Object.assign(known, entry); else { registered.set(id, entry); registry.sources.push(entry); }
+    if (follow) {
+      techOrg.add(id);
+      report.newOrganisers.push(`${entry.name} (eventbrite, ${o.home?.city || '?'}) — ${reason}`);
+    }
+    continue;
+  }
+
+  const verdict = judgeOrganiser(candidate, titles);
   if (verdict.tech) techOrg.add(id);
   if (verdict.tech && !registered.has(id)) {
     const entry = { ...o, tech: true, reason: verdict.reason, added: TODAY };
@@ -166,10 +206,11 @@ for (const file of proposals) {
       continue;
     }
     if (existing) continue;
-    const entry = { ...src, tech: true, reason: `proposed in ${file}: ${p.reason || ''}`.trim(), added: TODAY };
+    const entry = { ...src, tech: true, ...(p.judge_each ? { judgeEvents: true } : {}),
+      reason: `proposed in ${file}: ${p.reason || ''}`.trim(), added: TODAY };
     registered.set(src.id, entry);
     registry.sources.push(entry);
-    techOrg.add(src.id);
+    if (!entry.judgeEvents) techOrg.add(src.id);
     report.newOrganisers.push(`${entry.name} (${entry.platform}) — ${entry.reason}`);
   }
 }
@@ -187,11 +228,23 @@ async function resolveProposal(p) {
       name: p.name || cal.name || lumaSlug, description: cal.description_short || '', website: cal.website || '',
       home: null, page: `https://luma.com/${lumaSlug}` };
   }
+  const ebOrg = url.match(/^https?:\/\/(?:www\.)?eventbrite\.(?:com|ca)\/o\/(?:[a-z0-9-]*-)?(\d{6,})/i)?.[1];
+  if (ebOrg) {
+    const page = `https://www.eventbrite.com/o/${ebOrg}`;
+    return { id: `eventbrite:${ebOrg}`, kind: 'eventbrite-organizer', platform: 'eventbrite', url: page, page,
+      name: p.name || '', description: '', website: '', home: null };
+  }
   const group = url.match(/^https?:\/\/(?:www\.)?meetup\.com\/([^/?#]+)/i)?.[1];
   if (group && group !== 'find') {
     return { id: `meetup:${group}`, kind: 'meetup-group', platform: 'meetup',
       url: `https://www.meetup.com/${group}/events/ical/`, name: p.name || group,
       description: '', website: '', home: null, page: `https://www.meetup.com/${group}/` };
+  }
+  if (/\/wp-json\/tribe\/events\/v1/i.test(url)) {
+    const base = url.replace(/(\/wp-json\/tribe\/events\/v1).*$/i, '$1');
+    const host = new URL(base).host;
+    return { id: `tribe:${host}`, kind: 'tribe-rest', platform: 'tribe', url: base,
+      name: p.name || host, description: '', website: `https://${host}`, home: null, page: p.page || '' };
   }
   if (/^(https?|webcal):\/\//i.test(url) && /\.ics(\?|$)|ical/i.test(url)) {
     return { id: `ical:${url}`, kind: 'ical', platform: 'ical', url: url.replace(/^webcal:/i, 'https:'),
@@ -210,13 +263,17 @@ for (const src of registry.sources) {
   try {
     // Luma calendars and Meetup groups are read where they give places; any
     // other registered source through its iCal feed.
-    const reader = src.platform === 'luma' ? readLuma : src.platform === 'meetup' ? readMeetup : ical.read;
-    const { events, ok } = await reader(src);
+    const reader = src.platform === 'luma' ? readLuma : src.platform === 'meetup' ? readMeetup
+      : src.platform === 'eventbrite' ? eventbrite.readOrganizer
+      : src.platform === 'tribe' ? tribe.read : ical.read;
+    const { events, ok, partial, name } = await reader(src);
     if (!ok) { report.failedSources.push(`${src.id}: feed unreadable`); continue; }
+    if (!src.name && name) src.name = name;
     feedOk++;
     feedEvents += events.length;
-    seenSources.add(src.id);
-    take(events, { organiserIsTech: true, registryId: src.id });
+    // Only a complete read can show an event was taken down.
+    if (!partial) seenSources.add(src.id);
+    take(events, { organiserIsTech: !src.judgeEvents, registryId: src.id });
     src.last_read = TODAY;
     src.last_count = events.length;
   } catch (err) {
@@ -228,7 +285,8 @@ log(`  read ${feedOk} feed(s), ${feedEvents} event(s)`);
 /* ---- 4. the gate ------------------------------------------------------- */
 
 const orgIdOf = (e) => (e.registryId || (e.feed === 'luma' ? `luma-cal:${e.organiser?.id}` :
-  e.feed === 'meetup' ? `meetup:${e.organiser?.id}` : ''));
+  e.feed === 'meetup' ? `meetup:${e.organiser?.id}` :
+  e.feed === 'eventbrite' ? (e.organiser?.id || '') : ''));
 
 const gated = [];
 for (const e of candidates) {
@@ -252,8 +310,14 @@ for (const e of candidates) {
 /* ---- 5. de-duplicate: across sources, then against the curated data ----- */
 
 // Where one event is listed on several platforms, prefer the organiser's own.
-const RANK = { mlh: 1, confstech: 2, luma: 3, meetup: 4, devpost: 5, eventbrite: 6 };
-const nests = (a, b) => { const x = words(a), y = words(b); return x.includes(y) || y.includes(x); };
+const RANK = { mlh: 1, confstech: 2, devevents: 2, tribe: 3, luma: 3, meetup: 4, hackclub: 5, devpost: 5, ical: 5, eventbrite: 6 };
+// Also compare without spaces: "BSidesAtlanta" and "BSides Atlanta" are one event.
+const nests = (a, b) => {
+  const x = words(a), y = words(b);
+  if (x.includes(y) || y.includes(x)) return true;
+  const xs = x.replace(/ /g, ''), ys = y.replace(/ /g, '');
+  return xs.length >= 6 && ys.length >= 6 && (xs.includes(ys) || ys.includes(xs));
+};
 
 gated.sort((a, b) => (RANK[a.feed] || 9) - (RANK[b.feed] || 9));
 const unique = [];
@@ -340,7 +404,7 @@ function typeOf(e) {
 const shortDate = (d) => `${MONTH[Number(d.slice(5, 7)) - 1].slice(0, 3)} ${Number(d.slice(8, 10))}`;
 const describe = (e) => {
   const base = e.description ||
-    `Listed on ${({ luma: 'Luma', meetup: 'Meetup', eventbrite: 'Eventbrite' })[e.feed] || e.feed}` +
+    `Listed on ${({ luma: 'Luma', meetup: 'Meetup', eventbrite: 'Eventbrite', tribe: e.organiser?.name, ical: e.organiser?.name })[e.feed] || e.feed}` +
     `${e.organiser?.name ? ` by ${e.organiser.name}` : ''}.`;
   if (!e.series) return base;
   const next = e.series.dates.slice(1, 5).map(shortDate).join(', ');
@@ -374,7 +438,7 @@ const toRecord = (e) => ({
   ...(e.series ? { feed_dates: e.series.dates.slice(0, 12) } : {}),
   // The registry feed or dataset it was read from; discovery hits carry none.
   feed_via: e.registryId || (e.sourceIsTech ? e.feed : ''),
-  feed_organiser: e.organiser?.name || '',
+  feed_organiser: e.organiser?.name || registered.get(orgIdOf(e))?.name || '',
   feed_relevance: e.relevance,
   feed_first_seen: TODAY,
   feed_last_seen: TODAY,
@@ -391,10 +455,14 @@ const out = collapsed.map((e) => {
   return r;
 });
 const outIds = new Set(out.map((r) => r.feed_id));
+const candidateIds = new Set(candidates.map((e) => e.feed_id));
 
 let kept = 0, expired = 0, vanished = 0;
 for (const r of previous) {
   if (outIds.has(r.feed_id) || folded.has(r.feed_id)) continue;
+  // Seen this run and turned away by the gate (judged off-topic, now curated,
+  // a duplicate): history must not bring it back.
+  if (candidateIds.has(r.feed_id)) continue;
   const date = r.next_date_end || r.next_date;
   if (date < TODAY) {
     // Held: keep it for the Past view for a while, then let it go.

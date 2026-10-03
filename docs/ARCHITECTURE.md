@@ -15,8 +15,8 @@ allowed to change what. For the detail behind any box, follow the file links.
                  ┌──────────── FEED (script-maintained) ───────────┐  ├──────────────▶ data/events.json ──▶ the app
  Luma, Meetup,   │  data/raw/feed.json                              │  │   (merge, dedupe,     (one file)       (static site,
  Eventbrite, ───▶│  one-off events + weekly/monthly series          │──┘    rollover dates;                    GitHub Pages)
- MLH, Devpost,   │  ~1,550 events, rewritten every feed run         │       curated always wins)
- confs.tech      └──────────────────────────────────────────────────┘
+ MLH, Devpost,   │  ~3,300 events, rewritten every feed run         │       curated always wins)
+ confs.tech, …   └──────────────────────────────────────────────────┘
 ```
 
 Two halves, one output. The app does not know or care which half an event came from.
@@ -33,14 +33,20 @@ Two halves, one output. The app does not know or care which half an event came f
 
 ## Where the feed's events come from
 
+Full list, access details and candidates under review: [SOURCES.md](SOURCES.md).
+
 | Source | How it is read | Role |
 |---|---|---|
 | **Luma** | endpoints Luma's own city and calendar pages use | find events per city → follow the organiser's calendar |
 | **Meetup** | structured data embedded in search and group pages | find events per city (Technology + startup/dev searches) → follow the group |
-| **Eventbrite** | schema.org data on "Science & Tech" city listings | discovery only (organisers publish no feed) |
+| **Eventbrite** | server data on city listings (Science & Tech + hackathon/startup/networking searches) and organiser pages | find events per city → follow tech organisers with 2+ events |
 | **MLH** | season pages | every in-person student hackathon |
 | **Devpost** | public hackathon listing | in-person hackathons |
 | **confs.tech** | open conference dataset on GitHub | US/Canada tech conferences |
+| **developers.events** | one open JSON file (MIT) | developer conferences |
+| **Hack Club** | public hackathon directory API | high-school hackathons |
+| **BSides & other WordPress event sites** | The Events Calendar REST API | security cons, community calendars |
+| **GeekWire and any public .ics** | the calendar file | city tech calendars, small groups |
 
 No API keys. The official APIs are closed to this use (Luma: own calendars only;
 Eventbrite: search retired; Meetup: OAuth + paid plan). The Luma and Meetup endpoints used
@@ -53,11 +59,12 @@ time, with pauses and a 6-hour cache (`scripts/feeds/lib/http.mjs`).
   discover (weekly)                          maintain (every run)
   ─────────────────                          ────────────────────
   search 30 cities on                        re-read every registered organiser
-  Luma / Meetup / Eventbrite                 + MLH, Devpost, confs.tech
+  Luma / Meetup / Eventbrite                 + MLH, Devpost, confs.tech,
+                                             developers.events, Hack Club
         │                                              │
         ▼                                              │
   judge each organiser ── tech? ──▶ data/feeds/registry.json ◀── agents add organisers via
-        (description or track record)     (340 organisers)       data/review/sources-*.json
+        (description or track record)     (476 followed)         data/review/sources-*.json
         │                                              │
         └──────────────────────┬───────────────────────┘
                                ▼

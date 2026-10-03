@@ -1,0 +1,6 @@
+[
+  { "url": "https://luma.com/ethglobal", "reason": "ETHGlobal: hackathons, city happy hours and coworking across North America" },
+  { "url": "https://luma.com/agihouse", "reason": "AGI House: model-launch hackathons and AI builder events" },
+  { "url": "https://bsides.org/wp-json/tribe/events/v1/", "name": "Security BSides", "reason": "BSides directory: community security conferences, structured venues; robots allows /wp-json/" },
+  { "url": "https://www.geekwire.com/calendar/?ical=1", "name": "GeekWire calendar", "judge_each": true, "reason": "Seattle-area tech calendar; mixes in life-science events, so each event is judged; iCal because robots disallows /wp-json/" }
+]

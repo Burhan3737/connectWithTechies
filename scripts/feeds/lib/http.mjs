@@ -107,6 +107,32 @@ export function pageData(html) {
   return null;
 }
 
+/**
+ * A JSON object assigned in an inline script — `window.__SERVER_DATA__ = {...};`.
+ * A regex cannot find where such an object ends, so walk it, respecting strings.
+ */
+export function assignedJson(html, marker) {
+  const at = html.indexOf(marker);
+  if (at < 0) return null;
+  const start = html.indexOf('{', at);
+  let depth = 0, inStr = false, esc = false;
+  for (let j = start; j < html.length; j++) {
+    const c = html[j];
+    if (inStr) {
+      if (esc) esc = false;
+      else if (c === '\\') esc = true;
+      else if (c === '"') inStr = false;
+      continue;
+    }
+    if (c === '"') inStr = true;
+    else if (c === '{') depth++;
+    else if (c === '}' && --depth === 0) {
+      try { return JSON.parse(html.slice(start, j + 1)); } catch { return null; }
+    }
+  }
+  return null;
+}
+
 export function jsonLd(html) {
   return [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
     .map((m) => { try { return JSON.parse(m[1]); } catch { return null; } })

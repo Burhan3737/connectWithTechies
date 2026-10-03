@@ -9,8 +9,8 @@ organiser's own page.
 Every listing links to the organiser, not to a ticket reseller, and no date in the dataset
 was written down without someone fetching the page it came from.
 
-**2,453 events · 390 cities · 63 states, provinces and territories** — 903 curated and
-hand-verified, 1,550 from the live feed
+**4,225 events · 559 cities · 63 states, provinces and territories** — 903 curated and
+hand-verified, 3,322 from the live feed
 
 **Live:** https://burhan3737.github.io/connectWithTechies/ · **How it stays current:**
 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
@@ -102,10 +102,14 @@ It is built and maintained by script from several sources, none of which needs a
 |---|---|---|
 | **Luma** | the endpoints Luma's own city and calendar pages call | city discovery, then each organiser's calendar, with places and time zones |
 | **Meetup** | the structured data embedded in search and group pages | city discovery (Technology category + startup/developer searches), then each group |
-| **Eventbrite** | schema.org Event data on the Science & Tech city listings | discovery only — Eventbrite organisers publish no feed |
+| **Eventbrite** | server data on city listings and organiser pages | city discovery (Science & Tech + hackathon/startup/networking searches), then tech organisers with 2+ events |
 | **MLH** | the season pages | every in-person student hackathon |
 | **Devpost** | its public hackathon listing | in-person hackathons |
 | **confs.tech** | the open conference dataset on GitHub | US and Canadian tech conferences |
+| **developers.events** | one open JSON file (MIT) | developer conferences |
+| **Hack Club** | public hackathon directory API | high-school hackathons |
+| **BSides & other WordPress event sites** | The Events Calendar REST API | security cons, community calendars |
+| **GeekWire and any public .ics** | the calendar file | city tech calendars, small groups |
 
 The official APIs were checked first and are closed to this use: Luma's public API only
 lists calendars you manage, Eventbrite retired event search, and Meetup's GraphQL API needs
@@ -115,7 +119,7 @@ and can change without notice.
 
 **Discover once, maintain by script.** A discovery run searches each city and judges the
 organisers behind what it finds. The ones that prove to be tech communities go into
-`data/feeds/registry.json` (340 today: 92 Luma calendars, 248 Meetup groups), and every
+`data/feeds/registry.json` (476 followed today: 123 Luma calendars, 328 Meetup groups, 23 Eventbrite organisers, BSides and GeekWire), and every
 later run re-reads each of them in full — so a new event from a registered organiser appears
 without anyone searching for it, and one they cancel disappears. An agent that finds an
 organiser worth following lists its URL in `data/review/sources-<pass>.json`; the next run
