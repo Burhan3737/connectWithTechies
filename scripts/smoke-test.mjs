@@ -242,6 +242,72 @@ fire($('#country'), 'change');
 await tick();
 ok(rows().length === allCount, 'board restored after clearing country and region');
 
+console.log('\nDropdowns');
+{
+  const key = (el, k) => el.dispatchEvent(new window.KeyboardEvent('keydown', { key: k, bubbles: true }));
+  const panelOf = (id) => $(`#${id}-dd`).parentNode.querySelector('.dd__panel');
+  const opts = (id) => [...panelOf(id).querySelectorAll('[role="option"]')].filter((li) => !li.hidden);
+
+  for (const id of ['type', 'country', 'region', 'sort']) {
+    const t = $(`#${id}-dd`);
+    ok(!!t && t.getAttribute('aria-haspopup') === 'listbox', `${id}: a listbox trigger stands in for the select`);
+    ok($(`label[for="${id}-dd"]`) !== null, `${id}: its label names the trigger`);
+    ok($(`#${id}`).getAttribute('aria-hidden') === 'true' && $(`#${id}`).tabIndex === -1, `${id}: the native select is out of the tab order`);
+  }
+  ok($('#type-dd').textContent === 'All kinds' && $('#type-dd').classList.contains('is-all'), 'the "all" choice shows, dimmed');
+
+  // Open, see counts in their own column, choose with the mouse.
+  click($('#type-dd'));
+  ok(!panelOf('type').hidden && $('#type-dd').getAttribute('aria-expanded') === 'true', 'clicking opens the list');
+  const hack = opts('type').find((li) => li.getAttribute('data-value') === 'hackathon');
+  ok(hack && hack.querySelector('.dd__opt').textContent === 'Hackathon' && /^\d+$/.test(hack.querySelector('.dd__count').textContent),
+    'labels and counts sit in separate columns', `${hack.querySelector('.dd__opt').textContent} · ${hack.querySelector('.dd__count').textContent}`);
+  ok(opts('type')[0].getAttribute('aria-selected') === 'true', 'the current choice is marked');
+  click(hack);
+  await tick();
+  ok($('#type').value === 'hackathon' && $('#type-dd').textContent === 'Hackathon', 'choosing sets the filter and the trigger');
+  ok(panelOf('type').hidden && window.document.activeElement === $('#type-dd'), 'the list closes and focus returns to the trigger');
+  ok(rows().length > 0 && rows().every((r) => r.querySelector('.ev__tag--kind').textContent === 'hackathon'), 'the board shows only that kind', `${rows().length} rows`);
+
+  // Keyboard: arrow to open, arrows to move, Enter to choose, Escape to leave.
+  key($('#country-dd'), 'ArrowDown');
+  ok(!panelOf('country').hidden, 'ArrowDown on the trigger opens the list');
+  key(panelOf('country'), 'ArrowDown');
+  key(panelOf('country'), 'ArrowDown');
+  ok(window.document.activeElement.getAttribute('data-value') === 'Canada', 'arrows move through the options');
+  key(panelOf('country'), 'Enter');
+  await tick();
+  ok($('#country').value === 'Canada' && $('#country-dd').textContent === 'Canada', 'Enter chooses');
+  key($('#sort-dd'), 'Enter');
+  key(panelOf('sort'), 'Escape');
+  ok(panelOf('sort').hidden && $('#sort').value === 'date', 'Escape closes without changing anything');
+
+  // Province / state: narrowed to the chosen country, and filterable.
+  click($('#region-dd'));
+  const groups = [...panelOf('region').querySelectorAll('.dd__group')].map((g) => g.textContent);
+  ok(groups.length === 1 && groups[0] === 'Canada', 'regions follow the chosen country', groups.join(', '));
+  const search = panelOf('region').querySelector('.dd__search');
+  ok(!!search && window.document.activeElement === search, 'a long list opens on its filter box');
+  search.value = 'new';
+  fire(search, 'input');
+  ok(opts('region').map((li) => li.getAttribute('data-value')).join(',') === 'New Brunswick,Newfoundland and Labrador',
+    'typing filters the list', opts('region').map((li) => li.getAttribute('data-value')).join(', '));
+  search.value = 'zzz';
+  fire(search, 'input');
+  ok(opts('region').length === 0 && !panelOf('region').querySelector('.dd__none').hidden, 'no match says so');
+  click($('#board'));
+  ok(panelOf('region').hidden, 'clicking elsewhere closes the list');
+
+  // Back to the start.
+  for (const [id, label] of [['type', 'All kinds'], ['country', 'Both countries']]) {
+    click($(`#${id}-dd`));
+    click(opts(id)[0]);
+    await tick();
+    ok($(`#${id}-dd`).textContent === label, `${id} reset`);
+  }
+  ok(rows().length === allCount, 'board restored after the dropdown checks');
+}
+
 console.log('\nCalendar view');
 {
   const todayIso = window.eval('(function(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")})()');

@@ -30,7 +30,7 @@
       <label class="field__label" for="q">Search</label>
       <div class="field__box">
         <span class="field__icon" aria-hidden="true">⌕</span>
-        <input id="q" type="search" placeholder="event, topic, venue&hellip;" autocomplete="off" spellcheck="false">
+        <input id="q" type="search" placeholder="Event, topic or venue" autocomplete="off" spellcheck="false">
       </div>
     </div>
 
@@ -38,7 +38,7 @@
       <label class="field__label" for="cityq">Cities</label>
       <div class="field__box">
         <span class="field__icon" aria-hidden="true">◎</span>
-        <input id="cityq" type="text" placeholder="type a city to add&hellip;" autocomplete="off" spellcheck="false"
+        <input id="cityq" type="text" placeholder="Add a city" autocomplete="off" spellcheck="false"
                role="combobox" aria-expanded="false" aria-controls="citylist" aria-autocomplete="list">
         <button class="field__clear" id="clearCities" type="button" hidden aria-label="Clear all selected cities">clear</button>
       </div>
@@ -57,7 +57,7 @@
     <div class="field field--type">
       <label class="field__label" for="type">Kind</label>
       <div class="field__box field__box--select">
-        <select id="type"><option value="">every kind</option></select>
+        <select id="type"><option value="">All kinds</option></select>
       </div>
     </div>
 
@@ -65,7 +65,7 @@
       <label class="field__label" for="country">Country</label>
       <div class="field__box field__box--select">
         <select id="country">
-          <option value="">both</option>
+          <option value="">Both countries</option>
           <option value="United States">United States</option>
           <option value="Canada">Canada</option>
         </select>
@@ -75,7 +75,7 @@
     <div class="field field--region">
       <label class="field__label" for="region">Province / state</label>
       <div class="field__box field__box--select">
-        <select id="region"><option value="">all</option></select>
+        <select id="region"><option value="">All provinces &amp; states</option></select>
       </div>
     </div>
   </div>
@@ -93,9 +93,9 @@
     <div class="resultbar__sort">
       <label for="sort">Sort</label>
       <select id="sort">
-        <option value="date">by date</option>
-        <option value="city">by city</option>
-        <option value="name">by name</option>
+        <option value="date">Date</option>
+        <option value="city">City</option>
+        <option value="name">Name</option>
       </select>
     </div>
   </div>

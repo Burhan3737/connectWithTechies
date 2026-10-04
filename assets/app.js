@@ -546,6 +546,7 @@
       el.board.setAttribute('aria-busy', 'false');
       renderCalendar();
       renderChips();
+      syncDropdowns();
       writeURL();
       return;
     }
@@ -575,6 +576,7 @@
       (list.length === 1 ? 'event' : 'events') + ' &middot; ' + esc(scope) + ' &middot; ' + esc(state.when);
 
     renderChips();
+    syncDropdowns();
     writeURL();
   }
 
@@ -715,6 +717,7 @@
 
     // Add-to-calendar menus: build on first open, one open at a time.
     document.addEventListener('click', function (ev) {
+      if (!ev.target.closest('.dd')) DROPDOWNS.forEach(function (d) { closeDropdown(d, false); });
       var summary = ev.target.closest('.addcal > summary');
       var inside = ev.target.closest('.addcal');
       document.querySelectorAll('.addcal[open]').forEach(function (d) {
@@ -779,6 +782,7 @@
     el.country.value = state.country;
     el.region.value = state.region;
     el.sort.value = state.sort;
+    syncDropdowns();
     document.querySelectorAll('.segmented button[data-view]').forEach(function (x) {
       var on = x.getAttribute('data-view') === state.view;
       x.classList.toggle('is-on', on);
@@ -790,6 +794,194 @@
       x.setAttribute('aria-checked', on ? 'true' : 'false');
     });
   }
+
+  /* ------------------------------------------------------------ dropdowns */
+
+  /* The browser's own <select> list cannot be styled: no padding, no count
+     column, system fonts. Each select is kept, hidden, as the source of truth
+     (filters, URL state and tests all read it), and a listbox drawn in the
+     page's own style stands in front of it. The list is rebuilt from the
+     select's options on every open, so options filled in later are current. */
+  var DROPDOWNS = [];
+  var SEARCHABLE_FROM = 12;   // longer lists get a filter box
+
+  function enhanceSelect(sel) {
+    var box = sel.parentNode;
+    box.classList.add('dd');
+    sel.classList.add('dd__native');
+    sel.tabIndex = -1;
+    sel.setAttribute('aria-hidden', 'true');
+
+    var id = sel.id + '-dd';
+    var trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'dd__trigger';
+    trigger.id = id;
+    trigger.setAttribute('aria-haspopup', 'listbox');
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.innerHTML = '<span class="dd__value"></span>' +
+      '<svg class="dd__chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
+
+    var panel = document.createElement('div');
+    panel.className = 'dd__panel';
+    panel.hidden = true;
+
+    box.appendChild(trigger);
+    box.appendChild(panel);
+
+    // The visible label now names the trigger, not the hidden select.
+    var label = document.querySelector('label[for="' + sel.id + '"]');
+    if (label) {
+      label.setAttribute('for', id);
+      if (!label.id) label.id = sel.id + '-label';
+      trigger.setAttribute('aria-labelledby', label.id + ' ' + id);
+    }
+
+    var dd = { sel: sel, box: box, trigger: trigger, panel: panel };
+    DROPDOWNS.push(dd);
+
+    trigger.addEventListener('click', function () { dd.open ? closeDropdown(dd, true) : openDropdown(dd); });
+    trigger.addEventListener('keydown', function (ev) {
+      if (ev.key === 'ArrowDown' || ev.key === 'ArrowUp' || ev.key === 'Enter' || ev.key === ' ') {
+        ev.preventDefault();
+        openDropdown(dd);
+      }
+    });
+    panel.addEventListener('keydown', function (ev) { dropdownKey(dd, ev); });
+    panel.addEventListener('click', function (ev) {
+      var opt = ev.target.closest('[role="option"]');
+      if (opt) chooseOption(dd, opt.getAttribute('data-value'));
+    });
+    panel.addEventListener('input', function (ev) {
+      if (ev.target.classList.contains('dd__search')) filterOptions(dd, ev.target.value);
+    });
+    syncDropdown(dd);
+  }
+
+  function optionLabel(o) { return o.textContent.trim(); }
+
+  function buildPanel(dd) {
+    var items = [];
+    var html = [];
+    var n = 0;
+    var addOption = function (o) {
+      var count = o.getAttribute('data-count');
+      var sel = o.value === dd.sel.value;
+      html.push('<li role="option" id="' + dd.sel.id + '-opt-' + (n++) + '" tabindex="-1" data-value="' + esc(o.value) + '"' +
+        ' data-label="' + esc(fold(optionLabel(o))) + '" aria-selected="' + sel + '"' +
+        (o.value === '' ? ' class="is-all"' : '') + '>' +
+        '<span class="dd__opt">' + esc(optionLabel(o)) + '</span>' +
+        (count ? '<span class="dd__count">' + esc(count) + '</span>' : '') + '</li>');
+      items.push(o);
+    };
+    [].forEach.call(dd.sel.children, function (c) {
+      if (c.tagName === 'OPTGROUP') {
+        html.push('<li class="dd__group" role="presentation">' + esc(c.label) + '</li>');
+        [].forEach.call(c.children, addOption);
+      } else addOption(c);
+    });
+    var searchable = items.length >= SEARCHABLE_FROM;
+    dd.panel.innerHTML =
+      (searchable ? '<input class="dd__search" type="text" placeholder="Filter" aria-label="Filter options" autocomplete="off" spellcheck="false">' : '') +
+      '<ul class="dd__list" role="listbox" aria-labelledby="' + dd.trigger.id + '">' + html.join('') + '</ul>' +
+      (searchable ? '<p class="dd__none" hidden>No match</p>' : '');
+  }
+
+  function visibleOptions(dd) {
+    return [].filter.call(dd.panel.querySelectorAll('[role="option"]'), function (li) { return !li.hidden; });
+  }
+
+  function openDropdown(dd) {
+    DROPDOWNS.forEach(function (o) { if (o !== dd && o.open) closeDropdown(o, false); });
+    buildPanel(dd);
+    dd.open = true;
+    dd.panel.hidden = false;
+    dd.box.classList.add('is-open');
+    dd.trigger.setAttribute('aria-expanded', 'true');
+    // Open towards the side with room, so the last column never runs off-screen.
+    dd.panel.classList.remove('dd__panel--right');
+    var r = dd.panel.getBoundingClientRect();
+    if (r.right > (window.innerWidth || document.documentElement.clientWidth) - 8) dd.panel.classList.add('dd__panel--right');
+    var search = dd.panel.querySelector('.dd__search');
+    var current = dd.panel.querySelector('[aria-selected="true"]') || visibleOptions(dd)[0];
+    if (search) search.focus(); else if (current) current.focus();
+    if (current && current.scrollIntoView) current.scrollIntoView({ block: 'nearest' });
+  }
+
+  function closeDropdown(dd, refocus) {
+    if (!dd.open) return;
+    dd.open = false;
+    dd.panel.hidden = true;
+    dd.box.classList.remove('is-open');
+    dd.trigger.setAttribute('aria-expanded', 'false');
+    if (refocus) dd.trigger.focus();
+  }
+
+  function chooseOption(dd, value) {
+    closeDropdown(dd, true);
+    if (dd.sel.value === value) return;
+    dd.sel.value = value;
+    dd.sel.dispatchEvent(new Event('change', { bubbles: true }));
+    syncDropdown(dd);
+  }
+
+  function filterOptions(dd, q) {
+    var needle = fold(q.trim());
+    var shown = 0;
+    [].forEach.call(dd.panel.querySelectorAll('[role="option"]'), function (li) {
+      var hit = !needle || li.getAttribute('data-label').indexOf(needle) >= 0;
+      li.hidden = !hit;
+      if (hit) shown++;
+    });
+    // A country heading stays only while one of its options does.
+    [].forEach.call(dd.panel.querySelectorAll('.dd__group'), function (g) {
+      var next = g.nextElementSibling, any = false;
+      while (next && !next.classList.contains('dd__group')) { if (!next.hidden) any = true; next = next.nextElementSibling; }
+      g.hidden = !any;
+    });
+    var none = dd.panel.querySelector('.dd__none');
+    if (none) none.hidden = shown > 0;
+  }
+
+  function dropdownKey(dd, ev) {
+    var opts = visibleOptions(dd);
+    var at = opts.indexOf(document.activeElement);
+    var inSearch = document.activeElement && document.activeElement.classList.contains('dd__search');
+    var go = function (i) { if (opts[i]) { opts[i].focus(); opts[i].scrollIntoView && opts[i].scrollIntoView({ block: 'nearest' }); } };
+    if (ev.key === 'Escape') { ev.preventDefault(); closeDropdown(dd, true); return; }
+    if (ev.key === 'Tab') { closeDropdown(dd, false); return; }
+    if (ev.key === 'ArrowDown') { ev.preventDefault(); go(inSearch ? 0 : Math.min(at + 1, opts.length - 1)); return; }
+    if (ev.key === 'ArrowUp') {
+      ev.preventDefault();
+      if (at <= 0) { var s = dd.panel.querySelector('.dd__search'); if (s) s.focus(); return; }
+      go(at - 1); return;
+    }
+    if (ev.key === 'Home' && !inSearch) { ev.preventDefault(); go(0); return; }
+    if (ev.key === 'End' && !inSearch) { ev.preventDefault(); go(opts.length - 1); return; }
+    if (ev.key === 'Enter' || (ev.key === ' ' && !inSearch)) {
+      ev.preventDefault();
+      var pick = inSearch ? opts[0] : opts[at];
+      if (pick) chooseOption(dd, pick.getAttribute('data-value'));
+      return;
+    }
+    // Type a letter to jump, as a native select does.
+    if (!inSearch && ev.key.length === 1 && /\S/.test(ev.key)) {
+      var k = fold(ev.key);
+      for (var j = 1; j <= opts.length; j++) {
+        var cand = opts[(at + j) % opts.length];
+        if (cand.getAttribute('data-label').charAt(0) === k) { go(opts.indexOf(cand)); break; }
+      }
+    }
+  }
+
+  /* The trigger shows the select's current choice; the "all" choice reads dimmer. */
+  function syncDropdown(dd) {
+    var o = dd.sel.options[dd.sel.selectedIndex];
+    var v = dd.trigger.querySelector('.dd__value');
+    v.textContent = o ? optionLabel(o) : '';
+    dd.trigger.classList.toggle('is-all', !o || o.value === '');
+  }
+  function syncDropdowns() { DROPDOWNS.forEach(syncDropdown); }
 
   /* --------------------------------------------------------------- boot   */
 
@@ -820,20 +1012,22 @@
       .sort(function (a, b) { return b.count - a.count || a.city.localeCompare(b.city); });
 
     var typeOpts = Object.keys(types).sort(function (a, b) { return types[b] - types[a]; });
-    el.type.innerHTML = '<option value="">every kind</option>' + typeOpts.map(function (t) {
-      return '<option value="' + esc(t) + '">' + esc(t.replace(/-/g, ' ')) + ' (' + types[t] + ')</option>';
+    el.type.innerHTML = '<option value="">All kinds</option>' + typeOpts.map(function (t) {
+      var label = t.replace(/-/g, ' ');
+      return '<option value="' + esc(t) + '" data-count="' + types[t] + '">' +
+        esc(label.charAt(0).toUpperCase() + label.slice(1)) + '</option>';
     }).join('');
   }
 
   /** The province/state picker: grouped by country, narrowed to the chosen one. */
   function fillRegions() {
     var groups = ['United States', 'Canada'].filter(function (c) { return !state.country || c === state.country; });
-    el.region.innerHTML = '<option value="">all</option>' + groups.map(function (c) {
+    el.region.innerHTML = '<option value="">All provinces &amp; states</option>' + groups.map(function (c) {
       var list = Object.keys(REGIONS).map(function (k) { return REGIONS[k]; })
         .filter(function (r) { return r.country === c; })
         .sort(function (a, b) { return a.name.localeCompare(b.name); });
       return '<optgroup label="' + esc(c) + '">' + list.map(function (r) {
-        return '<option value="' + esc(r.name) + '">' + esc(r.name) + ' (' + r.count + ')</option>';
+        return '<option value="' + esc(r.name) + '" data-count="' + r.count + '">' + esc(r.name) + '</option>';
       }).join('') + '</optgroup>';
     }).join('');
     el.region.value = state.region;
@@ -867,6 +1061,7 @@
     ['q', 'cityq', 'citylist', 'clearCities', 'chips', 'type', 'country', 'region', 'sort', 'cal',
       'board', 'empty', 'count', 'tally'].forEach(function (id) { el[id] = $(id); });
 
+    ['type', 'country', 'region', 'sort'].forEach(function (id) { enhanceSelect(el[id]); });
     readURL();
     syncControls();
 
