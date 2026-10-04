@@ -46,7 +46,7 @@ export async function mlh() {
 /* ---- Devpost ---------------------------------------------------------- */
 
 /** "Oct 10 - 11, 2026" or "Jan 25 - Feb 11, 2027" -> [start, end]. */
-function devpostRange(s) {
+export function devpostRange(s) {
   // A one-day event: "Oct 10, 2026".
   const one = String(s || '').match(/^\s*([A-Za-z]{3})\s+(\d{1,2}),\s*(\d{4})\s*$/);
   if (one && MONTHS[one[1].toLowerCase()]) {

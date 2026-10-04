@@ -18,7 +18,7 @@ const PAGES = Number(process.env.LUMA_PAGES || 3);
 const CALENDAR_PAGES = Number(process.env.LUMA_CALENDAR_PAGES || 4);
 
 /** A Luma entry as a feed event; place is null when Luma gives no US/Canada city. */
-function toEvent(x, cal) {
+export function toEvent(x, cal) {
   const ev = x.event || {};
   const g = ev.geo_address_info || {};
   const place = fromParts({ city: g.city, region: g.region, country: g.country }) || null;

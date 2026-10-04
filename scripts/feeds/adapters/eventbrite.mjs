@@ -25,7 +25,7 @@ const KEYWORDS = ['hackathon', 'startup', 'tech-networking'];
 const ORG_PAGE = (id) => `https://www.eventbrite.com/o/${id}`;
 
 /** One Eventbrite event object (listing or organiser page) -> feed event. */
-function toEvent(e) {
+export function toEvent(e) {
   if (e.is_online_event || e.is_cancelled) return null;
   const a = e.primary_venue?.address || {};
   const country = a.country === 'US' ? 'United States' : a.country === 'CA' ? 'Canada' : a.country;

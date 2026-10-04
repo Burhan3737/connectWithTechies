@@ -15,7 +15,7 @@ import { fromParts } from '../lib/geo.mjs';
 const QUERIES = ['categoryId=546', 'keywords=startup', 'keywords=developers'];
 
 /** Meetup's Apollo cache -> [feed event, group] for every in-person event with a place. */
-function readApollo(body) {
+export function readApollo(body) {
   const apollo = pageData(body)?.props?.pageProps?.__APOLLO_STATE__;
   if (!apollo) return null;
   const deref = (x) => (x && x.__ref ? apollo[x.__ref] : x);
@@ -33,7 +33,7 @@ function readApollo(body) {
       feed: 'meetup',
       feed_id: `meetup:${node.id}`,
       title: node.title,
-      description: String(node.description || '').replace(/s+/g, ' ').slice(0, 600),
+      description: String(node.description || '').replace(/\s+/g, ' ').slice(0, 600),
       organiser: { id: group.urlname, name: group.name, description: '', website: '' },
       url: node.eventUrl,
       start_date: String(node.dateTime).slice(0, 10),
