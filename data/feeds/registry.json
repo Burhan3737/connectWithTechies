@@ -13923,6 +13923,1560 @@
       "reason": "no tech signal in organiser",
       "added": "2026-10-03",
       "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:3782307105",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/3782307105",
+      "page": "https://www.eventbrite.com/o/3782307105",
+      "name": "Atlanta Tech Village",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Atlanta",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "organiser described as: tech",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 12
+    },
+    {
+      "id": "eventbrite:121442668353",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121442668353",
+      "page": "https://www.eventbrite.com/o/121442668353",
+      "name": "East Coast Futurist Society",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Atlanta",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:2013926489",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/2013926489",
+      "page": "https://www.eventbrite.com/o/2013926489",
+      "name": "EC-Council",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Atlanta",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:69657300623",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/69657300623",
+      "page": "https://www.eventbrite.com/o/69657300623",
+      "name": "Gride Technology",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Atlanta",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "organiser described as: technology",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 12
+    },
+    {
+      "id": "eventbrite:121654659979",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121654659979",
+      "page": "https://www.eventbrite.com/o/121654659979",
+      "name": "DS Consortium | DS Knowledge Lab",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Atlanta",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "track record: 1/2 events clearly tech",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 1
+    },
+    {
+      "id": "eventbrite:14548907411",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/14548907411",
+      "page": "https://www.eventbrite.com/o/14548907411",
+      "name": "EC-Council Foundation",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Atlanta",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:110999790351",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/110999790351",
+      "page": "https://www.eventbrite.com/o/110999790351",
+      "name": "Seattle Data AI & Security",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Atlanta",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "organiser described as: ai",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 2
+    },
+    {
+      "id": "eventbrite:120859803662",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/120859803662",
+      "page": "https://www.eventbrite.com/o/120859803662",
+      "name": "Cobb County Public Library",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Atlanta",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:15504553432",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/15504553432",
+      "page": "https://www.eventbrite.com/o/15504553432",
+      "name": "Tech North Atlanta",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Alpharetta",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "organiser described as: tech",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 5
+    },
+    {
+      "id": "eventbrite:121554494696",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121554494696",
+      "page": "https://www.eventbrite.com/o/121554494696",
+      "name": "Maya Edmonson",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Cumming",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:19893837843",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/19893837843",
+      "page": "https://www.eventbrite.com/o/19893837843",
+      "name": "Child Care Resource & Referral of SWGA",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Macon",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:115119276301",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/115119276301",
+      "page": "https://www.eventbrite.com/o/115119276301",
+      "name": "City of Stonecrest",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Stonecrest",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121219670217",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121219670217",
+      "page": "https://www.eventbrite.com/o/121219670217",
+      "name": "360 Blueprints Inc.",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Tucker",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:12222304401",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/12222304401",
+      "page": "https://www.eventbrite.com/o/12222304401",
+      "name": "Maximum One Executives",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Duluth",
+        "region": "Georgia",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:4307993329",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/4307993329",
+      "page": "https://www.eventbrite.com/o/4307993329",
+      "name": "#LatinaGeeks",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "San Diego",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "track record: 2/4 events clearly tech",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 2
+    },
+    {
+      "id": "eventbrite:31325803329",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/31325803329",
+      "page": "https://www.eventbrite.com/o/31325803329",
+      "name": "NDIA San Diego-Fall Forum",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "San Diego",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:3005643250",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/3005643250",
+      "page": "https://www.eventbrite.com/o/3005643250",
+      "name": "ISACA San Diego Chapter",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "San Diego",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:81677114443",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/81677114443",
+      "page": "https://www.eventbrite.com/o/81677114443",
+      "name": "Department of Cognitive Science",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "San Diego",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "track record: 2/2 events clearly tech",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 2
+    },
+    {
+      "id": "eventbrite:11071974063",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/11071974063",
+      "page": "https://www.eventbrite.com/o/11071974063",
+      "name": "All Girls STEM Society",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "San Diego",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121284597549",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121284597549",
+      "page": "https://www.eventbrite.com/o/121284597549",
+      "name": "Noah Wilson",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "San Diego",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:109327747411",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/109327747411",
+      "page": "https://www.eventbrite.com/o/109327747411",
+      "name": "California Employer Advisory Council",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Temecula",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:120683807251",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/120683807251",
+      "page": "https://www.eventbrite.com/o/120683807251",
+      "name": "Arthur Fish (owner)",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Tustin",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121651137493",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121651137493",
+      "page": "https://www.eventbrite.com/o/121651137493",
+      "name": "Tonaka Kendrick & Carolus Brown",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Temecula",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:1781309489",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/1781309489",
+      "page": "https://www.eventbrite.com/o/1781309489",
+      "name": "Lutes International",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "San Diego",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:110168380941",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/110168380941",
+      "page": "https://www.eventbrite.com/o/110168380941",
+      "name": "Gullick Group",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "San Diego",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:47503471813",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/47503471813",
+      "page": "https://www.eventbrite.com/o/47503471813",
+      "name": "Konica Minolta Business Solutions",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Riverside",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121497512594",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121497512594",
+      "page": "https://www.eventbrite.com/o/121497512594",
+      "name": "Organizer",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Fullerton",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121086974806",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121086974806",
+      "page": "https://www.eventbrite.com/o/121086974806",
+      "name": "Tech Link Up",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Irvine",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "organiser described as: tech",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 0
+    },
+    {
+      "id": "eventbrite:110809527771",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/110809527771",
+      "page": "https://www.eventbrite.com/o/110809527771",
+      "name": "Orange County AI",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Newport Beach",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "organiser described as: ai",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 1
+    },
+    {
+      "id": "eventbrite:7346569507",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/7346569507",
+      "page": "https://www.eventbrite.com/o/7346569507",
+      "name": "UC Riverside Library",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Riverside",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "track record: 6/12 events clearly tech",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 6
+    },
+    {
+      "id": "eventbrite:17083871812",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/17083871812",
+      "page": "https://www.eventbrite.com/o/17083871812",
+      "name": "Anaheim Public Library",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Anaheim",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121782859135",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121782859135",
+      "page": "https://www.eventbrite.com/o/121782859135",
+      "name": "Chante Earl",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Moreno Valley",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:86746392723",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/86746392723",
+      "page": "https://www.eventbrite.com/o/86746392723",
+      "name": "Sealegs at The Beach",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Huntington Beach",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121818396165",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121818396165",
+      "page": "https://www.eventbrite.com/o/121818396165",
+      "name": "DiYnamo Labs",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Irvine",
+        "region": "California",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:17337109151",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/17337109151",
+      "page": "https://www.eventbrite.com/o/17337109151",
+      "name": "Teaching With Purpose",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Portland",
+        "region": "Oregon",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:31214759425",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/31214759425",
+      "page": "https://www.eventbrite.com/o/31214759425",
+      "name": "Portland State University School of Art + Design",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Portland",
+        "region": "Oregon",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121735979257",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121735979257",
+      "page": "https://www.eventbrite.com/o/121735979257",
+      "name": "Raíz Digital",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Portland",
+        "region": "Oregon",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:59028335063",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/59028335063",
+      "page": "https://www.eventbrite.com/o/59028335063",
+      "name": "Aaron Campf",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Portland",
+        "region": "Oregon",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:24900771746",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/24900771746",
+      "page": "https://www.eventbrite.com/o/24900771746",
+      "name": "Main Line Reform Temple",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Wynnewood",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:31791494507",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/31791494507",
+      "page": "https://www.eventbrite.com/o/31791494507",
+      "name": "eForce Recycling",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Penn Valley",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:112947872131",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/112947872131",
+      "page": "https://www.eventbrite.com/o/112947872131",
+      "name": "Haverford Systems",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Philadelphia",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:36570694353",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/36570694353",
+      "page": "https://www.eventbrite.com/o/36570694353",
+      "name": "Center for Ethics and the Rule of Law at Penn",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Philadelphia",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:40431109413",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/40431109413",
+      "page": "https://www.eventbrite.com/o/40431109413",
+      "name": "PhillyCHI and AIGA Philadelphia",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Philadelphia",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:83374856023",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/83374856023",
+      "page": "https://www.eventbrite.com/o/83374856023",
+      "name": "Kevin Davis",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "King of Prussia",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:29317595593",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/29317595593",
+      "page": "https://www.eventbrite.com/o/29317595593",
+      "name": "Tech Forum",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Wilmington",
+        "region": "Delaware",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "only 1 upcoming event(s)",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:52205527403",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/52205527403",
+      "page": "https://www.eventbrite.com/o/52205527403",
+      "name": "Antoinette Westphal College of Media Arts & Design",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Philadelphia",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121785168186",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121785168186",
+      "page": "https://www.eventbrite.com/o/121785168186",
+      "name": "Led by We Love Philly as a part of STEM Equity week",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Philadelphia",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:108781026971",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/108781026971",
+      "page": "https://www.eventbrite.com/o/108781026971",
+      "name": "Phila SQL Server User Group",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Conshohocken",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:8268805282",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/8268805282",
+      "page": "https://www.eventbrite.com/o/8268805282",
+      "name": "Price Lab for Digital Humanities",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Philadelphia",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:29080992887",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/29080992887",
+      "page": "https://www.eventbrite.com/o/29080992887",
+      "name": "Free Library of Philadelphia (Science & Wellness)",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Philadelphia",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:65874062043",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/65874062043",
+      "page": "https://www.eventbrite.com/o/65874062043",
+      "name": "Steve The Legacy",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Philadelphia",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:2899353393",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/2899353393",
+      "page": "https://www.eventbrite.com/o/2899353393",
+      "name": "Korean Cultural Foundation",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Philadelphia",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "track record: 1/2 events clearly tech",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 2
+    },
+    {
+      "id": "eventbrite:46506390763",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/46506390763",
+      "page": "https://www.eventbrite.com/o/46506390763",
+      "name": "Tech Council of Delaware",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Wilmington",
+        "region": "Delaware",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "organiser described as: tech",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 2
+    },
+    {
+      "id": "eventbrite:64766815193",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/64766815193",
+      "page": "https://www.eventbrite.com/o/64766815193",
+      "name": "Josef Prusa & Prusa Research",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Wilmington",
+        "region": "Delaware",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121693996420",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121693996420",
+      "page": "https://www.eventbrite.com/o/121693996420",
+      "name": "AWS Central New Jersey User Group",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Edison",
+        "region": "New Jersey",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "only 1 upcoming event(s)",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:15691056881",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/15691056881",
+      "page": "https://www.eventbrite.com/o/15691056881",
+      "name": "SAME Chesapeake Post",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Rising Sun",
+        "region": "Maryland",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:4233078571",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/4233078571",
+      "page": "https://www.eventbrite.com/o/4233078571",
+      "name": "The Row House Forum",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Lancaster",
+        "region": "Pennsylvania",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "track record: 1/2 events clearly tech",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 2
+    },
+    {
+      "id": "eventbrite:8023753846",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/8023753846",
+      "page": "https://www.eventbrite.com/o/8023753846",
+      "name": "Regional Advanced Manufacturing Partnership of MD",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Bel Air",
+        "region": "Maryland",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:88043861873",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/88043861873",
+      "page": "https://www.eventbrite.com/o/88043861873",
+      "name": "AFRO FEST DALLAS",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Richardson",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:19271751509",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/19271751509",
+      "page": "https://www.eventbrite.com/o/19271751509",
+      "name": "Mining Disrupt Conference",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Irving",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:39042698093",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/39042698093",
+      "page": "https://www.eventbrite.com/o/39042698093",
+      "name": "Baaraku",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Irving",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:2451090364",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/2451090364",
+      "page": "https://www.eventbrite.com/o/2451090364",
+      "name": "North Texas SBDC",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Dallas",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121355652476",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121355652476",
+      "page": "https://www.eventbrite.com/o/121355652476",
+      "name": "CERTcuit, Inc.",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Plano",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:30865606343",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/30865606343",
+      "page": "https://www.eventbrite.com/o/30865606343",
+      "name": "Texas AirSystems",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Fort Worth",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "track record: 2/4 events clearly tech",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 4
+    },
+    {
+      "id": "eventbrite:121689994602",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121689994602",
+      "page": "https://www.eventbrite.com/o/121689994602",
+      "name": "Technology Leaders of DFW Marketing",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Plano",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "organiser described as: technology",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 2
+    },
+    {
+      "id": "eventbrite:121558398835",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121558398835",
+      "page": "https://www.eventbrite.com/o/121558398835",
+      "name": "Christ Embassy Frisco",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Frisco",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:4777213035",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/4777213035",
+      "page": "https://www.eventbrite.com/o/4777213035",
+      "name": "The Ken Kennedy Institute at Rice University",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:111847805191",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/111847805191",
+      "page": "https://www.eventbrite.com/o/111847805191",
+      "name": "TrendMiner USA Inc",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:89542459133",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/89542459133",
+      "page": "https://www.eventbrite.com/o/89542459133",
+      "name": "Houston AI and Data Analytics (HAIDA)",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "organiser described as: ai, analytics",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 2
+    },
+    {
+      "id": "eventbrite:8443323417",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/8443323417",
+      "page": "https://www.eventbrite.com/o/8443323417",
+      "name": "HIMSS Houston Chapter",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:70469607243",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/70469607243",
+      "page": "https://www.eventbrite.com/o/70469607243",
+      "name": "Nightlife Functions",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:2627144174",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/2627144174",
+      "page": "https://www.eventbrite.com/o/2627144174",
+      "name": "South Texas ISSA",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:7755759929",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/7755759929",
+      "page": "https://www.eventbrite.com/o/7755759929",
+      "name": "Big Data Utah",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121652276410",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121652276410",
+      "page": "https://www.eventbrite.com/o/121652276410",
+      "name": "Houston AI Business Collective",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": true,
+      "reason": "organiser described as: ai",
+      "added": "2026-10-03",
+      "checked": "2026-10-03",
+      "last_read": "2026-10-03",
+      "last_count": 2
+    },
+    {
+      "id": "eventbrite:83397251703",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/83397251703",
+      "page": "https://www.eventbrite.com/o/83397251703",
+      "name": "Midasweb",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:113467635181",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/113467635181",
+      "page": "https://www.eventbrite.com/o/113467635181",
+      "name": "60 Watts of Clarity",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:31520541017",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/31520541017",
+      "page": "https://www.eventbrite.com/o/31520541017",
+      "name": "Houston AWS Section-022",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "only 1 upcoming event(s)",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:1418475305",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/1418475305",
+      "page": "https://www.eventbrite.com/o/1418475305",
+      "name": "HASMUG",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:70171404333",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/70171404333",
+      "page": "https://www.eventbrite.com/o/70171404333",
+      "name": "Ram Prasad",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
+    },
+    {
+      "id": "eventbrite:121142455471",
+      "kind": "eventbrite-organizer",
+      "platform": "eventbrite",
+      "url": "https://www.eventbrite.com/o/121142455471",
+      "page": "https://www.eventbrite.com/o/121142455471",
+      "name": "Media Systems",
+      "description": "",
+      "website": "",
+      "home": {
+        "city": "Houston",
+        "region": "Texas",
+        "country": "United States"
+      },
+      "tech": false,
+      "reason": "no tech signal in organiser",
+      "added": "2026-10-03",
+      "checked": "2026-10-03"
     }
   ]
 }
