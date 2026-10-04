@@ -138,8 +138,8 @@
     if (p.has('country')) state.country = p.get('country');
     if (p.has('region')) state.region = p.get('region');
     if (p.get('view') === 'calendar') state.view = 'calendar';
-    if (/^d{4}-d{2}$/.test(p.get('month') || '')) state.month = p.get('month');
-    if (/^d{4}-d{2}-d{2}$/.test(p.get('day') || '')) state.day = p.get('day');
+    if (/^\d{4}-\d{2}$/.test(p.get('month') || '')) state.month = p.get('month');
+    if (/^\d{4}-\d{2}-\d{2}$/.test(p.get('day') || '')) state.day = p.get('day');
     if (p.has('sort') && ['date', 'city', 'name'].indexOf(p.get('sort')) >= 0) state.sort = p.get('sort');
     if (p.has('cities')) {
       state.cities = p.get('cities').split(',').map(fold).filter(Boolean);
@@ -1074,6 +1074,8 @@
         ALL = payload.events || [];
         if (!ALL.length) return fail('The dataset is empty. Run `npm run build:data` to generate it.');
         buildIndexes();
+        // The kinds only exist now, so a ?type= from the URL can only be shown now.
+        el.type.value = state.type;
         // A shared ?region= link carries no country; take it from the region.
         if (state.region && !REGIONS[state.region]) state.region = '';
         if (state.region) { state.country = REGIONS[state.region].country; el.country.value = state.country; }

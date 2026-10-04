@@ -19,10 +19,32 @@
     "test": "node scripts/feeds/selftest.mjs && node scripts/smoke-test.mjs",
     "audit": "node agent/tools/audit-run.mjs",
     "dispatch:snapshot": "node agent/tools/snapshot-dispatch.mjs",
-    "test:feeds": "node scripts/feeds/selftest.mjs"
+    "test:feeds": "node scripts/feeds/selftest.mjs",
+    "test:e2e": "playwright test"
   },
   "license": "MIT",
   "devDependencies": {
-    "jsdom": "^28.1.0"
+    "@babel/core": "^8.0.6",
+    "@playwright/test": "^1.63.0",
+    "@rolldown/plugin-babel": "^0.2.4",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "jsdom": "^28.1.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  },
+  "dependencies": {
+    "@fontsource/archivo": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-virtuoso": "^4.18.16"
   }
 }

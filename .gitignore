@@ -20,3 +20,9 @@ data/.cache/
 
 # Feed run report: rewritten every run, read locally after discovery
 data/feeds/last-run.json
+
+# Playwright output
+test-results/
+playwright-report/
+# Vite build output
+dist/
