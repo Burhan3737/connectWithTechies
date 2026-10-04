@@ -255,41 +255,91 @@ console.log('\nCalendar view');
   const cells = $$('.cal__day');
   ok(cells.length % 7 === 0 && cells.length >= 28, 'grid is whole weeks', `${cells.length} cells`);
   ok($$('.cal__day.is-today').length === 1, 'today is marked');
-  ok($('.cal__day.is-sel .cal__num').getAttribute('data-day') === todayIso, "today's events open on arrival");
+  ok($('.cal__day.is-sel')?.getAttribute('data-day') === todayIso, 'today is selected by default');
+  ok(!!$('.cal__dayview'), "today's events are listed on arrival");
 
-  // Every chip is a real event on that day, linking to its page.
-  const busy = cells.find((c) => !c.classList.contains('is-out') && c.querySelector('.cal__ev'));
-  ok(!!busy, 'events appear on days');
+  // One day, one target: the whole box is a single button, nothing inside it is clickable.
+  ok(cells.every((c) => c.tagName === 'BUTTON' && c.hasAttribute('data-day')), 'every day is one button');
+  ok(cells.every((c) => !c.querySelector('a, button')), 'nothing inside a day is separately clickable');
+  ok($$('.cal__day[aria-pressed="true"]').length === 1, 'exactly one day is pressed');
+
+  // Every chip is a real event on that day.
+  const busy = cells.find((c) => !c.classList.contains('is-out') && c.getAttribute('data-day') !== todayIso &&
+    c.getAttribute('data-day') >= todayIso && c.querySelector('.cal__more'));
+  ok(!!busy, 'a later day this month with more events than fit');
   ok($$('#board .ev').length === 0, 'the hidden list is cleared, not just hidden');
-  const dayIso = busy.querySelector('.cal__num').getAttribute('data-day');
+  const dayIso = busy.getAttribute('data-day');
   const chip = busy.querySelector('.cal__ev');
-  const chipEv = data.events.find((e) => e.name === chip.textContent && e.url === chip.getAttribute('href'));
-  const onDay = chipEv && (chipEv.next_date === dayIso || chipEv.last_date === dayIso ||
-    (chipEv.feed_dates || []).includes(dayIso) ||
-    (chipEv.next_date_end && chipEv.next_date <= dayIso && dayIso <= chipEv.next_date_end));
-  ok(onDay, 'a chip sits on one of its event\'s dates', `${chip.textContent} @ ${dayIso}`);
-  ok(chip.target === '_blank' && chip.rel.includes('noopener'), 'chips open the organiser page in a new tab');
+  const chipEvs = data.events.filter((e) => e.name === chip.textContent);
+  const onDay = chipEvs.some((e) => e.next_date === dayIso || e.last_date === dayIso ||
+    (e.feed_dates || []).includes(dayIso) || (e.next_date_end && e.next_date <= dayIso && dayIso <= e.next_date_end));
+  ok(onDay, "a chip sits on one of its event's dates", `${chip.textContent} @ ${dayIso}`);
   ok(cells.every((c) => c.querySelectorAll('.cal__ev').length <= 3), 'at most three chips per day');
-  const crowded = cells.find((c) => c.querySelector('.cal__more'));
-  if (crowded) {
-    const n = +crowded.querySelector('.cal__count').textContent;
-    const shown = crowded.querySelectorAll('.cal__ev').length;
-    ok(crowded.querySelector('.cal__more').textContent === `+${n - shown} more`, '"+N more" counts the rest', crowded.querySelector('.cal__more').textContent);
-  }
+  const n = +busy.querySelector('.cal__count').textContent;
+  const shown = busy.querySelectorAll('.cal__ev').length;
+  ok(busy.querySelector('.cal__more').textContent === `+${n - shown} more`, '"+N more" counts the rest', busy.querySelector('.cal__more').textContent);
   ok(cells.every((c) => {
     const names = [...c.querySelectorAll('.cal__ev')].map((a) => a.textContent.toLowerCase());
     return new Set(names).size === names.length;
   }), 'a title shows once per day, even when held in several cities');
-  // A day with a hackathon leads with it.
   const hackDay = cells.find((c) => c.querySelector('.cal__ev--hack'));
   if (hackDay) ok(hackDay.querySelector('.cal__ev').classList.contains('cal__ev--hack'), 'hackathons lead their day');
 
-  // Open a day: its full list, with add-to-calendar on upcoming rows.
-  click(busy.querySelector('.cal__num'));
-  await tick();
-  const panelRows = $$('.cal__dayview .ev');
-  ok(panelRows.length === +busy.querySelector('.cal__count').textContent, 'opening a day lists all its events', `${panelRows.length} events`);
+  // Clicking anywhere in the box opens the same day: the "+N more" text, an event name, the box itself.
+  // Each render replaces the grid, so every click goes to a freshly found cell,
+  // and starts from another day selected so a click that does nothing fails.
+  const cell = (iso) => $(`.cal__day[data-day="${iso}"]`);
+  for (const [what, pick] of [['the "+N more" text', (c) => c.querySelector('.cal__more')],
+    ['an event name', (c) => c.querySelector('.cal__ev')], ['the box itself', (c) => c]]) {
+    click(cell(todayIso));
+    await tick();
+    if ($('.cal__day.is-sel')?.getAttribute('data-day') !== todayIso) ok(false, 'reset to today before the next click');
+    click(pick(cell(dayIso)));
+    await tick();
+    ok($('.cal__day.is-sel')?.getAttribute('data-day') === dayIso && $$('.cal__dayview .ev').length === n,
+      `clicking ${what} opens that day's full list`, `${$$('.cal__dayview .ev').length} events`);
+  }
   ok(window.location.search.includes(`day=${dayIso}`), 'opened day is written to the URL');
+
+  // The day list behaves like the board, dated to the day that was clicked.
+  // A row is dated to the day clicked, or — for a multi-day event spanning it —
+  // to the start of that edition, which then goes into a calendar whole.
+  const panel = $$('.cal__dayview .evrow');
+  const ymd = (s) => s.replace(/-/g, '');
+  const entryOf = (r) => {
+    click(r.querySelector('.addcal > summary'));
+    const g = new URL([...r.querySelectorAll('.addcal__menu a')].find((a) => a.textContent === 'Google Calendar').href);
+    return g.searchParams.get('dates').split('/');           // [start, exclusive end]
+  };
+  const withCal = panel.filter((r) => r.querySelector('.addcal'));
+  ok(withCal.length === panel.length, 'every event on an upcoming day offers + Calendar', `${withCal.length} of ${panel.length}`);
+  const spans = withCal.map(entryOf);
+  ok(spans.every(([a, b]) => a <= ymd(dayIso) && ymd(dayIso) < b), 'every calendar entry covers the day clicked',
+    spans.slice(0, 3).map((s) => s.join('–')).join(', '));
+  const singles = withCal.filter((r, i) => spans[i][0] === ymd(dayIso));
+  const d = new Date(`${dayIso}T12:00:00`);
+  ok(singles.every((r) => r.querySelector('.ev__d1').textContent === String(d.getDate()).padStart(2, '0')),
+    'rows starting that day show that day', `${singles.length} rows`);
+  click($('#cal'));
+
+  // A day already gone lists its events with nothing to add.
+  const goneIso = $$('.cal__day').find((c) => c.classList.contains('is-past') && !c.classList.contains('is-out') &&
+    c.querySelector('.cal__ev'))?.getAttribute('data-day');
+  if (goneIso) {
+    const gone = cell(goneIso);
+    click(gone);
+    await tick();
+    ok($('.cal__day.is-sel')?.getAttribute('data-day') === goneIso, 'a past day can be opened', goneIso);
+    // Only an edition still running today can be added from a day gone by.
+    const offered = $$('.cal__dayview .evrow').filter((r) => r.querySelector('.addcal')).map((r) => {
+      click(r.querySelector('.addcal > summary'));
+      return new URL([...r.querySelectorAll('.addcal__menu a')].find((a) => a.textContent === 'Google Calendar').href)
+        .searchParams.get('dates').split('/')[1];
+    });
+    click($('#cal'));
+    ok($$('.cal__dayview .evrow').length > 0 && offered.every((endEx) => endEx > todayIso.replace(/-/g, '')),
+      'a past day offers + Calendar only for editions still running', `${goneIso}: ${offered.length} of ${$$('.cal__dayview .evrow').length} still running`);
+  }
 
   // Filters still apply: one country never shows the other's events.
   const before = +$('#count b').textContent;
@@ -309,14 +359,17 @@ console.log('\nCalendar view');
   click($('.cal__nav[data-month="1"]'));
   await tick();
   ok($('.cal__title').textContent !== title, 'next month', $('.cal__title').textContent);
-  ok(!$('.cal__dayview'), 'changing month closes the opened day');
+  ok(!$('.cal__dayview'), 'another month opens with no day selected');
   click($('.cal__nav[data-month="-1"]'));
+  await tick();
+  ok($('.cal__title').textContent === title && $('.cal__day.is-sel')?.getAttribute('data-day') === todayIso,
+    'back on this month, today is selected again');
   click($('.cal__nav[data-month="-1"]'));
   await tick();
   ok($('.cal__title').textContent !== title, 'previous month', $('.cal__title').textContent);
   click($('.cal__today'));
   await tick();
-  ok($('.cal__title').textContent === title, 'today returns to this month');
+  ok($('.cal__title').textContent === title && $('.cal__day.is-sel')?.getAttribute('data-day') === todayIso, 'today button returns to today');
 
   click($('[data-view="list"]'));
   await tick();

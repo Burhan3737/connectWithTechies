@@ -85,6 +85,7 @@
      happened, even when a future one is already scheduled. Everywhere else
      the next edition leads, falling back to the last one held. */
   function keyDate(e) {
+    if (e._occurrence) return e.next_date;   // a calendar day's own occurrence
     if (state.when === 'past') return e.last_date || (isPastISO(e.next_date) ? e.next_date : '');
     if (state.when === 'upcoming') return e.next_date;   // never advertise a held date as upcoming
     return e.next_date || e.last_date || '';
@@ -403,6 +404,20 @@
     return days;
   }
 
+  /* The edition of an event that a calendar day stands for: the next edition
+     if the day falls inside it, the edition last held, or one session of a
+     series. Returned as a view of the event dated to that occurrence, so the
+     day list shows the day you clicked and adds that day to a calendar. */
+  function occurrenceOn(e, iso) {
+    var o = Object.create(e);
+    o._occurrence = true;
+    var end = e.next_date_end || e.next_date;
+    if (e.next_date && e.next_date <= iso && iso <= end) return o;   // inside the next edition
+    o.next_date = iso;
+    o.next_date_end = '';
+    return o;
+  }
+
   /* All filters apply except When: the calendar is itself the time axis. */
   function calendarEvents() {
     var saved = state.when;
@@ -457,6 +472,7 @@
     Object.keys(byDay).forEach(function (d) { byDay[d].sort(cmpForDay); });
 
     if (state.day && state.day.slice(0, 7) !== state.month) state.day = '';
+    if (!state.day && state.month === TODAY.slice(0, 7)) state.day = TODAY;
     SHOWN = [];
 
     var monthName = MONTHS[m] + ' ' + y;
@@ -466,8 +482,8 @@
       '<button type="button" class="cal__nav" data-month="1" aria-label="Next month">›</button>',
       '<button type="button" class="cal__today linky" data-month="0">today</button>',
       '</div>',
-      '<div class="cal__grid" role="grid" aria-label="' + esc(monthName) + '">'];
-    WEEKDAYS.forEach(function (w) { html.push('<div class="cal__wd" role="columnheader">' + w + '</div>'); });
+      '<div class="cal__grid" aria-label="' + esc(monthName) + '">'];
+    WEEKDAYS.forEach(function (w) { html.push('<div class="cal__wd" aria-hidden="true">' + w + '</div>'); });
 
     for (var i = 0; i < weeks * 7; i++) {
       var d = new Date(gridStart); d.setDate(gridStart.getDate() + i);
@@ -480,17 +496,16 @@
       if (iso === state.day) cls.push('is-sel');
       if (evs.length) cls.push('has-ev');
       var label = d.getDate() + ' ' + MONTHS[d.getMonth()] + ', ' + evs.length + (evs.length === 1 ? ' event' : ' events');
-      html.push('<div class="' + cls.join(' ') + '" role="gridcell">' +
-        '<button type="button" class="cal__num" data-day="' + iso + '" aria-label="' + esc(label) + '">' +
-          d.getDate() + (evs.length ? '<span class="cal__count">' + evs.length + '</span>' : '') +
-        '</button>' +
-        chipsFor(evs).map(function (e) {
-          return '<a class="cal__ev' + (e.type === 'hackathon' ? ' cal__ev--hack' : '') + '" href="' + esc(e.url) +
-            '" target="_blank" rel="noopener noreferrer" title="' + esc(e.name + ' — ' + e.city) + '">' + esc(e.name) + '</a>';
+      var chips = chipsFor(evs);
+      html.push('<button type="button" class="' + cls.join(' ') + '" data-day="' + iso + '"' +
+        ' aria-pressed="' + (iso === state.day) + '" aria-label="' + esc(WEEKDAYS[d.getDay()] + ' ' + label) + '">' +
+        '<span class="cal__num">' + d.getDate() +
+          (evs.length ? '<span class="cal__count">' + evs.length + '</span>' : '') + '</span>' +
+        chips.map(function (e) {
+          return '<span class="cal__ev' + (e.type === 'hackathon' ? ' cal__ev--hack' : '') + '">' + esc(e.name) + '</span>';
         }).join('') +
-        (evs.length > chipsFor(evs).length
-          ? '<button type="button" class="cal__more" data-day="' + iso + '">+' + (evs.length - chipsFor(evs).length) + ' more</button>' : '') +
-      '</div>');
+        (evs.length > chips.length ? '<span class="cal__more">+' + (evs.length - chips.length) + ' more</span>' : '') +
+      '</button>');
     }
     html.push('</div>');
 
@@ -501,7 +516,7 @@
       html.push('<div class="cal__dayview">' +
         '<h3 class="groupbar"><span>' + esc(WEEKDAYS[dd.getDay()] + ', ' + MONTHS[dd.getMonth()] + ' ' + dd.getDate()) +
         '</span><span>' + dayEvs.length + (dayEvs.length === 1 ? ' event' : ' events') + '</span></h3>' +
-        (dayEvs.length ? dayEvs.map(function (e, i) { return rowWithCal(e, i); }).join('')
+        (dayEvs.length ? dayEvs.map(function (e, i) { return rowWithCal(occurrenceOn(e, state.day), i); }).join('')
           : '<p class="cal__none">Nothing on this day with the current filters.</p>') +
       '</div>');
     }
@@ -691,7 +706,7 @@
         var iso = day.getAttribute('data-day');
         // A day from the neighbouring month opens that month.
         if (iso.slice(0, 7) !== state.month) state.month = iso.slice(0, 7);
-        state.day = state.day === iso ? '' : iso;
+        state.day = iso;
         render();
         var panel = el.cal.querySelector('.cal__dayview');
         if (panel && state.day && panel.scrollIntoView) panel.scrollIntoView({ block: 'nearest', behavior: 'smooth' });

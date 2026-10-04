@@ -379,6 +379,10 @@ button { font: inherit; color: inherit; }
   font-family: var(--mono);
 }
 .evrow:hover .addcal, .evrow:focus-within .addcal { left: .9rem; }
+/* Every row's button shares z-index 30, and later rows paint over earlier
+   ones at the same level — so an open menu lifts above all of them (and the
+   sticky month bars at 20), and stays fully opaque. */
+.addcal[open] { z-index: 60; }
 .addcal > summary {
   list-style: none; cursor: pointer;
   font-size: .58rem; letter-spacing: .14em; text-transform: uppercase;
@@ -444,21 +448,28 @@ button { font: inherit; color: inherit; }
   color: var(--ink-faint);
   border-right: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule);
 }
+/* The whole day is one button: click anywhere in it to list that day. */
 .cal__day {
+  appearance: none; -webkit-appearance: none; margin: 0; border-radius: 0;
+  background: none; color: inherit; font: inherit; text-align: left; cursor: pointer;
   min-height: 7.4rem; padding: .35rem .4rem .45rem;
-  display: flex; flex-direction: column; gap: .22rem; min-width: 0;
-  border-right: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft);
+  display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start;
+  gap: .22rem; min-width: 0;
+  border: 0; border-right: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft);
+  transition: background .14s ease;
 }
+.cal__day:hover { background: var(--paper-2); }
+.cal__day:hover .cal__num { color: var(--signal); }
+.cal__day:focus-visible { outline: 2px solid var(--signal); outline-offset: -2px; }
 .cal__day.is-out { background: rgba(0,0,0,.25); }
 .cal__day.is-out .cal__num { color: var(--ink-faint); }
 .cal__day.is-past .cal__ev { opacity: .55; }
 .cal__day.is-sel { background: var(--paper-2); box-shadow: inset 0 0 0 1px var(--signal-dim); }
 .cal__num {
   align-self: flex-start; display: flex; align-items: center; gap: .4rem;
-  background: none; border: 0; padding: .1rem .15rem; cursor: pointer;
+  padding: .1rem .15rem;
   font-family: var(--mono); font-size: .78rem; font-variant-numeric: tabular-nums; color: var(--ink-dim);
 }
-.cal__num:hover, .cal__num:focus-visible { color: var(--signal); outline: none; }
 .cal__day.is-today .cal__num { color: #150800; background: var(--signal); }
 .cal__count {
   font-size: .56rem; letter-spacing: .06em; color: var(--ink-faint);
@@ -468,17 +479,15 @@ button { font: inherit; color: inherit; }
 .cal__ev {
   display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
   font-size: .72rem; line-height: 1.35; color: var(--ink);
-  text-decoration: none;
   padding: .12rem .35rem; border-left: 2px solid var(--amber);
   background: rgba(255,194,71,.06);
 }
 .cal__ev--hack { border-left-color: var(--signal); background: rgba(255,92,26,.08); }
-.cal__ev:hover, .cal__ev:focus-visible { color: var(--signal); outline: none; background: var(--paper-3); }
 .cal__more {
-  align-self: flex-start; background: none; border: 0; padding: .05rem .2rem; cursor: pointer;
+  align-self: flex-start; padding: .05rem .2rem;
   font-family: var(--mono); font-size: .62rem; letter-spacing: .08em; color: var(--ink-faint);
 }
-.cal__more:hover, .cal__more:focus-visible { color: var(--signal); outline: none; }
+.cal__day:hover .cal__more { color: var(--ink-dim); }
 
 .cal__dayview { margin-top: .6rem; }
 .cal__none { font-family: var(--mono); font-size: .78rem; color: var(--ink-faint); padding: 1rem 0; }
