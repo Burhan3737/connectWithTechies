@@ -9,6 +9,7 @@
     'July', 'August', 'September', 'October', 'November', 'December'];
 
   var ALL = [];
+  var REGIONS = {};         // region name -> { name, country, count }
   var CITIES = [];          // [{ key, city, region, country, count }]
   var TODAY = isoToday();
 
@@ -18,6 +19,7 @@
     when: 'upcoming',
     type: '',
     country: '',
+    region: '',
     sort: 'date'
   };
 
@@ -130,6 +132,7 @@
     if (p.has('when') && ['upcoming', 'past', 'all'].indexOf(p.get('when')) >= 0) state.when = p.get('when');
     if (p.has('type')) state.type = p.get('type');
     if (p.has('country')) state.country = p.get('country');
+    if (p.has('region')) state.region = p.get('region');
     if (p.has('sort') && ['date', 'city', 'name'].indexOf(p.get('sort')) >= 0) state.sort = p.get('sort');
     if (p.has('cities')) {
       state.cities = p.get('cities').split(',').map(fold).filter(Boolean);
@@ -143,6 +146,7 @@
     if (state.when !== 'upcoming') p.set('when', state.when);
     if (state.type) p.set('type', state.type);
     if (state.country) p.set('country', state.country);
+    if (state.region) p.set('region', state.region);
     if (state.sort !== 'date') p.set('sort', state.sort);
     var qs = p.toString();
     history.replaceState(null, '', qs ? '?' + qs : location.pathname);
@@ -173,6 +177,7 @@
     var out = ALL.filter(function (e) {
       if (citySet && citySet.indexOf(e._citykey) < 0) return false;
       if (state.country && e.country !== state.country) return false;
+      if (state.region && e.region !== state.region) return false;
       if (state.type && e.type !== state.type) return false;
       if (!inWhen(e)) return false;
       if (!matchesQuery(e, needle)) return false;
@@ -412,12 +417,29 @@
     });
 
     el.type.addEventListener('change', function () { state.type = el.type.value; render(); });
-    el.country.addEventListener('change', function () { state.country = el.country.value; render(); });
+    el.country.addEventListener('change', function () {
+      state.country = el.country.value;
+      // A province picked under Canada means nothing once the US is chosen.
+      if (state.region && REGIONS[state.region] && state.country && REGIONS[state.region].country !== state.country) {
+        state.region = '';
+      }
+      fillRegions();
+      render();
+    });
+    el.region.addEventListener('change', function () {
+      state.region = el.region.value;
+      // Choosing a province also settles the country, so the two never disagree.
+      if (state.region && REGIONS[state.region]) state.country = REGIONS[state.region].country;
+      el.country.value = state.country;
+      fillRegions();
+      render();
+    });
     el.sort.addEventListener('change', function () { state.sort = el.sort.value; render(); });
 
     el.empty.addEventListener('click', function (ev) {
       if (!ev.target.matches('[data-reset]')) return;
-      state.q = ''; state.cities = []; state.when = 'all'; state.type = ''; state.country = '';
+      state.q = ''; state.cities = []; state.when = 'all'; state.type = ''; state.country = ''; state.region = '';
+      fillRegions();
       syncControls();
       render();
     });
@@ -427,6 +449,7 @@
     el.q.value = state.q;
     el.type.value = state.type;
     el.country.value = state.country;
+    el.region.value = state.region;
     el.sort.value = state.sort;
     document.querySelectorAll('.segmented button').forEach(function (x) {
       var on = x.getAttribute('data-when') === state.when;
@@ -453,6 +476,11 @@
       }
       cityMap[e._citykey].count++;
       types[e.type] = (types[e.type] || 0) + 1;
+      // "Various" and similar placeholders are not places to filter by.
+      if (e.region && !/^(various|multiple|n\/a|us & canada)$/i.test(e.region)) {
+        if (!REGIONS[e.region]) REGIONS[e.region] = { name: e.region, country: e.country, count: 0 };
+        REGIONS[e.region].count++;
+      }
     });
 
     CITIES = Object.keys(cityMap).map(function (k) { return cityMap[k]; })
@@ -462,6 +490,20 @@
     el.type.innerHTML = '<option value="">every kind</option>' + typeOpts.map(function (t) {
       return '<option value="' + esc(t) + '">' + esc(t.replace(/-/g, ' ')) + ' (' + types[t] + ')</option>';
     }).join('');
+  }
+
+  /** The province/state picker: grouped by country, narrowed to the chosen one. */
+  function fillRegions() {
+    var groups = ['United States', 'Canada'].filter(function (c) { return !state.country || c === state.country; });
+    el.region.innerHTML = '<option value="">all</option>' + groups.map(function (c) {
+      var list = Object.keys(REGIONS).map(function (k) { return REGIONS[k]; })
+        .filter(function (r) { return r.country === c; })
+        .sort(function (a, b) { return a.name.localeCompare(b.name); });
+      return '<optgroup label="' + esc(c) + '">' + list.map(function (r) {
+        return '<option value="' + esc(r.name) + '">' + esc(r.name) + ' (' + r.count + ')</option>';
+      }).join('') + '</optgroup>';
+    }).join('');
+    el.region.value = state.region;
   }
 
   function renderTally(meta) {
@@ -489,7 +531,7 @@
   }
 
   function init() {
-    ['q', 'cityq', 'citylist', 'clearCities', 'chips', 'type', 'country', 'sort',
+    ['q', 'cityq', 'citylist', 'clearCities', 'chips', 'type', 'country', 'region', 'sort',
       'board', 'empty', 'count', 'tally'].forEach(function (id) { el[id] = $(id); });
 
     readURL();
@@ -504,6 +546,10 @@
         ALL = payload.events || [];
         if (!ALL.length) return fail('The dataset is empty. Run `npm run build:data` to generate it.');
         buildIndexes();
+        // A shared ?region= link carries no country; take it from the region.
+        if (state.region && !REGIONS[state.region]) state.region = '';
+        if (state.region) { state.country = REGIONS[state.region].country; el.country.value = state.country; }
+        fillRegions();
         renderTally(payload);
         bind();
         render();

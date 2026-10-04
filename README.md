@@ -270,6 +270,8 @@ Anything you physically go to, where you meet people and the subject is technolo
   Backspace on an empty box removes the last one
 - **When** — `Upcoming`, `Past`, or `All`
 - **Kind** and **Country** — narrow by event type or by US/Canada
+- **Province / state** — every province and state with events, grouped by country and
+  narrowed to the chosen one; picking a province sets its country
 - **Sort** — by date, city, or name
 
 Every filter is mirrored into the URL, so any view can be bookmarked or shared.
