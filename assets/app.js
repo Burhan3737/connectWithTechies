@@ -20,7 +20,10 @@
     type: '',
     country: '',
     region: '',
-    sort: 'date'
+    sort: 'date',
+    view: 'list',           // list | calendar
+    month: '',              // calendar month shown, YYYY-MM
+    day: ''                 // calendar day opened, YYYY-MM-DD
   };
 
   var el = {};
@@ -133,6 +136,9 @@
     if (p.has('type')) state.type = p.get('type');
     if (p.has('country')) state.country = p.get('country');
     if (p.has('region')) state.region = p.get('region');
+    if (p.get('view') === 'calendar') state.view = 'calendar';
+    if (/^d{4}-d{2}$/.test(p.get('month') || '')) state.month = p.get('month');
+    if (/^d{4}-d{2}-d{2}$/.test(p.get('day') || '')) state.day = p.get('day');
     if (p.has('sort') && ['date', 'city', 'name'].indexOf(p.get('sort')) >= 0) state.sort = p.get('sort');
     if (p.has('cities')) {
       state.cities = p.get('cities').split(',').map(fold).filter(Boolean);
@@ -148,6 +154,11 @@
     if (state.country) p.set('country', state.country);
     if (state.region) p.set('region', state.region);
     if (state.sort !== 'date') p.set('sort', state.sort);
+    if (state.view === 'calendar') {
+      p.set('view', 'calendar');
+      if (state.month) p.set('month', state.month);
+      if (state.day) p.set('day', state.day);
+    }
     var qs = p.toString();
     history.replaceState(null, '', qs ? '?' + qs : location.pathname);
   }
@@ -371,7 +382,159 @@
     return '<div class="evrow">' + renderRow(e, i) + calMenu(e, ref) + '</div>';
   }
 
+  /* ------------------------------------------------------------ calendar */
+
+  function isoOf(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+
+  /* Every day an event is on the calendar for: its next edition (each day of
+     it, unless it is a long programme, which shows on its first day only),
+     the edition last held, and each upcoming session of a recurring series. */
+  var LONG_SPAN_DAYS = 7;
+  function eventDays(e) {
+    var days = [];
+    if (e.next_date) {
+      var a = parseISO(e.next_date), b = parseISO(e.next_date_end) || a;
+      var span = Math.round((b - a) / 86400000);
+      if (span < 0 || span > LONG_SPAN_DAYS) days.push(e.next_date);
+      else for (var d = new Date(a); d <= b; d.setDate(d.getDate() + 1)) days.push(isoOf(d));
+    }
+    if (e.last_date && e.last_date !== e.next_date) days.push(e.last_date);
+    (e.feed_dates || []).forEach(function (x) { if (days.indexOf(x) < 0) days.push(x); });
+    return days;
+  }
+
+  /* All filters apply except When: the calendar is itself the time axis. */
+  function calendarEvents() {
+    var saved = state.when;
+    state.when = 'all';
+    var list = filtered();
+    state.when = saved;
+    return list;
+  }
+
+  var WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var CHIPS_PER_DAY = 3;
+
+  /* A day cell has room for three names, so the ones worth travelling for
+     lead; within a kind, alphabetical, ignoring leading quotes and emoji. */
+  var KIND_RANK = ['hackathon', 'conference', 'summit', 'tech-week', 'startup-week', 'expo',
+    'demo-day', 'ctf', 'game-jam', 'unconference', 'festival', 'career-fair', 'workshop'];
+  function kindRank(e) { var i = KIND_RANK.indexOf(e.type); return i < 0 ? KIND_RANK.length : i; }
+  function bareName(e) { return fold(e.name).replace(/^[^a-z0-9]+/, ''); }
+  function cmpForDay(a, b) { return kindRank(a) - kindRank(b) || bareName(a).localeCompare(bareName(b)); }
+
+  /* The same title in three cities is one line on the grid; the day panel
+     still lists every one. */
+  function chipsFor(evs) {
+    var seen = Object.create(null), out = [];
+    for (var i = 0; i < evs.length && out.length < CHIPS_PER_DAY; i++) {
+      var k = bareName(evs[i]);
+      if (!seen[k]) { seen[k] = 1; out.push(evs[i]); }
+    }
+    return out;
+  }
+
+  function renderCalendar() {
+    // Arriving with no month (a plain ?view=calendar link): this month, today open.
+    if (!state.month) { state.month = TODAY.slice(0, 7); state.day = state.day || TODAY; }
+    var y = +state.month.slice(0, 4), m = +state.month.slice(5, 7) - 1;
+    var first = new Date(y, m, 1);
+    var gridStart = new Date(y, m, 1 - first.getDay());          // weeks start on Sunday
+    var weeks = Math.ceil((first.getDay() + new Date(y, m + 1, 0).getDate()) / 7);
+    var gridEnd = new Date(gridStart); gridEnd.setDate(gridStart.getDate() + weeks * 7 - 1);
+    var lo = isoOf(gridStart), hi = isoOf(gridEnd);
+
+    var byDay = Object.create(null);
+    var inMonth = 0;
+    calendarEvents().forEach(function (e) {
+      var counted = false;
+      eventDays(e).forEach(function (d) {
+        if (d < lo || d > hi) return;
+        (byDay[d] = byDay[d] || []).push(e);
+        if (!counted && d.slice(0, 7) === state.month) { inMonth++; counted = true; }
+      });
+    });
+    Object.keys(byDay).forEach(function (d) { byDay[d].sort(cmpForDay); });
+
+    if (state.day && state.day.slice(0, 7) !== state.month) state.day = '';
+    SHOWN = [];
+
+    var monthName = MONTHS[m] + ' ' + y;
+    var html = ['<div class="cal__head">',
+      '<button type="button" class="cal__nav" data-month="-1" aria-label="Previous month">‹</button>',
+      '<h2 class="cal__title">' + esc(monthName) + '</h2>',
+      '<button type="button" class="cal__nav" data-month="1" aria-label="Next month">›</button>',
+      '<button type="button" class="cal__today linky" data-month="0">today</button>',
+      '</div>',
+      '<div class="cal__grid" role="grid" aria-label="' + esc(monthName) + '">'];
+    WEEKDAYS.forEach(function (w) { html.push('<div class="cal__wd" role="columnheader">' + w + '</div>'); });
+
+    for (var i = 0; i < weeks * 7; i++) {
+      var d = new Date(gridStart); d.setDate(gridStart.getDate() + i);
+      var iso = isoOf(d);
+      var evs = byDay[iso] || [];
+      var cls = ['cal__day'];
+      if (iso.slice(0, 7) !== state.month) cls.push('is-out');
+      if (iso === TODAY) cls.push('is-today');
+      if (iso < TODAY) cls.push('is-past');
+      if (iso === state.day) cls.push('is-sel');
+      if (evs.length) cls.push('has-ev');
+      var label = d.getDate() + ' ' + MONTHS[d.getMonth()] + ', ' + evs.length + (evs.length === 1 ? ' event' : ' events');
+      html.push('<div class="' + cls.join(' ') + '" role="gridcell">' +
+        '<button type="button" class="cal__num" data-day="' + iso + '" aria-label="' + esc(label) + '">' +
+          d.getDate() + (evs.length ? '<span class="cal__count">' + evs.length + '</span>' : '') +
+        '</button>' +
+        chipsFor(evs).map(function (e) {
+          return '<a class="cal__ev' + (e.type === 'hackathon' ? ' cal__ev--hack' : '') + '" href="' + esc(e.url) +
+            '" target="_blank" rel="noopener noreferrer" title="' + esc(e.name + ' — ' + e.city) + '">' + esc(e.name) + '</a>';
+        }).join('') +
+        (evs.length > chipsFor(evs).length
+          ? '<button type="button" class="cal__more" data-day="' + iso + '">+' + (evs.length - chipsFor(evs).length) + ' more</button>' : '') +
+      '</div>');
+    }
+    html.push('</div>');
+
+    // The opened day, listed in full with the same rows as the board.
+    if (state.day) {
+      var dayEvs = byDay[state.day] || [];
+      var dd = parseISO(state.day);
+      html.push('<div class="cal__dayview">' +
+        '<h3 class="groupbar"><span>' + esc(WEEKDAYS[dd.getDay()] + ', ' + MONTHS[dd.getMonth()] + ' ' + dd.getDate()) +
+        '</span><span>' + dayEvs.length + (dayEvs.length === 1 ? ' event' : ' events') + '</span></h3>' +
+        (dayEvs.length ? dayEvs.map(function (e, i) { return rowWithCal(e, i); }).join('')
+          : '<p class="cal__none">Nothing on this day with the current filters.</p>') +
+      '</div>');
+    }
+
+    el.cal.innerHTML = html.join('');
+    el.empty.hidden = true;
+    el.count.innerHTML = '<b>' + inMonth + '</b> ' + (inMonth === 1 ? 'event' : 'events') + ' in ' + esc(monthName);
+  }
+
+  function shiftMonth(delta) {
+    if (delta === 0) { state.month = TODAY.slice(0, 7); state.day = TODAY; return; }
+    var y = +state.month.slice(0, 4), m = +state.month.slice(5, 7) - 1 + delta;
+    var d = new Date(y, m, 1);
+    state.month = d.getFullYear() + '-' + pad(d.getMonth() + 1);
+    state.day = '';
+  }
+
   function render() {
+    var cal = state.view === 'calendar';
+    el.board.hidden = cal;
+    el.cal.hidden = !cal;
+    document.body.classList.toggle('is-cal', cal);
+    // Clear the view not shown: hidden rows would still be read by assistive
+    // tech and still weigh on the page.
+    if (cal) el.board.innerHTML = ''; else el.cal.innerHTML = '';
+    if (cal) {
+      el.board.setAttribute('aria-busy', 'false');
+      renderCalendar();
+      renderChips();
+      writeURL();
+      return;
+    }
+
     var list = filtered();
     var html = [];
     var lastGroup = null;
@@ -510,6 +673,31 @@
 
     el.clearCities.addEventListener('click', function () { state.cities = []; render(); });
 
+    document.querySelectorAll('.segmented button[data-view]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        state.view = b.getAttribute('data-view');
+        // Opening the calendar lands on this month with today's events open.
+        if (state.view === 'calendar' && !state.month) { state.month = TODAY.slice(0, 7); state.day = TODAY; }
+        syncControls();
+        render();
+      });
+    });
+
+    el.cal.addEventListener('click', function (ev) {
+      var nav = ev.target.closest('[data-month]');
+      if (nav) { shiftMonth(+nav.getAttribute('data-month')); render(); return; }
+      var day = ev.target.closest('[data-day]');
+      if (day) {
+        var iso = day.getAttribute('data-day');
+        // A day from the neighbouring month opens that month.
+        if (iso.slice(0, 7) !== state.month) state.month = iso.slice(0, 7);
+        state.day = state.day === iso ? '' : iso;
+        render();
+        var panel = el.cal.querySelector('.cal__dayview');
+        if (panel && state.day && panel.scrollIntoView) panel.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    });
+
     // Add-to-calendar menus: build on first open, one open at a time.
     document.addEventListener('click', function (ev) {
       var summary = ev.target.closest('.addcal > summary');
@@ -529,10 +717,10 @@
       });
     });
 
-    document.querySelectorAll('.segmented button').forEach(function (b) {
+    document.querySelectorAll('.segmented button[data-when]').forEach(function (b) {
       b.addEventListener('click', function () {
         state.when = b.getAttribute('data-when');
-        document.querySelectorAll('.segmented button').forEach(function (x) {
+        document.querySelectorAll('.segmented button[data-when]').forEach(function (x) {
           var on = x === b;
           x.classList.toggle('is-on', on);
           x.setAttribute('aria-checked', on ? 'true' : 'false');
@@ -576,7 +764,12 @@
     el.country.value = state.country;
     el.region.value = state.region;
     el.sort.value = state.sort;
-    document.querySelectorAll('.segmented button').forEach(function (x) {
+    document.querySelectorAll('.segmented button[data-view]').forEach(function (x) {
+      var on = x.getAttribute('data-view') === state.view;
+      x.classList.toggle('is-on', on);
+      x.setAttribute('aria-checked', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.segmented button[data-when]').forEach(function (x) {
       var on = x.getAttribute('data-when') === state.when;
       x.classList.toggle('is-on', on);
       x.setAttribute('aria-checked', on ? 'true' : 'false');
@@ -656,7 +849,7 @@
   }
 
   function init() {
-    ['q', 'cityq', 'citylist', 'clearCities', 'chips', 'type', 'country', 'region', 'sort',
+    ['q', 'cityq', 'citylist', 'clearCities', 'chips', 'type', 'country', 'region', 'sort', 'cal',
       'board', 'empty', 'count', 'tally'].forEach(function (id) { el[id] = $(id); });
 
     readURL();

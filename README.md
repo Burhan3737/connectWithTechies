@@ -273,6 +273,10 @@ Anything you physically go to, where you meet people and the subject is technolo
 - **Province / state** — every province and state with events, grouped by country and
   narrowed to the chosen one; picking a province sets its country
 - **Sort** — by date, city, or name
+- **List / Calendar** — the calendar shows a month at a time with every filter except When
+  (the calendar is its own time axis). Each day lists up to three events — hackathons and
+  conferences first — with a count; click a day to list all of them below, each with its own
+  add-to-calendar menu. Month and opened day are kept in the URL
 - **+ Calendar** — on every event with a confirmed upcoming date: add it to Google Calendar,
   Outlook.com, Outlook / Microsoft 365, Yahoo, or download an `.ics` for Apple Calendar and
   anything else. Entries are all-day, carry the official link, and are built in the browser —

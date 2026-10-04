@@ -407,6 +407,82 @@ button { font: inherit; color: inherit; }
 .addcal__menu a:first-child { border-top: 0; }
 .addcal__menu a:hover, .addcal__menu a:focus-visible { background: var(--paper-2); color: var(--signal); outline: none; }
 
+/* ---------- calendar view ------------------------------------------------ */
+
+.board[hidden], .cal[hidden] { display: none; }
+.viewtoggle { margin-left: auto; }
+/* The calendar is its own time axis: When and Sort do not apply there. */
+.is-cal .field--when { opacity: .35; pointer-events: none; }
+.is-cal .resultbar__sort { visibility: hidden; }
+
+.cal {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: 0 var(--gutter) 4rem;
+  border-top: 1px solid var(--rule);
+}
+.cal__head { display: flex; align-items: center; gap: .9rem; padding: 1.3rem 0 1rem; }
+.cal__title {
+  margin: 0; min-width: 11ch;
+  font-family: var(--serif); font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.3rem);
+  letter-spacing: -.015em; color: var(--ink);
+}
+.cal__nav {
+  background: none; border: 1px solid var(--rule); color: var(--ink-dim);
+  width: 2.1rem; height: 2.1rem; font-size: 1.15rem; line-height: 1; cursor: pointer;
+  transition: color .16s ease, border-color .16s ease;
+}
+.cal__nav:hover, .cal__nav:focus-visible { color: var(--signal); border-color: var(--signal-dim); outline: none; }
+.cal__today { margin-left: auto; text-transform: uppercase; letter-spacing: .16em; font-size: .62rem; }
+
+.cal__grid {
+  display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-left: 1px solid var(--rule-soft); border-top: 1px solid var(--rule-soft);
+}
+.cal__wd {
+  padding: .45rem .55rem;
+  font-family: var(--mono); font-size: .6rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--ink-faint);
+  border-right: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule);
+}
+.cal__day {
+  min-height: 7.4rem; padding: .35rem .4rem .45rem;
+  display: flex; flex-direction: column; gap: .22rem; min-width: 0;
+  border-right: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft);
+}
+.cal__day.is-out { background: rgba(0,0,0,.25); }
+.cal__day.is-out .cal__num { color: var(--ink-faint); }
+.cal__day.is-past .cal__ev { opacity: .55; }
+.cal__day.is-sel { background: var(--paper-2); box-shadow: inset 0 0 0 1px var(--signal-dim); }
+.cal__num {
+  align-self: flex-start; display: flex; align-items: center; gap: .4rem;
+  background: none; border: 0; padding: .1rem .15rem; cursor: pointer;
+  font-family: var(--mono); font-size: .78rem; font-variant-numeric: tabular-nums; color: var(--ink-dim);
+}
+.cal__num:hover, .cal__num:focus-visible { color: var(--signal); outline: none; }
+.cal__day.is-today .cal__num { color: #150800; background: var(--signal); }
+.cal__count {
+  font-size: .56rem; letter-spacing: .06em; color: var(--ink-faint);
+  border: 1px solid var(--rule); padding: 0 .28rem; line-height: 1.5;
+}
+.cal__day.is-today .cal__count { color: #150800; border-color: rgba(21,8,0,.4); }
+.cal__ev {
+  display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+  font-size: .72rem; line-height: 1.35; color: var(--ink);
+  text-decoration: none;
+  padding: .12rem .35rem; border-left: 2px solid var(--amber);
+  background: rgba(255,194,71,.06);
+}
+.cal__ev--hack { border-left-color: var(--signal); background: rgba(255,92,26,.08); }
+.cal__ev:hover, .cal__ev:focus-visible { color: var(--signal); outline: none; background: var(--paper-3); }
+.cal__more {
+  align-self: flex-start; background: none; border: 0; padding: .05rem .2rem; cursor: pointer;
+  font-family: var(--mono); font-size: .62rem; letter-spacing: .08em; color: var(--ink-faint);
+}
+.cal__more:hover, .cal__more:focus-visible { color: var(--signal); outline: none; }
+
+.cal__dayview { margin-top: .6rem; }
+.cal__none { font-family: var(--mono); font-size: .78rem; color: var(--ink-faint); padding: 1rem 0; }
+
 mark { background: rgba(255,194,71,.24); color: var(--amber); padding: 0 .12em; border-radius: 1px; }
 
 /* ---------- foot --------------------------------------------------------- */
@@ -428,8 +504,14 @@ mark { background: rgba(255,194,71,.24); color: var(--amber); padding: 0 .12em; 
   .field--when { grid-column: 1 / -1; }
   .segmented { width: 100%; }
   .segmented button { flex: 1; }
+  .viewtoggle { width: auto; }
 }
 @media (max-width: 720px) {
+  .cal__day { min-height: 3.6rem; padding: .25rem .15rem; align-items: center; }
+  .cal__ev, .cal__more { display: none; }
+  .cal__num { flex-direction: column; gap: .15rem; align-self: center; }
+  .cal__day.has-ev:not(.is-today) .cal__num { color: var(--ink); }
+  .cal__wd { padding: .4rem .1rem; text-align: center; letter-spacing: .08em; }
   .controls__inner { grid-template-columns: 1fr; gap: .8rem; }
   .ev { grid-template-columns: 4.6rem minmax(0,1fr) 1.8rem; gap: 0 1rem; }
   .addcal > summary { font-size: .52rem; letter-spacing: .08em; padding: .14rem .26rem; }
