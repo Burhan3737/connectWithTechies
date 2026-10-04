@@ -1,0 +1,41 @@
+/* The add-to-calendar menu beside each row. */
+
+/* add to calendar: a sibling of the row link (a link cannot hold links),
+   placed in the date column's empty space below the date */
+.evrow { position: relative; }
+.addcal {
+  position: absolute; left: 0; top: 4.5rem; z-index: 30;
+  font-family: var(--mono);
+}
+.evrow:hover .addcal, .evrow:focus-within .addcal { left: .9rem; }
+/* Every row's button shares z-index 30, and later rows paint over earlier
+   ones at the same level — so an open menu lifts above all of them (and the
+   sticky month bars at 20), and stays fully opaque. */
+.addcal[open] { z-index: 60; }
+.addcal > summary {
+  list-style: none; cursor: pointer;
+  font-size: .58rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink-faint);
+  padding: .16rem .34rem;
+  border: 1px solid var(--rule);
+  transition: color .16s ease, border-color .16s ease, background .16s ease;
+}
+.addcal > summary::-webkit-details-marker { display: none; }
+.addcal > summary:hover, .addcal > summary:focus-visible,
+.addcal[open] > summary { color: var(--signal); border-color: var(--signal-dim); outline: none; }
+.addcal__menu {
+  position: absolute; left: 0; top: calc(100% + .3rem);
+  min-width: 15rem;
+  display: flex; flex-direction: column;
+  background: var(--paper-3);
+  border: 1px solid var(--rule);
+  box-shadow: 0 14px 34px rgba(0,0,0,.55);
+}
+.addcal__menu a {
+  padding: .6rem .85rem;
+  font-size: .72rem; letter-spacing: .04em;
+  color: var(--ink); text-decoration: none;
+  border-top: 1px solid var(--rule-soft);
+}
+.addcal__menu a:first-child { border-top: 0; }
+.addcal__menu a:hover, .addcal__menu a:focus-visible { background: var(--paper-2); color: var(--signal); outline: none; }

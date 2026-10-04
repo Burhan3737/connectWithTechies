@@ -95,7 +95,8 @@ test.describe('Accessibility basics', () => {
   });
 });
 
-test.describe('Performance', () => {
+test.describe('Performance @perf', () => {
+  test.describe.configure({ mode: 'serial' });
   test('first rows appear quickly', async ({ page }) => {
     const t0 = Date.now();
     await page.goto('./');
@@ -115,7 +116,7 @@ test.describe('Performance', () => {
     });
     test.info().annotations.push({ type: 'filter-ms', description: ms.toFixed(0) });
     expect(ms).toBeLessThan(1500);
-    expect(await shownCount(page)).toBeGreaterThan(0);
+    await expect.poll(() => shownCount(page)).toBeGreaterThan(0);
   });
 
   test('typing in search stays responsive', async ({ page }) => {

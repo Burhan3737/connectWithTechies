@@ -1,0 +1,84 @@
+/* The month calendar and its day list. */
+
+/* ---------- calendar view ------------------------------------------------ */
+
+.board[hidden], .cal[hidden] { display: none; }
+.viewtoggle { margin-left: auto; }
+/* The calendar is its own time axis: When and Sort do not apply there. */
+.is-cal .field--when { opacity: .35; pointer-events: none; }
+.is-cal .resultbar__sort { visibility: hidden; }
+
+.cal {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: 0 var(--gutter) 4rem;
+  border-top: 1px solid var(--rule);
+}
+.cal__head { display: flex; align-items: center; gap: .9rem; padding: 1.3rem 0 1rem; }
+.cal__title {
+  margin: 0; min-width: 11ch;
+  font-family: var(--serif); font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.3rem);
+  letter-spacing: -.015em; color: var(--ink);
+}
+.cal__nav {
+  background: none; border: 1px solid var(--rule); color: var(--ink-dim);
+  width: 2.1rem; height: 2.1rem; font-size: 1.15rem; line-height: 1; cursor: pointer;
+  transition: color .16s ease, border-color .16s ease;
+}
+.cal__nav:hover, .cal__nav:focus-visible { color: var(--signal); border-color: var(--signal-dim); outline: none; }
+.cal__today { margin-left: auto; text-transform: uppercase; letter-spacing: .16em; font-size: .62rem; }
+
+.cal__grid {
+  display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-left: 1px solid var(--rule-soft); border-top: 1px solid var(--rule-soft);
+}
+.cal__wd {
+  padding: .45rem .55rem;
+  font-family: var(--mono); font-size: .6rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--ink-faint);
+  border-right: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule);
+}
+/* The whole day is one button: click anywhere in it to list that day. */
+.cal__day {
+  appearance: none; -webkit-appearance: none; margin: 0; border-radius: 0;
+  background: none; color: inherit; font: inherit; text-align: left; cursor: pointer;
+  min-height: 7.4rem; padding: .35rem .4rem .45rem;
+  display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start;
+  gap: .22rem; min-width: 0;
+  border: 0; border-right: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft);
+  transition: background .14s ease;
+}
+.cal__day:hover { background: var(--paper-2); }
+.cal__day:hover .cal__num { color: var(--signal); }
+.cal__day:focus-visible { outline: 2px solid var(--signal); outline-offset: -2px; }
+.cal__day.is-out { background: rgba(0,0,0,.25); }
+.cal__day.is-out .cal__num { color: var(--ink-faint); }
+.cal__day.is-past .cal__ev { opacity: .55; }
+.cal__day.is-sel { background: var(--paper-2); box-shadow: inset 0 0 0 1px var(--signal-dim); }
+.cal__num {
+  align-self: flex-start; display: flex; align-items: center; gap: .4rem;
+  padding: .1rem .15rem;
+  font-family: var(--mono); font-size: .78rem; font-variant-numeric: tabular-nums; color: var(--ink-dim);
+}
+.cal__day.is-today .cal__num { color: #150800; background: var(--signal); }
+.cal__count {
+  font-size: .56rem; letter-spacing: .06em; color: var(--ink-faint);
+  border: 1px solid var(--rule); padding: 0 .28rem; line-height: 1.5;
+}
+.cal__day.is-today .cal__count { color: #150800; border-color: rgba(21,8,0,.4); }
+.cal__ev {
+  display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+  font-size: .72rem; line-height: 1.35; color: var(--ink);
+  padding: .12rem .35rem; border-left: 2px solid var(--amber);
+  background: rgba(255,194,71,.06);
+}
+.cal__ev--hack { border-left-color: var(--signal); background: rgba(255,92,26,.08); }
+.cal__more {
+  align-self: flex-start; padding: .05rem .2rem;
+  font-family: var(--mono); font-size: .62rem; letter-spacing: .08em; color: var(--ink-faint);
+}
+.cal__day:hover .cal__more { color: var(--ink-dim); }
+
+.cal__dayview { margin-top: .6rem; }
+.cal__none { font-family: var(--mono); font-size: .78rem; color: var(--ink-faint); padding: 1rem 0; }
+
+mark { background: rgba(255,194,71,.24); color: var(--amber); padding: 0 .12em; border-radius: 1px; }

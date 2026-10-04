@@ -33,7 +33,7 @@ test.describe('Dropdowns', () => {
     await openBoard(page);
     await choose(page, 'type', 'Hackathon');
     await expect(page.locator('#type-dd')).toHaveText('Hackathon');
-    expect(await shownCount(page)).toBe(data.events.filter((e) => isUpcoming(e) && e.type === 'hackathon').length);
+    await expect.poll(() => shownCount(page)).toBe(data.events.filter((e) => isUpcoming(e) && e.type === 'hackathon').length);
     expect(new Set(await rows(page).locator('.ev__tag--kind').allTextContents())).toEqual(new Set(['hackathon']));
     expect((await params(page)).get('type')).toBe('hackathon');
   });
@@ -42,7 +42,7 @@ test.describe('Dropdowns', () => {
     const data = await dataset(request);
     await openBoard(page);
     await choose(page, 'country', 'Canada');
-    expect(await shownCount(page)).toBe(data.events.filter((e) => isUpcoming(e) && e.country === 'Canada').length);
+    await expect.poll(() => shownCount(page)).toBe(data.events.filter((e) => isUpcoming(e) && e.country === 'Canada').length);
     await page.locator('#region-dd').click();
     await expect(panel(page, 'region').locator('.dd__group')).toHaveText(['Canada']);
   });
@@ -55,7 +55,7 @@ test.describe('Dropdowns', () => {
     await panel(page, 'region').locator('.dd__search').fill('ontar');
     await panel(page, 'region').locator('[role="option"][data-value="Ontario"]').click();
     await expect(page.locator('#country-dd')).toHaveText('Canada');
-    expect(await shownCount(page)).toBe(data.events.filter((e) => isUpcoming(e) && e.region === 'Ontario').length);
+    await expect.poll(() => shownCount(page)).toBe(data.events.filter((e) => isUpcoming(e) && e.region === 'Ontario').length);
     expect(new Set((await rows(page).locator('.ev__geo').allTextContents()).map((g) => g.split('·')[0].trim()))).toEqual(new Set(['Ontario']));
     const p = await params(page);
     expect(p.get('region')).toBe('Ontario');
@@ -147,12 +147,14 @@ test.describe('URL state', () => {
     expect(new URL(page.url()).search).toBe('');
   });
 
-  test('a filter survives a reload', async ({ page }) => {
+  test('a filter survives a reload', async ({ page, request }) => {
+    const data = await dataset(request);
+    const n = data.events.filter((e) => isUpcoming(e) && e.type === 'conference').length;
     await openBoard(page);
     await choose(page, 'type', 'Conference');
-    const n = await shownCount(page);
+    await expect.poll(() => shownCount(page)).toBe(n);
     await page.reload();
     await expect(page.locator('#type-dd')).toHaveText('Conference');
-    expect(await shownCount(page)).toBe(n);
+    await expect.poll(() => shownCount(page)).toBe(n);
   });
 });

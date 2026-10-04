@@ -4,7 +4,7 @@ import { dataset, today, openBoard, shownCount, params, setWhen, choose, rows } 
 const ymd = (s: string) => s.replace(/-/g, '');
 const nextDay = (iso: string) => { const d = new Date(`${iso}T00:00:00Z`); d.setUTCDate(d.getUTCDate() + 1); return d.toISOString().slice(0, 10); };
 
-async function openMenu(page: Page, row: ReturnType<Page['locator']>) {
+async function openMenu(_page: Page, row: ReturnType<Page['locator']>) {
   await row.locator('.addcal > summary').click();
   const menu = row.locator('.addcal__menu');
   await expect(menu.locator('a')).toHaveCount(5);
@@ -77,7 +77,7 @@ test.describe('Add to calendar', () => {
     const ics = menu.locator('a[download]');
     await expect(ics).toHaveAttribute('download', /\.ics$/);
     const download = await Promise.all([page.waitForEvent('download'), ics.click()]).then(([d]) => d);
-    const text = await (await download.createReadStream()).toArray().then((c) => Buffer.concat(c).toString('utf8'));
+    const text = await (await download.createReadStream()).toArray().then((c: Buffer[]) => Buffer.concat(c).toString('utf8'));
     const lines = text.split('\r\n');
     expect(lines[0]).toBe('BEGIN:VCALENDAR');
     expect(lines).toContain(`DTSTART;VALUE=DATE:${ymd(ev.next_date!)}`);
@@ -90,7 +90,7 @@ test.describe('Add to calendar', () => {
     await openBoard(page);
     const row = page.locator('.evrow').filter({ has: page.locator('.addcal') }).first();
     const menu = await openMenu(page, row);
-    for (const a of await menu.locator('a').all()) expect(await onTop(a), await a.textContent()).toBe(true);
+    for (const a of await menu.locator('a').all()) expect(await onTop(a), (await a.textContent()) ?? '').toBe(true);
   });
 
   test('one menu at a time; Escape and clicking away close it', async ({ page }) => {
@@ -193,6 +193,7 @@ test.describe('Calendar view', () => {
     const iso = (await later.evaluateAll((els) => els.map((e) => e.getAttribute('data-day')))).find((d) => d! > t);
     test.skip(!iso, 'no later busy day this month');
     await page.locator(`.cal__day[data-day="${iso}"]`).click();
+    await expect(page.locator('.cal__day.is-sel')).toHaveAttribute('data-day', iso!);
     const panelRows = page.locator('.cal__dayview .evrow');
     const n = await panelRows.count();
     expect(n).toBeGreaterThan(0);
@@ -213,6 +214,7 @@ test.describe('Calendar view', () => {
       .evaluateAll((els) => els.map((e) => e.getAttribute('data-day')));
     test.skip(!gone.length, 'no past busy day this month');
     await page.locator(`.cal__day[data-day="${gone[0]}"]`).click();
+    await expect(page.locator('.cal__day.is-sel')).toHaveAttribute('data-day', gone[0]!);
     for (const row of await page.locator('.cal__dayview .evrow').filter({ has: page.locator('.addcal') }).all()) {
       const menu = await openMenu(page, row);
       const end = new URL((await menu.locator('a', { hasText: 'Google Calendar' }).getAttribute('href'))!).searchParams.get('dates')!.split('/')[1];
@@ -226,8 +228,7 @@ test.describe('Calendar view', () => {
     await openBoard(page, 'view=calendar');
     const before = await shownCount(page);
     await choose(page, 'country', 'Canada');
-    const after = await shownCount(page);
-    expect(after).toBeLessThan(before);
+    await expect.poll(() => shownCount(page)).toBeLessThan(before);
     const canadian = new Set(data.events.filter((e) => e.country === 'Canada').map((e) => e.name.toLowerCase()));
     for (const name of await page.locator('.cal__ev').allTextContents()) expect(canadian.has(name.toLowerCase()), name).toBe(true);
   });
@@ -250,7 +251,7 @@ test.describe('Calendar view', () => {
     await page.locator('[data-view="list"]').click();
     await expect(page.locator('#board')).toBeVisible();
     expect(new URL(page.url()).search).toBe('');
-    expect(await shownCount(page)).toBe(data.events.filter((e) => e.status === 'upcoming' || e.status === 'recurring-tbd').length);
+    await expect.poll(() => shownCount(page)).toBe(data.events.filter((e) => e.status === 'upcoming' || e.status === 'recurring-tbd').length);
   });
 
   test('a month and day are restored from the URL', async ({ page }) => {

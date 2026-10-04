@@ -1,0 +1,62 @@
+/* Tokens, reset and page background. */
+
+/* ==========================================================================
+   connectWithTechies — "departures board" editorial
+   warm black paper · cream ink · signal orange · ruled rows
+   ========================================================================== */
+
+:root {
+  --ink:        #f2ece1;
+  --ink-dim:    #9d968a;
+  --ink-faint:  #605b53;
+  --paper:      #0d0c0b;
+  --paper-2:    #141310;
+  --paper-3:    #1b1915;
+  --rule:       #2a2721;
+  --rule-soft:  #201e1a;
+  --signal:     #ff5c1a;
+  --signal-dim: #b8410f;
+  --mint:       #86d9a8;
+  --amber:      #ffc247;
+
+  --serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --sans:  "Archivo", "Helvetica Neue", Helvetica, sans-serif;
+  --mono:  "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+
+  --gutter: clamp(1.15rem, 4vw, 4.5rem);
+  --ctl-h: 2.6rem;            /* one height for every filter control */
+  --ctl-pad: .8rem;           /* one inner padding */
+  --maxw: 1440px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Film grain + a faint horizon glow, so the black is not dead flat. */
+.grain {
+  position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+  opacity: .05; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto 0; height: 62vh; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(120% 78% at 78% -18%, rgba(255,92,26,.16), transparent 62%),
+    radial-gradient(90% 60% at 8% -10%, rgba(255,194,71,.07), transparent 60%);
+}
+body > * { position: relative; z-index: 1; }
+
+a { color: inherit; }
+button { font: inherit; color: inherit; }

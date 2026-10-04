@@ -1,0 +1,13 @@
+/* The page foot. */
+
+/* ---------- foot --------------------------------------------------------- */
+
+.foot {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: 2rem var(--gutter) 3.5rem;
+  border-top: 1px solid var(--rule);
+  font-size: .82rem; color: var(--ink-faint);
+}
+.foot p { margin: 0 0 .5rem; max-width: 72ch; }
+.foot__mark { color: var(--signal); margin-right: .35rem; }
+.foot__meta { font-family: var(--mono); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; }

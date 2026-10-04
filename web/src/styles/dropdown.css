@@ -1,0 +1,63 @@
+/* The drawn listbox used by Kind, Country, Province/state and Sort. */
+
+/* ---------- dropdowns: a drawn listbox ---- */
+
+.dd { position: relative; }
+.field__box.dd { padding: 0; }
+.dd__trigger {
+  flex: 1; min-width: 0; height: 100%;
+  display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+  padding: 0 var(--ctl-pad);
+  background: none; border: 0; cursor: pointer; text-align: left;
+  font-family: var(--sans); font-size: .9rem; color: var(--ink);
+}
+.dd__trigger:focus-visible { outline: none; }
+.dd__trigger.is-all { color: var(--ink-dim); }
+.dd__value { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.dd__chev { width: .75rem; height: .75rem; flex: none; color: var(--ink-faint); transition: transform .18s ease, color .16s ease; }
+.dd.is-open .dd__chev { transform: rotate(180deg); color: var(--signal); }
+.field__box.dd.is-open { border-color: var(--signal); }
+
+.dd__panel {
+  position: absolute; top: calc(100% + .35rem); left: -1px; z-index: 70;
+  min-width: calc(100% + 2px); width: max-content; max-width: min(22rem, 92vw);
+  padding: .3rem;
+  background: var(--paper-3);
+  border: 1px solid var(--rule);
+  box-shadow: 0 24px 48px -18px rgba(0,0,0,.9);
+}
+.dd__panel[hidden] { display: none; }
+.dd__panel--right { left: auto; right: -1px; }
+/* Scoped to the panel: the panel sits inside .field__box, whose bare input rule would otherwise win. */
+.dd__panel .dd__search {
+  display: block; width: 100%; flex: none;
+  margin: 0 0 .3rem; padding: 0 .6rem; height: 2.2rem;
+  background: var(--paper-2); color: var(--ink);
+  border: 1px solid var(--rule); outline: none;
+  font-family: var(--sans); font-size: .86rem;
+}
+.dd__panel .dd__search:focus { border-color: var(--signal-dim); }
+.dd__panel .dd__search::placeholder { color: var(--ink-faint); opacity: 1; }
+.dd__list { list-style: none; margin: 0; padding: 0; max-height: 18rem; overflow-y: auto; }
+.dd__list [role="option"] {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1.4rem;
+  padding: .5rem .65rem; cursor: pointer;
+  font-size: .9rem; font-weight: 400; color: var(--ink);
+  outline: none;
+}
+.dd__list [role="option"][hidden], .dd__group[hidden] { display: none; }
+.dd__list [role="option"].is-all { color: var(--ink-dim); }
+.dd__list [role="option"][aria-selected="true"] { color: var(--signal); }
+.dd__list [role="option"]:hover, .dd__list [role="option"]:focus { background: var(--signal); color: #150800; }
+.dd__count {
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .04em; font-variant-numeric: tabular-nums;
+  color: var(--ink-faint);
+}
+.dd__list [role="option"]:hover .dd__count, .dd__list [role="option"]:focus .dd__count { color: rgba(21,8,0,.62); }
+.dd__group {
+  padding: .7rem .65rem .3rem;
+  font-family: var(--mono); font-size: .6rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.dd__group:first-child { padding-top: .35rem; }
+.dd__none { margin: 0; padding: .6rem .65rem; font-size: .86rem; color: var(--ink-faint); }

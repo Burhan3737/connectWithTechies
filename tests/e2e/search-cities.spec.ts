@@ -68,7 +68,7 @@ test.describe('Cities', () => {
     await expect(page.locator('#chips .chip')).toHaveCount(1);
     await expect(page.locator('#chips .chip')).toContainText('Toronto, Ontario');
     const expected = data.events.filter((e) => isUpcoming(e) && cityKey(e) === 'toronto|ontario').length;
-    expect(await shownCount(page)).toBe(expected);
+    await expect.poll(() => shownCount(page)).toBe(expected);
     await expect(page.locator('#count')).toContainText('1 city');
     expect((await params(page)).get('cities')).toBe('toronto|ontario');
     await expect(page.locator('#cityq')).toHaveValue('');
@@ -87,7 +87,7 @@ test.describe('Cities', () => {
     const keys = (await params(page)).get('cities')!.split(',');
     expect(keys).toHaveLength(2);
     const expected = data.events.filter((e) => isUpcoming(e) && keys.includes(cityKey(e))).length;
-    expect(await shownCount(page)).toBe(expected);
+    await expect.poll(() => shownCount(page)).toBe(expected);
     await expect(page.locator('#count')).toContainText('2 cities');
   });
 
@@ -115,7 +115,7 @@ test.describe('Cities', () => {
     await expect(page.locator('#chips .chip')).toContainText('Seattle');
     await page.locator('#clearCities').click();
     await expect(page.locator('#chips .chip')).toHaveCount(0);
-    expect(await shownCount(page)).toBe(data.events.filter(isUpcoming).length);
+    await expect.poll(() => shownCount(page)).toBe(data.events.filter(isUpcoming).length);
   });
 
   test('Escape and clicking away close the suggestions', async ({ page }) => {

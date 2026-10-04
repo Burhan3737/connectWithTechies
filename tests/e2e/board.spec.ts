@@ -40,7 +40,7 @@ test.describe('The board', () => {
     const data = await dataset(request);
     await openBoard(page);
     await expect(page.locator('[data-when="upcoming"]')).toHaveAttribute('aria-checked', 'true');
-    expect(await shownCount(page)).toBe(data.events.filter(isUpcoming).length);
+    await expect.poll(() => shownCount(page)).toBe(data.events.filter(isUpcoming).length);
     await expect(page.locator('#count')).toContainText(/all cities/i);
   });
 
@@ -49,10 +49,10 @@ test.describe('The board', () => {
     await openBoard(page);
     const t = await today(page);
     await setWhen(page, 'past');
-    expect(await shownCount(page)).toBe(data.events.filter((e) => isPast(e, t)).length);
+    await expect.poll(() => shownCount(page)).toBe(data.events.filter((e) => isPast(e, t)).length);
     expect((await params(page)).get('when')).toBe('past');
     await setWhen(page, 'all');
-    expect(await shownCount(page)).toBe(data.events.length);
+    await expect.poll(() => shownCount(page)).toBe(data.events.length);
     await setWhen(page, 'upcoming');
     expect((await params(page)).has('when')).toBe(false);
   });
@@ -139,10 +139,10 @@ test.describe('The board', () => {
     const data = await dataset(request);
     await openBoard(page, 'q=zzzqqqxxx-no-such-event');
     await expect(page.locator('#empty')).toBeVisible();
-    expect(await shownCount(page)).toBe(0);
+    await expect.poll(() => shownCount(page)).toBe(0);
     await page.locator('#empty [data-reset]').click();
     await expect(page.locator('#empty')).toBeHidden();
-    expect(await shownCount(page)).toBe(data.events.length);   // reset shows everything (When = All)
+    await expect.poll(() => shownCount(page)).toBe(data.events.length);   // reset shows everything (When = All)
     await expect(page.locator('#q')).toHaveValue('');
   });
 });
