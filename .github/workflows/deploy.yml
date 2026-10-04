@@ -1,0 +1,70 @@
+# Every push to main is checked end to end, then published to GitHub Pages.
+# A pull request runs the same checks without publishing.
+#
+# The site is built from whatever data/events.json the commit holds, so a data
+# refresh (npm run refresh, commit, push) deploys exactly like a code change.
+name: Test and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One deployment at a time; a newer push supersedes a queued one.
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Type-check, unit and end-to-end tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Type-check
+        run: npm run typecheck
+
+      - name: Unit tests (feed parsers, model, view-model, components)
+        run: npm test
+
+      - name: Install the browser for end-to-end tests
+        run: npx playwright install --with-deps chromium
+
+      - name: End-to-end contract (builds, serves and tests the site)
+        run: npm run test:e2e
+        env:
+          E2E_CHANNEL: chromium
+
+      - name: Keep the built site for the deploy job
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    name: Publish to GitHub Pages
+    needs: test
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
