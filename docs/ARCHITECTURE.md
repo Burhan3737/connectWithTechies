@@ -11,9 +11,9 @@ allowed to change what. For the detail behind any box, follow the file links.
  agents ────────▶│  annual fixtures: conferences, tech weeks,       │
  (patches only)  │  hackathons, meetup series — 903 events          │──┐
                  └──────────────────────────────────────────────────┘  │
-                                                                       │   npm run build
+                                                                       │   npm run build:data
                  ┌──────────── FEED (script-maintained) ───────────┐  ├──────────────▶ data/events.json ──▶ the app
- Luma, Meetup,   │  data/raw/feed.json                              │  │   (merge, dedupe,     (one file)       (static site,
+ Luma, Meetup,   │  data/raw/feed.json                              │  │   (merge, dedupe,     (one file)       (React site,
  Eventbrite, ───▶│  one-off events + weekly/monthly series          │──┘    rollover dates;                    GitHub Pages)
  MLH, Devpost,   │  ~3,300 events, rewritten every feed run         │       curated always wins)
  confs.tech, …   └──────────────────────────────────────────────────┘
@@ -131,12 +131,13 @@ approaching, or the check has aged (90 days; 180 for recurring groups).
 | Follow a new organiser | add `{ "url": "https://luma.com/<cal>", "reason": "..." }` to the same kind of file |
 | Full agent cycle | ask Claude to "refresh the events" (runs the `refresh-events` skill) |
 | Check before shipping | `npm test` · `npm run audit` · `npm run check:data` |
-| Publish | commit and push `main`; GitHub Pages serves the repo root |
+| Publish | commit and push `main`; the workflow tests, builds and deploys to GitHub Pages |
 
 ## Code map
 
 ```
-index.html, assets/          the app (static HTML/CSS/JS)
+web/                         the site (React, MVVM) — see APP.md
+tests/e2e/                   the end-to-end contract the site must keep
 scripts/build-data.mjs       raw files → events.json
 scripts/feeds/run.mjs        the feed runner
 scripts/feeds/adapters/      one file per source (luma, meetup, eventbrite, datasets, ical)

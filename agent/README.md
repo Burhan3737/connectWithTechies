@@ -88,7 +88,7 @@ apply what comes back:
 
 ```bash
 npm run apply       # dry-run first; read the reasons before trusting them
-npm run build
+npm run build:data  # rebuild data/events.json
 npm run ledger      # merges the confirm-*.json files
 npm test
 ```

@@ -25,17 +25,22 @@ not local community events. Nothing was invented to fill the gap.
 
 ## Run it
 
-Plain HTML/CSS/JS, no build step and no framework. It fetches `data/events.json`, so it has
-to be served over HTTP rather than opened as a `file://` URL.
+React 19 with the React Compiler, built by Vite 8, in TypeScript. Node 22+.
 
 ```bash
-npm start          # http://localhost:5173
-# or
-python -m http.server 5173
+npm ci
+npm run dev        # http://localhost:5173/connectWithTechies/ — hot reload
+npm test           # feed parsers + app unit tests (Vitest)
+npm run test:e2e   # builds, serves and tests the site in a real browser (Playwright)
+npm run build      # type-check and build to dist/
 ```
 
-Deploying: the app lives at the repo root, so GitHub Pages can serve it straight from the
-`main` branch with no workflow — *Settings → Pages → Source: Deploy from a branch → main / (root)*.
+The app reads `data/events.json` at run time; the build ships a copy trimmed to the fields the
+app uses. Deploying is automatic: every push to `main` runs the type check, the unit tests and
+the end-to-end suite, and only then publishes `dist/` to GitHub Pages
+(`.github/workflows/deploy.yml`). A data refresh deploys the same way: commit and push.
+
+How the app is organised — Model, ViewModel, View — is in [docs/APP.md](docs/APP.md).
 
 ## The data pipeline
 
@@ -43,7 +48,7 @@ Deploying: the app lives at the repo root, so GitHub Pages can serve it straight
 data/raw/*.json     one file per research pass, hand-verified records
 data/raw/feed.json  the live feed — written by scripts/feeds/run.mjs, never by hand
       |
-      |  npm run build      merge, validate, normalise, de-duplicate, recompute status
+      |  npm run build:data merge, validate, normalise, de-duplicate, recompute status
       v
 data/events.json    the single file the app reads
 ```
@@ -67,18 +72,22 @@ data/events.json    the single file the app reads
 | `npm run feeds` | re-read every registered organiser and the tech datasets, then rebuild |
 | `npm run feeds:discover` | also search all 30 discovery cities for new events and new organisers (weekly) |
 | `npm run stale` | print the re-check queue |
-| `npm run build` | rebuild `data/events.json` and print a validation report |
+| `npm run build:data` | rebuild `data/events.json` and print a validation report |
 | `npm run apply` | apply reviewer patches from `data/review/` |
 | `npm run ledger` | merge confirmations, regenerate the ledger and queue |
 | `npm run verify:dates` | script-side date confirmation (dry run) |
 | `npm run check:data` | data audit: coverage, near-duplicates, field gaps, date sanity |
 | `npm run check:links` | probe every event URL, report dead links and redirects |
-| `npm test` | jsdom UI smoke test — 30 checks over rendering, filters, sorting, escaping |
-| `npm start` | serve the site locally |
+| `npm run dev` | run the site locally with hot reload |
+| `npm run build` | type-check and build the site to `dist/` |
+| `npm test` | unit tests: feed parsers, and the app's model, view-model and components |
+| `npm run test:e2e` | the end-to-end contract, in a real browser |
 
 ### Layout
 
 ```
+web/            the site: React app (Model / ViewModel / View). See docs/APP.md.
+tests/e2e/      the end-to-end contract the site must keep.
 scripts/        the deterministic pipeline. Owns data/. Maintainer-run.
 scripts/feeds/  the live feed: source adapters, relevance gate, runner.
 agent/tools/    what agents call — and what replaces agents where possible.
@@ -207,7 +216,7 @@ npm run refresh    rollover: a held edition moves into last_date and the record
                    then the re-check queue is regenerated
       ↓ agents     work only what the script could not settle
 npm run apply      apply their patches
-npm run build
+npm run build:data
 npm run ledger     merge confirmations; the queue shrinks
 ```
 

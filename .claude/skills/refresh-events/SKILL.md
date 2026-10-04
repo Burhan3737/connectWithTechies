@@ -100,9 +100,9 @@ Queue reasons, in the order they are worked:
 ```bash
 npm run apply -- --dry-run   # read the reasons before trusting them
 npm run apply
-npm run build
+npm run build:data           # rebuild data/events.json
 npm run ledger               # merges the confirm-*.json files
-npm test
+npm test                     # feed parsers + app unit tests
 ```
 
 Read removals yourself before applying. Curators have been right about squatted domains

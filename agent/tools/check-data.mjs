@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Data-quality audit over data/events.json.
- * Run after `npm run build`. Reports the things a review cycle should look at:
+ * Run after `npm run build:data`. Reports the things a review cycle should look at:
  * near-duplicate names, suspicious URLs, thin coverage, date sanity, field gaps.
  */
 import { readFileSync } from 'node:fs';
