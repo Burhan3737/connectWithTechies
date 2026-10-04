@@ -72,6 +72,52 @@ ok(notBlank.length === 0, 'all rows open in a new tab');
 const noRel = rows().filter((a) => !(a.getAttribute('rel') || '').includes('noopener'));
 ok(noRel.length === 0, 'all rows set rel=noopener');
 
+console.log('\nAdd to calendar');
+{
+  const withCal = $$('.evrow').filter((r) => r.querySelector('.addcal'));
+  ok(withCal.length > 0, 'dated upcoming rows offer + Calendar', `${withCal.length} rows`);
+  const tbd = $$('.evrow').filter((r) => r.querySelector('.ev__when--tbd'));
+  ok(tbd.length > 0 && tbd.every((r) => !r.querySelector('.addcal')), 'undated rows offer no calendar entry');
+  ok(withCal.every((r) => !r.querySelector('.ev .addcal')), 'menu sits beside the row link, never inside it');
+
+  const row = withCal[0];
+  const menu = row.querySelector('.addcal__menu');
+  ok(menu.childElementCount === 0, 'menu links are not built until opened');
+  click(row.querySelector('.addcal > summary'));
+  const links = [...menu.querySelectorAll('a')];
+  const labels = links.map((a) => a.textContent);
+  ok(links.length === 5, 'menu offers five calendars', labels.join(' / '));
+
+  // Check every link against the event the row shows.
+  const name = row.querySelector('.ev__name').textContent;
+  const ev = data.events.find((e) => e.name === name && e.next_date);
+  const startC = ev.next_date.replace(/-/g, '');
+  const endD = new Date(`${ev.next_date_end || ev.next_date}T00:00:00Z`);
+  endD.setUTCDate(endD.getUTCDate() + 1);
+  const endEx = endD.toISOString().slice(0, 10);
+  const g = new URL(links.find((a) => a.textContent === 'Google Calendar').href);
+  ok(g.searchParams.get('text') === ev.name && g.searchParams.get('dates') === `${startC}/${endEx.replace(/-/g, '')}`,
+    'Google: name and all-day dates, end exclusive', g.searchParams.get('dates'));
+  const o = new URL(links.find((a) => a.textContent === 'Outlook.com').href);
+  ok(o.searchParams.get('startdt') === ev.next_date && o.searchParams.get('enddt') === endEx && o.searchParams.get('allday') === 'true',
+    'Outlook: all-day start and exclusive end', `${o.searchParams.get('startdt')} → ${o.searchParams.get('enddt')}`);
+  ok(links.some((a) => a.href.startsWith('https://outlook.office.com/')), 'Microsoft 365 link present');
+  ok(links.some((a) => a.href.startsWith('https://calendar.yahoo.com/')), 'Yahoo link present');
+  const icsLink = links.find((a) => a.hasAttribute('download'));
+  const ics = decodeURIComponent(icsLink.href.replace(/^data:text\/calendar;charset=utf-8,/, ''));
+  ok(icsLink.getAttribute('download').endsWith('.ics'), '.ics offered as a download', icsLink.getAttribute('download'));
+  ok(ics.includes('BEGIN:VEVENT') && ics.includes(`DTSTART;VALUE=DATE:${startC}`) &&
+     ics.includes(`DTEND;VALUE=DATE:${endEx.replace(/-/g, '')}`) && ics.includes('\r\n'),
+    '.ics is a valid all-day VEVENT with CRLF lines');
+  const icsLines = ics.split('\r\n');
+  ok(icsLines.every((l) => /^[A-Z][A-Z-]*(;[^:]*)?:/.test(l)) && !/[^\r]\n/.test(ics),
+    '.ics: every line is a property (descriptions escaped, no stray newlines)');
+  ok(links.filter((a) => !a.hasAttribute('download')).every((a) => a.target === '_blank' && a.rel.includes('noopener')),
+    'web calendars open in a new tab');
+  click($('#board'));
+  ok(!row.querySelector('.addcal').hasAttribute('open'), 'clicking elsewhere closes the menu');
+}
+
 console.log('\nWhen filter');
 const upcomingCount = rows().length;
 click($('[data-when="all"]'));
@@ -82,6 +128,14 @@ click($('[data-when="past"]'));
 await tick();
 const pastCount = rows().length;
 ok(pastCount < allCount, 'Past narrows the board', `${pastCount} of ${allCount}`);
+{
+  // Under Past, only an event still in progress (started, not ended) can be added.
+  const todayIso = window.eval('(function(){var d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")})()');
+  const offered = $$('.evrow').filter((r) => r.querySelector('.addcal'))
+    .map((r) => data.events.find((e) => e.name === r.querySelector('.ev__name').textContent));
+  ok(offered.every((e) => e && (e.next_date_end || e.next_date) >= todayIso && e.next_date <= todayIso),
+    'Past offers add-to-calendar only for events still in progress', `${offered.length} in progress`);
+}
 click($('[data-when="all"]'));
 await tick();
 

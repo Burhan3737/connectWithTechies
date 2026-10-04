@@ -371,6 +371,42 @@ button { font: inherit; color: inherit; }
   transition: transform .2s cubic-bezier(.2,.7,.3,1), color .2s ease;
 }
 
+/* add to calendar: a sibling of the row link (a link cannot hold links),
+   placed in the date column's empty space below the date */
+.evrow { position: relative; }
+.addcal {
+  position: absolute; left: 0; top: 4.5rem; z-index: 30;
+  font-family: var(--mono);
+}
+.evrow:hover .addcal, .evrow:focus-within .addcal { left: .9rem; }
+.addcal > summary {
+  list-style: none; cursor: pointer;
+  font-size: .58rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink-faint);
+  padding: .16rem .34rem;
+  border: 1px solid var(--rule);
+  transition: color .16s ease, border-color .16s ease, background .16s ease;
+}
+.addcal > summary::-webkit-details-marker { display: none; }
+.addcal > summary:hover, .addcal > summary:focus-visible,
+.addcal[open] > summary { color: var(--signal); border-color: var(--signal-dim); outline: none; }
+.addcal__menu {
+  position: absolute; left: 0; top: calc(100% + .3rem);
+  min-width: 15rem;
+  display: flex; flex-direction: column;
+  background: var(--paper-3);
+  border: 1px solid var(--rule);
+  box-shadow: 0 14px 34px rgba(0,0,0,.55);
+}
+.addcal__menu a {
+  padding: .6rem .85rem;
+  font-size: .72rem; letter-spacing: .04em;
+  color: var(--ink); text-decoration: none;
+  border-top: 1px solid var(--rule-soft);
+}
+.addcal__menu a:first-child { border-top: 0; }
+.addcal__menu a:hover, .addcal__menu a:focus-visible { background: var(--paper-2); color: var(--signal); outline: none; }
+
 mark { background: rgba(255,194,71,.24); color: var(--amber); padding: 0 .12em; border-radius: 1px; }
 
 /* ---------- foot --------------------------------------------------------- */
@@ -396,6 +432,8 @@ mark { background: rgba(255,194,71,.24); color: var(--amber); padding: 0 .12em; 
 @media (max-width: 720px) {
   .controls__inner { grid-template-columns: 1fr; gap: .8rem; }
   .ev { grid-template-columns: 4.6rem minmax(0,1fr) 1.8rem; gap: 0 1rem; }
+  .addcal > summary { font-size: .52rem; letter-spacing: .08em; padding: .14rem .26rem; }
+  .addcal__menu { min-width: 13.5rem; }
   .ev__when { grid-row: 1; }
   .ev__where {
     grid-column: 2 / 3; grid-row: 2;

@@ -266,10 +266,116 @@
     '</a>';
   }
 
+  /* ------------------------------------------------------ add to calendar */
+
+  /* Only a confirmed date that has not passed can go in someone's calendar.
+     Dates here are whole days (organisers rarely publish times in a form we
+     keep), so every calendar entry is all-day, with the end exclusive. */
+  function calDates(e) {
+    if (!e.next_date) return null;
+    var end = e.next_date_end && e.next_date_end > e.next_date ? e.next_date_end : e.next_date;
+    if (isPastISO(end)) return null;
+    var after = parseISO(end);
+    after.setDate(after.getDate() + 1);
+    var endEx = after.getFullYear() + '-' + pad(after.getMonth() + 1) + '-' + pad(after.getDate());
+    return { start: e.next_date, endEx: endEx };
+  }
+
+  function calText(e) {
+    return (e.description ? e.description + '\n\n' : '') + 'Official page: ' + e.url +
+      '\nFound on connectWithTechies — confirm details with the organiser before you go.';
+  }
+  function calPlace(e) {
+    return [e.venue, e.city, e.region, e.country].filter(Boolean).join(', ');
+  }
+
+  function icsEscape(s) {
+    return String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
+  }
+
+  /* An RFC 5545 file: what Apple Calendar, Thunderbird and most desktop
+     calendars import, and the fallback for anything not listed. */
+  function icsFile(e, d) {
+    var compact = function (iso) { return iso.replace(/-/g, ''); };
+    var stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
+    return [
+      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//connectWithTechies//EN', 'CALSCALE:GREGORIAN',
+      'BEGIN:VEVENT',
+      'UID:' + compact(d.start) + '-' + fold(e.name).replace(/[^a-z0-9]+/g, '-').slice(0, 40) + '@connectwithtechies',
+      'DTSTAMP:' + stamp,
+      'DTSTART;VALUE=DATE:' + compact(d.start),
+      'DTEND;VALUE=DATE:' + compact(d.endEx),
+      'SUMMARY:' + icsEscape(e.name),
+      'DESCRIPTION:' + icsEscape(calText(e)),
+      'LOCATION:' + icsEscape(calPlace(e)),
+      'URL:' + e.url,
+      'END:VEVENT', 'END:VCALENDAR'
+    ].join('\r\n');
+  }
+
+  function calLinks(e) {
+    var d = calDates(e);
+    if (!d) return [];
+    var q = function (o) {
+      return Object.keys(o).map(function (k) { return k + '=' + encodeURIComponent(o[k]); }).join('&');
+    };
+    var compact = function (iso) { return iso.replace(/-/g, ''); };
+    var outlook = {
+      path: '/calendar/action/compose', rru: 'addevent', allday: 'true',
+      startdt: d.start, enddt: d.endEx, subject: e.name, body: calText(e), location: calPlace(e)
+    };
+    return [
+      { label: 'Google Calendar', href: 'https://calendar.google.com/calendar/render?' + q({
+        action: 'TEMPLATE', text: e.name, dates: compact(d.start) + '/' + compact(d.endEx),
+        details: calText(e), location: calPlace(e) }) },
+      { label: 'Outlook.com', href: 'https://outlook.live.com/calendar/0/deeplink/compose?' + q(outlook) },
+      { label: 'Outlook / Microsoft 365', href: 'https://outlook.office.com/calendar/0/deeplink/compose?' + q(outlook) },
+      { label: 'Yahoo Calendar', href: 'https://calendar.yahoo.com/?' + q({
+        v: '60', title: e.name, st: compact(d.start), et: compact(d.endEx), dur: 'allday',
+        desc: calText(e), in_loc: calPlace(e) }) },
+      { label: 'Apple Calendar / other (.ics)', ics: true,
+        href: 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsFile(e, d)),
+        download: fold(e.name).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) + '.ics' }
+    ];
+  }
+
+  /* The menu is a <details>, so it opens without script; its links are built
+     on first open, so four thousand rows do not each carry five URLs. */
+  function calMenu(e, ref) {
+    // Only when the row shows the date that would go in the calendar: under
+    // Past, an annual event shows the edition already held, not the next one.
+    if (!calDates(e) || keyDate(e) !== e.next_date) return '';
+    return '<details class="addcal" data-ref="' + ref + '">' +
+      '<summary aria-label="Add ' + esc(e.name) + ' to your calendar">+ Calendar</summary>' +
+      '<div class="addcal__menu" role="menu"></div>' +
+    '</details>';
+  }
+
+  function fillCalMenu(details) {
+    var menu = details.querySelector('.addcal__menu');
+    if (menu.childElementCount) return;
+    var e = SHOWN[+details.getAttribute('data-ref')];
+    if (!e) return;
+    menu.innerHTML = calLinks(e).map(function (l) {
+      return '<a role="menuitem" href="' + esc(l.href) + '"' +
+        (l.ics ? ' download="' + esc(l.download) + '"' : ' target="_blank" rel="noopener noreferrer"') +
+        '>' + esc(l.label) + '</a>';
+    }).join('');
+  }
+
+  /* Every event currently on screen, so a menu can find its event by index. */
+  var SHOWN = [];
+
+  function rowWithCal(e, i) {
+    var ref = SHOWN.push(e) - 1;
+    return '<div class="evrow">' + renderRow(e, i) + calMenu(e, ref) + '</div>';
+  }
+
   function render() {
     var list = filtered();
     var html = [];
     var lastGroup = null;
+    SHOWN = [];
 
     list.forEach(function (e, i) {
       var g = groupLabel(e);
@@ -277,7 +383,7 @@
         html.push('<h3 class="groupbar"><span>' + esc(g) + '</span></h3>');
         lastGroup = g;
       }
-      html.push(renderRow(e, i));
+      html.push(rowWithCal(e, i));
     });
 
     el.board.innerHTML = html.join('');
@@ -403,6 +509,25 @@
     });
 
     el.clearCities.addEventListener('click', function () { state.cities = []; render(); });
+
+    // Add-to-calendar menus: build on first open, one open at a time.
+    document.addEventListener('click', function (ev) {
+      var summary = ev.target.closest('.addcal > summary');
+      var inside = ev.target.closest('.addcal');
+      document.querySelectorAll('.addcal[open]').forEach(function (d) {
+        if (d !== inside) d.removeAttribute('open');
+      });
+      if (summary) fillCalMenu(summary.parentNode);
+      // Choosing a calendar closes the menu behind it.
+      if (inside && ev.target.closest('.addcal__menu a')) inside.removeAttribute('open');
+    });
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key !== 'Escape') return;
+      document.querySelectorAll('.addcal[open]').forEach(function (d) {
+        d.removeAttribute('open');
+        d.querySelector('summary').focus();
+      });
+    });
 
     document.querySelectorAll('.segmented button').forEach(function (b) {
       b.addEventListener('click', function () {

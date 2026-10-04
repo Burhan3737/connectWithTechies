@@ -273,6 +273,10 @@ Anything you physically go to, where you meet people and the subject is technolo
 - **Province / state** — every province and state with events, grouped by country and
   narrowed to the chosen one; picking a province sets its country
 - **Sort** — by date, city, or name
+- **+ Calendar** — on every event with a confirmed upcoming date: add it to Google Calendar,
+  Outlook.com, Outlook / Microsoft 365, Yahoo, or download an `.ics` for Apple Calendar and
+  anything else. Entries are all-day, carry the official link, and are built in the browser —
+  nothing is sent anywhere until you pick a calendar
 
 Every filter is mirrored into the URL, so any view can be bookmarked or shared.
 
