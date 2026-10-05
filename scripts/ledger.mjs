@@ -78,8 +78,18 @@ if (!reportOnly) {
       // a verdict could only ever be strengthened, so a check that grew more
       // careful could not withdraw its own earlier confidence — which is
       // precisely what is needed when a matcher turns out to have been fooled.
+      //
+      // But "could not tell" is not evidence. A newer `blocked` from another pass
+      // never replaces a confirmation: when the date script finds a page
+      // ambiguous, an agent's earlier reading of that page still stands. (It did
+      // replace them once — 94 verified events fell back to the queue in one
+      // refresh because the script could not re-read their listing pages.) An
+      // old confirmation still returns to the queue on its own, through the
+      // staleness rules below, which go by age rather than by status.
       if (!prev) { state.entries[k] = next; merged++; continue; }
       const sameCycleRedo = next.cycle === prev.cycle && next.checked_on >= prev.checked_on;
+      const unsureOverSure = next.status === 'blocked' && prev.status !== 'blocked' && !sameCycleRedo;
+      if (unsureOverSure) continue;
       if (sameCycleRedo || RANK[next.status] > RANK[prev.status] || next.checked_on > prev.checked_on) {
         state.entries[k] = next; upgraded++;
       }
