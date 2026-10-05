@@ -47,6 +47,17 @@ jobs:
         run: npm run test:e2e
         env:
           E2E_CHANNEL: chromium
+          E2E_TRACE: '1'
+
+      # A failure here is in a browser on Linux, which a Windows machine may not
+      # reproduce: keep the traces (npx playwright show-trace <zip>).
+      - name: Keep traces of failed tests
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-traces
+          path: test-results/
+          retention-days: 7
 
       - name: Keep the built site for the deploy job
         if: github.event_name != 'pull_request'

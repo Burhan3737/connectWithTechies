@@ -31,6 +31,8 @@ export default defineConfig({
     // Traces snapshot the whole page at every step, which slows a long list
     // enough to time tests out. Opt in when debugging.
     trace: process.env.E2E_TRACE ? 'retain-on-failure' : 'off',
+    // Reproduce CI (which runs in UTC) locally: E2E_TZ=UTC, with TZ=UTC for Node.
+    ...(process.env.E2E_TZ ? { timezoneId: process.env.E2E_TZ } : {}),
     ...browser,
   },
   projects: [

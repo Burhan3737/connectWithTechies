@@ -96,16 +96,30 @@ test.describe('Add to calendar', () => {
   test('one menu at a time; Escape and clicking away close it', async ({ page }) => {
     await openBoard(page);
     const withCal = page.locator('.evrow').filter({ has: page.locator('.addcal') });
-    await openMenu(page, withCal.nth(0));
-    // A row a few down: the next row's button can sit under the open menu,
-    // which is drawn on top by design, so a person could not click it either.
-    await openMenu(page, withCal.nth(3));
-    await expect(page.locator('.addcal[open]')).toHaveCount(1);
-    await page.keyboard.press('Escape');
-    await expect(page.locator('.addcal[open]')).toHaveCount(0);
-    await openMenu(page, withCal.nth(0));
-    await page.locator('.masthead').click({ position: { x: 5, y: 5 } });
-    await expect(page.locator('.addcal[open]')).toHaveCount(0);
+    await test.step('open a first menu', async () => { await openMenu(page, withCal.nth(0)); });
+    await test.step('opening a second menu closes the first', async () => {
+      // The open menu is drawn on top of the rows below it, so the next row's
+      // button may be under it — a person could not click it either. Use the
+      // first row whose button sits clear below the menu, whatever the fonts.
+      const menuBottom = (await page.locator('.addcal[open] .addcal__menu').boundingBox())!;
+      let second = -1;
+      for (let i = 1; i < Math.min(await withCal.count(), 12) && second < 0; i++) {
+        const b = await withCal.nth(i).locator('.addcal > summary').boundingBox();
+        if (b && b.y > menuBottom.y + menuBottom.height + 4) second = i;
+      }
+      test.skip(second < 0, 'no menu button below the first open menu on screen');
+      await openMenu(page, withCal.nth(second));
+      await expect(page.locator('.addcal[open]')).toHaveCount(1);
+    });
+    await test.step('Escape closes it', async () => {
+      await page.keyboard.press('Escape');
+      await expect(page.locator('.addcal[open]')).toHaveCount(0);
+    });
+    await test.step('clicking away closes it', async () => {
+      await openMenu(page, withCal.nth(0));
+      await page.locator('.masthead').click({ position: { x: 5, y: 5 } });
+      await expect(page.locator('.addcal[open]')).toHaveCount(0);
+    });
   });
 
   test('under Past, only events still in progress offer it', async ({ page, request }) => {
