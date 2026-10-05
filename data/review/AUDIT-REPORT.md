@@ -1,81 +1,52 @@
-# Audit report — 2026-09-27 (cycle 3, iteration 1)
+# Audit report - 2026-10-05 (iteration 3, final re-audit)
 
-Baseline `3d55e76` (907 events) -> working tree (905 events). `audit-run.mjs --since 3d55e76`: 0 blocking, 1 warning (the LF Legal Summit / PyTorch same-day warning, a false positive, see below). 122/122 dispatched rows have a ledger entry, and 50/50 new or changed links resolve.
+Run audited: curator passes oct05-r1/r2/r3, the orchestrator’s audit fixes, the iteration-3 changes (`looksLikeVenue` in `scripts/feeds/adapters/datasets.mjs`, `data/feeds/place-overrides.json`, the state-name rule in `scripts/feeds/lib/geo.mjs`, the series-absorption rule, the re-validation of history and the description guards in `scripts/feeds/run.mjs`), and the rebuilt `data/events.json`. Compared against HEAD (67173d4). `C:\temp\head-events.json` is identical to `git show HEAD:data/events.json`.
 
-**Verdict: 2 BLOCKING, 6 WARNINGS**
+**Verdict: 6 DISCREPANCIES (2 blocking, 4 warnings)**
+
+Mechanical audit: 0 blocking, 1 warning (the known LF Legal Summit / PyTorch co-location, not a duplicate). Curated records 903 -> 903. 60/60 dispatched rows have a ledger entry, and 2/2 changed links resolve. `scripts/feeds/selftest.mjs`: 36/36 pass. Directory total 4247 -> 4429. 29 records from HEAD are gone, and 0 records carried over from HEAD changed city.
+
+Status of the iteration-2 findings:
+- B1 Haven / FutureForge / Swiftsonic dropped: **resolved.** All three are back with the right city (details under Checked and sound). Devpost is back to 9/9 of the records HEAD had.
+- W1 December Code & Coffee listed separately: **resolved, but the fix over-reaches** (Blocking 1).
+- W2 descriptions: **WE3 is resolved.** The Startup World Cup half of that warning was my error: the HEAD description was already the bare title ("Startup World Cup Grand Finale 2026"). The Pegasus text belongs to the separate Meetup record "Startup World Cup 2026 Grand Finale!", which is intact. Nothing was lost there and nothing is left to restore. **Closed.**
+- W3 Tech Week socials and Ascent Valley pairs: **unchanged** (Warning 3).
+- W4 online-only records: **unchanged** (Warning 4).
 
 ## Blocking
 
-- **The held 2026 edition was dropped from `last_date` on 5 records: CppCon (Aurora), ALL IN (Montreal), DDX Innovation & UX Conference San Diego, AI Infra Summit (San Jose), Cybersecurity Summit Chicago.**
-  These patches moved `next_date` to the 2027 (or spring 2027) edition but never set `last_date`. In the raw files, the 2026 edition was only in `next_date`. The 2026 `last_date` shown in the baseline `events.json` came from the build rolling a past `next_date` forward. It did not exist in raw. So the curators' note "last_date already records the held edition" was wrong, and the 2026 edition is now lost:
+1. **The new series-absorption rule in run.mjs drops real, dated, future events that are not the curated series.** The rule is `SERIES.test(r.cadence)` together with the organiser page equalling the curated `url`. It drops every feed event from an organiser whose page is linked by any weekly or monthly curated record in the same city. That includes curated records with **no next_date**, and events with entirely different titles. Lost:
+   - **Hackreation (Milwaukee, 2026-10-31)** and **October Code + Brews (Milwaukee, 2026-10-21)**, plus later Code + Brews sessions on Nov 11, Dec 9 and Jan 13. The Mitobyte iCal (meetup.com/mitobyte/events/ical/) lists all of these as separate events (316630269, 312261435, ...). The iteration-2 report said these "are distinct events and should stay". The curated "Milwaukee Tech Hub Code & Coffee" record only carries the Code & Coffee date, 2026-11-07.
+   - **Lightning Talks (Cambridge, 2026-10-07, meetup.com/bostonpython/events/316657277/)** was absorbed into the curated "Boston Python User Group" (monthly, **next_date empty**). The directory went from a dated session to an undated group listing.
+   - **Python talk night at City University Seattle (Seattle, 2026-10-15, meetup.com/psppython/events/316587369/)** and **Project Hack Night & Social (Seattle, 2026-10-08, .../316490238/)** were absorbed into the curated "Puget Sound Programming Python (PuPPy)" (monthly, **next_date empty**).
 
-  | Event | last_date now | should be | evidence |
-  |---|---|---|---|
-  | CppCon | 2025-09-13 | 2026-09-12 | cppcon.org post "CppCon 2026 Wrap-up and CppCon 2027 Dates!" (2026-09-24). Baseline raw next_date 2026-09-12..18 |
-  | ALL IN | (empty) | 2026-09-16 | allinevent.ai press release 2026-09-18: "ALL IN wrapped up its fourth edition yesterday". Baseline raw next_date 2026-09-16..17 |
-  | DDX San Diego | (empty) | 2026-09-17 | baseline raw next_date 2026-09-17 |
-  | AI Infra Summit | 2025-09-09 | 2026-09-15 | curator e2's own evidence: 2026 edition Sep 15-17, Santa Clara |
-  | Cybersecurity Summit Chicago | 2026-03-03 | 2026-09-15 | curator e2's own evidence: the Sep 15, 2026 edition was at Chicago Marriott Downtown Magnificent Mile |
+   **Do:** narrow the rule so that a feed event is absorbed only when (a) the curated record has a `next_date`, **and** (b) the feed title shares the curated record’s series stem (for example "Code & Coffee"). That still drops December Code & Coffee and keeps Code + Brews and Hackreation. When the curated series is undated, keep the feed sessions, or use the earliest one to fill the curated `next_date`. Rebuild, then confirm that the five events above are back and December Code & Coffee is still absent.
 
-  Action: patch `last_date` to the values above. Going forward, any patch that advances `next_date` past an edition that has already run must also set `last_date`, whatever `events.json` shows. The raw record is what gets patched. (The Dreamforce, Oktane, UNBOUND, Splunk, XDS, Georgia Tech, YC and Cultivator Startup Summit patches did this correctly.)
-
-- **Product Operations Summit San Francisco (San Francisco): new listing, unverified, wrong city.**
-  This is the Kentucky Hall of Fame split again. In the baseline it was merged into Product-Led Summit SF because the two shared the PLA homepage. When e4 gave PLS its own URL, it surfaced as a separate event. The audit counts it as one of the "2 added", and no curator ever looked at it. It still has url `https://world.productledalliance.com/`, source `dev.events/NA/US/CA/San_Francisco/tech`, city San Francisco and no venue.
-  world.productledalliance.com/location/sanfrancisco says: "Your pass gives you access to Product-Led Summit, Product Operations Summit, and ... AI Product Labs", with "Product Operations Summit - Co-located track", September 22-23, 2026, Hyatt Regency San Francisco Airport, Burlingame. It is a track inside Product-Led Summit SF, with the same pass, venue and dates. Its city also contradicts the sibling record, which was just moved to Burlingame.
-  Action: remove it as a co-located track of Product-Led Summit San Francisco (Burlingame). The near-name check cannot catch this one because the names do not nest. If you keep it instead, set city Burlingame, the venue above, and its own PLA location URL, and drop the dev.events source.
+2. **The state/province-name rule in geo.mjs rejects Quebec City, and Hackfest was lost.** developers.events gives the Hackfest city as "Quebec, QC". `finish()` now returns null because "quebec" is a province name and no curated record’s city is spelt "Quebec" (the curated spelling is "Quebec City"). HEAD had **Hackfest (Quebec City, 2026-10-29..31)**. hackfest.ca today says "29 - 30 - 31 Octobre 2026, Centre des congrès de Québec" and calls it the largest bilingual cybersecurity event in Canada. It is real, in person, and tech. **Do:** map "Quebec" / "Québec" with region Quebec to the city "Quebec City" (via `canonPlace` or an alias, applied before the state-name rejection) instead of rejecting it. Then restore Hackfest with venue "Centre des congrès de Québec". Quebec is the only Canadian city that shares its province’s name; New York is already handled.
 
 ## Warnings
 
-1. **The MLH rule in `.claude/agents/curator.md` now contradicts itself.** Lines 79-83 read: "...do not count - mark those `blocked`. Two curators have read a season as satisfying this rule; it does not. Do not mark it `blocked` - that parks it at the top of the queue..." The new sentence was spliced in ahead of the old "Do not mark it blocked", which originally referred to the MLH-confirmed case. The overrides are consistent with the rule as intended:
-   - Blocked, correctly: HackUMass (stale 2024 dates), Hackville (nothing), ElleHacks (TBA), UGAHacks (under construction), MakeUofT (TBD), RevolutionUC and WEHack ("Spring 2027").
-   - Confirmed, correctly: MariHacks (the organiser's own text says "April 2027") and HackKU (the organiser's repo gives the days).
+1. **"Artificial Intelligence and Automation" (city Washington, region Washington *state*, 2026-10-09, eventbrite ...-washington-tickets-2001387133793) survived the clean-up that dropped its 9 siblings.** The exemption in `finish()` checks `known()` by `city|country`, and curated "Washington" (DC) satisfies it even though this record’s region is Washington state. The venue is "For venue details reach us at info@learnerring.com", which is not a place. **Do:** remove the record, and make the exemption require `spelt.region === reg.name`, so that "Washington, Washington" is rejected and "Washington, District of Columbia" is kept.
 
-   But the next curator will read two opposite instructions. Action: rewrite the paragraph so it says one thing. Also decide whether blocked hackathons should keep publishing MLH-only days as `upcoming`. All 7 currently show exact dates, for example HackUMass 2026-11-13.
+2. **Two developers.events conferences with a state-only city are still unplaced and silently dropped.** These are not regressions, since HEAD did not have them either, but `place-overrides.json` now exists for exactly this case:
+   - **Iowa Code Camp Fall 2026**: developers.events says "Iowa (USA)". iowacodecamp.com says "November 7, 2026, Ankeny, IA". Add an override `devevents:https://iowacodecamp.com|2026-11-07` -> Ankeny, Iowa.
+   - **M365 Community Days Atlanta 2026**: developers.events says "Georgia (USA)". The Eventbrite page (tickets-1996346079865) gives Saturday, November 14, 9 AM-4 PM, at a university in Morrow, GA. Add an override -> Morrow, Georgia, with the venue from the Eventbrite page.
+   Longer term: have the gate list the overrides it needs (state-only city, future date) in `NEEDS-AGENT.tsv` instead of counting them under "no US/Canada location".
 
-2. **Cultivator Community Night vs Cultivator Startup Summit apply different standards to the same evidence.** Both 2027 dates come only from event-card images on the same organiser page (cultivator.ca/events, "2027 Events"). I viewed both images:
-   - `www.cultivator.ca/assets/startup-summit-2.png` reads "SEPT 15+16 2027 / Startup Summit / Cultivator HQ". This matches the applied 2027-09-15..16.
-   - `www.cultivator.ca/assets/community-night-1-3.png` reads "JAN 28 2027 / Community Night / Cultivator HQ". It is just as legible.
+3. **SF/LA Tech Week socials and the Ascent Valley pairs are unchanged from iteration 2.** Still listed: Proof of Buckets basketball (SF 10-12), YOUNG FOUNDERS HIKE (10-11), Intro to boxing for tech founders (10-10), Tech Basketball Run (10-10), FC SF Founders Run & Coffee (10-06), GTM VIP Bowling Night (10-07) and Smartlead x Chatbase Bowling Mixer (10-09). Ascent Valley is still listed twice per city: SF 10-07 (luma.com/san_francisco_tech_week07 plus the Meetup listing 316160736), and LA 10-15 (luma.com/8epsts3e plus the Eventbrite listing 1997950134636). **Do:** as before, filter sport and social titles from the Tech Week calendars (or set `judgeEvents`), and merge feed records that share city, date and organiser.
 
-   Leaving Community Night empty is defensible under "never guess a date". Taking the Startup Summit date from the same kind of source is then inconsistent. (A possible reason for the curators' disagreement: Jan 28 is also the 2026 date, so the card could be a template. The 2027 year on it is clear, though.) Action: pick one standard for organiser-published image cards. Then either set Community Night `next_date` 2027-01-28 or clear Startup Summit's, and record the image URL in the evidence either way.
-
-3. **Aggregator or blog `source` left on records whose dates moved.** The dates themselves are organiser-verified, but the `source` field was not updated:
-   - DDX San Diego: `dev.events/NA/US/CA/San_Diego`. Set to `https://www.ddxconference.com/sandiego`.
-   - AI Infra Summit: `dev.events/NA/US/CA/Santa_Clara`. Set to `https://www.ai-infra-summit.com/`.
-   - Cybersecurity Summit Chicago: `xl.net/blog/top-tech-conferences-chicago/`. Set to `https://cyberriskalliance.swoogo.com/Chicago2027`.
-
-4. **Cybersecurity Summit Chicago's description contradicts the curator's finding.** e2 found the Hyatt Regency venue was wrong and blanked `venue`, but the description still says "A one-day executive cybersecurity summit at the Hyatt Regency Chicago...". Action: remove the venue from the description, since 2027 is "venue TBA".
-
-5. **Gaps in the audit tooling.**
-   - `audit-run.mjs` has no check for `last_date` regressions (moving backwards or emptied). That is why blocking #1 passed the mechanical audit. Suggest flagging any record whose `last_date` got older or empty relative to the baseline.
-   - The new near-name check uses raw substring matching. "ces" matches inside "Gartner Identity & Access Management Summit" (Las Vegas). It is harmless only because their dates differ. Match whole words.
-   - The near-name check skips records with no `next_date`, so undated duplicates are never compared (see 6).
-
-6. **Hacker Dojo (Mountain View) and Hacker Dojo Events (Mountain View) look like one organisation listed twice.** Both are undated recurring listings at 855 Maude Ave with the same audience and the same description of the programme. One points at hackerdojo.org, the other at meetup.com/hackerdojo. This predates this run. Action: merge them, keeping the hackerdojo.org record and the Maude Ave venue.
+4. **Online-only feed records are still listed. This predates the run and is unchanged.** Examples: the Blockchain Council "live online training" series across 8 cities, "AI Revolution December 4th" ("virtual learning series"), and "STARTUP FUNDRAISING STRATEGY SESSION 2026" ("Zoom consultation"). **Do:** add a description-level online filter to the feed ingester. Keep hybrid events that have a real in-person option.
 
 ## Checked and sound
 
-- **Mechanical warning "LF Legal Summit and PyTorch Conference start 2026-10-20 in San Jose":** false positive, as the previous audit judged. They are separate pages (/lf-legal-summit/ and /pytorch-conference-north-america/) for separate co-located events.
-- **DDX San Diego "dead link":** it was transient. ddxconference.com/sandiego loads, is titled "DDX Innovation & UX Conference San Diego | September 16, 2027", and gives UC San Diego Park & Market, 1100 Market St. The 2027-09-16 date and venue are correct.
-- **Removals:** all four hold.
-  - Indy Women in Tech Summit: the IBJ article "Nonprofit group Indy Women in Tech disbands after 9-year run" is live, with Dec. 31, 2025 in the article.
-  - 9D Jam: itch.io/jam/9d-jam-iii and 9d-jam-ii both say "This jam will be 100% virtual and will have kickoff and closeout in the Buffalo Game Space discord".
-  - Knox Game Design: the /about/ page says "The group typically meets in the Spring for a game jam kickoff", and the in-person paragraph is commented out. The monthly items are podcast episodes.
-  - Kentucky Entrepreneur Hall of Fame Induction: a duplicate. entrepreneurhof.com/induction-dinner/ gives November 4, 2026, Central Bank Center, the same as the surviving "Induction Celebration" record.
-- **Rename Elevate -> Nrth Festival:** nrth.ca is titled "Home - Nrth Festival" ("Elevate is Becoming Nrth"), and its footer gives 14-16 September 2027. The record matches, and its description notes "formerly Elevate".
-- **Next editions, all verified verbatim on organiser pages:**
-  - Dreamforce: "September 21-23, 2027 | San Francisco"
-  - Oktane: "SEPTEMBER 28-30, 2027 CAESARS FORUM | LAS VEGAS"
-  - Splunk .conf27: "going to Chicago ... McCormick Place ... October 4-7, 2027". The city move to Chicago is correct, and last_date 2026-09-14 keeps the Denver edition.
-  - AI Infra Summit: "Aug 31 - Sept 2, 2027 San Jose McEnery Convention Center". The city move is correct.
-  - CppCon: "September 18-24, 2027"
-  - UNBOUND: "September 8 - 10, 2027 in Boston"
-  - ALL IN: "September 22-23 at the Palais des congres de Montreal"
-  - Cultivator Startup Summit: the image card reads SEPT 15+16 2027.
-- **City moves Product-Led Summit SF and CPO Summit SF -> Burlingame:** correct. The PLA page gives Hyatt Regency San Francisco Airport, 1333 Old Bayshore Highway, Burlingame.
-- **The new near-name duplicate check:** it produces zero hits on current data, so no false positives. The only same-city name-nesting pairs (SXSW / SXSW EDU, LA Hacks / LA Hacks AI Hackathon, CES / Gartner IAM, Hacker Dojo / Hacker Dojo Events) all have different or empty `next_date`.
-- **Random confirmed rows, each matching its page:**
-  - Maker Faire Orange County: "Costa Mesa, CA Sept 12 & 13, 2026"
-  - YYC DATACON: "BMO CENTRE, CALGARY SEPTEMBER 11, 2026"
-  - NH Tech Alliance Cybersecurity Summit: "September 10th, 2026 Manchester Community College"
-  - Tulsa Tech Week: "Sept 21 - 26, 2026 Tulsa"
-- **Coverage:** no city or state lost all its events. Net changes are Buffalo, Indianapolis and Knoxville -1 (the removals), Denver and Santa Clara -1 with Chicago and San Jose +1 (city moves), and Burlingame +2. Knoxville keeps Knox Game Jam.
+- **Haven Asbury Park Game Jam - High School**: Asbury Park, NJ, 2026-11-14, placed by override `devpost:31529`. The page says "Our event is happening right here in Asbury Park, New Jersey" and "IMPORTANT: The city is Asbury Park!". The venue keeps the Devpost spelling, "iCode Shrewbury". That is cosmetic and not counted.
+- **FutureForge Hacks**: Pleasanton, CA, 2026-11-21. It now passes `looksLikeVenue` as a well-formed new city.
+- **Swiftsonic 2026**: Nashville, TN, 2026-11-20..22, venue Loews Nashville Hotel at Vanderbilt Plaza, placed by override. It matches swiftsonicconf.com (checked in iteration 2).
+- **The `looksLikeVenue` gate against live Devpost data**: none of the 90 current in-person hackathons is rejected by the new venue check, and every one that parses to a place (Ottawa, SF, Vancouver, New York, Pleasanton, London ON, Cincinnati) is accepted. Devpost records match HEAD 9 for 9.
+- **History re-validation**: the 9 "Artificial Intelligence and Automation | State" rows (AZ, CO, MI, MN, NV, OR, PA, TN, UT) are gone. The two daretoshift socials with city "North Carolina" are also gone, which is correct (state as city, and social events). The only state-level coverage drops are these state-as-city rows.
+- **December Code & Coffee** is no longer listed separately. Milwaukee shows one Code & Coffee record (2026-11-07).
+- **WE3 Global AI Summit 2026 By SEW.AI (Las Vegas)**: the full description is restored ("WE3 is the only global AI summit built for the energy and utilities sector...").
+- **Descriptions overall**: 0 records carried over from HEAD have a description more than 40% shorter, and only 1 regressed to stand-in text.
+- **Other removals from HEAD**: past events (StormHacks, WolfHacks, the SF Oct 4 items, the Potsdam camp, Greensboro speed dating), and re-ingests under a new id with the same URL (Tech Beach Party, Build & Host on AWS Workshop, Claude Impact Lab -> Claude Build Day NY, the Discord game-dev session via Luma, the SEA AI WEEK Frontier panel, and TechCon dallas -> irving).
+- **Curated date changes spot-checked against the live pages**: Maker Faire Bay Area -> 2027-09-24..26 ("returns to Mare Island September 24-26, 2027"), Ignite Seattle -> 2027-02-25 ("Next event: Feb 25, 2027 at Town Hall Seattle"), and JumpStart VC Fest -> 2027-09-21..22 ("returns September 21-22, 2027"). All three hold. The other cleared dates (the BSides events, PyBay, SANS DC Metro, Boston FIG, Boston Data and AI Saturday) are editions held on or before Oct 3, which rolled off correctly.
+- **Not counted**: duplicate ids (80, against 66 in HEAD) and the malformed cities "Boston,", "Toronto,", "Washington,", "Montreal,", "Vancovuer" all predate this run. They are worth a future pass.

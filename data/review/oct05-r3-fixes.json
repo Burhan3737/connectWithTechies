@@ -1,0 +1,10 @@
+[
+  { "match": { "name": "JumpStart VC Fest", "city": "Cleveland" },
+    "action": "update",
+    "reason": "ohiovcfest.com now shows a post-event 'Thank You' page (posted 2026-09-30) confirming the Cleveland 2026 edition was held, and states 'JumpStart VC Fest returns September 21-22, 2027'. last_date keeps the held 2026-09-29 edition. The venue is cleared because the 2027 venue is not announced.",
+    "set": { "next_date": "2027-09-21", "next_date_end": "2027-09-22", "last_date": "2026-09-29", "venue": "" } },
+  { "match": { "name": "Maker Faire Bay Area", "city": "Vallejo" },
+    "action": "update",
+    "reason": "makerfaire.com/bay-area/ says 'The Faire may be over ... Maker Faire Bay Area returns to Mare Island September 24-26, 2027'. Its JSON-LD still carries the held 2026-09-25 to 09-27 edition, which is kept as last_date.",
+    "set": { "next_date": "2027-09-24", "next_date_end": "2027-09-26", "last_date": "2026-09-25" } }
+]

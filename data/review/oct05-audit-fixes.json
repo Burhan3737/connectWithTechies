@@ -1,0 +1,11 @@
+[
+  { "match": { "name": "Milwaukee Tech Hub Code & Coffee", "city": "Milwaukee" },
+    "action": "update",
+    "reason": "AUDIT-REPORT oct05 blocking #1: the record now links to Mitobyte's Meetup group (pass oct05-r1), but its source and description still named the Milwaukee Tech Hub calendar, which no longer lists the event (re-checked by the auditor). Source and description now name the organiser that runs it.",
+    "set": { "source": "https://www.meetup.com/mitobyte/",
+      "description": "A free monthly Saturday-morning gathering of Milwaukee developers run by Mitobyte, with a companion Code + Brews evening edition." } },
+  { "match": { "name": "TechCon 365 Dallas", "city": "Irving" },
+    "action": "update",
+    "reason": "AUDIT-REPORT oct05 warning #1: the move to Irving was right, but source still cited dev.events. The organiser's own venue page is the evidence for both city and dates.",
+    "set": { "source": "https://techcon365.com/Dallas/venue/" } }
+]
