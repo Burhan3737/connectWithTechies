@@ -11,7 +11,7 @@
 import { readApollo } from './adapters/meetup.mjs';
 import { toEvent as lumaEvent } from './adapters/luma.mjs';
 import { toEvent as eventbriteEvent } from './adapters/eventbrite.mjs';
-import { devpostRange } from './adapters/datasets.mjs';
+import { devpostRange, looksLikeVenue } from './adapters/datasets.mjs';
 import { parseIcal } from './lib/ical.mjs';
 import { fromText, fromParts, localDate } from './lib/geo.mjs';
 import { judge } from './lib/relevance.mjs';
@@ -100,6 +100,13 @@ console.log('\nPlaces');
 ok(fromText('Toronto, ON M5V 2T6, Canada')?.region === 'Ontario', 'Canadian postal code');
 ok(fromParts({ city: 'SAN JOSE', region: 'CA', country: 'US' })?.city === 'San Jose', 'shouting city normalised');
 ok(fromParts({ city: 'SAP Office — San Ramon', region: 'CA', country: 'US' })?.city === 'San Ramon', 'venue prefix dropped');
+ok(fromParts({ city: 'San francisco', region: 'CA', country: 'US' })?.city === 'San Francisco', 'mixed case takes the curated spelling');
+
+console.log('\nVenues standing in for cities (free-text sources)');
+for (const [city, venue] of [['iCode Shrewbury', true], ['Princeton High School', true], ['Tennessee', true],
+  ['Pleasanton', false], ['Asbury Park', false], ['New York', false], ['Washington', false]]) {
+  ok(looksLikeVenue({ city, country: 'United States' }) === venue, `${city}: ${venue ? 'not a place' : 'a city'}`);
+}
 
 console.log('\nRelevance');
 ok(judge({ title: 'Python developers meetup' }).keep, 'clear tech title kept');

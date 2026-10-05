@@ -1,0 +1,19 @@
+{
+  "_about": "Corrections for feed events whose source gives a wrong or unusable place. Keyed by feed_id; applied by scripts/feeds/run.mjs before the location gate. Each entry names the page that says where the event is.",
+  "devpost:31529": {
+    "city": "Asbury Park", "region": "New Jersey", "country": "United States",
+    "reason": "Devpost's location line reads 'iCode Shrewbury' (a venue); the event page says it is 'happening right here in Asbury Park, New Jersey' (oct05 audit)."
+  },
+  "devevents:https://iowacodecamp.com|2026-11-07": {
+    "city": "Ankeny", "region": "Iowa", "country": "United States",
+    "reason": "developers.events gives only the state, Iowa; iowacodecamp.com places the Nov 7 2026 camp in Ankeny, IA (oct05 audit)."
+  },
+  "devevents:https://www.eventbrite.com/e/m365-community-days-atlanta-26-tickets-1996346079865|2026-11-14": {
+    "city": "Morrow", "region": "Georgia", "country": "United States",
+    "reason": "developers.events gives only the state, Georgia; the event's Eventbrite page places it in Morrow, GA on Nov 14 2026 (oct05 audit)."
+  },
+  "devevents:https://www.swiftsonicconf.com|2026-11-20": {
+    "city": "Nashville", "region": "Tennessee", "country": "United States", "venue": "Loews Nashville Hotel at Vanderbilt Plaza",
+    "reason": "developers.events gives the state, Tennessee, as the city; swiftsonicconf.com names Loews Nashville Hotel at Vanderbilt Plaza (oct05 audit)."
+  }
+}

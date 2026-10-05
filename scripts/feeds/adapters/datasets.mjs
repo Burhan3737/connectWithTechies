@@ -9,7 +9,7 @@
  * do need is care with place and date, which each describes differently.
  */
 import { get, getJSON, pageData, findAll } from '../lib/http.mjs';
-import { fromText, fromParts, localDate, knownCity } from '../lib/geo.mjs';
+import { fromText, fromParts, localDate, knownCity, region, isKnownPlace } from '../lib/geo.mjs';
 import { today } from '../../lib/today.mjs';
 
 const MONTHS = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
@@ -62,6 +62,19 @@ export function devpostRange(s) {
   return [`${y1}-${pad(a)}-${pad(d1)}`, `${y}-${pad(b)}-${pad(d2)}`];
 }
 
+/**
+ * Does a "city" read like a venue? A word starting lower-case ("iCode"), a
+ * venue word, a digit, or a state/province name standing in for a city.
+ */
+const VENUE_WORDS = /\b(hall|school|center|centre|college|university|campus|library|office|building|room|hotel|hub|labs?|park\s+center|arena|stadium|cafe|café)\b/i;
+export function looksLikeVenue(place) {
+  const c = String(place?.city || '').trim();
+  if (!c || /\d/.test(c) || /(^|\s)[a-z]/.test(c) || VENUE_WORDS.test(c)) return true;
+  // "Tennessee" as a city is a state standing in for one; "New York" is both,
+  // and the curated data saying so is what tells them apart.
+  return !!region(c) && !isKnownPlace(place);
+}
+
 function uniqueKnownCity(name) {
   const ca = knownCity(name, 'Canada'), us = knownCity(name, 'United States');
   return ca && us ? null : ca || us;
@@ -82,8 +95,12 @@ export async function devpost() {
       // A bare city ("Toronto") resolves only if our curated data already knows
       // exactly one such city — never a guess between Waterloo ON and Waterloo IA.
       const bare = loc.replace(/\s*\+\s*online\s*$/i, '').trim();
-      const place = fromText(bare) || (!bare.includes(',') ? uniqueKnownCity(bare) : null);
-      if (!place) continue;
+      let place = fromText(bare) || (!bare.includes(',') ? uniqueKnownCity(bare) : null);
+      // Free text puts venues where cities go ("iCode Shrewbury, NJ" read as a
+      // city). A string that reads like a venue is no place; a real city we
+      // have not seen before (Pleasanton) is. An event left without a place
+      // can still be placed by data/feeds/place-overrides.json, or the gate drops it.
+      if (place && looksLikeVenue(place)) place = null;
       const range = devpostRange(h.submission_period_dates);
       if (!range) continue;
       // Its dates are the submission period, not the event. For an in-person
@@ -118,8 +135,10 @@ export async function developersEvents() {
   for (const c of data) {
     if (!['USA', 'Canada'].includes(c.country) || !Array.isArray(c.date) || !c.date[0] || !c.hyperlink) continue;
     if (/online/i.test(c.location || '')) continue;
-    const place = fromText(`${c.city || ''}, ${c.country}`) || fromText(String(c.location || '').replace(/\s*\(([^)]+)\)$/, ', $1'));
-    if (!place) continue;
+    let place = fromText(`${c.city || ''}, ${c.country}`) || fromText(String(c.location || '').replace(/\s*\(([^)]+)\)$/, ', $1'));
+    // Unplaced events go on to the runner: data/feeds/place-overrides.json can
+    // place them; otherwise the gate drops them ("no US/Canada location").
+    if (place && looksLikeVenue(place)) place = null;
     const start = utcDate(c.date[0]);
     if ((c.date[1] ? utcDate(c.date[1]) : start) < today()) continue;   // the file keeps history back to 2017
     const end = c.date[1] ? utcDate(c.date[1]) : '';

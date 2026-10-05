@@ -75,6 +75,17 @@ function finish(city, reg) {
   if (!city || !reg) return null;
   city = cleanCity(city, reg);
   if (!city) return null;
+  // A city the curated data knows takes its spelling: "Sioux falls" from one
+  // calendar and "Sioux Falls" from another are one city, not two.
+  // Quebec's capital shares the province's name; sources write it bare.
+  if (reg.name === 'Quebec' && /^qu[eé]bec$/i.test(city)) city = 'Quebec City';
+  const spelt = known().get(`${city.toLowerCase()}|${reg.country}`);
+  const knownHere = !!spelt && spelt.region === reg.name;
+  if (knownHere) city = spelt.city;
+  // A state or province typed where the city goes ("Tennessee") is no city —
+  // unless the curated data lists it as a city in that same state (New York,
+  // New York). "Washington, Washington" is not the capital, which is in DC.
+  if (!knownHere && byName.has(city.toLowerCase())) return null;
   const place = canonPlace(city, reg.name);
   const tz = CITY_TZ[place.city.toLowerCase()] || reg.tz;
   return { city: place.city, region: place.region, country: reg.country, tz };
@@ -116,23 +127,36 @@ export function fromText(text) {
  * curated dataset already knows where every city it lists is, so that is the
  * fallback — never a guess from outside our own data.
  */
-let knownIndex = null;
-export function knownCity(city, countryHint = '') {
+//
+// Only curated (hand-verified) records count. Feed records are excluded: a
+// feed city is whatever a source typed, and letting those in made the index
+// vouch for itself — a Devpost venue line, "iCode Shrewbury", became a "known
+// city" on the run after it first appeared.
+let knownIndex = null;   // "city|country" (lower-case) -> { city: proper spelling, region }
+function known() {
   if (!knownIndex) {
     knownIndex = new Map();
     try {
       const root = new URL('../../../', import.meta.url);
       const { events } = JSON.parse(readFileSync(new URL('data/events.json', root), 'utf8'));
       for (const e of events) {
+        if (e.feed_source || e.city === 'Multiple cities') continue;
         const k = `${e.city.toLowerCase()}|${e.country}`;
-        if (!knownIndex.has(k) && e.city !== 'Multiple cities') knownIndex.set(k, e.region);
+        if (!knownIndex.has(k)) knownIndex.set(k, { city: e.city, region: e.region });
       }
     } catch { /* no dataset yet: no fallback */ }
   }
-  const country = /canada/i.test(countryHint) ? 'Canada' : 'United States';
-  const reg = knownIndex.get(`${String(city).trim().toLowerCase()}|${country}`);
-  return reg ? finish(String(city).trim(), region(reg, country)) : null;
+  return knownIndex;
 }
+
+export function knownCity(city, countryHint = '') {
+  const country = /canada/i.test(countryHint) ? 'Canada' : 'United States';
+  const hit = known().get(`${String(city).trim().toLowerCase()}|${country}`);
+  return hit ? finish(hit.city, region(hit.region, country)) : null;
+}
+
+/** True when a place is a city the curated data already lists. */
+export const isKnownPlace = (p) => !!p && known().has(`${p.city.toLowerCase()}|${p.country}`);
 
 /** An instant as a calendar date in a given zone. */
 export function localDate(instant, tz) {

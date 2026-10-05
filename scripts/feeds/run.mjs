@@ -28,6 +28,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { today } from '../lib/today.mjs';
 import { canonPlace } from '../lib/places.mjs';
+import { fromParts } from './lib/geo.mjs';
 import { stats, getJSON } from './lib/http.mjs';
 import { judge, judgeOrganiser } from './lib/relevance.mjs';
 import * as luma from './adapters/luma.mjs';
@@ -70,8 +71,14 @@ const seenSources = new Set();  // feeds read successfully this run
 const orgTitles = new Map();    // organiser id -> titles seen, for track-record judgement
 const orgFound = new Map();     // organiser id -> registry candidate
 
+// Reviewed corrections for places a source gets wrong (data/feeds/place-overrides.json).
+const OVERRIDES_FILE = join(ROOT, 'data', 'feeds', 'place-overrides.json');
+const placeOverrides = existsSync(OVERRIDES_FILE) ? JSON.parse(readFileSync(OVERRIDES_FILE, 'utf8')) : {};
+
 function take(list, flags) {
-  for (const e of list) {
+  for (const raw of list) {
+    const fix = placeOverrides[raw.feed_id];
+    const e = fix ? { ...raw, place: fromParts(fix) || raw.place, venue: fix.venue ?? raw.venue } : raw;
     candidates.push({ ...e, ...flags });
     bump(report.bySource, e.feed);
     if (e.organiser?.id) {
@@ -346,6 +353,23 @@ const fresh = unique.filter((e) => {
   const hit = curated.find((r) => r.city === e.place.city && nests(r.name, e.title) &&
     (!r.next_date || r.next_date === e.start_date));
   if (hit) { bump(report.dropped, 'already curated'); return false; }
+  // A curated series that links to the organiser this event came from, meeting
+  // that day, is this event under another title ("Milwaukee Tech Hub Code &
+  // Coffee" is Mitobyte's "November Code & Coffee").
+  const page = norm(String(registered.get(e.registryId)?.page || '').replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, ''));
+  // A weekly or monthly series stands for all its sessions, not just the next.
+  // Only sessions of that series, though: the same organiser's other events
+  // ("Hackreation", "Code + Brews") stay, and an undated group record absorbs
+  // nothing — its dated sessions are the better listing.
+  const SERIES = /^(weekly|biweekly|monthly)$/;
+  const core = ` ${words(e.title.replace(/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)[a-z]*\.?\b/gi, ' ')
+    .replace(/\d+/g, ' ')).trim()} `;
+  const sameSeries = (r) => r.next_date === e.start_date ||
+    (SERIES.test(r.cadence || '') && !!r.next_date && core.trim().length > 3 && words(r.name).includes(core));
+  if (page && curated.some((r) => r.city === e.place.city && sameSeries(r) &&
+    norm(String(r.url).replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '')) === page)) {
+    bump(report.dropped, 'already curated'); return false;
+  }
   return true;
 });
 
@@ -448,10 +472,28 @@ const toRecord = (e) => ({
 
 const previous = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')) : [];
 const prevById = new Map(previous.map((r) => [r.feed_id, r]));
+// The stand-in text written when a source gives no description.
+const SERIES_PREFIX = /^Meets [^.]*\. /;
+// The stand-in, or a "description" that only repeats the title, says nothing.
+const isStandIn = (d = '', title = '') => /^Listed on .+\.$/.test(d.replace(SERIES_PREFIX, '')) ||
+  (!!title && d.trim().toLowerCase() === String(title).trim().toLowerCase());
+// Titles are compared case-blind: one listing re-posted as "Summit 2026 by X" vs "summit 2026 by X".
+const titleKey = (name, city) => `${String(name).toLowerCase()}|${city}`;
+const prevByTitle = new Map(previous.filter((r) => r.description && !isStandIn(r.description, r.name))
+  .map((r) => [titleKey(r.name, r.city), r.description]));
+
 const out = collapsed.map((e) => {
   const r = toRecord(e);
   const was = prevById.get(r.feed_id);
   if (was) r.feed_first_seen = was.feed_first_seen || TODAY;
+  // A read that brings no description must not erase one already held: an
+  // organiser page lists events without the summary their listing carried,
+  // and 159 real descriptions were once replaced by the stand-in that way.
+  // A new session of a recurring event borrows its sibling's description.
+  const held = was?.description && !isStandIn(was.description, was.name) ? was.description : prevByTitle.get(titleKey(r.name, r.city));
+  if ((!e.description || isStandIn(e.description, e.title)) && held) {
+    r.description = (r.description.match(SERIES_PREFIX)?.[0] || '') + held.replace(SERIES_PREFIX, '');
+  }
   return r;
 });
 const outIds = new Set(out.map((r) => r.feed_id));
@@ -463,6 +505,9 @@ for (const r of previous) {
   // Seen this run and turned away by the gate (judged off-topic, now curated,
   // a duplicate): history must not bring it back.
   if (candidateIds.has(r.feed_id)) continue;
+  // History keeps an event between reads, not past the rules: a place today's
+  // checks would reject ("Tennessee" as a city) is not carried forward.
+  if (!fromParts({ city: r.city, region: r.region, country: r.country })) { vanished++; continue; }
   const date = r.next_date_end || r.next_date;
   if (date < TODAY) {
     // Held: keep it for the Past view for a while, then let it go.
