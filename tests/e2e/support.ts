@@ -33,7 +33,15 @@ export async function today(page: Page): Promise<string> {
   });
 }
 
-export const isUpcoming = (e: Ev) => e.status === 'upcoming' || e.status === 'recurring-tbd';
+/** Today on this machine — the browser under test runs in the same time zone. */
+const LOCAL_TODAY = (() => {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+})();
+
+/** Upcoming by the visitor's clock: an event that has ended is not upcoming, whatever the data build said. */
+export const isUpcoming = (e: Ev) => e.status === 'recurring-tbd' ||
+  (e.status === 'upcoming' && (!e.next_date || (e.next_date_end || e.next_date) >= LOCAL_TODAY));
 export const isPast = (e: Ev, todayIso: string) =>
   !!e.last_date || e.status === 'past' || (!!e.next_date && e.next_date < todayIso);
 

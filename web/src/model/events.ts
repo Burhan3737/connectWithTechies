@@ -33,8 +33,14 @@ export function keyDateEnd(e: TechEvent & { occurrence?: boolean }, when: When, 
 /** Which events each When choice shows. */
 export function inWhen(e: TechEvent, when: When, today: string): boolean {
   if (when === 'all') return true;
-  // A confirmed future date, or an annual event whose next edition is unannounced.
-  if (when === 'upcoming') return e.status === 'upcoming' || e.status === 'recurring-tbd';
+  // A future date, or an annual event whose next edition is unannounced. The
+  // date is judged by the visitor's clock, not the data build's: an event that
+  // ended yesterday leaves Upcoming today even if the data is a day old.
+  if (when === 'upcoming') {
+    if (e.status === 'recurring-tbd') return true;
+    if (e.status !== 'upcoming') return false;
+    return !e.next_date || (e.next_date_end || e.next_date) >= today;
+  }
   // Any edition actually held — an annual event with a future date still has a past one.
   return !!e.last_date || e.status === 'past' || isPastISO(e.next_date, today);
 }

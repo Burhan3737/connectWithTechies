@@ -33,6 +33,12 @@ describe('event rules', () => {
       expect(inWhen(byName('DevOpsDays Austin'), 'upcoming', TODAY)).toBe(true);
       expect(inWhen(byName('Old Summit'), 'upcoming', TODAY)).toBe(false);
     });
+    it("Upcoming goes by the visitor's date, not the data build's status", () => {
+      const endedYesterday = { ...byName('Hack the North'), next_date: '2026-10-01', next_date_end: '2026-10-03', status: 'upcoming' };
+      expect(inWhen(endedYesterday, 'upcoming', TODAY)).toBe(false);
+      expect(inWhen(endedYesterday, 'past', TODAY)).toBe(true);
+      expect(inWhen(byName('BigRed//Hacks'), 'upcoming', TODAY)).toBe(true);   // still running today
+    });
     it('Past includes anything with an edition held', () => {
       expect(inWhen(byName('Toronto Tech Week'), 'past', TODAY)).toBe(true);
       expect(inWhen(byName('BigRed//Hacks'), 'past', TODAY)).toBe(true);    // started before today

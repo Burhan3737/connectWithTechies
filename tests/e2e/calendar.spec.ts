@@ -1,5 +1,5 @@
 import { test, expect, type Page } from '@playwright/test';
-import { dataset, today, openBoard, shownCount, params, setWhen, choose, rows } from './support';
+import { dataset, today, isUpcoming, openBoard, shownCount, params, setWhen, choose, rows } from './support';
 
 const ymd = (s: string) => s.replace(/-/g, '');
 const nextDay = (iso: string) => { const d = new Date(`${iso}T00:00:00Z`); d.setUTCDate(d.getUTCDate() + 1); return d.toISOString().slice(0, 10); };
@@ -97,7 +97,9 @@ test.describe('Add to calendar', () => {
     await openBoard(page);
     const withCal = page.locator('.evrow').filter({ has: page.locator('.addcal') });
     await openMenu(page, withCal.nth(0));
-    await openMenu(page, withCal.nth(1));
+    // A row a few down: the next row's button can sit under the open menu,
+    // which is drawn on top by design, so a person could not click it either.
+    await openMenu(page, withCal.nth(3));
     await expect(page.locator('.addcal[open]')).toHaveCount(1);
     await page.keyboard.press('Escape');
     await expect(page.locator('.addcal[open]')).toHaveCount(0);
@@ -251,7 +253,7 @@ test.describe('Calendar view', () => {
     await page.locator('[data-view="list"]').click();
     await expect(page.locator('#board')).toBeVisible();
     expect(new URL(page.url()).search).toBe('');
-    await expect.poll(() => shownCount(page)).toBe(data.events.filter((e) => e.status === 'upcoming' || e.status === 'recurring-tbd').length);
+    await expect.poll(() => shownCount(page)).toBe(data.events.filter(isUpcoming).length);
   });
 
   test('a month and day are restored from the URL', async ({ page }) => {
