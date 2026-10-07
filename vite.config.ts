@@ -17,7 +17,10 @@ const dataFile = fileURLToPath(new URL('./data/events.json', import.meta.url));
 export default defineConfig({
   root,
   // GitHub Pages serves the site under the repository name.
-  base: '/connectWithTechies/',
+  // The site's path prefix. GitHub Pages serves it under the repository name;
+  // Vercel (which sets VERCEL=1 while building) serves it at the root.
+  // BASE_PATH overrides both, for any other host.
+  base: process.env.BASE_PATH || (process.env.VERCEL ? '/' : '/connectWithTechies/'),
   plugins: [react(), babel({ presets: [reactCompilerPreset()] }), eventsData(dataFile)],
   build: {
     outDir: fileURLToPath(new URL('./dist', import.meta.url)),
