@@ -4,7 +4,9 @@ import { openBoard, shownCount, rows } from './support';
 test.describe('Phone layout @mobile', () => {
   test('nothing overflows the screen sideways @mobile', async ({ page }) => {
     await openBoard(page);
-    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    // Against the device width: if content is too wide a phone zooms out, and
+    // then innerWidth grows to match it, hiding the overflow from a naive check.
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth) - page.viewportSize()!.width;
     expect(overflow).toBeLessThanOrEqual(1);
   });
 
@@ -17,9 +19,19 @@ test.describe('Phone layout @mobile', () => {
     expect(new Set(boxes.map((b) => Math.round(b.h))).size).toBe(1);
   });
 
+  test('the stacked filter bar scrolls away instead of covering the screen @mobile', async ({ page }) => {
+    await openBoard(page);
+    await page.mouse.wheel(0, 3000);
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(1500);
+    const bottom = await page.locator('.controls').evaluate((e) => e.getBoundingClientRect().bottom);
+    expect(bottom).toBeLessThanOrEqual(0);
+  });
+
   test('the calendar fits and a tapped day lists its events @mobile', async ({ page }) => {
     await openBoard(page, 'view=calendar');
-    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    // Against the device width: if content is too wide a phone zooms out, and
+    // then innerWidth grows to match it, hiding the overflow from a naive check.
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth) - page.viewportSize()!.width;
     expect(overflow).toBeLessThanOrEqual(1);
     await expect(page.locator('.cal__ev').first()).toBeHidden();       // names hide on phones; counts show
     const busy = page.locator('.cal__day:not(.is-out)').filter({ has: page.locator('.cal__count') }).first();
