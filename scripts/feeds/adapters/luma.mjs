@@ -25,11 +25,14 @@ export function toEvent(x, cal) {
   const tz = ev.timezone || place?.tz;
   return {
     feed: 'luma',
-    feed_id: `luma:${ev.api_id}`,
+    // Some listings only point elsewhere (Partiful): no event id, and a full URL
+    // in place of a slug. Fall back to that URL so two such events never share
+    // an id and one never silently replaces the other.
+    feed_id: `luma:${ev.api_id || x.api_id || ev.url || ev.name}`,
     title: ev.name,
     description: '',
     organiser: { id: cal.api_id, name: cal.name, description: cal.description_short, website: cal.website },
-    url: ev.url ? `https://luma.com/${ev.url}` : '',
+    url: !ev.url ? '' : /^https?:\/\//i.test(ev.url) ? ev.url : `https://luma.com/${ev.url}`,
     start_date: localDate(ev.start_at, tz),
     end_date: ev.end_at ? localDate(ev.end_at, tz) : '',
     place,

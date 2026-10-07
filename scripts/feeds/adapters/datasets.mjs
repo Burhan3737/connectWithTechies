@@ -169,6 +169,9 @@ export async function hackClub() {
     if (!place || !h.website) continue;
     const start = localDate(h.start, place.tz);
     const end = h.end ? localDate(h.end, place.tz) : '';
+    // A hackathon is a weekend. A range of weeks is a sign-up or build window,
+    // not the event ("Capitol" was listed Sep 1 - Oct 9 for an Oct 16-18 event).
+    if (end && (Date.parse(end) - Date.parse(start)) / 86_400_000 > 4) continue;
     out.push({
       feed: 'hackclub', feed_id: `hackclub:${h.id}`,
       title: h.name, description: 'A hackathon for high-school students, listed in the Hack Club directory.',

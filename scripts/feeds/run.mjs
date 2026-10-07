@@ -300,7 +300,8 @@ for (const e of candidates) {
   const why = !e.place ? 'no US/Canada location'
     : e.online ? 'online'
     : !/^\d{4}-\d{2}-\d{2}$/.test(e.start_date || '') ? 'no date'
-    : e.start_date < TODAY ? 'already past'
+    // Past once it has ended: a conference on its second day is still on.
+    : (e.end_date || e.start_date) < TODAY ? 'already past'
     : !e.url ? 'no link'
     : '';
   if (why) { bump(report.dropped, why); continue; }
@@ -509,7 +510,11 @@ for (const r of previous) {
   // checks would reject ("Tennessee" as a city) is not carried forward.
   if (!fromParts({ city: r.city, region: r.region, country: r.country })) { vanished++; continue; }
   const date = r.next_date_end || r.next_date;
-  if (date < TODAY) {
+  // Held once it has started, not once it has ended: Luma, Meetup and iCal
+  // feeds stop listing an event the moment it begins, so an event missing on
+  // its own day is happening, not cancelled. (Counting by end date once deleted
+  // 73 events on the day they ran, Tacoma's only one among them.)
+  if (r.next_date <= TODAY) {
     // Held: keep it for the Past view for a while, then let it go.
     if (daysAgo(date) <= KEEP_PAST_DAYS) { out.push(r); kept++; } else expired++;
     continue;
