@@ -1,0 +1,14 @@
+[
+  { "match": { "name": "TechExit.io Calgary", "city": "Calgary" },
+    "action": "update",
+    "reason": "techexit.io/calgary/ (organiser) now headlines 'OCTOBER 7, 2027 - BMO CENTRE CALGARY' and still shows the 2026 agenda for the edition held October 1, 2026. Next edition set to 2027-10-07; the elapsed 2026-10-01 edition is kept as last_date.",
+    "set": { "next_date": "2027-10-07", "next_date_end": "2027-10-07", "last_date": "2026-10-01" } },
+  { "match": { "name": "The AI Conference", "city": "San Francisco" },
+    "action": "update",
+    "reason": "aiconference.com (organiser) JSON-LD gives the 2026 edition 2026-09-29 to 2026-10-01 (now elapsed) and the hero reads 'SAVE THE DATE OCT 12-14 | 2027 SAN FRANCISCO'. Next edition set to 2027-10-12..14; the elapsed 2026-09-29 edition is kept as last_date.",
+    "set": { "next_date": "2027-10-12", "next_date_end": "2027-10-14", "last_date": "2026-09-29" } },
+  { "match": { "name": "Maker Faire Happy Valley", "city": "State College" },
+    "action": "update",
+    "reason": "happyvalley.makerfaire.com (organiser) says the faire is held at 'AXEMANN BREWERY + TITAN HOLLOW, BELLEFONTE, PA' and 'brings makers ... to Bellefonte'. Bellefonte is a separate borough about 10 miles from State College; the record's own venue field already says Bellefonte PA. City corrected to where the event physically happens.",
+    "set": { "city": "Bellefonte", "region": "Pennsylvania" } }
+]

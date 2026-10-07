@@ -1553,7 +1553,7 @@
     "city": "Orlando",
     "region": "Florida",
     "country": "United States",
-    "venue": "",
+    "venue": "Walt Disney World Swan and Dolphin Resort, 1500 Epcot Resorts Blvd, Lake Buena Vista",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-19",
@@ -1565,7 +1565,7 @@
     "audience": "CIOs, IT executives",
     "url": "https://www.gartner.com/en/conferences/na/symposium-us",
     "description": "Gartner's flagship gathering for CIOs and senior IT leaders, with analyst-led research sessions, roundtables and a large vendor exposition.",
-    "source": "https://dev.events/NA/US/FL/Orlando/tech"
+    "source": "https://www.gartner.com/en/conferences/na/symposium-us"
   },
   {
     "name": "STAREAST",

@@ -1729,7 +1729,7 @@
     "city": "Minneapolis",
     "region": "Minnesota",
     "country": "United States",
-    "venue": "",
+    "venue": "Open Book, 1011 Washington Ave S",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-23",
@@ -1741,7 +1741,7 @@
     "audience": "security practitioners, students",
     "url": "https://bsidestc.org",
     "description": "The Twin Cities BSides, serving the Minneapolis-St. Paul security community.",
-    "source": "https://www.allbsides.com/"
+    "source": "https://bsidestc.org"
   },
   {
     "name": "BSides PDX",
@@ -1753,7 +1753,7 @@
     "city": "Portland",
     "region": "Oregon",
     "country": "United States",
-    "venue": "",
+    "venue": "Smith Memorial Student Union, 1825 SW Broadway",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-23",
@@ -1765,7 +1765,7 @@
     "audience": "security practitioners, students",
     "url": "https://bsidespdx.org",
     "description": "Portland's Security BSides, a long-running Pacific Northwest community security conference.",
-    "source": "https://www.allbsides.com/"
+    "source": "https://bsidespdx.org/events/2026/venue.html"
   },
   {
     "name": "BSides Charleston",
@@ -4858,7 +4858,7 @@
       "diy",
       "education"
     ],
-    "city": "State College",
+    "city": "Bellefonte",
     "region": "Pennsylvania",
     "country": "United States",
     "venue": "Axemann Brewery, Bellefonte PA",

@@ -1,0 +1,38 @@
+[
+  {
+    "match": {
+      "name": "Scrum Day Houston",
+      "city": "Houston"
+    },
+    "action": "update",
+    "reason": "Automated check: the stored date 2026-10-06 no longer appears on https://dev.events/NA/US/TX/tech, and page JSON-LD gives 2026-10-07..2026-10-08. REVIEW BEFORE APPLYING.",
+    "set": {
+      "next_date": "2026-10-07",
+      "next_date_end": "2026-10-08"
+    }
+  },
+  {
+    "match": {
+      "name": "CONNECT: Networking for Entrepreneurs",
+      "city": "Jackson"
+    },
+    "action": "update",
+    "reason": "Automated check: the stored date 2026-12-03 no longer appears on https://www.innovate.ms/events/, and page JSON-LD gives 2026-10-07. REVIEW BEFORE APPLYING.",
+    "set": {
+      "next_date": "2026-10-07",
+      "next_date_end": "2026-10-07"
+    }
+  },
+  {
+    "match": {
+      "name": "Jersey City Entrepreneurs: The Venture Garden",
+      "city": "Jersey City"
+    },
+    "action": "update",
+    "reason": "Automated check: the stored date 2026-10-06 no longer appears on https://www.meetup.com/jersey-city-entrepreneurs/, and page JSON-LD gives 2026-10-08. REVIEW BEFORE APPLYING.",
+    "set": {
+      "next_date": "2026-10-08",
+      "next_date_end": "2026-10-08"
+    }
+  }
+]

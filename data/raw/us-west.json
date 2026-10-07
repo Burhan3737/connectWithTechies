@@ -144,16 +144,16 @@
     "venue": "",
     "cadence": "annual",
     "month": "September-October",
-    "next_date": "2026-09-29",
-    "next_date_end": "2026-10-01",
-    "last_date": "2025-09-17",
+    "next_date": "2027-10-12",
+    "next_date_end": "2027-10-14",
+    "last_date": "2026-09-29",
     "status": "upcoming",
     "attendance": "",
     "cost": "paid",
     "audience": "AI researchers, engineers, founders",
     "url": "https://aiconference.com/",
     "description": "An independent, vendor-neutral AI conference in San Francisco covering foundation models, agents, infrastructure and applied machine learning.",
-    "source": "https://dev.events/NA/US/CA/San_Francisco/tech"
+    "source": "https://aiconference.com/"
   },
   {
     "name": "QCon San Francisco",

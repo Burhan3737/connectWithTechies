@@ -1481,5 +1481,53 @@
     "url": "https://www.mtu.edu/career/",
     "description": "Michigan Technological University's fall and spring recruiting fairs, drawing 1,200+ recruiters to Houghton for full-time and internship hiring in engineering and computing.",
     "source": "https://www.mtu.edu/career/"
+  },
+  {
+    "name": "HACK.COMS",
+    "type": "hackathon",
+    "topics": [
+      "students",
+      "software"
+    ],
+    "city": "Rochester",
+    "region": "New York",
+    "country": "United States",
+    "venue": "Golisano College of Computing and Information Sciences, Rochester Institute of Technology",
+    "cadence": "annual",
+    "month": "November",
+    "next_date": "2026-11-07",
+    "next_date_end": "2026-11-08",
+    "last_date": "",
+    "status": "upcoming",
+    "attendance": "",
+    "cost": "free",
+    "audience": "students",
+    "url": "https://events.mlh.com/events/14418-hack-coms-2026",
+    "description": "A student hackathon at RIT's Golisano College of Computing, run with Major League Hacking.",
+    "source": "https://events.mlh.com/events/14418-hack-coms-2026"
+  },
+  {
+    "name": "Capitol",
+    "type": "hackathon",
+    "topics": [
+      "students",
+      "high school"
+    ],
+    "city": "Washington",
+    "region": "District of Columbia",
+    "country": "United States",
+    "venue": "",
+    "cadence": "annual",
+    "month": "October",
+    "next_date": "2026-10-16",
+    "next_date_end": "2026-10-18",
+    "last_date": "",
+    "status": "upcoming",
+    "attendance": "",
+    "cost": "free",
+    "audience": "high-school students",
+    "url": "https://capitol.hackclub.com/",
+    "description": "A 36-hour Hack Club hackathon for high-school students in Washington, D.C.",
+    "source": "https://capitol.hackclub.com/"
   }
 ]

@@ -1,0 +1,6 @@
+[
+  { "match": { "name": "The AI Conference", "city": "San Francisco" },
+    "action": "update",
+    "reason": "AUDIT-REPORT oct07 warning #1: the 2027-10-12..14 date (pass oct07-s2) comes from aiconference.com, but source still cited dev.events. Source now names the organiser.",
+    "set": { "source": "https://aiconference.com/" } }
+]
