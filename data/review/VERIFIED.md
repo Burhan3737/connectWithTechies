@@ -4,7 +4,7 @@
 checked against the organiser's own page, so a pass can spend its budget on what is
 still unknown rather than re-confirming what is settled.
 
-Updated 2026-10-06 · dataset holds 905 events.
+Updated 2026-10-07 · dataset holds 905 events.
 
 | status | count | share | meaning |
 |---|---:|---:|---|
@@ -19,12 +19,14 @@ A verification is a snapshot, not a subscription. `data/review/TO-VERIFY.tsv` is
 regenerated on every run from the rules below, so it refills itself rather than
 sitting empty and reading as "done" when it means "no longer watching".
 
-**9 of 905 events are due for a re-check.**
+**22 of 905 events are due for a re-check.**
 
 | reason | count | why it fires |
 |---|---:|---|
 | `never` | 2 | never checked |
 | `blocked` | 7 | previous check could not read the page |
+| `imminent` | 10 | coming up, and the check is stale relative to how close it is |
+| `rolled` | 3 | an annual edition ran since it was checked; next one is far off |
 
 Recurring groups (`weekly`, `monthly`, `rolling`, `quarterly`) are re-checked on a
 180-day clock rather than 90, because for them the useful question is whether the
@@ -648,7 +650,7 @@ Checked and correct as recorded.
 | LA Tech Week | Los Angeles | 2026-10-12 | 2026-10-04 | oct05-r2 | tech-week.com returns a Vercel checkpoint (429). The official Luma calendar luma.com/latw reads 'Welcome to LA Tech Week from October 12-18, 2026'. Its JSON-LD lists in-person events from 2026-10-13 to 2026-10-17 (Pacific time). Matches record 2026-10-12..18. |
 | LASCON | Austin | 2026-10-29 | 2026-10-06 | script | automated: page shows "october 29" and no decoy date |
 | Latinas in Tech | Multiple cities | — | 2026-08-26 | passC | latinasintech.org live ('Connecting, supporting and empowering Latina women working in tech'); JS-rendered chapter/event lists not readable, no dates published in the served HTML |
-| Launch Wisconsin | Milwaukee | 2026-10-06 | 2026-10-06 | script | automated: page shows "october 6" and no decoy date |
+| Launch Wisconsin | Milwaukee | — | 2026-10-06 | script | automated: page shows "october 6" and no decoy date |
 | LaunchVT Demo Night | Burlington | — | 2026-08-26 | passC | lccvermont.org/launchvt live, 110 Main Street Burlington VT, describes Demo Night as Vermont's largest pitch competition; 'Demo Night 2026' referenced with no date |
 | Legalweek New York | New York | 2027-03-01 | 2026-10-06 | script | automated: page shows "march 1" and no decoy date |
 | Lesbians Who Tech + Allies Summit | New York | 2026-10-05 | 2026-10-04 | script | automated: page shows "october 5" and no decoy date |
@@ -676,7 +678,7 @@ Checked and correct as recorded.
 | MasseyHacks | Windsor | — | 2026-08-26 | passC | masseyhacks.ca resolves and serves the MasseyHacks XII page (JS-rendered, no readable body); no date available |
 | McHacks | Montreal | — | 2026-08-26 | passC | mchacks.ca live, McHacks 13 at McGill downtown campus Montreal; Jan 17-18 2026 edition past, no next date |
 | MCP Community Connect | San Francisco | — | 2026-09-27 | e3 | globalai.community/e/bay9vh24: 'In person ... Mon, 14 September 2026 · 14:00 - 20:30 ... GitHub HQ San Francisco', registration closed. Held edition matches. No next San Francisco edition listed. |
-| MCP Dev Summit Toronto | Toronto | 2026-10-05 | 2026-10-04 | script | automated: page shows "oct 5, 2026" and no decoy date |
+| MCP Dev Summit Toronto | Toronto | — | 2026-10-04 | script | automated: page shows "oct 5, 2026" and no decoy date |
 | MDEV | Madison | 2026-11-06 | 2026-09-27 | d3 | mdevconf.com JSON-LD Event 'MDEV 26' startDate 2026-11-06T09:00-06:00, endDate 2026-11-07T17:00-06:00, OfflineEventAttendanceMode, location 'Alliant Energy Center', Madison 53713. Matches record. |
 | MEET Show | Moncton | 2028-05-03 | 2026-10-06 | script | automated: page shows "may 3" and no decoy date |
 | Meeting in the Millyard | Nashua | 2027-05-18 | 2026-10-06 | script | automated: page shows "may 18" and no decoy date |
@@ -735,7 +737,7 @@ Checked and correct as recorded.
 | New York State Innovation Summit | Buffalo | 2026-10-27 | 2026-10-06 | script | automated: page shows "october 27" and no decoy date |
 | New York Tech Week | New York | — | 2026-08-26 | 3r1 | verified against organiser page (top-78 by attendance) |
 | NH Tech Alliance Cybersecurity Summit | Manchester | — | 2026-09-27 | e3 | nhtechalliance.org/cybersecurity-summit: '2026 Agenda September 10th, 2026 Manchester Community College'. Held edition matches. No 2027 date published. |
-| NH Tech Alliance Innovation Summit | Nashua | 2026-10-06 | 2026-10-06 | script | automated: page shows "october 6" and no decoy date |
+| NH Tech Alliance Innovation Summit | Nashua | — | 2026-10-06 | script | automated: page shows "october 6" and no decoy date |
 | NH Tech Alliance Product of the Year | Concord | 2026-11-19 | 2026-10-06 | script | automated: page shows "november 19" and no decoy date |
 | NICAR Conference | Indianapolis | — | 2026-08-26 | passC | ire.org NICAR 2026 page live, JW Marriott, 10 S. West St, Indianapolis; March 5-8 2026 edition past, no 2027 date announced |
 | NM TechFest | Albuquerque | 2026-10-29 | 2026-10-06 | script | automated: page shows "october 29" and no decoy date |
