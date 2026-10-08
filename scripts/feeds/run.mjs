@@ -3,16 +3,19 @@
  * The feed: our own dynamic event data, built from many sources and maintained
  * by script.
  *
- *   node scripts/feeds/run.mjs              maintain + datasets (every run)
- *   node scripts/feeds/run.mjs --discover   also search every city for new events
- *                                           and new organisers to follow
+ *   node scripts/feeds/run.mjs              maintain + datasets + Luma discovery (every run)
+ *   node scripts/feeds/run.mjs --discover   also search Meetup and Eventbrite city by
+ *                                           city for new events and organisers (weekly)
  *   node scripts/feeds/run.mjs --dry-run    report, write nothing
  *
  * Two jobs:
  *
- *   discover  search Luma, Meetup and Eventbrite city by city. Events found are
- *             kept; organisers that prove to be tech communities are added to
- *             data/feeds/registry.json.
+ *   discover  Luma: every public event around each city, on every run — Luma
+ *             events are often posted days ahead, so a weekly sweep misses them.
+ *             Meetup and Eventbrite: their city searches, weekly. Organisers
+ *             that prove to be tech communities on Meetup and Eventbrite are
+ *             added to data/feeds/registry.json; Luma's no longer need to be,
+ *             since its full listing is read every run.
  *   maintain  re-read every registered organiser through its public calendar
  *             feed, plus the tech-only datasets (MLH, Devpost, confs.tech).
  *
@@ -102,17 +105,23 @@ for (const [name, fn] of [['mlh', mlh], ['devpost', devpost], ['confstech', conf
   }
 }
 
-if (DISCOVER) {
+{
+  // Luma on every run; Meetup and Eventbrite only with --discover.
+  const sources = [['luma', luma], ...(DISCOVER ? [['meetup', meetup], ['eventbrite', eventbrite]] : [])];
   const cities = registry.discovery.filter((c) => !onlyCity || c.city === onlyCity);
-  log(`\nDiscovery across ${cities.length} cities`);
+  log(`\nDiscovery across ${cities.length} cities: ${sources.map(([n]) => n).join(', ')}`);
   for (const city of cities) {
     const counts = [];
-    for (const [name, mod] of [['luma', luma], ['meetup', meetup], ['eventbrite', eventbrite]]) {
+    for (const [name, mod] of sources) {
       try {
-        const { events, organisers } = await mod.discover(city);
-        take(events, {});
+        const { events, organisers, complete } = await mod.discover(city);
+        // A listing read to its end vouches for its events: one missing from it
+        // next time, not yet started, was taken down (see history below).
+        const area = complete ? `${name}-area:${city.city}` : '';
+        take(events, area ? { viaArea: area } : {});
         for (const o of organisers) if (!orgFound.has(o.id)) orgFound.set(o.id, o);
         seenSources.add(`${name}:${city.city}`);
+        if (area) seenSources.add(area);
         counts.push(`${name} ${events.length}`);
       } catch (err) {
         report.failedSources.push(`${name}:${city.city}: ${err.message}`);
@@ -171,7 +180,11 @@ for (const [id, o] of orgFound) {
 
   const verdict = judgeOrganiser(candidate, titles);
   if (verdict.tech) techOrg.add(id);
-  if (verdict.tech && !registered.has(id)) {
+  // Luma's full listing is read every run, so its organisers need not be
+  // followed: following them all would only grow every refresh by hundreds of
+  // calendar reads. They are still judged above, so their events count as a
+  // tech organiser's. Calendars already registered stay followed.
+  if (verdict.tech && !registered.has(id) && o.platform !== 'luma') {
     const entry = { ...o, tech: true, reason: verdict.reason, added: TODAY };
     registered.set(id, entry);
     registry.sources.push(entry);
@@ -462,7 +475,7 @@ const toRecord = (e) => ({
   feed_id: e.series ? `series:${createHash('sha1').update(e.series.key).digest('hex').slice(0, 16)}` : e.feed_id,
   ...(e.series ? { feed_dates: e.series.dates.slice(0, 12) } : {}),
   // The registry feed or dataset it was read from; discovery hits carry none.
-  feed_via: e.registryId || (e.sourceIsTech ? e.feed : ''),
+  feed_via: e.registryId || e.viaArea || (e.sourceIsTech ? e.feed : ''),
   feed_organiser: e.organiser?.name || registered.get(orgIdOf(e))?.name || '',
   feed_relevance: e.relevance,
   feed_first_seen: TODAY,

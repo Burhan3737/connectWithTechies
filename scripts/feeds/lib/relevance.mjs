@@ -41,6 +41,11 @@ const STRONG = [
   'robot', 'robots', 'humanoid', 'hackaday', '3d printing', '3d printer', 'cnc', 'laser cutter', 'arduino',
   'raspberry pi', 'product people', 'product meetup', 'product happy hour', 'product leaders', 'productcon', 'producttank', 'space week', 'aerospace', 'satellite', 'design development', 'design and development',
   'web design', 'google', 'microsoft', 'nvidia', 'openai', 'anthropic', 'github', 'figma',
+  // Fourth pass, from Luma's full city listings: how tech people name their own events.
+  'dev', 'devfest', 'dev fest', 'gdg', 'google developer', 'developer group', 'hack night',
+  'builder', 'agent', 'evals', 'agentics', 'mcp', 'gtm', 'cto', 'ctos', 'cio', 'cfo', 'vcs',
+  'investor', 'crypto', 'defi', 'electronics', 'firmware', 'mac admins', 'sysadmin', 'sysadmins',
+  'devsecops', 'cyber', 'demo day', 'coworking', 'cowork', 'tech careers',
 ];
 
 // Clearly not our subject, or spam wearing a networking badge.
@@ -62,10 +67,17 @@ const NEGATIVE = [
   'cbap', 'pmp', 'six sigma', 'leadership training', 'course in',
 ];
 
+// Never ours, even beside tech words.
+const HARD_NEGATIVE = ['real estate', 'reia', 'forex', 'trading signals', 'day trading', 'options trading',
+  'make money online', 'passive income', 'network marketing', 'mlm', 'financial freedom', 'credit repair'];
+
 // Phrases whose tech-sounding word means something else: a "business developers"
 // meeting is sales, a "real estate developer" builds houses. Removed before matching.
 const FALSE_FRIENDS = /\b(business|real estate|property|land|personal|self|leadership|community|economic) develop(ers?|ment)\b/g;
+// Names like "Waterloo.dev" and "Plain.ai" carry their field in the domain:
+// split the tech domain endings off so "dev" and "ai" read as words.
 const words = (s) => ` ${String(s || '').toLowerCase().replace(FALSE_FRIENDS, ' ')
+  .replace(/\.(dev|ai|io|tech)\b/g, ' $1')
   .replace(/[^a-z0-9+#./-]+/g, ' ').replace(/\s+/g, ' ').trim()} `;
 const has = (hay, term) => hay.includes(` ${term} `) || (term.endsWith(' ') && hay.includes(` ${term}`));
 
@@ -119,6 +131,11 @@ export function judge(e, { sourceIsTech = false, organiserIsTech = false } = {})
   // Week" is a room full of tech people, while "AI for real estate investors"
   // has one borrowed word and is still dropped.
   if (tNeg.length && tPos.length < 2) return { keep: false, score: -5, reason: `off-topic title: ${tNeg[0]}` };
+  // Some topics are the spam this filter exists for, however many tech words
+  // ride along ("Real Estate Investor Pitch Night"): real-estate investing,
+  // trading signals, get-rich schemes. Proptech is the one exception.
+  const hard = hits(title, HARD_NEGATIVE);
+  if (hard.length && !has(title, 'proptech')) return { keep: false, score: -8, reason: `off-topic title: ${hard[0]}` };
 
   // A calendar we registered because its organiser is a tech community gets
   // the benefit of the doubt on everything except an off-topic title.

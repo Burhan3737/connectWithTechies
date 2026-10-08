@@ -17,7 +17,9 @@
 import { get, pageData, jsonLd, findAll, assignedJson } from '../lib/http.mjs';
 import { fromParts } from '../lib/geo.mjs';
 
-const PAGES = Number(process.env.EVENTBRITE_PAGES || 4);
+// Every page the listing has (it stops when Eventbrite says there are no more);
+// this is only a ceiling. Four pages missed a third of Toronto's 179 events.
+const PAGES = Number(process.env.EVENTBRITE_PAGES || 15);
 // Free-text searches beyond the category: hackathons and founder networking are
 // often filed under Business or Other.
 const KEYWORDS = ['hackathon', 'startup', 'tech-networking'];

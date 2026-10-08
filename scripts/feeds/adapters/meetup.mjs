@@ -10,9 +10,16 @@
 import { get, pageData } from '../lib/http.mjs';
 import { fromParts } from '../lib/geo.mjs';
 
-// Technology is Meetup's category 546; a keyword search broadens it to the
+// Technology is Meetup's category 546; keyword searches broaden it to the
 // founder and startup crowd, who often file under Career & Business instead.
-const QUERIES = ['categoryId=546', 'keywords=startup', 'keywords=developers'];
+// Each search returns only its first ~15 events (the rest load through
+// Meetup's private API), so breadth comes from asking about many topics: each
+// surfaces different groups, and a group once found is followed for good —
+// its own page lists all its events.
+const QUERIES = ['categoryId=546', 'keywords=startup', 'keywords=developers', 'keywords=ai',
+  'keywords=python', 'keywords=javascript', 'keywords=data', 'keywords=cloud', 'keywords=security',
+  'keywords=product', 'keywords=design', 'keywords=hackathon', 'keywords=blockchain',
+  'keywords=women%20in%20tech', 'keywords=game%20development'];
 
 /** Meetup's Apollo cache -> [feed event, group] for every in-person event with a place. */
 export function readApollo(body) {

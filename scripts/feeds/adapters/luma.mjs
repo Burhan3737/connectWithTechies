@@ -2,10 +2,11 @@
  * Luma discovery: a city's upcoming in-person events, and the organiser
  * calendars behind them.
  *
- * Uses the paginated endpoint Luma's own city pages call. It is undocumented —
- * Luma's official API only lists calendars you manage — so it is read gently
- * (a few pages per city, cached, one request at a time) and treated as a way
- * to *find* organisers. Once an organiser is found, its calendar is re-read
+ * Reads the listing Luma's map view uses: every public event around a point,
+ * paged. (The city listing it replaced is only Luma's featured picks — 23 events
+ * for Toronto where the map holds 378 — so most events never reached us.) It is
+ * undocumented — Luma's official API only lists calendars you manage — so it
+ * is read gently: one request at a time, paused, cached. Once an organiser is found, its calendar is re-read
  * through the endpoint Luma's own calendar pages call, which gives each event's
  * city, region and time zone. Luma's iCal subscription does not: it withholds
  * the address until you register, so a calendar that runs events in Dublin,
@@ -14,7 +15,8 @@
 import { getJSON } from '../lib/http.mjs';
 import { fromParts, localDate } from '../lib/geo.mjs';
 
-const PAGES = Number(process.env.LUMA_PAGES || 3);
+// A ceiling, not a target: a city's listing ends when Luma says it has no more.
+const PAGES = Number(process.env.LUMA_PAGES || 60);
 const CALENDAR_PAGES = Number(process.env.LUMA_CALENDAR_PAGES || 4);
 
 /** A Luma entry as a feed event; place is null when Luma gives no US/Canada city. */
@@ -43,13 +45,14 @@ export function toEvent(x, cal) {
 }
 
 export async function discover(city) {
-  if (!city.luma_place) return { events: [], organisers: [] };
+  if (city.lat == null || city.lng == null) return { events: [], organisers: [] };
   const events = [];
   const organisers = new Map();
   let cursor = '';
+  let complete = false;
   for (let page = 0; page < PAGES; page++) {
-    const url = 'https://api.lu.ma/discover/get-paginated-events?discover_place_api_id=' +
-      encodeURIComponent(city.luma_place) + '&pagination_limit=50' +
+    const url = `https://api.lu.ma/discover/get-paginated-events?latitude=${city.lat}&longitude=${city.lng}` +
+      '&pagination_limit=50' +
       (cursor ? `&pagination_cursor=${encodeURIComponent(cursor)}` : '');
     const { ok, status, data } = await getJSON(url);
     if (!ok || !data) {
@@ -80,10 +83,12 @@ export async function discover(city) {
         });
       }
     }
-    if (!data.has_more || !data.next_cursor) break;
+    if (!data.has_more || !data.next_cursor) { complete = true; break; }
     cursor = data.next_cursor;
   }
-  return { events, organisers: [...organisers.values()] };
+  // complete: the listing was read to its end, so an event missing from it
+  // has been taken down. A listing cut short by the page ceiling proves nothing.
+  return { events, organisers: [...organisers.values()], complete };
 }
 
 /**

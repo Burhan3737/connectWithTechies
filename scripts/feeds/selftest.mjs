@@ -14,7 +14,7 @@ import { toEvent as eventbriteEvent } from './adapters/eventbrite.mjs';
 import { devpostRange, looksLikeVenue } from './adapters/datasets.mjs';
 import { parseIcal } from './lib/ical.mjs';
 import { fromText, fromParts, localDate } from './lib/geo.mjs';
-import { judge } from './lib/relevance.mjs';
+import { judge, judgeOrganiser } from './lib/relevance.mjs';
 import { assignedJson } from './lib/http.mjs';
 
 let failed = 0, passed = 0;
@@ -112,6 +112,14 @@ console.log('\nRelevance');
 ok(judge({ title: 'Python developers meetup' }).keep, 'clear tech title kept');
 ok(!judge({ title: 'Romantasy Book Club' }).keep, 'off-topic title dropped');
 ok(!judge({ title: 'Negotiation Skills Training | 2 Day Workshop', platformTech: 'eventbrite' }).keep, 'corporate course dropped despite tag');
+// Missed before Luma's full listings were read (oct07): how tech people name their events.
+for (const t of ['Waterloo.Dev Fest: Who Gets to Build, Own, and Define the Future?', 'INNOVATE x Amazon: Tech Careers Edition',
+  'CTO Dinner (Ripple x Mycroft x QA Wolf)', 'Toronto Mac Admins Meetup', 'Private Dinner on Personal Agent Evals']) {
+  ok(judge({ title: t }).keep, `kept: ${t.slice(0, 40)}`);
+}
+ok(judgeOrganiser({ name: 'Waterloo.dev', description: '' }, []).tech, 'a .dev organiser name reads as tech');
+ok(!judge({ title: 'Real Estate Investor Pitch Night' }).keep, 'real-estate investing dropped even beside pitch words');
+ok(judge({ title: 'Proptech founders night: AI meets real estate' }).keep, 'proptech still kept');
 
 console.log('\nEmbedded JSON');
 ok(assignedJson('<script>window.__SERVER_DATA__ = {"a":{"b":"}{\\"x"}};</script>', 'window.__SERVER_DATA__')?.a?.b === '}{"x',
