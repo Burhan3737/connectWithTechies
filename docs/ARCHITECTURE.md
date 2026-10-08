@@ -37,9 +37,9 @@ Full list, access details and candidates under review: [SOURCES.md](SOURCES.md).
 
 | Source | How it is read | Role |
 |---|---|---|
-| **Luma** | endpoints Luma's own city and calendar pages use | find events per city → follow the organiser's calendar |
-| **Meetup** | structured data embedded in search and group pages | find events per city (Technology + startup/dev searches) → follow the group |
-| **Eventbrite** | server data on city listings (Science & Tech + hackathon/startup/networking searches) and organiser pages | find events per city → follow tech organisers with 2+ events |
+| **Luma** | the listing Luma's map uses: every public event around each city, all pages | every run; plus the calendars already followed |
+| **Meetup** | structured data embedded in search and group pages | weekly: 15 topic searches per city find groups → each group is followed |
+| **Eventbrite** | server data on city listings (every Science & Tech page + hackathon/startup/networking searches) and organiser pages | weekly: find events per city → follow tech organisers with 2+ events |
 | **MLH** | season pages | every in-person student hackathon |
 | **Devpost** | public hackathon listing | in-person hackathons |
 | **confs.tech** | open conference dataset on GitHub | US/Canada tech conferences |
@@ -126,7 +126,7 @@ approaching, or the check has aged (90 days; 180 for recurring groups).
 | When | Run |
 |---|---|
 | Routine refresh | `npm run refresh`, then `npm run stale` to see what needs an agent |
-| Weekly, find new events and organisers | `npm run feeds:discover` → skim `data/feeds/last-run.json` |
+| Weekly, find new Meetup groups and Eventbrite events | `npm run feeds:discover` → skim `data/feeds/last-run.json` (Luma is searched on every run) |
 | Retire a noisy organiser | add `{ "url": "...", "tech": false, "reason": "..." }` to `data/review/sources-<name>.json` |
 | Follow a new organiser | add `{ "url": "https://luma.com/<cal>", "reason": "..." }` to the same kind of file |
 | Full agent cycle | ask Claude to "refresh the events" (runs the `refresh-events` skill) |

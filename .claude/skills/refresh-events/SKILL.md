@@ -54,8 +54,10 @@ npm run refresh
 That first re-reads the feed (`scripts/feeds/run.mjs`: every registered organiser plus
 MLH, Devpost and confs.tech — one-off events, script-maintained, never dispatched), then
 runs the build (rollover), then `agent/tools/verify-dates.mjs --write`, then the ledger.
-Once a week, run `npm run feeds:discover` instead of the feed step alone: it searches
-every city on Luma, Meetup and Eventbrite for new events and new organisers to follow.
+Every run reads Luma's full listing around all 30 cities. Once a week, run
+`npm run feeds:discover` instead of the feed step alone: it also searches Meetup and
+Eventbrite in every city for new events and organisers to follow (~45 minutes, mostly
+Eventbrite's enforced pace).
 Read `data/feeds/last-run.json` afterwards — the organisers it registered and a sample of
 what the relevance gate dropped — and retire any organiser that is not ours with a
 `data/review/sources-<pass>.json` entry carrying `"tech": false`.

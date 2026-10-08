@@ -70,7 +70,7 @@ data/events.json    the single file the app reads
 |---|---|
 | `npm run refresh` | **the maintenance loop** — re-read the feed, rollover, script-confirm what it can, regenerate the queue |
 | `npm run feeds` | re-read every registered organiser and the tech datasets, then rebuild |
-| `npm run feeds:discover` | also search all 30 discovery cities for new events and new organisers (weekly) |
+| `npm run feeds:discover` | also search Meetup and Eventbrite in all 30 cities for new events and organisers (weekly; Luma is searched every run) |
 | `npm run stale` | print the re-check queue |
 | `npm run build:data` | rebuild `data/events.json` and print a validation report |
 | `npm run apply` | apply reviewer patches from `data/review/` |
@@ -109,9 +109,9 @@ It is built and maintained by script from several sources, none of which needs a
 
 | source | how it is read | what it gives |
 |---|---|---|
-| **Luma** | the endpoints Luma's own city and calendar pages call | city discovery, then each organiser's calendar, with places and time zones |
-| **Meetup** | the structured data embedded in search and group pages | city discovery (Technology category + startup/developer searches), then each group |
-| **Eventbrite** | server data on city listings and organiser pages | city discovery (Science & Tech + hackathon/startup/networking searches), then tech organisers with 2+ events |
+| **Luma** | the listing Luma's map uses, and calendar pages | every public event around each city, on every run, with places and time zones |
+| **Meetup** | the structured data embedded in search and group pages | weekly topic searches per city find groups; each group is then read in full |
+| **Eventbrite** | server data on city listings and organiser pages | weekly: every Science & Tech page per city + hackathon/startup/networking searches, then tech organisers with 2+ events |
 | **MLH** | the season pages | every in-person student hackathon |
 | **Devpost** | its public hackathon listing | in-person hackathons |
 | **confs.tech** | the open conference dataset on GitHub | US and Canadian tech conferences |
