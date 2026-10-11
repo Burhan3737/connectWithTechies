@@ -52,7 +52,8 @@ const REPORT = join(ROOT, 'data', 'feeds', 'last-run.json');
 const args = process.argv.slice(2);
 const DISCOVER = args.includes('--discover');
 const DRY = args.includes('--dry-run');
-const onlyCity = (args.find((a) => a.startsWith('--city=')) || '').slice(7);
+// --city=Toronto or --city=Edmonton,Winnipeg: discover only in these cities.
+const onlyCities = new Set((args.find((a) => a.startsWith('--city=')) || '').slice(7).split(',').filter(Boolean));
 const TODAY = today();
 const KEEP_PAST_DAYS = 60;   // held events stay visible under Past for this long
 
@@ -74,14 +75,16 @@ const seenSources = new Set();  // feeds read successfully this run
 const orgTitles = new Map();    // organiser id -> titles seen, for track-record judgement
 const orgFound = new Map();     // organiser id -> registry candidate
 
-// Reviewed corrections for places a source gets wrong (data/feeds/place-overrides.json).
+// Reviewed corrections for feed events a source gets wrong (data/feeds/place-overrides.json):
+// a corrected place, or `"drop": true` for a listing that is not a real event.
 const OVERRIDES_FILE = join(ROOT, 'data', 'feeds', 'place-overrides.json');
 const placeOverrides = existsSync(OVERRIDES_FILE) ? JSON.parse(readFileSync(OVERRIDES_FILE, 'utf8')) : {};
 
 function take(list, flags) {
   for (const raw of list) {
     const fix = placeOverrides[raw.feed_id];
-    const e = fix ? { ...raw, place: fromParts(fix) || raw.place, venue: fix.venue ?? raw.venue } : raw;
+    const e = fix?.drop ? { ...raw, reviewDrop: fix.reason || 'dropped on review' }
+      : fix ? { ...raw, place: fromParts(fix) || raw.place, venue: fix.venue ?? raw.venue } : raw;
     candidates.push({ ...e, ...flags });
     bump(report.bySource, e.feed);
     if (e.organiser?.id) {
@@ -108,7 +111,7 @@ for (const [name, fn] of [['mlh', mlh], ['devpost', devpost], ['confstech', conf
 {
   // Luma on every run; Meetup and Eventbrite only with --discover.
   const sources = [['luma', luma], ...(DISCOVER ? [['meetup', meetup], ['eventbrite', eventbrite]] : [])];
-  const cities = registry.discovery.filter((c) => !onlyCity || c.city === onlyCity);
+  const cities = registry.discovery.filter((c) => !onlyCities.size || onlyCities.has(c.city));
   log(`\nDiscovery across ${cities.length} cities: ${sources.map(([n]) => n).join(', ')}`);
   for (const city of cities) {
     const counts = [];
@@ -217,13 +220,26 @@ for (const file of proposals) {
     if (!src) { report.failedSources.push(`${file}: could not resolve ${p.url}`); continue; }
     const existing = registered.get(src.id);
     if (p.tech === false) {
-      if (existing && existing.tech !== false) {
+      // An organiser never followed can still be retired: discovery keeps
+      // finding its events, so it is recorded as retired rather than ignored.
+      if (!existing) {
+        const entry = { ...src, tech: false, reason: `retired by ${file}: ${p.reason || ''}`.trim(), added: TODAY };
+        registered.set(src.id, entry);
+        registry.sources.push(entry);
+        report.newOrganisers.push(`- ${entry.name || src.id} retired — ${p.reason || file}`);
+      } else if (existing.tech !== false) {
         existing.tech = false;
         existing.reason = `retired by ${file}: ${p.reason || ''}`.trim();
         techOrg.delete(src.id);
         report.newOrganisers.push(`- ${existing.name} retired — ${p.reason || file}`);
       }
       continue;
+    }
+    // An organiser already followed can be switched to judging each event.
+    if (existing && p.judge_each && !existing.judgeEvents && existing.tech !== false) {
+      existing.judgeEvents = true;
+      techOrg.delete(src.id);
+      report.newOrganisers.push(`- ${existing.name} now judged event by event — ${p.reason || file}`);
     }
     if (existing) continue;
     const entry = { ...src, tech: true, ...(p.judge_each ? { judgeEvents: true } : {}),
@@ -308,14 +324,24 @@ const orgIdOf = (e) => (e.registryId || (e.feed === 'luma' ? `luma-cal:${e.organ
   e.feed === 'meetup' ? `meetup:${e.organiser?.id}` :
   e.feed === 'eventbrite' ? (e.organiser?.id || '') : ''));
 
+// Organisers a person retired (a sources-*.json entry with tech: false) are not
+// ours at all: a bonsai club posting "Claude workshops" in 20 cities passes the
+// title check, so their events are turned away whatever they are called. Those
+// the script judged non-tech itself keep per-event judging.
+const retiredOrgs = registry.sources.filter((s) => s.tech === false && /^retired by /.test(s.reason || ''));
+const retiredIds = new Set(retiredOrgs.map((s) => s.id));
+const retiredNames = new Set(retiredOrgs.map((s) => s.name).filter(Boolean));
+
 const gated = [];
 for (const e of candidates) {
-  const why = !e.place ? 'no US/Canada location'
+  const why = e.reviewDrop ? 'dropped on review'
+    : !e.place ? 'no US/Canada location'
     : e.online ? 'online'
     : !/^\d{4}-\d{2}-\d{2}$/.test(e.start_date || '') ? 'no date'
     // Past once it has ended: a conference on its second day is still on.
     : (e.end_date || e.start_date) < TODAY ? 'already past'
     : !e.url ? 'no link'
+    : retiredIds.has(orgIdOf(e)) || retiredNames.has(e.organiser?.name) ? 'retired organiser'
     : '';
   if (why) { bump(report.dropped, why); continue; }
   const v = judge(e, { sourceIsTech: e.sourceIsTech, organiserIsTech: e.organiserIsTech || techOrg.has(orgIdOf(e)) });
@@ -519,6 +545,13 @@ for (const r of previous) {
   // Seen this run and turned away by the gate (judged off-topic, now curated,
   // a duplicate): history must not bring it back.
   if (candidateIds.has(r.feed_id)) continue;
+  if (placeOverrides[r.feed_id]?.drop) { vanished++; continue; }
+  // Its organiser has since been retired: not carried, whatever its date.
+  // A discovery hit names no feed, and a group retired before it was ever
+  // followed has no display name on record, so a Meetup event's own URL is checked too.
+  const meetupGroup = String(r.url || '').match(/meetup\.com\/([^/]+)\/events\//i)?.[1];
+  if (retiredIds.has(r.feed_via) || retiredNames.has(r.feed_organiser) ||
+      (meetupGroup && retiredIds.has(`meetup:${meetupGroup}`))) { vanished++; continue; }
   // History keeps an event between reads, not past the rules: a place today's
   // checks would reject ("Tennessee" as a city) is not carried forward.
   if (!fromParts({ city: r.city, region: r.region, country: r.country })) { vanished++; continue; }
