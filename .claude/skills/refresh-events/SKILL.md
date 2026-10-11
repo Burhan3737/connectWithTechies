@@ -114,7 +114,31 @@ and dead conferences, but a removal is the one operation that loses data.
 
 One `auditor`, after the rebuild. It runs `agent/tools/audit-run.mjs` for everything
 countable, then spot-checks the judgement calls, and writes
-`data/review/AUDIT-REPORT.md`.
+`data/review/AUDIT-REPORT.md` plus `data/review/AUDIT-FINDINGS.json`.
+
+**Log every audit run**, clean ones included — a clean run is the data point that says
+audits could be less frequent:
+
+```bash
+node agent/tools/audit-log.mjs add      # records the run and its findings in the audit log
+```
+
+## Keeping the audit log
+
+`data/review/audit-log.json` is the permanent record of what auditors found and what was
+done about it; `docs/AUDIT-LOG.md` is generated from it. When you fix, decline or postpone
+a finding — in this cycle or a later one — record it:
+
+```bash
+node agent/tools/audit-log.mjs resolve <finding-id> fixed "<what changed, which file/patch>"
+node agent/tools/audit-log.mjs resolve <finding-id> wont-fix "<why>"
+node agent/tools/audit-log.mjs resolve <finding-id> deferred "<waiting on what>"
+node agent/tools/audit-log.mjs open     # what is still outstanding
+```
+
+A finding fixed by a re-audit's clean result is still resolved explicitly — the log should
+never need to be inferred. Open findings from earlier cycles are part of each new cycle:
+work them before the queue.
 
 ## Step 5 — decide
 
@@ -149,5 +173,6 @@ dispatching from the queue again — a fix-up pass is scoped by the report inste
 ## Step 6 — report
 
 Say plainly: how many iterations it took, what the curator changed, what the auditor
-caught, and what is still open. If you stopped at three iterations with findings
+caught, and what is still open (`audit-log.mjs open`; every finding should be logged and
+either resolved or visibly open in `docs/AUDIT-LOG.md`). If you stopped at three iterations with findings
 outstanding, lead with that — it is the most important thing in the report.

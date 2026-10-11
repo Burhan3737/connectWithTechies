@@ -127,10 +127,11 @@ approaching, or the check has aged (90 days; 180 for recurring groups).
 |---|---|
 | Routine refresh | `npm run refresh`, then `npm run stale` to see what needs an agent |
 | Weekly, find new Meetup groups and Eventbrite events | `npm run feeds:discover` → skim `data/feeds/last-run.json` (Luma is searched on every run) |
-| Retire a noisy organiser | add `{ "url": "...", "tech": false, "reason": "..." }` to `data/review/sources-<name>.json` |
+| Retire a noisy organiser | add `{ "url": "...", "tech": false, "reason": "..." }` to `data/review/sources-<name>.json` — its events leave the feed on the next run |
 | Follow a new organiser | add `{ "url": "https://luma.com/<cal>", "reason": "..." }` to the same kind of file |
 | Full agent cycle | ask Claude to "refresh the events" (runs the `refresh-events` skill) |
 | Check before shipping | `npm test` · `npm run audit` · `npm run check:data` |
+| What auditors flagged, and what was fixed | [AUDIT-LOG.md](AUDIT-LOG.md) · `node agent/tools/audit-log.mjs open` |
 | Publish | commit and push `main`; the workflow tests, builds and deploys to GitHub Pages |
 
 ## Code map

@@ -94,6 +94,23 @@ What you verified that held up, so the next auditor does not repeat it.
 Every finding needs: the event, what is wrong, the evidence you have for that, and what
 the curator should do. A finding a curator cannot act on is not a finding.
 
+**Also write `data/review/AUDIT-FINDINGS.json`** — the same findings, structured, for the
+audit log (`docs/AUDIT-LOG.md`). The orchestrator logs it; you only write it:
+
+```json
+{ "date": "YYYY-MM-DD", "iteration": 1,
+  "scope": "one line: what run you audited",
+  "checked": "one line: what you sampled that held up",
+  "findings": [
+    { "severity": "blocking", "event": "Name (City)", "summary": "what is wrong",
+      "recommendation": "what to set or do", "repeat_of": "2026-10-07-i3-W2" } ] }
+```
+
+Before writing it, run `node agent/tools/audit-log.mjs open`. If a finding is one that is
+already open from an earlier run, still report it, and set `repeat_of` to that id — repeats
+are how the log shows a problem the loop keeps failing to fix. A clean run is
+`"findings": []`.
+
 Be specific about counts in your reply — the orchestrator branches on them:
 
 - **blocking count** — data is wrong or lost

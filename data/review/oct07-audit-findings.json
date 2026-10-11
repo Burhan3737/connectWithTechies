@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-07",
+  "iteration": 3,
+  "scope": "Oct 7 refresh, final re-audit (logged after the fact from AUDIT-REPORT.md; earlier runs predate the log)",
+  "checked": "Mechanical audit 0 blocking; 43/43 dispatched rows have a ledger entry; 3/3 changed links resolve.",
+  "findings": [
+    { "severity": "blocking", "event": "Hack Club Capitol (Washington, DC)",
+      "summary": "Feed listed the Hack Club directory window (Sep 1 - Oct 9) instead of the event dates.",
+      "recommendation": "Curated record with Oct 16-18, 2026 from capitol.hackclub.com." },
+    { "severity": "warning", "event": "Tech Week non-tech socials",
+      "summary": "Wine tasting, speed dating, run club and a party from Tech Week calendars are listed.",
+      "recommendation": "User decision: filter non-tech socials from tech-week calendars or keep them." },
+    { "severity": "warning", "event": "Hardware + AI Boston (Boston, 2026-10-20)",
+      "summary": "Taken down as cancelled because the Tough Tech Week calendar unlisted it, but the event page is live.",
+      "recommendation": "Restore it (luma.com/iga3yya2); re-check an event's own page before treating unlisting as cancellation." }
+  ]
+}
