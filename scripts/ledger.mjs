@@ -89,7 +89,12 @@ if (!reportOnly) {
       if (!prev) { state.entries[k] = next; merged++; continue; }
       const sameCycleRedo = next.cycle === prev.cycle && next.checked_on >= prev.checked_on;
       const unsureOverSure = next.status === 'blocked' && prev.status !== 'blocked' && !sameCycleRedo;
-      if (unsureOverSure) continue;
+      // The confirmation stands, but the attempt is still recorded: without it the
+      // audit reads the row as skipped, and the window rule re-sends it tomorrow.
+      if (unsureOverSure) {
+        prev.last_attempt = { on: next.checked_on, cycle: next.cycle, status: next.status, evidence: next.evidence };
+        continue;
+      }
       if (sameCycleRedo || RANK[next.status] > RANK[prev.status] || next.checked_on > prev.checked_on) {
         state.entries[k] = next; upgraded++;
       }
@@ -233,7 +238,9 @@ function stalenessOf(e, hit) {
 
   if (until === null && ranSinceChecked) return 'rolled';
 
-  if (age >= 45 && !e.next_date) {
+  // "Not looked at": a blocked attempt counts — the page had nothing new to read.
+  const lookedAge = hit.last_attempt?.on ? Math.min(age, daysBetween(hit.last_attempt.on, today)) : age;
+  if (lookedAge >= 45 && !e.next_date) {
     const away = monthsAway(e);
     if (away >= 2 && away <= 5) return 'window';
   }

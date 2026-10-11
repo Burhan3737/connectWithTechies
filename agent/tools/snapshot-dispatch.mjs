@@ -58,12 +58,17 @@ if (existsSync(needs)) {
 }
 
 // SHARED-PAGES: name, city, url, shares_with — events whose link is a listing
-// shared with other events, so each needs its own URL.
+// shared with other events, so each needs its own URL. Only curated events:
+// feed events (two sessions of one Luma series share its page) are the feed
+// script's to maintain, never a curator's, so dispatching them guarantees a
+// "skipped" row.
+const curated = new Set(JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8')).events
+  .filter((e) => !e.feed_source).map((e) => `${norm(e.name)}|${norm(e.city)}`));
 const shared = join(REVIEW, 'SHARED-PAGES.tsv');
 if (existsSync(shared)) {
   for (const line of readFileSync(shared, 'utf8').trim().split('\n').slice(1)) {
     const c = line.split('\t');
-    if (c[0]) rows.push([c[0], c[1], 'SHARED-PAGE:needs-own-url']);
+    if (c[0] && curated.has(`${norm(c[0])}|${norm(c[1])}`)) rows.push([c[0], c[1], 'SHARED-PAGE:needs-own-url']);
   }
 }
 

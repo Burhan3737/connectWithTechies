@@ -131,7 +131,7 @@ const ledger = existsSync(join(REVIEW, 'verified.json'))
 // files its ledger entry under the corrected city, which is right — insisting
 // on the dispatched city would report the fix as a skipped row.
 const answeredToday = new Set(
-  Object.values(ledger).filter((v) => v.checked_on === today).map((v) => norm(v.name)));
+  Object.values(ledger).filter((v) => v.checked_on === today || v.last_attempt?.on === today).map((v) => norm(v.name)));
 
 const unanswered = dispatched.filter((d) => !answeredToday.has(norm(d.name)));
 if (dispatched.length) {
