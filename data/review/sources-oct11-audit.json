@@ -1,0 +1,137 @@
+[
+  {
+    "url": "https://www.meetup.com/the-claude-code-weekly-connection-group/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/easy-claude-code-learning-and-hangouts/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/casual-coding-with-claude-code-enthusiasts/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/community-of-claude-code-weekend-developers/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/friendly-claude-code-weekly-jam-sessions/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/collaborative-coding-with-claude-open-sessions/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/building-projects-with-claude-code-together/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/claude-code-collaborative-coding-mentorship-circle/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/building-together-with-claude-code-skills/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/claude-code-enthusiasts-evening-social-club/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/claude-code-enthusiasts-and-social-hackers/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/bridge-crew-socials-and-strategy-nights/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/first-timers-finding-their-funny-bone/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/the-neighborhood-compost-and-social-club/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B1: templated Claude Code session network — rotating private addresses, several 1-hour sessions per city per day, boilerplate text."
+  },
+  {
+    "url": "https://www.meetup.com/Charlotte-Mecklenburg-Library-Meetup/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B2: board games, film, yarn club."
+  },
+  {
+    "url": "https://www.meetup.com/Hammerspace-Community-Workshop-and-Makerspace/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B2: blacksmithing and craft workshops."
+  },
+  {
+    "url": "https://www.meetup.com/ann-arbor-career-network-meetup-group/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B2: Common Ground Co.: wellness and crafts."
+  },
+  {
+    "url": "https://www.meetup.com/women-working-remotely-meetup-group/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B2: remote-work social, not tech."
+  },
+  {
+    "url": "https://www.meetup.com/building-a-christian-conscience/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B2: Bible study."
+  },
+  {
+    "url": "https://www.meetup.com/cbus-maker-meetup-arts-crafts-community/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B2: arts and crafts."
+  },
+  {
+    "url": "https://www.eventbrite.com/o/27678213691",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i1 B2: Hartwig Inc., a machine-tool dealer's CNC training classes."
+  },
+  {
+    "url": "https://www.meetup.com/hackerlab/events/ical/",
+    "judge_each": true,
+    "reason": "AUDIT 2026-10-11-i1 W1: MADE Makerspace — mostly craft classes; judge each event."
+  },
+  {
+    "url": "https://www.eventbrite.com/o/29737939547",
+    "judge_each": true,
+    "reason": "AUDIT 2026-10-11-i1 W1: MakerSpace Charlotte — mostly craft classes; judge each event."
+  },
+  {
+    "url": "https://www.meetup.com/lace-up-for-casual-hockey-nights/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i2 W1: repurposed group posting the templated Claude Code session network (aiventurelab.org funnel)."
+  },
+  {
+    "url": "https://www.meetup.com/crafting-better-blogs-together-social-club/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i2 W1: repurposed group posting the templated Claude Code session network (aiventurelab.org funnel)."
+  },
+  {
+    "url": "https://www.meetup.com/friendly-german-chats-for-absolute-beginners/events/ical/",
+    "tech": false,
+    "reason": "AUDIT 2026-10-11-i2 W1: repurposed group posting the templated Claude Code session network (aiventurelab.org funnel)."
+  },
+  {
+    "url": "https://www.meetup.com/the-longevity-social-club/events/ical/",
+    "judge_each": true,
+    "reason": "AUDIT 2026-10-11-i2 W2: mostly founder socials; judge each event."
+  }
+]

@@ -1684,17 +1684,17 @@
     "country": "Canada",
     "venue": "University of Calgary",
     "cadence": "annual",
-    "month": "January",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "",
+    "month": "February",
+    "next_date": "2027-02-13",
+    "next_date_end": "2027-02-14",
+    "last_date": "2026-02-14",
     "status": "recurring-tbd",
     "attendance": "",
     "cost": "free",
     "audience": "students",
-    "url": "https://calgaryhacks2026.devpost.com/",
+    "url": "https://calgaryhacks.ca/",
     "description": "A 24-hour in-person hackathon in Calgary designed to promote creativity, collaboration and innovative thinking among student builders.",
-    "source": "https://calgaryhacks2026.devpost.com/"
+    "source": "https://calgaryhacks.ca/"
   },
   {
     "name": "Platform Calgary Community Connect",

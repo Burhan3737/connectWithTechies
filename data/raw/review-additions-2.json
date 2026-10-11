@@ -1664,31 +1664,6 @@
     "source": "https://www.charlestondigital.com/community/ifivek"
   },
   {
-    "name": "Charleston Digital Connect",
-    "type": "meetup-series",
-    "topics": [
-      "networking",
-      "startups",
-      "charleston-tech"
-    ],
-    "city": "Charleston",
-    "region": "South Carolina",
-    "country": "United States",
-    "venue": "Flagship @ CTC, 997 Morrison Dr",
-    "cadence": "monthly",
-    "month": "Varies",
-    "next_date": "2026-09-17",
-    "next_date_end": "",
-    "last_date": "",
-    "status": "upcoming",
-    "attendance": "",
-    "cost": "free",
-    "audience": "Charleston technology professionals, founders, job seekers",
-    "url": "https://www.charlestondigital.com/",
-    "description": "Charleston Digital Corridor's recurring morning networking session at the Charleston Tech Center, running alongside its AI Academy classes and SBDC workshops.",
-    "source": "https://www.charlestondigital.com/"
-  },
-  {
     "name": "Mississippi Aerospace & Defense Symposium",
     "type": "summit",
     "topics": [
@@ -1748,14 +1723,14 @@
       "software-practice",
       "coaching"
     ],
-    "city": "Portland",
-    "region": "Oregon",
+    "city": "Seattle",
+    "region": "Washington",
     "country": "United States",
     "venue": "",
     "cadence": "annual",
-    "month": "March",
-    "next_date": "",
-    "next_date_end": "",
+    "month": "February",
+    "next_date": "2027-02-19",
+    "next_date_end": "2027-02-20",
     "last_date": "2026-03-06",
     "status": "recurring-tbd",
     "attendance": "",

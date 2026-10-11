@@ -1,0 +1,14 @@
+[
+  { "match": { "name": "Digital Summit Atlanta", "city": "Atlanta" },
+    "action": "update",
+    "reason": "Record url was the series homepage digitalsummit.com, which no longer mentions Atlanta. The city page digitalsummit.com/atlanta/ carries the edition (JSON-LD 2026-10-06..07, Atlanta Marriott Marquis).",
+    "set": { "url": "https://www.digitalsummit.com/atlanta/", "venue": "Atlanta Marriott Marquis" } },
+  { "match": { "name": "Lesbians Who Tech + Allies Summit", "city": "New York" },
+    "action": "update",
+    "reason": "lwtsquad.com redirects to lwtsquad.com/lwtsummit-2027/, title 'LWTSUMMIT: June 7-9, 2027 | LWT', body 'June 7-9, 2027 - New York - The 14th annual summit'. The 2026 edition ran Oct 5-7 (lwtsquad.com/2026-agenda/) and is already held as last_date 2026-10-05, which is kept. Usual month moves to June.",
+    "set": { "next_date": "2027-06-07", "next_date_end": "2027-06-09", "month": "June" } },
+  { "match": { "name": "Offensive AI Con", "city": "San Diego" },
+    "action": "update",
+    "reason": "offensiveaicon.com venue section: 'Seabird & Mission Pacific Resorts in Oceanside, CA ... perched above Oceanside Pier'. The site's 'Oceanside, San Diego' means San Diego County; the event is physically in the city of Oceanside, about 35 miles north of San Diego.",
+    "set": { "city": "Oceanside", "region": "California", "venue": "Seabird & Mission Pacific Resorts" } }
+]

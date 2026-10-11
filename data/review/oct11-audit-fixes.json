@@ -1,0 +1,21 @@
+[
+  {
+    "match": {
+      "name": "Charleston Digital Connect",
+      "city": "Charleston"
+    },
+    "action": "remove",
+    "reason": "AUDIT 2026-10-11-i1 B3: blocked four passes running; the organiser's calendar (14 events, Oct 13-Dec 3) has no such series and no web trace exists beyond one early sighting."
+  },
+  {
+    "match": {
+      "name": "Offensive AI Con",
+      "city": "Oceanside"
+    },
+    "action": "update",
+    "reason": "AUDIT 2026-10-11-i1 W4: city correction sound, but source still cited dev.events; the organiser's own site is the source.",
+    "set": {
+      "source": "https://www.offensiveaicon.com/"
+    }
+  }
+]

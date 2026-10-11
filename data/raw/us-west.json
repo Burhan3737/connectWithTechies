@@ -1504,10 +1504,10 @@
       "cybersecurity",
       "red-team"
     ],
-    "city": "San Diego",
+    "city": "Oceanside",
     "region": "California",
     "country": "United States",
-    "venue": "",
+    "venue": "Seabird & Mission Pacific Resorts",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-04",
@@ -1519,7 +1519,7 @@
     "audience": "offensive security researchers, red teamers, AI security engineers",
     "url": "https://www.offensiveaicon.com/",
     "description": "A conference dedicated to offensive uses of AI and the security of AI systems, with research talks, training and hands-on red-team content.",
-    "source": "https://dev.events/NA/US/CA/San_Diego"
+    "source": "https://www.offensiveaicon.com/"
   },
   {
     "name": "San Diego CyberCon",

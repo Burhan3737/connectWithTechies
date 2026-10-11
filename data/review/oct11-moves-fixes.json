@@ -1,0 +1,14 @@
+[
+  {
+    "match": {
+      "name": "BSidesStPete",
+      "city": "St. Petersburg"
+    },
+    "action": "update",
+    "reason": "Automated check: the stored date 2027-01-29 no longer appears on https://bsides.org/event/bsidesstpete-2/, and page JSON-LD gives 2027-02-05..2027-02-06. REVIEW BEFORE APPLYING.",
+    "set": {
+      "next_date": "2027-02-05",
+      "next_date_end": "2027-02-06"
+    }
+  }
+]
