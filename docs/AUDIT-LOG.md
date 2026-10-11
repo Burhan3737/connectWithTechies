@@ -9,9 +9,9 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 |---|---|---|---|---|---|---|
 | 2026-10-07-i3 | — | 1 | 2 | 2 | 1 | Oct 7 refresh, final re-audit (logged after the fact from AUDIT-REPORT.md; earlier runs predate the log) |
 | 2026-10-11-i1 | 4 | 4 | 7 | 7 | 4 | Oct 11 refresh: curator passes oct11-t1/t2/t3 (60 rows, 13 real updates), BSidesStPete script move, 17 new discovery cities with 121 auto-registered organisers (15 retired) |
-| 2026-10-11-i2 | re-audit | 0 | 6 | 2 | 4 | Re-audit of iteration-1 fixes: 21 retirements (sources-oct11-audit.json) and new retire/drop gate logic in run.mjs, Charleston Digital Connect removal, place-override drops, judge_each, Offensive AI Con source, ledger last_attempt / audit-run / snapshot-dispatch tooling |
+| 2026-10-11-i2 | re-audit | 0 | 6 | 3 | 3 | Re-audit of iteration-1 fixes: 21 retirements (sources-oct11-audit.json) and new retire/drop gate logic in run.mjs, Charleston Digital Connect removal, place-override drops, judge_each, Offensive AI Con source, ledger last_attempt / audit-run / snapshot-dispatch tooling |
 
-**2 audit cycle(s); 2 found something blocking on its first audit.** 20 findings in total, 11 fixed, 9 open or deferred, 6 repeat(s) of an earlier finding.
+**2 audit cycle(s); 2 found something blocking on its first audit.** 20 findings in total, 12 fixed, 8 open or deferred, 6 repeat(s) of an earlier finding.
 
 ## Open
 
@@ -34,8 +34,6 @@ Every auditor run, what it flagged, and what was done about it. Generated from
   - recommended: Propose them in a sources-*.json.
 - **2026-10-11-i2-W4** · warning · **Jersey City Entrepreneurs: The Venture Garden (Jersey City)** — Unchanged: next_date 2026-10-10 passed, still upcoming; oct05-r1-fixes.json still carries the superseded 10-06 operation.
   - recommended: Re-check meetup.com/jersey-city-entrepreneurs for the next session; delete the Jersey City op from oct05-r1-fixes.json.
-- **2026-10-11-i2-W5** · warning · **City spelling splits (Québec City, trailing commas)** — Partly resolved: city 'United States' gone. Still 1 'Québec City' vs 16 'Quebec City', and 9 feed records with trailing comma (Boston, Seattle, Toronto, Washington, Montréal).
-  - recommended: Strip trailing punctuation and add a québec city alias in scripts/lib/places.mjs.
 - **2026-10-11-i2-W6** · warning · deferred · **Tech Week non-tech socials** — Unchanged, deferred to user: NTW Closing Party, Hard Tech Week Opening Party, Big Cayman Bash, Young Founders Hike still listed.
   - recommended: No action until the user decides.
   - note: Waiting on the user's decision (same as 2026-10-07-i3-W1).
@@ -52,7 +50,7 @@ Scope: Re-audit of iteration-1 fixes: 21 retirements (sources-oct11-audit.json) 
 | W2 | warning | The Longevity Social Club (Austin, Miami) | Registered as 'track record 10/10 clearly tech' but lists founder coffee hours, dinners, headshots, goal setting; only the two AI workshops are tech. Predates this run (added 2026-10-07). | fixed (2026-10-11) | Set to judge_each (sources-oct11-audit.json). |
 | W3 | warning | Tech organisers rejected in new cities | Unchanged: TechSTL, Indy Hackers, ISSA Kentuckiana, New Media Manitoba, RockIT Women, GDG Kansas City, 16 Tech, TAB still tech:false. | open |  |
 | W4 | warning | Jersey City Entrepreneurs: The Venture Garden (Jersey City) | Unchanged: next_date 2026-10-10 passed, still upcoming; oct05-r1-fixes.json still carries the superseded 10-06 operation. | open |  |
-| W5 | warning | City spelling splits (Québec City, trailing commas) | Partly resolved: city 'United States' gone. Still 1 'Québec City' vs 16 'Quebec City', and 9 feed records with trailing comma (Boston, Seattle, Toronto, Washington, Montréal). | open |  |
+| W5 | warning | City spelling splits (Québec City, trailing commas) | Partly resolved: city 'United States' gone. Still 1 'Québec City' vs 16 'Quebec City', and 9 feed records with trailing comma (Boston, Seattle, Toronto, Washington, Montréal). | fixed (2026-10-11) | geo.mjs matches cities accent-blind to the curated spelling and drops separators left by a state suffix ('Boston, MA'); carried records are re-spelt. It also broke the Pages deploy: the app folds accents, so its city count disagreed with the contract test. |
 | W6 | warning | Tech Week non-tech socials | Unchanged, deferred to user: NTW Closing Party, Hard Tech Week Opening Party, Big Cayman Bash, Young Founders Hike still listed. | deferred (2026-10-11) | Waiting on the user's decision (same as 2026-10-07-i3-W1). |
 
 Checked and sound: 0 events left from all 21 retired organisers; no name collisions; all non-retirement feed losses vs HEAD are cross-platform dedupe or earlier re-judgement (4 fetched); city drops only in network cities; Claude Workshops/Community calendars intact (29/28); B3, B4, W1, W2, W4 applied; 11 last_attempt rows genuine (2 re-fetched); selftest 44/44

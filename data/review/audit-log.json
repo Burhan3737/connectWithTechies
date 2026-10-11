@@ -236,9 +236,9 @@
           "summary": "Partly resolved: city 'United States' gone. Still 1 'Québec City' vs 16 'Quebec City', and 9 feed records with trailing comma (Boston, Seattle, Toronto, Washington, Montréal).",
           "recommendation": "Strip trailing punctuation and add a québec city alias in scripts/lib/places.mjs.",
           "repeat_of": "2026-10-11-i1-W6",
-          "status": "open",
-          "resolved_on": null,
-          "resolution": null
+          "status": "fixed",
+          "resolved_on": "2026-10-11",
+          "resolution": "geo.mjs matches cities accent-blind to the curated spelling and drops separators left by a state suffix ('Boston, MA'); carried records are re-spelt. It also broke the Pages deploy: the app folds accents, so its city count disagreed with the contract test."
         },
         {
           "id": "2026-10-11-i2-W6",

@@ -4,7 +4,7 @@
 checked against the organiser's own page, so a pass can spend its budget on what is
 still unknown rather than re-confirming what is settled.
 
-Updated 2026-10-10 · dataset holds 904 events.
+Updated 2026-10-11 · dataset holds 904 events.
 
 | status | count | share | meaning |
 |---|---:|---:|---|
@@ -19,12 +19,14 @@ A verification is a snapshot, not a subscription. `data/review/TO-VERIFY.tsv` is
 regenerated on every run from the rules below, so it refills itself rather than
 sitting empty and reading as "done" when it means "no longer watching".
 
-**45 of 904 events are due for a re-check.**
+**54 of 904 events are due for a re-check.**
 
 | reason | count | why it fires |
 |---|---:|---|
+| `regroup` | 1 | a group that meets weekly or monthly, showing no next date — wrong on the page today |
 | `blocked` | 6 | previous check could not read the page |
-| `imminent` | 1 | coming up, and the check is stale relative to how close it is |
+| `imminent` | 8 | coming up, and the check is stale relative to how close it is |
+| `rolled` | 1 | an annual edition ran since it was checked; next one is far off |
 | `window` | 38 | undated, usual month 2-5 months out, not looked at for 45 days |
 
 Recurring groups (`weekly`, `monthly`, `rolling`, `quarterly`) are re-checked on a
@@ -435,7 +437,7 @@ Checked and correct as recorded.
 | Data Streaming Summit | San Francisco | — | 2026-10-10 | oct11-t2 | datastreaming-summit.org/dss2026 (200): 'Data Streaming Summit 2026 The Data+Agent Conference October 7 - 8 San Francisco, CA', venue Hotel Nikko San Francisco, 222 Mason Street; the organiser's linked Eventbrite event page has JSON-LD 2026-10-07T09:00-07:00..2026-10-08T17:00. Matches last_date 2026-10-07. No 2027 edition published. |
 | DataConnect Conference | Columbus | 2026-10-29 | 2026-10-10 | script | automated: page shows "october 29" and no decoy date |
 | Day of Data Orlando | Sanford | 2026-10-17 | 2026-10-10 | script | automated: page shows "october 17" and no decoy date |
-| Day of Data Pittsburgh | Homestead | 2026-10-10 | 2026-10-10 | script | automated: page shows "october 10, 2026" and no decoy date |
+| Day of Data Pittsburgh | Homestead | — | 2026-10-10 | script | automated: page shows "october 10, 2026" and no decoy date |
 | Day of Data St Louis | St. Louis | 2026-10-24 | 2026-10-10 | script | automated: page shows "october 24" and no decoy date |
 | Day of Data Toronto | Toronto | — | 2026-09-27 | d5 | sqlsaturday.com/2026-09-26-sqlsaturday1160/ redirects to dayofdata.org/2026-09-26-dayofdata1160/: 'SQL Saturday Toronto 2026 (#1160) Event Date : 26 September 2026 This event is: in-person', at Microsoft Toronto HQ, 81 Bay St. Matches 2026-09-26 (today). |
 | Day of Data Winnipeg | Winnipeg | — | 2026-09-27 | d5 | sqlsaturday.com/2026-09-19-sqlsaturday1159/ redirects to dayofdata.org/2026-09-19-dayofdata1159/: 'Day of Data Winnipeg 2026 (#1159) Event Date : 19 September 2026 This event is: in-person', University of Manitoba EITC, 75 Chancellors Circle. Matches 2026-09-19. |
@@ -635,7 +637,7 @@ Checked and correct as recorded.
 | ITEXPO | Fort Lauderdale | 2027-02-09 | 2026-10-10 | script | automated: page shows "february 9" and no decoy date |
 | ITS Northern Lights Conference | Sioux Falls | — | 2026-08-26 | passC | itsmn.starchapter.com page live, Holiday Inn Sioux Falls City Centre, 100 W 8th Street, Sioux Falls SD; May 12-14 2026 edition past (sold out), no next date |
 | JAMHacks | Waterloo | — | 2026-08-26 | passC | jamhacks.ca live, JAMHacks 10 at University of Waterloo; June 12-14 2026 edition past, no next date |
-| Jersey City Entrepreneurs: The Venture Garden | Jersey City | 2026-10-10 | 2026-10-10 | script | automated: page shows "oct 10" and no decoy date |
+| Jersey City Entrepreneurs: The Venture Garden | Jersey City | — | 2026-10-10 | script | automated: page shows "oct 10" and no decoy date |
 | John P. Ellbogen $50K Entrepreneurship Competition | Laramie | — | 2026-08-26 | passC | ellbogen50k.org live, University of Wyoming competition (Laramie); 2026 finalists posted and 2026/27 application open, no dates |
 | JSNation US | New York | 2026-11-16 | 2026-10-10 | script | automated: page shows "november 16" and no decoy date |
 | JumpStart Expo & Pitch Night | Burlington | — | 2026-08-26 | passC | generatorvt.com/jumpstart-expo live, 40 Sears Ln Burlington VT; Wednesday April 8 2026 edition past, no next date |
