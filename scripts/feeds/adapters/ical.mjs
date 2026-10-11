@@ -8,7 +8,7 @@
  */
 import { get } from '../lib/http.mjs';
 import { parseIcal } from '../lib/ical.mjs';
-import { fromText, localDate } from '../lib/geo.mjs';
+import { fromText, fromParts, localDate } from '../lib/geo.mjs';
 
 export async function read(source) {
   const res = await get(source.url);
@@ -22,7 +22,8 @@ export async function read(source) {
     // Meetup group meets in its city. Nowhere else is a home city assumed: an
     // organiser that tours would have every event filed under where it is based.
     const place = fromText(v.location) ||
-      (!v.location && source.platform === 'meetup' && source.home ? { ...source.home, tz: '' } : null);
+      // The stored home is as the source typed it ("Boston,"), so it is cleaned like any other place.
+      (!v.location && source.platform === 'meetup' && source.home ? fromParts(source.home) || { ...source.home, tz: '' } : null);
     const tz = v.start?.tz || place?.tz || v.calendarTz || '';
     const start = v.start?.dateOnly || localDate(v.start?.instant, tz);
     const end = v.end ? (v.end.dateOnly || localDate(v.end.instant, tz)) : '';

@@ -62,9 +62,14 @@ export function region(regionText, countryHint = '') {
  * Sources type cities freely: "SAN JOSE", "York PA", "SAP Office — San Ramon".
  * Keep the city itself, in ordinary case; refuse anything still carrying digits.
  */
+// Case- and accent-blind, for matching a city to the curated spelling:
+// "Québec City" from one source and "Quebec City" from another are one city.
+const fold = (s) => String(s).toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
+
 function cleanCity(city, reg) {
   let c = String(city || '').split(/\s+[—–-]\s+/).pop().trim();
-  c = c.replace(new RegExp(`\\s+(${reg.code}|${reg.name})$`, 'i'), '').trim();
+  // "Boston, MA" names its state; the separator left behind ("Boston,") is not part of the name.
+  c = c.replace(new RegExp(`\\s+(${reg.code}|${reg.name})$`, 'i'), '').replace(/[\s,;]+$/, '');
   if (c === c.toUpperCase() || c === c.toLowerCase()) {
     c = c.toLowerCase().replace(/(^|[\s-])(\p{L})/gu, (m, a, b) => a + b.toUpperCase());
   }
@@ -79,7 +84,7 @@ function finish(city, reg) {
   // calendar and "Sioux Falls" from another are one city, not two.
   // Quebec's capital shares the province's name; sources write it bare.
   if (reg.name === 'Quebec' && /^qu[eé]bec$/i.test(city)) city = 'Quebec City';
-  const spelt = known().get(`${city.toLowerCase()}|${reg.country}`);
+  const spelt = known().get(`${fold(city)}|${reg.country}`);
   const knownHere = !!spelt && spelt.region === reg.name;
   if (knownHere) city = spelt.city;
   // A state or province typed where the city goes ("Tennessee") is no city —
@@ -141,7 +146,7 @@ function known() {
       const { events } = JSON.parse(readFileSync(new URL('data/events.json', root), 'utf8'));
       for (const e of events) {
         if (e.feed_source || e.city === 'Multiple cities') continue;
-        const k = `${e.city.toLowerCase()}|${e.country}`;
+        const k = `${fold(e.city)}|${e.country}`;
         if (!knownIndex.has(k)) knownIndex.set(k, { city: e.city, region: e.region });
       }
     } catch { /* no dataset yet: no fallback */ }
@@ -151,12 +156,12 @@ function known() {
 
 export function knownCity(city, countryHint = '') {
   const country = /canada/i.test(countryHint) ? 'Canada' : 'United States';
-  const hit = known().get(`${String(city).trim().toLowerCase()}|${country}`);
+  const hit = known().get(`${fold(String(city).trim())}|${country}`);
   return hit ? finish(hit.city, region(hit.region, country)) : null;
 }
 
 /** True when a place is a city the curated data already lists. */
-export const isKnownPlace = (p) => !!p && known().has(`${p.city.toLowerCase()}|${p.country}`);
+export const isKnownPlace = (p) => !!p && known().has(`${fold(p.city)}|${p.country}`);
 
 /** An instant as a calendar date in a given zone. */
 export function localDate(instant, tz) {

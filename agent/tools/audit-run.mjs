@@ -15,7 +15,7 @@
  *
  * Exit code is the number of BLOCKING findings, so a caller can branch on it.
  */
-import { readFileSync, existsSync, readdirSync, writeFileSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync, writeFileSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync, execFile } from 'node:child_process';
@@ -130,15 +130,21 @@ const ledger = existsSync(join(REVIEW, 'verified.json'))
 // Match the answer on name alone. A curator that corrects an event's city
 // files its ledger entry under the corrected city, which is right — insisting
 // on the dispatched city would report the fix as a skipped row.
-const answeredToday = new Set(
-  Object.values(ledger).filter((v) => v.checked_on === today || v.last_attempt?.on === today).map((v) => norm(v.name)));
+//
+// "This run" is everything checked since the snapshot was taken, not just today:
+// a cycle that crosses midnight once reported all 60 rows as skipped. A day of
+// slack covers curators stamping dates in a different time zone.
+const since = existsSync(snapshot)
+  ? new Date(statSync(snapshot).mtimeMs - 864e5).toISOString().slice(0, 10) : today;
+const answeredToday = new Set(Object.values(ledger)
+  .filter((v) => v.checked_on >= since || (v.last_attempt?.on || '') >= since).map((v) => norm(v.name)));
 
 const unanswered = dispatched.filter((d) => !answeredToday.has(norm(d.name)));
 if (dispatched.length) {
   add(unanswered.length ? 'blocking' : 'info', 'queue-coverage',
-    `${dispatched.length - unanswered.length}/${dispatched.length} dispatched rows have a ledger entry dated ${today}`);
+    `${dispatched.length - unanswered.length}/${dispatched.length} dispatched rows have a ledger entry checked since ${since}`);
   for (const u of unanswered.slice(0, 40)) {
-    add('blocking', 'row-skipped', `${u.name} (${u.city}) was in ${u.from} but has no ledger entry from this run`);
+    add('blocking', 'row-skipped', `${u.name} (${u.city}) was in ${u.from} but has no ledger entry since the dispatch snapshot`);
   }
   if (unanswered.length > 40) add('blocking', 'row-skipped', `... and ${unanswered.length - 40} more`);
 }

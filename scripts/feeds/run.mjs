@@ -554,7 +554,10 @@ for (const r of previous) {
       (meetupGroup && retiredIds.has(`meetup:${meetupGroup}`))) { vanished++; continue; }
   // History keeps an event between reads, not past the rules: a place today's
   // checks would reject ("Tennessee" as a city) is not carried forward.
-  if (!fromParts({ city: r.city, region: r.region, country: r.country })) { vanished++; continue; }
+  const place = fromParts({ city: r.city, region: r.region, country: r.country });
+  if (!place) { vanished++; continue; }
+  // ...and takes today's spelling of it, so a spelling fix reaches old records too.
+  r.city = place.city;
   const date = r.next_date_end || r.next_date;
   // Held once it has started, not once it has ended: Luma, Meetup and iCal
   // feeds stop listing an event the moment it begins, so an event missing on

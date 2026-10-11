@@ -101,6 +101,11 @@ ok(fromText('Toronto, ON M5V 2T6, Canada')?.region === 'Ontario', 'Canadian post
 ok(fromParts({ city: 'SAN JOSE', region: 'CA', country: 'US' })?.city === 'San Jose', 'shouting city normalised');
 ok(fromParts({ city: 'SAP Office — San Ramon', region: 'CA', country: 'US' })?.city === 'San Ramon', 'venue prefix dropped');
 ok(fromParts({ city: 'San francisco', region: 'CA', country: 'US' })?.city === 'San Francisco', 'mixed case takes the curated spelling');
+// oct11 audit: one source's "Québec City" split the city in two, and "Boston," made another.
+ok(fromParts({ city: 'Québec City', region: 'QC', country: 'CA' })?.city === fromParts({ city: 'Quebec City', region: 'QC', country: 'CA' })?.city,
+  'accents do not split a city', fromParts({ city: 'Québec City', region: 'QC', country: 'CA' })?.city);
+ok(fromParts({ city: 'Boston,', region: 'MA', country: 'US' })?.city === 'Boston', 'trailing comma dropped');
+ok(fromParts({ city: 'Boston, MA', region: 'MA', country: 'US' })?.city === 'Boston', 'state named in the city field dropped, comma too');
 
 console.log('\nVenues standing in for cities (free-text sources)');
 for (const [city, venue] of [['iCode Shrewbury', true], ['Princeton High School', true], ['Tennessee', true],
