@@ -12,7 +12,7 @@
       "name": "BSides Harrisburg",
       "city": "Harrisburg",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 21, 2027\" and no decoy date"
     },
@@ -60,7 +60,7 @@
       "name": "Florida Technology & Innovation Solution Summit",
       "city": "Tampa",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"august 25, 2027\" and no decoy date"
     },
@@ -84,7 +84,7 @@
       "name": "Montreal Games Week",
       "city": "Montreal",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"nov 10\" and no decoy date"
     },
@@ -92,7 +92,7 @@
       "name": "DevOpsDays Boston",
       "city": "Boston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 19\" and no decoy date"
     },
@@ -267,16 +267,16 @@
     "southdallasmakerfaire|dallas": {
       "name": "South Dallas Maker Faire",
       "city": "Dallas",
-      "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "status": "blocked",
+      "checked_on": "2026-10-15",
       "cycle": "script",
-      "evidence": "automated: page shows \"november 7, 2026\" and no decoy date"
+      "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
     "makerfairelouisville|louisville": {
       "name": "Maker Faire Louisville",
       "city": "Louisville",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 17, 2026\" and no decoy date"
     },
@@ -284,7 +284,7 @@
       "name": "Maker Faire Orlando",
       "city": "Orlando",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 7\" and no decoy date"
     },
@@ -292,7 +292,7 @@
       "name": "Maker Faire Rochester",
       "city": "Rochester",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 21\" and no decoy date"
     },
@@ -310,7 +310,13 @@
       "status": "confirmed",
       "checked_on": "2026-10-10",
       "cycle": "oct11-t1",
-      "evidence": "The sans.org digital-forensics-summit-2026 page reads 'Summit: Oct 15-16 Training: Oct 17-22', 'Hilton Arlington Rosslyn The Key & Virtual (ET) 1900 Fort Myer Dr, Arlington, VA'. The summit is marked 'In-person exclusive', and the page countdown targets 2026-10-15T08:00-04:00. Matches the record 2026-10-15..22, Arlington."
+      "evidence": "The sans.org digital-forensics-summit-2026 page reads 'Summit: Oct 15-16 Training: Oct 17-22', 'Hilton Arlington Rosslyn The Key & Virtual (ET) 1900 Fort Myer Dr, Arlington, VA'. The summit is marked 'In-person exclusive', and the page countdown targets 2026-10-15T08:00-04:00. Matches the record 2026-10-15..22, Arlington.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"october 15\" appears, but so do 1 date(s) this event does not have (e.g. 2026-10-22) — the page lists too many dates for a match to mean anything"
+      }
     },
     "sansdcmetro|bethesda": {
       "name": "SANS DC Metro",
@@ -324,7 +330,7 @@
       "name": "SANS Miami",
       "city": "Coral Gables",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 26\" and no decoy date"
     },
@@ -340,7 +346,7 @@
       "name": "SANS Raleigh",
       "city": "Raleigh",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 2\" and no decoy date"
     },
@@ -348,7 +354,7 @@
       "name": "SANS San Francisco",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 2\" and no decoy date"
     },
@@ -364,7 +370,7 @@
       "name": "BSides CMH",
       "city": "Columbus",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 4\" and no decoy date"
     },
@@ -372,7 +378,7 @@
       "name": "BSides Peoria",
       "city": "Peoria",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 24\" and no decoy date"
     },
@@ -388,7 +394,7 @@
       "name": "NVIDIA GTC",
       "city": "San Jose",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 15\" and no decoy date"
     },
@@ -398,7 +404,13 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d5",
-      "evidence": "defcon.org home (200): hotel update reads 'Las Vegas Convention Center August 6-9 in 2026 and August 5-8 in 2027'; range 'Aug. 5-8, 2027' also on page. Matches next_date 2027-08-05..08 and last_date 2026-08-06. The checker's decoy (2027-07-15) is not an event date for DEF CON."
+      "evidence": "defcon.org home (200): hotel update reads 'Las Vegas Convention Center August 6-9 in 2026 and August 5-8 in 2027'; range 'Aug. 5-8, 2027' also on page. Matches next_date 2027-08-05..08 and last_date 2026-08-06. The checker's decoy (2027-07-15) is not an event date for DEF CON.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: no response"
+      }
     },
     "blackhatusa|lasvegas": {
       "name": "Black Hat USA",
@@ -406,13 +418,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "blackhat.com homepage has no USA 2027 date. Organiser page blackhat.com/upcoming.html lists \"Black Hat USA 2027 Las Vegas July 31-August 5, 2027 Mandalay Bay Convention Center, Las Vegas\" (date directly after this event name). blackhat.com/us-26/ JSON-LD startDate 2026-08-01 matches last_date. Matches record."
+      "evidence": "blackhat.com homepage has no USA 2027 date. Organiser page blackhat.com/upcoming.html lists \"Black Hat USA 2027 Las Vegas July 31-August 5, 2027 Mandalay Bay Convention Center, Las Vegas\" (date directly after this event name). blackhat.com/us-26/ JSON-LD startDate 2026-08-01 matches last_date. Matches record.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "spacesymposium|coloradosprings": {
       "name": "Space Symposium",
       "city": "Colorado Springs",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 12\" and no decoy date"
     },
@@ -422,7 +440,13 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "e2",
-      "evidence": "Live servicenow.com hangs curl (TLS renegotiation, 0 bytes after 20-40s) and returns 403 to WebFetch. Read the organiser's own page via Wayback snapshot web.archive.org/web/20260916211454/https://www.servicenow.com/events/knowledge.html: 'Knowledge returns May 4-6, 2027 to celebrate 20 years' and 'Knowledge 2027 is May 4-6 in Las Vegas'. Matches record 2027-05-04 to 2027-05-06, Las Vegas. Venue left blank (only aggregators name Venetian/Wynn)."
+      "evidence": "Live servicenow.com hangs curl (TLS renegotiation, 0 bytes after 20-40s) and returns 403 to WebFetch. Read the organiser's own page via Wayback snapshot web.archive.org/web/20260916211454/https://www.servicenow.com/events/knowledge.html: 'Knowledge returns May 4-6, 2027 to celebrate 20 years' and 'Knowledge 2027 is May 4-6 in Las Vegas'. Matches record 2027-05-04 to 2027-05-06, Las Vegas. Venue left blank (only aggregators name Venetian/Wynn).",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: no response"
+      }
     },
     "firstchampionship|houston": {
       "name": "FIRST Championship",
@@ -492,7 +516,7 @@
       "name": "EWF Annual Conference",
       "city": "Aurora",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 4\" and no decoy date"
     },
@@ -516,7 +540,7 @@
       "name": "PyTorch Conference",
       "city": "San Jose",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 20\" and no decoy date"
     },
@@ -526,7 +550,13 @@
       "status": "confirmed",
       "checked_on": "2026-10-06",
       "cycle": "oct07-s1",
-      "evidence": "eitevents.com/event_pages/minneapolis-technology-summit-2026/: 'MINNEAPOLIS TECHNOLOGY SUMMIT 2026 October 22, 2026 Hyatt Regency Minneapolis | Great Lakes Ballroom (4th Floor)'. Matches record date and venue."
+      "evidence": "eitevents.com/event_pages/minneapolis-technology-summit-2026/: 'MINNEAPOLIS TECHNOLOGY SUMMIT 2026 October 22, 2026 Hyatt Regency Minneapolis | Great Lakes Ballroom (4th Floor)'. Matches record date and venue.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "techspochicago|chicago": {
       "name": "TECHSPO Chicago",
@@ -566,7 +596,13 @@
       "status": "corrected",
       "checked_on": "2026-10-06",
       "cycle": "oct07-s1",
-      "evidence": "bsidespdx.org: 'BSidesPDX 2026 will be on Fri Oct 23rd & Sat Oct 24th, 2026', tickets on sale. Dates match; patch fills blank venue from /events/2026/venue.html (Smith Memorial Student Union, 1825 SW Broadway, Portland)."
+      "evidence": "bsidespdx.org: 'BSidesPDX 2026 will be on Fri Oct 23rd & Sat Oct 24th, 2026', tickets on sale. Dates match; patch fills blank venue from /events/2026/venue.html (Smith Memorial Student Union, 1825 SW Broadway, Portland).",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"oct 23\" appears, but so do 1 date(s) this event does not have (e.g. 2026-10-02) — the page lists too many dates for a match to mean anything"
+      }
     },
     "milehighdreamin|denver": {
       "name": "Mile High Dreamin'",
@@ -628,7 +664,7 @@
       "name": "Product-Led Summit Toronto",
       "city": "Toronto",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 12\" and no decoy date"
     },
@@ -668,7 +704,7 @@
       "name": "BarCamp Philly",
       "city": "Philadelphia",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 17, 2026\" and no decoy date"
     },
@@ -694,7 +730,13 @@
       "status": "confirmed",
       "checked_on": "2026-10-04",
       "cycle": "oct05-r1",
-      "evidence": "montgomerysummit.com hero 'Exclusive Access March 9th & 10th, 2027'; 'The Montgomery Summit 2027 presented by March Capital ... to Santa Monica'. The other dates the scanner found are dated news posts. Matches the record's 2027-03-09 to 2027-03-10."
+      "evidence": "montgomerysummit.com hero 'Exclusive Access March 9th & 10th, 2027'; 'The Montgomery Summit 2027 presented by March Capital ... to Santa Monica'. The other dates the scanner found are dated news posts. Matches the record's 2027-03-09 to 2027-03-10.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "oceanexchange|savannah": {
       "name": "Ocean Exchange",
@@ -732,7 +774,7 @@
       "name": "BSides Pittsburgh",
       "city": "Pittsburgh",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"july 9, 2027\" and no decoy date"
     },
@@ -812,7 +854,7 @@
       "name": "Space and Missile Defense Symposium",
       "city": "Huntsville",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"august 10\" and no decoy date"
     },
@@ -828,7 +870,7 @@
       "name": "Tennessee Quantum Hackathon",
       "city": "Chattanooga",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 13\" and no decoy date"
     },
@@ -836,7 +878,7 @@
       "name": "TENWEST Festival",
       "city": "Tucson",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 30\" and no decoy date"
     },
@@ -862,13 +904,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "sloss.tech hero: \"South's Hottest Tech Conference June 23-25th,2027 Birmingham, AL\"; Lyric Theatre named in agenda. The agenda-at-a-glance (June 24/25/26) and \"2026 Keynote Speakers\" are leftover 2026 content (June 24-26, 2026 was Wed-Fri, as is June 23-25, 2027). Matches record."
+      "evidence": "sloss.tech hero: \"South's Hottest Tech Conference June 23-25th,2027 Birmingham, AL\"; Lyric Theatre named in agenda. The agenda-at-a-glance (June 24/25/26) and \"2026 Keynote Speakers\" are leftover 2026 content (June 24-26, 2026 was Wed-Fri, as is June 23-25, 2027). Matches record.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"june 23\" appears, but so do 1 date(s) this event does not have (e.g. 2027-06-02) — the page lists too many dates for a match to mean anything"
+      }
     },
     "codestock|knoxville": {
       "name": "CodeStock",
       "city": "Knoxville",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 8\" and no decoy date"
     },
@@ -934,7 +982,13 @@
       "status": "confirmed",
       "checked_on": "2026-10-06",
       "cycle": "oct07-s1",
-      "evidence": "innovationdepot.org/events/event-calendar/ lists 'Founders Round Table' (Founders Only) with calendar/ICS links dated 2026-10-22, location Innovation Depot, 'Founder spotlight + development-focused conversation'. Matches record."
+      "evidence": "innovationdepot.org/events/event-calendar/ lists 'Founders Round Table' (Founders Only) with calendar/ICS links dated 2026-10-22, location Innovation Depot, 'Founder spotlight + development-focused conversation'. Matches record.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "colab|chattanooga": {
       "name": "CO.LAB",
@@ -948,7 +1002,7 @@
       "name": "BSides Idaho Falls",
       "city": "Idaho Falls",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 16\" and no decoy date"
     },
@@ -988,7 +1042,7 @@
       "name": "Meeting in the Millyard",
       "city": "Nashua",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 18\" and no decoy date"
     },
@@ -1012,7 +1066,7 @@
       "name": "Grace Hopper Celebration",
       "city": "Anaheim",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 27\" and no decoy date"
     },
@@ -1020,7 +1074,7 @@
       "name": "RenderATL",
       "city": "Atlanta",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"august 18\" and no decoy date"
     },
@@ -1028,7 +1082,7 @@
       "name": "Atlanta Tech Week",
       "city": "Atlanta",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"august 15\" and no decoy date"
     },
@@ -1044,7 +1098,7 @@
       "name": "ISTE+ASCD Conference",
       "city": "Boston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 27\" and no decoy date"
     },
@@ -1052,7 +1106,7 @@
       "name": "Bio-IT World Conference & Expo",
       "city": "Boston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 18\" and no decoy date"
     },
@@ -1060,7 +1114,7 @@
       "name": "PAX East",
       "city": "Boston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 22\" and no decoy date"
     },
@@ -1068,7 +1122,7 @@
       "name": "UNBOUND (formerly INBOUND)",
       "city": "Boston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"september 8\" and no decoy date"
     },
@@ -1084,7 +1138,7 @@
       "name": "CSAW Cybersecurity Games and Conference",
       "city": "Brooklyn",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 12\" and no decoy date"
     },
@@ -1108,7 +1162,7 @@
       "name": "Upper Bound",
       "city": "Edmonton",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 18\" and no decoy date"
     },
@@ -1118,7 +1172,13 @@
       "status": "confirmed",
       "checked_on": "2026-10-06",
       "cycle": "oct07-s1",
-      "evidence": "interactiveartsalberta.org/gdxconference: 'GDX 2026 Conference October 23-25, 2026 Queen Elizabeth II Federal Building, Edmonton, Alberta ... returns to the Queen Elizabeth II Building'. Matches record dates and venue."
+      "evidence": "interactiveartsalberta.org/gdxconference: 'GDX 2026 Conference October 23-25, 2026 Queen Elizabeth II Federal Building, Edmonton, Alberta ... returns to the Queen Elizabeth II Building'. Matches record dates and venue.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"october 23, 2026\" appears, but so do 1 date(s) this event does not have (e.g. 2026-10-02) — the page lists too many dates for a match to mean anything"
+      }
     },
     "propelifyinnovationfestival|hoboken": {
       "name": "Propelify Innovation Festival",
@@ -1140,7 +1200,7 @@
       "name": "AFROTECH Conference",
       "city": "Houston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 2\" and no decoy date"
     },
@@ -1156,7 +1216,7 @@
       "name": "Cisco Live US",
       "city": "Las Vegas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 6\" and no decoy date"
     },
@@ -1164,7 +1224,7 @@
       "name": "CES",
       "city": "Las Vegas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"january 6\" and no decoy date"
     },
@@ -1172,7 +1232,7 @@
       "name": "AWS re:Invent",
       "city": "Las Vegas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"nov 30\" and no decoy date"
     },
@@ -1180,7 +1240,7 @@
       "name": "HLTH USA",
       "city": "Las Vegas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 15\" and no decoy date"
     },
@@ -1188,7 +1248,7 @@
       "name": "DevLearn Conference & Expo",
       "city": "Las Vegas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 4\" and no decoy date"
     },
@@ -1196,7 +1256,7 @@
       "name": "Microsoft Power Platform Community Conference",
       "city": "Las Vegas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 27\" and no decoy date"
     },
@@ -1204,7 +1264,7 @@
       "name": "Oracle AI World",
       "city": "Las Vegas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 25\" and no decoy date"
     },
@@ -1212,7 +1272,7 @@
       "name": "NetSuite SuiteWorld",
       "city": "Las Vegas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 25\" and no decoy date"
     },
@@ -1220,7 +1280,7 @@
       "name": "HR Tech Las Vegas",
       "city": "Las Vegas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 20\" and no decoy date"
     },
@@ -1228,7 +1288,7 @@
       "name": "Money20/20 USA",
       "city": "Las Vegas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 18\" and no decoy date"
     },
@@ -1244,7 +1304,7 @@
       "name": "AWE USA",
       "city": "Long Beach",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 14\" and no decoy date"
     },
@@ -1268,7 +1328,7 @@
       "name": "eMerge Americas",
       "city": "Miami",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 2\" and no decoy date"
     },
@@ -1276,7 +1336,7 @@
       "name": "Adobe MAX",
       "city": "Miami Beach",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 10\" and no decoy date"
     },
@@ -1286,7 +1346,13 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "e2",
-      "evidence": "allinevent.ai (organiser): /pages/2027-tickets reads 'Join us for ALL IN 2027 on September 22-23 at the Palais des congres de Montreal'; press release dated September 18, 2026 (blog/2026-milestone) says 'The fifth edition of ALL IN will take place on September 22-23, 2027, in Montreal'. Record was hiding a published next edition: next_date 2027-09-22, next_date_end 2027-09-23. last_date 2026-09-16 already holds the 2026 edition."
+      "evidence": "allinevent.ai (organiser): /pages/2027-tickets reads 'Join us for ALL IN 2027 on September 22-23 at the Palais des congres de Montreal'; press release dated September 18, 2026 (blog/2026-milestone) says 'The fifth edition of ALL IN will take place on September 22-23, 2027, in Montreal'. Record was hiding a published next edition: next_date 2027-09-22, next_date_end 2027-09-23. last_date 2026-09-16 already holds the 2026 edition.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"september 22\" appears, but so do 1 date(s) this event does not have (e.g. 2027-09-01) — the page lists too many dates for a match to mean anything"
+      }
     },
     "googleio|mountainview": {
       "name": "Google I/O",
@@ -1300,7 +1366,7 @@
       "name": "Bitcoin Conference",
       "city": "Nashville",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"july 15\" and no decoy date"
     },
@@ -1308,7 +1374,7 @@
       "name": "The AI Summit New York",
       "city": "New York",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"december 9\" and no decoy date"
     },
@@ -1334,13 +1400,19 @@
       "status": "corrected",
       "checked_on": "2026-10-06",
       "cycle": "oct07-s1",
-      "evidence": "gartner.com/en/conferences/na/symposium-us JSON-LD startDate 2026-10-19 endDate 2026-10-22, '19 - 22 October 2026 Orlando, FL'. Dates match; patch only fills the blank venue (JSON-LD location Walt Disney World Swan and Dolphin Resort, Lake Buena Vista) and moves source off dev.events."
+      "evidence": "gartner.com/en/conferences/na/symposium-us JSON-LD startDate 2026-10-19 endDate 2026-10-22, '19 - 22 October 2026 Orlando, FL'. Dates match; patch only fills the blank venue (JSON-LD location Walt Disney World Swan and Dolphin Resort, Lake Buena Vista) and moves source off dev.events.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "scale|pasadena": {
       "name": "SCaLE",
       "city": "Pasadena",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 1\" and no decoy date"
     },
@@ -1348,7 +1420,7 @@
       "name": "PAX Unplugged",
       "city": "Philadelphia",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"december 4\" and no decoy date"
     },
@@ -1364,7 +1436,7 @@
       "name": "All Things Open",
       "city": "Raleigh",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 19\" and no decoy date"
     },
@@ -1372,7 +1444,7 @@
       "name": "KubeCon + CloudNativeCon North America",
       "city": "Salt Lake City",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 9\" and no decoy date"
     },
@@ -1390,13 +1462,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "asugsvsummit.com JSON-LD startDate 2027-04-04T12:00-07:00, endDate 2027-04-07T21:00-07:00, location \"Manchester Grand Hyatt San Diego, 1 Market Place\"; script text \"April 4-7, 2027\". Matches record dates and city."
+      "evidence": "asugsvsummit.com JSON-LD startDate 2027-04-04T12:00-07:00, endDate 2027-04-07T21:00-07:00, location \"Manchester Grand Hyatt San Diego, 1 Market Place\"; script text \"April 4-7, 2027\". Matches record dates and city.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "dataaisummit|sanfrancisco": {
       "name": "Data + AI Summit",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 21\" and no decoy date"
     },
@@ -1404,7 +1482,7 @@
       "name": "RSAC Conference",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 5\" and no decoy date"
     },
@@ -1412,7 +1490,7 @@
       "name": "Game Developers Conference",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 1\" and no decoy date"
     },
@@ -1428,7 +1506,7 @@
       "name": "Dreamforce",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"september 21\" and no decoy date"
     },
@@ -1443,10 +1521,10 @@
     "aibigdataexponorthamerica|sanjose": {
       "name": "AI & Big Data Expo North America",
       "city": "San Jose",
-      "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "status": "blocked",
+      "checked_on": "2026-10-15",
       "cycle": "script",
-      "evidence": "automated: page shows \"june 16\" and no decoy date"
+      "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
     "wearedevelopersworldcongress|sanjose": {
       "name": "WeAreDevelopers World Congress",
@@ -1468,7 +1546,7 @@
       "name": "DeveloperWeek",
       "city": "Santa Clara",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 9, 2027\" and no decoy date"
     },
@@ -1484,7 +1562,7 @@
       "name": "CVPR",
       "city": "Seattle",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 20\" and no decoy date"
     },
@@ -1492,7 +1570,7 @@
       "name": "PASS Data Community Summit West",
       "city": "Seattle",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 9\" and no decoy date"
     },
@@ -1500,7 +1578,7 @@
       "name": "PAX West",
       "city": "Seattle",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"september 3\" and no decoy date"
     },
@@ -1516,7 +1594,7 @@
       "name": "Web Summit Vancouver",
       "city": "Vancouver",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 25\" and no decoy date"
     },
@@ -1524,7 +1602,7 @@
       "name": "DC Startup & Tech Week",
       "city": "Washington",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 19\" and no decoy date"
     },
@@ -1540,7 +1618,7 @@
       "name": "Manitoba Tech Week",
       "city": "Winnipeg",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 21\" and no decoy date"
     },
@@ -1564,7 +1642,7 @@
       "name": "Buffalo Game Space Game Development Meeting",
       "city": "Buffalo",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"oct 22, 2026\" and no decoy date"
     },
@@ -1574,7 +1652,13 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "d1",
-      "evidence": "computerhistory.org/events: 'CHM Live - Data Are Made, Not Found - Thursday, November 5, 2026 7:00 PM' (the Oct 10 'Cars-Computers on Wheels' is labelled Special Event, not CHM Live). Event page confirms Nov 05, 2026 7pm, check-in 6:30pm, at CHM, 1401 N. Shoreline Blvd, Mountain View. Set next_date 2026-11-05 and removed the stale 'Silicon Gold Rush, 27 August 2026' sentence from the description."
+      "evidence": "computerhistory.org/events: 'CHM Live - Data Are Made, Not Found - Thursday, November 5, 2026 7:00 PM' (the Oct 10 'Cars-Computers on Wheels' is labelled Special Event, not CHM Live). Event page confirms Nov 05, 2026 7pm, check-in 6:30pm, at CHM, 1401 N. Shoreline Blvd, Mountain View. Set next_date 2026-11-05 and removed the stale 'Silicon Gold Rush, 27 August 2026' sentence from the description.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"november 5, 2026\" appears, but so do 1 date(s) this event does not have (e.g. 2026-11-12) — the page lists too many dates for a match to mean anything"
+      }
     },
     "veteraninnovationhackathon|mountainview": {
       "name": "Veteran Innovation Hackathon",
@@ -1718,13 +1802,19 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "e3",
-      "evidence": "xdsummit.com: 'XDS 2027 SEPT 20 - 24, 2027 · VANCOUVER, CANADA. NEW WEEK. SAME XDS.' 2026 held Sept 8-11 at Vancouver Convention Centre (vancouverconventioncentre.com XDS 2026 listing). Patch: next 2027-09-20..24, last_date 2026-09-08, venue, source to organiser (was techconf.ca csv)."
+      "evidence": "xdsummit.com: 'XDS 2027 SEPT 20 - 24, 2027 · VANCOUVER, CANADA. NEW WEEK. SAME XDS.' 2026 held Sept 8-11 at Vancouver Convention Centre (vancouverconventioncentre.com XDS 2026 listing). Patch: next 2027-09-20..24, last_date 2026-09-08, venue, source to organiser (was techconf.ca csv).",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "kansascitydeveloperconference|kansascity": {
       "name": "Kansas City Developer Conference",
       "city": "Kansas City",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"aug 4\" and no decoy date"
     },
@@ -1772,7 +1862,7 @@
       "name": "Y Combinator Demo Day",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"december 2\" and no decoy date"
     },
@@ -1798,7 +1888,13 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "e2",
-      "evidence": "cppcon.org post 'CppCon 2026 Wrap-up and CppCon 2027 Dates!' (Jon Kalb, 2026-09-24): 'announce CppCon 2027 dates, September 18-24, 2027, save the dates now!'. Venue page: 'held at the Gaylord Rockies in Aurora, Colorado'. Record was hiding a published next edition: next_date 2027-09-18, next_date_end 2027-09-24. last_date 2026-09-12 retained."
+      "evidence": "cppcon.org post 'CppCon 2026 Wrap-up and CppCon 2027 Dates!' (Jon Kalb, 2026-09-24): 'announce CppCon 2027 dates, September 18-24, 2027, save the dates now!'. Venue page: 'held at the Gaylord Rockies in Aurora, Colorado'. Record was hiding a published next edition: next_date 2027-09-18, next_date_end 2027-09-24. last_date 2026-09-12 retained.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"september 18\" appears, but so do 1 date(s) this event does not have (e.g. 2027-10-02) — the page lists too many dates for a match to mean anything"
+      }
     },
     "dayofdatadetroit|detroit": {
       "name": "Day of Data Detroit",
@@ -1836,7 +1932,7 @@
       "name": "Georgia Tech All-Majors Career Fair",
       "city": "Atlanta",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"january 25\" and no decoy date"
     },
@@ -1908,7 +2004,7 @@
       "name": "DDX Innovation & UX Conference San Diego",
       "city": "San Diego",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"september 16, 2027\" and no decoy date"
     },
@@ -2108,7 +2204,7 @@
       "name": "Oktane",
       "city": "Las Vegas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"september 28\" and no decoy date"
     },
@@ -2212,7 +2308,7 @@
       "name": "Maker Faire Bay Area",
       "city": "Vallejo",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"september 24\" and no decoy date"
     },
@@ -2332,7 +2428,7 @@
       "name": "JumpStart VC Fest",
       "city": "Cleveland",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"september 21\" and no decoy date"
     },
@@ -2348,7 +2444,7 @@
       "name": "The AI Conference",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"oct 12\" and no decoy date"
     },
@@ -2380,7 +2476,7 @@
       "name": "TechExit.io Calgary",
       "city": "Calgary",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 7, 2027\" and no decoy date"
     },
@@ -2396,7 +2492,7 @@
       "name": "Ignite Seattle",
       "city": "Seattle",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"feb 25, 2027\" and no decoy date"
     },
@@ -2510,7 +2606,13 @@
       "status": "corrected",
       "checked_on": "2026-10-10",
       "cycle": "oct11-t2",
-      "evidence": "Held edition: lwtsquad.com/2026-agenda/ JSON-LD sessions on 2026-10-05, 10-06 and 10-07 ('MON October 5, 2026 Registration & Opening'), matching last_date 2026-10-05. Next edition: lwtsquad.com now redirects to lwtsquad.com/lwtsummit-2027/, title 'LWTSUMMIT: June 7-9, 2027 | LWT', body 'June 7-9, 2027 - New York ... The 14th annual summit from Lesbians Who Tech & Allies'. Patched next_date 2027-06-07..09 and usual month October -> June; last_date kept."
+      "evidence": "Held edition: lwtsquad.com/2026-agenda/ JSON-LD sessions on 2026-10-05, 10-06 and 10-07 ('MON October 5, 2026 Registration & Opening'), matching last_date 2026-10-05. Next edition: lwtsquad.com now redirects to lwtsquad.com/lwtsummit-2027/, title 'LWTSUMMIT: June 7-9, 2027 | LWT', body 'June 7-9, 2027 - New York ... The 14th annual summit from Lesbians Who Tech & Allies'. Patched next_date 2027-06-07..09 and usual month October -> June; last_date kept.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "advertisingweeknewyork|newyork": {
       "name": "Advertising Week New York",
@@ -2630,7 +2732,13 @@
       "status": "confirmed",
       "checked_on": "2026-10-06",
       "cycle": "oct07-s2",
-      "evidence": "hack.sbcs.io (organiser) reads 'October 23-25 2026 @ Stony Brook University', with a Friday-Sunday schedule at the Student Activity Center and Melville Library. MLH 2027 season agrees: Oct 23-25, Stony Brook NY, physical. Matches record 2026-10-23..25."
+      "evidence": "hack.sbcs.io (organiser) reads 'October 23-25 2026 @ Stony Brook University', with a Friday-Sunday schedule at the Student Activity Center and Melville Library. MLH 2027 season agrees: Oct 23-25, Stony Brook NY, physical. Matches record 2026-10-23..25.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"october 23, 2026\" appears, but so do 1 date(s) this event does not have (e.g. 2026-10-02) — the page lists too many dates for a match to mean anything"
+      }
     },
     "codered|houston": {
       "name": "CodeRED",
@@ -2708,7 +2816,7 @@
       "name": "Momentum Developer Conference",
       "city": "Cincinnati",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 15, 2026\" and no decoy date"
     },
@@ -2732,7 +2840,7 @@
       "name": "GDEX",
       "city": "Newark",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"oct 15\" and no decoy date"
     },
@@ -2740,7 +2848,7 @@
       "name": "HackHarvard",
       "city": "Cambridge",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 16\" and no decoy date"
     },
@@ -2750,7 +2858,13 @@
       "status": "confirmed",
       "checked_on": "2026-10-10",
       "cycle": "oct11-t1",
-      "evidence": "datainthed.org/about-the-2026-conference reads 'Data in the D Conference 2026 Friday, October 16 & Saturday, October 17, College for Creative Studies Benson & Edith Ford Conference Center, 460 W Baltimore St, Detroit, MI 48202'. The /-registration page sells Friday October 16, 2026 and Saturday October 17, 2026 tickets. Matches the record 2026-10-16..17."
+      "evidence": "datainthed.org/about-the-2026-conference reads 'Data in the D Conference 2026 Friday, October 16 & Saturday, October 17, College for Creative Studies Benson & Edith Ford Conference Center, 460 W Baltimore St, Detroit, MI 48202'. The /-registration page sells Friday October 16, 2026 and Saturday October 17, 2026 tickets. Matches the record 2026-10-16..17.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "swamphacks|gainesville": {
       "name": "SwampHacks",
@@ -2758,13 +2872,19 @@
       "status": "confirmed",
       "checked_on": "2026-10-10",
       "cycle": "oct11-t1",
-      "evidence": "swamphacks.com redirects to xii.swamphacks.com. Its bundle assets/index-CYGuYXCr.js renders 'SwampHacks XII', 'Oct 16 - 18, 2026', location 'Reitz Union', and the FAQ says 'SwampHacks is FULLY in-person'. MLH agrees: SwampHacks XII, OCT 16 - 18, Gainesville, physical. Matches the record 2026-10-16..18."
+      "evidence": "swamphacks.com redirects to xii.swamphacks.com. Its bundle assets/index-CYGuYXCr.js renders 'SwampHacks XII', 'Oct 16 - 18, 2026', location 'Reitz Union', and the FAQ says 'SwampHacks is FULLY in-person'. MLH agrees: SwampHacks XII, OCT 16 - 18, Gainesville, physical. Matches the record 2026-10-16..18.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: 467-byte stub, likely a captcha"
+      }
     },
     "hackthevalley|toronto": {
       "name": "Hack the Valley",
       "city": "Toronto",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 16\" and no decoy date"
     },
@@ -2774,13 +2894,19 @@
       "status": "confirmed",
       "checked_on": "2026-10-10",
       "cycle": "oct11-t1",
-      "evidence": "ai.lahacks.com bundle static/js/main.28b4f32a.js renders 'AI Hackathon 2026' and 'October 17-18, 2026 | James West Alumni Center (JWAC), UCLA'. MLH agrees: 'LA Hacks AI Hackathon 2026', OCT 17 - 18, Los Angeles, physical. This is distinct from MLH's separate 'LA Hacks 27' (Apr 16-18, 2027). Matches the record 2026-10-17..18."
+      "evidence": "ai.lahacks.com bundle static/js/main.28b4f32a.js renders 'AI Hackathon 2026' and 'October 17-18, 2026 | James West Alumni Center (JWAC), UCLA'. MLH agrees: 'LA Hacks AI Hackathon 2026', OCT 17 - 18, Los Angeles, physical. This is distinct from MLH's separate 'LA Hacks 27' (Apr 16-18, 2027). Matches the record 2026-10-17..18.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "vcfswapmeet|wall": {
       "name": "VCF Swap Meet",
       "city": "Wall",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"oct. 17, 2026\" and no decoy date"
     },
@@ -2788,7 +2914,7 @@
       "name": "AI Rising Conference",
       "city": "Columbus",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 19\" and no decoy date"
     },
@@ -2796,7 +2922,7 @@
       "name": "Maine Tech Week",
       "city": "Portland",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 19\" and no decoy date"
     },
@@ -2804,7 +2930,7 @@
       "name": "Sacramento Tech Week",
       "city": "Sacramento",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 19\" and no decoy date"
     },
@@ -2812,7 +2938,7 @@
       "name": "OIN Connect",
       "city": "San Jose",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 19, 2026\" and no decoy date"
     },
@@ -2820,7 +2946,7 @@
       "name": "Lone Star Cyber Summit",
       "city": "Austin",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 20\" and no decoy date"
     },
@@ -2828,7 +2954,7 @@
       "name": "Ignite Summit",
       "city": "Fredericton",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 20, 2026\" and no decoy date"
     },
@@ -2836,7 +2962,7 @@
       "name": "eBrew",
       "city": "Portsmouth",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 20\" and no decoy date"
     },
@@ -2844,7 +2970,7 @@
       "name": "Wisconsin Biohealth Summit",
       "city": "Milwaukee",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 21, 2026\" and no decoy date"
     },
@@ -2852,7 +2978,7 @@
       "name": "ThunderPlains",
       "city": "Oklahoma City",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 21, 2026\" and no decoy date"
     },
@@ -2860,7 +2986,7 @@
       "name": "Great Lakes Software Symposium",
       "city": "Chicago",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 22\" and no decoy date"
     },
@@ -2868,7 +2994,7 @@
       "name": "Venture Dallas",
       "city": "Dallas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 22, 2026\" and no decoy date"
     },
@@ -2878,7 +3004,13 @@
       "status": "corrected",
       "checked_on": "2026-10-06",
       "cycle": "oct07-s1",
-      "evidence": "bsidestc.org: 'October 23rd, 2026 Open Book 1011 Washington Ave S, Minneapolis, MN 55415 GET TICKETS'. Date matches; patch fills the blank venue."
+      "evidence": "bsidestc.org: 'October 23rd, 2026 Open Book 1011 Washington Ave S, Minneapolis, MN 55415 GET TICKETS'. Date matches; patch fills the blank venue.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"october 23\" appears, but so do 1 date(s) this event does not have (e.g. 2026-10-02) — the page lists too many dates for a match to mean anything"
+      }
     },
     "seagl|seattle": {
       "name": "SeaGL",
@@ -2886,7 +3018,13 @@
       "status": "confirmed",
       "checked_on": "2026-10-06",
       "cycle": "oct07-s2",
-      "evidence": "seagl.org (organiser) reads 'October 23rd & 24th, 2026 at University of Washington and online'. The keynote post dated 2026-09-22 repeats Oct 23-24 in Seattle. It is hybrid with an in-person venue at the UW HUB. Matches record 2026-10-23..24."
+      "evidence": "seagl.org (organiser) reads 'October 23rd & 24th, 2026 at University of Washington and online'. The keynote post dated 2026-09-22 repeats Oct 23-24 in Seattle. It is hybrid with an in-person venue at the UW HUB. Matches record 2026-10-23..24.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"october 23\" appears, but so do 1 date(s) this event does not have (e.g. 2026-10-02) — the page lists too many dates for a match to mean anything"
+      }
     },
     "hacktx|austin": {
       "name": "HackTX",
@@ -2894,13 +3032,19 @@
       "status": "confirmed",
       "checked_on": "2026-10-10",
       "cycle": "oct11-t1",
-      "evidence": "hacktx.com (title 'HackTX 26 - Freetail Hackers') bundle assets/index-szDGJr19.js FAQ says 'HackTX 26 starts at 8am on October 24, 2026 and ends at 5pm on October 25, 2026' and 'will take place on the University of Texas at Austin campus ... fully in-person'. MLH agrees: OCT 24 - 25, Austin, physical. Matches the record 2026-10-24..25."
+      "evidence": "hacktx.com (title 'HackTX 26 - Freetail Hackers') bundle assets/index-szDGJr19.js FAQ says 'HackTX 26 starts at 8am on October 24, 2026 and ends at 5pm on October 25, 2026' and 'will take place on the University of Texas at Austin campus ... fully in-person'. MLH agrees: OCT 24 - 25, Austin, physical. Matches the record 2026-10-24..25.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "vermonttechjam|burlington": {
       "name": "Vermont Tech Jam",
       "city": "Burlington",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 24, 2026\" and no decoy date"
     },
@@ -2908,7 +3052,7 @@
       "name": "HackOHI/O",
       "city": "Columbus",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 24\" and no decoy date"
     },
@@ -2916,7 +3060,7 @@
       "name": "Video Game Live Expo (VGLX)",
       "city": "Mississauga",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 24\" and no decoy date"
     },
@@ -2924,7 +3068,7 @@
       "name": "AI in Education Summit",
       "city": "Mountain View",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 24\" and no decoy date"
     },
@@ -2932,7 +3076,7 @@
       "name": "Day of Data St Louis",
       "city": "St. Louis",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 24\" and no decoy date"
     },
@@ -2940,7 +3084,7 @@
       "name": "SQLSaturday Minnesota",
       "city": "St. Paul",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"24 october 2026\" and no decoy date"
     },
@@ -2948,7 +3092,7 @@
       "name": "NC TECH Awards Celebration",
       "city": "Raleigh",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 16\" and no decoy date"
     },
@@ -2958,7 +3102,13 @@
       "status": "confirmed",
       "checked_on": "2026-10-04",
       "cycle": "oct05-r1",
-      "evidence": "qconsf.com JSON-LD startDate 2026-11-16, endDate 2026-11-20; text 'Conference: Nov 16-18, 2026 Training: Nov 19-20, 2026 Hyatt Regency, SF'. The other dates on the page (Oct 13 early-bird, other QCon editions) are not this event. Matches the record."
+      "evidence": "qconsf.com JSON-LD startDate 2026-11-16, endDate 2026-11-20; text 'Conference: Nov 16-18, 2026 Training: Nov 19-20, 2026 Hyatt Regency, SF'. The other dates on the page (Oct 13 early-bird, other QCon editions) are not this event. Matches the record.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"nov 16\" appears, but so do 1 date(s) this event does not have (e.g. 2026-10-26) — the page lists too many dates for a match to mean anything"
+      }
     },
     "microsoftignite|sanfrancisco": {
       "name": "Microsoft Ignite",
@@ -2966,13 +3116,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "ignite.microsoft.com/en-US/home FAQ: 'Microsoft Ignite takes place November 17–20, 2026, in San Francisco at Moscone Center'; hero 'Nov 17-20, 2026 San Francisco, Moscone Center'. Matches record. (Record's source field points at blackhat.com, unrelated but harmless.)"
+      "evidence": "ignite.microsoft.com/en-US/home FAQ: 'Microsoft Ignite takes place November 17–20, 2026, in San Francisco at Moscone Center'; hero 'Nov 17-20, 2026 San Francisco, Moscone Center'. Matches record. (Record's source field points at blackhat.com, unrelated but harmless.)",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "rvatechwomenintechnologyconference|richmond": {
       "name": "rvatech/Women in Technology Conference",
       "city": "Richmond",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 17\" and no decoy date"
     },
@@ -2990,13 +3146,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "emergingprairie.com nav item 'Founders Retreat 2026' links to FoundersRetreat2026.eventbrite.com; the organiser's Eventbrite event (by Emerging Prairie, /e/founders-retreat-2026-tickets-1997156121722) shows JSON-LD 2026-11-18T17:00-06:00 to 2026-11-20T11:00-06:00, 'Stiklestad Lodge Fort Ransom, ND', agenda Wed Nov 18 - Fri Nov 20. Matches record. (emergingprairie.com/founders-retreat/ is a stale 2024 page, Oct 2-4, 2024.)"
+      "evidence": "emergingprairie.com nav item 'Founders Retreat 2026' links to FoundersRetreat2026.eventbrite.com; the organiser's Eventbrite event (by Emerging Prairie, /e/founders-retreat-2026-tickets-1997156121722) shows JSON-LD 2026-11-18T17:00-06:00 to 2026-11-20T11:00-06:00, 'Stiklestad Lodge Fort Ransom, ND', agenda Wed Nov 18 - Fri Nov 20. Matches record. (emergingprairie.com/founders-retreat/ is a stale 2024 page, Oct 2-4, 2024.)",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "bsidesottawa|ottawa": {
       "name": "BSides Ottawa",
       "city": "Ottawa",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 19\" and no decoy date"
     },
@@ -3004,7 +3166,7 @@
       "name": "Florida Technology Summit",
       "city": "St. Petersburg",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 19, 2026\" and no decoy date"
     },
@@ -3012,7 +3174,7 @@
       "name": "MongoDB.local Toronto",
       "city": "Toronto",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 19, 2026\" and no decoy date"
     },
@@ -3020,7 +3182,7 @@
       "name": "NH Tech Alliance Product of the Year",
       "city": "Concord",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 19\" and no decoy date"
     },
@@ -3028,7 +3190,7 @@
       "name": "TAG Chairs' Gala",
       "city": "Atlanta",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 19, 2026\" and no decoy date"
     },
@@ -3036,7 +3198,7 @@
       "name": "Hack Western",
       "city": "London",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 20\" and no decoy date"
     },
@@ -3052,7 +3214,7 @@
       "name": "Django Girls New York City",
       "city": "New York",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 27\" and no decoy date"
     },
@@ -3060,23 +3222,23 @@
       "name": "Houston Day of Data",
       "city": "Houston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"5 december 2026\" and no decoy date"
     },
     "gartneridentityaccessmanagementsummit|lasvegas": {
       "name": "Gartner Identity & Access Management Summit",
       "city": "Las Vegas",
-      "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "status": "blocked",
+      "checked_on": "2026-10-15",
       "cycle": "script",
-      "evidence": "automated: page shows \"december 7\" and no decoy date"
+      "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
     "islifesciences|wilmington": {
       "name": "IS: Life Sciences",
       "city": "Wilmington",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"december 10\" and no decoy date"
     },
@@ -3086,13 +3248,19 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "bsidesphilly.org JSON-LD Event 'BSides Philadelphia 2026' startDate/endDate 2026-12-11, OfflineEventAttendanceMode, location Live! Casino & Hotel Philadelphia, 900 Packer Ave. Date matches record; patch only fills the empty venue."
+      "evidence": "bsidesphilly.org JSON-LD Event 'BSides Philadelphia 2026' startDate/endDate 2026-12-11, OfflineEventAttendanceMode, location Live! Casino & Hotel Philadelphia, 900 Packer Ave. Date matches record; patch only fills the empty venue.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "bsidesrdu|raleigh": {
       "name": "BSides RDU",
       "city": "Raleigh",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"december 18\" and no decoy date"
     },
@@ -3100,7 +3268,7 @@
       "name": "DeltaHacks",
       "city": "Hamilton",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"january 9\" and no decoy date"
     },
@@ -3108,7 +3276,7 @@
       "name": "TransportationCamp DC",
       "city": "Washington",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"january 9, 2027\" and no decoy date"
     },
@@ -3116,7 +3284,7 @@
       "name": "Workplace Ninjas US",
       "city": "Scottsdale",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"jan 11\" and no decoy date"
     },
@@ -3124,7 +3292,7 @@
       "name": "CodeMash",
       "city": "Sandusky",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"january 12\" and no decoy date"
     },
@@ -3134,7 +3302,13 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "mlh-policy",
-      "evidence": "organiser: uofthacks.com says January 2027, in-person, Toronto; MLH: 2027-01-15 to 01-17."
+      "evidence": "organiser: uofthacks.com says January 2027, in-person, Toronto; MLH: 2027-01-15 to 01-17.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "uottahack|ottawa": {
       "name": "uOttaHack",
@@ -3142,13 +3316,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "mlh-policy",
-      "evidence": "organiser: 2027.uottahack.ca bundle gives January 2027, Ottawa, in-person; MLH: 2027-01-15 to 01-17."
+      "evidence": "organiser: 2027.uottahack.ca bundle gives January 2027, Ottawa, in-person; MLH: 2027-01-15 to 01-17.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "nwhacks|vancouver": {
       "name": "nwHacks",
       "city": "Vancouver",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"january 16\" and no decoy date"
     },
@@ -3158,13 +3338,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "ptc.org homepage banner 'PTC’27 → 17-20 January 2027 | Honolulu, Hawai‘i' and 'Upcoming events 17-20 January 2027 PTC’27 Honolulu'. The 13-15 and 15-16 January dates on the page are the separate leadership programme and master class. Matches record 2027-01-17..01-20."
+      "evidence": "ptc.org homepage banner 'PTC’27 → 17-20 January 2027 | Honolulu, Hawai‘i' and 'Upcoming events 17-20 January 2027 PTC’27 Honolulu'. The 13-15 and 15-16 January dates on the page are the separate leadership programme and master class. Matches record 2027-01-17..01-20.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "cactusforce|scottsdale": {
       "name": "Cactusforce",
       "city": "Scottsdale",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"january 21\" and no decoy date"
     },
@@ -3172,7 +3358,7 @@
       "name": "Hackville",
       "city": "Mississauga",
       "status": "blocked",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
@@ -3182,21 +3368,27 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "globalgamejam.org header 'Global Game Jam ® 25 - 31 January 2027' and 'GGJ 2027 Info Jam Dates 25 - 31 January 2027 Site Registration Opens 1 November 2026'. The other dates on the page belong to separate named jams/webinars (Zoud GameLab, MDEV 26 Game Jam, Checkpoint). Matches record."
+      "evidence": "globalgamejam.org header 'Global Game Jam ® 25 - 31 January 2027' and 'GGJ 2027 Info Jam Dates 25 - 31 January 2027 Site Registration Opens 1 November 2026'. The other dates on the page belong to separate named jams/webinars (Zoud GameLab, MDEV 26 Game Jam, Checkpoint). Matches record.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "bsidesstpete|stpetersburg": {
       "name": "BSidesStPete",
       "city": "St. Petersburg",
       "status": "confirmed",
-      "checked_on": "2026-10-06",
+      "checked_on": "2026-10-15",
       "cycle": "script",
-      "evidence": "automated: page shows \"january 29, 2027\" and no decoy date"
+      "evidence": "automated: page shows \"february 5, 2027\" and no decoy date"
     },
     "ellehacks|toronto": {
       "name": "ElleHacks",
       "city": "Toronto",
       "status": "blocked",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
@@ -3204,7 +3396,7 @@
       "name": "Florida DrupalCamp",
       "city": "Orlando",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"january 29\" and no decoy date"
     },
@@ -3212,7 +3404,7 @@
       "name": "UGAHacks",
       "city": "Athens",
       "status": "blocked",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
@@ -3220,7 +3412,7 @@
       "name": "DistrictCon",
       "city": "Washington",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 6\" and no decoy date"
     },
@@ -3228,7 +3420,7 @@
       "name": "Hack_NCState",
       "city": "Raleigh",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 6\" and no decoy date"
     },
@@ -3236,7 +3428,7 @@
       "name": "Hack@Brown",
       "city": "Providence",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 6\" and no decoy date"
     },
@@ -3244,7 +3436,7 @@
       "name": "InnovateHer",
       "city": "West Lafayette",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 6\" and no decoy date"
     },
@@ -3252,7 +3444,7 @@
       "name": "SpartaHack",
       "city": "East Lansing",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"feb 6\" and no decoy date"
     },
@@ -3260,7 +3452,7 @@
       "name": "ITEXPO",
       "city": "Fort Lauderdale",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 9\" and no decoy date"
     },
@@ -3268,7 +3460,7 @@
       "name": "MakeUofT",
       "city": "Toronto",
       "status": "blocked",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
@@ -3278,13 +3470,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "aaai.org/conference/aaai/aaai-27/ header 'The 41st Annual AAAI Conference on Artificial Intelligence February 16 - February 23, 2027 | Montréal, Canada' and 'will be held in Montréal, Canada, from February 16 to February 23, 2027'. The 'October 19-25, 2026' on the page is the author feedback window in the deadlines table. Matches record."
+      "evidence": "aaai.org/conference/aaai/aaai-27/ header 'The 41st Annual AAAI Conference on Artificial Intelligence February 16 - February 23, 2027 | Montréal, Canada' and 'will be held in Montréal, Canada, from February 16 to February 23, 2027'. The 'October 19-25, 2026' on the page is the author feedback window in the deadlines table. Matches record.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"february 16\" appears, but so do 1 date(s) this event does not have (e.g. 2027-02-23) — the page lists too many dates for a match to mean anything"
+      }
     },
     "sfhacks|sanfrancisco": {
       "name": "SF Hacks",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 19\" and no decoy date"
     },
@@ -3294,13 +3492,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "cuhack.it is a JS shell titled 'CUhackit 2027'; its bundle (assets/index-zbuwORxB.js) renders 'location -> clemson university' and 'date -> february 20th and 21st' under the 'cuhackit 2027' heading. Matches record 2027-02-20..02-21; MLH list agrees (FEB 20 - 21, In-Person)."
+      "evidence": "cuhack.it is a JS shell titled 'CUhackit 2027'; its bundle (assets/index-zbuwORxB.js) renders 'location -> clemson university' and 'date -> february 20th and 21st' under the 'cuhackit 2027' heading. Matches record 2027-02-20..02-21; MLH list agrees (FEB 20 - 21, In-Person).",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "linuxfoundationmembersummit|halfmoonbay": {
       "name": "Linux Foundation Member Summit",
       "city": "Half Moon Bay",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 22\" and no decoy date"
     },
@@ -3308,7 +3512,7 @@
       "name": "ConFoo Montreal",
       "city": "Montreal",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 24\" and no decoy date"
     },
@@ -3316,7 +3520,7 @@
       "name": "PlatformCon Live Day San Francisco",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"feb 24, 2027\" and no decoy date"
     },
@@ -3326,13 +3530,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "hackillinois.org redirects to hype.hackillinois.org; its server-rendered Next.js payload passes the countdown component targetDate \"2027-02-26T18:00:00.000Z\" (noon Central, Fri Feb 26 2027), matching next_date. The organiser page gives no end date; the MLH 2027 season listing (mlh.io/seasons/2027/events, websiteUrl hackillinois.org) gives \"HackIllinois FEB 26 - 28, Urbana, Illinois, In-Person\", matching next_date_end 2027-02-28."
+      "evidence": "hackillinois.org redirects to hype.hackillinois.org; its server-rendered Next.js payload passes the countdown component targetDate \"2027-02-26T18:00:00.000Z\" (noon Central, Fri Feb 26 2027), matching next_date. The organiser page gives no end date; the MLH 2027 season listing (mlh.io/seasons/2027/events, websiteUrl hackillinois.org) gives \"HackIllinois FEB 26 - 28, Urbana, Illinois, In-Person\", matching next_date_end 2027-02-28.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "hacklytics|atlanta": {
       "name": "Hacklytics",
       "city": "Atlanta",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 26\" and no decoy date"
     },
@@ -3340,7 +3550,7 @@
       "name": "HackHERS",
       "city": "New Brunswick",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 27\" and no decoy date"
     },
@@ -3348,7 +3558,7 @@
       "name": "RevolutionUC",
       "city": "Cincinnati",
       "status": "blocked",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
@@ -3358,13 +3568,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "wichacks.io is a 469-byte JS shell; its bundle /assets/index-DQxUmtLt.js contains the countdown new Date(\"2027-02-27T12:00:00-05:00\"), matching next_date 2027-02-27. End date from MLH 2027 season listing \"WiCHacks FEB 27 - 28, Rochester, New York, In-Person\" (endsAt 2027-02-28T21:00Z), matching next_date_end."
+      "evidence": "wichacks.io is a 469-byte JS shell; its bundle /assets/index-DQxUmtLt.js contains the countdown new Date(\"2027-02-27T12:00:00-05:00\"), matching next_date 2027-02-27. End date from MLH 2027 season listing \"WiCHacks FEB 27 - 28, Rochester, New York, In-Person\" (endsAt 2027-02-28T21:00Z), matching next_date_end.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: 469-byte stub, likely a captcha"
+      }
     },
     "legalweeknewyork|newyork": {
       "name": "Legalweek New York",
       "city": "New York",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 1\" and no decoy date"
     },
@@ -3372,7 +3588,7 @@
       "name": "HenHacks",
       "city": "Newark",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 6\" and no decoy date"
     },
@@ -3380,7 +3596,7 @@
       "name": "Kent Hack Enough",
       "city": "Kent",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 6\" and no decoy date"
     },
@@ -3388,7 +3604,7 @@
       "name": "3rd Coast Venture Summit",
       "city": "New Orleans",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 9\" and no decoy date"
     },
@@ -3396,7 +3612,7 @@
       "name": "SXSW EDU",
       "city": "Austin",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 13\" and no decoy date"
     },
@@ -3404,7 +3620,7 @@
       "name": "ViVE",
       "city": "Nashville",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 14\" and no decoy date"
     },
@@ -3412,7 +3628,7 @@
       "name": "SXSW",
       "city": "Austin",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 15\" and no decoy date"
     },
@@ -3420,7 +3636,7 @@
       "name": "Build48",
       "city": "St. John's",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 20\" and no decoy date"
     },
@@ -3428,7 +3644,7 @@
       "name": "CyberBay Summit",
       "city": "Tampa",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 22\" and no decoy date"
     },
@@ -3438,21 +3654,27 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "Dates correct: events.drupal.org/orlando2027 (read via WebFetch; curl gets a JS \"Client Challenge\") states \"22 March 2027 - 25 March 2027\" at \"Hyatt Regency Grand Cypress Resort\", Orlando FL, matching record dates and venue. Stored URL was the events.drupal.org homepage listing multiple DrupalCons; patched url to the Orlando 2027 page."
+      "evidence": "Dates correct: events.drupal.org/orlando2027 (read via WebFetch; curl gets a JS \"Client Challenge\") states \"22 March 2027 - 25 March 2027\" at \"Hyatt Regency Grand Cypress Resort\", Orlando FL, matching record dates and venue. Stored URL was the events.drupal.org homepage listing multiple DrupalCons; patched url to the Orlando 2027 page.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "cyphercon|milwaukee": {
       "name": "CypherCon",
       "city": "Milwaukee",
-      "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "status": "blocked",
+      "checked_on": "2026-10-15",
       "cycle": "script",
-      "evidence": "automated: page shows \"march 24\" and no decoy date"
+      "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
     "bsidessgf|springfield": {
       "name": "BSidesSGF",
       "city": "Springfield",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 30, 2027\" and no decoy date"
     },
@@ -3460,7 +3682,7 @@
       "name": "devopsdays Los Angeles",
       "city": "Los Angeles",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 2, 2027\" and no decoy date"
     },
@@ -3468,7 +3690,7 @@
       "name": "Diamondhacks",
       "city": "La Jolla",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 3\" and no decoy date"
     },
@@ -3476,7 +3698,7 @@
       "name": "Devnexus",
       "city": "Atlanta",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 29\" and no decoy date"
     },
@@ -3486,7 +3708,13 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "Dates correct. On the world.productledalliance.com listing, \"Apr 07 & 08, 2027\" sits immediately before \"Product-Led Summit Denver\" in the summit-series list. Its dedicated page world.productledalliance.com/location/denver has JSON-LD startDate 2027-04-07, endDate 2027-04-08 and hero \"April 07 & 08, 2027 Denver\". Patched url from the multi-event listing to the Denver page."
+      "evidence": "Dates correct. On the world.productledalliance.com listing, \"Apr 07 & 08, 2027\" sits immediately before \"Product-Led Summit Denver\" in the summit-series list. Its dedicated page world.productledalliance.com/location/denver has JSON-LD startDate 2027-04-07, endDate 2027-04-08 and hero \"April 07 & 08, 2027 Denver\". Patched url from the multi-event listing to the Denver page.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"april 7\" appears, but so do 1 date(s) this event does not have (e.g. 2027-04-14) — the page lists too many dates for a match to mean anything"
+      }
     },
     "hackku|lawrence": {
       "name": "HackKU",
@@ -3494,7 +3722,13 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "e1",
-      "evidence": "Confirmed from the organiser's own source. hackku.org returns a Vercel 429 checkpoint to both curl and WebFetch, so I read the organiser's GitHub repo, the-hackku/hackku27_website (homepage hackku.org, pushed 2026-08-25). constants.ts has dates 'April 9th - 11th, 2027', startDate 2027-04-09T22:00Z ('5 PM CDT Friday') and endDate 2027-04-11T20:00Z. RegistrationForm.tsx says '{dates}, in-person', and the seed locations are in Eaton Hall (KU). The MLH 2027 registry agrees: 'HackKU27' APR 09-11, Lawrence, Kansas, physical. This matches the stored 2027-04-09..11."
+      "evidence": "Confirmed from the organiser's own source. hackku.org returns a Vercel 429 checkpoint to both curl and WebFetch, so I read the organiser's GitHub repo, the-hackku/hackku27_website (homepage hackku.org, pushed 2026-08-25). constants.ts has dates 'April 9th - 11th, 2027', startDate 2027-04-09T22:00Z ('5 PM CDT Friday') and endDate 2027-04-11T20:00Z. RegistrationForm.tsx says '{dates}, in-person', and the seed locations are in Eaton Hall (KU). The MLH 2027 registry agrees: 'HackKU27' APR 09-11, Lawrence, Kansas, physical. This matches the stored 2027-04-09..11.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "marihacks|montreal": {
       "name": "MariHacks",
@@ -3502,13 +3736,19 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "e1",
-      "evidence": "Dates confirmed under the MLH rule. The organiser's marihacks.com bundle (assets/index-29e2ddfb.js) reads 'April, 2027', 'Marianopolis College | In-person Hackathon' and 'MariHacks 10.0 is coming in 2027! The exact dates ... will be announced soon', with a 2027 MLH badge. The MLH 2027 registry (websiteUrl marihacks.com) lists startsAt 2027-04-09, endsAt 2027-04-10, Montreal, physical. This matches the stored 2027-04-09..10. Month, city and in-person come from the organiser. The days come from MLH. The only change was filling the empty venue with Marianopolis College."
+      "evidence": "Dates confirmed under the MLH rule. The organiser's marihacks.com bundle (assets/index-29e2ddfb.js) reads 'April, 2027', 'Marianopolis College | In-person Hackathon' and 'MariHacks 10.0 is coming in 2027! The exact dates ... will be announced soon', with a 2027 MLH badge. The MLH 2027 registry (websiteUrl marihacks.com) lists startsAt 2027-04-09, endsAt 2027-04-10, Montreal, physical. This matches the stored 2027-04-09..10. Month, city and in-person come from the organiser. The days come from MLH. The only change was filling the empty venue with Marianopolis College.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: 476-byte stub, likely a captcha"
+      }
     },
     "wehack|richardson": {
       "name": "WEHack",
       "city": "Richardson",
       "status": "blocked",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
@@ -3516,7 +3756,7 @@
       "name": "HPSF Conference",
       "city": "Montreal",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 12\" and no decoy date"
     },
@@ -3524,17 +3764,17 @@
       "name": "Twilio SIGNAL",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 13\" and no decoy date"
     },
     "aiproductsummitsiliconvalley|sanjose": {
       "name": "AI Product Summit Silicon Valley",
       "city": "San Jose",
-      "status": "corrected",
-      "checked_on": "2026-09-27",
-      "cycle": "d4",
-      "evidence": "Dates correct: world.productledalliance.com/location/ai/ (title \"AI Product Summit | Silicon Valley\") JSON-LD startDate 2027-04-15, hero \"April 15, 2027 San Jose\". The main listing does NOT show this 2027 edition (its Apr 14, 2027 San Jose entry is the separate Chief Product Officer Summit); it lists \"Apr 15, 2026 AI Product Summit San Jose\" under past events, embedded JSON dateFrom 1776268800000 = 2026-04-15, city San Jose. Patched url to the event page and last_date to 2026-04-15 (was empty)."
+      "status": "confirmed",
+      "checked_on": "2026-10-15",
+      "cycle": "script",
+      "evidence": "automated: page shows \"apr 15, 2027\" and no decoy date"
     },
     "lahacks|losangeles": {
       "name": "LA Hacks",
@@ -3542,7 +3782,13 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "mlh-policy",
-      "evidence": "organiser: lahacks.com says Mid-April 2027 at UCLA Pauley Pavilion, in person; MLH: 2027-04-16 to 04-18."
+      "evidence": "organiser: lahacks.com says Mid-April 2027 at UCLA Pauley Pavilion, in person; MLH: 2027-04-16 to 04-18.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "ifivek|charleston": {
       "name": "iFiveK",
@@ -3550,13 +3796,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "charlestondigital.com/community/ifivek hero: \"SEE YOU AT THE START LINE APRIL 22, 2027\", race venue \"Charleston Tech Center in downtown Charleston\". Past-race list includes \"18th Annual Race • April 23rd, 2026\", matching last_date. Matches record."
+      "evidence": "charlestondigital.com/community/ifivek hero: \"SEE YOU AT THE START LINE APRIL 22, 2027\", race venue \"Charleston Tech Center in downtown Charleston\". Past-race list includes \"18th Annual Race • April 23rd, 2026\", matching last_date. Matches record.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"april 22, 2027\" appears, but so do 1 date(s) this event does not have (e.g. 2027-04-01) — the page lists too many dates for a match to mean anything"
+      }
     },
     "techsponewyork|newyork": {
       "name": "TECHSPO New York",
       "city": "New York",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 22\" and no decoy date"
     },
@@ -3566,7 +3818,13 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "midwestgamingclassic.com returns Cloudflare 403 to curl and WebFetch (also /location/, /feed/, wp-json), so the page body was not read directly. Organiser-published evidence via WebSearch: the organiser homepage is indexed with title \"April 23-25, 2027 - Midwest Gaming Classic\"; the organiser Facebook (MGCgaming) post reads \"April 23-25, 2027 - Baird Center - Milwaukee, WI\"; Milwaukee Record reports MGC 2027 \"already booked for April 23-25 at the Baird Center\". Matches record dates and venue."
+      "evidence": "midwestgamingclassic.com returns Cloudflare 403 to curl and WebFetch (also /location/, /feed/, wp-json), so the page body was not read directly. Organiser-published evidence via WebSearch: the organiser homepage is indexed with title \"April 23-25, 2027 - Midwest Gaming Classic\"; the organiser Facebook (MGCgaming) post reads \"April 23-25, 2027 - Baird Center - Milwaukee, WI\"; Milwaukee Record reports MGC 2027 \"already booked for April 23-25 at the Baird Center\". Matches record dates and venue.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "miraawards|indianapolis": {
       "name": "Mira Awards",
@@ -3574,7 +3832,13 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "techpoint.org/mira-awards/ text: \"The 2027 Mira Awards will take place Friday, April 23 at the brand-new Signia by Hilton Indianapolis\". Matches record date and venue."
+      "evidence": "techpoint.org/mira-awards/ text: \"The 2027 Mira Awards will take place Friday, April 23 at the brand-new Signia by Hilton Indianapolis\". Matches record date and venue.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"april 23\" appears, but so do 1 date(s) this event does not have (e.g. 2027-04-02) — the page lists too many dates for a match to mean anything"
+      }
     },
     "bsidescharm|baltimore": {
       "name": "BSidesCharm",
@@ -3582,13 +3846,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "bsidescharm.org serves a JS firewall to curl; WebFetch read it: \"24-25 April 2027\", venue \"Sheraton Baltimore North, 903 Dulaney Valley Rd, Towson, MD 21204\". Matches record dates and venue (Towson, Baltimore County; record city Baltimore left as metro)."
+      "evidence": "bsidescharm.org serves a JS firewall to curl; WebFetch read it: \"24-25 April 2027\", venue \"Sheraton Baltimore North, 903 Dulaney Valley Rd, Towson, MD 21204\". Matches record dates and venue (Towson, Baltimore County; record city Baltimore left as metro).",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "imagineritcreativityandinnovationfestival|rochester": {
       "name": "Imagine RIT: Creativity and Innovation Festival",
       "city": "Rochester",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 24, 2027\" and no decoy date"
     },
@@ -3596,7 +3866,7 @@
       "name": "STAREAST",
       "city": "Orlando",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 25\" and no decoy date"
     },
@@ -3612,7 +3882,7 @@
       "name": "Startup Grind Global Conference",
       "city": "Redwood City",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 27\" and no decoy date"
     },
@@ -3630,13 +3900,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "midcamp.org JSON-LD and title are still for 2026 (May 12-14, 2026 = last_date, the decoy). The same page carries the organiser news post (16 May 2026) \"MidCamp 2027 Dates Are Official: Save the Date for April 28-30, 2027\", matching record 2027-04-28..30. 2027 venue not stated; DePaul left as is."
+      "evidence": "midcamp.org JSON-LD and title are still for 2026 (May 12-14, 2026 = last_date, the decoy). The same page carries the organiser news post (16 May 2026) \"MidCamp 2027 Dates Are Official: Save the Date for April 28-30, 2027\", matching record 2027-04-28..30. 2027 venue not stated; DePaul left as is.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"april 28\" appears, but so do 1 date(s) this event does not have (e.g. 2027-05-12) — the page lists too many dates for a match to mean anything"
+      }
     },
     "stripesessions|sanfrancisco": {
       "name": "Stripe Sessions",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 4\" and no decoy date"
     },
@@ -3644,7 +3920,7 @@
       "name": "Uniting the Prairies",
       "city": "Saskatoon",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 28\" and no decoy date"
     },
@@ -3652,7 +3928,7 @@
       "name": "Pathways to Progress",
       "city": "Charleston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 29, 2027\" and no decoy date"
     },
@@ -3660,7 +3936,7 @@
       "name": "University of Idaho Engineering Design EXPO",
       "city": "Moscow",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 29\" and no decoy date"
     },
@@ -3668,7 +3944,7 @@
       "name": "FinovateSpring",
       "city": "San Diego",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 3\" and no decoy date"
     },
@@ -3676,7 +3952,7 @@
       "name": "PGConf.dev",
       "city": "Montreal",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 11\" and no decoy date"
     },
@@ -3684,7 +3960,7 @@
       "name": "NorthSec",
       "city": "Montreal",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 10\" and no decoy date"
     },
@@ -3692,7 +3968,7 @@
       "name": "Open Source Summit North America",
       "city": "Vancouver",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 17\" and no decoy date"
     },
@@ -3700,7 +3976,7 @@
       "name": "DIG SOUTH Tech, Venture & AI Summit",
       "city": "Charleston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 20\" and no decoy date"
     },
@@ -3708,7 +3984,7 @@
       "name": "Dayton Hamvention",
       "city": "Xenia",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 21\" and no decoy date"
     },
@@ -3716,17 +3992,17 @@
       "name": "Quantum.Tech USA",
       "city": "Boston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 25\" and no decoy date"
     },
     "redhatsummit|boston": {
       "name": "Red Hat Summit",
       "city": "Boston",
-      "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "status": "blocked",
+      "checked_on": "2026-10-15",
       "cycle": "script",
-      "evidence": "automated: page shows \"may 25\" and no decoy date"
+      "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
     "interface|quebeccity": {
       "name": "Interface",
@@ -3734,13 +4010,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "interfaceqc.com page title \"Interface | 1–3 juin 2027\"; footer \"Interface - Québec\". Matches record 2027-06-01..03."
+      "evidence": "interfaceqc.com page title \"Interface | 1–3 juin 2027\"; footer \"Interface - Québec\". Matches record 2027-06-01..03.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "aiconusa|seattle": {
       "name": "AI Con USA",
       "city": "Seattle",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 6\" and no decoy date"
     },
@@ -3750,13 +4032,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "cttechweek.com meta description, og:description and twitter:description: \"Connecticut's biggest week in tech and innovation. June 7–11, 2027.\" Matches record. Note: raw record has region \"Connecticut\", city \"Various\"; the build folds \"various\" to Multiple cities / US & Canada (scripts/lib/places.mjs), so the published region is less precise than the raw data. Not patched (a patch cannot override that alias)."
+      "evidence": "cttechweek.com meta description, og:description and twitter:description: \"Connecticut's biggest week in tech and innovation. June 7–11, 2027.\" Matches record. Note: raw record has region \"Connecticut\", city \"Various\"; the build folds \"various\" to Multiple cities / US & Canada (scripts/lib/places.mjs), so the published region is less precise than the raw data. Not patched (a patch cannot override that alias).",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "snowflakesummit|sanfrancisco": {
       "name": "Snowflake Summit",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 7\" and no decoy date"
     },
@@ -3764,7 +4052,7 @@
       "name": "XP Game Summit",
       "city": "Toronto",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 10\" and no decoy date"
     },
@@ -3772,7 +4060,7 @@
       "name": "ETHConf",
       "city": "New York",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 14\" and no decoy date"
     },
@@ -3782,13 +4070,19 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "Dates correct. On the world.productledalliance.com listing \"Jun 16 & 17, 2027\" sits immediately before \"Product-Led Summit Seattle\" (the May 26 decoy belongs to Amsterdam). Dedicated page /location/seattle has JSON-LD startDate 2027-06-16, endDate 2027-06-17, hero \"June 16 & 17, 2027 Grand Hyatt 721 Pine Street Seattle\". Patched url to the Seattle page and venue (was empty)."
+      "evidence": "Dates correct. On the world.productledalliance.com listing \"Jun 16 & 17, 2027\" sits immediately before \"Product-Led Summit Seattle\" (the May 26 decoy belongs to Amsterdam). Dedicated page /location/seattle has JSON-LD startDate 2027-06-16, endDate 2027-06-17, hero \"June 16 & 17, 2027 Grand Hyatt 721 Pine Street Seattle\". Patched url to the Seattle page and venue (was empty).",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"june 16\" appears, but so do 1 date(s) this event does not have (e.g. 2027-05-26) — the page lists too many dates for a match to mean anything"
+      }
     },
     "codemasheast|spotsylvania": {
       "name": "CodeMash East",
       "city": "Spotsylvania",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 17\" and no decoy date"
     },
@@ -3796,7 +4090,7 @@
       "name": "Vintage Computer Festival Southwest",
       "city": "Irving",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 25\" and no decoy date"
     },
@@ -3804,7 +4098,7 @@
       "name": "Startupfest",
       "city": "Montreal",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"july 7\" and no decoy date"
     },
@@ -3812,7 +4106,7 @@
       "name": "Open Sauce",
       "city": "San Mateo",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"july 17\" and no decoy date"
     },
@@ -3820,7 +4114,7 @@
       "name": "TechChicago Week",
       "city": "Chicago",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"july 19\" and no decoy date"
     },
@@ -3828,7 +4122,7 @@
       "name": "TechMentor & Cybersecurity Live! @ Microsoft HQ",
       "city": "Redmond",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"august 9, 2027\" and no decoy date"
     },
@@ -3836,7 +4130,7 @@
       "name": "MEET Show",
       "city": "Moncton",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 3\" and no decoy date"
     },
@@ -3902,7 +4196,13 @@
       "status": "confirmed",
       "checked_on": "2026-10-06",
       "cycle": "oct07-s1",
-      "evidence": "startupsiouxfalls.com/event/founders-meetup-1-3/ redirects to the series page; JSON-LD first occurrence startDate 2026-10-21T09:00-05:00, eventAttendanceMode Offline, organiser Startup Sioux Falls (100 E 6th St); series continues monthly (Nov 18, Dec 16, ...). Matches record."
+      "evidence": "startupsiouxfalls.com/event/founders-meetup-1-3/ redirects to the series page; JSON-LD first occurrence startDate 2026-10-21T09:00-05:00, eventAttendanceMode Offline, organiser Startup Sioux Falls (100 E 6th St); series continues monthly (Nov 18, Dec 16, ...). Matches record.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "aibuilderlabmeetup|siouxfalls": {
       "name": "AI Builder Lab Meetup",
@@ -3958,7 +4258,13 @@
       "status": "corrected",
       "checked_on": "2026-10-04",
       "cycle": "oct05-r1",
-      "evidence": "Stored next_date 2026-09-30 has elapsed. roux.northeastern.edu events list (Sept 2026 view) JSON-LD shows 'Open Door with Glenn Prickett' 2026-09-30T08:00-04:00, so it ran. The current events page lists 'Open Door with Mary Allen Lindemann, Owner of Coffee by Design', October 28 @ 8:00-9:00 am, Northeastern University's Roux Institute, 100 Fore Street, Portland. Patch sets next_date 2026-10-28 and last_date 2026-09-30."
+      "evidence": "Stored next_date 2026-09-30 has elapsed. roux.northeastern.edu events list (Sept 2026 view) JSON-LD shows 'Open Door with Glenn Prickett' 2026-09-30T08:00-04:00, so it ran. The current events page lists 'Open Door with Mary Allen Lindemann, Owner of Coffee by Design', October 28 @ 8:00-9:00 am, Northeastern University's Roux Institute, 100 Fore Street, Portland. Patch sets next_date 2026-10-28 and last_date 2026-09-30.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"october 28\" appears, but so do 1 date(s) this event does not have (e.g. 2026-12-02) — the page lists too many dates for a match to mean anything"
+      }
     },
     "opensearchconnorthamerica|sanjose": {
       "name": "OpenSearchCon North America",
@@ -3988,7 +4294,7 @@
       "name": "OPI Summit on DPU/IPUs",
       "city": "San Jose",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 15, 2026\" and no decoy date"
     },
@@ -3996,7 +4302,7 @@
       "name": "Maker Faire Baton Rouge",
       "city": "Baton Rouge",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 17\" and no decoy date"
     },
@@ -4004,7 +4310,7 @@
       "name": "TransportationCamp New England",
       "city": "Cambridge",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 17, 2026\" and no decoy date"
     },
@@ -4012,7 +4318,7 @@
       "name": "SecureWV",
       "city": "Charleston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 22\" and no decoy date"
     },
@@ -4020,7 +4326,7 @@
       "name": "BSides COS",
       "city": "Colorado Springs",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 24\" and no decoy date"
     },
@@ -4028,7 +4334,7 @@
       "name": "BSidesAugusta",
       "city": "Augusta",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 24\" and no decoy date"
     },
@@ -4036,7 +4342,7 @@
       "name": "Ocean Exchange",
       "city": "Fort Lauderdale",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 25\" and no decoy date"
     },
@@ -4044,7 +4350,7 @@
       "name": "Austin Tech Week",
       "city": "Austin",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 26\" and no decoy date"
     },
@@ -4054,13 +4360,19 @@
       "status": "confirmed",
       "checked_on": "2026-10-10",
       "cycle": "oct11-t1",
-      "evidence": "The stored ibm.com/community/ibm-techxchange-conference/ URL redirects to ibm.com/events/techxchange (200, title 'IBM TechXchange 2026'), which reads 'IBM TechXchange 2026 26-29 October Atlanta, GA ... The hands-on conference'. Matches the record 2026-10-26..29. The record's source field is dev.events, but the dates are verified here against IBM's own page."
+      "evidence": "The stored ibm.com/community/ibm-techxchange-conference/ URL redirects to ibm.com/events/techxchange (200, title 'IBM TechXchange 2026'), which reads 'IBM TechXchange 2026 26-29 October Atlanta, GA ... The hands-on conference'. Matches the record 2026-10-26..29. The record's source field is dev.events, but the dates are verified here against IBM's own page.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "newmexicotechweek|albuquerque": {
       "name": "New Mexico Tech Week",
       "city": "Albuquerque",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 26\" and no decoy date"
     },
@@ -4068,7 +4380,7 @@
       "name": "BSides Fredericton",
       "city": "Fredericton",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 27\" and no decoy date"
     },
@@ -4084,7 +4396,7 @@
       "name": "Open Source in Finance Forum New York",
       "city": "New York",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 4\" and no decoy date"
     },
@@ -4100,7 +4412,7 @@
       "name": "InsurTech Hartford Connect & Protect",
       "city": "Hartford",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 27 2026\" and no decoy date"
     },
@@ -4110,13 +4422,19 @@
       "status": "confirmed",
       "checked_on": "2026-10-10",
       "cycle": "oct11-t2",
-      "evidence": "insurtechhartford.com (200) events list: 'Innovation Challenge Awards Ceremony Oct 27, 2026 Nassau Office, Hartford' - a named card, distinct from the same-day 'EmpowerHer breakfast' and 'Connect & Protect' cards. Matches record next_date 2026-10-27, Hartford, in person."
+      "evidence": "insurtechhartford.com (200) events list: 'Innovation Challenge Awards Ceremony Oct 27, 2026 Nassau Office, Hartford' - a named card, distinct from the same-day 'EmpowerHer breakfast' and 'Connect & Protect' cards. Matches record next_date 2026-10-27, Hartford, in person.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"oct 27, 2026\" appears, but so do 2 date(s) this event does not have (e.g. 2026-12-01) — the page lists too many dates for a match to mean anything"
+      }
     },
     "newyorkstateinnovationsummit|buffalo": {
       "name": "New York State Innovation Summit",
       "city": "Buffalo",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 27\" and no decoy date"
     },
@@ -4124,7 +4442,7 @@
       "name": "SAINTCON",
       "city": "Provo",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 27\" and no decoy date"
     },
@@ -4132,7 +4450,7 @@
       "name": "GitHub Universe",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 28\" and no decoy date"
     },
@@ -4140,7 +4458,7 @@
       "name": "SHPE National Convention",
       "city": "Indianapolis",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 28\" and no decoy date"
     },
@@ -4148,7 +4466,7 @@
       "name": "BC Technology Impact Awards",
       "city": "Vancouver",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 29, 2026\" and no decoy date"
     },
@@ -4156,7 +4474,7 @@
       "name": "DataConnect Conference",
       "city": "Columbus",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 29\" and no decoy date"
     },
@@ -4164,7 +4482,7 @@
       "name": "LASCON",
       "city": "Austin",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 29\" and no decoy date"
     },
@@ -4172,7 +4490,7 @@
       "name": "NM TechFest",
       "city": "Albuquerque",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 29\" and no decoy date"
     },
@@ -4180,7 +4498,7 @@
       "name": "Northeast Dreamin'",
       "city": "Concord",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 29\" and no decoy date"
     },
@@ -4188,7 +4506,7 @@
       "name": "BSides NoVA",
       "city": "Arlington",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 30\" and no decoy date"
     },
@@ -4196,7 +4514,7 @@
       "name": "Triangle InfoSeCon",
       "city": "Raleigh",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 30, 2026\" and no decoy date"
     },
@@ -4204,7 +4522,7 @@
       "name": "Digital Summit Raleigh",
       "city": "Raleigh",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 2\" and no decoy date"
     },
@@ -4212,7 +4530,7 @@
       "name": "Global Summit AI Vancouver",
       "city": "Vancouver",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 2\" and no decoy date"
     },
@@ -4220,7 +4538,7 @@
       "name": "OWASP Global AppSec USA",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 2\" and no decoy date"
     },
@@ -4228,7 +4546,7 @@
       "name": "ElasticON San Francisco",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 4, 2026\" and no decoy date"
     },
@@ -4238,13 +4556,19 @@
       "status": "confirmed",
       "checked_on": "2026-10-04",
       "cycle": "oct05-r1",
-      "evidence": "f2fevents.com/event/neb26/ title 'INTERFACE Omaha | November 5th, 2026'; text 'Thursday, November 5th, 2026 8:30am-4:30pm CHI Health Center Omaha South Ballroom 455 N 10th Street Omaha, NE'. The other date the scanner flagged (2026-10-04) is page metadata, not an event date. Matches the record."
+      "evidence": "f2fevents.com/event/neb26/ title 'INTERFACE Omaha | November 5th, 2026'; text 'Thursday, November 5th, 2026 8:30am-4:30pm CHI Health Center Omaha South Ballroom 455 N 10th Street Omaha, NE'. The other date the scanner flagged (2026-10-04) is page metadata, not an event date. Matches the record.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"november 5\" appears, but so do 1 date(s) this event does not have (e.g. 2026-10-15) — the page lists too many dates for a match to mean anything"
+      }
     },
     "promptvictoriaaiconference|victoria": {
       "name": "Prompt Victoria AI Conference",
       "city": "Victoria",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 5, 2026\" and no decoy date"
     },
@@ -4252,7 +4576,7 @@
       "name": "WordCamp Canada",
       "city": "Vancouver",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 5\" and no decoy date"
     },
@@ -4260,7 +4584,7 @@
       "name": "Texas Linux Fest",
       "city": "Austin",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"nov 6\" and no decoy date"
     },
@@ -4268,7 +4592,7 @@
       "name": "BSides Charleston",
       "city": "Charleston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 7, 2026\" and no decoy date"
     },
@@ -4276,7 +4600,7 @@
       "name": "BSidesDFW",
       "city": "Dallas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 7\" and no decoy date"
     },
@@ -4284,7 +4608,7 @@
       "name": "HackRPI",
       "city": "Troy",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 7\" and no decoy date"
     },
@@ -4292,7 +4616,7 @@
       "name": "Iowa Code Camp",
       "city": "Des Moines",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 7, 2026\" and no decoy date"
     },
@@ -4310,13 +4634,19 @@
       "status": "confirmed",
       "checked_on": "2026-10-10",
       "cycle": "oct11-t1",
-      "evidence": "hashicorp.com/en/conferences/hashiconf returns a Vercel 429 to curl, but WebFetch read the heading 'Atlanta | October 26-29, 2026'. The schedule has onsite certification testing, hands-on labs and an Opening Night Block Party. IBM's ibm.com/events/techxchange (26-29 October, Atlanta, GA) says TechXchange includes 'the integration of HashiConf'. Matches the record 2026-10-26..29."
+      "evidence": "hashicorp.com/en/conferences/hashiconf returns a Vercel 429 to curl, but WebFetch read the heading 'Atlanta | October 26-29, 2026'. The schedule has onsite certification testing, hands-on labs and an Opening Night Block Party. IBM's ibm.com/events/techxchange (26-29 October, Atlanta, GA) says TechXchange includes 'the integration of HashiConf'. Matches the record 2026-10-26..29.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "vibecodingcon|lasvegas": {
       "name": "Vibe Coding Con",
       "city": "Las Vegas",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 27\" and no decoy date"
     },
@@ -4324,7 +4654,7 @@
       "name": "Michigan Technology Conference",
       "city": "Rochester",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 29\" and no decoy date"
     },
@@ -4334,13 +4664,19 @@
       "status": "confirmed",
       "checked_on": "2026-10-10",
       "cycle": "oct11-t2",
-      "evidence": "sans.org/cyber-security-training-events (200) embedded event index: 'AI Cybersecurity Summit Fall 2026', eventId 93600, city Arlington, state VA, startDate 2026-11-02, endDate 2026-11-03, trainingFormats ['Live Online','In-Person']. Matches record 2026-11-02..03; in person with an online option."
+      "evidence": "sans.org/cyber-security-training-events (200) embedded event index: 'AI Cybersecurity Summit Fall 2026', eventId 93600, city Arlington, state VA, startDate 2026-11-02, endDate 2026-11-03, trainingFormats ['Live Online','In-Person']. Matches record 2026-11-02..03; in person with an online option.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"nov 2\" appears, but so do 1 date(s) this event does not have (e.g. 2026-12-07) — the page lists too many dates for a match to mean anything"
+      }
     },
     "kentuckyentrepreneurhalloffameinductioncelebration|lexington": {
       "name": "Kentucky Entrepreneur Hall of Fame Induction Celebration",
       "city": "Lexington",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 4, 2026\" and no decoy date"
     },
@@ -4348,7 +4684,7 @@
       "name": "SAAS NORTH",
       "city": "Ottawa",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 4\" and no decoy date"
     },
@@ -4356,7 +4692,7 @@
       "name": "CISO Fireside",
       "city": "Sundance",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 5, 2026\" and no decoy date"
     },
@@ -4364,7 +4700,7 @@
       "name": "Hackaday Superconference",
       "city": "Pasadena",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 6\" and no decoy date"
     },
@@ -4374,13 +4710,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "mdevconf.com JSON-LD Event 'MDEV 26' startDate 2026-11-06T09:00-06:00, endDate 2026-11-07T17:00-06:00, OfflineEventAttendanceMode, location 'Alliant Energy Center', Madison 53713. Matches record."
+      "evidence": "mdevconf.com JSON-LD Event 'MDEV 26' startDate 2026-11-06T09:00-06:00, endDate 2026-11-07T17:00-06:00, OfflineEventAttendanceMode, location 'Alliant Energy Center', Madison 53713. Matches record.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "pnwdayofdata|vancouver": {
       "name": "PNW Day of Data",
       "city": "Vancouver",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"7 november 2026\" and no decoy date"
     },
@@ -4388,7 +4730,7 @@
       "name": "DevFest KC",
       "city": "Kansas City",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 7, 2026\" and no decoy date"
     },
@@ -4396,7 +4738,7 @@
       "name": "HackUTD",
       "city": "Richardson",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 7\" and no decoy date"
     },
@@ -4404,7 +4746,7 @@
       "name": "Toronto Game Expo",
       "city": "Toronto",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 7\" and no decoy date"
     },
@@ -4414,13 +4756,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "vcfed.org/vcf-montreal/ reads 'VCF Montreal ... WHEN: Nov. 7-8, 2026 HOURS: 9:00 to 17:00 Saturday and 9:00 to 15:00 Sunday'; sidebar 'VCF Montréal = Nov. 7-8, 2026'. The other date (Oct. 17, 2026) is the separate 'VCF Swap Meet (NJ)' line. Matches record."
+      "evidence": "vcfed.org/vcf-montreal/ reads 'VCF Montreal ... WHEN: Nov. 7-8, 2026 HOURS: 9:00 to 17:00 Saturday and 9:00 to 15:00 Sunday'; sidebar 'VCF Montréal = Nov. 7-8, 2026'. The other date (Oct. 17, 2026) is the separate 'VCF Swap Meet (NJ)' line. Matches record.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "govitleadershipsummitsymposium|bloomington": {
       "name": "GOVIT Leadership Summit & Symposium",
       "city": "Bloomington",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 8\" and no decoy date"
     },
@@ -4428,7 +4776,7 @@
       "name": "Accelerate Conference",
       "city": "Flowood",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 10\" and no decoy date"
     },
@@ -4436,7 +4784,7 @@
       "name": "Montreal International Game Summit (MIGS)",
       "city": "Montreal",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 10\" and no decoy date"
     },
@@ -4444,7 +4792,7 @@
       "name": "BSides Flood City",
       "city": "Johnstown",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 12\" and no decoy date"
     },
@@ -4454,7 +4802,13 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "dayofdata.org/2026-11-12-dayofdata1155/ body reads 'Event Date : 13 November 2026 ... in-person ... free event', venue Seattle Public Library Auditorium, 1000 4th Ave. Source YAML in github.com/sqlsaturday/dayofdata_website has date 2026-11-13, changed by organiser commit 2026-09-17 'changing date and location for seattle day of data'. The '12' in the URL slug/index is the stale Jekyll filename date. Patch moves date to 2026-11-13, adds venue, cost free."
+      "evidence": "dayofdata.org/2026-11-12-dayofdata1155/ body reads 'Event Date : 13 November 2026 ... in-person ... free event', venue Seattle Public Library Auditorium, 1000 4th Ave. Source YAML in github.com/sqlsaturday/dayofdata_website has date 2026-11-13, changed by organiser commit 2026-09-17 'changing date and location for seattle day of data'. The '12' in the URL slug/index is the stale Jekyll filename date. Patch moves date to 2026-11-13, adds venue, cost free.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"13 november 2026\" appears, but so do 1 date(s) this event does not have (e.g. 2026-11-20) — the page lists too many dates for a match to mean anything"
+      }
     },
     "spiceworld|austin": {
       "name": "SpiceWorld",
@@ -4462,7 +4816,13 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "spiceworks.com/spiceworld/ (title 'SpiceWorld 2026') reads 'SpiceWorld 2026 returns to Austin on Nov. 12-13!'; event hotel block at AT&T Hotel & Conference Center, 1900 University Avenue, Austin. Matches record 2026-11-12..11-13."
+      "evidence": "spiceworks.com/spiceworld/ (title 'SpiceWorld 2026') reads 'SpiceWorld 2026 returns to Austin on Nov. 12-13!'; event hotel block at AT&T Hotel & Conference Center, 1900 University Avenue, Austin. Matches record 2026-11-12..11-13.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "cyberforcecompetition|tinleypark": {
       "name": "CyberForce Competition",
@@ -4470,13 +4830,19 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "cyberforce.energy.gov/cyberforce-competition/2026-competition/ reads 'in-person competition in 2026 for competing Blue team participants on November 13-14, 2026 at the Tinley Park Convention Center'. The other date on the page (July 20, 2026) is registration opening. Matches record."
+      "evidence": "cyberforce.energy.gov/cyberforce-competition/2026-competition/ reads 'in-person competition in 2026 for competing Blue team participants on November 13-14, 2026 at the Tinley Park Convention Center'. The other date on the page (July 20, 2026) is registration opening. Matches record.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: no response"
+      }
     },
     "globaldayofcoderetreat|multiplecities": {
       "name": "Global Day of Coderetreat",
       "city": "Multiple cities",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"nov 13, 2026\" and no decoy date"
     },
@@ -4484,7 +4850,7 @@
       "name": "HackUMass",
       "city": "Amherst",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"nov 13\" and no decoy date"
     },
@@ -4492,7 +4858,7 @@
       "name": "New England Drupal Camp",
       "city": "Providence",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 13\" and no decoy date"
     },
@@ -4500,7 +4866,7 @@
       "name": "San Diego CyberCon",
       "city": "San Diego",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 13, 2026\" and no decoy date"
     },
@@ -4508,7 +4874,7 @@
       "name": "Security BSides Delaware",
       "city": "Newark",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 13, 2026\" and no decoy date"
     },
@@ -4516,7 +4882,7 @@
       "name": "Live! 360 Tech Con",
       "city": "Orlando",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 15, 2026\" and no decoy date"
     },
@@ -4526,15 +4892,21 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d3",
-      "evidence": "sc26.supercomputing.org/all-dates-deadlines/ reads 'Program Sunday–Friday 15–20 November 2026 Exhibits Tuesday–Thursday 17–19 November 2026'; /attendees/convention-center/ names McCormick Place, 2301 S Martin Luther King Dr, Chicago. Matches record 2026-11-15..11-20."
+      "evidence": "sc26.supercomputing.org/all-dates-deadlines/ reads 'Program Sunday–Friday 15–20 November 2026 Exhibits Tuesday–Thursday 17–19 November 2026'; /attendees/convention-center/ names McCormick Place, 2301 S Martin Luther King Dr, Chicago. Matches record 2026-11-15..11-20.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "jsnationus|newyork": {
       "name": "JSNation US",
       "city": "New York",
-      "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "status": "blocked",
+      "checked_on": "2026-10-15",
       "cycle": "script",
-      "evidence": "automated: page shows \"november 16\" and no decoy date"
+      "evidence": "automated: \"november 16\" appears, but so do 1 date(s) this event does not have (e.g. 2026-11-23) — the page lists too many dates for a match to mean anything"
     },
     "43northspeakerseries|buffalo": {
       "name": "43North Speaker Series",
@@ -4572,7 +4944,7 @@
       "name": "AI Engineer World's Fair",
       "city": "San Francisco",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 29\" and no decoy date"
     },
@@ -4704,7 +5076,7 @@
       "name": "Big Data & Analytics Summit Canada",
       "city": "Toronto",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 8\" and no decoy date"
     },
@@ -4804,7 +5176,7 @@
       "name": "BSides Dayton",
       "city": "Dayton",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"2027-05-15\" and no decoy date"
     },
@@ -4828,7 +5200,7 @@
       "name": "BSides Fort Wayne",
       "city": "Fort Wayne",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 11\" and no decoy date"
     },
@@ -4878,15 +5250,21 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "bsidesnash.org hero: \"BSides Nashville 2027 April 23 Friday • Doors 8:30 AM Marathon Music Works\". May 15, 2026 on the page is the 2026 recap, matching last_date. Matches record 2027-04-23 single day."
+      "evidence": "bsidesnash.org hero: \"BSides Nashville 2027 April 23 Friday • Doors 8:30 AM Marathon Music Works\". May 15, 2026 on the page is the 2026 recap, matching last_date. Matches record 2027-04-23 single day.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"april 23\" appears, but so do 1 date(s) this event does not have (e.g. 2027-04-02) — the page lists too many dates for a match to mean anything"
+      }
     },
     "bsidesregina|regina": {
       "name": "BSides Regina",
       "city": "Regina",
-      "status": "corrected",
-      "checked_on": "2026-10-10",
-      "cycle": "oct11-t3",
-      "evidence": "bsidesregina.ca: 'Join us for BSides Regina on Thursday, March 18, 2027. 10am-4pm at the Atlas Hotel in Regina'; workshops March 17, 2027. Patched next_date 2027-03-18 (main day, consistent with how 2026 was recorded) and venue."
+      "status": "confirmed",
+      "checked_on": "2026-10-15",
+      "cycle": "script",
+      "evidence": "automated: page shows \"march 18, 2027\" and no decoy date"
     },
     "bsidesroanoke|roanoke": {
       "name": "BSides Roanoke",
@@ -4910,7 +5288,13 @@
       "status": "confirmed",
       "checked_on": "2026-09-27",
       "cycle": "d4",
-      "evidence": "nolabsides.com redirects to a Notion site (bsidesnola.notion.site); read via Notion loadCachedPageChunkV2 API: block text \"BSidesNOLA May 11, 2027 tickets ON SALE NOW!\" linking ticketleap \"bsidesnola-2027-may-pre-release\". Matches record 2027-05-11 single day."
+      "evidence": "nolabsides.com redirects to a Notion site (bsidesnola.notion.site); read via Notion loadCachedPageChunkV2 API: block text \"BSidesNOLA May 11, 2027 tickets ON SALE NOW!\" linking ticketleap \"bsidesnola-2027-may-pre-release\". Matches record 2027-05-11 single day.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "bsidesslc|saltlakecity": {
       "name": "BSides SLC",
@@ -4956,7 +5340,7 @@
       "name": "BSidesROC",
       "city": "Rochester",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 20\" and no decoy date"
     },
@@ -5001,10 +5385,10 @@
     "calgaryhacks|calgary": {
       "name": "CalgaryHacks",
       "city": "Calgary",
-      "status": "corrected",
-      "checked_on": "2026-10-10",
-      "cycle": "oct11-t3",
-      "evidence": "calgaryhacks.ca (the CSUS ucalgary host redirects there): 'CalgaryHacks 2027 ... February 13 to 14, 2027 · University of Calgary', JSON-LD startDate 2027-02-13. Record's Devpost URL was the 2026 edition (JSON-LD 2026-02-14..15). Patched next_date 2027-02-13..14, last_date 2026-02-14, url/source to calgaryhacks.ca, month January->February."
+      "status": "confirmed",
+      "checked_on": "2026-10-15",
+      "cycle": "script",
+      "evidence": "automated: page shows \"february 13\" and no decoy date"
     },
     "canadiangameawards|toronto": {
       "name": "Canadian Game Awards",
@@ -5033,10 +5417,10 @@
     "cedventureconnect|durham": {
       "name": "CED Venture Connect",
       "city": "Durham",
-      "status": "corrected",
-      "checked_on": "2026-10-10",
-      "cycle": "oct11-t3",
-      "evidence": "cednc.org/venture-connect/ hero: 'March 22-24, 2027 - DPAC | Durham, NC'. Patched next_date 2027-03-22..24; city and venue on record match."
+      "status": "confirmed",
+      "checked_on": "2026-10-15",
+      "cycle": "script",
+      "evidence": "automated: page shows \"march 22\" and no decoy date"
     },
     "centralohioinfosecsummit|columbus": {
       "name": "Central Ohio InfoSec Summit",
@@ -5159,10 +5543,10 @@
     "coloradotechnologyassociationapexawards|denver": {
       "name": "Colorado Technology Association APEX Awards",
       "city": "Denver",
-      "status": "corrected",
-      "checked_on": "2026-10-10",
-      "cycle": "oct11-t3",
-      "evidence": "coloradotechnology.org/apex-awards/: '2027 Colorado Tech Summit + APEX Awards Thursday, February 18, 2027 8:00 am-2:00 pm Grand Hyatt Denver 1750 Welton St, Denver'. Patched next_date 2027-02-18; venue on record matches."
+      "status": "confirmed",
+      "checked_on": "2026-10-15",
+      "cycle": "script",
+      "evidence": "automated: page shows \"february 18, 2027\" and no decoy date"
     },
     "conhacks|waterloo": {
       "name": "ConHacks",
@@ -5224,7 +5608,13 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "e4",
-      "evidence": "The organiser's Eventbrite ticket page 'Cultivator Community Night 2026' (by Cultivator powered by Conexus): JSON-LD startDate 2026-01-28T18:30-06:00, 'Darke Hall Regina, SK Wednesday, January 28'. The record's 2026-02-04 is the publish date of the recap post on cultivator.ca/events/upcoming_and_past_events, not the event date. Record venue 'Cultivator HQ' was the 2025 venue (cultivator.ca/cultivator-community-night: 'Feb. 1, 2025 Where: Cultivator HQ'). cultivator.ca has no per-event page for 2026 other than the recap, so url set to that; no 2027 date published."
+      "evidence": "The organiser's Eventbrite ticket page 'Cultivator Community Night 2026' (by Cultivator powered by Conexus): JSON-LD startDate 2026-01-28T18:30-06:00, 'Darke Hall Regina, SK Wednesday, January 28'. The record's 2026-02-04 is the publish date of the recap post on cultivator.ca/events/upcoming_and_past_events, not the event date. Record venue 'Cultivator HQ' was the 2025 venue (cultivator.ca/cultivator-community-night: 'Feb. 1, 2025 Where: Cultivator HQ'). cultivator.ca has no per-event page for 2026 other than the recap, so url set to that; no 2027 date published.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "cyberconva|richmond": {
       "name": "CyberConVA",
@@ -5287,10 +5677,10 @@
     "datatune|nashville": {
       "name": "DataTune",
       "city": "Nashville",
-      "status": "corrected",
-      "checked_on": "2026-10-10",
-      "cycle": "oct11-t3",
-      "evidence": "datatuneconf.com ('DataTune 2027'): 'March 12-13, 2027'; JSON-LD startDate 2027-03-12, endDate 2027-03-13, OfflineEventAttendanceMode, addressLocality Nashville. Patched next_date 2027-03-12..13."
+      "status": "confirmed",
+      "checked_on": "2026-10-15",
+      "cycle": "script",
+      "evidence": "automated: page shows \"march 12\" and no decoy date"
     },
     "desertdevlabhackathon|albuquerque": {
       "name": "Desert Dev Lab Hackathon",
@@ -5314,7 +5704,13 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "e2",
-      "evidence": "cybersecuritysummit.com/summits/ lists Chicago twice a year (Apr 4 + Sep 10 2025; Mar 3 + Sep 15 2026). The Sep 15, 2026 edition (cyberriskalliance.swoogo.com/chicago2026) was at Chicago Marriott Downtown Magnificent Mile, not the Hyatt Regency in the record (Hyatt hosted the March 2026 one). Next edition published at cyberriskalliance.swoogo.com/Chicago2027: 'Tuesday, April 27, 2027 8:00 AM - 6:00 PM CDT, Venue to be Announced, Chicago, IL', in person, 14th edition. Set next_date/end 2027-04-27, url to that page, venue blank (TBA), cadence biannual, month April."
+      "evidence": "cybersecuritysummit.com/summits/ lists Chicago twice a year (Apr 4 + Sep 10 2025; Mar 3 + Sep 15 2026). The Sep 15, 2026 edition (cyberriskalliance.swoogo.com/chicago2026) was at Chicago Marriott Downtown Magnificent Mile, not the Hyatt Regency in the record (Hyatt hosted the March 2026 one). Next edition published at cyberriskalliance.swoogo.com/Chicago2027: 'Tuesday, April 27, 2027 8:00 AM - 6:00 PM CDT, Venue to be Announced, Chicago, IL', in person, 14th edition. Set next_date/end 2027-04-27, url to that page, venue blank (TBA), cadence biannual, month April.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "devfestcharlotte|charlotte": {
       "name": "DevFest Charlotte",
@@ -5327,10 +5723,10 @@
     "devfestmn|minneapolis": {
       "name": "DevFestMN",
       "city": "Minneapolis",
-      "status": "corrected",
-      "checked_on": "2026-10-10",
-      "cycle": "oct11-t3",
-      "evidence": "devfest.mn ('DevFestMN 2026'): meta 'one-day Twin Cities developer conference on Saturday, December 5th', JSON-LD startDate 2026-12-05T09:00-06:00; venue University of St. Thomas Schulze Hall, downtown Minneapolis. Patched next_date 2026-12-05 and venue (old venue was from a past edition)."
+      "status": "confirmed",
+      "checked_on": "2026-10-15",
+      "cycle": "script",
+      "evidence": "automated: page shows \"december 5\" and no decoy date"
     },
     "devopsdaysraleigh|raleigh": {
       "name": "devopsdays Raleigh",
@@ -5368,7 +5764,7 @@
       "name": "Digital Offshore Conference",
       "city": "St. John's",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 27\" and no decoy date"
     },
@@ -5378,7 +5774,13 @@
       "status": "corrected",
       "checked_on": "2026-10-10",
       "cycle": "oct11-t3",
-      "evidence": "digitalsummit.com/tampa/ (title 'Digital Summit Tampa | March 23-24, 2027'): 'TAMPA, FL | MARCH 23-24, 2027 HILTON TAMPA DOWNTOWN'; series home page agrees. Patched next_date 2027-03-23..24, venue, and url to the Tampa page."
+      "evidence": "digitalsummit.com/tampa/ (title 'Digital Summit Tampa | March 23-24, 2027'): 'TAMPA, FL | MARCH 23-24, 2027 HILTON TAMPA DOWNTOWN'; series home page agrees. Patched next_date 2027-03-23..24, venue, and url to the Tampa page.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"march 23\" appears, but so do 1 date(s) this event does not have (e.g. 2027-03-02) — the page lists too many dates for a match to mean anything"
+      }
     },
     "devopsdayskansascity|overlandpark": {
       "name": "DevOpsDays Kansas City",
@@ -5496,7 +5898,7 @@
       "name": "GameCon Canada",
       "city": "Edmonton",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 25\" and no decoy date"
     },
@@ -5528,7 +5930,7 @@
       "name": "GeekWire Seattle AI Summit",
       "city": "Seattle",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 27\" and no decoy date"
     },
@@ -5760,7 +6162,7 @@
       "name": "HackUSU",
       "city": "Logan",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"february 19\" and no decoy date"
     },
@@ -6104,7 +6506,7 @@
       "name": "MnTech Connect",
       "city": "St. Paul",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 1, 2027\" and no decoy date"
     },
@@ -6192,7 +6594,7 @@
       "name": "New Orleans Entrepreneur Week",
       "city": "New Orleans",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 8\" and no decoy date"
     },
@@ -6247,18 +6649,18 @@
     "odsceast|boston": {
       "name": "ODSC East",
       "city": "Boston",
-      "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "status": "blocked",
+      "checked_on": "2026-10-15",
       "cycle": "script",
-      "evidence": "automated: page shows \"may 10\" and no decoy date"
+      "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
     "odscwest|sanfrancisco": {
       "name": "ODSC West",
       "city": "San Francisco",
-      "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "status": "blocked",
+      "checked_on": "2026-10-15",
       "cycle": "script",
-      "evidence": "automated: page shows \"october 27\" and no decoy date"
+      "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
     "ohiotechsummit|columbus": {
       "name": "Ohio Tech Summit",
@@ -6400,7 +6802,7 @@
       "name": "QA or the Highway",
       "city": "Columbus",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"june 11, 2027\" and no decoy date"
     },
@@ -6448,7 +6850,7 @@
       "name": "Rocky Mountain Technology Summit",
       "city": "Denver",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 25\" and no decoy date"
     },
@@ -6552,7 +6954,7 @@
       "name": "Small Satellite Conference",
       "city": "Salt Lake City",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"august 1\" and no decoy date"
     },
@@ -6752,7 +7154,7 @@
       "name": "TennoCon",
       "city": "London",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"july 16\" and no decoy date"
     },
@@ -6960,7 +7362,7 @@
       "name": "VSLive! @ Microsoft HQ",
       "city": "Redmond",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"august 2, 2027\" and no decoy date"
     },
@@ -7184,7 +7586,7 @@
       "name": "NVTC Cyber Summit & Cyber50 Awards",
       "city": "McLean",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 28, 2026\" and no decoy date"
     },
@@ -7200,7 +7602,7 @@
       "name": "DVCon U.S.",
       "city": "Santa Clara",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"march 1\" and no decoy date"
     },
@@ -7216,7 +7618,7 @@
       "name": "Hawaii International Conference on System Sciences",
       "city": "Waikoloa",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"january 5\" and no decoy date"
     },
@@ -7224,7 +7626,7 @@
       "name": "NVTC Tech100 Celebration",
       "city": "McLean",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"december 15, 2026\" and no decoy date"
     },
@@ -7232,7 +7634,7 @@
       "name": "Milwaukee Tech Hub Code & Coffee",
       "city": "Milwaukee",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"nov 7\" and no decoy date"
     },
@@ -7240,7 +7642,7 @@
       "name": "AGNTCon + MCPCon North America",
       "city": "San Jose",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 22\" and no decoy date"
     },
@@ -7264,7 +7666,7 @@
       "name": "BeyondConf",
       "city": "Detroit",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 5, 2026\" and no decoy date"
     },
@@ -7276,10 +7678,10 @@
       "cycle": "d3",
       "evidence": "Organiser ACG Events' acgrobotus.com (Wayback snapshot 2026-06-13) reads 'November 3-4, 2026 Chicago' and 'November 3-4, 2026 Sheraton Grand Chicago Riverwalk 301 E. North Water Street Chicago, IL 60611'. Dates match record; patch adds venue and replaces the dev.events aggregator URL with the organiser's. Live acgrobotus.com currently shows a maintenance page - worth re-checking nearer the date.",
       "last_attempt": {
-        "on": "2026-10-10",
-        "cycle": "oct11-t2",
+        "on": "2026-10-15",
+        "cycle": "script",
         "status": "blocked",
-        "evidence": "Could not read an organiser page. acgrobotus.com (organiser ACG Events) still serves only 'Humanoid Robots Summit is under maintenance' (200, 7 KB, no dates) 23 days before the event; Wayback CDX has no capture after 2026-06-13 (the one pass d3 used: 'November 3-4, 2026, Sheraton Grand Chicago Riverwalk'). The MassRobotics calendar listing that carried it now returns 404. Only aggregators remain (conferenceinc.net JSON-LD 2026-11-03..04, eco-business), which agree with the record but are not the organiser. Web search found no cancellation or postponement notice. Record left as is (2026-11-03..04); the dead organiser site and removed MassRobotics listing are warning signs worth a re-check closer to the date."
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
       }
     },
     "gdgbrooklynaifashionhackathon|newyork": {
@@ -7302,7 +7704,7 @@
       "name": "Open Source AI Week",
       "city": "San Jose",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 16\" and no decoy date"
     },
@@ -7310,7 +7712,7 @@
       "name": "RustConf",
       "city": "Vancouver",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"september 7\" and no decoy date"
     },
@@ -7318,7 +7720,7 @@
       "name": "Linux Foundation Legal Summit",
       "city": "San Jose",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 20\" and no decoy date"
     },
@@ -7352,13 +7754,19 @@
       "status": "confirmed",
       "checked_on": "2026-10-06",
       "cycle": "oct07-s2",
-      "evidence": "swo.drupalcanada.org (organiser) title reads 'Fri, 23 Oct 2026 - Sat, 24 Oct 2026, Kitchener-Waterloo'. The body says sessions are at the Kitchener Public Library on Friday, followed by Drupal in a Day on Saturday. Matches record 2026-10-23..24."
+      "evidence": "swo.drupalcanada.org (organiser) title reads 'Fri, 23 Oct 2026 - Sat, 24 Oct 2026, Kitchener-Waterloo'. The body says sessions are at the Kitchener Public Library on Friday, followed by Drupal in a Day on Saturday. Matches record 2026-10-23..24.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: \"october 23\" appears, but so do 1 date(s) this event does not have (e.g. 2026-10-02) — the page lists too many dates for a match to mean anything"
+      }
     },
     "pittsburghtechfest|moontownship": {
       "name": "Pittsburgh TechFest",
       "city": "Moon Township",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 30, 2026\" and no decoy date"
     },
@@ -7374,7 +7782,7 @@
       "name": "Pacific Northwest Software Symposium",
       "city": "Redmond",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 12\" and no decoy date"
     },
@@ -7382,7 +7790,7 @@
       "name": "Day of Data Orlando",
       "city": "Sanford",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 17\" and no decoy date"
     },
@@ -7390,7 +7798,7 @@
       "name": "Full Indie Meetup",
       "city": "Vancouver",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 3\" and no decoy date"
     },
@@ -7414,7 +7822,7 @@
       "name": "Awesome Fellowship Demo Day",
       "city": "Lexington",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 15\" and no decoy date"
     },
@@ -7422,7 +7830,7 @@
       "name": "Jupyter Day San Jose",
       "city": "San Jose",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 19, 2026\" and no decoy date"
     },
@@ -7430,7 +7838,7 @@
       "name": "Pittsburgh Tech 50 Awards",
       "city": "Pittsburgh",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 19, 2026\" and no decoy date"
     },
@@ -7438,7 +7846,7 @@
       "name": "Chief Product Officer Summit Silicon Valley",
       "city": "San Jose",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"april 14, 2027\" and no decoy date"
     },
@@ -7446,7 +7854,7 @@
       "name": "Charleston Tech Week",
       "city": "Charleston",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"may 17\" and no decoy date"
     },
@@ -7496,7 +7904,13 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "e1",
-      "evidence": "Organiser pages: cultivator.ca/events/startup-summit says 'The when September 9 + 10, 2026!', and saskstartupsummit.com is titled 'Startup Summit | Sept 9 + 10, 2026' with 'Cultivator HQ Regina, SK' (2375 College Ave). It was held: 620 CKRM reported Michele Romanow's keynote on 2026-09-14. For the next edition, the event-card image on cultivator.ca/events ('2027 Events') reads 'SEPT 15+16 2027 Startup Summit Cultivator HQ'. The record had no next_date, and its last_date 2025-09-23 (a recap-post date) missed the 2026 edition. Set last_date 2026-09-09, next 2027-09-15..16, venue, and url (was the shared /events). The 2027 days come from an image on the organiser's own page, with no text source."
+      "evidence": "Organiser pages: cultivator.ca/events/startup-summit says 'The when September 9 + 10, 2026!', and saskstartupsummit.com is titled 'Startup Summit | Sept 9 + 10, 2026' with 'Cultivator HQ Regina, SK' (2375 College Ave). It was held: 620 CKRM reported Michele Romanow's keynote on 2026-09-14. For the next edition, the event-card image on cultivator.ca/events ('2027 Events') reads 'SEPT 15+16 2027 Startup Summit Cultivator HQ'. The record had no next_date, and its last_date 2025-09-23 (a recap-post date) missed the 2026 edition. Set last_date 2026-09-09, next 2027-09-15..16, venue, and url (was the shared /events). The 2027 days come from an image on the organiser's own page, with no text source.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "hackai|columbus": {
       "name": "Hack AI",
@@ -7544,7 +7958,13 @@
       "status": "corrected",
       "checked_on": "2026-09-27",
       "cycle": "orchestrator",
-      "evidence": "elevatefestival.ca 301s to nrth.ca, titled 'Nrth Festival'; 2027 edition Sept 14-16 per curator e3. Renamed from Elevate Festival."
+      "evidence": "elevatefestival.ca 301s to nrth.ca, titled 'Nrth Festival'; 2027 edition Sept 14-16 per curator e3. Renamed from Elevate Festival.",
+      "last_attempt": {
+        "on": "2026-10-15",
+        "cycle": "script",
+        "status": "blocked",
+        "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
+      }
     },
     "chiefproductofficersummitsanfrancisco|burlingame": {
       "name": "Chief Product Officer Summit San Francisco",
@@ -7566,23 +7986,23 @@
       "name": "Splunk .conf",
       "city": "Chicago",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 4\" and no decoy date"
     },
     "aiinfrasummit|sanjose": {
       "name": "AI Infra Summit",
       "city": "San Jose",
-      "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "status": "blocked",
+      "checked_on": "2026-10-15",
       "cycle": "script",
-      "evidence": "automated: page shows \"aug 31\" and no decoy date"
+      "evidence": "automated: page loads but the stored date is not on it and it publishes no structured date"
     },
     "techcon365dallas|irving": {
       "name": "TechCon 365 Dallas",
       "city": "Irving",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 2, 2026\" and no decoy date"
     },
@@ -7598,7 +8018,7 @@
       "name": "HACK.COMS",
       "city": "Rochester",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"november 7, 2026\" and no decoy date"
     },
@@ -7606,7 +8026,7 @@
       "name": "Capitol",
       "city": "Washington",
       "status": "confirmed",
-      "checked_on": "2026-10-10",
+      "checked_on": "2026-10-15",
       "cycle": "script",
       "evidence": "automated: page shows \"october 16\" and no decoy date"
     },
@@ -7621,18 +8041,18 @@
     "bsidesseattle|redmond": {
       "name": "BSides Seattle",
       "city": "Redmond",
-      "status": "corrected",
-      "checked_on": "2026-10-10",
-      "cycle": "oct11-t3",
-      "evidence": "bsidesseattle.com ('BSides Seattle 2027'): 'Friday and Saturday, March 5th and 6th ... Location: Building 92, 15010 NE 36th St, Redmond 98052, WA'. Mar 5 2027 is a Friday. Patched dates 2027-03-05..06 and city to Redmond (venue is on the Microsoft campus in Redmond, not Seattle)."
+      "status": "confirmed",
+      "checked_on": "2026-10-15",
+      "cycle": "script",
+      "evidence": "automated: page shows \"march 5\" and no decoy date"
     },
     "agileopennorthwest|seattle": {
       "name": "Agile Open Northwest",
       "city": "Seattle",
-      "status": "corrected",
-      "checked_on": "2026-10-10",
-      "cycle": "oct11-t3",
-      "evidence": "agileopennorthwest.org home: 'AONW 2027 Feb 19-20 · Seattle, WA'. 2026 edition (Mar 6-7) was at McMenamins Kennedy School, Portland per the site's 2026 page; 2027 moves to Seattle. Patched city/region to Seattle, Washington, dates 2027-02-19..20, month February."
+      "status": "confirmed",
+      "checked_on": "2026-10-15",
+      "cycle": "script",
+      "evidence": "automated: page shows \"feb 19\" and no decoy date"
     },
     "offensiveaicon|sandiego": {
       "name": "Offensive AI Con",
@@ -7659,5 +8079,5 @@
       "evidence": "bsidesseattle.com ('BSides Seattle 2027'): 'Friday and Saturday, March 5th and 6th ... Location: Building 92, 15010 NE 36th St, Redmond 98052, WA'. Mar 5 2027 is a Friday. Patched dates 2027-03-05..06 and city to Redmond (venue is on the Microsoft campus in Redmond, not Seattle)."
     }
   },
-  "updated_on": "2026-10-11"
+  "updated_on": "2026-10-15"
 }
