@@ -15,8 +15,6 @@ hand-verified, 3,322 from the live feed
 **Live:** https://burhan3737.github.io/connectWithTechies/ · **How it stays current:**
 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 
-**Live:** https://burhan3737.github.io/connectWithTechies/ · **How it stays current:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
-
 Coverage is complete for every US state and every Canadian province. Two jurisdictions are
 genuinely empty — the **Northwest Territories** and **Nunavut**. That is not an oversight:
 Pinnguaq, the Yellowknife Chamber and Eventbrite listings for both territories were all
