@@ -438,6 +438,23 @@ console.log('\nBevy');
   ok(off && off.place === null, 'Seattle address on an Eastern clock: three hours off, left unplaced');
   const pan = bevyEvent(page(ev('2027-01-22T08:00:00-05:00', addr({ addressLocality: 'Panamá', addressRegion: 'Panamá Province' }))), cncf, site);
   ok(pan && pan.place === null, 'KCD Panama: a North American clock but no US/Canada region: unplaced');
+  // Review round 1: Latin American state codes that are also US ones, on CNCF (no chapter hint).
+  const unplaced = (startDate, address, w = cncf) => { const x = bevyEvent(page(ev(startDate, address)), w, site); return !!x && x.place === null; };
+  ok(unplaced('2026-07-15T09:00:00-03:00', addr({ addressLocality: 'Florianópolis', addressRegion: 'SC' })), 'Florianópolis/SC, -03:00: not South Carolina');
+  ok(unplaced('2026-06-15T09:00:00-03:00', addr({ addressLocality: 'Belém', addressRegion: 'PA' })), 'Belém/PA: not Pennsylvania');
+  ok(unplaced('2026-06-15T09:00:00-04:00', addr({ addressLocality: 'Campo Grande', addressRegion: 'MS' })), 'Campo Grande/MS, -04:00: not Mississippi');
+  ok(unplaced('2026-11-15T09:00:00-05:00', addr({ addressLocality: 'Bogotá', addressRegion: 'DC' })), 'Bogotá/DC, -05:00 (the zone matches): not District of Columbia');
+  ok(unplaced('2026-07-15T09:00:00', addr({ addressLocality: 'Florianópolis', addressRegion: 'SC' })), 'no offset on the start time: the known-city rule still applies');
+  ok(unplaced('2026-07-15T09:00:00Z', addr({ addressLocality: 'Florianópolis', addressRegion: 'SC' })), 'a Z (UTC) start time: no clock check, still not South Carolina');
+  ok(unplaced('2026-07-15T09:00:00-03:00', 'Rua Bocaiúva 2468, Florianópolis, SC'), 'a plain-text address goes through the same guard');
+  ok(unplaced('2026-07-15T09:00:00-03:00', addr({ addressLocality: 'Columbia', addressRegion: 'SC' }), { ...cncf, country: 'United States' }),
+    'no US state is on -03:00: refused even with a US chapter');
+  const miami = bevyEvent(page(ev('2026-12-11T09:00:00-05:00', addr({ addressLocality: 'Miami', addressRegion: 'FL' }))), cncf, site);
+  ok(miami?.place?.city === 'Miami' && miami.place.region === 'Florida', 'KCD Florida (CNCF, no hint) in a known city: still placed');
+  const hfx = bevyEvent(page(ev('2026-09-15T18:00:00-03:00', addr({ addressLocality: 'Halifax', addressRegion: 'NS', addressCountry: 'CA' }))), cncf, site);
+  ok(hfx?.place?.city === 'Halifax' && hfx.place.country === 'Canada', 'Atlantic Canada on -03:00 (ADT): still placed in Canada');
+  const hfx2 = bevyEvent(page(ev('2026-09-15T18:00:00-03:00', addr({ addressLocality: 'Halifax', addressRegion: 'NS' }))), cncf, site);
+  ok(hfx2?.place?.city === 'Halifax', 'Halifax with "US"-default country and no hint: a known city, placed');
 
   // Not read on a daily run: the runner never calls bevy without --discover,
   // so 'bevy' is not in seenSources and its events are carried, not taken down.

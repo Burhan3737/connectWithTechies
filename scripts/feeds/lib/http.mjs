@@ -56,7 +56,8 @@ async function rawGet(url, gapMs) {
 
 async function rawGetOnce(url, gapMs) {
   const host = new URL(url).hostname;
-  const gap = gapMs || HOST_GAP_MS[host] || GAP_MS;
+  // An adapter may ask for a longer gap, never a shorter one than configured.
+  const gap = Math.max(gapMs || 0, HOST_GAP_MS[host] || GAP_MS);
   const since = Date.now() - (lastHit.get(host) || 0);
   if (since < gap) await sleep(gap - since);
   lastHit.set(host, Date.now());
@@ -77,7 +78,7 @@ async function rawGetOnce(url, gapMs) {
 /**
  * GET with cache. Returns { status, body, fromCache }. Never throws.
  *
- *   gapMs  pause between requests to this host, for a site that asks for more
+ *   gapMs  at least this pause between requests to this host, for a site that asks for more
  *          than the default (Bevy's robots.txt says Crawl-delay: 2)
  *   trim   body -> the part worth keeping, applied before caching so a fresh
  *          read and a cached one look alike. The cache is never pruned, and a

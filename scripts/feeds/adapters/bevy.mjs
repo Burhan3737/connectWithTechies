@@ -28,7 +28,7 @@
  * carried forward untouched (lib/history.mjs).
  */
 import { get, jsonLd, findAll } from '../lib/http.mjs';
-import { fromParts, fromText } from '../lib/geo.mjs';
+import { fromParts, fromText, isKnownPlace } from '../lib/geo.mjs';
 import { today as todayIso } from '../../lib/today.mjs';
 
 /**
@@ -189,6 +189,16 @@ const NA_CLOCK = (off) => off <= -150 && off >= -600;
  *    America is not ours (Edinburgh's +01:00); one more than an hour off the
  *    place's zone means the address is wrong, so it is left unplaced. An hour
  *    is allowed for states split across zones (NW Indiana, west Kentucky).
+ *  - no US state keeps -03:00 or -02:30 (those are Atlantic Canada,
+ *    Newfoundland, and Brazil or Argentina), so a US place on one is refused.
+ *  - with no country from anywhere (CNCF has no chapter list), a region code
+ *    alone is too weak: Brazilian and Colombian codes are US ones too.
+ *    Florianópolis/SC is "South Carolina", Belém/PA "Pennsylvania", Campo
+ *    Grande/MS "Mississippi", Bogotá/DC "District of Columbia", each on a
+ *    clock within an hour of the US zone. So the place must be a city the
+ *    curated data already lists; anything else is left unplaced for
+ *    data/feeds/place-overrides.json. The same holds for a plain-text address
+ *    and for a start time with no offset, which skips the clock checks.
  */
 export function placeOf(ld, chapterCountry = '') {
   const at = [].concat(ld.location || []).find((l) => l && (l['@type'] === 'Place' || l.address));
@@ -196,14 +206,22 @@ export function placeOf(ld, chapterCountry = '') {
   if (off != null && !NA_CLOCK(off)) return false;
   const a = at?.address;
   if (!a) return null;
-  if (typeof a !== 'object') return fromText(a);
-  const typed = String(a.addressCountry?.name ?? a.addressCountry ?? '').trim();
-  if (typed && !US_CA(typed)) return false;
-  const hint = (US_CA(typed) === 'Canada' ? 'Canada' : '') || US_CA(chapterCountry);
-  let place = fromText(a.streetAddress) ||
-    fromParts({ city: a.addressLocality, region: a.addressRegion, country: hint || undefined });
-  if (place && hint && place.country !== hint) place = null;
-  if (place && off != null && Math.abs(zoneOffset(place.tz, ld.startDate) - off) > 60) place = null;
+  let place, hint;
+  if (typeof a !== 'object') {
+    place = fromText(a);
+    hint = US_CA(chapterCountry);
+  } else {
+    const typed = String(a.addressCountry?.name ?? a.addressCountry ?? '').trim();
+    if (typed && !US_CA(typed)) return false;
+    hint = (US_CA(typed) === 'Canada' ? 'Canada' : '') || US_CA(chapterCountry);
+    place = fromText(a.streetAddress) ||
+      fromParts({ city: a.addressLocality, region: a.addressRegion, country: hint || undefined });
+  }
+  if (!place) return null;
+  if (hint && place.country !== hint) return null;
+  if (off != null && place.country === 'United States' && off >= -180) return null;
+  if (off != null && Math.abs(zoneOffset(place.tz, ld.startDate) - off) > 60) return null;
+  if (!hint && !isKnownPlace(place)) return null;
   return place;
 }
 
