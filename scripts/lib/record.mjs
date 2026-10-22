@@ -56,3 +56,24 @@ export function validateRecord(rec, now = today()) {
   }
   return bad;
 }
+
+/**
+ * What an `add` should do. `curated` is the records already on file under the
+ * same name+city in curated files (never feed.json: the curated record wins on
+ * the next feed run, so a feed twin is no reason to refuse); `addedThisRun` is
+ * whether an earlier add in this run already took that name+city.
+ * Returns { verdict: 'ADD' | 'DONE' | 'REJECT', message }.
+ */
+export function decideAdd(rec, curated, addedThisRun, now = today()) {
+  const problems = validateRecord(rec, now);
+  if (problems.length) return { verdict: 'REJECT', message: `invalid record: ${problems.join('; ')}` };
+  // Checked before the idempotency test: the first add is already on file by now,
+  // so an identical repeat would otherwise read as "already applied".
+  if (addedThisRun) return { verdict: 'REJECT', message: 'duplicate add in this run' };
+  if (curated.length) {
+    const same = curated.some((have) => FIELDS.every((k) => JSON.stringify(have[k]) === JSON.stringify(rec[k])));
+    return same ? { verdict: 'DONE', message: 'already applied' }
+      : { verdict: 'REJECT', message: 'exists — patch it with update instead' };
+  }
+  return { verdict: 'ADD', message: '' };
+}

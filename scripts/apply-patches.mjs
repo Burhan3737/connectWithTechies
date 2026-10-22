@@ -27,7 +27,7 @@ import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { canonPlace } from './lib/places.mjs';
 import { today } from './lib/today.mjs';
-import { validateRecord, FIELDS } from './lib/record.mjs';
+import { decideAdd, FIELDS } from './lib/record.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW_DIR = join(ROOT, 'data', 'raw');
@@ -105,36 +105,24 @@ const touched = new Set();
 const log = [];
 
 /**
- * Add a new curated record. Only a curated duplicate blocks it: the feed
- * yields to a curated record on its next run, so a feed.json twin is no reason
- * to refuse — that is the very case an add exists for. The same patch applied
- * twice must be a quiet no-op, so an identical record already on file is DONE.
+ * Add a new curated record; decideAdd (scripts/lib/record.mjs) makes the call.
  */
+const addedKeys = new Set();   // name|city of every add that landed in this run
 function addRecord(op, pf) {
   const rec = op.record;
-  const problems = validateRecord(rec);
   const label = `${rec?.name ?? '?'} (${rec?.city ?? '?'})`;
-  if (problems.length) {
-    rejected++;
-    console.log(`  REJECT ${label}  invalid record: ${problems.join('; ')}`);
-    return;
-  }
-  const hits = (index.get(`${norm(rec.name)}|${norm(rec.city)}`) || [])
-    .filter(({ file, i }) => file !== 'feed.json' && store.get(file)[i]);
-  if (hits.length) {
-    const same = hits.some(({ file, i }) => {
-      const have = store.get(file)[i];
-      return FIELDS.every((k) => JSON.stringify(have[k]) === JSON.stringify(rec[k]));
-    });
-    if (same) { noop++; console.log(`  DONE   ${label}  (already applied)`); return; }
-    rejected++;
-    console.log(`  REJECT ${label}  exists — patch it with update instead  [${hits[0].file}]`);
-    return;
-  }
+  const key = `${norm(rec?.name)}|${norm(rec?.city)}`;
+  // The run-local repeat check uses the canonical city, so "Montreal" and "Montréal" count as one.
+  const runKey = `${norm(rec?.name)}|${norm(canonPlace(rec?.city, rec?.region).city)}`;
+  // store[i] is null for a record removed earlier in this run; it no longer blocks.
+  const hits = (index.get(key) || []).filter(({ file, i }) => file !== 'feed.json' && store.get(file)[i]);
+  const { verdict, message } = decideAdd(rec, hits.map(({ file, i }) => store.get(file)[i]), addedKeys.has(runKey));
+  if (verdict === 'DONE') { noop++; console.log(`  DONE   ${label}  (${message})`); return; }
+  if (verdict === 'REJECT') { rejected++; console.log(`  REJECT ${label}  ${message}`); return; }
   const arr = store.get(DISCOVERED);
   arr.push(Object.fromEntries(FIELDS.map((k) => [k, rec[k]])));
   indexRecord(arr[arr.length - 1], DISCOVERED, arr.length - 1);
-  added++; touched.add(DISCOVERED);
+  added++; touched.add(DISCOVERED); addedKeys.add(runKey);
   log.push(`${pf}: ADD ${rec.name} (${rec.city}) — ${op.reason || ''}`);
   console.log(`  ADD    ${rec.name} — ${rec.city}  [${DISCOVERED}]  ${op.reason || ''}`);
 }

@@ -6,7 +6,7 @@
  *
  *   node scripts/selftest.mjs
  */
-import { validateRecord } from './lib/record.mjs';
+import { validateRecord, decideAdd } from './lib/record.mjs';
 
 let failed = 0, passed = 0;
 function ok(cond, label, detail = '') {
@@ -55,6 +55,29 @@ console.log('validateRecord');
   ok(/topics must be/.test(problems({ topics: ['AI'] })), 'an upper-case topic is refused');
   ok(/topics must be/.test(problems({ topics: 'ai' })), 'topics that is not an array is refused');
   ok(validateRecord(null, NOW).length === 1 && validateRecord([], NOW).length === 1, 'a non-object is refused');
+}
+
+console.log('decideAdd');
+{
+  const NOW = '2026-10-21';
+  const rec = {
+    name: 'Hack Canada', type: 'hackathon', topics: ['hackathon'], city: 'Toronto', region: 'Ontario',
+    country: 'Canada', venue: 'Myhal Centre', cadence: 'annual', month: 'January',
+    next_date: '2027-01-08', next_date_end: '2027-01-10', last_date: '2026-03-06', status: 'upcoming',
+    attendance: '', cost: 'free', audience: 'students', url: 'https://hackcanada.org/',
+    description: 'A student hackathon.', source: 'https://hackcanada.org/',
+  };
+  const verdict = (r, curated = [], again = false) => decideAdd(r, curated, again, NOW);
+
+  ok(verdict(rec).verdict === 'ADD', 'a valid new record is added');
+  const bad = verdict({ ...rec, country: 'Canda' });
+  ok(bad.verdict === 'REJECT' && /invalid record: .*country/.test(bad.message), 'an invalid record is rejected with its problems');
+  ok(verdict(rec, [{ ...rec, topics: [...rec.topics] }]).verdict === 'DONE', 'an identical curated record is DONE (idempotent re-run)');
+  const differs = verdict(rec, [{ ...rec, next_date: '2027-01-15' }]);
+  ok(differs.verdict === 'REJECT' && /update/.test(differs.message), 'a differing curated record is rejected, pointing at update');
+  ok(verdict(rec, []).verdict === 'ADD', 'a feed-only twin (not passed as curated) does not block');
+  ok(verdict(rec, [rec], true).verdict === 'REJECT' && /this run/.test(verdict(rec, [rec], true).message), 'a repeat of an identical add in one run is rejected, not DONE');
+  ok(verdict({ ...rec, venue: '' }, [rec], true).verdict === 'REJECT', 'a differing repeat in one run is rejected');
 }
 
 console.log(failed ? `\n${failed} CHECK(S) FAILED` : `\nALL ${passed} SCRIPT CHECKS PASSED`);
