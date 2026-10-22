@@ -48,6 +48,7 @@ import { guild } from './adapters/guild.mjs';
 import { localist } from './adapters/localist.mjs';
 import { bevy } from './adapters/bevy.mjs';
 import { takenDown } from './lib/history.mjs';
+import { typeOf, words } from './lib/type.mjs';
 import * as tribe from './adapters/tribe.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -66,7 +67,6 @@ const KEEP_PAST_DAYS = 60;   // held events stay visible under Past for this lon
 
 const log = (...a) => console.log(...a);
 const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
-const words = (s) => ` ${String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()} `;
 const daysAgo = (iso) => (Date.parse(TODAY) - Date.parse(iso)) / 86400000;
 
 const registry = JSON.parse(readFileSync(REGISTRY, 'utf8'));
@@ -473,21 +473,6 @@ for (const [k, list] of groups) {
 
 const MONTH = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
   'September', 'October', 'November', 'December'];
-
-function typeOf(e) {
-  if (e.type) return e.type;
-  const t = words(e.title);
-  if (/ (hackathon|hack|hacks|buildathon|codeathon) /.test(t)) return 'hackathon';
-  if (/ (ctf|capture the flag) /.test(t)) return 'ctf';
-  if (/ game jam /.test(t)) return 'game-jam';
-  if (/ (demo day|demo night|pitch night|pitch competition) /.test(t)) return 'demo-day';
-  if (/ (career fair|job fair|hiring event) /.test(t)) return 'career-fair';
-  if (/ (workshop|bootcamp|masterclass|office hours|hands on) /.test(t)) return 'workshop';
-  if (/ tech week /.test(t)) return 'tech-week';
-  if (/ (summit) /.test(t)) return 'summit';
-  if (/ (conference|conf|con) /.test(t)) return 'conference';
-  return 'meetup';
-}
 
 const shortDate = (d) => `${MONTH[Number(d.slice(5, 7)) - 1].slice(0, 3)} ${Number(d.slice(8, 10))}`;
 const describe = (e) => {

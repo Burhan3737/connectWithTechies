@@ -37,10 +37,15 @@ function km([lon1, lat1], [lon2, lat2]) {
 // The node's own zone says which side of the border it is on. Distance alone
 // put Windsor, ON (America/Toronto) in Detroit, 2 km away across the river.
 const CA_ZONE = /^(America[/](Toronto|Montreal|Vancouver|Edmonton|Winnipeg|Regina|Halifax|Moncton|St_Johns|Whitehorse|Yellowknife|Iqaluit|Glace_Bay|Goose_Bay|Cambridge_Bay|Rankin_Inlet|Resolute|Inuvik|Dawson|Dawson_Creek|Fort_Nelson|Creston|Swift_Current|Blanc-Sablon|Thunder_Bay|Nipigon|Rainy_River|Pangnirtung|Atikokan)|Canada[/].+)$/;
-// US zones likewise. Anything else (UTC, Etc/UTC, Europe/..., Mexico) says
-// nothing about which side of the border an event is on.
+// US zones likewise. Anything else (UTC, Etc/UTC, Europe/...) says nothing
+// about which side of the border an event is on.
 const US_ZONE = /^(America[/](New_York|Chicago|Denver|Los_Angeles|Phoenix|Anchorage|Detroit|Boise|Juneau|Sitka|Nome|Yakutat|Metlakatla|Adak|Menominee|Indiana[/].+|Kentucky[/].+|North_Dakota[/].+|Louisville|Indianapolis)|Pacific[/]Honolulu|US[/].+)$/;
-const zoneCountry = (tz) => CA_ZONE.test(tz) ? 'Canada' : US_ZONE.test(tz) ? 'United States' : '';
+// Mexican zones name a country too, and it is never ours. Read as "no country",
+// a Tijuana event (America/Tijuana) 25 km from San Diego was placed there by
+// distance alone, and the gate kept it as a San Diego event.
+const MX_ZONE = /^(America[/](Tijuana|Ensenada|Santa_Isabel|Mexico_City|Monterrey|Hermosillo|Chihuahua|Ciudad_Juarez|Matamoros|Ojinaga|Mazatlan|Bahia_Banderas|Merida|Cancun)|Mexico[/].+)$/;
+const zoneCountry = (tz) => CA_ZONE.test(tz) ? 'Canada' : US_ZONE.test(tz) ? 'United States'
+  : MX_ZONE.test(tz) ? 'Mexico' : '';
 
 function registryCities() {
   const file = new URL('../../../data/feeds/registry.json', import.meta.url);
@@ -60,8 +65,9 @@ export function toEvent(n, cities) {
   const place = best && fromParts({ city: best.c.city, region: best.c.region, country: best.c.country });
   // Placed only when the nearest city is in the country the node's zone names.
   // Zone and city disagree (Windsor vs Detroit) -> unplaced, for place-overrides,
-  // rather than the wrong country. A zone that is neither a US nor a Canadian one
-  // (UTC, Etc/UTC, missing) names no country -> distance alone, as before.
+  // rather than the wrong country; a Mexican zone never matches a US or Canadian
+  // city, so it is always unplaced. A zone that names no country (UTC, Etc/UTC,
+  // missing) -> distance alone, as before.
   const zc = zoneCountry(n.timeZone || '');
   const sameSide = !zc || !place || zc === place.country;
   const tz = n.timeZone || place?.tz;
@@ -73,7 +79,8 @@ export function toEvent(n, cities) {
     title: n.name, description: String(n.description || '').replace(/\s+/g, ' ').trim().slice(0, 600),
     organiser: { name: n.owner?.name || '' }, url: n.fullUrl,
     start_date: start, end_date: end && end !== start ? end : '',
-    place: sameSide ? place : null, venue: '', online: false, cost: 'varies', type: 'meetup',
+    // No type: the runner reads it from the title (lib/type.mjs), so a hackathon is one.
+    place: sameSide ? place : null, venue: '', online: false, cost: 'varies',
   };
 }
 

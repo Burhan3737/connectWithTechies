@@ -61,7 +61,8 @@ export function toEvent(ev, { host = '', name = '' } = {}) {
     organiser: { name: ev.departments?.[0]?.name || name }, url,
     start_date: start, end_date: end && end !== start ? end : '',
     place, venue: ev.location_name || '', online: false,
-    cost: ev.free ? 'free' : 'varies', type: 'meetup',
+    // No type: the runner reads it from the title (lib/type.mjs), so a hackathon is one.
+    cost: ev.free ? 'free' : 'varies',
   };
 }
 

@@ -17,6 +17,7 @@ import { toEvent as localistEvent, merge as localistMerge, localistPageDone } fr
 import { eventSitemaps as bevyMonths, sitemapEvents as bevySitemapEvents, readChapters as bevyChapters, chapterOf as bevyChapterOf,
   pastByUrl as bevyPastByUrl, notEnded as bevyNotEnded, plan as bevyPlan, tooMany as bevyTooMany, trimPage as bevyTrim, toEvent as bevyEvent } from './adapters/bevy.mjs';
 import { takenDown } from './lib/history.mjs';
+import { typeOf } from './lib/type.mjs';
 import { coreName, coverageIndex, isCovered, decisions, usCaHint, returning, toTsv } from './returning.mjs';
 import { today } from '../lib/today.mjs';
 import { parseIcal } from './lib/ical.mjs';
@@ -276,6 +277,16 @@ console.log('\nGuild.host');
   ok(mtl?.place?.country === 'Canada' && mtl.place.city, 'an America/Montreal (legacy alias) event is placed', mtl?.place?.city);
   const utc = guildEvent(node({ timeZone: 'Etc/UTC' }), cities);
   ok(utc?.place?.city === 'Toronto', 'a zone naming no country (Etc/UTC) falls back to distance', utc?.place?.city);
+  // Tijuana is ~25 km from downtown San Diego, inside NEAR_KM: its zone must keep it out.
+  const sd = { city: 'San Diego', region: 'California', country: 'United States', lat: 32.7157, lng: -117.1611 };
+  const tj = guildEvent(node({ venue: at(-117.0382, 32.5149), timeZone: 'America/Tijuana' }), [...cities, sd]);
+  ok(tj && tj.place === null, 'a Tijuana event (America/Tijuana) is not placed in San Diego', tj?.place?.city);
+  const sdx = guildEvent(node({ venue: at(-117.1611, 32.7157), timeZone: 'America/Los_Angeles' }), [...cities, sd]);
+  ok(sdx?.place?.city === 'San Diego', 'a San Diego event is still placed in San Diego');
+  ok(guildEvent(node({ venue: at(-117.0382, 32.5149), timeZone: 'Mexico/BajaNorte' }), [...cities, sd])?.place === null, 'a Mexico/* alias zone is foreign too');
+  ok(!('type' in walk), 'no type from the adapter: the title decides');
+  ok(typeOf(guildEvent(node({ name: 'Civic Hackathon Brampton' }), cities)) === 'hackathon', 'a "Hackathon" title from Guild.host is typed hackathon');
+  ok(typeOf(walk) === 'meetup', 'a plain Guild.host title is still a meetup');
 }
 
 console.log('\nLocalist');
@@ -294,6 +305,7 @@ console.log('\nLocalist');
   ok(e?.place?.city === 'Stanford' && e.place.region === 'California' && e.place.country === 'United States', 'place from geo parts', e?.place?.city);
   ok(e?.organiser.name === 'Sustainability Accelerator' && e.venue === 'Y2E2 Building' && e.cost === 'varies' && e.online === false, 'department is the organiser; venue kept');
   ok(e?.description === 'Big Earth Hackathon bridges the gap.', 'description flattened');
+  ok(e && !('type' in e) && typeOf(e) === 'hackathon', 'no type from the adapter: a Stanford "Hackathon" is typed hackathon, not meetup', e && typeOf(e));
   ok(e?.url === 'https://events.stanford.edu/event/big-earth-hackathon-wildland-fire-challenge', 'the calendar page is the url');
   const late = localistEvent(ev({ event_instances: inst('2026-10-26T19:00:00-07:00', '2026-10-27T01:00:00-07:00') }).event, h);
   ok(late?.start_date === '2026-10-26' && late.end_date === '2026-10-27', 'an evening start stays on its local day', late?.start_date);
@@ -395,6 +407,8 @@ console.log('\nBevy');
   ok(e?.place?.city === 'Seattle' && e.place.region === 'Washington' && e.venue === 'SURF Incubator', 'place from the PostalAddress');
   ok(e?.organiser.name === 'GDG Seattle' && e.cost === 'free' && e.sourceIsTech === true && e.online === false, 'chapter is the organiser; price 0 is free; tech per site');
   ok(bevyEvent(page(seattle), at, { ...site, tech: false })?.sourceIsTech === false, 'a judged site (Startup Grind) passes sourceIsTech: false');
+  ok(!('type' in e) && typeOf(bevyEvent(page({ ...seattle, name: 'GDG Seattle Hackathon 2026' }), at, site)) === 'hackathon',
+    'no type from Bevy either: a "Hackathon" title is typed hackathon');
   const late = bevyEvent(page({ ...seattle, startDate: '2026-11-07T19:00:00-08:00', endDate: '2026-11-08T01:00:00-08:00' }), at, site);
   ok(late?.start_date === '2026-11-07' && late.end_date === '2026-11-08', 'evening start stays on its local day');
   ok(!bevyNotEnded({ start_date: '2026-10-08', end_date: '' }, day) && bevyNotEnded({ start_date: '2026-10-21', end_date: '2026-10-23' }, day) &&
