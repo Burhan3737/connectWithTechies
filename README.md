@@ -117,6 +117,7 @@ It is built and maintained by script from several sources, none of which needs a
 | **Hack Club** | public hackathon directory API | high-school hackathons |
 | **Guild.host** | keyless JSON of upcoming community-group events | civic tech, maker nights, dev meetups |
 | **Localist** | keyless JSON of university event calendars | campus hackathons, entrepreneurship talks |
+| **Bevy** | event sitemaps and each event page's structured data, weekly | Google Developer Groups, Salesforce and Atlassian user groups, Startup Grind, CNCF |
 | **BSides & other WordPress event sites** | The Events Calendar REST API | security cons, community calendars |
 | **GeekWire and any public .ics** | the calendar file | city tech calendars, small groups |
 

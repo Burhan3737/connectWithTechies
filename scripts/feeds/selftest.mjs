@@ -14,6 +14,9 @@ import { toEvent as eventbriteEvent } from './adapters/eventbrite.mjs';
 import { devpostRange, looksLikeVenue, devpostPageDone, devpostEvent, devEventWanted } from './adapters/datasets.mjs';
 import { toEvent as guildEvent } from './adapters/guild.mjs';
 import { toEvent as localistEvent, merge as localistMerge, localistPageDone } from './adapters/localist.mjs';
+import { eventSitemaps as bevyMonths, sitemapEvents as bevySitemapEvents, readChapters as bevyChapters, chapterOf as bevyChapterOf,
+  pastByUrl as bevyPastByUrl, notEnded as bevyNotEnded, plan as bevyPlan, tooMany as bevyTooMany, trimPage as bevyTrim, toEvent as bevyEvent } from './adapters/bevy.mjs';
+import { takenDown } from './lib/history.mjs';
 import { coreName, coverageIndex, isCovered, decisions, usCaHint, returning, toTsv } from './returning.mjs';
 import { today } from '../lib/today.mjs';
 import { parseIcal } from './lib/ical.mjs';
@@ -316,6 +319,133 @@ console.log('\nLocalist');
   const kept = [...byId.values()];
   ok(kept.length === 2, 'rows collapse to one event per id, across keywords', String(kept.length));
   ok(kept.find((x) => x.feed_id.endsWith(':53922734404263'))?.start_date === '2026-10-26', 'a recurrence is dated at its next instance, not the order it arrived in');
+}
+
+console.log('\nBevy');
+{
+  // Trimmed from the real gdg.community.dev payloads (oct22): the sitemap index,
+  // sitemap-events-2026-11.xml, /chapters/ and two event pages' JSON-LD.
+  const day = '2026-10-22';
+  const index = '<sitemapindex><sitemap><loc>https://gdg.community.dev/sitemap-chapters.xml</loc></sitemap>' +
+    '<sitemap><loc>https://gdg.community.dev/sitemap-events-2015-05.xml</loc><lastmod>2026-05-06T12:18:04+00:00</lastmod></sitemap>' +
+    '<sitemap><loc>https://gdg.community.dev/sitemap-events-2026-09.xml</loc><lastmod>2026-10-21T16:54:40.867207+00:00</lastmod></sitemap>' +
+    '<sitemap><loc>https://gdg.community.dev/sitemap-events-2026-10.xml</loc><lastmod>2026-10-22T05:16:23.989165+00:00</lastmod></sitemap>' +
+    '<sitemap><loc>https://gdg.community.dev/sitemap-events-2026-11.xml</loc><lastmod>2026-10-22T05:22:39.860068+00:00</lastmod></sitemap>' +
+    '<sitemap><loc>https://gdg.community.dev/sitemap-events-2026-11.xml?p=2</loc></sitemap>' +
+    '<sitemap><loc>https://gdg.community.dev/sitemap-posts-2026-10.xml</loc></sitemap></sitemapindex>';
+  const months = bevyMonths(index, day);
+  ok(months.length === 3 && months[0].endsWith('2026-10.xml') && months[2].endsWith('2026-11.xml?p=2'),
+    'month sitemaps: this month on, paged ones too; past months and posts skipped', months.join(' '));
+  const U = (s) => `https://gdg.community.dev/events/details/google-${s}/`;
+  const xml = '<urlset>' + ['gdg-seattle-presents-devfest-seattle-2026', 'gdg-jakarta-presents-devfest-jakarta-2026',
+    'gdg-san-francisco-de-campeche-presents-devfest-campeche-2026', 'gdg-baltimore-presents-small-business-ai-clinic-prompting-amp-automation-lab-virtual-2026-11-05',
+    'gdg-montreal-presents-devfest-mtl-26', 'gdg-baltimore-presents-small-business-ai-clinic-prompting-amp-automation-lab-virtual-2026-10-08']
+    .map((s) => `<url><loc>${U(s)}</loc><lastmod>2026-10-15</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>`).join('') + '</urlset>';
+  const urls = bevySitemapEvents(xml);
+  ok(urls.length === 6, 'event URLs read from a month sitemap', String(urls.length));
+  const chapters = bevyChapters(`<script>\n        var localChapters = ${JSON.stringify([
+    { url: 'https://gdg.community.dev/gdg-baltimore/', city: 'Baltimore, MD', city_name: 'Baltimore', country: 'United States of America' },
+    { url: 'https://gdg.community.dev/gdg-jakarta/', city: 'Jakarta, Jakarta', city_name: 'Jakarta', country: 'Indonesia' },
+    { url: 'https://gdg.community.dev/gdg-montreal/', city: 'Montreal, QC', city_name: 'Montreal', country: 'Canada' },
+    { url: 'https://gdg.community.dev/gdg-san-francisco/', city: 'San Francisco, CA', city_name: 'San Francisco', country: 'United States of America' },
+    { url: 'https://gdg.community.dev/gdg-san-francisco-de-campeche/', city: 'Campeche, Campeche', city_name: 'Campeche', country: 'Mexico' },
+    { url: 'https://gdg.community.dev/gdg-seattle/', city: 'Seattle, WA', city_name: 'Seattle', country: 'United States of America' }])};\n    </script>`);
+  ok(chapters?.get('gdg-seattle') === 'United States of America' && chapters.size === 6, 'chapter map from the inline localChapters array');
+  ok(bevyChapters('<html>no chapters here</html>') === null, 'no localChapters array: null, so the caller throws');
+  ok(bevyChapterOf(U('gdg-san-francisco-de-campeche-presents-devfest-campeche-2026'), chapters) === 'gdg-san-francisco-de-campeche',
+    'longest chapter slug wins: Campeche (Mexico) is not GDG San Francisco');
+  ok(bevyChapterOf(U('gdg-nowhere-presents-x'), chapters) === '' && bevyChapterOf('https://gdg.community.dev/events/details/no-marker/', chapters) === '',
+    'unknown chapter or no "-presents-": no chapter');
+  const tb = new Map([['boston-ma', 'United States of America'], ['salesforce-admin-group-boston-united-states', 'United States of America']]);
+  ok(bevyChapterOf('https://trailblazercommunitygroups.com/events/details/salesforce-salesforce-admin-group-boston-united-states-presents-x/', tb) ===
+    'salesforce-admin-group-boston-united-states', 'Trailblazer: the site prefix is not part of the chapter');
+  ok(bevyPastByUrl(U('gdg-baltimore-presents-lab-virtual-2026-10-08'), day) && !bevyPastByUrl(U('gdg-baltimore-presents-lab-virtual-2026-11-05'), day),
+    'a date in the slug says past or not');
+  ok(!bevyPastByUrl(U('gdg-seattle-presents-devfest-seattle-2026'), day) && !bevyPastByUrl(U('gdg-x-presents-2026-10-01-to-2026-11-30'), day),
+    'no date, or a range still running: not judged past');
+  const p = bevyPlan(urls, chapters, day);
+  ok(p.wanted.length === 3 && p.wanted.every((w) => /seattle|montreal|baltimore-.*2026-11-05/.test(w.url)),
+    'plan: US and Canadian chapters only, past slug skipped', p.wanted.map((w) => w.url.split('google-')[1]).join(' '));
+  ok(p.considered === 5 && p.unmatched === 0 && p.wanted.find((w) => /montreal/.test(w.url))?.country === 'Canada',
+    'plan: counts what it considered; chapter country carried as a hint');
+  ok(bevyPlan(urls, null, day).wanted.length === 5, 'a site without a chapter map: every upcoming page is read');
+  ok(!bevyTooMany(2, 102) && bevyTooMany(30, 100) && !bevyTooMany(3, 5), 'Trailblazer\'s 2 of 102 unknown chapters is healthy; 30% is a changed format; tiny counts never trip it');
+
+  const site = { host: 'gdg.community.dev', name: 'Google Developer Groups', tech: true };
+  const seattle = {
+    '@context': 'https://schema.org', '@type': 'Event', name: 'DevFest Seattle 2026',
+    startDate: '2026-11-07T09:00:00-08:00', endDate: '2026-11-07T16:00:00-08:00',
+    description: 'Join us on November 7, 2026, for DevFest Seattle!',
+    organizer: { '@type': 'Organization', name: 'Google Developer Groups', url: 'https://gdg.community.dev' },
+    location: { '@type': 'Place', name: 'SURF Incubator', address: { '@type': 'PostalAddress', streetAddress: '999 3rd Avenue',
+      addressLocality: 'Seattle', postalCode: '98104', addressRegion: 'WA', addressCountry: 'US' } },
+    eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    offers: { '@type': 'Offer', url: U('gdg-seattle-presents-devfest-seattle-2026'), price: 0 },
+  };
+  const page = (ld, chapter = 'GDG Seattle') => `<html><script type="application/ld+json">${JSON.stringify(ld)}</script>` +
+    `<div>${'x'.repeat(5000)}</div><script>{"chapter_title":"${chapter}","audience_type":"IN_PERSON"}</script></html>`;
+  const at = { url: U('gdg-seattle-presents-devfest-seattle-2026'), country: 'United States' };
+  const whole = page(seattle);
+  const trimmed = bevyTrim(whole);
+  ok(trimmed.length < 1500 && trimmed.includes('"chapter_title":"GDG Seattle"'), 'page trimmed to JSON-LD and chapter title before caching', String(trimmed.length));
+  const e = bevyEvent(trimmed, at, site);
+  ok(JSON.stringify(e) === JSON.stringify(bevyEvent(whole, at, site)), 'a trimmed page reads exactly like the whole one');
+  ok(e?.feed_id === 'bevy:gdg.community.dev:google-gdg-seattle-presents-devfest-seattle-2026' && e.start_date === '2026-11-07' && e.end_date === '',
+    'id from host and slug; same-day end left blank');
+  ok(e?.place?.city === 'Seattle' && e.place.region === 'Washington' && e.venue === 'SURF Incubator', 'place from the PostalAddress');
+  ok(e?.organiser.name === 'GDG Seattle' && e.cost === 'free' && e.sourceIsTech === true && e.online === false, 'chapter is the organiser; price 0 is free; tech per site');
+  ok(bevyEvent(page(seattle), at, { ...site, tech: false })?.sourceIsTech === false, 'a judged site (Startup Grind) passes sourceIsTech: false');
+  const late = bevyEvent(page({ ...seattle, startDate: '2026-11-07T19:00:00-08:00', endDate: '2026-11-08T01:00:00-08:00' }), at, site);
+  ok(late?.start_date === '2026-11-07' && late.end_date === '2026-11-08', 'evening start stays on its local day');
+  ok(!bevyNotEnded({ start_date: '2026-10-08', end_date: '' }, day) && bevyNotEnded({ start_date: '2026-10-21', end_date: '2026-10-23' }, day) &&
+    bevyNotEnded({ start_date: day, end_date: '' }, day), 'ended events are not returned (history holds them); a running one is');
+  // The real virtual page (GDG Baltimore, 2026-11-05): VirtualLocation, Online mode.
+  const virtual = { '@type': 'Event', name: 'Small Business AI Clinic: Prompting &amp; Automation Lab (Virtual)', startDate: '2026-11-05T12:00:00-05:00',
+    location: { '@type': 'VirtualLocation', url: 'https://gdg.community.dev/e/m8w7ug/' }, eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode' };
+  ok(bevyEvent(page(virtual, 'GDG Baltimore'), at, site) === null, 'online skipped');
+  ok(bevyEvent(page({ ...virtual, eventAttendanceMode: undefined }), at, site) === null, 'a VirtualLocation alone, no mode: online, skipped');
+  const mixed = bevyEvent(page({ ...seattle, name: 'Build &amp; Learn', eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+    location: [{ '@type': 'VirtualLocation', url: 'https://x' }, seattle.location] }), at, site);
+  ok(mixed?.place?.city === 'Seattle' && mixed.title === 'Build & Learn', 'hybrid kept, its Place found among the locations; entities decoded');
+  ok(bevyEvent(page({ ...seattle, eventStatus: 'https://schema.org/EventCancelled' }), at, site) === null, 'cancelled skipped');
+  const mx = { '@type': 'Place', name: 'Hotel', address: { addressLocality: 'Tijuana', addressRegion: 'BC', addressCountry: 'MX' } };
+  ok(bevyEvent(page({ ...seattle, location: mx }), at, site) === null, 'a US chapter\'s event in Mexico is dropped, not placed');
+  const noCountry = { ...mx, address: { addressLocality: 'Tijuana', addressRegion: 'BC' } };
+  const tj = bevyEvent(page({ ...seattle, location: noCountry }), at, site);
+  ok(tj && tj.place === null, 'no country in the address and BC with a US chapter: not put in British Columbia');
+  const van = bevyEvent(page({ ...seattle, location: { ...noCountry, address: { addressLocality: 'Vancouver', addressRegion: 'BC' } } }),
+    { ...at, country: 'Canada' }, site);
+  ok(van?.place?.city === 'Vancouver' && van.place.country === 'Canada', 'no country in the address: the chapter\'s is the hint');
+  ok(bevyEvent('<html>maintenance</html>', at, site) === undefined, 'no JSON-LD Event: undefined, counted by the caller');
+  ok(bevyTrim('<html>maintenance</html>').length > 0 && bevyEvent(bevyTrim('<html>maintenance</html>'), at, site) === undefined,
+    'a page with no JSON-LD trims to a non-empty body, so it is counted, not failed as empty');
+  // Real addresses from the live sample (oct22): addressCountry is "US" wherever the venue is.
+  const addr = (o) => ({ '@type': 'PostalAddress', addressCountry: 'US', ...o });
+  const ev = (startDate, address) => ({ ...seattle, startDate, endDate: undefined, location: { '@type': 'Place', name: 'Venue', address } });
+  const cncf = { url: U('cncf-kcd-uk-presents-x'), country: '' };
+  ok(bevyEvent(page(ev('2026-10-19T08:30:00+01:00', addr({ streetAddress: '18 Holyrood Park Road', addressLocality: 'Edinburgh',
+    postalCode: 'EH16 5AY', addressRegion: 'England' }))), cncf, site) === null, 'KCD UK: "US" in the address, +01:00 on the clock: dropped');
+  ok(bevyEvent(page(ev('2026-12-09T09:00:00+01:00', addr({ addressLocality: 'Meyrin', postalCode: '1217', addressRegion: 'GE' }))), cncf, site) === null,
+    'KCD at CERN: region "GE" is not taken for a US state, the clock rules it out');
+  const gran = bevyEvent(page(ev('2026-11-04T16:30:00-07:00', addr({ streetAddress: '1461 Granville St', addressLocality: 'Vancouver',
+    postalCode: 'V6Z 0E5', addressRegion: 'BC' }))), { url: U('x-presents-y'), country: 'Canada' }, site);
+  ok(gran?.place?.city === 'Vancouver' && gran.place.country === 'Canada', 'Vancouver venue typed "US": the chapter\'s Canada wins, an hour off allowed');
+  const cam = bevyEvent(page(ev('2027-10-22T17:30:00-04:00', addr({ streetAddress: 'Broadway 5th floor, Cambridge, MA 02142', addressLocality: 'Boston',
+    postalCode: '02142', addressRegion: 'FL' }))), at, site);
+  ok(cam?.place?.city === 'Cambridge' && cam.place.region === 'Massachusetts', 'a full street address beats a wrong region picker (FL)', cam?.place?.region);
+  const off = bevyEvent(page(ev('2026-11-07T09:00:00-05:00', seattle.location.address)), at, site);
+  ok(off && off.place === null, 'Seattle address on an Eastern clock: three hours off, left unplaced');
+  const pan = bevyEvent(page(ev('2027-01-22T08:00:00-05:00', addr({ addressLocality: 'Panamá', addressRegion: 'Panamá Province' }))), cncf, site);
+  ok(pan && pan.place === null, 'KCD Panama: a North American clock but no US/Canada region: unplaced');
+
+  // Not read on a daily run: the runner never calls bevy without --discover,
+  // so 'bevy' is not in seenSources and its events are carried, not taken down.
+  const rec = { feed_id: 'bevy:gdg.community.dev:x', feed_via: 'bevy', next_date: '2026-11-07' };
+  const daily = new Set(['mlh', 'devpost', 'confstech', 'devevents', 'hackclub', 'guild', 'localist', 'luma:Seattle']);
+  ok(!takenDown(rec, daily), 'daily run: bevy not read, its upcoming events kept');
+  ok(takenDown(rec, new Set([...daily, 'bevy'])), 'weekly run read bevy in full: an event missing from it was taken down');
+  ok(!takenDown({ ...rec, feed_via: '' }, new Set(['bevy'])), 'no feed_via (a discovery hit): never taken down');
 }
 
 console.log('\nEmbedded JSON');

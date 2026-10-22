@@ -47,6 +47,7 @@ Full list, access details and candidates under review: [SOURCES.md](SOURCES.md).
 | **Hack Club** | public hackathon directory API | high-school hackathons |
 | **Guild.host** | keyless JSON of upcoming community-group events | civic tech, maker nights, dev meetups |
 | **Localist** | keyless JSON of university event calendars | campus hackathons, entrepreneurship talks |
+| **Bevy** | event sitemaps → each event page's JSON-LD | weekly: GDG, Salesforce/Atlassian user groups, Startup Grind, CNCF |
 | **BSides & other WordPress event sites** | The Events Calendar REST API | security cons, community calendars |
 | **GeekWire and any public .ics** | the calendar file | city tech calendars, small groups |
 
@@ -61,7 +62,7 @@ time, with pauses and a 6-hour cache (`scripts/feeds/lib/http.mjs`).
   discover (weekly)                          maintain (every run)
   ─────────────────                          ────────────────────
   search 30 cities on                        re-read every registered organiser
-  Luma / Meetup / Eventbrite                 + MLH, Devpost, confs.tech,
+  Luma / Meetup / Eventbrite; read Bevy      + MLH, Devpost, confs.tech,
                                              developers.events, Hack Club, Guild.host, Localist
         │                                              │
         ▼                                              │

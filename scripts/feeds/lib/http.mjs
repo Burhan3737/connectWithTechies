@@ -45,18 +45,18 @@ function cachePath(url) {
   return join(CACHE, createHash('sha1').update(url).digest('hex') + '.txt');
 }
 
-async function rawGet(url) {
+async function rawGet(url, gapMs) {
   for (let attempt = 0; ; attempt++) {
-    const res = await rawGetOnce(url);
+    const res = await rawGetOnce(url, gapMs);
     if ((res.status !== 429 && res.status !== 503) || attempt >= BACKOFF_MS.length) return res;
     stats.throttled++;
     await sleep(BACKOFF_MS[attempt]);
   }
 }
 
-async function rawGetOnce(url) {
+async function rawGetOnce(url, gapMs) {
   const host = new URL(url).hostname;
-  const gap = HOST_GAP_MS[host] || GAP_MS;
+  const gap = gapMs || HOST_GAP_MS[host] || GAP_MS;
   const since = Date.now() - (lastHit.get(host) || 0);
   if (since < gap) await sleep(gap - since);
   lastHit.set(host, Date.now());
@@ -74,8 +74,17 @@ async function rawGetOnce(url) {
   }
 }
 
-/** GET with cache. Returns { status, body, fromCache }. Never throws. */
-export function get(url, { ttlMs = TTL_MS } = {}) {
+/**
+ * GET with cache. Returns { status, body, fromCache }. Never throws.
+ *
+ *   gapMs  pause between requests to this host, for a site that asks for more
+ *          than the default (Bevy's robots.txt says Crawl-delay: 2)
+ *   trim   body -> the part worth keeping, applied before caching so a fresh
+ *          read and a cached one look alike. The cache is never pruned, and a
+ *          Bevy event page is ~800 KB around ~3 KB of JSON-LD: hundreds of them
+ *          a week would otherwise grow data/.cache by hundreds of MB.
+ */
+export function get(url, { ttlMs = TTL_MS, gapMs = 0, trim = null } = {}) {
   const p = cachePath(url);
   if (existsSync(p) && Date.now() - statSync(p).mtimeMs < ttlMs) {
     stats.cached++;
@@ -83,9 +92,10 @@ export function get(url, { ttlMs = TTL_MS } = {}) {
   }
   const host = new URL(url).hostname;
   const chain = (hostQueue.get(host) || Promise.resolve()).then(async () => {
-    const res = await rawGet(url);
-    if (res.status >= 200 && res.status < 300 && res.body) writeFileSync(p, res.body, 'utf8');
-    return { ...res, fromCache: false };
+    const res = await rawGet(url, gapMs);
+    const body = trim && res.body ? trim(res.body) : res.body;
+    if (res.status >= 200 && res.status < 300 && body) writeFileSync(p, body, 'utf8');
+    return { ...res, body, fromCache: false };
   });
   hostQueue.set(host, chain.catch(() => {}));
   return chain;

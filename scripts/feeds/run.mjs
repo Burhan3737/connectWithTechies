@@ -5,7 +5,8 @@
  *
  *   node scripts/feeds/run.mjs              maintain + datasets + Luma discovery (every run)
  *   node scripts/feeds/run.mjs --discover   also search Meetup and Eventbrite city by
- *                                           city for new events and organisers (weekly)
+ *                                           city for new events and organisers, and read
+ *                                           Bevy's chapter sites (weekly)
  *   node scripts/feeds/run.mjs --dry-run    report, write nothing
  *
  * Two jobs:
@@ -18,6 +19,8 @@
  *             since its full listing is read every run.
  *   maintain  re-read every registered organiser through its public calendar
  *             feed, plus the tech-only datasets (MLH, Devpost, confs.tech).
+ *             Bevy's chapter sites are a dataset too, but read weekly, with
+ *             --discover: a few hundred page reads.
  *
  * Both pass through the same gate — in person, in the US or Canada, upcoming,
  * and a place a tech person could plausibly meet other tech people — then are
@@ -43,6 +46,8 @@ import { readGroup as readMeetup } from './adapters/meetup.mjs';
 import { mlh, devpost, confsTech, developersEvents, hackClub } from './adapters/datasets.mjs';
 import { guild } from './adapters/guild.mjs';
 import { localist } from './adapters/localist.mjs';
+import { bevy } from './adapters/bevy.mjs';
+import { takenDown } from './lib/history.mjs';
 import * as tribe from './adapters/tribe.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -96,9 +101,14 @@ function take(list, flags) {
   }
 }
 
-log('Datasets: MLH, Devpost, confs.tech, developers.events, Hack Club, Guild.host, Localist');
+// Bevy (GDG, Trailblazer, Startup Grind...) is a few hundred page reads, so it
+// runs weekly with --discover, like Meetup and Eventbrite. Skipped, it is not
+// read at all: not in seenSources and not a failure, so its events are carried
+// forward until the next weekly read (lib/history.mjs).
+log(`Datasets: MLH, Devpost, confs.tech, developers.events, Hack Club, Guild.host, Localist${DISCOVER ? ', Bevy' : ' (Bevy weekly, with --discover)'}`);
 for (const [name, fn] of [['mlh', mlh], ['devpost', devpost], ['confstech', confsTech],
-  ['devevents', developersEvents], ['hackclub', hackClub], ['guild', guild], ['localist', localist]]) {
+  ['devevents', developersEvents], ['hackclub', hackClub], ['guild', guild], ['localist', localist],
+  ...(DISCOVER ? [['bevy', bevy]] : [])]) {
   try {
     const list = await fn();
     // Guild.host and Localist are the datasets that are not tech by construction:
@@ -107,7 +117,9 @@ for (const [name, fn] of [['mlh', mlh], ['devpost', devpost], ['confstech', conf
     // concerts. Their events go through the relevance gate like Luma's. Both
     // also vouch for their events by name (viaDataset), so one that drops off a
     // listing read in full is taken down; a failed read throws and skips seenSources.
-    take(list, (name === 'guild' || name === 'localist') ? { viaDataset: name } : { sourceIsTech: true });
+    // Bevy vouches the same way; its events carry sourceIsTech per site (Startup
+    // Grind is judged, GDG is not), which flags must not override.
+    take(list, (name === 'guild' || name === 'localist' || name === 'bevy') ? { viaDataset: name } : { sourceIsTech: true });
     seenSources.add(name);
     log(`  ${name.padEnd(10)} ${list.length}`);
   } catch (err) {
@@ -365,7 +377,11 @@ for (const e of candidates) {
 /* ---- 5. de-duplicate: across sources, then against the curated data ----- */
 
 // Where one event is listed on several platforms, prefer the organiser's own.
-const RANK = { mlh: 1, confstech: 2, devevents: 2, tribe: 3, luma: 3, guild: 4, meetup: 4, localist: 5, hackclub: 5, devpost: 5, ical: 5, eventbrite: 6 };
+// Bevy is the exception, last although a chapter's page is its own: it is read
+// weekly, and carried-forward records are not de-duplicated again. Winning on the
+// weekly run, its copy would sit beside the Luma or iCal twin read fresh on every
+// daily run; losing, its copy never enters the feed (it is in also_on instead).
+const RANK = { mlh: 1, confstech: 2, devevents: 2, tribe: 3, luma: 3, guild: 4, meetup: 4, localist: 5, hackclub: 5, devpost: 5, ical: 5, eventbrite: 6, bevy: 7 };
 // Also compare without spaces: "BSidesAtlanta" and "BSides Atlanta" are one event.
 const nests = (a, b) => {
   const x = words(a), y = words(b);
@@ -581,8 +597,8 @@ for (const r of previous) {
   // failed, keep it: a flaky request is not evidence an event was cancelled.
   // Discovery only reads the first few pages of a city, so absence there proves
   // nothing; only a feed read in full can show that an event was taken down.
-  const readThisRun = r.feed_via ? seenSources.has(r.feed_via) : false;
-  if (readThisRun) { vanished++; continue; }
+  // A source not read this run at all (Bevy on a daily run) is kept the same way.
+  if (takenDown(r, seenSources)) { vanished++; continue; }
   out.push(r);
   kept++;
 }
