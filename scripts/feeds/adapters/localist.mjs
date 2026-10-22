@@ -14,8 +14,8 @@
  *    hackathon that meets twice a week) comes back as a row per meeting with the
  *    same event id, and again for every keyword it matches. 23 rows were 11
  *    events. The adapter keeps one record per id, at its next instance.
- *  - `experience` is 'inperson', 'hybrid' or 'online'. Only 'inperson' is kept:
- *    a hybrid event has a room but is aimed at a stream as much as at the room.
+ *  - `experience` is 'inperson', 'hybrid' or 'online'. Online is dropped; hybrid is
+ *    kept: it has a physical room, and this directory lists events you can attend.
  *  - An empty result is a valid answer, not a failure ({"events":[],"page":…}),
  *    so only a missing `events` array or a failed request counts as unreadable.
  */
@@ -39,13 +39,13 @@ const MAX_PAGES = 10;
 const flat = (s, n) => String(s || '').replace(/\s+/g, ' ').trim().slice(0, n);
 
 /**
- * One Localist event object -> a feed event, or null (online, hybrid, private,
+ * One Localist event object -> a feed event, or null (online, private,
  * not live, no instance, no usable URL). Dated at its earliest instance, in the
  * venue's own clock: the offset in "2026-10-24T10:00:00-07:00" is already local,
  * so the date is read off the string rather than converted.
  */
 export function toEvent(ev, { host = '', name = '' } = {}) {
-  if (!ev || ev.experience !== 'inperson' || ev.private || ev.status !== 'live') return null;
+  if (!ev || ev.experience === 'online' || ev.private || ev.status !== 'live') return null;
   const inst = (ev.event_instances || []).map((i) => i.event_instance).filter((i) => i?.start)
     .sort((a, b) => (a.start < b.start ? -1 : 1))[0];
   const url = ev.localist_url || ev.url;
@@ -64,6 +64,14 @@ export function toEvent(ev, { host = '', name = '' } = {}) {
     cost: ev.free ? 'free' : 'varies', type: 'meetup',
   };
 }
+
+/**
+ * The real `page` object is {current, size, total, total_items, next_page,
+ * previous_page}: `total` counts pages, and next_page is null on the last. Either
+ * saying "more" keeps reading, so a payload missing one of them is not mistaken
+ * for a last page; a missing `page` entirely is a single page.
+ */
+export const localistPageDone = (page) => !(page?.next_page || page?.current < page?.total);
 
 /** Fold one page of rows into byId: one event per id, at its earliest instance. */
 export function merge(byId, rows, h) {
@@ -90,7 +98,7 @@ export async function localist({ hosts = HOSTS, keywords = KEYWORDS } = {}) {
         // full and take down the failed host's events as "gone from the listing".
         if (!ok || !Array.isArray(data?.events)) throw new Error(`Localist ${h.host} unreadable ("${kw}", page ${page})`);
         merge(byId, data.events, h);
-        if (!data.page?.next_page) break;
+        if (localistPageDone(data.page)) break;
       }
     }
   }
