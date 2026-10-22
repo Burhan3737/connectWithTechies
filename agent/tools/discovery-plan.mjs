@@ -10,9 +10,9 @@
  * had heard of: Hack Canada 2027 was in neither. So each cycle a few cities get a
  * curator with a search brief, and this picks them: never-searched
  * registry cities (the places the feed already treats as tech hubs) first, then
- * other never-searched cities, then the one searched longest ago; within a tier,
- * the city we hold the fewest curated records for (the thinnest coverage has the
- * most to find). Per city it lists the
+ * other never-searched cities, then searched ones. Tiers 1 and 2 go fewest curated
+ * records first, then name (the thinnest coverage has the most to find); tier 3
+ * goes longest since searched, then fewest records, then name. Per city it lists the
  * event types with no curated record there, which is what the curator searches for.
  *
  * Output: data/review/DISCOVER.tsv (git-ignored, rewritten every run). Local only,
@@ -64,8 +64,10 @@ export function candidateCities(events, discovery = []) {
 }
 
 /**
- * The cities to search this cycle, in order: never searched, then longest since
- * searched, then fewest curated records, then name (so the order is stable).
+ * The cities to search this cycle, in three tiers: (1) never searched and in the
+ * registry, (2) never searched, (3) searched. Tiers 1 and 2 go fewest curated
+ * records first; tier 3 longest since searched first, then fewest records. Name
+ * breaks any remaining tie, so the order is stable.
  * searched: { "<City>|<Region>": "YYYY-MM-DD" }.
  */
 export function planCities({ events, discovery = [], searched = {}, limit = 10 }) {
@@ -137,7 +139,7 @@ function main() {
   const rows = planCities({ events, discovery: registry.discovery || [], searched, limit });
   writeFileSync(OUT, toTsv(rows));
 
-  console.log(`Cities to search (${rows.length}) (registry never-searched first, then oldest):`);
+  console.log(`Cities to search (${rows.length}) (never-searched registry cities, other never-searched cities, then searched, oldest first):`);
   console.log(toTsv(rows));
   console.log(`Wrote ${OUT}`);
 }
