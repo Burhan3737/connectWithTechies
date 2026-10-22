@@ -252,6 +252,50 @@
           "resolution": "Waiting on the user's decision (same as 2026-10-07-i3-W1)."
         }
       ]
+    },
+    {
+      "id": "2026-10-22-i1",
+      "date": "2026-10-22",
+      "iteration": 1,
+      "scope": "Uncommitted run vs HEAD: first 'add' patch (oct21-coverage-fixes.json -> Hack Canada, Toronto, in data/raw/discovered.json), Venture Garden patches re-applied, build:data + ledger; no queue dispatched (stale Oct 11 DISPATCHED.tsv: 60/60 covered, 0 row-skipped).",
+      "checked": "Hack Canada dates/venue/city/cost/type/in-person/audience against hackcanada.org; no duplicate in events.json; discovered.json picked up once with source_file 'discovered'; Venture Garden byte-identical to HEAD; non-curated events.json churn traced to the date rebuild over unchanged feed files.",
+      "blocking": 0,
+      "warnings": 3,
+      "findings": [
+        {
+          "id": "2026-10-22-i1-W1",
+          "severity": "warning",
+          "event": "Hack Canada (Toronto)",
+          "summary": "last_date 2026-03-06 is the 2026 edition held at SPUR Innovation Centre, Waterloo (Devpost), not a Toronto edition.",
+          "recommendation": "Clear last_date, or keep it and note in the description that the 2026 edition was in Waterloo; do it via patch.",
+          "repeat_of": null,
+          "status": "open",
+          "resolved_on": null,
+          "resolution": null
+        },
+        {
+          "id": "2026-10-22-i1-W2",
+          "severity": "warning",
+          "event": "Hack Canada (Toronto)",
+          "summary": "Record was verified at add time but has no ledger entry; shows as unchecked and queued 'never' in TO-VERIFY.tsv.",
+          "recommendation": "Record a confirmed ledger entry citing hackcanada.org; consider having the add action write it.",
+          "repeat_of": null,
+          "status": "open",
+          "resolved_on": null,
+          "resolution": null
+        },
+        {
+          "id": "2026-10-22-i1-W3",
+          "severity": "warning",
+          "event": "Jersey City Entrepreneurs: The Venture Garden (Jersey City)",
+          "summary": "oct05-r1 / oct07-s1 flip-flop applied again this run; net record unchanged, but the superseded cancelled-10-06 op still lives in oct05-r1-fixes.json and is correct only by apply order.",
+          "recommendation": "Remove or neutralise the Venture Garden op in oct05-r1-fixes.json.",
+          "repeat_of": "2026-10-11-i2-W4",
+          "status": "open",
+          "resolved_on": null,
+          "resolution": null
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,4 @@
+{ "pass": "oct21-coverage", "date": "2026-10-22",
+  "returning": [ { "name": "Hack Canada", "verdict": "added",
+                   "reason": "hackcanada.org: January 8-10 2027, Myhal Centre @UofT, Toronto; added via oct21-coverage-fixes.json" } ],
+  "cities": [] }

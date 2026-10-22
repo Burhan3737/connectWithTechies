@@ -1,0 +1,27 @@
+[
+  {
+    "action": "add",
+    "reason": "hackcanada.org (organiser's own page): Hack Canada 2027, January 8-10 2027, Myhal Centre @UofT, in person, free, open to high school and university students. Not in data/events.json; Devpost lists only the ended 2026 edition.",
+    "record": {
+      "name": "Hack Canada",
+      "type": "hackathon",
+      "topics": ["software", "students", "ai"],
+      "city": "Toronto",
+      "region": "Ontario",
+      "country": "Canada",
+      "venue": "Myhal Centre, University of Toronto",
+      "cadence": "annual",
+      "month": "January",
+      "next_date": "2027-01-08",
+      "next_date_end": "2027-01-10",
+      "last_date": "2026-03-06",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "students",
+      "url": "https://hackcanada.org/",
+      "description": "A student hackathon bringing together hackers from universities across Canada, with travel reimbursement and over $10K in prizes. Free to attend for high school and university students.",
+      "source": "https://hackcanada.org/"
+    }
+  }
+]

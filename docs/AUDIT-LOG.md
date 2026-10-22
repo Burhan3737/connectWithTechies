@@ -10,8 +10,9 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 | 2026-10-07-i3 | — | 1 | 2 | 2 | 1 | Oct 7 refresh, final re-audit (logged after the fact from AUDIT-REPORT.md; earlier runs predate the log) |
 | 2026-10-11-i1 | 4 | 4 | 7 | 7 | 4 | Oct 11 refresh: curator passes oct11-t1/t2/t3 (60 rows, 13 real updates), BSidesStPete script move, 17 new discovery cities with 121 auto-registered organisers (15 retired) |
 | 2026-10-11-i2 | re-audit | 0 | 6 | 3 | 3 | Re-audit of iteration-1 fixes: 21 retirements (sources-oct11-audit.json) and new retire/drop gate logic in run.mjs, Charleston Digital Connect removal, place-override drops, judge_each, Offensive AI Con source, ledger last_attempt / audit-run / snapshot-dispatch tooling |
+| 2026-10-22-i1 | 11 | 0 | 3 | 0 | 3 | Uncommitted run vs HEAD: first 'add' patch (oct21-coverage-fixes.json -> Hack Canada, Toronto, in data/raw/discovered.json), Venture Garden patches re-applied, build:data + ledger; no queue dispatched (stale Oct 11 DISPATCHED.tsv: 60/60 covered, 0 row-skipped). |
 
-**2 audit cycle(s); 2 found something blocking on its first audit.** 20 findings in total, 12 fixed, 8 open or deferred, 6 repeat(s) of an earlier finding.
+**3 audit cycle(s); 2 found something blocking on its first audit.** 23 findings in total, 12 fixed, 11 open or deferred, 7 repeat(s) of an earlier finding.
 
 ## Open
 
@@ -37,8 +38,26 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 - **2026-10-11-i2-W6** · warning · deferred · **Tech Week non-tech socials** — Unchanged, deferred to user: NTW Closing Party, Hard Tech Week Opening Party, Big Cayman Bash, Young Founders Hike still listed.
   - recommended: No action until the user decides.
   - note: Waiting on the user's decision (same as 2026-10-07-i3-W1).
+- **2026-10-22-i1-W1** · warning · **Hack Canada (Toronto)** — last_date 2026-03-06 is the 2026 edition held at SPUR Innovation Centre, Waterloo (Devpost), not a Toronto edition.
+  - recommended: Clear last_date, or keep it and note in the description that the 2026 edition was in Waterloo; do it via patch.
+- **2026-10-22-i1-W2** · warning · **Hack Canada (Toronto)** — Record was verified at add time but has no ledger entry; shows as unchecked and queued 'never' in TO-VERIFY.tsv.
+  - recommended: Record a confirmed ledger entry citing hackcanada.org; consider having the add action write it.
+- **2026-10-22-i1-W3** · warning · **Jersey City Entrepreneurs: The Venture Garden (Jersey City)** — oct05-r1 / oct07-s1 flip-flop applied again this run; net record unchanged, but the superseded cancelled-10-06 op still lives in oct05-r1-fixes.json and is correct only by apply order.
+  - recommended: Remove or neutralise the Venture Garden op in oct05-r1-fixes.json.
 
 ## History
+
+### 2026-10-22-i1 — 0 blocking, 3 warning(s)
+
+Scope: Uncommitted run vs HEAD: first 'add' patch (oct21-coverage-fixes.json -> Hack Canada, Toronto, in data/raw/discovered.json), Venture Garden patches re-applied, build:data + ledger; no queue dispatched (stale Oct 11 DISPATCHED.tsv: 60/60 covered, 0 row-skipped).
+
+| id | severity | event | finding | status | resolution |
+|---|---|---|---|---|---|
+| W1 | warning | Hack Canada (Toronto) | last_date 2026-03-06 is the 2026 edition held at SPUR Innovation Centre, Waterloo (Devpost), not a Toronto edition. | open |  |
+| W2 | warning | Hack Canada (Toronto) | Record was verified at add time but has no ledger entry; shows as unchecked and queued 'never' in TO-VERIFY.tsv. | open |  |
+| W3 | warning | Jersey City Entrepreneurs: The Venture Garden (Jersey City) | oct05-r1 / oct07-s1 flip-flop applied again this run; net record unchanged, but the superseded cancelled-10-06 op still lives in oct05-r1-fixes.json and is correct only by apply order. | open |  |
+
+Checked and sound: Hack Canada dates/venue/city/cost/type/in-person/audience against hackcanada.org; no duplicate in events.json; discovered.json picked up once with source_file 'discovered'; Venture Garden byte-identical to HEAD; non-curated events.json churn traced to the date rebuild over unchanged feed files.
 
 ### 2026-10-11-i2 — 0 blocking, 6 warning(s)
 
