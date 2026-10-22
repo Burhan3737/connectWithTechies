@@ -12,6 +12,13 @@
  *     "reason": "one line on why",
  *     "set": { "url": "https://...", "next_date": "2027-03-14" } }
  *
+ *   A record we do not have yet is added instead, with no "match":
+ *   { "action": "add", "reason": "where it was found and confirmed",
+ *     "record": { ...every field of data/SCHEMA.md... } }
+ *   It lands in data/raw/discovered.json once validateRecord (scripts/lib/record.mjs)
+ *   passes it. Re-running an applied add is a no-op; a name+city a curated file
+ *   already holds with different fields is rejected — patch it with update.
+ *
  *   node scripts/apply-patches.mjs            # apply every data/review/*.json
  *   node scripts/apply-patches.mjs --dry-run  # report without writing
  */
@@ -20,9 +27,11 @@ import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { canonPlace } from './lib/places.mjs';
 import { today } from './lib/today.mjs';
+import { validateRecord, FIELDS } from './lib/record.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW_DIR = join(ROOT, 'data', 'raw');
+const DISCOVERED = 'discovered.json';   // curated records that arrived by an `add` patch
 const REVIEW_DIR = join(ROOT, 'data', 'review');
 /**
  * This script writes data/raw/, so it must never write by accident.
@@ -60,21 +69,25 @@ const rawFiles = readdirSync(RAW_DIR).filter((f) => f.endsWith('.json')).sort();
 const store = new Map();          // filename -> array of records
 const index = new Map();          // "name|city" -> { file, i }
 
+function indexRecord(e, f, i) {
+  // Patches are written against the manifest, which carries the canonical
+  // city name, while the raw record may still hold the researcher's spelling.
+  // Index under both so either form resolves to the same record.
+  const cities = new Set([e.city, canonPlace(e.city, e.region).city]);
+  for (const city of cities) {
+    const k = `${norm(e.name)}|${norm(city)}`;
+    if (!index.has(k)) index.set(k, []);
+    index.get(k).push({ file: f, i });
+  }
+}
+
 for (const f of rawFiles) {
   const arr = JSON.parse(readFileSync(join(RAW_DIR, f), 'utf8'));
   store.set(f, arr);
-  arr.forEach((e, i) => {
-    // Patches are written against the manifest, which carries the canonical
-    // city name, while the raw record may still hold the researcher's spelling.
-    // Index under both so either form resolves to the same record.
-    const cities = new Set([e.city, canonPlace(e.city, e.region).city]);
-    for (const city of cities) {
-      const k = `${norm(e.name)}|${norm(city)}`;
-      if (!index.has(k)) index.set(k, []);
-      index.get(k).push({ file: f, i });
-    }
-  });
+  arr.forEach((e, i) => indexRecord(e, f, i));
 }
+// Treated as present even if missing; only written to disk if an add lands in it.
+if (!store.has(DISCOVERED)) store.set(DISCOVERED, []);
 
 // The ledger, the audit, the proposed-moves file and the feed's source proposals
 // (sources-*.json, read by scripts/feeds/run.mjs) share this directory but
@@ -87,9 +100,44 @@ const patchFiles = readdirSync(REVIEW_DIR)
   .sort();
 if (!patchFiles.length) { console.log('No patch files in data/review/ — nothing to do.'); process.exit(0); }
 
-let applied = 0, removed = 0, unmatched = 0, noop = 0;
+let applied = 0, removed = 0, unmatched = 0, noop = 0, added = 0, rejected = 0;
 const touched = new Set();
 const log = [];
+
+/**
+ * Add a new curated record. Only a curated duplicate blocks it: the feed
+ * yields to a curated record on its next run, so a feed.json twin is no reason
+ * to refuse — that is the very case an add exists for. The same patch applied
+ * twice must be a quiet no-op, so an identical record already on file is DONE.
+ */
+function addRecord(op, pf) {
+  const rec = op.record;
+  const problems = validateRecord(rec);
+  const label = `${rec?.name ?? '?'} (${rec?.city ?? '?'})`;
+  if (problems.length) {
+    rejected++;
+    console.log(`  REJECT ${label}  invalid record: ${problems.join('; ')}`);
+    return;
+  }
+  const hits = (index.get(`${norm(rec.name)}|${norm(rec.city)}`) || [])
+    .filter(({ file, i }) => file !== 'feed.json' && store.get(file)[i]);
+  if (hits.length) {
+    const same = hits.some(({ file, i }) => {
+      const have = store.get(file)[i];
+      return FIELDS.every((k) => JSON.stringify(have[k]) === JSON.stringify(rec[k]));
+    });
+    if (same) { noop++; console.log(`  DONE   ${label}  (already applied)`); return; }
+    rejected++;
+    console.log(`  REJECT ${label}  exists — patch it with update instead  [${hits[0].file}]`);
+    return;
+  }
+  const arr = store.get(DISCOVERED);
+  arr.push(Object.fromEntries(FIELDS.map((k) => [k, rec[k]])));
+  indexRecord(arr[arr.length - 1], DISCOVERED, arr.length - 1);
+  added++; touched.add(DISCOVERED);
+  log.push(`${pf}: ADD ${rec.name} (${rec.city}) — ${op.reason || ''}`);
+  console.log(`  ADD    ${rec.name} — ${rec.city}  [${DISCOVERED}]  ${op.reason || ''}`);
+}
 
 for (const pf of patchFiles) {
   const ops = JSON.parse(readFileSync(join(REVIEW_DIR, pf), 'utf8'));
@@ -107,6 +155,7 @@ for (const pf of patchFiles) {
   console.log(`\n${pf} — ${ops.length} operation(s)`);
 
   for (const op of ops) {
+    if (op?.action === 'add') { addRecord(op, pf); continue; }
     const name = op?.match?.name, city = op?.match?.city;
     const hits = index.get(`${norm(name)}|${norm(city)}`);
     if (!hits || !hits.length) {
@@ -192,7 +241,7 @@ for (const pf of patchFiles) {
   }
 }
 
-console.log(`\nUpdated ${applied} · removed ${removed} · already-correct ${noop} · unmatched ${unmatched}`);
+console.log(`\nUpdated ${applied} · added ${added} · removed ${removed} · already-correct ${noop} · unmatched ${unmatched} · rejected ${rejected}`);
 
 if (dryRun) { console.log('\n--dry-run: nothing written.'); process.exit(0); }
 

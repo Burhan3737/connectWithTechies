@@ -22,7 +22,7 @@
     "audit": "node agent/tools/audit-run.mjs",
     "dispatch:snapshot": "node agent/tools/snapshot-dispatch.mjs",
     "test:feeds": "node scripts/feeds/selftest.mjs",
-    "test": "node scripts/feeds/selftest.mjs && vitest run",
+    "test": "node scripts/feeds/selftest.mjs && node scripts/selftest.mjs && vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test"
   },

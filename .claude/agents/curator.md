@@ -130,6 +130,25 @@ supports the verdict — "checked, looks fine" is not evidence and will be flagg
   unexplained departure as blocking.
 - Only include fields you are actually changing. Write `[]` if nothing was wrong.
 
+**An event we do not have yet** is an `add` — no `match`, and the whole record:
+
+```json
+{ "action": "add",
+  "reason": "where it was found and confirmed",
+  "record": { "name": "...", "type": "...", "topics": ["..."], "city": "...", "region": "...",
+              "country": "...", "venue": "...", "cadence": "...", "month": "...",
+              "next_date": "...", "next_date_end": "...", "last_date": "...", "status": "...",
+              "attendance": "...", "cost": "...", "audience": "...", "url": "...",
+              "description": "...", "source": "..." } }
+```
+
+- `record` carries every field of `data/SCHEMA.md` and nothing else; the patcher rejects it otherwise.
+- `source` is the organiser's own page you confirmed it on. Never invent a date: if the
+  organiser has not published one, `next_date: ""` and `status: "recurring-tbd"`.
+- Check `data/events.json` first that it is not already listed. If it is, patch it with
+  `update`; an `add` for a name+city already held by a curated file is rejected.
+- Write the name and city exactly as the organiser writes them.
+
 Names and cities in **both** files must be copied character-for-character from the input,
 or the patch will silently fail to apply.
 

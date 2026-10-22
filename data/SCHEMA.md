@@ -32,6 +32,13 @@ Rules:
 - Prefer breadth: many cities, many event types. Include small/local recurring series, not just megaconferences.
 - No duplicates within your own file.
 
+## Curated files
+
+Everything in `data/raw/` except `feed.json` is curated. `discovered.json` is the curated file
+for records added by patch: an `add` operation in `data/review/` (see `.claude/agents/curator.md`)
+is validated against the schema above (`scripts/lib/record.mjs`) and appended there by
+`scripts/apply-patches.mjs`. Nobody edits it by hand.
+
 ## Feed records
 
 `data/raw/feed.json` is written by `scripts/feeds/run.mjs`, never by hand or by an agent.
