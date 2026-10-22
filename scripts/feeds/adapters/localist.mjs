@@ -6,8 +6,8 @@
  * Not tech by construction: a campus calendar is mostly lectures, concerts and
  * seminars, so the keywords below pull the few that matter (the Stanford
  * calendar returned 13 hackathon and 23 entrepreneurship rows in a 90-day
- * window; MIT, Harvard SEAS, UT Austin and Cornell returned none for any of
- * these when probed) and every event still goes through the relevance gate.
+ * window; MIT, Harvard SEAS, UT Austin and Cornell returned none for hackathon
+ * or startup; a full live run of all five keywords found 2 more at MIT) and every event still goes through the relevance gate.
  *
  * Three quirks, all found by probing:
  *  - The API returns one row per *instance*. A recurring event (a nine-week
