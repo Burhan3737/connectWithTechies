@@ -8,9 +8,11 @@
  * The curated pipeline only re-checks records it already holds, and the feed only
  * reads what a registered source lists. Nothing went looking for the event nobody
  * had heard of: Hack Canada 2027 was in neither. So each cycle a few cities get a
- * curator with a search brief, and this picks them: a city never searched first,
- * then the one searched longest ago, ties to the city we hold the fewest curated
- * records for (the thinnest coverage has the most to find). Per city it lists the
+ * curator with a search brief, and this picks them: never-searched
+ * registry cities (the places the feed already treats as tech hubs) first, then
+ * other never-searched cities, then the one searched longest ago; within a tier,
+ * the city we hold the fewest curated records for (the thinnest coverage has the
+ * most to find). Per city it lists the
  * event types with no curated record there, which is what the curator searches for.
  *
  * Output: data/review/DISCOVER.tsv (git-ignored, rewritten every run). Local only,
@@ -48,10 +50,10 @@ export function candidateCities(events, discovery = []) {
   const out = new Map();
   const slot = (city, region, country) => {
     const key = cityKey(city, region);
-    if (!out.has(key)) out.set(key, { key, city, region, country, count: 0, types: new Set() });
+    if (!out.has(key)) out.set(key, { key, city, region, country, count: 0, types: new Set(), inRegistry: false });
     return out.get(key);
   };
-  for (const d of discovery) if (COUNTRIES.has(d.country) && d.city) slot(d.city, d.region || '', d.country);
+  for (const d of discovery) if (COUNTRIES.has(d.country) && d.city) slot(d.city, d.region || '', d.country).inRegistry = true;
   for (const e of events) {
     if (e.feed_source || !e.city || !COUNTRIES.has(e.country)) continue;
     const c = slot(e.city, e.region || '', e.country);
@@ -70,24 +72,30 @@ export function planCities({ events, discovery = [], searched = {}, limit = 10 }
   const rows = [...candidateCities(events, discovery).values()].map((c) => ({
     city: c.city, region: c.region, country: c.country, curated_count: c.count,
     missing_types: TYPES.filter((t) => !c.types.has(t)).join(','),
-    last_searched: searched[c.key] || '',
+    last_searched: searched[c.key] || '', inRegistry: c.inRegistry,
   }));
-  rows.sort((a, b) => (!!a.last_searched - !!b.last_searched)
+  // Tiers: never searched and in the registry, never searched, then searched (oldest first).
+  // Without the registry tier the first cycles went to one-record towns like Abilene.
+  const tier = (r) => (r.last_searched ? 2 : r.inRegistry ? 0 : 1);
+  rows.sort((a, b) => tier(a) - tier(b)
     || a.last_searched.localeCompare(b.last_searched)
     || a.curated_count - b.curated_count
     || a.city.localeCompare(b.city) || a.region.localeCompare(b.region));
-  return rows.slice(0, limit);
+  return rows.slice(0, limit).map(({ inRegistry, ...row }) => row);
 }
 
 /**
  * Stamp every city the logs cover with the log's date, keeping the later of that
  * and what was there. Returns a new object; entries without a city or a date are skipped.
  */
-export function mergeSearched(searched, logs) {
+export function mergeSearched(searched, logs, warn = null) {
   const out = { ...searched };
   for (const log of logs) {
     const date = String(log.date || '');
-    if (!date) continue;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+      if (warn) warn(`ignoring a log with date ${JSON.stringify(log.date)} (pass ${log.pass ?? '?'}): not YYYY-MM-DD`);
+      continue;
+    }
     for (const c of log.cities || []) {
       if (!c || !c.city) continue;
       const key = cityKey(c.city, c.region || '');
@@ -112,7 +120,7 @@ function main() {
   const searched = readJson(LOG, { searched: {} }).searched || {};
 
   if (args.includes('--record')) {
-    const merged = sortKeys(mergeSearched(searched, readLogs()));
+    const merged = sortKeys(mergeSearched(searched, readLogs(), (m) => console.warn(`WARNING: ${m}`)));
     const changed = Object.keys(merged).filter((k) => merged[k] !== searched[k]).length;
     if (changed) writeFileSync(LOG, JSON.stringify({ searched: merged }, null, 2) + '\n');
     console.log(`Discovery log: ${changed} city date(s) updated, ${Object.keys(merged).length} cities recorded`);
@@ -129,7 +137,7 @@ function main() {
   const rows = planCities({ events, discovery: registry.discovery || [], searched, limit });
   writeFileSync(OUT, toTsv(rows));
 
-  console.log(`Cities to search (${rows.length}), least recently searched first:`);
+  console.log(`Cities to search (${rows.length}) (registry never-searched first, then oldest):`);
   console.log(toTsv(rows));
   console.log(`Wrote ${OUT}`);
 }

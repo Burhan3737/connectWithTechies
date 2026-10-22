@@ -119,8 +119,8 @@ not, each worked as a **discovery brief** (see the curator definition):
 
 - `npm run returning` -> `data/review/RETURNING.tsv`: last year's events that have not come
   back into the data (weekly).
-- `npm run discover:plan` -> `data/review/DISCOVER.tsv`: the cities searched longest ago,
-  with the event types we hold none of there (every cycle).
+- `npm run discover:plan` -> `data/review/DISCOVER.tsv`: the cities to search (never-searched
+  registry cities first, then the longest since searched), with the event types we hold none of there (every cycle).
 
 Curators answer in `data/review/discover-<pass>.json` and emit `add` patches, which land in
 `data/raw/discovered.json` and are verified through the ledger as `never`. After applying,

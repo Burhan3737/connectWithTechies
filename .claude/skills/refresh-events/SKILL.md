@@ -109,8 +109,9 @@ npm run discover:plan    # every cycle: the cities to search -> data/review/DISC
 ```
 
 `npm run returning` reads four history datasets over the network (a minute or two); run it
-once a week, not every cycle. `discover:plan` is local and instant: it picks the ~10 cities
-searched longest ago (never-searched first) and lists the event types we hold none of there.
+once a week, not every cycle. `discover:plan` is local and instant: it picks ~10 cities
+(never-searched feed-registry cities first, then other never-searched ones, then those searched
+longest ago) and lists the event types we hold none of there.
 
 Chunk `RETURNING.tsv` at ~25 rows and `DISCOVER.tsv` at ~5 cities, and dispatch one
 `curator` per chunk in parallel with the recheck curators, each with its own distinct pass

@@ -102,10 +102,10 @@ console.log('discovery-plan');
   ok(!cities.has('Paris|Ile-de-France') && !cities.has('Lyon|Rhone'), 'cities outside the US and Canada are left out');
   ok(cities.get('Austin|Texas').count === 3, 'curated records are counted per city');
 
-  ok(names(plan()).join() === 'Denver,Boise,Cary,Toronto,Austin', 'never searched first, ties by fewest curated records then name', names(plan()).join());
+  ok(names(plan()).join() === 'Denver,Boise,Cary,Toronto,Austin', 'registry never-searched first, then other never-searched by fewest records then name', names(plan()).join());
   const searched = { 'Denver|Colorado': '2026-10-01', 'Boise|Idaho': '2026-08-01', 'Austin|Texas': '2026-08-01' };
   ok(names(plan(searched)).join() === 'Cary,Toronto,Boise,Austin,Denver',
-    'then longest since searched, ties by fewest curated records', names(plan(searched)).join());
+    'never-searched before searched; searched by longest ago, ties by fewest records', names(plan(searched)).join());
   ok(plan({}, 2).length === 2 && plan({}, 2)[0].city === 'Denver', '--limit trims the list');
 
   const austin = plan().find((r) => r.city === 'Austin');
@@ -125,6 +125,18 @@ console.log('discovery-plan');
   ok(merged['Cary|North Carolina'] === '2026-10-21' && merged['Boise|Idaho'] === '2026-08-01', 'new cities are added and others kept');
   ok(mergeSearched({ 'Austin|Texas': '2026-11-01' }, logs)['Austin|Texas'] === '2026-11-01', 'an older log never lowers a date');
   ok(JSON.stringify(mergeSearched(merged, logs)) === JSON.stringify(merged), 'recording twice changes nothing (idempotent)');
+  {
+    const more = [...events, ...[1, 2, 3].map((n) => ({ ...ev('Reno', 'Nevada', 'summit'), name: 'r' + n }))];
+    const reg = [{ city: 'Reno', region: 'Nevada', country: 'United States' }];
+    const p = planCities({ events: more, discovery: reg, searched: {} }).map((r) => r.city);
+    ok(p[0] === 'Reno', 'a registry city with more records beats a non-registry city with fewer', p.join());
+    const p2 = planCities({ events: more, discovery: reg, searched: { 'Reno|Nevada': '2026-01-01' } }).map((r) => r.city);
+    ok(p2[p2.length - 1] === 'Reno' && p2[0] !== 'Reno', 'a never-searched non-registry city beats a searched registry city', p2.join());
+    ok(!('inRegistry' in plan()[0]), 'the registry flag is not written to the plan rows');
+  }
+  const warned = [];
+  const bad = mergeSearched({}, [{ pass: 'e', date: '10/21/2026', cities: [{ city: 'Austin', region: 'Texas' }] }, { pass: 'f', cities: [{ city: 'Boise', region: 'Idaho' }] }], (m) => warned.push(m));
+  ok(Object.keys(bad).length === 0 && warned.length === 2, 'a log whose date is not YYYY-MM-DD is ignored with a warning', warned.join(' | '));
   ok(Object.keys(merged).length === 3, 'logs with no cities, or a city entry with no name, add nothing');
 }
 
