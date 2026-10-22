@@ -45,6 +45,7 @@ Full list, access details and candidates under review: [SOURCES.md](SOURCES.md).
 | **confs.tech** | open conference dataset on GitHub | US/Canada tech conferences |
 | **developers.events** | one open JSON file (MIT) | developer conferences |
 | **Hack Club** | public hackathon directory API | high-school hackathons |
+| **Guild.host** | keyless JSON of upcoming community-group events | civic tech, maker nights, dev meetups |
 | **BSides & other WordPress event sites** | The Events Calendar REST API | security cons, community calendars |
 | **GeekWire and any public .ics** | the calendar file | city tech calendars, small groups |
 
@@ -60,7 +61,7 @@ time, with pauses and a 6-hour cache (`scripts/feeds/lib/http.mjs`).
   ─────────────────                          ────────────────────
   search 30 cities on                        re-read every registered organiser
   Luma / Meetup / Eventbrite                 + MLH, Devpost, confs.tech,
-                                             developers.events, Hack Club
+                                             developers.events, Hack Club, Guild.host
         │                                              │
         ▼                                              │
   judge each organiser ── tech? ──▶ data/feeds/registry.json ◀── agents add organisers via

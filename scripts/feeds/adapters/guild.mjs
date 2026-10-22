@@ -34,6 +34,10 @@ function km([lon1, lat1], [lon2, lat2]) {
   return 12742 * Math.asin(Math.sqrt(a));
 }
 
+// The node's own zone says which side of the border it is on. Distance alone
+// put Windsor, ON (America/Toronto) in Detroit, 2 km away across the river.
+const CA_ZONE = /^America[/](Toronto|Vancouver|Edmonton|Winnipeg|Regina|Halifax|Moncton|St_Johns|Whitehorse|Yellowknife|Iqaluit|Glace_Bay|Goose_Bay|Cambridge_Bay|Rankin_Inlet|Inuvik|Dawson|Dawson_Creek|Fort_Nelson|Creston|Swift_Current|Blanc-Sablon|Thunder_Bay|Nipigon|Rainy_River|Pangnirtung|Atikokan)$/;
+
 function registryCities() {
   const file = new URL('../../../data/feeds/registry.json', import.meta.url);
   return JSON.parse(readFileSync(file, 'utf8')).discovery.filter((c) => c.lat != null && c.lng != null);
@@ -50,6 +54,10 @@ export function toEvent(n, cities) {
     if (d <= NEAR_KM && (!best || d < best.d)) best = { d, c };
   }
   const place = best && fromParts({ city: best.c.city, region: best.c.region, country: best.c.country });
+  // Placed only when the nearest city is in the country the node's zone names.
+  // Zone and city disagree (Windsor vs Detroit) -> unplaced, for place-overrides,
+  // rather than the wrong country. No zone on the node -> distance alone, as before.
+  const sameSide = !n.timeZone || CA_ZONE.test(n.timeZone) === (place?.country === 'Canada');
   const tz = n.timeZone || place?.tz;
   const start = localDate(n.startAt, tz);
   const end = n.endAt ? localDate(n.endAt, tz) : '';
@@ -59,7 +67,7 @@ export function toEvent(n, cities) {
     title: n.name, description: String(n.description || '').replace(/\s+/g, ' ').trim().slice(0, 600),
     organiser: { name: n.owner?.name || '' }, url: n.fullUrl,
     start_date: start, end_date: end && end !== start ? end : '',
-    place, venue: '', online: false, cost: 'varies', type: 'meetup',
+    place: sameSide ? place : null, venue: '', online: false, cost: 'varies', type: 'meetup',
   };
 }
 

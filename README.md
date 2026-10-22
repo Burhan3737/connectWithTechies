@@ -115,6 +115,7 @@ It is built and maintained by script from several sources, none of which needs a
 | **confs.tech** | the open conference dataset on GitHub | US and Canadian tech conferences |
 | **developers.events** | one open JSON file (MIT) | developer conferences |
 | **Hack Club** | public hackathon directory API | high-school hackathons |
+| **Guild.host** | keyless JSON of upcoming community-group events | civic tech, maker nights, dev meetups |
 | **BSides & other WordPress event sites** | The Events Calendar REST API | security cons, community calendars |
 | **GeekWire and any public .ics** | the calendar file | city tech calendars, small groups |
 

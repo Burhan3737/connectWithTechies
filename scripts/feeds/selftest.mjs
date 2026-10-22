@@ -261,6 +261,12 @@ console.log('\nGuild.host');
   const far = guildEvent(node({ venue: at(-100.3, 41.1) }), cities);
   ok(far && far.place === null, 'North America but near no followed city: unplaced, left to the place overrides');
   ok(guildEvent(node({ visibility: 'UNLISTED' }), cities) === null, 'unlisted event skipped');
+  // Windsor, ON is 2 km from Detroit: the zone must keep it out of the US.
+  const detroit = { city: 'Detroit', region: 'Michigan', country: 'United States', lat: 42.3314, lng: -83.0458 };
+  const windsor = guildEvent(node({ venue: at(-83.0364, 42.3149), timeZone: 'America/Toronto' }), [...cities, detroit]);
+  ok(windsor && windsor.place === null, 'Windsor, ON is not placed in Detroit (zone says Canada)');
+  const det = guildEvent(node({ venue: at(-83.0458, 42.3314), timeZone: 'America/Detroit' }), [...cities, detroit]);
+  ok(det?.place?.city === 'Detroit' && det.place.country === 'United States', 'a Detroit event is still placed in Detroit');
 }
 
 console.log('\nEmbedded JSON');
