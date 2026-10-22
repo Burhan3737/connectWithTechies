@@ -1,0 +1,6 @@
+[
+  { "match": { "name": "Hack Canada", "city": "Toronto" },
+    "action": "update",
+    "reason": "Audit 2026-10-22-i1-W1: last_date 2026-03-06 is the 2026 edition, held at SPUR Innovation Centre, Waterloo (hack-canada-2026.devpost.com), not in Toronto. Kept as the last edition of the same event; the description now says where it was held.",
+    "set": { "description": "A student hackathon bringing together hackers from universities across Canada, with travel reimbursement and over $10K in prizes. Free to attend for high school and university students. The 2026 edition was held in Waterloo; 2027 moves to the University of Toronto." } }
+]

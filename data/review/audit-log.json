@@ -269,9 +269,9 @@
           "summary": "last_date 2026-03-06 is the 2026 edition held at SPUR Innovation Centre, Waterloo (Devpost), not a Toronto edition.",
           "recommendation": "Clear last_date, or keep it and note in the description that the 2026 edition was in Waterloo; do it via patch.",
           "repeat_of": null,
-          "status": "open",
-          "resolved_on": null,
-          "resolution": null
+          "status": "fixed",
+          "resolved_on": "2026-10-22",
+          "resolution": "Description notes the 2026 edition was in Waterloo; last_date kept as the same event's last edition (data/review/oct22-audit-fixes.json)"
         },
         {
           "id": "2026-10-22-i1-W2",
@@ -280,9 +280,9 @@
           "summary": "Record was verified at add time but has no ledger entry; shows as unchecked and queued 'never' in TO-VERIFY.tsv.",
           "recommendation": "Record a confirmed ledger entry citing hackcanada.org; consider having the add action write it.",
           "repeat_of": null,
-          "status": "open",
-          "resolved_on": null,
-          "resolution": null
+          "status": "wont-fix",
+          "resolved_on": "2026-10-22",
+          "resolution": "By design: refresh-events Step 2b queues every added record as 'never' so the next cycle's curators re-check it"
         },
         {
           "id": "2026-10-22-i1-W3",
@@ -291,9 +291,9 @@
           "summary": "oct05-r1 / oct07-s1 flip-flop applied again this run; net record unchanged, but the superseded cancelled-10-06 op still lives in oct05-r1-fixes.json and is correct only by apply order.",
           "recommendation": "Remove or neutralise the Venture Garden op in oct05-r1-fixes.json.",
           "repeat_of": "2026-10-11-i2-W4",
-          "status": "open",
-          "resolved_on": null,
-          "resolution": null
+          "status": "fixed",
+          "resolved_on": "2026-10-22",
+          "resolution": "Removed the superseded cancelled-10-06 operation from oct05-r1-fixes.json; apply now reports Venture Garden SAME"
         }
       ]
     }
