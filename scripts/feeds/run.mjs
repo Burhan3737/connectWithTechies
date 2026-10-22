@@ -41,6 +41,7 @@ import * as ical from './adapters/ical.mjs';
 import { readCalendar as readLuma } from './adapters/luma.mjs';
 import { readGroup as readMeetup } from './adapters/meetup.mjs';
 import { mlh, devpost, confsTech, developersEvents, hackClub } from './adapters/datasets.mjs';
+import { guild } from './adapters/guild.mjs';
 import * as tribe from './adapters/tribe.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -94,12 +95,15 @@ function take(list, flags) {
   }
 }
 
-log('Datasets: MLH, Devpost, confs.tech, developers.events, Hack Club');
+log('Datasets: MLH, Devpost, confs.tech, developers.events, Hack Club, Guild.host');
 for (const [name, fn] of [['mlh', mlh], ['devpost', devpost], ['confstech', confsTech],
-  ['devevents', developersEvents], ['hackclub', hackClub]]) {
+  ['devevents', developersEvents], ['hackclub', hackClub], ['guild', guild]]) {
   try {
     const list = await fn();
-    take(list, { sourceIsTech: true });
+    // Guild.host is the one dataset that is not tech by construction: it hosts
+    // civic-tech and maker nights beside dev meetups, and also "Yappy Hour" and
+    // "Laid Off Lounge". Its events go through the relevance gate like Luma's.
+    take(list, name === 'guild' ? { viaDataset: name } : { sourceIsTech: true });
     seenSources.add(name);
     log(`  ${name.padEnd(10)} ${list.length}`);
   } catch (err) {
@@ -357,7 +361,7 @@ for (const e of candidates) {
 /* ---- 5. de-duplicate: across sources, then against the curated data ----- */
 
 // Where one event is listed on several platforms, prefer the organiser's own.
-const RANK = { mlh: 1, confstech: 2, devevents: 2, tribe: 3, luma: 3, meetup: 4, hackclub: 5, devpost: 5, ical: 5, eventbrite: 6 };
+const RANK = { mlh: 1, confstech: 2, devevents: 2, tribe: 3, luma: 3, guild: 4, meetup: 4, hackclub: 5, devpost: 5, ical: 5, eventbrite: 6 };
 // Also compare without spaces: "BSidesAtlanta" and "BSides Atlanta" are one event.
 const nests = (a, b) => {
   const x = words(a), y = words(b);
@@ -501,7 +505,7 @@ const toRecord = (e) => ({
   feed_id: e.series ? `series:${createHash('sha1').update(e.series.key).digest('hex').slice(0, 16)}` : e.feed_id,
   ...(e.series ? { feed_dates: e.series.dates.slice(0, 12) } : {}),
   // The registry feed or dataset it was read from; discovery hits carry none.
-  feed_via: e.registryId || e.viaArea || (e.sourceIsTech ? e.feed : ''),
+  feed_via: e.registryId || e.viaArea || e.viaDataset || (e.sourceIsTech ? e.feed : ''),
   feed_organiser: e.organiser?.name || registered.get(orgIdOf(e))?.name || '',
   feed_relevance: e.relevance,
   feed_first_seen: TODAY,

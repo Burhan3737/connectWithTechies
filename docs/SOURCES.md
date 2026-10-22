@@ -27,6 +27,7 @@ checked against the organiser's own page.
 | **confs.tech** | `adapters/datasets.mjs` | GitHub contents API + raw JSON of `tech-conferences/conference-data` | this year + next | — | Open, community-reviewed dataset |
 | **developers.events** | `adapters/datasets.mjs` | one JSON file, `developers.events/all-events.json` | all upcoming | — | MIT-licensed developer-conference agenda; ~146 US/Canada conferences |
 | **Hack Club** | `adapters/datasets.mjs` | `hackathons.hackclub.com/api/events/upcoming` | all upcoming | — | High-school hackathons (MIT); MLH-associated ones skipped, MLH has them |
+| **Guild.host** | `adapters/guild.mjs` | `guild.host/api/next/events/upcoming?first=5&after=<cursor>` (Relay connection, 5 a page, every page) | all upcoming | — | Community groups (civic tech, maker nights, dev meetups). Venue is coordinates only, so the place is the nearest registry city within 40 km. Not tech by construction: goes through the relevance gate |
 | **The Events Calendar** (WordPress) | `adapters/tribe.mjs` | `<site>/wp-json/tribe/events/v1/events` | — | yes — per site | One adapter for every site on the plugin. Following: **bsides.org** (all BSides security cons) |
 | **Any public `.ics`** | `adapters/ical.mjs` | the calendar file | — | yes — when proposed | Following: **GeekWire** Seattle tech calendar (events judged one by one) |
 
@@ -75,7 +76,6 @@ the crawl early — the per-source edition counts in the summary show a short re
 |---|---|---|---|
 | **Cerebral Valley** | ~550 upcoming US/Canada AI events, ~240 of them on Partiful (our blind spot) | public JSON API on `api.cerebralvalley.ai` | **needs a decision**: main site's robots.txt disallows `/api/`; ask them first |
 | **Bevy** (Google Developer Groups, Salesforce Trailblazer, Startup Grind, CNCF/KCD, Atlassian, Snowflake, Figma…) | hundreds of vendor user-group events | monthly event sitemaps → JSON-LD per event page | later — many requests per run; many events are virtual |
-| **Guild.host** | ~28 in-person events (civic tech, Toronto/Montréal) | keyless JSON, 5 per page | later — small |
 | **Localist** (university calendars: Stanford, MIT, Harvard SEAS, UT, Cornell) | public lectures, student hackathons | `/api/2/events` keyless | later — needs keyword filtering |
 | **Public Google Calendars** (hackerspaces, small groups) | long tail | `.ics` — works today via a `sources-*.json` entry | add case by case |
 | **AI Tinkerers** | 264 city chapters | — | no — its `agents.md` forbids bulk scraping |

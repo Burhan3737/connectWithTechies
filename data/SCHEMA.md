@@ -47,7 +47,7 @@ Its records use the same fields, `cadence: "one-off"`, plus:
 ```jsonc
 {
   "type": "meetup",                    // also allowed for feed records: a single gathering
-  "feed_source": "luma",               // luma | meetup | eventbrite | mlh | devpost | confstech | ical
+  "feed_source": "luma",               // luma | meetup | eventbrite | mlh | devpost | confstech | devevents | hackclub | guild | tribe | ical
   "feed_id": "luma:evt-abc123",        // the source's own id — stable across runs
   "feed_via": "luma-cal:cal-xyz",      // registry source or dataset that maintains it; "" if found by discovery only
   "feed_organiser": "The AI Collective",

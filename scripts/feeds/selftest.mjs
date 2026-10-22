@@ -12,6 +12,7 @@ import { readApollo } from './adapters/meetup.mjs';
 import { toEvent as lumaEvent } from './adapters/luma.mjs';
 import { toEvent as eventbriteEvent } from './adapters/eventbrite.mjs';
 import { devpostRange, looksLikeVenue, devpostPageDone, devpostEvent, devEventWanted } from './adapters/datasets.mjs';
+import { toEvent as guildEvent } from './adapters/guild.mjs';
 import { coreName, coverageIndex, isCovered, decisions, usCaHint, returning, toTsv } from './returning.mjs';
 import { today } from '../lib/today.mjs';
 import { parseIcal } from './lib/ical.mjs';
@@ -236,6 +237,31 @@ for (const t of ['Waterloo.Dev Fest: Who Gets to Build, Own, and Define the Futu
 ok(judgeOrganiser({ name: 'Waterloo.dev', description: '' }, []).tech, 'a .dev organiser name reads as tech');
 ok(!judge({ title: 'Real Estate Investor Pitch Night' }).keep, 'real-estate investing dropped even beside pitch words');
 ok(judge({ title: 'Proptech founders night: AI meets real estate' }).keep, 'proptech still kept');
+
+console.log('\nGuild.host');
+{
+  // Trimmed from the real /api/next/events/upcoming payload (oct22): the venue is
+  // coordinates only, and an online event has no venue at all.
+  const cities = [{ city: 'Toronto', region: 'Ontario', country: 'Canada', lat: 43.6532, lng: -79.3832 },
+    { city: 'Columbus', region: 'Ohio', country: 'United States', lat: 39.9612, lng: -82.9988 }];
+  const node = (o) => ({ slug: 'vtxfsz', fullUrl: 'https://guild.host/events/technology-walk-brampton-vtxfsz', name: 'Technology Walk Brampton',
+    description: 'An educational, guided tour.\n\nCivicTechBrampton is hosting a walk.', startAt: '2026-10-22T22:00:00+00:00',
+    endAt: '2026-10-23T00:30:00+00:00', timeZone: 'America/Toronto', visibility: 'LISTED', hasVenue: true,
+    owner: { name: 'Civic Tech Brampton' }, venue: { address: { location: { geojson: { type: 'Point', coordinates: [-79.7597488, 43.6862613] } } } }, ...o });
+  const at = (lon, lat) => ({ address: { location: { geojson: { coordinates: [lon, lat] } } } });
+  const walk = guildEvent(node(), cities);
+  ok(walk?.place?.city === 'Toronto' && walk.place.country === 'Canada', 'coordinates resolve to the nearest followed city', walk?.place?.city);
+  ok(walk?.feed_id === 'guild:vtxfsz' && walk.organiser.name === 'Civic Tech Brampton', 'id from the slug, organiser is the group');
+  ok(walk?.start_date === '2026-10-22' && walk.end_date === '', "same local day: no end date");
+  ok(walk?.description === 'An educational, guided tour. CivicTechBrampton is hosting a walk.', 'description flattened to one line');
+  const late = guildEvent(node({ startAt: '2026-10-23T01:00:00+00:00', endAt: '2026-10-23T03:00:00+00:00' }), cities);
+  ok(late?.start_date === '2026-10-22', 'an evening start falls on its local day, not the UTC one', late?.start_date);
+  ok(guildEvent(node({ venue: null, hasVenue: false }), cities) === null, 'no venue: online, skipped');
+  ok(guildEvent(node({ venue: at(-0.0916051, 51.5206763), timeZone: 'Europe/London' }), cities) === null, 'London skipped');
+  const far = guildEvent(node({ venue: at(-100.3, 41.1) }), cities);
+  ok(far && far.place === null, 'North America but near no followed city: unplaced, left to the place overrides');
+  ok(guildEvent(node({ visibility: 'UNLISTED' }), cities) === null, 'unlisted event skipped');
+}
 
 console.log('\nEmbedded JSON');
 ok(assignedJson('<script>window.__SERVER_DATA__ = {"a":{"b":"}{\\"x"}};</script>', 'window.__SERVER_DATA__')?.a?.b === '}{"x',
