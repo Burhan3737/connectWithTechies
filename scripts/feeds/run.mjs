@@ -42,6 +42,7 @@ import { readCalendar as readLuma } from './adapters/luma.mjs';
 import { readGroup as readMeetup } from './adapters/meetup.mjs';
 import { mlh, devpost, confsTech, developersEvents, hackClub } from './adapters/datasets.mjs';
 import { guild } from './adapters/guild.mjs';
+import { localist } from './adapters/localist.mjs';
 import * as tribe from './adapters/tribe.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -95,15 +96,18 @@ function take(list, flags) {
   }
 }
 
-log('Datasets: MLH, Devpost, confs.tech, developers.events, Hack Club, Guild.host');
+log('Datasets: MLH, Devpost, confs.tech, developers.events, Hack Club, Guild.host, Localist');
 for (const [name, fn] of [['mlh', mlh], ['devpost', devpost], ['confstech', confsTech],
-  ['devevents', developersEvents], ['hackclub', hackClub], ['guild', guild]]) {
+  ['devevents', developersEvents], ['hackclub', hackClub], ['guild', guild], ['localist', localist]]) {
   try {
     const list = await fn();
-    // Guild.host is the one dataset that is not tech by construction: it hosts
-    // civic-tech and maker nights beside dev meetups, and also "Yappy Hour" and
-    // "Laid Off Lounge". Its events go through the relevance gate like Luma's.
-    take(list, name === 'guild' ? { viaDataset: name } : { sourceIsTech: true });
+    // Guild.host and Localist are the datasets that are not tech by construction:
+    // Guild hosts civic-tech and maker nights beside dev meetups, and also "Yappy
+    // Hour" and "Laid Off Lounge"; a campus calendar is mostly lectures and
+    // concerts. Their events go through the relevance gate like Luma's. Both
+    // also vouch for their events by name (viaDataset), so one that drops off a
+    // listing read in full is taken down; a failed read throws and skips seenSources.
+    take(list, (name === 'guild' || name === 'localist') ? { viaDataset: name } : { sourceIsTech: true });
     seenSources.add(name);
     log(`  ${name.padEnd(10)} ${list.length}`);
   } catch (err) {
@@ -361,7 +365,7 @@ for (const e of candidates) {
 /* ---- 5. de-duplicate: across sources, then against the curated data ----- */
 
 // Where one event is listed on several platforms, prefer the organiser's own.
-const RANK = { mlh: 1, confstech: 2, devevents: 2, tribe: 3, luma: 3, guild: 4, meetup: 4, hackclub: 5, devpost: 5, ical: 5, eventbrite: 6 };
+const RANK = { mlh: 1, confstech: 2, devevents: 2, tribe: 3, luma: 3, guild: 4, meetup: 4, localist: 5, hackclub: 5, devpost: 5, ical: 5, eventbrite: 6 };
 // Also compare without spaces: "BSidesAtlanta" and "BSides Atlanta" are one event.
 const nests = (a, b) => {
   const x = words(a), y = words(b);

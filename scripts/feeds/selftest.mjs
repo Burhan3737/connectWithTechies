@@ -13,6 +13,7 @@ import { toEvent as lumaEvent } from './adapters/luma.mjs';
 import { toEvent as eventbriteEvent } from './adapters/eventbrite.mjs';
 import { devpostRange, looksLikeVenue, devpostPageDone, devpostEvent, devEventWanted } from './adapters/datasets.mjs';
 import { toEvent as guildEvent } from './adapters/guild.mjs';
+import { toEvent as localistEvent, merge as localistMerge } from './adapters/localist.mjs';
 import { coreName, coverageIndex, isCovered, decisions, usCaHint, returning, toTsv } from './returning.mjs';
 import { today } from '../lib/today.mjs';
 import { parseIcal } from './lib/ical.mjs';
@@ -272,6 +273,45 @@ console.log('\nGuild.host');
   ok(mtl?.place?.country === 'Canada' && mtl.place.city, 'an America/Montreal (legacy alias) event is placed', mtl?.place?.city);
   const utc = guildEvent(node({ timeZone: 'Etc/UTC' }), cities);
   ok(utc?.place?.city === 'Toronto', 'a zone naming no country (Etc/UTC) falls back to distance', utc?.place?.city);
+}
+
+console.log('\nLocalist');
+{
+  // Trimmed from the real events.stanford.edu/api/2/events?keyword=entrepreneurship
+  // payload (oct22). One row per instance: the recurring hackathon is three rows.
+  const geo = { latitude: '37.42816', longitude: '-122.175935', street: '473 Via Ortega', city: 'Stanford', state: 'CA', country: 'US', zip: '94305' };
+  const inst = (start, end = null) => [{ event_instance: { start, end, all_day: !end } }];
+  const ev = (o) => ({ event: { id: 53922734404263, title: 'Big Earth Hackathon: Wildland Fire Challenge', url: 'https://www.stanfordbigearthhackathon.com/',
+    localist_url: 'https://events.stanford.edu/event/big-earth-hackathon-wildland-fire-challenge', experience: 'inperson', status: 'live', private: false,
+    free: false, location_name: 'Y2E2 Building', address: '473 Via Ortega, Stanford, CA 94305', geo, description_text: 'Big Earth   Hackathon\n\nbridges the gap.',
+    departments: [{ id: 42863165257059, name: 'Sustainability Accelerator' }], event_instances: inst('2026-10-26T00:00:00-07:00'), ...o } });
+  const h = { host: 'events.stanford.edu', name: 'Stanford University' };
+  const e = localistEvent(ev().event, h);
+  ok(e?.feed_id === 'localist:events.stanford.edu:53922734404263' && e.start_date === '2026-10-26', 'id carries the host; date read off the local string', e?.start_date);
+  ok(e?.place?.city === 'Stanford' && e.place.region === 'California' && e.place.country === 'United States', 'place from geo parts', e?.place?.city);
+  ok(e?.organiser.name === 'Sustainability Accelerator' && e.venue === 'Y2E2 Building' && e.cost === 'varies' && e.online === false, 'department is the organiser; venue kept');
+  ok(e?.description === 'Big Earth Hackathon bridges the gap.', 'description flattened');
+  ok(e?.url === 'https://events.stanford.edu/event/big-earth-hackathon-wildland-fire-challenge', 'the calendar page is the url');
+  const late = localistEvent(ev({ event_instances: inst('2026-10-26T19:00:00-07:00', '2026-10-27T01:00:00-07:00') }).event, h);
+  ok(late?.start_date === '2026-10-26' && late.end_date === '2026-10-27', 'an evening start stays on its local day', late?.start_date);
+  const noGeo = localistEvent(ev({ geo: null, address: '475 Via Ortega, Stanford, CA 94305, United States' }).event, h);
+  ok(noGeo?.place?.city === 'Stanford', 'no geo: place from the address text');
+  const bare = localistEvent(ev({ geo: { city: null }, address: '', location_name: 'Sloan Mathematics Center' }).event, h);
+  ok(bare && bare.place === null, 'no address at all: unplaced, left to the place overrides');
+  ok(localistEvent(ev({ experience: 'hybrid' }).event, h) === null, 'hybrid skipped');
+  ok(localistEvent(ev({ experience: 'online' }).event, h) === null, 'online skipped');
+  ok(localistEvent(ev({ private: true }).event, h) === null, 'private skipped');
+  ok(localistEvent(ev({ status: 'pending' }).event, h) === null, 'not live skipped');
+  ok(localistEvent(ev({ event_instances: [] }).event, h) === null, 'no instance skipped');
+  // Dedupe: three rows of one event (and the same rows again for a second keyword), plus another event.
+  const rows = [ev({ event_instances: inst('2026-11-02T00:00:00-08:00') }), ev(), ev({ event_instances: inst('2026-11-04T00:00:00-08:00') }),
+    ev({ id: 53985696802248, title: 'STVP Observation Lab X Accel' })];
+  const byId = new Map();
+  localistMerge(byId, rows, h);
+  localistMerge(byId, rows, h);
+  const kept = [...byId.values()];
+  ok(kept.length === 2, 'rows collapse to one event per id, across keywords', String(kept.length));
+  ok(kept.find((x) => x.feed_id.endsWith(':53922734404263'))?.start_date === '2026-10-26', 'a recurrence is dated at its next instance, not the order it arrived in');
 }
 
 console.log('\nEmbedded JSON');
