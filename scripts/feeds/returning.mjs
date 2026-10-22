@@ -68,6 +68,20 @@ export function coreName(title) {
     .trim();
 }
 
+/**
+ * Cores too generic to name one event. Stripping years, numbers and seasons
+ * leaves some titles with only a word that many events share: "Winter Hacks"
+ * and "Spring Hacks" both become "hacks", "DevFest 2026" "devfest". By name
+ * alone, any record called "Hacks" then covered every such candidate, and one
+ * curator's verdict on one of them settled the rest. A core in this list (with
+ * or without its spaces: "tech week" too) never covers, is never covered and is
+ * never settled by name; a shared own URL host still covers.
+ */
+export const GENERIC_CORES = new Set(['hack', 'hacks', 'hackathon', 'hackathons', 'hackday', 'hacknight', 'buildathon',
+  'codeathon', 'conference', 'conf', 'con', 'summit', 'meetup', 'devfest', 'devcon', 'techweek', 'startupweek',
+  'demoday', 'workshop', 'bootcamp', 'expo', 'festival', 'forum', 'symposium', 'ctf', 'gamejam', 'tech', 'ai']);
+export const genericCore = (core) => GENERIC_CORES.has(String(core || '').replace(/ /g, ''));
+
 /* ---- links ------------------------------------------------------------- */
 
 // Hosts that carry many organisers' events: sharing one says nothing about
@@ -97,7 +111,7 @@ export function coverageIndex(records, now = today()) {
   for (const r of records) {
     if (r.feed_source && (r.next_date_end || r.next_date || '') < now) continue;
     const core = coreName(r.name);
-    if (core) { names.add(core); squashed.add(core.replace(/ /g, '')); }
+    if (core && !genericCore(core)) { names.add(core); squashed.add(core.replace(/ /g, '')); }
     const h = ownHost(r.url);
     if (h) hosts.add(h);
   }
@@ -106,7 +120,7 @@ export function coverageIndex(records, now = today()) {
 
 export function isCovered(edition, index) {
   const core = coreName(edition.title);
-  if (index.names.has(core) || index.squashed.has(core.replace(/ /g, ''))) return true;
+  if (!genericCore(core) && (index.names.has(core) || index.squashed.has(core.replace(/ /g, '')))) return true;
   const h = ownHost(edition.url);
   return !!h && index.hosts.has(h);
 }
@@ -123,7 +137,8 @@ export function decisions(logs) {
   for (const log of logs) {
     for (const r of log.returning || []) {
       const core = coreName(r.name);
-      if (!core) continue;
+      // A generic core would settle every candidate that shares it (GENERIC_CORES).
+      if (!core || genericCore(core)) continue;
       const d = out.get(core) || { decided: false, last_tried: '' };
       if (DECIDED.has(r.verdict)) d.decided = true;
       if (r.verdict === 'unresolved' && String(log.date || '') > d.last_tried) d.last_tried = String(log.date || '');

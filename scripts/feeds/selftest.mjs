@@ -18,7 +18,7 @@ import { eventSitemaps as bevyMonths, sitemapEvents as bevySitemapEvents, readCh
   pastByUrl as bevyPastByUrl, notEnded as bevyNotEnded, plan as bevyPlan, tooMany as bevyTooMany, trimPage as bevyTrim, toEvent as bevyEvent } from './adapters/bevy.mjs';
 import { takenDown } from './lib/history.mjs';
 import { typeOf } from './lib/type.mjs';
-import { coreName, coverageIndex, isCovered, decisions, usCaHint, returning, toTsv } from './returning.mjs';
+import { coreName, coverageIndex, isCovered, decisions, usCaHint, returning, toTsv, genericCore } from './returning.mjs';
 import { today } from '../lib/today.mjs';
 import { parseIcal } from './lib/ical.mjs';
 import { fromText, fromParts, localDate } from './lib/geo.mjs';
@@ -153,6 +153,22 @@ console.log('\nReturning editions (returning.mjs)');
     ok(!isCovered({ title: 'Alpha Hacks', url: a }, coverageIndex([{ name: 'Beta Conf', url: b, country: 'Canada' }], NOW)),
       `platform host never a match: ${new URL(a).hostname}`);
   }
+
+  // A one-word generic core names no single event.
+  const hacksRec = { name: 'Hacks', city: 'Boston', country: 'United States', url: 'https://hacks.example/', next_date: '2027-02-01' };
+  ok(coreName('Winter Hacks 2026') === 'hacks' && genericCore('hacks') && genericCore('tech week') && !genericCore('hack canada'),
+    'generic cores: "hacks", "tech week" (spaces ignored); "hack canada" is not');
+  ok(!isCovered({ title: 'Winter Hacks 2026', url: 'https://winterhacks.example/' }, coverageIndex([{ ...hacksRec, name: 'Spring Hacks' }], NOW)),
+    'a generic candidate ("Winter Hacks") is not covered by a generic record ("Spring Hacks") by name');
+  ok(!isCovered({ title: 'Hacks', url: '' }, coverageIndex([hacksRec], NOW)), 'not even by an identical generic name');
+  ok(!isCovered({ title: 'TechWeek 2026', url: '' }, coverageIndex([{ ...hacksRec, name: 'Tech Week' }], NOW)),
+    'a squashed generic ("techweek") covers nothing by name either');
+  ok(isCovered({ title: 'Winter Hacks 2026', url: 'https://www.hacks.example/2026' }, coverageIndex([hacksRec], NOW)),
+    'a generic candidate is still covered by a shared own host');
+  ok(!isCovered({ title: 'Hack Canada', url: '' }, coverageIndex([{ ...hacksRec, name: 'Hacks' }], NOW)) &&
+    isCovered({ title: 'Hack Canada', url: '' }, coverageIndex([toronto, hacksRec], NOW)), 'a non-generic name is unaffected');
+  const gen = decisions([{ pass: 'g', date: '2026-10-21', returning: [{ name: 'Winter Hacks 2025', verdict: 'rejected' }] }]);
+  ok(!gen.has('hacks'), 'a verdict on a generic core settles nothing (it would settle every "… Hacks")');
 
   ok(usCaHint(hc), 'unplaced, but the title names Canada: kept');
   ok(!usCaHint({ title: 'Spur Hacks', location_text: 'SPUR Innovation Centre' }), 'unplaced with no hint: dropped');
