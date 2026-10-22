@@ -52,12 +52,14 @@ npm run refresh
 ```
 
 That first re-reads the feed (`scripts/feeds/run.mjs`: every registered organiser plus
-MLH, Devpost and confs.tech — one-off events, script-maintained, never dispatched), then
+MLH, Devpost, confs.tech, developers.events, Hack Club, Guild.host and Localist — one-off
+events, script-maintained, never dispatched), then
 runs the build (rollover), then `agent/tools/verify-dates.mjs --write`, then the ledger.
 Every run reads Luma's full listing around all 30 cities. Once a week, run
 `npm run feeds:discover` instead of the feed step alone: it also searches Meetup and
-Eventbrite in every city for new events and organisers to follow (~45 minutes, mostly
-Eventbrite's enforced pace).
+Eventbrite in every city for new events and organisers to follow, and reads the Bevy
+chapter sites (GDG, Startup Grind, CNCF…): ~45 minutes, mostly Eventbrite's enforced
+pace, plus ~10–15 minutes for Bevy, whose robots.txt asks for 2 s between pages.
 Read `data/feeds/last-run.json` afterwards — the organisers it registered and a sample of
 what the relevance gate dropped — and retire any organiser that is not ours with a
 `data/review/sources-<pass>.json` entry carrying `"tech": false`.
@@ -108,8 +110,9 @@ npm run returning        # weekly: last year's events not yet back -> data/revie
 npm run discover:plan    # every cycle: the cities to search -> data/review/DISCOVER.tsv
 ```
 
-`npm run returning` reads four history datasets over the network (a minute or two); run it
-once a week, not every cycle. `discover:plan` is local and instant: it picks ~10 cities
+`npm run returning` reads four history datasets over the network (about 5 minutes — a
+live run took 4m42s, most of it Devpost's ended listing paged politely); run it once a
+week, not every cycle. `discover:plan` is local and instant: it picks ~10 cities
 (never-searched feed-registry cities first, then other never-searched ones, then those searched
 longest ago) and lists the event types we hold none of there.
 
@@ -118,6 +121,13 @@ Chunk `RETURNING.tsv` at ~25 rows and `DISCOVER.tsv` at ~5 cities, and dispatch 
 name. Say plainly that it is a **discovery brief** and give the chunk path; the curator
 definition says what to do with one. Every row must come back in
 `data/review/discover-<pass>.json`.
+
+**Never give any pass a name starting with `confirm-`, `sources-` or `discover-`.** Those
+prefixes already mean something in `data/review/`: the patcher skips `confirm-*.json` and
+`sources-*.json` by name, so a pass called `sources-x` would have its `sources-x-fixes.json`
+silently never applied; and `returning.mjs` and `discovery-plan.mjs` read every
+`discover-*.json` as a discovery log, so a pass called `discover-x` would have its
+`discover-x-fixes.json` read as one.
 
 New events come back as `add` patches, which `npm run apply` writes to
 `data/raw/discovered.json`. Nothing is added unverified: the ledger queues each new record

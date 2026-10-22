@@ -78,7 +78,6 @@ the crawl early — the per-source edition counts in the summary show a short re
 |---|---|---|---|
 | **Cerebral Valley** | ~550 upcoming US/Canada AI events, ~240 of them on Partiful (our blind spot) | public JSON API on `api.cerebralvalley.ai` | **needs a decision**: main site's robots.txt disallows `/api/`; ask them first |
 | **More Bevy sites** (Tableau, Snowflake, UiPath, Figma Friends user groups) | dozens of vendor user-group events | same adapter: one line in `SITES` once their `/chapters/` page is confirmed | add case by case (Figma is design: `tech: false`) |
-| **Localist** (university calendars: Stanford, MIT, Harvard SEAS, UT, Cornell) | public lectures, student hackathons | `/api/2/events` keyless | later — needs keyword filtering |
 | **Public Google Calendars** (hackerspaces, small groups) | long tail | `.ics` — works today via a `sources-*.json` entry | add case by case |
 | **AI Tinkerers** | 264 city chapters | — | no — its `agents.md` forbids bulk scraping |
 | **10times, Splash, tech-week.com, 1 Million Cups, Noisebridge** | — | 403 / 429 / client-rendered / anti-bot | no |
