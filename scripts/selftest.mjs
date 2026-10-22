@@ -6,6 +6,11 @@
  *
  *   node scripts/selftest.mjs
  */
+import { mkdtempSync, mkdirSync, cpSync, writeFileSync, readFileSync, existsSync, rmSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { tmpdir } from 'node:os';
+import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
 import { validateRecord, decideAdd } from './lib/record.mjs';
 import { planCities, mergeSearched, candidateCities, TYPES } from '../agent/tools/discovery-plan.mjs';
 
@@ -68,7 +73,8 @@ console.log('decideAdd');
     attendance: '', cost: 'free', audience: 'students', url: 'https://hackcanada.org/',
     description: 'A student hackathon.', source: 'https://hackcanada.org/',
   };
-  const verdict = (r, curated = [], again = false) => decideAdd(r, curated, again, NOW);
+  const verdict = (r, curated = [], again = false, before = false) =>
+    decideAdd(r, curated, { addedThisRun: again, appliedBefore: before }, NOW);
 
   ok(verdict(rec).verdict === 'ADD', 'a valid new record is added');
   const bad = verdict({ ...rec, country: 'Canda' });
@@ -79,6 +85,106 @@ console.log('decideAdd');
   ok(verdict(rec, []).verdict === 'ADD', 'a feed-only twin (not passed as curated) does not block');
   ok(verdict(rec, [rec], true).verdict === 'REJECT' && /this run/.test(verdict(rec, [rec], true).message), 'a repeat of an identical add in one run is rejected, not DONE');
   ok(verdict({ ...rec, venue: '' }, [rec], true).verdict === 'REJECT', 'a differing repeat in one run is rejected');
+  ok(verdict({ ...rec, venue: '' }, [rec], false, true).verdict === 'DONE', 'an add applied on an earlier run is DONE though the record has since changed');
+  ok(verdict(rec, [], false, true).verdict === 'DONE', 'an add applied on an earlier run is DONE though the record has since been removed');
+}
+
+/**
+ * apply-patches.mjs end to end. It is a script, not a module, and it writes
+ * data/raw, so it runs on a copy of itself in a throwaway directory with its own
+ * data/ — never this checkout's. Each case is a sequence of runs, because the
+ * bug it guards (an applied add replayed every run) only shows on the second.
+ */
+console.log('apply-patches (sandboxed copy)');
+{
+  const NOW = '2026-10-21';
+  const HERE = dirname(fileURLToPath(import.meta.url));
+  const rec = {
+    name: 'Foo Conf', type: 'conference', topics: ['web'], city: 'Toronto', region: 'Ontario',
+    country: 'Canada', venue: '', cadence: 'annual', month: 'March',
+    next_date: '2027-03-04', next_date_end: '2027-03-05', last_date: '2026-03-05', status: 'upcoming',
+    attendance: '', cost: 'paid', audience: '', url: 'https://fooconf.example/',
+    description: 'A web conference.', source: 'https://fooconf.example/',
+  };
+  const add = (r = rec) => [{ action: 'add', reason: 'found on its own site', record: r }];
+  const remove = [{ match: { name: rec.name, city: rec.city }, action: 'remove', reason: 'retired' }];
+  const update = [{ match: { name: rec.name, city: rec.city }, action: 'update', reason: 'new date', set: { next_date: '2027-03-11', next_date_end: '2027-03-12' } }];
+
+  function sandbox(raw = {}) {
+    const dir = mkdtempSync(join(tmpdir(), 'apply-selftest-'));
+    mkdirSync(join(dir, 'scripts'));
+    cpSync(join(HERE, 'apply-patches.mjs'), join(dir, 'scripts', 'apply-patches.mjs'));
+    cpSync(join(HERE, 'lib'), join(dir, 'scripts', 'lib'), { recursive: true });
+    mkdirSync(join(dir, 'data', 'raw'), { recursive: true });
+    mkdirSync(join(dir, 'data', 'review'));
+    for (const [f, list] of Object.entries({ 'curated.json': [], ...raw })) {
+      writeFileSync(join(dir, 'data', 'raw', f), JSON.stringify(list));
+    }
+    return {
+      put: (f, json) => writeFileSync(join(dir, 'data', 'review', f), JSON.stringify(json)),
+      run: () => execFileSync(process.execPath, [join(dir, 'scripts', 'apply-patches.mjs')],
+        { env: { ...process.env, TODAY: NOW }, encoding: 'utf8' }),
+      found: () => {
+        const p = join(dir, 'data', 'raw', 'discovered.json');
+        return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')).filter((e) => e.name === rec.name) : [];
+      },
+      done: () => rmSync(dir, { recursive: true, force: true }),
+    };
+  }
+  // One patch file's lines of a run's output, on one line, for the check's detail.
+  const line = (out, pf) => (out.split(`\n${pf} — `)[1]?.split('\n\n')[0] || '').replace(/\s*\n\s*/g, ' | ');
+  const sb = [];
+  try {
+    {
+      const s = sandbox(); sb.push(s);
+      s.put('oct21-x-fixes.json', add());
+      const first = s.run();
+      ok(/ADD {4}Foo Conf/.test(first) && s.found().length === 1, 'first application: ADD, and the record lands in discovered.json', line(first, 'oct21-x-fixes.json'));
+      const again = s.run();
+      ok(/DONE {3}Foo Conf .*applied on an earlier run/.test(again) && s.found().length === 1, 'the same add on the next run is DONE', line(again, 'oct21-x-fixes.json'));
+    }
+    {
+      const s = sandbox(); sb.push(s);
+      s.put('oct21-x-fixes.json', add()); s.run();
+      s.put('pa01-x-fixes.json', remove);   // sorts after the add
+      const r1 = s.run(), r2 = s.run();
+      ok(/REMOVE Foo Conf/.test(r1) && !/ADD {4}/.test(r1 + r2) && /DONE {3}Foo Conf .*applied on an earlier run/.test(r2) && s.found().length === 0,
+        'added, then removed by a later-sorting patch: stays removed, the add is DONE', line(r2, 'oct21-x-fixes.json'));
+    }
+    {
+      const s = sandbox(); sb.push(s);
+      s.put('oct21-x-fixes.json', add()); s.run();
+      s.put('nov04-x-fixes.json', remove);  // sorts before the add: the case that re-added it every run
+      const r1 = s.run(), r2 = s.run(), r3 = s.run();
+      ok(/REMOVE Foo Conf/.test(r1) && !/ADD {4}/.test(r1 + r2 + r3) && /DONE {3}Foo Conf .*applied on an earlier run/.test(r3) && s.found().length === 0,
+        'added, then removed by an earlier-sorting patch: stays removed, the add is DONE', line(r3, 'oct21-x-fixes.json'));
+    }
+    {
+      const s = sandbox(); sb.push(s);
+      s.put('oct21-x-fixes.json', add()); s.run();
+      s.put('pb01-x-fixes.json', update);
+      const r1 = s.run(), r2 = s.run();
+      ok(/UPDATE Foo Conf/.test(r1) && !/REJECT/.test(r1 + r2) && /DONE {3}Foo Conf .*applied on an earlier run/.test(r2)
+        && s.found()[0]?.next_date === '2027-03-11', 'added, then updated: the add is DONE, never REJECT, and the update holds', line(r2, 'oct21-x-fixes.json'));
+    }
+    {
+      const s = sandbox({ 'curated.json': [{ ...rec, city: 'New York City', region: 'New York', country: 'United States' }] }); sb.push(s);
+      s.put('oct21-x-fixes.json', add({ ...rec, city: 'NYC', region: 'New York', country: 'United States' }));
+      const out = s.run();
+      ok(/REJECT Foo Conf \(NYC\) {2}exists/.test(out) && s.found().length === 0,
+        'an add in "NYC" finds the curated record in "New York City" (canonical city), no duplicate', line(out, 'oct21-x-fixes.json'));
+    }
+    {
+      const s = sandbox(); sb.push(s);
+      s.put('discover-x.json', { pass: 'x', date: NOW, returning: [{ name: 'Foo Conf', verdict: 'added' }] });
+      s.put('discover-x-fixes.json', add());
+      const out = s.run();
+      ok(/discover-x\.json — not an operation array, skipping/.test(out), 'a discovery log (an object) is never applied, and says so');
+      ok(/ADD {4}Foo Conf/.test(out) && s.found().length === 1, 'a pass named "discover-x" still has its discover-x-fixes.json applied');
+    }
+  } finally {
+    for (const s of sb) s.done();
+  }
 }
 
 console.log('discovery-plan');

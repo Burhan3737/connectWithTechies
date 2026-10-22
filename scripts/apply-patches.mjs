@@ -16,8 +16,9 @@
  *   { "action": "add", "reason": "where it was found and confirmed",
  *     "record": { ...every field of data/SCHEMA.md... } }
  *   It lands in data/raw/discovered.json once validateRecord (scripts/lib/record.mjs)
- *   passes it. Re-running an applied add is a no-op; a name+city a curated file
- *   already holds with different fields is rejected — patch it with update.
+ *   passes it. An add applies once: after that, its patch file re-running it is
+ *   DONE whatever has become of the record (see appliedAdd below). A name+city a
+ *   curated file already holds with different fields is rejected — patch it with update.
  *
  *   node scripts/apply-patches.mjs            # apply every data/review/*.json
  *   node scripts/apply-patches.mjs --dry-run  # report without writing
@@ -90,20 +91,55 @@ for (const f of rawFiles) {
 if (!store.has(DISCOVERED)) store.set(DISCOVERED, []);
 
 // The ledger, the audit, the proposed-moves file and the feed's source proposals
-// (sources-*.json, read by scripts/feeds/run.mjs) and the discovery logs
-// (discover-*.json, read by scripts/feeds/returning.mjs) share this directory but
-// are not patches. PROPOSED-moves.json is excluded on purpose: an automated
-// date change is a suggestion for a person to accept, never something that
-// applies itself by being left in a folder.
+// (sources-*.json, read by scripts/feeds/run.mjs) share this directory but are
+// not patches. PROPOSED-moves.json is excluded on purpose: an automated date
+// change is a suggestion for a person to accept, never something that applies
+// itself by being left in a folder.
+//
+// The discovery logs (discover-<pass>.json, read by scripts/feeds/returning.mjs)
+// are deliberately not excluded by name. They are objects, so the array check
+// below skips them out loud; a name rule would also have swallowed, without a
+// word, the patches of any pass that happened to be called "discover-…"
+// (discover-x-fixes.json). discovery-log.json is excluded by name as before.
 const NOT_PATCHES = new Set(['verified.json', 'AUDIT.json', 'PROPOSED-moves.json', 'discovery-log.json']);
 const patchFiles = readdirSync(REVIEW_DIR)
-  .filter((f) => f.endsWith('.json') && !/^(confirm|sources|discover)-/.test(f) && !NOT_PATCHES.has(f))
+  .filter((f) => f.endsWith('.json') && !/^(confirm|sources)-/.test(f) && !NOT_PATCHES.has(f))
   .sort();
 if (!patchFiles.length) { console.log('No patch files in data/review/ — nothing to do.'); process.exit(0); }
 
 let applied = 0, removed = 0, unmatched = 0, noop = 0, added = 0, rejected = 0;
 const touched = new Set();
 const log = [];
+
+/**
+ * Has this add, from this patch file, landed on an earlier run?
+ *
+ * Patch files stay in data/review/ and every run replays all of them, in name
+ * order. For update and remove that is harmless, but an add replayed is a new
+ * record: once a later cycle's remove had retired it, the next run put it back
+ * (nov04-s1-fixes.json sorts before oct21-…-fixes.json, so every run removed it
+ * and re-added it), and once a later update had changed it, the add no longer
+ * matched what was on file and was REJECTed on every run — noise in the very
+ * dry-run that gates an apply. Comparing against the record cannot tell "never
+ * added" from "added, then changed or retired"; only a record of the add can.
+ *
+ * That record is APPLIED.md. This script only ever appends to it, it is
+ * committed with the data it describes, and the ADD line is written by the same
+ * run that writes the record — so it is already the durable "this landed" fact,
+ * and a separate ledger would be a second copy that could disagree with it. The
+ * line is `- <patch file>: ADD <name> (<city>) — <reason>`, so the part before the
+ * reason identifies one add of one patch file. Should a run die between writing
+ * data/raw and appending the log, the record is on file unchanged and the
+ * field-by-field check in decideAdd still makes the re-run DONE.
+ */
+const APPLIED_LOG = join(REVIEW_DIR, 'APPLIED.md');
+const loggedAdds = existsSync(APPLIED_LOG)
+  ? readFileSync(APPLIED_LOG, 'utf8').split('\n').filter((l) => l.includes(': ADD '))
+  : [];
+const appliedAdd = (pf, rec) => {
+  const head = `- ${pf}: ADD ${rec?.name} (${rec?.city}) — `;
+  return loggedAdds.some((l) => l.startsWith(head));
+};
 
 /**
  * Add a new curated record; decideAdd (scripts/lib/record.mjs) makes the call.
@@ -115,9 +151,20 @@ function addRecord(op, pf) {
   const key = `${norm(rec?.name)}|${norm(rec?.city)}`;
   // The run-local repeat check uses the canonical city, so "Montreal" and "Montréal" count as one.
   const runKey = `${norm(rec?.name)}|${norm(canonPlace(rec?.city, rec?.region).city)}`;
-  // store[i] is null for a record removed earlier in this run; it no longer blocks.
-  const hits = (index.get(key) || []).filter(({ file, i }) => file !== 'feed.json' && store.get(file)[i]);
-  const { verdict, message } = decideAdd(rec, hits.map(({ file, i }) => store.get(file)[i]), addedKeys.has(runKey));
+  // Looked up under the canonical city as well as the one the add spells: the
+  // index holds every curated record under both, but an add of "Foo Conf" in
+  // "NYC" looked up only "nyc" and missed the "New York City" record, adding a
+  // duplicate. store[i] is null for a record removed earlier in this run; it no
+  // longer blocks. One record can sit under both keys, so hits are de-duplicated.
+  const seen = new Set();
+  const hits = [...(index.get(key) || []), ...(index.get(runKey) || [])].filter(({ file, i }) => {
+    const id = `${file}#${i}`;
+    if (seen.has(id) || file === 'feed.json' || !store.get(file)[i]) return false;
+    seen.add(id);
+    return true;
+  });
+  const { verdict, message } = decideAdd(rec, hits.map(({ file, i }) => store.get(file)[i]),
+    { addedThisRun: addedKeys.has(runKey), appliedBefore: appliedAdd(pf, rec) });
   if (verdict === 'DONE') { noop++; console.log(`  DONE   ${label}  (${message})`); return; }
   if (verdict === 'REJECT') { rejected++; console.log(`  REJECT ${label}  ${message}`); return; }
   const arr = store.get(DISCOVERED);
@@ -241,9 +288,8 @@ for (const f of touched) {
 }
 
 if (log.length) {
-  const logPath = join(ROOT, 'data', 'review', 'APPLIED.md');
   const stamp = today();
-  const prior = existsSync(logPath) ? readFileSync(logPath, 'utf8') : '# Applied review patches\n';
-  writeFileSync(logPath, `${prior}\n## ${stamp}\n\n${log.map((l) => `- ${l}`).join('\n')}\n`, 'utf8');
+  const prior = existsSync(APPLIED_LOG) ? readFileSync(APPLIED_LOG, 'utf8') : '# Applied review patches\n';
+  writeFileSync(APPLIED_LOG, `${prior}\n## ${stamp}\n\n${log.map((l) => `- ${l}`).join('\n')}\n`, 'utf8');
   console.log(`appended ${log.length} entries to data/review/APPLIED.md`);
 }
