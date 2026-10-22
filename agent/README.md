@@ -38,6 +38,7 @@ registered tech organiser and picks up each event they announce, with no agent i
 | `tools/check-links.mjs` | probe every event URL, report dead links and redirects |
 | `tools/check-data.mjs` | dataset audit: coverage, near-duplicates, field gaps, date sanity |
 | `tools/probe-extractors.mjs` | diagnostic: how much of the dataset is machine-readable |
+| `tools/discovery-plan.mjs` | picks the cities to search for events we do not have (`npm run discover:plan` -> `DISCOVER.tsv`); `--record` marks searched ones |
 
 ### verify-dates
 
@@ -110,6 +111,21 @@ And one optional file, for the feed:
   any public `.ics` feed. `[{ "url": "https://luma.com/genai-sf", "reason": "..." }]`.
   The next `npm run feeds` registers each one and reads it on every run from then on.
   `"tech": false` on a registered organiser retires it.
+
+## Discovery
+
+Everything above re-checks what we already hold. Two lists point curators at what we do
+not, each worked as a **discovery brief** (see the curator definition):
+
+- `npm run returning` -> `data/review/RETURNING.tsv`: last year's events that have not come
+  back into the data (weekly).
+- `npm run discover:plan` -> `data/review/DISCOVER.tsv`: the cities searched longest ago,
+  with the event types we hold none of there (every cycle).
+
+Curators answer in `data/review/discover-<pass>.json` and emit `add` patches, which land in
+`data/raw/discovered.json` and are verified through the ledger as `never`. After applying,
+`node agent/tools/discovery-plan.mjs --record` stamps the cities in the tracked
+`data/review/discovery-log.json`, so the next plan moves on.
 
 ## The feed, and where agents fit in it
 

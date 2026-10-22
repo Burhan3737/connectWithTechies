@@ -95,7 +95,7 @@ if (!store.has(DISCOVERED)) store.set(DISCOVERED, []);
 // are not patches. PROPOSED-moves.json is excluded on purpose: an automated
 // date change is a suggestion for a person to accept, never something that
 // applies itself by being left in a folder.
-const NOT_PATCHES = new Set(['verified.json', 'AUDIT.json', 'PROPOSED-moves.json']);
+const NOT_PATCHES = new Set(['verified.json', 'AUDIT.json', 'PROPOSED-moves.json', 'discovery-log.json']);
 const patchFiles = readdirSync(REVIEW_DIR)
   .filter((f) => f.endsWith('.json') && !/^(confirm|sources|discover)-/.test(f) && !NOT_PATCHES.has(f))
   .sort();

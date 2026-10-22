@@ -7,6 +7,7 @@
  *   node scripts/selftest.mjs
  */
 import { validateRecord, decideAdd } from './lib/record.mjs';
+import { planCities, mergeSearched, candidateCities, TYPES } from '../agent/tools/discovery-plan.mjs';
 
 let failed = 0, passed = 0;
 function ok(cond, label, detail = '') {
@@ -78,6 +79,53 @@ console.log('decideAdd');
   ok(verdict(rec, []).verdict === 'ADD', 'a feed-only twin (not passed as curated) does not block');
   ok(verdict(rec, [rec], true).verdict === 'REJECT' && /this run/.test(verdict(rec, [rec], true).message), 'a repeat of an identical add in one run is rejected, not DONE');
   ok(verdict({ ...rec, venue: '' }, [rec], true).verdict === 'REJECT', 'a differing repeat in one run is rejected');
+}
+
+console.log('discovery-plan');
+{
+  const ev = (city, region, type, extra = {}) => ({ name: `${type} ${city}`, type, city, region, country: 'United States', ...extra });
+  const events = [
+    ev('Austin', 'Texas', 'hackathon'), ev('Austin', 'Texas', 'conference'), ev('Austin', 'Texas', 'conference'),
+    ev('Boise', 'Idaho', 'summit'),
+    ev('Cary', 'North Carolina', 'ctf'),
+    ev('Denver', 'Colorado', 'conference', { feed_source: 'luma' }),   // feed only: not curated
+    ev('Paris', 'Ile-de-France', 'conference', { country: 'France' }),
+    { ...ev('Toronto', 'Ontario', 'hackathon'), country: 'Canada' },
+  ];
+  const registry = [{ city: 'Denver', region: 'Colorado', country: 'United States' },
+    { city: 'Lyon', region: 'Rhone', country: 'France' }];
+  const plan = (searched = {}, limit = 10) => planCities({ events, discovery: registry, searched, limit });
+  const names = (rows) => rows.map((r) => r.city);
+
+  const cities = candidateCities(events, registry);
+  ok(cities.has('Denver|Colorado') && cities.get('Denver|Colorado').count === 0, 'a registry city with no curated record is a candidate with count 0');
+  ok(!cities.has('Paris|Ile-de-France') && !cities.has('Lyon|Rhone'), 'cities outside the US and Canada are left out');
+  ok(cities.get('Austin|Texas').count === 3, 'curated records are counted per city');
+
+  ok(names(plan()).join() === 'Denver,Boise,Cary,Toronto,Austin', 'never searched first, ties by fewest curated records then name', names(plan()).join());
+  const searched = { 'Denver|Colorado': '2026-10-01', 'Boise|Idaho': '2026-08-01', 'Austin|Texas': '2026-08-01' };
+  ok(names(plan(searched)).join() === 'Cary,Toronto,Boise,Austin,Denver',
+    'then longest since searched, ties by fewest curated records', names(plan(searched)).join());
+  ok(plan({}, 2).length === 2 && plan({}, 2)[0].city === 'Denver', '--limit trims the list');
+
+  const austin = plan().find((r) => r.city === 'Austin');
+  ok(austin.curated_count === 3 && austin.missing_types === TYPES.filter((t) => t !== 'hackathon' && t !== 'conference').join(','),
+    'missing_types are the listed types with no curated record there', austin.missing_types);
+  ok(plan().find((r) => r.city === 'Denver').missing_types === TYPES.join(','), 'a feed-only city is missing every type');
+  ok(!plan().some((r) => r.missing_types.split(',').includes('expo')), 'only the listed types are ever reported');
+
+  const logs = [
+    { pass: 'a', date: '2026-10-21', cities: [{ city: 'Austin', region: 'Texas' }, { city: 'Cary', region: 'North Carolina' }] },
+    { pass: 'b', date: '2026-10-10', cities: [{ city: 'Austin', region: 'Texas' }] },
+    { pass: 'c', date: '2026-10-22', returning: [{ name: 'X', verdict: 'rejected' }] },
+    { pass: 'd', date: '2026-10-22', cities: [{ region: 'Texas' }, null] },
+  ];
+  const merged = mergeSearched({ 'Austin|Texas': '2026-09-01', 'Boise|Idaho': '2026-08-01' }, logs);
+  ok(merged['Austin|Texas'] === '2026-10-21', 'a logged city takes the later date, whichever log comes last');
+  ok(merged['Cary|North Carolina'] === '2026-10-21' && merged['Boise|Idaho'] === '2026-08-01', 'new cities are added and others kept');
+  ok(mergeSearched({ 'Austin|Texas': '2026-11-01' }, logs)['Austin|Texas'] === '2026-11-01', 'an older log never lowers a date');
+  ok(JSON.stringify(mergeSearched(merged, logs)) === JSON.stringify(merged), 'recording twice changes nothing (idempotent)');
+  ok(Object.keys(merged).length === 3, 'logs with no cities, or a city entry with no name, add nothing');
 }
 
 console.log(failed ? `\n${failed} CHECK(S) FAILED` : `\nALL ${passed} SCRIPT CHECKS PASSED`);

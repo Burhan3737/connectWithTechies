@@ -10,11 +10,66 @@ That is the failure that matters, and it is worth being slow to avoid.
 
 ## Your input
 
-The orchestrator gives you one of two things:
+The orchestrator gives you one of three things:
 
 1. **A chunk of the re-check queue** — a TSV of events to verify.
 2. **An auditor's discrepancy report** — problems found in a previous run of yours,
    to fix. Read it carefully; it is specific, and it exists because something went wrong.
+3. **A discovery brief** — a chunk of `RETURNING.tsv` or of `DISCOVER.tsv`. This is not
+   verification of what we hold; it is looking for what we do not have. See below.
+
+## A discovery brief
+
+Check `data/events.json` before researching any row: if the event is already there, under
+any name or city, it is `exists`, not an `add`. Everything under "What this dataset has
+taught us" and "Rules" applies unchanged: the organiser's own page over any aggregator,
+never guess a date, in-person events only.
+
+**`RETURNING.tsv` rows** — an event that ran in the last 18 months and has not come back
+into our data. Columns: section, core, last_name, last_start, last_end, city, region,
+country, location_text, sources, url, expected_month, last_tried. Find the organiser's own
+site (the `url` is often a Devpost or MLH page, not the organiser's), then:
+
+| what you find | verdict | what you emit |
+|---|---|---|
+| next edition announced, with dates | `added` | an `add` patch with the dates |
+| next edition announced, no dates yet | `added` | an `add` with `next_date: ""`, `status: "recurring-tbd"`, `last_date` from the row |
+| ended for good, site gone or squatted, outside the US/Canada, or online-only | `rejected` | nothing; give the reason |
+| already in `data/events.json` under another name or city | `exists` | nothing; say which record |
+| cannot be settled | `unresolved` | nothing; say what you tried |
+
+Rows in the `unplaced` section have no city: the feed could not tell where the event was
+held, so finding where it is belongs to the job.
+
+**`DISCOVER.tsv` rows** — a city, with `missing_types`: the types of event we hold no
+curated record of there. Search the web for each, e.g. "hackathon Toronto 2027", "tech
+conference Toronto 2027", and confirm every candidate on the organiser's own page. Check
+`data/events.json` first and emit an `add` for each new one. An organiser that keeps
+putting on events and publishes on Luma, Meetup or a public `.ics` feed goes in
+`sources-<pass>.json` as usual rather than in as a one-off `add`. Finding nothing is a
+fine result for a city; say which searches you ran.
+
+**Always write `data/review/discover-<pass>.json`**, covering **every** row you were
+given. It is an object, not a patch array; the patcher never reads it:
+
+```json
+{ "pass": "oct21-d1", "date": "2026-10-21",
+  "returning": [ { "name": "Hack Canada 2026", "verdict": "added",
+                   "reason": "hackcanada.org: Jan 8-10 2027, Toronto" } ],
+  "cities": [ { "city": "Toronto", "region": "Ontario",
+                "queries": ["hackathon Toronto 2027"],
+                "found": [ { "name": "...", "url": "...", "verdict": "added", "reason": "..." } ] } ] }
+```
+
+- `verdict` is `added`, `exists`, `rejected` or `unresolved`; `date` is today.
+- `returning[].name` must be the row's `last_name` or `core`, **copied exactly**. A settled
+  candidate is dropped from the list by matching its name with the edition number and year
+  removed; a name you reworded can leave the row on the list for ever.
+- `city` and `region` in `cities` are copied exactly from the row: that is how the city is
+  marked as searched.
+- A row with no entry reads as work skipped. Write one per row, even if nothing was found.
+- These rows are not in the ledger, so there is no `confirm-<pass>.json` for them. Your
+  `add` patches go in `data/review/<pass>-fixes.json` as usual.
 
 ## Read the page like a browser, not like a bot
 

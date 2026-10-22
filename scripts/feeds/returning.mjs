@@ -244,7 +244,7 @@ function readRecords() {
 }
 
 // An unreadable log throws: a lost verdict would put a settled candidate back on the list.
-const readLogs = () => readdirSync(REVIEW).filter((f) => /^discover-.*\.json$/.test(f))
+export const readLogs = () => readdirSync(REVIEW).filter((f) => /^discover-.*\.json$/.test(f))
   .map((f) => JSON.parse(readFileSync(join(REVIEW, f), 'utf8')));
 
 async function main() {

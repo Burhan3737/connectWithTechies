@@ -97,6 +97,38 @@ Queue reasons, in the order they are worked:
 | `window` | undated, and its usual month is close enough that dates get announced |
 | `aged` | 90 days for a dated event, 180 for a recurring group |
 
+## Step 2b — look for what we don't have
+
+Steps 1 and 2 only ever re-check what is already held. Nothing in them finds an event we
+have never heard of — Hack Canada 2027 was on no feed and in no record. This step sends
+curators looking, with a **discovery brief** instead of a queue chunk.
+
+```bash
+npm run returning        # weekly: last year's events not yet back -> data/review/RETURNING.tsv
+npm run discover:plan    # every cycle: the cities to search -> data/review/DISCOVER.tsv
+```
+
+`npm run returning` reads four history datasets over the network (a minute or two); run it
+once a week, not every cycle. `discover:plan` is local and instant: it picks the ~10 cities
+searched longest ago (never-searched first) and lists the event types we hold none of there.
+
+Chunk `RETURNING.tsv` at ~25 rows and `DISCOVER.tsv` at ~5 cities, and dispatch one
+`curator` per chunk in parallel with the recheck curators, each with its own distinct pass
+name. Say plainly that it is a **discovery brief** and give the chunk path; the curator
+definition says what to do with one. Every row must come back in
+`data/review/discover-<pass>.json`.
+
+New events come back as `add` patches, which `npm run apply` writes to
+`data/raw/discovered.json`. Nothing is added unverified: the ledger queues each new record
+as `never`, so the next cycle's curators re-check it against the organiser's page.
+
+After applying (Step 3), stamp the cities as searched so they are not offered again
+next cycle:
+
+```bash
+node agent/tools/discovery-plan.mjs --record    # updates data/review/discovery-log.json (tracked)
+```
+
 ## Step 3 — apply
 
 ```bash
