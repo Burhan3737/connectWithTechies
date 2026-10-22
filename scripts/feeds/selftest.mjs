@@ -12,6 +12,7 @@ import { readApollo } from './adapters/meetup.mjs';
 import { toEvent as lumaEvent } from './adapters/luma.mjs';
 import { toEvent as eventbriteEvent } from './adapters/eventbrite.mjs';
 import { devpostRange, looksLikeVenue, devpostPageDone, devpostEvent, devEventWanted } from './adapters/datasets.mjs';
+import { coreName, coverageIndex, isCovered, decisions, usCaHint, returning, toTsv } from './returning.mjs';
 import { today } from '../lib/today.mjs';
 import { parseIcal } from './lib/ical.mjs';
 import { fromText, fromParts, localDate } from './lib/geo.mjs';
@@ -110,6 +111,84 @@ console.log('\ndevelopers.events window');
   ok(devEventWanted('2020-01-01', '', '2019-01-01') === true, 'since keeps past events after it');
   ok(devEventWanted('2018-12-31', '', '2019-01-01') === false, 'since drops events before it');
   ok(devEventWanted('2019-01-01', '', '2019-01-01') === true, 'since is inclusive');
+}
+
+console.log('\nReturning editions (returning.mjs)');
+{
+  for (const [title, core] of [['Hack Canada 2026', 'hack canada'], ['Hack Western 13', 'hack western'],
+    ['Cal Hacks 13.0 ', 'cal hacks'], ['SwampHacks XII', 'swamphacks'], ['HackPrinceton Fall 2026', 'hackprinceton'],
+    ['uOttaHack 9', 'uottahack'], ['Hack the North', 'hack the north'], ['11th Annual DevFest', 'annual devfest'],
+    ['Columbia x Google', 'columbia x google'], ['Hack4Good', 'hack4good'], ['DC Hacks', 'dc hacks']]) {
+    ok(coreName(title) === core, `coreName: ${JSON.stringify(title)} -> ${JSON.stringify(core)}`, coreName(title));
+  }
+
+  const NOW = '2026-10-22';
+  // Hack Canada 2026 as Devpost's ended listing gave it: a venue, no city.
+  const hc = { feed: 'devpost', feed_id: 'devpost:7', title: 'Hack Canada 2026', url: 'https://hack-canada.devpost.com/',
+    start_date: '2026-03-06', end_date: '2026-03-08', place: null, location_text: 'SPUR Innovation Centre' };
+  const toronto = { name: 'Hack Canada', city: 'Toronto', region: 'Ontario', country: 'Canada',
+    url: 'https://hackcanada.org/', next_date: '2027-01-08', last_date: '2026-03-06' };
+  const others = [{ name: 'Hack the North', city: 'Waterloo', country: 'Canada', url: 'https://hackthenorth.com/', next_date: '2026-09-12' }];
+  ok(!isCovered(hc, coverageIndex(others, NOW)), 'Hack Canada 2026 (Waterloo, Devpost) not covered without a record of it');
+  ok(isCovered(hc, coverageIndex([...others, toronto], NOW)), 'covered by a curated record in another city (Toronto)');
+  ok(isCovered({ ...hc, title: 'HackCanada' }, coverageIndex([toronto], NOW)), 'names compared with spaces removed too');
+  // The feed keeps last year's editions for a while, under the same name and link.
+  const pastFeed = { name: 'Hack Canada 2026', city: 'Waterloo', country: 'Canada', url: 'https://hack-canada.devpost.com/',
+    next_date: '2026-03-06', next_date_end: '2026-03-08', feed_source: 'devpost' };
+  ok(!isCovered(hc, coverageIndex([pastFeed], NOW)), 'a past feed record (the same edition) does not cover');
+  ok(isCovered(hc, coverageIndex([{ ...pastFeed, name: 'Hack Canada 2027', next_date: '2027-01-08', next_date_end: '' }], NOW)),
+    'an upcoming feed record covers');
+  ok(isCovered({ ...hc, title: 'Something Else', url: 'https://www.hackcanada.org/2026' }, coverageIndex([toronto], NOW)),
+    'same own host, www. ignored: covered');
+  for (const [a, b] of [['https://hack-canada.devpost.com/', 'https://other.devpost.com/'], ['https://mlh.com/e/1', 'https://mlh.com/e/2'],
+    ['https://lu.ma/a', 'https://lu.ma/b'], ['https://luma.com/a', 'https://luma.com/b'], ['https://www.eventbrite.ca/e/1', 'https://www.eventbrite.ca/e/2'],
+    ['https://www.meetup.com/a/', 'https://www.meetup.com/b/'], ['https://github.com/a', 'https://github.com/b']]) {
+    ok(!isCovered({ title: 'Alpha Hacks', url: a }, coverageIndex([{ name: 'Beta Conf', url: b, country: 'Canada' }], NOW)),
+      `platform host never a match: ${new URL(a).hostname}`);
+  }
+
+  ok(usCaHint(hc), 'unplaced, but the title names Canada: kept');
+  ok(!usCaHint({ title: 'Spur Hacks', location_text: 'SPUR Innovation Centre' }), 'unplaced with no hint: dropped');
+  ok(usCaHint({ title: 'Spur Hacks', location_text: 'Main Campus, ON' }), 'a province code in the location: kept');
+  ok(usCaHint({ title: 'Hacks of Ontario', location_text: '' }), 'a province name in the title: kept');
+  ok(!usCaHint({ title: 'HACK IN STYLE', location_text: 'Lagos' }), 'a capitalised word in a title is no state code');
+
+  const logs = [
+    { pass: 'oct21-d1', date: '2026-10-21', returning: [{ name: 'Swamp Hacks', verdict: 'rejected', reason: 'x' },
+      { name: 'Alpha Hacks', verdict: 'unresolved', reason: 'no site' }] },
+    { pass: 'oct14-d1', date: '2026-10-14', returning: [{ name: 'Alpha Hacks 2026', verdict: 'unresolved', reason: 'x' },
+      { name: 'Beta Hacks', verdict: 'exists', reason: 'x' }, { name: 'Gamma Hacks', verdict: 'added', reason: 'x' }] },
+  ];
+  const d = decisions(logs);
+  ok(d.get('swamp hacks')?.decided && d.get('beta hacks')?.decided && d.get('gamma hacks')?.decided, 'rejected, exists and added settle a candidate');
+  ok(!d.get('alpha hacks')?.decided && d.get('alpha hacks')?.last_tried === '2026-10-21', 'unresolved keeps it, with the last date tried');
+
+  const place = (city, region, country) => ({ city, region, country, tz: '' });
+  const ev = (feed, title, start, p, extra = {}) => ({ feed, feed_id: `${feed}:${title}`, title, url: '', start_date: start, end_date: '',
+    place: p, location_text: p ? `${p.city}, ${p.region}` : '', ...extra });
+  const { rows, counts } = returning({ now: NOW, records: others, logs, editions: {
+    devpost: [hc, ev('devpost', 'Swamp Hacks XI', '2026-01-24', place('Gainesville', 'Florida', 'United States')),
+      ev('devpost', 'Lost Hacks', '2026-02-01', null, { location_text: 'SPUR Innovation Centre' }),
+      ev('devpost', 'Alpha Hacks', '2026-02-10', place('Austin', 'Texas', 'United States')),
+      ev('devpost', 'Delta Hacks 2024', '2024-11-01', place('Hamilton', 'Ontario', 'Canada')),
+      ev('devpost', 'Euro Hacks', '2026-05-01', place('Paris', 'Ile-de-France', 'France'))],
+    mlh: [ev('mlh', 'Hack Canada', '2026-03-06', place('Waterloo', 'Ontario', 'Canada')),
+      ev('mlh', 'Epsilon Hacks', '2025-11-14', place('Boston', 'Massachusetts', 'United States')),
+      ev('mlh', 'Epsilon Hacks', '2025-04-25', place('Boston', 'Massachusetts', 'United States')),
+      ev('mlh', 'Hack the North 2025', '2025-09-12', place('Waterloo', 'Ontario', 'Canada'))],
+  } });
+  const hcRow = rows.find((r) => r.core === 'hack canada');
+  ok(hcRow && hcRow.sources === 'devpost,mlh' && hcRow.section === 'placed' && hcRow.city === 'Waterloo',
+    'one row per event, every source listed; on a tie the placed edition', JSON.stringify(hcRow));
+  ok(rows.find((r) => r.core === 'epsilon hacks')?.last_start === '2025-11-14', 'the most recent edition kept');
+  ok(!rows.some((r) => ['swamp hacks', 'hack the north', 'delta hacks', 'euro hacks', 'lost hacks'].includes(r.core)),
+    'decided, covered, too old, abroad and unhinted all left out', rows.map((r) => r.core).join(','));
+  ok(counts.decided === 1 && counts.covered === 1 && counts.outOfWindow === 1 && counts.notUsCa === 1 && counts.unplacedNoHint === 1,
+    'each drop counted', JSON.stringify(counts));
+  ok(rows.map((r) => r.core).join(',') === 'epsilon hacks,hack canada,alpha hacks',
+    'ordered by how soon the month comes round; a tried candidate after untried ones', rows.map((r) => r.core).join(','));
+  ok(rows.find((r) => r.core === 'alpha hacks')?.last_tried === '2026-10-21', 'last_tried carried to the row');
+  ok(toTsv(rows).split('\n')[0].split('\t').length === 13, 'thirteen TSV columns');
 }
 
 console.log('\niCal');

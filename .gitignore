@@ -10,6 +10,7 @@ data/review/BROKEN-LINKS.tsv
 data/review/HIGH-PROFILE.tsv
 data/review/TODO-*.tsv
 data/review/TO-VERIFY.tsv
+data/review/RETURNING.tsv
 data/review/BLOCKED-*.tsv
 data/review/PASS-*.tsv
 data/review/DISPATCHED.tsv

@@ -40,6 +40,32 @@ Luma place id, Eventbrite path and Meetup location. Ottawa and Nashville have no
 discovery, or by an agent through `data/review/sources-<pass>.json` (Luma, Meetup, Eventbrite
 organiser or `.ics` URLs). `"tech": false` retires one.
 
+### Past editions (read weekly; `scripts/feeds/returning.mjs`)
+
+The feed reads only what is upcoming, so an annual event that announces its next edition only
+on its own site is never found by it (Hack Canada 2027: on no feed; its Devpost page was the
+ended 2026 edition, in Waterloo). `npm run returning` reads the same datasets' **history** —
+MLH's last two seasons, Devpost's ended listing (`status[]=ended&order_by=deadline`, paged
+until a whole page is older than the window, at most 300 pages), developers.events and
+confs.tech for last year and this one — and keeps US/Canada editions that started in the last
+18 months. An edition with no resolvable city is kept only if its title or location names the
+US, Canada, a state or province, or a city the curated data knows.
+
+It drops every one we already have: a record in any `data/raw/*.json` with the same core name
+(years, edition numbers and season words removed: "Cal Hacks 13.0" → "cal hacks"), in any
+city — events move — or the same own website (platform hosts like devpost.com, mlh.com, Luma,
+Eventbrite, Meetup and GitHub never count). A feed record counts only while it is upcoming:
+the feed keeps last year's edition for 60 days under the very same name and link. It also
+drops what a curator has settled in a discovery log, `data/review/discover-<pass>.json`
+(`returning[]` entries with verdict `added`, `exists` or `rejected`; `unresolved` keeps
+the candidate, sorted after the untried ones).
+
+What is left goes to `data/review/RETURNING.tsv` (regenerated, git-ignored), placed events
+first, ordered by how soon their usual month comes round. It is a to-look-up list for
+curators; nothing in it is published, and no date read from it is ever used. Known gaps: MLH
+editions the adapter cannot place are skipped, and a Devpost page that fails mid-crawl ends
+the crawl early — the per-source edition counts in the summary show a short read.
+
 ## Candidates (researched 2026-10-03; full notes in research/source-candidates.md)
 
 56 platforms were checked by fetching them without a key. The ones worth acting on:

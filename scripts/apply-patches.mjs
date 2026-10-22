@@ -90,13 +90,14 @@ for (const f of rawFiles) {
 if (!store.has(DISCOVERED)) store.set(DISCOVERED, []);
 
 // The ledger, the audit, the proposed-moves file and the feed's source proposals
-// (sources-*.json, read by scripts/feeds/run.mjs) share this directory but
+// (sources-*.json, read by scripts/feeds/run.mjs) and the discovery logs
+// (discover-*.json, read by scripts/feeds/returning.mjs) share this directory but
 // are not patches. PROPOSED-moves.json is excluded on purpose: an automated
 // date change is a suggestion for a person to accept, never something that
 // applies itself by being left in a folder.
 const NOT_PATCHES = new Set(['verified.json', 'AUDIT.json', 'PROPOSED-moves.json']);
 const patchFiles = readdirSync(REVIEW_DIR)
-  .filter((f) => f.endsWith('.json') && !/^(confirm|sources)-/.test(f) && !NOT_PATCHES.has(f))
+  .filter((f) => f.endsWith('.json') && !/^(confirm|sources|discover)-/.test(f) && !NOT_PATCHES.has(f))
   .sort();
 if (!patchFiles.length) { console.log('No patch files in data/review/ — nothing to do.'); process.exit(0); }
 

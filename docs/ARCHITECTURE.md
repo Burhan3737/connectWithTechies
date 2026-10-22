@@ -119,6 +119,8 @@ approaching, or the check has aged (90 days; 180 for recurring groups).
 | `data/feeds/registry.json` | `feeds/run.mjs` (from discovery + `sources-*.json`) | agents directly |
 | `data/review/*-fixes.json`, `confirm-*.json`, `sources-*.json` | curator agents | — |
 | `data/review/verified.json`, `VERIFIED.md`, `TO-VERIFY.tsv` | `ledger.mjs` | agents |
+| `data/review/RETURNING.tsv` (last year's events not back yet) | `feeds/returning.mjs` | agents |
+| `data/review/discover-*.json` (discovery logs: verdicts on candidates) | curator agents | — |
 | `data/events.json` | `build-data.mjs` | anyone else |
 
 ## Cheat sheet
@@ -127,6 +129,7 @@ approaching, or the check has aged (90 days; 180 for recurring groups).
 |---|---|
 | Routine refresh | `npm run refresh`, then `npm run stale` to see what needs an agent |
 | Weekly, find new Meetup groups and Eventbrite events | `npm run feeds:discover` → skim `data/feeds/last-run.json` (Luma is searched on every run) |
+| Weekly, list last year's events that have not come back | `npm run returning` → `data/review/RETURNING.tsv` for curators (slow on purpose: Devpost's ended listing is paged politely) |
 | Retire a noisy organiser | add `{ "url": "...", "tech": false, "reason": "..." }` to `data/review/sources-<name>.json` — its events leave the feed on the next run |
 | Follow a new organiser | add `{ "url": "https://luma.com/<cal>", "reason": "..." }` to the same kind of file |
 | Full agent cycle | ask Claude to "refresh the events" (runs the `refresh-events` skill) |
@@ -141,6 +144,7 @@ web/                         the site (React, MVVM) — see APP.md
 tests/e2e/                   the end-to-end contract the site must keep
 scripts/build-data.mjs       raw files → events.json
 scripts/feeds/run.mjs        the feed runner
+scripts/feeds/returning.mjs  past editions not back yet → RETURNING.tsv
 scripts/feeds/adapters/      one file per source (luma, meetup, eventbrite, datasets, ical)
 scripts/feeds/lib/           http (polite + cached), geo (place + time zone), relevance, ical
 scripts/ledger.mjs           verification ledger + re-check queue

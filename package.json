@@ -14,6 +14,7 @@
     "ledger": "node scripts/ledger.mjs",
     "stale": "node scripts/ledger.mjs --report",
     "feeds": "node scripts/feeds/run.mjs && node scripts/build-data.mjs",
+    "returning": "node scripts/feeds/returning.mjs",
     "feeds:discover": "node scripts/feeds/run.mjs --discover && node scripts/build-data.mjs",
     "refresh": "node scripts/feeds/run.mjs && node scripts/build-data.mjs && node agent/tools/verify-dates.mjs --write && node scripts/ledger.mjs",
     "verify:dates": "node agent/tools/verify-dates.mjs",
