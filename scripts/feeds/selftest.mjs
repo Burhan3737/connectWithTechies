@@ -267,6 +267,11 @@ console.log('\nGuild.host');
   ok(windsor && windsor.place === null, 'Windsor, ON is not placed in Detroit (zone says Canada)');
   const det = guildEvent(node({ venue: at(-83.0458, 42.3314), timeZone: 'America/Detroit' }), [...cities, detroit]);
   ok(det?.place?.city === 'Detroit' && det.place.country === 'United States', 'a Detroit event is still placed in Detroit');
+  const montreal = { city: 'Montreal', region: 'Quebec', country: 'Canada', lat: 45.5019, lng: -73.5674 };
+  const mtl = guildEvent(node({ venue: at(-73.5674, 45.5019), timeZone: 'America/Montreal' }), [...cities, montreal]);
+  ok(mtl?.place?.country === 'Canada' && mtl.place.city, 'an America/Montreal (legacy alias) event is placed', mtl?.place?.city);
+  const utc = guildEvent(node({ timeZone: 'Etc/UTC' }), cities);
+  ok(utc?.place?.city === 'Toronto', 'a zone naming no country (Etc/UTC) falls back to distance', utc?.place?.city);
 }
 
 console.log('\nEmbedded JSON');

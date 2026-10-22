@@ -36,7 +36,11 @@ function km([lon1, lat1], [lon2, lat2]) {
 
 // The node's own zone says which side of the border it is on. Distance alone
 // put Windsor, ON (America/Toronto) in Detroit, 2 km away across the river.
-const CA_ZONE = /^America[/](Toronto|Vancouver|Edmonton|Winnipeg|Regina|Halifax|Moncton|St_Johns|Whitehorse|Yellowknife|Iqaluit|Glace_Bay|Goose_Bay|Cambridge_Bay|Rankin_Inlet|Inuvik|Dawson|Dawson_Creek|Fort_Nelson|Creston|Swift_Current|Blanc-Sablon|Thunder_Bay|Nipigon|Rainy_River|Pangnirtung|Atikokan)$/;
+const CA_ZONE = /^(America[/](Toronto|Montreal|Vancouver|Edmonton|Winnipeg|Regina|Halifax|Moncton|St_Johns|Whitehorse|Yellowknife|Iqaluit|Glace_Bay|Goose_Bay|Cambridge_Bay|Rankin_Inlet|Resolute|Inuvik|Dawson|Dawson_Creek|Fort_Nelson|Creston|Swift_Current|Blanc-Sablon|Thunder_Bay|Nipigon|Rainy_River|Pangnirtung|Atikokan)|Canada[/].+)$/;
+// US zones likewise. Anything else (UTC, Etc/UTC, Europe/..., Mexico) says
+// nothing about which side of the border an event is on.
+const US_ZONE = /^(America[/](New_York|Chicago|Denver|Los_Angeles|Phoenix|Anchorage|Detroit|Boise|Juneau|Sitka|Nome|Yakutat|Metlakatla|Adak|Menominee|Indiana[/].+|Kentucky[/].+|North_Dakota[/].+|Louisville|Indianapolis)|Pacific[/]Honolulu|US[/].+)$/;
+const zoneCountry = (tz) => CA_ZONE.test(tz) ? 'Canada' : US_ZONE.test(tz) ? 'United States' : '';
 
 function registryCities() {
   const file = new URL('../../../data/feeds/registry.json', import.meta.url);
@@ -56,8 +60,10 @@ export function toEvent(n, cities) {
   const place = best && fromParts({ city: best.c.city, region: best.c.region, country: best.c.country });
   // Placed only when the nearest city is in the country the node's zone names.
   // Zone and city disagree (Windsor vs Detroit) -> unplaced, for place-overrides,
-  // rather than the wrong country. No zone on the node -> distance alone, as before.
-  const sameSide = !n.timeZone || CA_ZONE.test(n.timeZone) === (place?.country === 'Canada');
+  // rather than the wrong country. A zone that is neither a US nor a Canadian one
+  // (UTC, Etc/UTC, missing) names no country -> distance alone, as before.
+  const zc = zoneCountry(n.timeZone || '');
+  const sameSide = !zc || !place || zc === place.country;
   const tz = n.timeZone || place?.tz;
   const start = localDate(n.startAt, tz);
   const end = n.endAt ? localDate(n.endAt, tz) : '';
