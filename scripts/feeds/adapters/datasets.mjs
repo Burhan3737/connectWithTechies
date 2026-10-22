@@ -17,11 +17,11 @@ const pad = (n) => String(n).padStart(2, '0');
 
 /* ---- MLH -------------------------------------------------------------- */
 
-export async function mlh() {
+export async function mlh({ seasons } = {}) {
   const out = [];
   const year = Number(today().slice(0, 4));
   // A season is named for the year it ends: the 2027 season runs Aug 2026 - Jul 2027.
-  for (const season of [year, year + 1]) {
+  for (const season of seasons || [year, year + 1]) {
     const res = await get(`https://mlh.com/seasons/${season}/events`);
     if (res.status !== 200) continue;
     const pd = pageData(res.body);
@@ -37,6 +37,7 @@ export async function mlh() {
         start_date: localDate(e.startsAt, place.tz),
         end_date: e.endsAt ? localDate(e.endsAt, place.tz) : '',
         place, venue: '', online: false, cost: 'free', type: 'hackathon',
+        location_text: String(e.location || ''),
       });
     }
   }
@@ -80,42 +81,70 @@ function uniqueKnownCity(name) {
   return ca && us ? null : ca || us;
 }
 
-export async function devpost() {
+/**
+ * Should paging stop after this page? `starts` is the start date of every event
+ * on it (null where the dates did not parse). Empty -> the listing has ended.
+ * With `since`, stop once EVERY event is older: the ended listing is newest
+ * first but pins an old item (a 2024 one) to the top of page 1, so one old
+ * event proves nothing. An unparseable date is not evidence of age.
+ */
+export function devpostPageDone(starts, since = '') {
+  if (!starts.length) return true;
+  return !!since && starts.every((d) => d && d < since);
+}
+
+/**
+ * One Devpost listing entry -> an event, or null if it is filtered out. A place
+ * of null is kept (data/feeds/place-overrides.json may place it); the raw free
+ * text goes along as location_text for callers that resolve places themselves.
+ */
+export function devpostEvent(h) {
+  if (h.invite_only) return null;
+  const loc = h.displayed_location?.location || '';
+  if (/online/i.test(loc) && !/\+/.test(loc)) return null;
+  // Devpost's location is free text — "Princeton High School", "Grand Finals
+  // 2027". Only a string that resolves to a real US or Canadian city is used.
+  // A bare city ("Toronto") resolves only if our curated data already knows
+  // exactly one such city — never a guess between Waterloo ON and Waterloo IA.
+  const bare = loc.replace(/\s*\+\s*online\s*$/i, '').trim();
+  let place = fromText(bare) || (!bare.includes(',') ? uniqueKnownCity(bare) : null);
+  // Free text puts venues where cities go ("iCode Shrewbury, NJ" read as a
+  // city). A string that reads like a venue is no place; a real city we
+  // have not seen before (Pleasanton) is. An event left without a place
+  // can still be placed by data/feeds/place-overrides.json, or the gate drops it.
+  if (place && looksLikeVenue(place)) place = null;
+  const range = devpostRange(h.submission_period_dates);
+  if (!range) return null;
+  // Its dates are the submission period, not the event. For an in-person
+  // weekend they coincide; a window of weeks is not an event date and is
+  // not published as one.
+  const days = (Date.parse(range[1]) - Date.parse(range[0])) / 86400000;
+  if (days > 4) return null;
+  return {
+    feed: 'devpost', feed_id: `devpost:${h.id}`,
+    title: h.title, description: `A hackathon listed on Devpost${h.organization_name ? ` by ${h.organization_name}` : ''}.`,
+    organiser: { name: h.organization_name || '' },
+    url: h.url, start_date: range[0], end_date: range[1] !== range[0] ? range[1] : '',
+    place, venue: loc.split(',')[0], online: false, cost: 'free', type: 'hackathon',
+    location_text: loc,
+  };
+}
+
+export async function devpost({ status = 'upcoming', since = '' } = {}) {
   const out = [];
-  for (let page = 1; page <= 15; page++) {
+  const ended = status === 'ended';
+  // The ended listing runs to ~1,000 pages of 9; upcoming is a handful.
+  const cap = ended ? 300 : 15;
+  const order = ended ? '&order_by=deadline' : '';
+  for (let page = 1; page <= cap; page++) {
     const { ok, data } = await getJSON(
-      `https://devpost.com/api/hackathons?status[]=upcoming&challenge_type[]=in-person&page=${page}`);
+      `https://devpost.com/api/hackathons?status[]=${status}&challenge_type[]=in-person${order}&page=${page}`);
     if (!ok || !data?.hackathons?.length) break;
     for (const h of data.hackathons) {
-      if (h.invite_only) continue;
-      const loc = h.displayed_location?.location || '';
-      if (/online/i.test(loc) && !/\+/.test(loc)) continue;
-      // Devpost's location is free text — "Princeton High School", "Grand Finals
-      // 2027". Only a string that resolves to a real US or Canadian city is used.
-      // A bare city ("Toronto") resolves only if our curated data already knows
-      // exactly one such city — never a guess between Waterloo ON and Waterloo IA.
-      const bare = loc.replace(/\s*\+\s*online\s*$/i, '').trim();
-      let place = fromText(bare) || (!bare.includes(',') ? uniqueKnownCity(bare) : null);
-      // Free text puts venues where cities go ("iCode Shrewbury, NJ" read as a
-      // city). A string that reads like a venue is no place; a real city we
-      // have not seen before (Pleasanton) is. An event left without a place
-      // can still be placed by data/feeds/place-overrides.json, or the gate drops it.
-      if (place && looksLikeVenue(place)) place = null;
-      const range = devpostRange(h.submission_period_dates);
-      if (!range) continue;
-      // Its dates are the submission period, not the event. For an in-person
-      // weekend they coincide; a window of weeks is not an event date and is
-      // not published as one.
-      const days = (Date.parse(range[1]) - Date.parse(range[0])) / 86400000;
-      if (days > 4) continue;
-      out.push({
-        feed: 'devpost', feed_id: `devpost:${h.id}`,
-        title: h.title, description: `A hackathon listed on Devpost${h.organization_name ? ` by ${h.organization_name}` : ''}.`,
-        organiser: { name: h.organization_name || '' },
-        url: h.url, start_date: range[0], end_date: range[1] !== range[0] ? range[1] : '',
-        place, venue: loc.split(',')[0], online: false, cost: 'free', type: 'hackathon',
-      });
+      const e = devpostEvent(h);
+      if (e) out.push(e);
     }
+    if (devpostPageDone(data.hackathons.map((h) => devpostRange(h.submission_period_dates)?.[0] || null), since)) break;
   }
   return out;
 }
@@ -127,7 +156,12 @@ export async function devpost() {
  * one JSON file. Six times confs.tech's US/Canada coverage. Dates are epoch ms
  * at UTC midnight, so the UTC calendar date is the event date.
  */
-export async function developersEvents() {
+/** Default: drop what is over. With `since`: keep what started on or after it. */
+export function devEventWanted(start, end, since = '') {
+  return since ? start >= since : (end || start) >= today();   // the file keeps history back to 2017
+}
+
+export async function developersEvents({ since = '' } = {}) {
   const out = [];
   const { ok, data } = await getJSON('https://developers.events/all-events.json');
   if (!ok || !Array.isArray(data)) throw new Error('developers.events unreadable');
@@ -140,8 +174,8 @@ export async function developersEvents() {
     // place them; otherwise the gate drops them ("no US/Canada location").
     if (place && looksLikeVenue(place)) place = null;
     const start = utcDate(c.date[0]);
-    if ((c.date[1] ? utcDate(c.date[1]) : start) < today()) continue;   // the file keeps history back to 2017
     const end = c.date[1] ? utcDate(c.date[1]) : '';
+    if (!devEventWanted(start, end, since)) continue;
     const topics = (c.tags || []).map((t) => String(t.value || '').toLowerCase()).filter(Boolean).slice(0, 6);
     out.push({
       feed: 'devevents', feed_id: `devevents:${c.hyperlink}|${start}`,
@@ -149,6 +183,7 @@ export async function developersEvents() {
       organiser: { name: '' }, url: c.hyperlink,
       start_date: start, end_date: end && end !== start ? end : '',
       place, venue: '', online: false, cost: 'varies', type: 'conference', topics,
+      location_text: String(c.location || `${c.city || ''}, ${c.country}`),
     });
   }
   return out;
@@ -185,10 +220,10 @@ export async function hackClub() {
 
 /* ---- confs.tech ------------------------------------------------------- */
 
-export async function confsTech() {
+export async function confsTech({ years } = {}) {
   const out = [];
   const year = Number(today().slice(0, 4));
-  for (const y of [year, year + 1]) {
+  for (const y of years || [year, year + 1]) {
     const { ok, data } = await getJSON(
       `https://api.github.com/repos/tech-conferences/conference-data/contents/conferences/${y}`);
     if (!ok || !Array.isArray(data)) continue;
@@ -207,6 +242,7 @@ export async function confsTech() {
           organiser: { name: '' }, url: c.url,
           start_date: c.startDate, end_date: c.endDate && c.endDate !== c.startDate ? c.endDate : '',
           place, venue: '', online: false, cost: 'varies', type: 'conference', topics: [topic],
+          location_text: `${c.city || ''}, ${c.country || ''}`,
         });
       }
     }

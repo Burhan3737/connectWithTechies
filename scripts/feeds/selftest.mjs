@@ -11,7 +11,8 @@
 import { readApollo } from './adapters/meetup.mjs';
 import { toEvent as lumaEvent } from './adapters/luma.mjs';
 import { toEvent as eventbriteEvent } from './adapters/eventbrite.mjs';
-import { devpostRange, looksLikeVenue } from './adapters/datasets.mjs';
+import { devpostRange, looksLikeVenue, devpostPageDone, devpostEvent, devEventWanted } from './adapters/datasets.mjs';
+import { today } from '../lib/today.mjs';
 import { parseIcal } from './lib/ical.mjs';
 import { fromText, fromParts, localDate } from './lib/geo.mjs';
 import { judge, judgeOrganiser } from './lib/relevance.mjs';
@@ -82,6 +83,34 @@ console.log('\nDevpost dates');
 ok(JSON.stringify(devpostRange('Oct 10 - 11, 2026')) === '["2026-10-10","2026-10-11"]', 'same-month range');
 ok(JSON.stringify(devpostRange('Dec 30 - Jan 02, 2027')) === '["2026-12-30","2027-01-02"]', 'range across new year');
 ok(JSON.stringify(devpostRange('Oct 10, 2026')) === '["2026-10-10","2026-10-10"]', 'single day');
+
+console.log('\nDevpost past editions');
+{
+  const since = '2025-04-01';
+  ok(devpostPageDone([], since) === true && devpostPageDone([]) === true, 'an empty page ends the listing');
+  ok(devpostPageDone(['2025-01-10', '2024-11-02', '2025-03-30'], since) === true, 'every event older than since: stop');
+  ok(devpostPageDone(['2024-05-05', '2026-03-06', '2026-02-20'], since) === false, 'a pinned old item among new ones: continue');
+  ok(devpostPageDone(['2025-04-01', '2025-01-01'], since) === false, 'an event on the since day is not older');
+  ok(devpostPageDone([null, '2025-01-01'], since) === false, 'an unparseable date is not proof of age');
+  ok(devpostPageDone(['2020-01-01'], '') === false, 'without since, age never stops it');
+  const h = { id: 7, title: 'Hack Canada', url: 'https://hack-canada.devpost.com', submission_period_dates: 'Mar 06 - 08, 2026',
+    displayed_location: { location: 'SPUR Innovation Centre' }, organization_name: 'Hack Canada', invite_only: false };
+  const e = devpostEvent(h);
+  ok(e && e.place === null && e.location_text === 'SPUR Innovation Centre', 'unplaced event kept, with its raw location', JSON.stringify(e));
+  ok(e.start_date === '2026-03-06' && e.end_date === '2026-03-08', 'dates from the submission period');
+  ok(devpostEvent({ ...h, invite_only: true }) === null, 'invite-only still dropped');
+  ok(devpostEvent({ ...h, displayed_location: { location: 'Online' } }) === null, 'online-only still dropped');
+  ok(devpostEvent({ ...h, submission_period_dates: 'Mar 06 - Apr 30, 2026' }) === null, 'a window of weeks still dropped');
+}
+
+console.log('\ndevelopers.events window');
+{
+  ok(devEventWanted('2020-01-01', '2020-01-02') === false, 'default drops past events');
+  ok(devEventWanted('2020-01-01', today()) === true, 'default keeps an event still running');
+  ok(devEventWanted('2020-01-01', '', '2019-01-01') === true, 'since keeps past events after it');
+  ok(devEventWanted('2018-12-31', '', '2019-01-01') === false, 'since drops events before it');
+  ok(devEventWanted('2019-01-01', '', '2019-01-01') === true, 'since is inclusive');
+}
 
 console.log('\niCal');
 {
