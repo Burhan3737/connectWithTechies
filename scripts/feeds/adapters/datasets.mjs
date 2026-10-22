@@ -98,8 +98,12 @@ export function devpostPageDone(starts, since = '') {
  * of null is kept (data/feeds/place-overrides.json may place it); the raw free
  * text goes along as location_text for callers that resolve places themselves.
  */
-export function devpostEvent(h) {
-  if (h.invite_only) return null;
+export function devpostEvent(h, { inviteOnly = false } = {}) {
+  // Invite-only stays out of the feed. A past edition is another matter: a
+  // selective student hackathon admits hackers through its own site, and
+  // Devpost marks it invite-only — Hack Canada 2026 was ("Hackers accepted on
+  // www.hackcanada.org"). returning.mjs asks for those.
+  if (h.invite_only && !inviteOnly) return null;
   const loc = h.displayed_location?.location || '';
   if (/online/i.test(loc) && !/\+/.test(loc)) return null;
   // Devpost's location is free text — "Princeton High School", "Grand Finals
@@ -130,7 +134,7 @@ export function devpostEvent(h) {
   };
 }
 
-export async function devpost({ status = 'upcoming', since = '' } = {}) {
+export async function devpost({ status = 'upcoming', since = '', inviteOnly = false } = {}) {
   const out = [];
   const ended = status === 'ended';
   // The ended listing runs to ~1,000 pages of 9; upcoming is a handful.
@@ -141,7 +145,7 @@ export async function devpost({ status = 'upcoming', since = '' } = {}) {
       `https://devpost.com/api/hackathons?status[]=${status}&challenge_type[]=in-person${order}&page=${page}`);
     if (!ok || !data?.hackathons?.length) break;
     for (const h of data.hackathons) {
-      const e = devpostEvent(h);
+      const e = devpostEvent(h, { inviteOnly });
       if (e) out.push(e);
     }
     if (devpostPageDone(data.hackathons.map((h) => devpostRange(h.submission_period_dates)?.[0] || null), since)) break;

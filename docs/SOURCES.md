@@ -61,7 +61,8 @@ drops what a curator has settled in a discovery log, `data/review/discover-<pass
 the candidate, sorted after the untried ones).
 
 What is left goes to `data/review/RETURNING.tsv` (regenerated, git-ignored), placed events
-first, ordered by how soon their usual month comes round. It is a to-look-up list for
+first, ordered by when their month comes round again (a year after the last edition, so an
+overdue one comes first and one held last week comes last). It is a to-look-up list for
 curators; nothing in it is published, and no date read from it is ever used. Known gaps: MLH
 editions the adapter cannot place are skipped, and a Devpost page that fails mid-crawl ends
 the crawl early — the per-source edition counts in the summary show a short read.

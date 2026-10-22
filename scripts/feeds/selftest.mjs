@@ -100,6 +100,7 @@ console.log('\nDevpost past editions');
   ok(e && e.place === null && e.location_text === 'SPUR Innovation Centre', 'unplaced event kept, with its raw location', JSON.stringify(e));
   ok(e.start_date === '2026-03-06' && e.end_date === '2026-03-08', 'dates from the submission period');
   ok(devpostEvent({ ...h, invite_only: true }) === null, 'invite-only still dropped');
+  ok(devpostEvent({ ...h, invite_only: true }, { inviteOnly: true })?.title === 'Hack Canada', 'invite-only kept when asked (past editions)');
   ok(devpostEvent({ ...h, displayed_location: { location: 'Online' } }) === null, 'online-only still dropped');
   ok(devpostEvent({ ...h, submission_period_dates: 'Mar 06 - Apr 30, 2026' }) === null, 'a window of weeks still dropped');
 }
@@ -175,7 +176,9 @@ console.log('\nReturning editions (returning.mjs)');
     mlh: [ev('mlh', 'Hack Canada', '2026-03-06', place('Waterloo', 'Ontario', 'Canada')),
       ev('mlh', 'Epsilon Hacks', '2025-11-14', place('Boston', 'Massachusetts', 'United States')),
       ev('mlh', 'Epsilon Hacks', '2025-04-25', place('Boston', 'Massachusetts', 'United States')),
-      ev('mlh', 'Hack the North 2025', '2025-09-12', place('Waterloo', 'Ontario', 'Canada'))],
+      ev('mlh', 'Hack the North 2025', '2025-09-12', place('Waterloo', 'Ontario', 'Canada')),
+      ev('mlh', 'Zeta Hacks', '2026-10-10', place('Boston', 'Massachusetts', 'United States')),
+      ev('mlh', 'Eta Hacks', '2025-10-04', place('Boston', 'Massachusetts', 'United States'))],
   } });
   const hcRow = rows.find((r) => r.core === 'hack canada');
   ok(hcRow && hcRow.sources === 'devpost,mlh' && hcRow.section === 'placed' && hcRow.city === 'Waterloo',
@@ -185,8 +188,8 @@ console.log('\nReturning editions (returning.mjs)');
     'decided, covered, too old, abroad and unhinted all left out', rows.map((r) => r.core).join(','));
   ok(counts.decided === 1 && counts.covered === 1 && counts.outOfWindow === 1 && counts.notUsCa === 1 && counts.unplacedNoHint === 1,
     'each drop counted', JSON.stringify(counts));
-  ok(rows.map((r) => r.core).join(',') === 'epsilon hacks,hack canada,alpha hacks',
-    'ordered by how soon the month comes round; a tried candidate after untried ones', rows.map((r) => r.core).join(','));
+  ok(rows.map((r) => r.core).join(',') === 'eta hacks,epsilon hacks,hack canada,zeta hacks,alpha hacks',
+    'ordered by when the month comes round again (overdue first, last week’s last); tried after untried', rows.map((r) => r.core).join(','));
   ok(rows.find((r) => r.core === 'alpha hacks')?.last_tried === '2026-10-21', 'last_tried carried to the row');
   ok(toTsv(rows).split('\n')[0].split('\t').length === 13, 'thirteen TSV columns');
 }

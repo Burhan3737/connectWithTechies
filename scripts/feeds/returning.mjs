@@ -199,7 +199,6 @@ export function returning({ editions, records, logs, now = today() }) {
     }
   }
 
-  const curMonth = Number(now.slice(5, 7));
   const rows = [];
   for (const g of byCore.values()) {
     // The latest edition; on a tie, one we can place.
@@ -211,13 +210,16 @@ export function returning({ editions, records, logs, now = today() }) {
       city: last.place?.city || '', region: last.place?.region || '', country: last.place?.country || '',
       location_text: last.location_text || '', sources: [...g.sources].sort().join(','), url: last.url || '',
       expected_month: MONTH_NAMES[month - 1], last_tried: decided.get(g.core)?.last_tried || '',
-      soon: (month - curMonth + 12) % 12,
+      due: monthsBefore(last.start_date, -12),
     });
   }
   // Placed first, then unplaced; within each, never-tried before tried, then
-  // the one whose month comes round soonest — the one most likely announced by now.
+  // by when the month comes round again — a year after the last edition, so
+  // one overdue comes first and one held last week, its next a year off, last.
+  // (By calendar month alone, last week's editions sorted to the top: the
+  // first live run put a dozen October 2026 conferences above everything.)
   rows.sort((a, b) => (a.section === 'placed' ? 0 : 1) - (b.section === 'placed' ? 0 : 1)
-    || (!!a.last_tried - !!b.last_tried) || a.soon - b.soon
+    || (!!a.last_tried - !!b.last_tried) || a.due.localeCompare(b.due)
     || a.last_tried.localeCompare(b.last_tried) || a.core.localeCompare(b.core));
   return { rows, counts };
 }
@@ -256,7 +258,7 @@ async function main() {
   // Different hosts, so they can run side by side; http.mjs still keeps each host to one request at a time.
   const sources = {
     mlh: () => mlh({ seasons: [year - 1, year] }),
-    devpost: () => devpost({ status: 'ended', since }),
+    devpost: () => devpost({ status: 'ended', since, inviteOnly: true }),
     devevents: () => developersEvents({ since }),
     confstech: () => confsTech({ years: [year - 1, year] }),
   };
