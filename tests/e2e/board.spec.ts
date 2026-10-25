@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { dataset, today, isUpcoming, isPast, openBoard, shownCount, params, setWhen, rows, watchErrors } from './support';
+import { dataset, today, isUpcoming, isPast, standing, openBoard, shownCount, params, setWhen, rows, watchErrors } from './support';
 
 test.describe('Boot', () => {
   test('loads from data with no errors', async ({ page, request }) => {
@@ -22,8 +22,9 @@ test.describe('Boot', () => {
     const cities = new Set(data.events.map((e) => `${e.city}|${e.region}`.toLowerCase()));
     expect(nums[0]).toBe(data.events.length);
     expect(nums[1]).toBe(cities.size);
-    expect(nums[2]).toBe(data.events.filter((e) => e.status === 'upcoming').length);
-    expect(nums[3]).toBe(data.events.filter((e) => e.status === 'recurring-tbd').length);
+    // As each event stands today, not as the data build filed it.
+    expect(nums[2]).toBe(data.events.filter((e) => standing(e).status === 'upcoming').length);
+    expect(nums[3]).toBe(data.events.filter((e) => standing(e).status === 'recurring-tbd').length);
     expect(nums[4]).toBe(2);
   });
 
@@ -115,7 +116,7 @@ test.describe('The board', () => {
 
   test('undated annual events show their usual month', async ({ page, request }) => {
     const data = await dataset(request);
-    const tbd = data.events.filter((e) => e.status === 'recurring-tbd' && /^[A-Z][a-z]+$/.test(e.month || ''));
+    const tbd = data.events.map((e) => standing(e)).filter((e) => e.status === 'recurring-tbd' && /^[A-Z][a-z]+$/.test(e.month || ''));
     test.skip(!tbd.length, 'no undated annual events in this dataset');
     const ev = tbd[0];
     await openBoard(page, `q=${encodeURIComponent(ev.name)}`);

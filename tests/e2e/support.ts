@@ -39,11 +39,33 @@ const LOCAL_TODAY = (() => {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 })();
 
+/**
+ * An event as it stands on the visitor's day, not the data build's: an edition
+ * held since moves on to the series' next listed session, else rolls over to
+ * date TBA (a one-off or discontinued event becomes past), as the build would.
+ */
+export function standing(e: Ev, todayIso: string = LOCAL_TODAY): Ev {
+  const end = e.next_date_end || e.next_date || '';
+  if (end && end >= todayIso) return e;
+  const sessions = (e.feed_dates || []).slice().sort();
+  const ahead = sessions.filter((d) => d >= todayIso);
+  if (!end && !ahead.length) return e;
+  const held = [e.last_date || '', e.next_date || '', ...sessions.filter((d) => d < todayIso)].sort().pop() || '';
+  if (ahead.length) return { ...e, next_date: ahead[0], next_date_end: '', last_date: held, status: 'upcoming' };
+  if (e.status === 'discontinued' || e.cadence === 'one-off') return { ...e, status: 'past' };
+  return { ...e, next_date: '', next_date_end: '', last_date: held, status: 'recurring-tbd' };
+}
+
 /** Upcoming by the visitor's clock: an event that has ended is not upcoming, whatever the data build said. */
-export const isUpcoming = (e: Ev) => e.status === 'recurring-tbd' ||
-  (e.status === 'upcoming' && (!e.next_date || (e.next_date_end || e.next_date) >= LOCAL_TODAY));
-export const isPast = (e: Ev, todayIso: string) =>
-  !!e.last_date || e.status === 'past' || (!!e.next_date && e.next_date < todayIso);
+export const isUpcoming = (raw: Ev) => {
+  const e = standing(raw);
+  return e.status === 'recurring-tbd' ||
+    (e.status === 'upcoming' && (!e.next_date || (e.next_date_end || e.next_date) >= LOCAL_TODAY));
+};
+export const isPast = (raw: Ev, todayIso: string) => {
+  const e = standing(raw, todayIso);
+  return !!e.last_date || e.status === 'past' || (!!e.next_date && e.next_date < todayIso);
+};
 
 /** Open the board and wait until it has rendered from data. */
 export async function openBoard(page: Page, query = '') {

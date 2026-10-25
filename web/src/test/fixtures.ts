@@ -24,4 +24,4 @@ export const EVENTS: TechEvent[] = [
 ];
 
 export const DATASET: Dataset = { generated_on: '2026-10-04', event_count: EVENTS.length, city_count: 0, events: EVENTS };
-export const indexes = () => buildIndexes(DATASET);
+export const indexes = () => buildIndexes(DATASET, TODAY);

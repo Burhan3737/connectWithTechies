@@ -1,5 +1,5 @@
-import { fmtDay, fmtMonYear, fmtRange } from '../../model/dates';
-import { dateLine, keyDate, monthHint } from '../../model/events';
+import { fmtDay, fmtMonYear, fmtRange, MONTHS, parseISO } from '../../model/dates';
+import { dateLine, keyDate, monthHint, runsUntil } from '../../model/events';
 import type { TechEvent, When } from '../../model/types';
 import { Highlight } from './Highlight';
 import { AddToCalendar } from './AddToCalendar';
@@ -20,6 +20,8 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
   // + Calendar only when the row shows the date that would go in a calendar:
   // under Past an annual event shows the edition held, not the next one.
   const offerCalendar = !!k && k === e.next_date;
+  // Under way: filed under the day it began, which on its own reads as a date gone by.
+  const until = parseISO(runsUntil(e, when, today));
 
   const tags = [<span key="kind" className="ev__tag ev__tag--kind">{e.type.replace(/-/g, ' ')}</span>];
   if (e.cost === 'free') tags.push(<span key="cost" className="ev__tag ev__tag--free">free</span>);
@@ -36,6 +38,7 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
           <span className="ev__when">
             <span className="ev__d1">{fmtDay(k)}</span>
             <span className="ev__d2">{fmtMonYear(k)}</span>
+            {until && <span className="ev__d3">until {MONTHS[until.getMonth()].slice(0, 3)} {until.getDate()}</span>}
           </span>
         ) : (
           <span className="ev__when ev__when--tbd">

@@ -1,8 +1,8 @@
 import { buildIndexes, loadDataset } from './repository';
-import { DATASET } from '../test/fixtures';
+import { DATASET, TODAY } from '../test/fixtures';
 
 describe('buildIndexes', () => {
-  const ix = buildIndexes(DATASET);
+  const ix = buildIndexes(DATASET, TODAY);
 
   it('gives every event a stable id, city key and search text', () => {
     expect(ix.events.map((e) => e.id)).toEqual(DATASET.events.map((_, i) => i));
@@ -28,6 +28,13 @@ describe('buildIndexes', () => {
   it('counts the tally', () => {
     expect(ix.counts).toEqual({ events: 9, cities: 7, upcoming: 7, tbd: 1 });
     expect(ix.countryCounts.get('Canada')).toBe(4);
+  });
+
+  it('judges every event by the day it is read, not the day the data was built', () => {
+    const later = buildIndexes(DATASET, '2026-10-25');
+    expect(later.events.find((e) => e.name === 'Seattle Python Meetup')!.next_date).toBe('2026-11-12');
+    // Four dated editions have been held since and roll over to TBA, beside DevOpsDays.
+    expect(later.counts).toMatchObject({ upcoming: 3, tbd: 5 });
   });
 });
 

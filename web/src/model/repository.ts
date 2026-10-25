@@ -1,4 +1,5 @@
-import { cityKeyOf, haystackOf } from './events';
+import { todayISO } from './dates';
+import { asOf, cityKeyOf, haystackOf } from './events';
 import type { CityOption, Dataset, IndexedEvent, KindOption, RegionOption } from './types';
 
 /**
@@ -20,8 +21,9 @@ export interface Indexes {
   counts: { events: number; cities: number; upcoming: number; tbd: number };
 }
 
-export function buildIndexes(data: Dataset): Indexes {
-  const events: IndexedEvent[] = data.events.map((e, id) => ({ ...e, id, cityKey: cityKeyOf(e), hay: haystackOf(e) }));
+/** `today` is the visitor's date: every event is filed as it stands on it, not on the build's. */
+export function buildIndexes(data: Dataset, today: string = todayISO()): Indexes {
+  const events: IndexedEvent[] = data.events.map((e, id) => ({ ...asOf(e, today), id, cityKey: cityKeyOf(e), hay: haystackOf(e) }));
 
   const cityMap = new Map<string, CityOption>();
   const regions = new Map<string, RegionOption>();

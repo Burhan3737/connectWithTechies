@@ -1,4 +1,4 @@
-import { cityKeyOf, groupLabel, haystackOf, inWhen, keyDate, keyDateEnd, monthHint, monthIndex } from './events';
+import { asOf, cityKeyOf, groupLabel, haystackOf, inWhen, keyDate, keyDateEnd, monthHint, monthIndex, runsUntil } from './events';
 import { EVENTS, TODAY } from '../test/fixtures';
 
 const byName = (n: string) => EVENTS.find((e) => e.name === n)!;
@@ -44,6 +44,41 @@ describe('event rules', () => {
       expect(inWhen(byName('BigRed//Hacks'), 'past', TODAY)).toBe(true);    // started before today
       expect(inWhen(byName('Hack the North'), 'past', TODAY)).toBe(false);
     });
+  });
+
+  describe('as of today, not the data build', () => {
+    const later = '2026-10-25';
+    it('leaves an event still to come or under way as it is', () => {
+      const htn = byName('Hack the North');
+      expect(asOf(htn, TODAY)).toBe(htn);
+      expect(asOf(byName('BigRed//Hacks'), TODAY)).toBe(byName('BigRed//Hacks'));
+    });
+    it('moves a series on to its next listed session', () => {
+      const s = asOf(byName('Seattle Python Meetup'), later);
+      expect([s.next_date, s.last_date, s.status]).toEqual(['2026-11-12', '2026-10-08', 'upcoming']);
+    });
+    it('finds the next session of a series the build already rolled over', () => {
+      const rolled = { ...byName('Seattle Python Meetup'), next_date: '', last_date: '2026-10-08', status: 'recurring-tbd' };
+      expect(asOf(rolled, later)).toMatchObject({ next_date: '2026-11-12', last_date: '2026-10-08', status: 'upcoming' });
+    });
+    it('rolls a recurring event with nothing listed over to date TBA, keeping the edition held', () => {
+      const r = asOf(byName('Toronto Tech Week'), later);
+      expect([r.next_date, r.next_date_end, r.last_date, r.status]).toEqual(['', '', '2026-10-20', 'recurring-tbd']);
+      expect(inWhen(r, 'upcoming', later)).toBe(true);
+      expect(inWhen(r, 'past', later)).toBe(true);
+    });
+    it('makes a one-off that has ended past', () => {
+      const r = asOf({ ...byName('Hack the North'), cadence: 'one-off' }, later);
+      expect([r.next_date, r.status]).toEqual(['2026-10-09', 'past']);
+      expect(inWhen(r, 'upcoming', later)).toBe(false);
+    });
+  });
+
+  it('says how long an event under way runs', () => {
+    expect(runsUntil(byName('BigRed//Hacks'), 'upcoming', TODAY)).toBe('2026-10-05');
+    expect(runsUntil(byName('Hack the North'), 'upcoming', TODAY)).toBe('');      // not started
+    expect(runsUntil(byName('BigRed//Hacks'), 'past', TODAY)).toBe('');
+    expect(runsUntil({ ...byName('Hack the North'), next_date: TODAY, next_date_end: '' }, 'upcoming', TODAY)).toBe('');
   });
 
   it('reads the usual month of an undated event', () => {

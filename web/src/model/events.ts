@@ -13,6 +13,35 @@ export const haystackOf = (e: TechEvent) => fold([
 export const isPastISO = (iso: string | undefined, today: string) => !!iso && iso < today;
 
 /**
+ * An event as it stands today rather than on the day the data was built.
+ *
+ * The build files each event against its own date (scripts/build-data.mjs):
+ * an edition held is rolled over, or made past if it was a one-off. Between
+ * builds the site would otherwise keep showing what was true on build day —
+ * a weekly meetup vanishing from Upcoming for having met, the tally counting
+ * events that have since happened. This applies the same rule against the
+ * visitor's date, and moves a series on to its next listed session where the
+ * build (which rolls over without looking at them) gave up on it.
+ */
+export function asOf<T extends TechEvent>(e: T, today: string): T {
+  const end = e.next_date_end || e.next_date;
+  if (end && end >= today) return e;                    // still to come, or under way
+  const sessions = [...(e.feed_dates || [])].sort();
+  const next = sessions.find((d) => d >= today);
+  if (!end && !next) return e;                          // undated, and nothing listed ahead
+  const held = [e.last_date || '', e.next_date || '', ...sessions.filter((d) => d < today)].sort().pop() || '';
+  if (next) return { ...e, next_date: next, next_date_end: '', last_date: held, status: 'upcoming' };
+  if (e.status === 'discontinued' || e.cadence === 'one-off') return { ...e, status: 'past' };
+  return { ...e, next_date: '', next_date_end: '', last_date: held, status: 'recurring-tbd' };
+}
+
+/** The last day of an event under way today, for Upcoming to say so; '' otherwise. */
+export function runsUntil(e: TechEvent & { occurrence?: boolean }, when: When, today: string): string {
+  if (when !== 'upcoming' || e.occurrence || !e.next_date || e.next_date >= today) return '';
+  return e.next_date_end && e.next_date_end >= today ? e.next_date_end : '';
+}
+
+/**
  * The date an event is filed under depends on which way you are looking.
  * Browsing Past, an annual event shows the edition that actually happened,
  * even when a future one is already scheduled. Everywhere else the next
