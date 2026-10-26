@@ -24,6 +24,7 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
   const until = parseISO(runsUntil(e, when, today));
 
   const tags = [<span key="kind" className="ev__tag ev__tag--kind">{e.type.replace(/-/g, ' ')}</span>];
+  if (until) tags.unshift(<span key="now" className="ev__tag ev__tag--now">on until {MONTHS[until.getMonth()].slice(0, 3)} {until.getDate()}</span>);
   if (e.cost === 'free') tags.push(<span key="cost" className="ev__tag ev__tag--free">free</span>);
   else if (e.cost && e.cost !== 'varies') tags.push(<span key="cost" className="ev__tag">{e.cost}</span>);
   if (e.attendance) tags.push(<span key="att" className="ev__tag">~{e.attendance} people</span>);
@@ -38,7 +39,6 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
           <span className="ev__when">
             <span className="ev__d1">{fmtDay(k)}</span>
             <span className="ev__d2">{fmtMonYear(k)}</span>
-            {until && <span className="ev__d3">until {MONTHS[until.getMonth()].slice(0, 3)} {until.getDate()}</span>}
           </span>
         ) : (
           <span className="ev__when ev__when--tbd">

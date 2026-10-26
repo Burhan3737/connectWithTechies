@@ -86,7 +86,6 @@
 .ev__when { font-family: var(--mono); font-variant-numeric: tabular-nums; line-height: 1.25; }
 .ev__d1 { display: block; font-size: 1.45rem; color: var(--ink); letter-spacing: -.02em; }
 .ev__d2 { display: block; font-size: .64rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); margin-top: .18rem; }
-.ev__d3 { display: block; font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); margin-top: .18rem; }
 .ev__when--tbd .ev__d1 {
   font-size: .8rem; color: var(--ink-dim);
   letter-spacing: .08em; text-transform: uppercase;
@@ -117,6 +116,7 @@
   color: var(--ink-faint); border: 1px solid var(--rule); padding: .12rem .38rem;
 }
 .ev__tag--kind { color: var(--amber); border-color: rgba(255,194,71,.28); }
+.ev__tag--now { color: var(--signal); border-color: var(--signal-dim); }
 .ev__tag--free { color: var(--mint); border-color: rgba(134,217,168,.3); }
 
 .ev__where { font-family: var(--mono); font-size: .78rem; line-height: 1.45; padding-top: .12rem; }
