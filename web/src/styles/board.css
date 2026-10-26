@@ -84,6 +84,9 @@
 .ev:hover .ev__name { color: var(--signal); }
 
 .ev__when { font-family: var(--mono); font-variant-numeric: tabular-nums; line-height: 1.25; }
+/* the weekday rides beside the day number, so the column keeps its height and + Calendar stays clear below */
+.ev__day { display: flex; align-items: baseline; gap: .4rem; }
+.ev__wd { font-size: .64rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); }
 .ev__d1 { display: block; font-size: 1.45rem; color: var(--ink); letter-spacing: -.02em; }
 .ev__d2 { display: block; font-size: .64rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); margin-top: .18rem; }
 .ev__when--tbd .ev__d1 {

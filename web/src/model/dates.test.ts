@@ -1,4 +1,4 @@
-import { addDays, daysBetween, fmtDay, fmtMonYear, fmtRange, isISODate, monthTitle, parseISO, shiftMonth, todayISO } from './dates';
+import { addDays, daysBetween, fmtDay, fmtMonYear, fmtWeekday, fmtRange, isISODate, monthTitle, parseISO, shiftMonth, todayISO } from './dates';
 
 describe('dates', () => {
   it('recognises ISO days only', () => {
@@ -23,6 +23,8 @@ describe('dates', () => {
   it('formats for the board', () => {
     expect(fmtDay('2026-10-04')).toBe('04');
     expect(fmtMonYear('2026-10-04')).toBe('Oct 2026');
+    expect(fmtWeekday('2026-10-04')).toBe('Sun');
+    expect(fmtWeekday('')).toBe('');
     expect(fmtRange('2026-10-04')).toBe('October 4, 2026');
     expect(fmtRange('2026-10-04', '2026-10-06')).toBe('October 4–6, 2026');
     expect(fmtRange('2026-10-30', '2026-11-02')).toBe('October 30 – November 2, 2026');

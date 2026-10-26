@@ -40,6 +40,7 @@ export function daysBetween(a: string, b: string): number {
 }
 
 export const fmtDay = (iso: string) => { const d = parseISO(iso); return d ? pad(d.getDate()) : ''; };
+export const fmtWeekday = (iso: string) => { const d = parseISO(iso); return d ? WEEKDAYS[d.getDay()] : ''; };
 export const fmtMonYear = (iso: string) => {
   const d = parseISO(iso);
   return d ? `${MONTHS[d.getMonth()].slice(0, 3)} ${d.getFullYear()}` : '';

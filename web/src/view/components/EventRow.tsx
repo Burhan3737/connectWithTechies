@@ -1,4 +1,4 @@
-import { fmtDay, fmtMonYear, fmtRange, MONTHS, parseISO } from '../../model/dates';
+import { fmtDay, fmtMonYear, fmtRange, fmtWeekday, MONTHS, parseISO } from '../../model/dates';
 import { dateLine, keyDate, monthHint, runsUntil } from '../../model/events';
 import type { TechEvent, When } from '../../model/types';
 import { Highlight } from './Highlight';
@@ -37,7 +37,10 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
         aria-label={`${e.name} — ${dateLine(e, when, today, fmtRange)} — ${e.city} — opens the official site in a new tab`}>
         {k ? (
           <span className="ev__when">
-            <span className="ev__d1">{fmtDay(k)}</span>
+            <span className="ev__day">
+              <span className="ev__d1">{fmtDay(k)}</span>
+              <span className="ev__wd">{fmtWeekday(k)}</span>
+            </span>
             <span className="ev__d2">{fmtMonYear(k)}</span>
           </span>
         ) : (
