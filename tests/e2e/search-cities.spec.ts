@@ -26,9 +26,10 @@ test.describe('Search', () => {
     const data = await dataset(request);
     const accented = data.events.find((e) => /[éèàçô]/i.test(e.name));
     test.skip(!accented, 'no accented names in this dataset');
-    const word = accented!.name.split(/\s+/).find((w) => /[éèàçô]/i.test(w))!.replace(/[^\p{L}]/gu, '');
+    // The whole name, folded: one accented word ("CAFE") can match more events than the
+    // list renders at once, leaving the one we want off screen.
     await openBoard(page, 'when=all');
-    await page.locator('#q').fill(fold(word).toUpperCase());
+    await page.locator('#q').fill(fold(accented!.name).toUpperCase());
     await expect(page.locator('#board .ev__name', { hasText: accented!.name }).first()).toBeVisible();
   });
 
