@@ -61,7 +61,7 @@ time, with pauses and a 6-hour cache (`scripts/feeds/lib/http.mjs`).
 ```
   discover (weekly)                          maintain (every run)
   ─────────────────                          ────────────────────
-  search 30 cities on                        re-read every registered organiser
+  search every city on                       re-read every registered organiser
   Luma / Meetup / Eventbrite; read Bevy      + MLH, Devpost, confs.tech,
                                              developers.events, Hack Club, Guild.host, Localist
         │                                              │

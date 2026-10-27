@@ -15,7 +15,8 @@ The orchestrator gives you one of three things:
 1. **A chunk of the re-check queue** — a TSV of events to verify.
 2. **An auditor's discrepancy report** — problems found in a previous run of yours,
    to fix. Read it carefully; it is specific, and it exists because something went wrong.
-3. **A discovery brief** — a chunk of `RETURNING.tsv` or of `DISCOVER.tsv`. This is not
+3. **A discovery brief** — a chunk of `RETURNING.tsv` or of `DISCOVER.tsv`, or the open
+   rows of `REPORTED.tsv`. This is not
    verification of what we hold; it is looking for what we do not have. See below.
 
 ## A discovery brief
@@ -49,6 +50,15 @@ putting on events and publishes on Luma, Meetup or a public `.ics` feed goes in
 `sources-<pass>.json` as usual rather than in as a one-off `add`. Finding nothing is a
 fine result for a city; say which searches you ran.
 
+**`REPORTED.tsv` rows** — an event or organiser a person found and the feeds did not.
+Columns: reported_on, what, url, note, status, outcome. The `url` may be empty or point
+somewhere no feed reads (Wygo, a club's own site). Find the organiser's own page, then: a
+group that keeps meeting and publishes on Luma, Meetup or a public `.ics` feed goes in
+`sources-<pass>.json`; anything else that recurs goes in as an `add` with its `cadence`,
+because hand-curated records skip the relevance gate a feed would apply. Say in the
+`reason` why the feeds missed it (platform we do not read, no tech words in its titles,
+not publicly listed) — that is what tells us whether a feed needs fixing.
+
 **Always write `data/review/discover-<pass>.json`**, covering **every** row you were
 given. It is an object, not a patch array; the patcher never reads it:
 
@@ -58,7 +68,9 @@ given. It is an object, not a patch array; the patcher never reads it:
                    "reason": "hackcanada.org: Jan 8-10 2027, Toronto" } ],
   "cities": [ { "city": "Toronto", "region": "Ontario",
                 "queries": ["hackathon Toronto 2027"],
-                "found": [ { "name": "...", "url": "...", "verdict": "added", "reason": "..." } ] } ] }
+                "found": [ { "name": "...", "url": "...", "verdict": "added", "reason": "..." } ] } ],
+  "reported": [ { "what": "Socratica", "verdict": "added",
+                  "reason": "weekly Sunday co-working, Accelerator Centre; on Wygo, which no feed reads" } ] }
 ```
 
 - `verdict` is `added`, `exists`, `rejected` or `unresolved`; `date` is today.
@@ -67,6 +79,7 @@ given. It is an object, not a patch array; the patcher never reads it:
   removed; a name you reworded can leave the row on the list for ever.
 - `city` and `region` in `cities` are copied exactly from the row: that is how the city is
   marked as searched.
+- `reported[].what` is copied exactly from the row, so the orchestrator can close it.
 - A row with no entry reads as work skipped. Write one per row, even if nothing was found.
 - These rows are not in the ledger, so there is no `confirm-<pass>.json` for them. Your
   `add` patches go in `data/review/<pass>-fixes.json` as usual.

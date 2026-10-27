@@ -68,7 +68,7 @@ data/events.json    the single file the app reads
 |---|---|
 | `npm run refresh` | **the maintenance loop** — re-read the feed, rollover, script-confirm what it can, regenerate the queue |
 | `npm run feeds` | re-read every registered organiser and the tech datasets, then rebuild |
-| `npm run feeds:discover` | also search Meetup and Eventbrite in all 30 cities for new events and organisers (weekly; Luma is searched every run) |
+| `npm run feeds:discover` | also search Meetup and Eventbrite in every discovery city for new events and organisers (weekly; Luma is searched every run) |
 | `npm run stale` | print the re-check queue |
 | `npm run build:data` | rebuild `data/events.json` and print a validation report |
 | `npm run apply` | apply reviewer patches from `data/review/` |

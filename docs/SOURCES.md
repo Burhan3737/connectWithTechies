@@ -19,7 +19,7 @@ checked against the organiser's own page.
 
 | Source | Adapter | Read via | Discovery | Organisers followed | Notes |
 |---|---|---|---|---|---|
-| **Luma** | `adapters/luma.mjs` | `api.lu.ma/discover/get-paginated-events?latitude=…&longitude=…` (every public event around a point, all pages) · `api.lu.ma/calendar/get-items` (calendar) · `api.lu.ma/url` (slug → calendar) | **every run**, all 30 cities, read to the end | the 125 already followed; new ones are judged, not followed — the full listing covers them | Undocumented endpoints. The city listing (`discover_place_api_id`) is only Luma's featured picks (23 events for Toronto vs 378 by coordinates) and is no longer used. iCal feeds are *not* used: they hide the address until you register |
+| **Luma** | `adapters/luma.mjs` | `api.lu.ma/discover/get-paginated-events?latitude=…&longitude=…` (every public event around a point, all pages) · `api.lu.ma/calendar/get-items` (calendar) · `api.lu.ma/url` (slug → calendar) | **every run**, every discovery city in the registry (47), read to the end | the 125 already followed; new ones are judged, not followed — the full listing covers them | Undocumented endpoints. The city listing (`discover_place_api_id`) is only Luma's featured picks (23 events for Toronto vs 378 by coordinates) and is no longer used. iCal feeds are *not* used: they hide the address until you register |
 | **Meetup** | `adapters/meetup.mjs` | Apollo state embedded in `meetup.com/find/` and `meetup.com/<group>/events/` | weekly; Technology category + 14 topic searches per city (each returns only its first ~15 events, so breadth comes from many topics) | yes — groups, whose own pages list all their events | Official GraphQL API needs OAuth + paid Pro |
 | **Eventbrite** | `adapters/eventbrite.mjs` | `window.__SERVER_DATA__` on `/d/<city>/…` listings · Next.js data on `/o/<organiser-id>` | weekly; Science & Tech, every page (up to 15) + "hackathon", "startup", "tech-networking" searches per city | yes — organisers with a "High Tech" event and ≥2 upcoming | Search API retired. Throttles hard: 6 s between requests, backs off on 429 |
 | **MLH** | `adapters/datasets.mjs` | Inertia page data on `mlh.com/seasons/<year>/events` | whole season | — | Student hackathons; tech by construction |
@@ -105,4 +105,4 @@ conventions with attached hackathons (SASE, NSBE, SHPE).
 - **Fail loudly.** A failed read is reported, never taken as "no events", and never used to
   take an event down.
 - **Undocumented means fragile.** Luma, Meetup and Eventbrite pages can change without notice;
-  `data/feeds/last-run.json` shows per-source counts, and a source falling to zero is the signal.
+  every run ends with a `Health` section (`lib/health.mjs`) comparing per-source counts with the last comparable run in `data/feeds/run-history.json`: a source down more than 30%, discovery more than a week old, and failed sources are all named. `data/feeds/last-run.json` has the detail.

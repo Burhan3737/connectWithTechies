@@ -24,6 +24,7 @@ import { parseIcal } from './lib/ical.mjs';
 import { fromText, fromParts, localDate } from './lib/geo.mjs';
 import { judge, judgeOrganiser } from './lib/relevance.mjs';
 import { assignedJson } from './lib/http.mjs';
+import { runEntry, health } from './lib/health.mjs';
 
 let failed = 0, passed = 0;
 function ok(cond, label, detail = '') {
@@ -498,6 +499,28 @@ console.log('\nBevy');
 console.log('\nEmbedded JSON');
 ok(assignedJson('<script>window.__SERVER_DATA__ = {"a":{"b":"}{\\"x"}};</script>', 'window.__SERVER_DATA__')?.a?.b === '}{"x',
   'object boundary found through braces inside strings');
+
+console.log('\nRun health');
+{
+  const entry = (run_on, discover, bySource, failed = 0) => ({ run_on, discover, bySource, failed, written: 1 });
+  const weekly = entry('2026-10-08', true, { luma: 8000, meetup: 9000, eventbrite: 6000 });
+  const daily = entry('2026-10-15', false, { luma: 8400, meetup: 3300, eventbrite: 400 });
+  ok(runEntry({ run_on: '2026-10-25', discover: false, bySource: { luma: 1 }, failedSources: ['x', 'y'], totals: { written: 9 } }).failed === 2,
+    'a run is recorded with its failure count, not the list');
+  const w = health([weekly, daily], entry('2026-10-25', false, { luma: 8300, meetup: 3200, eventbrite: 390 }));
+  ok(w.some((x) => /discovery last ran 2026-10-08, 17 days ago/.test(x)), 'a daily run says when discovery is overdue', w.join(' | '));
+  ok(!health([weekly], entry('2026-10-12', false, { luma: 8000 })).some((x) => /discovery/.test(x)), 'discovery four days old: no warning');
+  ok(health([], entry('2026-10-25', false, { luma: 1 })).some((x) => /no discovery run recorded/.test(x)), 'no discovery on record: says so');
+  ok(!health([daily], entry('2026-10-25', true, { luma: 8300, meetup: 9100, eventbrite: 6100 })).some((x) => /fell/.test(x)),
+    'a weekly run is compared with the last weekly run, not with a daily one');
+  const drop = health([weekly, daily], entry('2026-10-25', false, { luma: 5000, meetup: 3200, eventbrite: 400 }));
+  ok(drop.some((x) => /luma fell from 8400 to 5000/.test(x)), 'a source falling by over 30% is named', drop.join(' | '));
+  ok(health([daily], entry('2026-10-25', false, { luma: 8300, meetup: 3300 })).some((x) => /eventbrite fell from 400 to 0/.test(x)),
+    'a source gone entirely is named');
+  ok(!health([entry('2026-10-15', false, { hackclub: 11 })], entry('2026-10-25', false, { hackclub: 5 })).some((x) => /fell/.test(x)),
+    'a small source wobbling is not a warning');
+  ok(health([daily], entry('2026-10-25', false, daily.bySource, 3)).some((x) => /3 source\(s\) failed/.test(x)), 'failed sources are counted');
+}
 
 console.log(failed ? `\n${failed} CHECK(S) FAILED` : `\nALL ${passed} FEED CHECKS PASSED`);
 process.exit(failed ? 1 : 0);

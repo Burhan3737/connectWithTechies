@@ -22,6 +22,8 @@ Three roles:
 
 ```
 npm run refresh                script settles ~86% of dated events, no agent
+  ↓                            (+ feeds:discover when its health says it is due)
+read the run's health          failures, drops, organisers it let in
   ↓
 snapshot the queue             so the auditor knows what was dispatched
   ↓
@@ -32,7 +34,7 @@ apply their patches, rebuild
 dispatch auditor               reads AUDIT.json + spot-checks judgement
   ↓
 YOU decide  ─── blocking findings? ──> hand the report back to a curator, go again
-            └── none? ──────────────> done
+            └── none? ──────────────> done: report; publish only when asked
 ```
 
 **Stop after three iterations regardless.** If it is not clean by then, report what
@@ -55,14 +57,47 @@ That first re-reads the feed (`scripts/feeds/run.mjs`: every registered organise
 MLH, Devpost, confs.tech, developers.events, Hack Club, Guild.host and Localist — one-off
 events, script-maintained, never dispatched), then
 runs the build (rollover), then `agent/tools/verify-dates.mjs --write`, then the ledger.
-Every run reads Luma's full listing around all 30 cities. Once a week, run
-`npm run feeds:discover` instead of the feed step alone: it also searches Meetup and
-Eventbrite in every city for new events and organisers to follow, and reads the Bevy
-chapter sites (GDG, Startup Grind, CNCF…): ~45 minutes, mostly Eventbrite's enforced
-pace, plus ~10–15 minutes for Bevy, whose robots.txt asks for 2 s between pages.
-Read `data/feeds/last-run.json` afterwards — the organisers it registered and a sample of
-what the relevance gate dropped — and retire any organiser that is not ours with a
-`data/review/sources-<pass>.json` entry carrying `"tech": false`.
+Every run reads Luma's full listing around every discovery city in
+`data/feeds/registry.json`.
+
+**Discovery is weekly, and the run tells you when it is due.** `npm run feeds:discover`
+does the feed step plus Meetup and Eventbrite city searches (the only way their new
+organisers are found) and the Bevy chapter sites (GDG, Startup Grind, CNCF…): ~45
+minutes, mostly Eventbrite's enforced pace, plus ~10–15 minutes for Bevy, whose
+robots.txt asks for 2 s between pages. Run it after `npm run refresh` when the run's
+health section says discovery is overdue; the Luma pages refresh just fetched are
+cached for 6 hours, so it does not read them again. Then run
+`node agent/tools/verify-dates.mjs --write && node scripts/ledger.mjs` once more, so the
+ledger reflects the final data.
+
+**Read the run's health before using its output.** The feed ends with a `Health`
+section, judged against `data/feeds/run-history.json` (tracked; every full run appends
+to it): discovery overdue, a source down more than 30% on the last comparable run, and
+how many sources failed. A drop with failures behind it is a partial read — re-run those
+cities with `--city=` before publishing, never publish over it. A drop with nothing failed
+is usually real (fewer events listed); say so in the report. `data/feeds/last-run.json`
+lists the failures.
+
+**Then review what the gate let in and kept out**, from `data/feeds/last-run.json`:
+
+- `newOrganisers` — on a discovery run, often hundreds. Most are plainly ours. Retire
+  the rest with a `data/review/sources-<pass>.json` entry carrying `"tech": false` and a
+  reason, after looking at the events each brought in. Watch for the two ways
+  non-tech organisers get in: a one-word description match ("investor",
+  "engineering", "code") and a two-event track record that happened to read as tech.
+  And watch for **templated networks** — the same rotating titles hosted by unrelated
+  clubs across cities ("AI Store on Autopilot" at a bowling league, a curling crew, a
+  latte-art class). Search `data/raw/feed.json` for the titles to find every host, not
+  just the new ones, and retire them all; the network moves to fresh hosts, so check
+  for it on every discovery run.
+- `samples.dropped` — a sample of what the gate rejected. Mostly right (yoga,
+  potlucks), but look for real tech events in it ("Concord Ruby Early Birds", a build
+  competition with cash prizes) and follow their organisers with a `sources-*.json`
+  entry carrying `"tech": true`. It is a sample of a few hundred, so this is a spot
+  check, not a sweep.
+
+Retirements and follows take effect on the next feed run. Re-run the feed (from cache,
+minutes) before publishing so they are in the output.
 
 The curated half leaves:
 
@@ -115,6 +150,13 @@ live run took 4m42s, most of it Devpost's ended listing paged politely); run it 
 week, not every cycle. `discover:plan` is local and instant: it picks ~10 cities
 (never-searched feed-registry cities first, then other never-searched ones, then those searched
 longest ago) and lists the event types we hold none of there.
+
+**Events and organisers people report** go in `data/review/REPORTED.tsv` (reported_on,
+what, url, note, status, outcome) — whenever someone says "you missed this", add a row
+then, not at the next cycle. Every cycle, hand the `open` rows to one curator as a
+discovery brief. When its `discover-<pass>.json` comes back, set each row's `status` to
+its verdict and `outcome` to the reason. A reason that names a gap in a feed (a platform
+we do not read, titles the gate rejects) is worth fixing in the feed, not just the row.
 
 Chunk `RETURNING.tsv` at ~25 rows and `DISCOVER.tsv` at ~5 cities, and dispatch one
 `curator` per chunk in parallel with the recheck curators, each with its own distinct pass
@@ -219,3 +261,20 @@ Say plainly: how many iterations it took, what the curator changed, what the aud
 caught, and what is still open (`audit-log.mjs open`; every finding should be logged and
 either resolved or visibly open in `docs/AUDIT-LOG.md`). If you stopped at three iterations with findings
 outstanding, lead with that — it is the most important thing in the report.
+
+Include the feed's health warnings and what you did about each, the organisers you
+retired or followed, and the before/after event counts.
+
+## Step 7 — publish, when asked
+
+**A push to `main` is a deploy.** `.github/workflows/deploy.yml` runs the tests and
+publishes `data/events.json` to GitHub Pages on every push, so committing the data and
+pushing it is the whole release — there is no separate step, and no undo short of
+another push. So:
+
+- Do not commit or push as the end of a cycle. Report, and wait for the person to ask.
+- Before committing, check what is staged — `git status --short` — and that nothing
+  secret or local is in it (`.env`, tokens, `data/.cache/`, logs). `data/feeds/last-run.json`
+  is local and ignored; `data/feeds/run-history.json` is tracked and belongs in the commit.
+- Commit as the configured git user, with no assistant attribution, then push and follow
+  the run to the end: it is not published until both jobs (tests, publish) have passed.

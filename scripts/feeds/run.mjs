@@ -48,6 +48,7 @@ import { guild } from './adapters/guild.mjs';
 import { localist } from './adapters/localist.mjs';
 import { bevy } from './adapters/bevy.mjs';
 import { takenDown } from './lib/history.mjs';
+import { runEntry, health } from './lib/health.mjs';
 import { typeOf, words } from './lib/type.mjs';
 import * as tribe from './adapters/tribe.mjs';
 
@@ -56,6 +57,7 @@ const RAW = join(ROOT, 'data', 'raw');
 const REGISTRY = join(ROOT, 'data', 'feeds', 'registry.json');
 const OUT = join(RAW, 'feed.json');
 const REPORT = join(ROOT, 'data', 'feeds', 'last-run.json');
+const HISTORY = join(ROOT, 'data', 'feeds', 'run-history.json');
 
 const args = process.argv.slice(2);
 const DISCOVER = args.includes('--discover');
@@ -609,8 +611,19 @@ if (report.newOrganisers.length) {
 log(`\nHTTP: ${stats.requests} requests, ${stats.cached} from cache, ${stats.failed} failed, ${stats.throttled} throttled and retried`);
 if (report.failedSources.length) log(`Failed sources: ${report.failedSources.length} (see data/feeds/last-run.json)`);
 
+// Judged against earlier runs, and remembered for later ones. A --city run
+// reads part of the map, so it is neither judged nor recorded.
+const history = existsSync(HISTORY) ? JSON.parse(readFileSync(HISTORY, 'utf8')) : [];
+const entry = runEntry(report);
+report.health = onlyCities.size ? [] : health(history, entry);
+if (report.health.length) {
+  log(`\nHealth (${report.health.length}) — read before publishing:`);
+  report.health.forEach((w) => log(`  ! ${w}`));
+}
+
 if (DRY) { log('\n--dry-run: nothing written.'); process.exit(0); }
 writeFileSync(OUT, JSON.stringify(out, null, 2) + '\n', 'utf8');
 writeFileSync(REGISTRY, JSON.stringify(registry, null, 2) + '\n', 'utf8');
 writeFileSync(REPORT, JSON.stringify(report, null, 2) + '\n', 'utf8');
-log(`\nWrote data/raw/feed.json, data/feeds/registry.json, data/feeds/last-run.json`);
+if (!onlyCities.size) writeFileSync(HISTORY, JSON.stringify([...history, entry].slice(-120), null, 1) + '\n', 'utf8');
+log(`\nWrote data/raw/feed.json, data/feeds/registry.json, data/feeds/last-run.json${onlyCities.size ? '' : ', data/feeds/run-history.json'}`);
