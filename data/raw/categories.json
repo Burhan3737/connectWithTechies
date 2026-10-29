@@ -843,19 +843,19 @@
     "city": "Mississauga",
     "region": "Ontario",
     "country": "Canada",
-    "venue": "",
+    "venue": "Sheridan College Hazel McCallion Campus",
     "cadence": "annual",
     "month": "January",
-    "next_date": "2027-01-22",
+    "next_date": "2027-01-23",
     "next_date_end": "2027-01-24",
-    "last_date": "",
+    "last_date": "2026-01-17",
     "status": "upcoming",
     "attendance": "",
     "cost": "free",
     "audience": "students, underrepresented groups",
     "url": "https://hackville.io/",
     "description": "A diversity-focused Greater Toronto Area hackathon in the MLH season.",
-    "source": "https://www.mlh.com/seasons/2027/events"
+    "source": "https://www.hackville.io/"
   },
   {
     "name": "ElleHacks",
@@ -3196,16 +3196,16 @@
     "venue": "Raleigh Convention Center",
     "cadence": "annual",
     "month": "October",
-    "next_date": "2026-10-19",
-    "next_date_end": "2026-10-20",
-    "last_date": "2025-10-12",
+    "next_date": "2027-10-17",
+    "next_date_end": "2027-10-19",
+    "last_date": "2026-10-19",
     "status": "upcoming",
     "attendance": "5000",
     "cost": "paid",
     "audience": "open source developers, maintainers, technologists",
-    "url": "https://2026.allthingsopen.org/",
+    "url": "https://allthingsopen.org/",
     "description": "The largest open source, web and technology conference on the US East Coast, with a broad multi-track programme and an MLH mini-AI hackathon.",
-    "source": "https://2026.allthingsopen.org/"
+    "source": "https://allthingsopen.org/"
   },
   {
     "name": "SCaLE",
@@ -3991,10 +3991,10 @@
       "ai",
       "machine-learning"
     ],
-    "city": "San Francisco",
+    "city": "Burlingame",
     "region": "California",
     "country": "United States",
-    "venue": "",
+    "venue": "Hyatt Regency San Francisco Airport, 1333 Old Bayshore Hwy",
     "cadence": "annual",
     "month": "Varies",
     "next_date": "2026-10-27",
@@ -4006,7 +4006,7 @@
     "audience": "data scientists, ML engineers",
     "url": "https://odsc.ai/west/",
     "description": "The west coast edition of the Open Data Science Conference, focused on applied AI training and workshops.",
-    "source": "https://odsc.com/"
+    "source": "https://odsc.ai/west/west-venue/"
   },
   {
     "name": "AWS re:Invent",
@@ -4058,7 +4058,7 @@
     "audience": "IT professionals, cloud architects, developers",
     "url": "https://ignite.microsoft.com/",
     "description": "Microsoft's annual conference for IT professionals and enterprise developers, covering Azure, Microsoft 365, security and Copilot.",
-    "source": "https://blackhat.com/upcoming.html"
+    "source": "https://ignite.microsoft.com/"
   },
   {
     "name": "Microsoft Build",
@@ -4400,10 +4400,10 @@
     "city": "Boston",
     "region": "Massachusetts",
     "country": "United States",
-    "venue": "Boston Convention and Exhibition Center",
+    "venue": "Thomas M. Menino Convention & Exhibition Center",
     "cadence": "annual",
     "month": "May",
-    "next_date": "2027-05-25",
+    "next_date": "2027-05-24",
     "next_date_end": "2027-05-27",
     "last_date": "",
     "status": "upcoming",
@@ -4965,19 +4965,19 @@
     "city": "Dallas",
     "region": "Texas",
     "country": "United States",
-    "venue": "",
+    "venue": "Park South YMCA",
     "cadence": "annual",
-    "month": "November",
-    "next_date": "2026-11-07",
-    "next_date_end": "2026-11-07",
+    "month": "March",
+    "next_date": "2027-03-06",
+    "next_date_end": "2027-03-06",
     "last_date": "",
     "status": "upcoming",
     "attendance": "",
     "cost": "varies",
     "audience": "makers, families, students",
     "url": "https://southdallas.makerfaire.com/",
-    "description": "Fort Worth's Maker Faire, a day of maker exhibits and hands-on builds in North Texas.",
-    "source": "https://makerfaire.com/upcoming-faires/"
+    "description": "South Dallas's independently organised Maker Faire, a one-day family showcase of maker exhibits and hands-on builds at the Park South YMCA.",
+    "source": "https://southdallas.makerfaire.com/"
   },
   {
     "name": "Hackaday Superconference",

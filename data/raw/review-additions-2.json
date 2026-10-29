@@ -115,9 +115,9 @@
     "venue": "The Press Room",
     "cadence": "quarterly",
     "month": "Varies",
-    "next_date": "2026-10-20",
-    "next_date_end": "",
-    "last_date": "",
+    "next_date": "2026-12-02",
+    "next_date_end": "2026-12-02",
+    "last_date": "2026-10-20",
     "status": "upcoming",
     "attendance": "",
     "cost": "free",
@@ -134,10 +134,10 @@
       "manufacturing",
       "ecosystem"
     ],
-    "city": "Nashua",
+    "city": "Manchester",
     "region": "New Hampshire",
     "country": "United States",
-    "venue": "",
+    "venue": "150 Dow Street",
     "cadence": "annual",
     "month": "May",
     "next_date": "2027-05-18",
@@ -147,9 +147,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "New Hampshire technology and advanced manufacturing community",
-    "url": "https://newhampshiretechallianceinc.growthzoneapp.com/events",
-    "description": "Multi-day New Hampshire Tech Alliance flagship gathering, listed on the Alliance's official events calendar for 18-20 May 2027 in Nashua.",
-    "source": "https://newhampshiretechallianceinc.growthzoneapp.com/events"
+    "url": "https://www.armiusa.org/event/meeting-in-the-millyard-2027-mitm27/",
+    "description": "ARMI | BioFabUSA's flagship convening on biomanufacturing and regenerative-medicine manufacturing in Manchester's Millyard; the 2027 edition marks ARMI's tenth anniversary.",
+    "source": "https://www.armiusa.org/event/meeting-in-the-millyard-2027-mitm27/"
   },
   {
     "name": "Northeast Dreamin'",

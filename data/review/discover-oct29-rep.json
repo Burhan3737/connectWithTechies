@@ -1,0 +1,9 @@
+{ "pass": "oct29-rep", "date": "2026-10-29",
+  "returning": [],
+  "cities": [],
+  "reported": [
+    { "what": "Socratica", "verdict": "added",
+      "reason": "Add patch in oct29-rep-fixes.json. socratica.info and wygo.world/o/socratica: free weekly Sunday 10am-1pm co-working with demos at the Accelerator Centre, 295 Hagey Blvd, Waterloo; last held Oct 25, next Nov 1 2026 (wygo.world/socratica-f26-viii). Feed gap: platform we do not read (left Luma for Wygo), and titles like 'Socratica F26: Act VII' have no tech words, so it is hand-curated." },
+    { "what": "Technical Wednesday (Waterloo)", "verdict": "added",
+      "reason": "Added as a source, not a one-off add: luma.com/waterlooevents in sources-oct29-rep.json. Organiser is Builders Club (host Jesse Rodgers); the sessions are actually in Kitchener, at 165 King St W, not Waterloo. It is a free, public, noon-1pm demo-and-feedback session held every other Wednesday, alternating with 'Non-Technical Wednesday' (held Sep 2, 16, 30, Oct 14; next Nov 11, Nov 25, Dec 9 2026 per luma.com/waterloo-ikki and the calendar API). Feed gap: not the relevance gate. This calendar's events already pass as 'registered tech organiser' (Revenue Tuesdays, Pancake Social are in feed.json). The calendar is not registered on its own, though, and the feed reaches it only through Luma's Waterloo geo-discovery listing, which did not include these sessions." }
+  ] }

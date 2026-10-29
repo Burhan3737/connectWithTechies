@@ -1,0 +1,371 @@
+[
+  {
+    "action": "add",
+    "reason": "calgaryinnovationweek.com (Platform Calgary's own site, redirected from innovationweekyyc.com): title 'Calgary Innovation Week 2026 | Nov 2 to 5, Calgary', JSON-LD startDate 2026-11-02 endDate 2026-11-05, 'NOVEMBER 2 - 5, 2026'. Platform Calgary's own post /blog/calgary-innovation-week-is-back-monday-november-2-to-thursday-november-5 agrees ('Calgary Innovation Week 2026 | Nov 2-5', HQ at the Platform Innovation Centre, presented by the University of Calgary for the 3rd year). Not in events.json under any name; only individual sessions appear as feed rows.",
+    "record": {
+      "name": "Calgary Innovation Week",
+      "type": "tech-week",
+      "topics": [
+        "startups",
+        "innovation",
+        "venture-capital",
+        "ai"
+      ],
+      "city": "Calgary",
+      "region": "Alberta",
+      "country": "Canada",
+      "venue": "Platform Innovation Centre (HQ) and venues across Calgary",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-02",
+      "next_date_end": "2026-11-05",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "freemium",
+      "audience": "founders, investors, tech workers, students, community",
+      "url": "https://calgaryinnovationweek.com/",
+      "description": "Calgary's city-wide week of tech, innovation and entrepreneurship events, run by Platform Calgary with main-stage sessions at the Platform Innovation Centre and community-hosted offsite events; most sessions are free via its Luma calendar and the week closes with Calgary Launch Party.",
+      "source": "https://calgaryinnovationweek.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "calgaryinnovationweek.com/launch-party (Platform Calgary): 'Launch Party Thursday, Nov 5 | 6 PM | Platform Innovation Centre', 'Thursday, November 5, 2026 6 to 9 PM, 407 9 Ave SE', JSON-LD startDate 2026-11-05T18:00-07:00; 'Since 2010, Calgary Launch Party has been an annual startup tradition', 16th year, showcasing the 2026 Top 10 early-stage Calgary startups. General admission $47.76. A distinct annual event closing Calgary Innovation Week.",
+    "record": {
+      "name": "Calgary Launch Party",
+      "type": "demo-day",
+      "topics": [
+        "startups",
+        "pitch",
+        "venture-capital"
+      ],
+      "city": "Calgary",
+      "region": "Alberta",
+      "country": "Canada",
+      "venue": "Platform Innovation Centre, 407 9 Ave SE",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-05",
+      "next_date_end": "2026-11-05",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "founders, investors, operators, tech workers",
+      "url": "https://calgaryinnovationweek.com/launch-party",
+      "description": "Calgary's annual startup showcase since 2010, where the year's Top 10 early-stage Calgary startups, chosen by community nomination and expert review, demo their products on the closing night of Calgary Innovation Week.",
+      "source": "https://calgaryinnovationweek.com/launch-party"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "futuresummit.ai (organiser's site): meta description 'A global summit convening leaders shaping the future of technology, infrastructure, and innovation. November 10, 2026 - Contemporary Calgary'; its app bundle: 'Future Summit is focused on the November 10, 2026 event'. First edition was November 2025 in Calgary (Digital Journal); the exact 2025 day was not confirmed, so last_date is left empty.",
+    "record": {
+      "name": "Future Summit",
+      "type": "summit",
+      "topics": [
+        "ai",
+        "infrastructure",
+        "innovation",
+        "venture-capital",
+        "policy"
+      ],
+      "city": "Calgary",
+      "region": "Alberta",
+      "country": "Canada",
+      "venue": "Contemporary Calgary",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-10",
+      "next_date_end": "2026-11-10",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "investors, founders, executives, policymakers",
+      "url": "https://futuresummit.ai/",
+      "description": "One-day innovation summit in Calgary convening investors, entrepreneurs, government and industry leaders on the future of technology, AI and infrastructure.",
+      "source": "https://futuresummit.ai/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "cybersci.ca (Canada's Cyber Security Challenge, organiser): 'Next Event: CyberSci Regionals 2026/27 ... Mark your calendars for November 21, 2026! ... Events in: Halifax, Montreal, Ottawa, Toronto, Winnipeg, Calgary, Vancouver'; all regions run the same day in person ('All the schools, all the students, all in one place, all at the same time. We do hacking in the morning, interviews in the afternoon'). cybersci.ca/past-events lists 'Winners - CyberSci Calgary Region - November 22, 2025'. The Calgary host venue is not yet published, so venue is empty. The dataset holds only the Ottawa National Finals.",
+    "record": {
+      "name": "CyberSci Calgary Regional",
+      "type": "ctf",
+      "topics": [
+        "cybersecurity",
+        "ctf",
+        "students",
+        "careers"
+      ],
+      "city": "Calgary",
+      "region": "Alberta",
+      "country": "Canada",
+      "venue": "",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-21",
+      "next_date_end": "2026-11-21",
+      "last_date": "2025-11-22",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "post-secondary students, cybersecurity employers",
+      "url": "https://cybersci.ca/",
+      "description": "Calgary regional of Canada's Cyber Security Challenge: a one-day in-person capture-the-flag for post-secondary student teams, with sponsor interviews in the afternoon; winners advance to the National Finals in Ottawa.",
+      "source": "https://cybersci.ca/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "globalgamejam.org/jam-sites/2026/cgda: Calgary Game Developers Association site, 'Platform Innovation Center, 407 9 Ave SE Calgary', Jam Site Type 'In-Person Only', January 30 - February 1, 2026; CGDA's Showpass page 'Global Game Jam 2026 - YYC' agrees (Jan 30 4 PM to Feb 1 7:30 PM). CGDA also hosted 2025 at Platform Calgary. GGJ 2027 runs 25-31 January 2027 but site-host registration only opens Nov 1, 2026, so there is no 2027 Calgary date yet.",
+    "record": {
+      "name": "Global Game Jam YYC",
+      "type": "game-jam",
+      "topics": [
+        "game-dev",
+        "indie-games"
+      ],
+      "city": "Calgary",
+      "region": "Alberta",
+      "country": "Canada",
+      "venue": "Platform Innovation Centre, 407 9 Ave SE",
+      "cadence": "annual",
+      "month": "January",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-01-30",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "game developers, artists, musicians, students, beginners",
+      "url": "https://globalgamejam.org/jam-sites/2026/cgda",
+      "description": "The Calgary Game Developers Association's in-person Global Game Jam site: a beginner-friendly weekend making games with meals, judges, prizes and a public playtest showcase.",
+      "source": "https://globalgamejam.org/jam-sites/2026/cgda"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "gewkc.com (KCSourceLink, University of Missouri): 'Global Entrepreneurship Week Starts Here Nov. 16 - 20, 2026 UNION STATION ... The schedule is live!'. Not held under any name in events.json.",
+    "record": {
+      "name": "Global Entrepreneurship Week Kansas City",
+      "type": "startup-week",
+      "topics": [
+        "startups",
+        "entrepreneurship",
+        "small-business",
+        "innovation"
+      ],
+      "city": "Kansas City",
+      "region": "Missouri",
+      "country": "United States",
+      "venue": "Union Station",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-16",
+      "next_date_end": "2026-11-20",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "entrepreneurs, founders, small business owners, investors, students",
+      "url": "https://gewkc.com/",
+      "description": "Kansas City's Global Entrepreneurship Week at Union Station, run by KCSourceLink: expert-led sessions, speakers, a maker fair, an ecosystem-builder day and youth programming for founders at every stage.",
+      "source": "https://gewkc.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "pipelineentrepreneurs.com/innovators2026: 'On June 5, 2026 in Kansas City, Pipeline Entrepreneurs will hold both its Annual Pitch Showcase as well as our Innovators' Gala'; /pitch-showcase-2026: 'JUNE 5 | UNION STATION PLANETARIUM, 30 W Pershing Road', Fellows and Pathfinders pitch to a national judging panel, tickets free. Annual; 2027 date not published.",
+    "record": {
+      "name": "Pipeline Innovators Pitch Showcase",
+      "type": "demo-day",
+      "topics": [
+        "startups",
+        "pitch",
+        "venture-capital"
+      ],
+      "city": "Kansas City",
+      "region": "Missouri",
+      "country": "United States",
+      "venue": "Union Station Planetarium, 30 W Pershing Road",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-06-05",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "founders, investors, entrepreneurial community",
+      "url": "https://www.pipelineentrepreneurs.com/pitch-showcase-2026",
+      "description": "Pipeline Entrepreneurs' annual pitch day, where the year's Fellows and Pathfinders, high-growth founders from across the Midwest, pitch to a national judging panel, followed in the evening by the Innovators Gala.",
+      "source": "https://www.pipelineentrepreneurs.com/innovators2026"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "waterlootechweek.ca (organiser, run by the Hack the North team): 'Join us for our Kickoff Event on September 11, then enjoy six days of community-led talks, demos, panels, meetups, and more from September 12-17, 2026', 'Across Waterloo!'; luma.com/waterlootechweek 'September 12-17, 2026'. Inaugural edition was Sept 8-12, 2025 (uwaterloo.ca/events/events/waterloo-tech-week). 2027 dates not announced.",
+    "record": {
+      "name": "Waterloo Tech Week",
+      "type": "tech-week",
+      "topics": [
+        "startups",
+        "community",
+        "ai",
+        "hardware"
+      ],
+      "city": "Waterloo",
+      "region": "Ontario",
+      "country": "Canada",
+      "venue": "Venues across Waterloo",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-09-12",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "builders, students, founders, tech workers",
+      "url": "https://waterlootechweek.ca/",
+      "description": "A decentralized week of independently hosted talks, demos, panels, meetups and pitch events celebrating Waterloo's tech community, organised by the Hack the North team in the run-up to the hackathon.",
+      "source": "https://waterlootechweek.ca/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "uwaterloo.ca/events/events/velocity-pitch-competition: 'Saturday, September 12, 2026 10:30 am - 4:00 pm ... STC - Science Teaching Complex, Room 0010', kicking off Waterloo Tech Week; velocityincubator.com/programs-events/vpc confirms the 2026 edition and lists winners back to 2011 (run once per term until 2024). No next date published.",
+    "record": {
+      "name": "Velocity Pitch Competition",
+      "type": "demo-day",
+      "topics": [
+        "startups",
+        "pitch",
+        "students"
+      ],
+      "city": "Waterloo",
+      "region": "Ontario",
+      "country": "Canada",
+      "venue": "Science Teaching Complex, University of Waterloo",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-09-12",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "University of Waterloo student founders, investors, community",
+      "url": "https://www.velocityincubator.com/programs-events/vpc",
+      "description": "Velocity's pitch competition for University of Waterloo student-led startups, running since 2011; the 2026 edition put teams through two-minute, no-slide pitches before 100 judges for a $5,000 top prize.",
+      "source": "https://uwaterloo.ca/events/events/velocity-pitch-competition"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "luma.com/tsgc12gk, presented by Business+Impact at Michigan Ross: 'Impact Venture Demo Day 2026', JSON-LD startDate 2026-04-16T17:00-04:00, Davidson Winter Garden, Ross School of Business, 701 Tappan Ave, 25+ U-M student ventures demoing live prototypes; events.umich.edu/event/146133 agrees (Thurs April 16, 5-7 pm, free). Also ran April 4, 2025 (Business+Impact newsletter), so annual each April. businessimpact.umich.edu itself is Cloudflare-walled.",
+    "record": {
+      "name": "Impact Venture Demo Day",
+      "type": "demo-day",
+      "topics": [
+        "startups",
+        "social-impact",
+        "climate",
+        "fintech",
+        "students"
+      ],
+      "city": "Ann Arbor",
+      "region": "Michigan",
+      "country": "United States",
+      "venue": "Davidson Winter Garden, Ross School of Business",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-16",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "student founders, investors, U-M community",
+      "url": "https://luma.com/tsgc12gk",
+      "description": "University of Michigan-wide demo day where 25+ student ventures from the Ross Impact Studio and partner programs show live prototypes in tech for good, health, education, climate and fintech to investors and the public.",
+      "source": "https://luma.com/tsgc12gk"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "midwestcon.live (organiser): title 'MidwestCon 2026 | AI & Tech Conference in Cincinnati', JSON-LD startDate 2026-09-08 endDate 2026-09-11; organiser's Luma page luma.com/jj9m9xku: 'September 8-11, 2026, in Cincinnati ... spans the 1819 Innovation Hub and citywide venues, featuring intimate dinners, a high-energy hackathon, policy and AI sessions'. Not held in events.json. 2027 dates not announced.",
+    "record": {
+      "name": "MidwestCon",
+      "type": "conference",
+      "topics": [
+        "ai",
+        "policy",
+        "startups",
+        "innovation"
+      ],
+      "city": "Cincinnati",
+      "region": "Ohio",
+      "country": "United States",
+      "venue": "1819 Innovation Hub and venues across Cincinnati",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-09-08",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "founders, technologists, policymakers, creatives",
+      "url": "https://midwestcon.live/",
+      "description": "Four-day AI and technology conference week in Cincinnati, centred on UC's 1819 Innovation Hub, combining policy and AI sessions, a hackathon, an art-and-AI showcase and partner events.",
+      "source": "https://midwestcon.live/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "uc.edu/news/articles/2026/02/ocri-ctf.html (University of Cincinnati, home of the Ohio Cyber Range Institute): 'Capture Ohio '26: OCRI Statewide CTF ... 11 a.m. to 4 p.m. on Saturday, April 11, 2026', 'Back for a second year ... annual statewide Capture the Flag', UC site at Clifton Court Hall, Room 1210; other students join at regional campuses or virtually. In person at UC. 2027 date not published.",
+    "record": {
+      "name": "Capture Ohio: OCRI Statewide CTF",
+      "type": "ctf",
+      "topics": [
+        "cybersecurity",
+        "ctf",
+        "students"
+      ],
+      "city": "Cincinnati",
+      "region": "Ohio",
+      "country": "United States",
+      "venue": "Clifton Court Hall, University of Cincinnati",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-11",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "high school and university students",
+      "url": "https://www.uc.edu/news/articles/2026/02/ocri-ctf.html",
+      "description": "The Ohio Cyber Range Institute's annual one-day statewide capture-the-flag for student teams of three to five, hosted in person at the University of Cincinnati with partner campuses across Ohio joining the same day.",
+      "source": "https://www.uc.edu/news/articles/2026/02/ocri-ctf.html"
+    }
+  },
+  {
+    "match": {
+      "name": "Black Tech Week",
+      "city": "Cincinnati"
+    },
+    "action": "update",
+    "reason": "blacktechweek.com (organiser) now reads 'Black Tech Week - Columbus 2027', 'July 2027 / Columbus, Ohio ... New City. Same Motion', 'Cincinnati started a chapter. Columbus Begins The Next.' The next edition is in Columbus, not Cincinnati; local12.com also reports the exit after a five-year Cincinnati run. No 2027 day published, so next_date stays empty and last_date (2026-07-14, the final Cincinnati edition) is untouched.",
+    "set": {
+      "city": "Columbus",
+      "region": "Ohio",
+      "description": "A culture-driven convening of Black builders, technologists, founders and creatives, with keynotes, workshops, a career fair and VC office hours; held in Cincinnati for five years through 2026, moving to Columbus for July 2027."
+    }
+  }
+]

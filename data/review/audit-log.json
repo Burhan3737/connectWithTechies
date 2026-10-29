@@ -225,9 +225,9 @@
           "summary": "Unchanged: next_date 2026-10-10 passed, still upcoming; oct05-r1-fixes.json still carries the superseded 10-06 operation.",
           "recommendation": "Re-check meetup.com/jersey-city-entrepreneurs for the next session; delete the Jersey City op from oct05-r1-fixes.json.",
           "repeat_of": "2026-10-11-i1-W5",
-          "status": "open",
-          "resolved_on": null,
-          "resolution": null
+          "status": "fixed",
+          "resolved_on": "2026-10-29",
+          "resolution": "Jersey City Venture Garden is recurring-tbd with no elapsed date after oct29-t1 (confirmed by audit 2026-10-29-i1)."
         },
         {
           "id": "2026-10-11-i2-W5",
@@ -294,6 +294,28 @@
           "status": "fixed",
           "resolved_on": "2026-10-22",
           "resolution": "Removed the superseded cancelled-10-06 operation from oct05-r1-fixes.json; apply now reports Venture Garden SAME"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-29-i1",
+      "date": "2026-10-29",
+      "iteration": 1,
+      "scope": "2026-10-29 refresh: feed+build, re-check passes oct29-t1/t2/t3 (60 rows), discovery oct29-d1/d2/r1/r2/rep; 27 updates, 32 adds, 0 removals vs HEAD 7bb1ee2",
+      "checked": "Mechanical audit clean; verified on organiser pages: South Dallas Maker Faire, All Things Open, BSides Peoria, BSides COS re-dates; Black Tech Week, JSNation US, ODSC West, Meeting in the Millyard city moves; Commit Your Code, QCon AI NY, HackMiami, Israel Tech Week, MadHacks, Socratica adds; CHM Live, INTERFACE Omaha, BSides TC confirmed rows; Jersey City Venture Garden (2026-10-11-i2-W4) now resolved",
+      "blocking": 0,
+      "warnings": 1,
+      "findings": [
+        {
+          "id": "2026-10-29-i1-W1",
+          "severity": "warning",
+          "event": "Secular Hub feed (Denver)",
+          "summary": "meetup:secularhub is in the feed registry as a registered tech organiser; about 27 non-tech events are live (LifeRing Secular Recovery Group, Thanksgiving Feast, Pancake Breakfast, Movie Night, Secular Scouts). Predates this run (commit 8a7c95c). Related per-event noise: 'Mingles Mixer 42-55' singles event from meetup:dctechai (Rockville).",
+          "recommendation": "Remove meetup:secularhub from data/feeds/registry.json, or require a per-event tech signal for it, and rebuild.",
+          "repeat_of": null,
+          "status": "fixed",
+          "resolved_on": "2026-10-29",
+          "resolution": "Secular Hub retired in data/review/sources-oct29-audit.json (tech:false); feed re-run, 0 of its events remain. The single dctechai singles event is per-event noise, left to the gate."
         }
       ]
     }

@@ -1,0 +1,136 @@
+{
+  "pass": "oct29-d2",
+  "date": "2026-10-29",
+  "returning": [],
+  "cities": [
+    {
+      "city": "Kansas City",
+      "region": "Missouri",
+      "queries": [
+        "Kansas City tech week 2026 OR startup week Kansas City 2026",
+        "Global Entrepreneurship Week Kansas City 2026 November schedule",
+        "Kansas City demo day startups 2026 accelerator pitch night",
+        "Pipeline Entrepreneurs pitch showcase 2026 Kansas City innovators gala",
+        "Kansas City technology summit 2027 AI summit Kansas City",
+        "ElevateIT Kansas City Technology Summit 2027",
+        "Kansas City summit November 2026 OR 2027 tech summit startups AI cybersecurity",
+        "Kansas City capture the flag CTF 2026 OR 2027 in person",
+        "Kansas City game jam 2027 OR global game jam Kansas City"
+      ],
+      "found": [
+        { "name": "Global Entrepreneurship Week Kansas City", "url": "https://gewkc.com/", "verdict": "added",
+          "reason": "startup-week. gewkc.com: Nov. 16 - 20, 2026 at Union Station, run by KCSourceLink." },
+        { "name": "Pipeline Innovators Pitch Showcase", "url": "https://www.pipelineentrepreneurs.com/innovators2026", "verdict": "added",
+          "reason": "demo-day. Organiser page: June 5, 2026 at the Union Station Planetarium, annual; added recurring-tbd with last_date 2026-06-05." },
+        { "name": "Techweek Kansas City", "url": "https://www.startlandnews.com/tag/techweek-kc/page/3/", "verdict": "rejected",
+          "reason": "Only historical coverage (Techweek KC ran in the mid-2010s); no current organiser page or edition." },
+        { "name": "ElevateIT Kansas City Technology Summit", "url": "https://novawatch.com/events/elevateit-kansas-city-technology-summit", "verdict": "unresolved",
+          "reason": "Vendor-run summit series; only a 2025 listing (May 14, 2025) and an ISSA mention of a 2026 KC stop with no date. No organiser page with a date found." },
+        { "name": "Social Venture Studio Demo Day", "url": "https://networkkansas.com/event/social-venture-studio-demo-day-2026/", "verdict": "rejected",
+          "reason": "LaunchKC/Downtown Council social-venture demo day (Aug 27, 2026); social ventures rather than tech, and only an aggregator listing was found." },
+        { "name": "BSidesKC CTF / OzCon CTF", "url": "https://bsideskc.org", "verdict": "exists",
+          "reason": "The only in-person KC CTFs found run inside conferences: BSidesKC (held, Kansas City) and OzCon (Overland Park). No standalone KC CTF found. No KC Global Game Jam site found either; K-State's annual jam is in Manhattan, KS." }
+      ]
+    },
+    {
+      "city": "Waterloo",
+      "region": "Ontario",
+      "queries": [
+        "Waterloo Region tech conference 2027 Communitech",
+        "Waterloo Ontario tech conference 2027 OR summit 2026 Waterloo Region innovation summit",
+        "\"Waterloo Tech Week\" 2026",
+        "Waterloo demo day Velocity pitch competition 2026 OR 2027",
+        "University of Waterloo CTF 2026 OR 2027 in person capture the flag Waterloo",
+        "Waterloo game jam 2026 OR 2027 global game jam Waterloo Ontario"
+      ],
+      "found": [
+        { "name": "Waterloo Tech Week", "url": "https://waterlootechweek.ca/", "verdict": "added",
+          "reason": "tech-week. waterlootechweek.ca: September 12-17, 2026 across Waterloo (2nd edition, by the Hack the North team); recurring-tbd, last_date 2026-09-12." },
+        { "name": "Velocity Pitch Competition", "url": "https://www.velocityincubator.com/programs-events/vpc", "verdict": "added",
+          "reason": "demo-day. uwaterloo.ca events page: Saturday Sept 12, 2026, Science Teaching Complex; runs since 2011. recurring-tbd." },
+        { "name": "Socratica", "url": "https://socratica.info", "verdict": "exists",
+          "reason": "meetup-series for Waterloo is covered by the parallel pass oct29-rep (oct29-rep-fixes.json adds Socratica, Waterloo); not duplicated here." },
+        { "name": "True North (Communitech)", "url": "https://www.marsdd.com/news/true-north-tech-conference-brings-scaling-startups-and-free-thinkers-to-waterloo-region/", "verdict": "rejected",
+          "reason": "Only 2018-era coverage; no current edition or organiser page for 2026/2027." },
+        { "name": "Waterloo Innovation Summit", "url": "https://uwaterloo.ca/news/node/3366", "verdict": "rejected",
+          "reason": "Only older, undated University of Waterloo news coverage; no current edition." },
+        { "name": "University of Waterloo Global Game Jam site", "url": "https://uwaterloo.ca/games/jam", "verdict": "unresolved",
+          "reason": "An itch.io page 'University of Waterloo Winter 2026 Game Jam - GGJ26' exists, but the Games Institute jam page returns 'Access denied' and no dated organiser page or 2027 site was found. No in-person Waterloo CTF or startup-week found; the last uWaterloo CTFs are older CS Club events." }
+      ]
+    },
+    {
+      "city": "Ann Arbor",
+      "region": "Michigan",
+      "queries": [
+        "Ann Arbor game jam 2026 OR 2027",
+        "WolverineSoft game jam in person Ann Arbor 2026 Shammy Jam",
+        "Ann Arbor demo day 2026 startups accelerator TechArb OR Desai OR Ann Arbor SPARK",
+        "\"Impact Venture Demo Day\" Michigan Ross 2025",
+        "University of Michigan CTF competition in person Ann Arbor 2026 OR 2027",
+        "Ann Arbor summit 2026 OR 2027 technology AI summit Ann Arbor Michigan",
+        "MIDAS \"Data Science & AI Summit\" 2026 Michigan League December"
+      ],
+      "found": [
+        { "name": "Impact Venture Demo Day", "url": "https://luma.com/tsgc12gk", "verdict": "added",
+          "reason": "demo-day. Business+Impact at Michigan Ross: April 16, 2026 at the Davidson Winter Garden (also April 4, 2025); recurring-tbd." },
+        { "name": "U-M Annual Data Science & AI Summit 2026", "url": "https://midas.umich.edu/events/midas-summit-2026/", "verdict": "rejected",
+          "reason": "Search snippets and the call-for-posters page still give Dec 2-3, 2026 at the Michigan League, but the main summit page (WP API, modified 2026-10-21) now reads 'The summit will be on hiatus in 2026. Join us for the AI in Research symposium in March 2027', and the call-for-posters page says accepted posters will be invited to 'another upcoming MIDAS event'. Not added." },
+        { "name": "WolverineSoft Shammy Jam", "url": "https://itch.io/jam/shammy-jam-2026", "verdict": "rejected",
+          "reason": "U-M student game jam (Mar 21-22, 2026) is remote/hybrid via Discord; participants need not be in Ann Arbor. Not a confirmed in-person event." },
+        { "name": "UnDemo Day (Ann Arbor SPARK)", "url": "https://annarborusa.org/opportunities/the-undemo-day-startup-application-is-officially-open", "verdict": "rejected",
+          "reason": "Run by Ann Arbor SPARK but held in Detroit (The Department), not Ann Arbor." },
+        { "name": "Neutral Zone teen game jam", "url": "https://www.neutral-zone.org/event-list/2026/1/22/game-jam", "verdict": "rejected",
+          "reason": "Four-week teen programme at a youth centre, not a public game jam. No Ann Arbor CTF or startup-week found." }
+      ]
+    },
+    {
+      "city": "Calgary",
+      "region": "Alberta",
+      "queries": [
+        "Calgary Innovation Week 2026 dates",
+        "Calgary tech summit 2027 conference startups Alberta",
+        "CyberSci regional Calgary 2026 OR 2027 capture the flag",
+        "SAIT Capture the Flag cyber security event 2025 OR 2027",
+        "Calgary game jam 2027 global game jam site Calgary"
+      ],
+      "found": [
+        { "name": "Calgary Innovation Week", "url": "https://calgaryinnovationweek.com/", "verdict": "added",
+          "reason": "tech-week. Platform Calgary: Nov 2-5, 2026 (JSON-LD and blog post)." },
+        { "name": "Calgary Launch Party", "url": "https://calgaryinnovationweek.com/launch-party", "verdict": "added",
+          "reason": "demo-day. Thursday Nov 5, 2026, 6-9 PM, Platform Innovation Centre; annual since 2010." },
+        { "name": "Future Summit", "url": "https://futuresummit.ai/", "verdict": "added",
+          "reason": "summit. November 10, 2026 at Contemporary Calgary (organiser's meta and app bundle)." },
+        { "name": "CyberSci Calgary Regional", "url": "https://cybersci.ca/", "verdict": "added",
+          "reason": "ctf. CyberSci Regionals Nov 21, 2026 including Calgary; 2025 Calgary regional was Nov 22, 2025. Venue not yet published." },
+        { "name": "Global Game Jam YYC", "url": "https://globalgamejam.org/jam-sites/2026/cgda", "verdict": "added",
+          "reason": "game-jam. CGDA in-person site at Platform Calgary, Jan 30 - Feb 1, 2026; recurring-tbd until 2027 sites register (opens Nov 1, 2026)." },
+        { "name": "SAIT Capture The Flag (Hack the Planet)", "url": "https://www.platformcalgary.com/event/capture-the-flag---2026", "verdict": "rejected",
+          "reason": "Ran March 20-21, 2026 at SAIT Downtown and a July 2025 edition ran too, but timing is irregular and SAIT's own event pages now 404; no stable organiser page to hang a recurring record on. No Calgary startup-week found; Calgary Innovation Week fills that role." }
+      ]
+    },
+    {
+      "city": "Cincinnati",
+      "region": "Ohio",
+      "queries": [
+        "Cincinnati tech summit 2027",
+        "MidwestCon 2026 Cincinnati dates",
+        "Cincinnati demo day 2026 Cintrifuse OR Venture Lab OR CincyAI Demo Night",
+        "Cincinnati CTF capture the flag 2026 in person cybersecurity competition Cincinnati",
+        "Cincinnati game jam 2026 OR 2027 global game jam Cincinnati"
+      ],
+      "found": [
+        { "name": "MidwestCon", "url": "https://midwestcon.live/", "verdict": "added",
+          "reason": "conference/summit. Sept 8-11, 2026 at the 1819 Innovation Hub and citywide; recurring-tbd." },
+        { "name": "Capture Ohio: OCRI Statewide CTF", "url": "https://www.uc.edu/news/articles/2026/02/ocri-ctf.html", "verdict": "added",
+          "reason": "ctf. April 11, 2026, UC Clifton Court Hall plus partner campuses; annual (2nd year); recurring-tbd." },
+        { "name": "Demo Night | Cintrifuse", "url": "https://luma.com/demonightcincinnati", "verdict": "added",
+          "reason": "demo-day. Monthly in-person demo nights at Union Hall on a public Luma calendar; listed in sources-oct29-d2.json rather than as a one-off add." },
+        { "name": "Black Tech Week", "url": "https://www.blacktechweek.com", "verdict": "exists",
+          "reason": "Held as 'Black Tech Week' (Cincinnati). Its organiser page now says July 2027 in Columbus, Ohio; an update patch moves the record to Columbus." },
+        { "name": "Cincinnati Global Game Jam (IGDA Cincinnati)", "url": "https://igda.org/event/global-game-jam-2020-igda-cincinnati/", "verdict": "unresolved",
+          "reason": "IGDA Cincinnati hosted a GGJ site at UC in 2020; no 2025/2026/2027 Cincinnati site found. Cincinnati meetup-series: the active groups (CincyPy, GDG Cincinnati, Cincinnati Data & Analytics, Cincy Web Tech Drinkup) are already read by the feed." }
+      ]
+    }
+  ],
+  "reported": []
+}

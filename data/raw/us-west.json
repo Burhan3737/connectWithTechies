@@ -1150,8 +1150,8 @@
     "country": "United States",
     "venue": "San Jose McEnery Convention Center",
     "cadence": "annual",
-    "month": "September",
-    "next_date": "2027-08-31",
+    "month": "August-September",
+    "next_date": "2027-08-30",
     "next_date_end": "2027-09-02",
     "last_date": "2026-09-15",
     "status": "upcoming",
@@ -1828,9 +1828,9 @@
     "attendance": "200",
     "cost": "free",
     "audience": "data professionals, DBAs, analysts",
-    "url": "https://dayofdata.org/2026-11-12-dayofdata1155",
+    "url": "https://dayofdata.org/2026-11-13-dayofdata1155/",
     "description": "A single-day community data conference in Seattle running alongside the larger data platform summit week.",
-    "source": "https://dayofdata.org/"
+    "source": "https://dayofdata.org/2026-11-13-dayofdata1155/"
   },
   {
     "name": "Pacific Northwest Software Symposium",

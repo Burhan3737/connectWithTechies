@@ -216,7 +216,7 @@
     "city": "Austin",
     "region": "Texas",
     "country": "United States",
-    "venue": "",
+    "venue": "AT&T Hotel & Conference Center",
     "cadence": "annual",
     "month": "November",
     "next_date": "2026-11-12",
@@ -228,7 +228,7 @@
     "audience": "IT professionals, sysadmins",
     "url": "https://www.spiceworks.com/spiceworld/",
     "description": "The Spiceworks community's annual gathering of IT professionals in Austin, mixing vendor sessions, peer troubleshooting and social events.",
-    "source": "https://dev.events/NA/US/TX/tech"
+    "source": "https://www.spiceworks.com/spiceworld/"
   },
   {
     "name": "DFW Startup Week",
@@ -625,16 +625,16 @@
     "venue": "Bradley University",
     "cadence": "annual",
     "month": "October",
-    "next_date": "2026-10-24",
-    "next_date_end": "2026-10-24",
-    "last_date": "2025-10-25",
+    "next_date": "2027-10-23",
+    "next_date_end": "2027-10-23",
+    "last_date": "2026-10-24",
     "status": "upcoming",
     "attendance": "",
     "cost": "paid",
     "audience": "security practitioners, students",
     "url": "https://www.bsidespeoria.com/",
     "description": "A downstate Illinois community security conference in the BSides family, offering talks and villages for regional infosec practitioners.",
-    "source": "https://allbsides.com/events-in-usa.html"
+    "source": "https://www.bsidespeoria.com/"
   },
   {
     "name": "Michigan Tech Week",
@@ -2577,7 +2577,7 @@
       "ai",
       "careers"
     ],
-    "city": "Cincinnati",
+    "city": "Columbus",
     "region": "Ohio",
     "country": "United States",
     "venue": "",
@@ -2591,7 +2591,7 @@
     "cost": "paid",
     "audience": "founders, investors, students, corporate partners",
     "url": "https://www.blacktechweek.com",
-    "description": "A five-year-old culture-driven convening of Black builders, technologists, founders and creatives, with keynotes, workshops, a career fair, Ohio Opportunity Day and VC matchmaking.",
+    "description": "A culture-driven convening of Black builders, technologists, founders and creatives, with keynotes, workshops, a career fair and VC office hours; held in Cincinnati for five years through 2026, moving to Columbus for July 2027.",
     "source": "https://www.blacktechweek.com/"
   },
   {

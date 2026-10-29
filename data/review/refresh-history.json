@@ -1,0 +1,30 @@
+{
+ "refreshes": [
+  {
+   "base": "7bb1ee2",
+   "built_on": "2026-10-28",
+   "before": 12192,
+   "after": 12786,
+   "added": {
+    "total": 688,
+    "curated": 32,
+    "feed": 656
+   },
+   "removed": {
+    "total": 94,
+    "curated": 0,
+    "feed": 94
+   },
+   "redated": {
+    "total": 67,
+    "curated": 4,
+    "feed": 63
+   },
+   "removed_by_reason": {
+    "no longer listed": 69,
+    "organiser retired": 25
+   },
+   "relisted": 77
+  }
+ ]
+}

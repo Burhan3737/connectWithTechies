@@ -1,50 +1,14 @@
 [
   {
     "match": {
-      "name": "Tech Fuse Des Moines",
-      "city": "Des Moines"
+      "name": "Open Door Leadership Series",
+      "city": "Portland"
     },
     "action": "update",
-    "reason": "Automated check: the stored date 2026-10-15 no longer appears on https://dev.events/NA/US/IA/tech, and page JSON-LD gives 2026-11-07. REVIEW BEFORE APPLYING.",
+    "reason": "Automated check: the stored date 2026-10-28 no longer appears on https://roux.northeastern.edu/events/, and page JSON-LD gives 2026-11-04. REVIEW BEFORE APPLYING.",
     "set": {
-      "next_date": "2026-11-07",
-      "next_date_end": "2026-11-07"
-    }
-  },
-  {
-    "match": {
-      "name": "CONNECT: Networking for Entrepreneurs",
-      "city": "Jackson"
-    },
-    "action": "update",
-    "reason": "Automated check: the stored date 2026-12-03 no longer appears on https://www.innovate.ms/events/, and page JSON-LD gives 2026-10-19. REVIEW BEFORE APPLYING.",
-    "set": {
-      "next_date": "2026-10-19",
-      "next_date_end": "2026-10-19"
-    }
-  },
-  {
-    "match": {
-      "name": "Scrum Day Madison",
-      "city": "Madison"
-    },
-    "action": "update",
-    "reason": "Automated check: the stored date 2026-10-15 no longer appears on https://dev.events/NA/US/WI/tech, and page JSON-LD gives 2026-12-03..2026-12-04. REVIEW BEFORE APPLYING.",
-    "set": {
-      "next_date": "2026-12-03",
-      "next_date_end": "2026-12-04"
-    }
-  },
-  {
-    "match": {
-      "name": "AI Builder Lab Meetup",
-      "city": "Sioux Falls"
-    },
-    "action": "update",
-    "reason": "Automated check: the stored date 2026-10-15 no longer appears on https://www.startupsiouxfalls.com/event/ai-builder-lab-meetup/, and page JSON-LD gives 2026-11-19. REVIEW BEFORE APPLYING.",
-    "set": {
-      "next_date": "2026-11-19",
-      "next_date_end": "2026-11-19"
+      "next_date": "2026-11-04",
+      "next_date_end": "2026-11-04"
     }
   }
 ]

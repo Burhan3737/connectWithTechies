@@ -1,14 +1,8 @@
-{ "date": "2026-10-22", "iteration": 1,
-  "scope": "Uncommitted run vs HEAD: first 'add' patch (oct21-coverage-fixes.json -> Hack Canada, Toronto, in data/raw/discovered.json), Venture Garden patches re-applied, build:data + ledger; no queue dispatched (stale Oct 11 DISPATCHED.tsv: 60/60 covered, 0 row-skipped).",
-  "checked": "Hack Canada dates/venue/city/cost/type/in-person/audience against hackcanada.org; no duplicate in events.json; discovered.json picked up once with source_file 'discovered'; Venture Garden byte-identical to HEAD; non-curated events.json churn traced to the date rebuild over unchanged feed files.",
+{ "date": "2026-10-29", "iteration": 1,
+  "scope": "2026-10-29 refresh: feed+build, re-check passes oct29-t1/t2/t3 (60 rows), discovery oct29-d1/d2/r1/r2/rep; 27 updates, 32 adds, 0 removals vs HEAD 7bb1ee2",
+  "checked": "Mechanical audit clean; verified on organiser pages: South Dallas Maker Faire, All Things Open, BSides Peoria, BSides COS re-dates; Black Tech Week, JSNation US, ODSC West, Meeting in the Millyard city moves; Commit Your Code, QCon AI NY, HackMiami, Israel Tech Week, MadHacks, Socratica adds; CHM Live, INTERFACE Omaha, BSides TC confirmed rows; Jersey City Venture Garden (2026-10-11-i2-W4) now resolved",
   "findings": [
-    { "severity": "warning", "event": "Hack Canada (Toronto)",
-      "summary": "last_date 2026-03-06 is the 2026 edition held at SPUR Innovation Centre, Waterloo (Devpost), not a Toronto edition.",
-      "recommendation": "Clear last_date, or keep it and note in the description that the 2026 edition was in Waterloo; do it via patch." },
-    { "severity": "warning", "event": "Hack Canada (Toronto)",
-      "summary": "Record was verified at add time but has no ledger entry; shows as unchecked and queued 'never' in TO-VERIFY.tsv.",
-      "recommendation": "Record a confirmed ledger entry citing hackcanada.org; consider having the add action write it." },
-    { "severity": "warning", "event": "Jersey City Entrepreneurs: The Venture Garden (Jersey City)",
-      "summary": "oct05-r1 / oct07-s1 flip-flop applied again this run; net record unchanged, but the superseded cancelled-10-06 op still lives in oct05-r1-fixes.json and is correct only by apply order.",
-      "recommendation": "Remove or neutralise the Venture Garden op in oct05-r1-fixes.json.",
-      "repeat_of": "2026-10-11-i2-W4" } ] }
+    { "severity": "warning", "event": "Secular Hub feed (Denver)",
+      "summary": "meetup:secularhub is in the feed registry as a registered tech organiser; about 27 non-tech events are live (LifeRing Secular Recovery Group, Thanksgiving Feast, Pancake Breakfast, Movie Night, Secular Scouts). Predates this run (commit 8a7c95c). Related per-event noise: 'Mingles Mixer 42-55' singles event from meetup:dctechai (Rockville).",
+      "recommendation": "Remove meetup:secularhub from data/feeds/registry.json, or require a per-event tech signal for it, and rebuild.",
+      "repeat_of": null } ] }

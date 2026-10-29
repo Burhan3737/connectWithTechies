@@ -1,0 +1,26 @@
+[
+  { "action": "add",
+    "reason": "Reported 2026-10-25. Confirmed on the organiser's own pages: socratica.info ('a live, IRL co-working session hosted every Sunday in Waterloo') and wygo.world/o/socratica, which lists weekly Sunday 10am sessions at the Accelerator Centre (Oct 4, 11, 18, 25 held; next wygo.world/socratica-f26-viii, JSON-LD startDate 2026-11-01T10:00-05:00 to 13:00, 295 Hagey Boulevard, ticket 'Standard FREE'). The feeds missed it because Socratica moved from Luma to Wygo, which no feed reads, and its titles ('Socratica F26: Act VII') carry no tech words. next_date left empty as for the dataset's other weekly series; last_date is the Oct 25 session.",
+    "record": {
+      "name": "Socratica",
+      "type": "meetup-series",
+      "topics": ["co-working", "makers", "side-projects", "demos", "startups"],
+      "city": "Waterloo",
+      "region": "Ontario",
+      "country": "Canada",
+      "venue": "Accelerator Centre, 295 Hagey Boulevard",
+      "cadence": "weekly",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-10-25",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "makers, engineers, founders, researchers, designers, students",
+      "url": "https://socratica.info",
+      "description": "Weekly Sunday-morning co-working session run by an open collective of makers, engineers, founders and artists: introductions, two focused work blocks on personal projects, then open demos. Runs in term-length seasons (Fall, Winter, Spring) with occasional weeknight and showcase events; RSVP on Wygo.",
+      "source": "https://wygo.world/o/socratica"
+    }
+  }
+]

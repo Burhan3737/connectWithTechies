@@ -1,0 +1,17 @@
+[
+  { "match": { "name": "All Things Open", "city": "Raleigh" },
+    "action": "update",
+    "reason": "allthingsopen.org (organiser) news post Sept 28 2026 'Save the Date for All Things Open 2027 - October 17-19 ... year #15 ... downtown Raleigh, NC', and homepage banner 'Join us in Raleigh, NC October 17-19'. 2026 edition ran Oct 19-20 2026 per 2026.allthingsopen.org, kept as last_date. URL moved off the year-specific 2026 subdomain to the organiser's root, which carries the 2027 date.",
+    "set": { "next_date": "2027-10-17", "next_date_end": "2027-10-19", "last_date": "2026-10-19", "status": "upcoming",
+             "url": "https://allthingsopen.org/", "source": "https://allthingsopen.org/" } },
+  { "match": { "name": "BSides Peoria", "city": "Peoria" },
+    "action": "update",
+    "reason": "bsidespeoria.com (organiser) hero now reads 'BSides Peoria Saturday, October 23rd, 2027 - Bradley University - Peoria, Illinois' with a countdown; the 2026 edition (Oct 24 2026, still in the page script) has run and is kept as last_date. Source moved from allbsides.com to the organiser.",
+    "set": { "next_date": "2027-10-23", "next_date_end": "2027-10-23", "last_date": "2026-10-24", "status": "upcoming",
+             "source": "https://www.bsidespeoria.com/" } },
+  { "match": { "name": "BSides COS", "city": "Colorado Springs" },
+    "action": "update",
+    "reason": "The 2026 edition never happened: bsidescos.org (organiser) shows a visible '2026 Postponement' notice from president Matt Chisenhall ('announcing the postponement of BSides Colorado Springs for this year ... excited to welcome everyone back next year'), and the bsides.org listing is retitled 'BSides COS 2026 POSTPONED TO 2027'. The record had rolled 2026-10-24 into last_date, which claims an edition that did not run. Most recent real edition: 25 Oct 2025, from the organiser's own Sessionize CFP page (sessionize.com/bsides-colorado-springs-2025, 'event date 25 Oct 2025'). No 2027 date published. URL moved from the bsides.org postponed listing to the organiser's site.",
+    "set": { "next_date": "", "next_date_end": "", "last_date": "2025-10-25", "status": "recurring-tbd",
+             "url": "https://www.bsidescos.org/", "source": "https://www.bsidescos.org/" } }
+]
