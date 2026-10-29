@@ -33,4 +33,8 @@
   .ev__go { grid-column: 3; grid-row: 1; align-self: start; }
   .ev__d1 { font-size: 1.15rem; }
   .tally > div { flex-basis: 45%; }
+  /* The region label repeats the standfirst; on a phone the credit gets the whole rule to itself. */
+  .masthead__rule { letter-spacing: .16em; }
+  .masthead__rule > span:first-child, .masthead__dots { display: none; }
+  .masthead__credit { justify-content: flex-start; flex-wrap: nowrap; }
 }

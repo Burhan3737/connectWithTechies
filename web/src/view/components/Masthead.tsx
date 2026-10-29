@@ -1,5 +1,9 @@
 import { useMaybeApp } from '../context';
 
+const CREDIT_LINKS = [
+  { label: 'GitHub', href: 'https://github.com/Burhan3737' },
+];
+
 /** Title, standfirst and the tally. Renders before the data arrives; the numbers follow. */
 export function Masthead() {
   const vm = useMaybeApp();
@@ -9,7 +13,14 @@ export function Masthead() {
       <div className="masthead__rule">
         <span>NORTH AMERICA</span>
         <span className="masthead__dots" aria-hidden="true" />
-        <span id="stamp">{t ? `DATA ${t.generatedOn}` : 'LOADING'}</span>
+        <span className="masthead__credit">
+          <span>Created by <span className="masthead__name">Burhan</span></span>
+          {CREDIT_LINKS.map((link) => (
+            <a key={link.label} className="masthead__link" href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.label}<span aria-hidden="true"> ↗</span>
+            </a>
+          ))}
+        </span>
       </div>
       <h1 className="masthead__title">
         <span className="masthead__connect">connectWith</span><span className="masthead__techies">Techies</span>

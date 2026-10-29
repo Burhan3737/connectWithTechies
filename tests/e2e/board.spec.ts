@@ -31,7 +31,7 @@ test.describe('Boot', () => {
   test('the data date is stamped', async ({ page, request }) => {
     const data = await dataset(request);
     await openBoard(page);
-    await expect(page.locator('#stamp')).toContainText(data.generated_on);
+    await expect(page.locator('#footmeta')).toContainText(data.generated_on);
     await expect(page.locator('#footmeta')).toContainText(`${data.events.length} events`);
   });
 });

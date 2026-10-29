@@ -9,15 +9,27 @@
 }
 
 .masthead__rule {
-  display: flex; align-items: center; gap: .9rem;
+  display: flex; align-items: baseline; gap: .9rem;
   font-family: var(--mono);
   font-size: .68rem; letter-spacing: .22em; text-transform: uppercase;
   color: var(--ink-faint);
   padding-bottom: .85rem;
   border-bottom: 1px solid var(--rule);
 }
-.masthead__dots { flex: 1; height: 1px; background: repeating-linear-gradient(90deg, var(--rule) 0 3px, transparent 3px 8px); }
-#stamp { color: var(--signal); }
+.masthead__dots { flex: 1; align-self: center; height: 1px; background: repeating-linear-gradient(90deg, var(--rule) 0 3px, transparent 3px 8px); }
+
+.masthead__rule > span:first-child, .masthead__credit > span { white-space: nowrap; }
+/* The maker's credit, where the data stamp used to sit. Wraps rather than overflowing on phones. */
+.masthead__credit { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: flex-end; gap: .2rem .9rem; }
+.masthead__name { color: var(--ink); }
+.masthead__link {
+  color: var(--signal); text-decoration: none;
+  border-bottom: 1px solid var(--signal-dim);
+  padding: .35rem 0 .1rem;            /* a taller tap target without moving the baseline */
+  transition: color .15s, border-color .15s;
+}
+.masthead__link:hover, .masthead__link:focus-visible { color: var(--ink); border-color: var(--ink); }
+.masthead__link:focus-visible { outline: 1px solid var(--signal); outline-offset: 3px; }
 
 .masthead__title {
   margin: clamp(1rem, 3.2vw, 2.1rem) 0 0;
