@@ -12,6 +12,7 @@ import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { validateRecord, decideAdd } from './lib/record.mjs';
+import { diffEvents, changesMarkdown, historyRow, upsertHistory, delistings, retiredOrganisers } from './lib/changes.mjs';
 import { planCities, mergeSearched, candidateCities, TYPES } from '../agent/tools/discovery-plan.mjs';
 
 let failed = 0, passed = 0;
@@ -244,6 +245,96 @@ console.log('discovery-plan');
   const bad = mergeSearched({}, [{ pass: 'e', date: '10/21/2026', cities: [{ city: 'Austin', region: 'Texas' }] }, { pass: 'f', cities: [{ city: 'Boise', region: 'Idaho' }] }], (m) => warned.push(m));
   ok(Object.keys(bad).length === 0 && warned.length === 2, 'a log whose date is not YYYY-MM-DD is ignored with a warning', warned.join(' | '));
   ok(Object.keys(merged).length === 3, 'logs with no cities, or a city entry with no name, add nothing');
+}
+
+console.log('\nchanges since the last publish');
+{
+  const T = '2026-10-25';
+  const feed = (name, feed_id, next_date, o = {}) => ({ name, city: 'Toronto', region: 'Ontario', type: 'meetup', feed_source: 'luma',
+    feed_id, feed_organiser: 'Org', next_date, ...o });
+  const cur = (name, next_date, o = {}) => ({ name, city: 'Toronto', region: 'Ontario', type: 'conference', next_date, ...o });
+  const before = [
+    feed('Stays', 'luma:1', '2026-11-01'),
+    feed('Aged out', 'luma:2', '2026-08-01'),
+    feed('Bowling seminar', 'luma:3', '2026-11-02', { feed_organiser: 'Strike Zone' }),
+    feed('Pulled', 'luma:4', '2026-11-03'),
+    feed('Now curated', 'luma:5', '2026-11-04'),
+    feed('Weekly', 'luma:6', '2026-10-20'),
+    cur('Summit', '2026-11-10'),
+    cur('Dropped conf', '2026-12-01'),
+    cur('Moved conf', '2026-11-20'),
+  ];
+  const after = [
+    feed('Stays', 'luma:1', '2026-11-01'),
+    feed('Weekly', 'luma:6', '2026-10-27'),
+    feed('Brand new', 'luma:7', '2026-11-05', { city: 'Waterloo' }),
+    cur('Summit', '2026-11-10', { city: 'Mississauga' }),
+    cur('Moved conf', '2026-11-27'),
+    cur('Now curated', '2026-11-04'),
+    cur('Hack Canada', '2027-01-08'),
+  ];
+  const d = diffEvents(before, after, { today: T, retired: new Set(['Strike Zone']) });
+  const names = (l) => l.map((x) => x.e.name).sort();
+  ok(JSON.stringify(names(d.added)) === JSON.stringify(['Brand new', 'Hack Canada']), 'added: new feed and new curated events', names(d.added).join(', '));
+  ok(d.added.find((x) => x.e.name === 'Hack Canada').curated && !d.added.find((x) => x.e.name === 'Brand new').curated, 'added: curated and feed told apart');
+  const why = Object.fromEntries(d.removed.map((x) => [x.e.name, x.why]));
+  ok(why['Aged out'] === 'aged out', 'removed: held over 60 days ago is aged out', JSON.stringify(why));
+  ok(why['Bowling seminar'] === 'organiser retired', 'removed: a retired organiser is named as the reason');
+  ok(why['Pulled'] === 'no longer listed', 'removed: anything else is no longer listed by its source');
+  ok(why['Now curated'] === 'now a curated record', 'removed: a feed copy replaced by a curated record says so');
+  ok(why['Dropped conf'] === 'curated record removed', 'removed: curated removals are flagged as such');
+  ok(!('Summit' in why) && !d.added.some((x) => x.e.name === 'Summit'), 'a city correction is neither a removal nor an addition');
+  ok(d.redated.length === 1 && d.redated[0].e.name === 'Moved conf' && d.redated[0].from === '2026-11-20',
+    'redated: a date still to come that moved; a weekly series moving on is not', d.redated.map((x) => x.e.name).join(', '));
+  ok(d.before === 9 && d.after === 7, 'totals before and after');
+  const md = changesMarkdown(d, { since: 'abc1234 (2026-10-22)', today: T });
+  ok(/\| Added \| 2 \|/.test(md) && /organiser retired/.test(md) && /Moved conf/.test(md), 'the report lists counts, reasons and changes');
+  ok(/no earlier version/.test(changesMarkdown(null, { since: '', today: T })), 'no baseline: says so instead of failing');
+
+  // The same event under a new feed_id: a source's new URL, a Meetup copy
+  // replaced by the Luma one, sessions folded into a series row.
+  const moved = diffEvents(
+    [feed('Knowns and Unknowns', 'meetup:1', '2026-11-17'), feed('Campus Tour', 'eventbrite:9', '2026-11-06'),
+      feed('Campus Tour', 'eventbrite:8', '2026-11-13'), feed('Other talk', 'meetup:2', '2026-11-20')],
+    [feed('Knowns and Unknowns', 'luma:evt-x', '2026-11-17', { feed_source: 'luma' }),
+      feed('Campus Tour', 'series:abc', '2026-11-06', { feed_dates: ['2026-11-06', '2026-11-13'] }),
+      feed('Other talk', 'meetup:3', '2026-11-27')],
+    { today: T });
+  ok(moved.relisted === 3 && moved.removed.length === 1 && moved.added.length === 1,
+    're-listed under a new id (same name, city and date, or a series holding the date) is neither removed nor added',
+    `relisted ${moved.relisted}, removed ${moved.removed.map((x) => x.e.name)}, added ${moved.added.map((x) => x.e.name)}`);
+}
+
+console.log('\nrefresh history and delistings');
+{
+  const T = '2026-10-29';
+  const ev = (name, feed_id, o = {}) => ({ name, city: 'Austin', feed_source: 'meetup', feed_id, feed_organiser: 'Org', next_date: '2026-11-10', ...o });
+  const before = Array.from({ length: 1000 }, (_, i) => ev(`Talk ${i}`, `meetup:${i}`));
+  const after = before.slice(60).concat([ev('New one', 'meetup:new'), { name: 'Conf', city: 'Austin', next_date: '2027-03-01' }]);
+  const d = diffEvents(before, after, { today: T });
+  const row = historyRow(d, { base: 'abc1234', today: T });
+  ok(row.added.total === 2 && row.added.curated === 1 && row.added.feed === 1, 'row: added split curated and feed', JSON.stringify(row.added));
+  ok(row.removed.feed === 60 && row.removed_by_reason['no longer listed'] === 60 && row.before === 1000 && row.after === 942,
+    'row: removals by reason and totals');
+
+  const r1 = upsertHistory([], row);
+  const r2 = upsertHistory(r1, { ...row, added: { total: 5, curated: 0, feed: 5 } });
+  ok(r2.length === 1 && r2[0].added.total === 5, 'history: a rebuild against the same base replaces its row');
+  const r3 = upsertHistory(r2, { ...row, base: 'def5678' });
+  ok(r3.length === 2 && r3.map((r) => r.base).join() === 'abc1234,def5678', 'history: a new base adds a row');
+  const none = { ...row, base: 'fff0000', added: { total: 0 }, removed: { total: 0 }, redated: { total: 0 } };
+  ok(upsertHistory(r3, none).length === 2, 'history: a build that changed nothing adds no row');
+
+  const flagged = delistings(d, before);
+  ok(flagged.length === 1 && flagged[0].source === 'meetup' && flagged[0].removed === 60 && !flagged[0].failed,
+    'delistings: above 50 and 5% of a source is flagged', JSON.stringify(flagged));
+  ok(delistings(d, before, new Set(['meetup']))[0].failed, 'delistings: a source that failed this run is marked');
+  ok(!delistings(diffEvents(before, before.slice(40), { today: T }), before).length, 'delistings: 40 events is not flagged');
+  const many = Array.from({ length: 5000 }, (_, i) => ev(`Big ${i}`, `meetup:b${i}`));
+  ok(!delistings(diffEvents(many, many.slice(100), { today: T }), many).length, 'delistings: 100 of 5000 (2%) is not flagged');
+
+  const reg = { sources: [{ name: 'Strike Zone', tech: false, reason: 'retired by oct25 review' }, { name: 'Kept', tech: false, reason: 'gate' }, { name: 'X', tech: true }] };
+  ok([...retiredOrganisers(reg)].join() === 'Strike Zone' && retiredOrganisers(null).size === 0, 'retired: only organisers a person retired');
 }
 
 console.log(failed ? `\n${failed} CHECK(S) FAILED` : `\nALL ${passed} SCRIPT CHECKS PASSED`);

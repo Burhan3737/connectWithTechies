@@ -21,6 +21,7 @@ import { fileURLToPath } from 'node:url';
 import { execFileSync, execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { today as todayInDirectory } from '../../scripts/lib/today.mjs';
+import { diffEvents, retiredOrganisers, delistings } from '../../scripts/lib/changes.mjs';
 
 const runP = promisify(execFile);
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -44,11 +45,13 @@ const add = (severity, kind, detail) => findings.push({ severity, kind, detail }
 // them here would report each expired meetup as a lost event.
 const curatedOnly = (d) => d && { ...d, events: (d.events || []).filter((e) => !e.feed_source) };
 
-const now = curatedOnly(JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8')));
-let before = null;
+const nowAll = JSON.parse(readFileSync(join(ROOT, 'data', 'events.json'), 'utf8'));
+const now = curatedOnly(nowAll);
+let beforeAll = null, before = null;
 try {
-  before = curatedOnly(JSON.parse(execFileSync('git', ['show', `${SINCE}:data/events.json`],
-    { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 })));
+  beforeAll = JSON.parse(execFileSync('git', ['show', `${SINCE}:data/events.json`],
+    { cwd: ROOT, encoding: 'utf8', maxBuffer: 256 * 1024 * 1024 }));
+  before = curatedOnly(beforeAll);
 } catch {
   add('note', 'no-baseline', `Could not read data/events.json at ${SINCE}; skipping before/after checks.`);
 }
@@ -77,26 +80,45 @@ const byKey = (arr) => {
 
 /* ---- 1. coverage --------------------------------------------------------- */
 
-if (before) {
-  const a = byKey(before.events), b = byKey(now.events);
-  const gone = [...a.keys()].filter((k) => !b.has(k));
-  const added = [...b.keys()].filter((k) => !a.has(k));
-  const delta = now.events.length - before.events.length;
+/**
+ * The same comparison build-data writes to CHANGES.md (scripts/lib/changes.mjs),
+ * over every record: curated departures each need a reason, and the feed is
+ * judged by source, since its records come and go on every run.
+ */
+if (beforeAll) {
+  const readJson = (p) => { try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return null; } };
+  const retired = retiredOrganisers(readJson(join(ROOT, 'data', 'feeds', 'registry.json')));
+  const d = diffEvents(beforeAll.events, nowAll.events, { today, retired });
+  const cur = (l) => l.filter((x) => x.curated);
 
   add('info', 'coverage',
-    `${before.events.length} -> ${now.events.length} events (${delta >= 0 ? '+' : ''}${delta}); ${added.length} added, ${gone.length} gone`);
+    `${before.events.length} -> ${now.events.length} curated events; ${cur(d.added).length} added, ${cur(d.removed).length} gone. ` +
+    `All records ${d.before} -> ${d.after}; ${d.added.length} added, ${d.removed.length} removed, ${d.redated.length} re-dated`);
 
   // A run that quietly loses events is the worst outcome, so every departure is
   // named and has to be accounted for by a patch reason.
-  if (gone.length) {
-    const reasons = existsSync(join(REVIEW, 'APPLIED.md'))
-      ? readFileSync(join(REVIEW, 'APPLIED.md'), 'utf8') : '';
-    for (const k of gone) {
-      const e = a.get(k);
-      const named = reasons.includes(e.name);
-      add(named ? 'info' : 'blocking', 'event-removed',
-        `${e.name} (${e.city})${named ? ' — has a recorded reason' : ' — NO recorded reason in APPLIED.md'}`);
-    }
+  const reasons = existsSync(join(REVIEW, 'APPLIED.md'))
+    ? readFileSync(join(REVIEW, 'APPLIED.md'), 'utf8') : '';
+  for (const { e } of cur(d.removed)) {
+    const named = reasons.includes(e.name);
+    add(named ? 'info' : 'blocking', 'event-removed',
+      `${e.name} (${e.city})${named ? ' — has a recorded reason' : ' — NO recorded reason in APPLIED.md'}`);
+  }
+
+  // A curated date still to come that moved is a postponement or a correction;
+  // either way a patch should say so.
+  for (const { e, from, to } of cur(d.redated)) {
+    if (!reasons.includes(e.name)) add('warn', 'redated-unexplained', `${e.name} (${e.city}) moved ${from} -> ${to} with no patch in APPLIED.md`);
+  }
+
+  // The 30% health check (scripts/feeds/lib/health.mjs) counts what a source
+  // returned; this counts which events went. Behind a failed source it is a
+  // partial read and must not be published.
+  const failed = new Set((readJson(join(ROOT, 'data', 'feeds', 'last-run.json'))?.failedSources || []).map((f) => f.split(':')[0]));
+  for (const x of delistings(d, beforeAll.events, failed)) {
+    add(x.failed ? 'blocking' : 'warn', 'feed-delisted',
+      `${x.source}: ${x.removed} of ${x.held} events no longer listed` +
+      (x.failed ? ' and the source had failures this run — a partial read? re-run it before publishing' : ' — check data/review/CHANGES.md'));
   }
 }
 

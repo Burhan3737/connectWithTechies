@@ -7,8 +7,10 @@
 import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
 import { canonPlace, titleCity } from './lib/places.mjs';
 import { today as todayInDirectory } from './lib/today.mjs';
+import { diffEvents, changesMarkdown, retiredOrganisers, historyRow, upsertHistory } from './lib/changes.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW_DIR = join(ROOT, 'data', 'raw');
@@ -291,6 +293,36 @@ console.log(`Output:     ${events.length} events across ${cities.length} cities`
 console.log(`Upcoming:   ${events.filter((e) => e.status === 'upcoming').length}`);
 console.log(`Past:       ${events.filter((e) => e.status === 'past').length}`);
 console.log(`Recurring:  ${events.filter((e) => e.status === 'recurring-tbd').length}`);
+
+/**
+ * What this build changed since the data last committed — the published data,
+ * since a push to main deploys it. CHANGES.md is rewritten on every build;
+ * refresh-history.json keeps one row of counts per publish, which every build
+ * of the cycle rewrites until the publish commit fixes it.
+ */
+{
+  let before = null, since = '', base = '';
+  try {
+    const git = (...a) => execFileSync('git', a, { cwd: ROOT, encoding: 'utf8', maxBuffer: 256 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] });
+    before = JSON.parse(git('show', 'HEAD:data/events.json')).events;
+    [base, since] = git('log', '-1', '--format=%h%n%h (%ad)', '--date=short', '--', 'data/events.json').trim().split('\n');
+  } catch { /* not a git checkout, or nothing committed yet */ }
+  let retired = new Set();
+  try {
+    retired = retiredOrganisers(JSON.parse(readFileSync(join(ROOT, 'data', 'feeds', 'registry.json'), 'utf8')));
+  } catch { /* no registry: no organiser is named as retired */ }
+  const diff = before && diffEvents(before, events, { today, retired });
+  writeFileSync(join(ROOT, 'data', 'review', 'CHANGES.md'), changesMarkdown(diff, { since, today }), 'utf8');
+  if (diff) {
+    const HISTORY = join(ROOT, 'data', 'review', 'refresh-history.json');
+    let rows = [];
+    try { rows = JSON.parse(readFileSync(HISTORY, 'utf8')).refreshes; } catch { /* first row */ }
+    writeFileSync(HISTORY, JSON.stringify({ refreshes: upsertHistory(rows, historyRow(diff, { base, today })) }, null, 1) + '\n', 'utf8');
+  }
+  console.log(diff
+    ? `Changes:    ${diff.added.length} added, ${diff.removed.length} removed, ${diff.redated.length} re-dated since ${since} (data/review/CHANGES.md, refresh-history.json)`
+    : 'Changes:    no committed data/events.json to compare with');
+}
 
 /**
  * Write the shared-page list as a work item, not just console output.

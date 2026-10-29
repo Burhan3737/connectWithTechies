@@ -24,7 +24,13 @@ node agent/tools/audit-run.mjs --json     # same, machine-readable
 
 It writes `data/review/AUDIT.json` and checks:
 
-- **coverage** — how the event count moved, and every event that disappeared
+- **coverage** — how the event count moved, and every curated event that disappeared
+- **feed delistings** — a feed source losing more than 50 events and 5% of what it held
+  as "no longer listed" (warning; blocking when that source also failed this run). The
+  events behind it are listed in `data/review/CHANGES.md` — look at a few before deciding
+  whether they were withdrawn or the read went wrong
+- **unexplained re-dates** — a curated date still to come that moved with no patch
+  explaining it (warning)
 - **queue coverage** — whether every dispatched row got a ledger entry (reads
   `data/review/DISPATCHED.tsv`, the snapshot taken before the curator ran)
 - **evidence quality** — ledger entries with evidence too thin to support a verdict

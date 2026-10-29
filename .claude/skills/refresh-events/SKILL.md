@@ -263,7 +263,13 @@ either resolved or visibly open in `docs/AUDIT-LOG.md`). If you stopped at three
 outstanding, lead with that — it is the most important thing in the report.
 
 Include the feed's health warnings and what you did about each, the organisers you
-retired or followed, and the before/after event counts.
+retired or followed, and the before/after event counts — take those from the table at
+the top of `data/review/CHANGES.md` (added, removed by reason, re-dated, curated and
+feed apart), which every build rewrites against the last publish.
+
+`data/review/refresh-history.json` keeps the same counts, one row per publish, so the
+trend over many refreshes is readable. Nothing to do: every build replaces the row for
+the commit it compares against, and the publish commit fixes it.
 
 ## Step 7 — publish, when asked
 
@@ -275,6 +281,8 @@ another push. So:
 - Do not commit or push as the end of a cycle. Report, and wait for the person to ask.
 - Before committing, check what is staged — `git status --short` — and that nothing
   secret or local is in it (`.env`, tokens, `data/.cache/`, logs). `data/feeds/last-run.json`
-  is local and ignored; `data/feeds/run-history.json` is tracked and belongs in the commit.
+  is local and ignored; `data/feeds/run-history.json`, `data/review/CHANGES.md` and
+  `data/review/refresh-history.json` are tracked and belong in the commit. Run
+  `npm run build:data` last before committing, so both describe the data being published.
 - Commit as the configured git user, with no assistant attribution, then push and follow
   the run to the end: it is not published until both jobs (tests, publish) have passed.
