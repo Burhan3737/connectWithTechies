@@ -1,7 +1,7 @@
 import { useMaybeApp } from '../context';
 
 const CREDIT_LINKS = [
-  { label: 'GitHub', href: 'https://github.com/Burhan3737' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mburhantahir/' },
 ];
 
 /** Title, standfirst and the tally. Renders before the data arrives; the numbers follow. */
