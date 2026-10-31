@@ -126,9 +126,9 @@
           "summary": "TechSTL, Indy Hackers, ISSA Kentuckiana, New Media Manitoba, RockIT Women got 'no tech signal'; GDG Kansas City, 16 Tech, TAB rejected for 1 upcoming event.",
           "recommendation": "Propose them in a sources-*.json.",
           "repeat_of": null,
-          "status": "deferred",
-          "resolved_on": "2026-10-11",
-          "resolution": "Carried over as 2026-10-11-i2-W3."
+          "status": "fixed",
+          "resolved_on": "2026-10-31",
+          "resolution": "Superseded by 2026-10-11-i2-W3, fixed 2026-10-31 (sources-oct31-audit.json)."
         },
         {
           "id": "2026-10-11-i1-W4",
@@ -214,9 +214,9 @@
           "summary": "Unchanged: TechSTL, Indy Hackers, ISSA Kentuckiana, New Media Manitoba, RockIT Women, GDG Kansas City, 16 Tech, TAB still tech:false.",
           "recommendation": "Propose them in a sources-*.json.",
           "repeat_of": "2026-10-11-i1-W3",
-          "status": "open",
-          "resolved_on": null,
-          "resolution": null
+          "status": "fixed",
+          "resolved_on": "2026-10-31",
+          "resolution": "All eight followed via data/review/sources-oct31-audit.json. Root cause: scripts/feeds/run.mjs ignored a tech:true proposal for an organiser already in the registry, so a gate rejection could never be overturned; it now un-retires gate rejections (a person's retirement still wins and is reported)."
         },
         {
           "id": "2026-10-11-i2-W4",
@@ -316,6 +316,105 @@
           "status": "fixed",
           "resolved_on": "2026-10-29",
           "resolution": "Secular Hub retired in data/review/sources-oct29-audit.json (tech:false); feed re-run, 0 of its events remain. The single dctechai singles event is per-event noise, left to the gate."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-31-i1",
+      "date": "2026-10-31",
+      "iteration": 1,
+      "scope": "Cycle oct31: rechecks t1-t3 (60 rows), returning briefs r1-r2, city briefs d1-d2; 24 curated adds, 9 updates, 0 removals",
+      "checked": "Mechanical audit otherwise clean (25/25 links). Verified on organiser pages: Great Lakes Software Symposium, dev2next, Gartner re-dates; DevOpsDays Boston city move to Cambridge; Health Wildcatters, PitchBreakfast, UnDemo Day, Datathon PolyFinances, VIPSS, WiE Hackathon, Michigan DevFest, Upfront Summit adds; Hackfest CTF, BSides Fredericton, Future Summit confirmed rows. New relevance terms admitted only 4 real tech events",
+      "blocking": 1,
+      "warnings": 1,
+      "findings": [
+        {
+          "id": "2026-10-31-i1-B1",
+          "severity": "blocking",
+          "event": "BSides COS / BSides Colorado Springs 2026 (Colorado Springs)",
+          "summary": "Dispatched SHARED-PAGE row 62 was never chunked (61 dispatched, 60 chunked), so no ledger entry. The dev.events feed record bsides-colorado-springs-colorado-springs lists a 2026-10-24 edition that bsidescos.org says was postponed to next year, so the directory shows a phantom past edition.",
+          "recommendation": "Delete or suppress the devevents feed record (feed_id devevents:https://www.bsidescos.org/|2026-10-24). Write a confirming ledger entry for curated BSides COS. Fix the chunker so no dispatched row goes unassigned.",
+          "repeat_of": null,
+          "status": "fixed",
+          "resolved_on": "2026-10-31",
+          "resolution": "Feed record devevents:https://www.bsidescos.org/|2026-10-24 dropped in data/feeds/place-overrides.json; curated BSides COS confirmed in confirm-oct31-audit.json. Cause: orchestrator chunked TO-VERIFY.tsv instead of the DISPATCHED.tsv snapshot; refresh-events SKILL.md now says which file to split."
+        },
+        {
+          "id": "2026-10-31-i1-W1",
+          "severity": "warning",
+          "event": "Austin Philosophy Discussion Group / Toronto Social Club / Red Fridge Society (Austin, Toronto)",
+          "summary": "Registry marks meetup:philosophy-austin and meetup:greater-toronto-travel-and-social-club tech:true on a false track record. They list philosophy seminars, trivia nights and a clothing swap. Red Fridge Society (luma-cal:cal-ouHgAHCszM3INEo) added wine courses, poker and a car meet this run.",
+          "recommendation": "Retire the two meetup groups via a sources file (tech:false). Gate Red Fridge Society per event title instead of trusting the whole organiser.",
+          "repeat_of": null,
+          "status": "fixed",
+          "resolved_on": "2026-10-31",
+          "resolution": "sources-oct31-audit.json retires meetup:philosophy-austin and meetup:greater-toronto-travel-and-social-club (25 events taken down) and switches Red Fridge Society to judge_each. Most Red Fridge titles carry a '(founders)' ticket label so they still pass; accepted as a founders' community."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-31-i2",
+      "date": "2026-10-31",
+      "iteration": 2,
+      "scope": "Cycle oct31 re-audit: orchestrator fixes for i1-B1/i1-W1 plus feed re-run adding ShiftKey Labs, Unreal LA and 8 Eventbrite organisers",
+      "checked": "i1-B1 holds (dev.events BSides COS record dropped, ledger confirmed, queue 61/61); philosophy-austin and Toronto Social Club retired with no events left; 10 events from the 8 Eventbrite organisers are in person and tech (Indy Init, GameBiz Lab checked on page); ShiftKey hackathons sound; Unreal LA 0 events; mechanical audit 0/0, 25/25 links",
+      "blocking": 1,
+      "warnings": 2,
+      "findings": [
+        {
+          "id": "2026-10-31-i2-B1",
+          "severity": "blocking",
+          "event": "BSides Halifax (Halifax)",
+          "summary": "ShiftKey Labs feed added 'BSides Cybersecurity Conference 2026' (ical:104889-1794474000-1794502800@shiftkeylabs.ca, 2026-11-12), which is BSides Halifax 2026 per its own page and halifaxbsides.ca. The curated record bsides-halifax-halifax still says recurring-tbd with next_date blank (ledger from 2026-08-26), so one event is listed twice with contradicting dates.",
+          "recommendation": "Set curated BSides Halifax next_date/next_date_end 2026-11-12, status confirmed, and write a ledger entry. Drop the ShiftKey feed record in data/feeds/place-overrides.json.",
+          "repeat_of": null,
+          "status": "fixed",
+          "resolved_on": "2026-10-31",
+          "resolution": "Curated BSides Halifax set to 2026-11-12 (oct31-audit-fixes.json, ledger confirm-oct31-audit2.json); ShiftKey duplicate ical:104889-...@shiftkeylabs.ca dropped in data/feeds/place-overrides.json."
+        },
+        {
+          "id": "2026-10-31-i2-W1",
+          "severity": "warning",
+          "event": "Red Fridge Society (Austin)",
+          "summary": "judge_each did not take effect: all Red Fridge events still carry relevance 'registered tech organiser' (Santa Happy Hour, wine course, poker, Torque and Tacos). In scripts/feeds/run.mjs (around lines 182 and 206) the organiser found in the Luma Austin listing is re-added to techOrg regardless of judgeEvents. Even after that is fixed, the '(founders)' title suffix passes judge() on 'title: founders'.",
+          "recommendation": "Skip techOrg.add for registry entries with judgeEvents in the orgFound loop. Then retire Red Fridge (tech:false) or drop its social events individually.",
+          "repeat_of": "2026-10-31-i1-W1",
+          "status": "fixed",
+          "resolved_on": "2026-10-31",
+          "resolution": "Bug fixed in scripts/feeds/run.mjs: Luma/Meetup and Eventbrite discovery no longer re-trust an organiser marked judgeEvents. Red Fridge events are now judged by title: wine course, poker, Santa happy hour dropped. Founder Coffee Tasting and Torque and Tacos pass on '(founders)'; kept, since relevance.mjs's stated bar admits a founders' social."
+        },
+        {
+          "id": "2026-10-31-i2-W2",
+          "severity": "warning",
+          "event": "Cloud Practitioner - AWS Prep Course (1/4) (Halifax)",
+          "summary": "ShiftKey judge_each source admitted a four-week AWS exam-prep course for first- and second-year Dalhousie students (series:3b87d6841ea212e0) on 'title: cloud, aws'. It is a student class, not an event.",
+          "recommendation": "Drop it in place-overrides and review ShiftKey's events after its next read for more Academy courses.",
+          "repeat_of": null,
+          "status": "fixed",
+          "resolved_on": "2026-10-31",
+          "resolution": "All four AWS Prep Course occurrences dropped in data/feeds/place-overrides.json."
+        }
+      ]
+    },
+    {
+      "id": "2026-10-31-i3",
+      "date": "2026-10-31",
+      "iteration": 3,
+      "scope": "Cycle oct31 final re-audit: orchestrator fixes for i2-B1 (BSides Halifax), i2-W1 (run.mjs judgeEvents techOrg re-add), i2-W2 (AWS Prep Course drops), feed re-run from cache",
+      "checked": "BSides Halifax curated next_date 2026-11-12 matches halifaxbsides.ca, ledger corrected, ShiftKey duplicate dropped; four AWS Prep drops effective; run.mjs fix holds and upcoming Red Fridge events are judged by title (socials gone); mechanical audit 0/0, 25/25 links, queue 61/61; selftest 212/212",
+      "blocking": 0,
+      "warnings": 1,
+      "findings": [
+        {
+          "id": "2026-10-31-i3-W1",
+          "severity": "warning",
+          "event": "Sac Made Market First Fridays (Sacramento)",
+          "summary": "Upcoming feed record series:5fcdc0004983786c from judge_each MADE Makerspace (meetup:hackerlab) still has relevance 'registered tech organiser'. It was admitted 2026-10-25 by the techOrg re-add bug fixed for i2-W1 and carried forward unjudged because it was not re-read. It is an artisan and pop-up market, not tech.",
+          "recommendation": "Add a drop for series:5fcdc0004983786c in data/feeds/place-overrides.json.",
+          "repeat_of": "2026-10-31-i2-W1",
+          "status": "open",
+          "resolved_on": null,
+          "resolution": null
         }
       ]
     }

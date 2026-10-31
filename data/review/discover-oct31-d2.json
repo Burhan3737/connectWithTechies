@@ -1,0 +1,265 @@
+{
+ "pass": "oct31-d2",
+ "date": "2026-10-31",
+ "returning": [],
+ "reported": [],
+ "cities": [
+  {
+   "city": "Detroit",
+   "region": "Michigan",
+   "queries": [
+    "Detroit hackathon 2027",
+    "Detroit startup week OR demo day 2026 2027 founders",
+    "Detroit tech summit 2027 conference Michigan Central OR Huntington Place AI summit",
+    "Detroit capture the flag CTF cybersecurity competition in person 2026",
+    "VicOne Block Harbor Automotive CTF 2026 finals Detroit",
+    "Detroit game developers meetup monthly OR game jam Detroit 2026",
+    "Global Game Jam 2027 Detroit OR Michigan jam site"
+   ],
+   "found": [
+    {
+     "name": "UnDemo Day",
+     "url": "https://renvcf.com/undemo-day/",
+     "verdict": "added",
+     "reason": "demo-day. The Renaissance Venture Capital page reads 'Hold the date for UnDemo Day 2027 Oct 7, 2027 Detroit, MI'. The 2026 edition was Oct 1, 2026 at The Department, downtown Detroit (Ann Arbor SPARK post)."
+    },
+    {
+     "name": "Michigan DevFest (AI hackathon day)",
+     "url": "https://www.midevfest.com/",
+     "verdict": "exists",
+     "reason": "hackathon. Detroit's recurring hackathon is DevFest's AI hackathon day, already covered by the 'Michigan DevFest' record (Detroit). That record had no next date; patched to Nov 13-14, 2026 at Hollywood Casino Hotel at Greektown, from the site's JS bundle and schema.org data."
+    },
+    {
+     "name": "Techstars Startup Week Detroit",
+     "url": "https://legacy.xconomy.com/?p=393282",
+     "verdict": "rejected",
+     "reason": "startup-week. The only coverage found is from 2017-2019; no edition since. Michigan Tech Week (curated, Detroit) is the current equivalent."
+    },
+    {
+     "name": "Automotive CTF (VicOne / Block Harbor)",
+     "url": "https://vicone.com/automotive-ctf/",
+     "verdict": "rejected",
+     "reason": "ctf. In-person Detroit finals were held only in 2024 (Oct 21, 2024). The 2025 competition ran online only (Aug 22 - Sep 1, 2025), and nothing has been announced for 2026."
+    },
+    {
+     "name": "Detroit Game Devs (IGDA Ann Arbor)",
+     "url": "https://www.meetup.com/Detroit-Game-Devs/",
+     "verdict": "exists",
+     "reason": "meetup-series/game. Already a feed source in data/feeds/registry.json; it meets at Ann Arbor SPARK, not in Detroit."
+    },
+    {
+     "name": "HMG Strategy Detroit C-Level Technology Leadership Summit / Michigan Technology Leaders Summit",
+     "url": "https://www.dataintensity.com/resource/events/michigan-technology-leaders-summit/",
+     "verdict": "rejected",
+     "reason": "summit. Vendor-run, invitation-only executive sales events rather than open community summits; no organiser page gives 2027 dates."
+    },
+    {
+     "name": "Global Game Jam Detroit site",
+     "url": "https://globalgamejam.org/",
+     "verdict": "unresolved",
+     "reason": "game-jam. No Detroit site found for 2026; GGJ 2027 site registration opens Nov 1, 2026. The last Detroit-area site found was The Forge @ LTU in 2017."
+    }
+   ]
+  },
+  {
+   "city": "Edmonton",
+   "region": "Alberta",
+   "queries": [
+    "Edmonton tech week OR startup week 2026 2027",
+    "Edmonton demo day accelerator 2026 startups pitch Edmonton Unlimited",
+    "Edmonton Unlimited \"Built World\" challenge demo day November 2026",
+    "Edmonton game jam 2026 OR Edmonton CTF cybersecurity competition 2026",
+    "\"Alberta Game Jam\" 2026 Edmonton site",
+    "Edmonton monthly tech meetup DemoCamp Edmonton OR \"Edmonton.js\" OR \"YEG Tech\" 2026"
+   ],
+   "found": [
+    {
+     "name": "Edmonton Startup Week",
+     "url": "https://www.edmontonstartupweek.com/",
+     "verdict": "added",
+     "reason": "startup-week (also covers tech-week). Organiser site gives October 5-9, 2026, run by Edmonton Unlimited; added recurring-tbd with last_date 2026-10-05."
+    },
+    {
+     "name": "Edmonton Unlimited Built World Challenge Demo Day",
+     "url": "https://yespress.io/edmonton-unlimited",
+     "verdict": "unresolved",
+     "reason": "demo-day. A profile mentions a 'planned November Demo Day' for the autumn 2026 challenge, but no organiser page gives a date or venue."
+    },
+    {
+     "name": "Edmonton Unlimited Monthly Meetup Night",
+     "url": "https://luma.com/071l20pb",
+     "verdict": "exists",
+     "reason": "meetup-series. The Luma page is a 2024 edition (2024-04-09), and Edmonton Unlimited is already a feed source in registry.json."
+    },
+    {
+     "name": "Alberta Game Jam (Edmonton site)",
+     "url": "https://www.showpass.com/alberta-game-jam-2026-calgary-site/",
+     "verdict": "unresolved",
+     "reason": "game-jam. The only 2026 listing found is for the Calgary site (Sep 25-27, 2026). The Edmonton site ran in 2025, but no 2026 Edmonton ticket page or venue was found."
+    },
+    {
+     "name": "BSides Edmonton CTF",
+     "url": "https://www.bsidesedmonton.org/",
+     "verdict": "exists",
+     "reason": "ctf. The only in-person Edmonton CTF found is part of BSides Edmonton (curated record, Edmonton)."
+    }
+   ]
+  },
+  {
+   "city": "Halifax",
+   "region": "Nova Scotia",
+   "queries": [
+    "Halifax hackathon 2026 OR 2027 Dalhousie OR Volta",
+    "Halifax startup week OR tech week OR demo day 2026 Nova Scotia",
+    "Halifax game jam 2026 OR Nova Scotia CTF cybersecurity competition 2026",
+    "Halifax tech summit 2027 OR \"Nova Scotia\" AI summit Halifax 2026 2027"
+   ],
+   "found": [
+    {
+     "name": "Mission Accepted Space Hackathon",
+     "url": "https://shiftkeylabs.ca/event/mission-accepted-space-hackathon",
+     "verdict": "added",
+     "reason": "hackathon. ShiftKey Labs calendar gives Oct 2-4, 2026 at the Goldberg CS Building, its 2nd year (2025 edition Oct 24); recurring-tbd."
+    },
+    {
+     "name": "Global Game Jam Halifax",
+     "url": "https://shiftkeylabs.ca/event/global-game-jam-2026",
+     "verdict": "added",
+     "reason": "game-jam. ShiftKey Labs hosted it Jan 30 - Feb 1, 2026 at Dalhousie, and Halifax hosts a site every year. The 2027 site is not registered yet, so recurring-tbd."
+    },
+    {
+     "name": "Dal Innovation Week",
+     "url": "https://dalinnovates.ca/innovation-week/",
+     "verdict": "added",
+     "reason": "tech-week, which includes Dal Demo Day (the demo-day type). Oct 5-9, 2026 per Dal Innovates; recurring-tbd."
+    },
+    {
+     "name": "DalCTF capture the flag",
+     "url": "https://shiftkeylabs.ca/event/summer-ctf",
+     "verdict": "unresolved",
+     "reason": "ctf. Only one in-person CTF was found (June 6-7, 2026, ShiftKey Labs calendar), and it is not clearly recurring, so it was not added as a one-off. The ShiftKey Labs .ics feed was added to sources and will pick up future editions."
+    },
+    {
+     "name": "Claude Hackathon Halifax (Volta)",
+     "url": "https://springboardatlantic.ca/?p=22303",
+     "verdict": "rejected",
+     "reason": "hackathon. A one-off on Sept 12, 2026, already past."
+    },
+    {
+     "name": "Atlantic Canada AI Summit",
+     "url": "https://www.smu.ca/ai-summit/",
+     "verdict": "rejected",
+     "reason": "summit. Moves between Atlantic universities: Halifax (SMU) in 2025, Fredericton (UNB) in 2026. Not a Halifax event."
+    },
+    {
+     "name": "Halifax startup week",
+     "url": "",
+     "verdict": "unresolved",
+     "reason": "startup-week. No Halifax startup week found; the nearest is Atlantic Venture Forum (curated)."
+    }
+   ]
+  },
+  {
+   "city": "Los Angeles",
+   "region": "California",
+   "queries": [
+    "Los Angeles startup week 2027 OR \"LA startup week\"",
+    "Los Angeles game jam 2026 2027 in person OR LA CTF in person cybersecurity competition",
+    "Los Angeles tech summit 2027 Upfront Summit dates",
+    "\"Upfront Summit\" 2026 February Los Angeles venue upfront.com"
+   ],
+   "found": [
+    {
+     "name": "Upfront Summit",
+     "url": "https://summit.upfront.com/",
+     "verdict": "added",
+     "reason": "summit. The 2027 edition is announced for LA, invite-only, with no dates. The organiser FAQ gives 2026 as Feb 25-26 at Nya Studios. recurring-tbd."
+    },
+    {
+     "name": "LA CTF",
+     "url": "https://lac.tf/",
+     "verdict": "added",
+     "reason": "ctf. Run annually by ACM Cyber at UCLA. In 2026 it was online Feb 6-8, with an in-person day on Feb 7 at Tom Bradley International Hall. recurring-tbd."
+    },
+    {
+     "name": "Unreal Jam LA",
+     "url": "https://luma.com/dy1j39ng",
+     "verdict": "added",
+     "reason": "game-jam. A two-day in-person jam on Aug 20-21, 2026 at ASU California Center Broadway. Rather than adding the one-off, its organiser's Luma calendar (Unreal LA) went into sources-oct31-d2.json."
+    },
+    {
+     "name": "LA startup week",
+     "url": "https://www.tech-week.com/",
+     "verdict": "exists",
+     "reason": "startup-week. LA has no separate startup week; LA Tech Week (curated, Los Angeles) fills that role."
+    },
+    {
+     "name": "Global Game Jam LA",
+     "url": "https://ggjla.splashthat.com/",
+     "verdict": "unresolved",
+     "reason": "game-jam. The Splash page returns 403 with no date, and globalgamejam.org shows no 2026 or 2027 LA site."
+    },
+    {
+     "name": "LA demo-day / meetup-series",
+     "url": "",
+     "verdict": "exists",
+     "reason": "Demo Day LA, Startup Grind, LearnTeachCode and the LA Indie Game Dev Meetup are already feed sources and arrive as feed rows."
+    }
+   ]
+  },
+  {
+   "city": "Minneapolis",
+   "region": "Minnesota",
+   "queries": [
+    "tcstartupweek.com (direct)",
+    "Minneapolis hackathon 2026 2027 in person University of Minnesota OR Twin Cities",
+    "Minnesota Global Game Jam 2026 Minneapolis site OR Twin Cities game jam",
+    "Minneapolis CTF capture the flag in person 2026 GopherHack OR \"Cyber Security Summit\" Minneapolis"
+   ],
+   "found": [
+    {
+     "name": "Twin Cities Startup Week",
+     "url": "https://www.tcstartupweek.com/",
+     "verdict": "added",
+     "reason": "startup-week/tech-week. Ran Sept 14-18, 2026 across Minneapolis and Saint Paul with 1,301 registered; the 2027 waitlist is open. recurring-tbd."
+    },
+    {
+     "name": "Analytics for Good Hackathon",
+     "url": "https://carlsonschool.umn.edu/conferences/agihackathon",
+     "verdict": "added",
+     "reason": "hackathon. Minnesota Carlson, Jan 30-31, 2026; the page says it 'returns'. UMN students only; recurring-tbd."
+    },
+    {
+     "name": "MinneHack",
+     "url": "https://minnehack.io/",
+     "verdict": "rejected",
+     "reason": "hackathon. minnehack.io now redirects to hamnetbuilders.in, a Vietnamese sports-betting site (squatted); no current edition found."
+    },
+    {
+     "name": "Great Minnesota Give Back Hack",
+     "url": "https://luma.com/great-minnesota-give-back-hack",
+     "verdict": "exists",
+     "reason": "hackathon. Part of Twin Cities Startup Week (Sept 18, 2026, Jerome Hill Theater, St. Paul), so the TCSW record covers it."
+    },
+    {
+     "name": "MN Cup Grand Finale",
+     "url": "https://carlsonschool.umn.edu/mn-cup",
+     "verdict": "unresolved",
+     "reason": "demo-day. The organiser page names September 14 for the 2026 finale but gives no venue, so the city could not be confirmed; not added."
+    },
+    {
+     "name": "Junction Jam",
+     "url": "https://igda.org/event/junction-jam/2026-08-14/2/",
+     "verdict": "rejected",
+     "reason": "game-jam. Hosted in Chicago (DePaul), with Minneapolis only a train departure point, and it ran once ('Midwest US 2026')."
+    },
+    {
+     "name": "Cyber Security Summit CTF",
+     "url": "https://www.cybersecuritysummit.org/",
+     "verdict": "unresolved",
+     "reason": "ctf. A Cyber Sports Regional CTF ran at the 2025 summit (Minneapolis Marriott Northwest, Brooklyn Park); no 2026 CTF is confirmed."
+    }
+   ]
+  }
+ ]
+}

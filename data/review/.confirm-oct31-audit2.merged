@@ -1,0 +1,9 @@
+[
+  {
+    "name": "BSides Halifax",
+    "city": "Halifax",
+    "status": "corrected",
+    "cycle": "oct31-audit",
+    "evidence": "AUDIT 2026-10-31-i2-B1: auditor read halifaxbsides.ca — November 12, 2026; ShiftKey Labs event page agrees (6th annual). next_date set to 2026-11-12 in oct31-audit-fixes.json."
+  }
+]

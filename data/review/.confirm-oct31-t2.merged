@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Future Summit",
+    "city": "Calgary",
+    "status": "confirmed",
+    "cycle": "oct31-t2",
+    "evidence": "futuresummit.ai meta description and JSON-LD description: \"Future Summit 2026 takes place November 10, 2026 at Contemporary Calgary, Canada\"; the JS bundle also carries \"November 10, 2026\". Matches record (single day, Contemporary Calgary)."
+  },
+  {
+    "name": "Global Entrepreneurship Week Kansas City",
+    "city": "Kansas City",
+    "status": "confirmed",
+    "cycle": "oct31-t2",
+    "evidence": "gewkc.com (KCSourceLink, University of Missouri) hero: \"Global Entrepreneurship Week Starts Here Nov. 16 - 20, 2026 UNION STATION\", schedule live. Matches record 2026-11-16 to 11-20 at Union Station."
+  },
+  {
+    "name": "ElleHacks",
+    "city": "Toronto",
+    "status": "blocked",
+    "cycle": "oct31-t2",
+    "evidence": "Organiser page ellehacks.com is a JS shell; its bundle reads \"ElleHacks 2027 ... To Be Announced · In-person event · MLH Official Member\", venue York University Keele Campus, in person only. No month on the organiser page, so blocked under the MLH rule. MLH 2027 season registry (mlh.com/seasons/2027/events) lists ElleHacks, Toronto, physical, JAN 29 - 31 (2027-01-29 to 01-31), matching the record; MLH date stays."
+  },
+  {
+    "name": "UGAHacks",
+    "city": "Athens",
+    "status": "blocked",
+    "cycle": "oct31-t2",
+    "evidence": "ugahacks.com says \"Register for UGAHacks 12\", in Athens at the University of Georgia, but gives no date or month; 12.ugahacks.com is \"Under Construction\" with no date. MLH 2027 season registry (mlh.com/seasons/2027/events) lists \"UGAHacks\", Athens, Georgia, physical, FEB 05 - 07 (2027-02-05 to 02-07), matching the record. No month on the organiser page, so blocked."
+  },
+  {
+    "name": "MakeUofT",
+    "city": "Toronto",
+    "status": "blocked",
+    "cycle": "oct31-t2",
+    "evidence": "makeuoft.ca (title \"MakeUofT 2027\") reads \"University of Toronto TBD, 2027\" plus an interest form; its countdown scripts still target the Feb 14 2026 edition. MLH 2027 season registry (mlh.com/seasons/2027/events) lists MakeUofT, Toronto, physical, FEB 13 - 14 (2027-02-13 to 02-14), matching the record. Organiser says TBD, so blocked."
+  },
+  {
+    "name": "RevolutionUC",
+    "city": "Cincinnati",
+    "status": "blocked",
+    "cycle": "oct31-t2",
+    "evidence": "revolutionuc.com (title \"RevolutionUC 2027\") reads \"RevolutionUC Spring 2027...\", an in-person 24-hour hackathon at the University of Cincinnati run by ACM@UC. That is a season, not a month. MLH 2027 season registry (mlh.com/seasons/2027/events) lists RevolutionUC, Cincinnati, physical, FEB 27 - 28 (2027-02-27 to 02-28), matching the record. Blocked; MLH date stays."
+  },
+  {
+    "name": "CED Venture Connect",
+    "city": "Durham",
+    "status": "confirmed",
+    "cycle": "oct31-t2",
+    "evidence": "cednc.org/venture-connect/ HTML: \"Venture Connect 2027 Where innovation meets opportunity. March 22-24 | DPAC, Durham, NC\", with an agenda for Monday March 22, Tuesday March 23 and Wednesday March 24 (those weekdays fit 2027) and registration at vc27.eventify.io. The automated check missed it because the text sits in a video hero block. Matches record 2027-03-22 to 03-24 at Durham Performing Arts Center."
+  },
+  {
+    "name": "CypherCon",
+    "city": "Milwaukee",
+    "status": "confirmed",
+    "cycle": "oct31-t2",
+    "evidence": "cyphercon.com refuses curl here (TLS reset, then a 403 page), so I read it with WebFetch: \"March 24-25, 2027: CypherCon\" under When; under Where, \"Baird Center, 400 W Wisconsin Ave, Milwaukee, WI 53203\"; \"Celebrating the CypherCon 10th Anniversary in 2027!\"; \"March 24-25, 2027 – Wed & Thurs\". Matches record."
+  },
+  {
+    "name": "WEHack",
+    "city": "Richardson",
+    "status": "blocked",
+    "cycle": "oct31-t2",
+    "evidence": "wehackutd.com reads \"WEHack 2027 Coming Soon Spring 2027 Fill out our Interest Form!\", a season and not a month. MLH 2027 season registry (mlh.com/seasons/2027/events) lists WEHack, Richardson, TX, physical, APR 10 - 11 (2027-04-10 to 04-11), matching the record. Blocked; MLH date stays."
+  },
+  {
+    "name": "ODSC East",
+    "city": "Boston",
+    "status": "corrected",
+    "cycle": "oct31-t2",
+    "evidence": "odsc.ai/east/ returns 520 to curl, so I read it with WebFetch. Hero: \"May 10 – May 12 📍 BOSTON CONVENTION & EXHIBITION CENTER\". The year 2027 comes from the hero image filename \"east-2027-\" and the registration links \"odsc-ai-east-2027-in-person-\". In-person and virtual passes are both sold. The dates match the record. The patch fills the empty venue and moves source from the generic odsc.com to the event page."
+  },
+  {
+    "name": "Lesbians Who Tech + Allies Summit",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "oct31-t2",
+    "evidence": "lwtsquad.com refuses curl here (TLS reset), so I read it with WebFetch: \"LWTSUMMIT: June 7-9, 2027 | LWT\"; \"June 7-9, 2027 • New York\"; \"Join us in New York for a reimagined, curated LWTSUMMIT experience. June 7 to 9.\"; \"LWTSUMMIT Leadership Only sessions on Monday, June 7th\" (June 7 2027 is a Monday); in-person keynotes at The Rooftop at Pier 17, Seaport. A leftover \"Tues 9.17 to Fri 9.20\" schedule block has no year; those weekdays fit Sept 2024, so it is stale. Matches the record 2027-06-07 to 06-09."
+  },
+  {
+    "name": "AI & Big Data Expo North America",
+    "city": "San Jose",
+    "status": "corrected",
+    "cycle": "oct31-t2",
+    "evidence": "ai-expo.net/northamerica/ returns 502 to curl, so I read it with WebFetch: \"June 16-17, 2027\", \"San Jose McEnery Convention Center, CA\". The dates match the record. The record's venue was \"Santa Clara Convention Center\", taken from a dev.events source, and the organiser now names San Jose McEnery. The patch corrects the venue and replaces the aggregator source with the organiser page."
+  },
+  {
+    "name": "Tech Week San Francisco",
+    "city": "San Francisco",
+    "status": "blocked",
+    "cycle": "oct31-t2",
+    "evidence": "tech-week.com returns 429 to curl (Vercel Security Checkpoint) and to WebFetch. Search-index copies of tech-week.com/calendar/sf/... read \"San Francisco, October 5 - October 11\", the 2026 edition, consistent with last_date 2026-10-05 and recurring-tbd. A web search (\"a16z Tech Week San Francisco 2027 dates\") found no 2027 SF dates. I could not read the page itself, so no change."
+  },
+  {
+    "name": "SANS AI Cybersecurity Summit",
+    "city": "Arlington",
+    "status": "confirmed",
+    "cycle": "oct31-t2",
+    "evidence": "sans.org/cyber-security-training-events/ai-summit-fall-2026 (\"SANS AI/SI Cybersecurity Summit Fall 2026\"): \"Summit: Nov 2–3 ... In Person CPE: 12, Live Online: 8\"; \"Join us in Arlington, VA\"; Hilton Arlington Rosslyn The Key; countdown new Date(\"2026-11-02T08:00:00-04:00\"). Matches record 2026-11-02 to 11-03."
+  },
+  {
+    "name": "Humanoid Robots Summit North America",
+    "city": "Chicago",
+    "status": "blocked",
+    "cycle": "oct31-t2",
+    "evidence": "acgrobotus.com still shows only \"Humanoid Robots Summit is under maintenance\", 3 days before the event. The only Wayback capture is from 2026-06-13 (it gave Nov 3-4 2026, Sheraton Grand Chicago Riverwalk). The MassRobotics listing found in search now returns 404. Searches for postponement or cancellation found nothing, and third-party listings (conferenceinc.net, boothsquare) still say Nov 3-4 2026 Chicago. I cannot read the organiser's live page, so I am not changing anything. The organiser's site going dark this close to the event is a warning sign worth a look after Nov 4."
+  },
+  {
+    "name": "CHM Live",
+    "city": "Mountain View",
+    "status": "confirmed",
+    "cycle": "oct31-t2",
+    "evidence": "computerhistory.org/events/: \"CHM Live Data Are Made, Not Found Thursday, November 5, 2026 7:00 PM\", next \"CHM Live SRI at 80 Thursday, November 12, 2026 6:00 PM\"; museum at 1401 N. Shoreline Blvd, Mountain View. Matches next_date 2026-11-05."
+  },
+  {
+    "name": "INTERFACE Omaha",
+    "city": "Omaha",
+    "status": "confirmed",
+    "cycle": "oct31-t2",
+    "evidence": "f2fevents.com/event/neb26/ title \"INTERFACE Omaha | November 5th, 2026\"; \"Thursday, November 5th, 2026 | 8:30 AM CST\"; \"November 5th, 2026 8:30am – 4:30pm CHI Health Center Omaha South Ballroom 455 N 10th Street Omaha, NE 68102\". Matches record (single day)."
+  },
+  {
+    "name": "Prompt Victoria AI Conference",
+    "city": "Victoria",
+    "status": "confirmed",
+    "cycle": "oct31-t2",
+    "evidence": "members.viatec.ca event page is Cloudflare-walled (403 to curl and WebFetch). The organiser VIATEC's homepage viatec.ca links its carousel tile to /event-calendar/Details/2026-prompt-victoria-ai-conference-1845004. The tile image (edge.growthzonecms.com/sites/975/2026/09/Website-Homepage-Tiles-17.png), which I viewed, legibly reads \"PROMPT VICTORIA AI Conference ... NOV 5\". The date comes from that image; the year comes from the 2026 slug and the 2026/09 upload path. Matches 2026-11-05. I did not read the venue directly."
+  },
+  {
+    "name": "CyberForce Competition",
+    "city": "Tinley Park",
+    "status": "confirmed",
+    "cycle": "oct31-t2",
+    "evidence": "cyberforce.energy.gov/cyberforce-competition/2026-competition/: \"The annual CyberForce Competition will be held as an in-person competition in 2026 for competing Blue team participants on November 13-14, 2026 at the Tinley Park Convention Center.\" Matches record."
+  },
+  {
+    "name": "Austin Tech Week",
+    "city": "Austin",
+    "status": "confirmed",
+    "cycle": "oct31-t2",
+    "evidence": "austintech.com JSON-LD startDate 2026-10-26T08:30-05:00, endDate 2026-10-30T20:00-05:00; text \"AUSTIN TECH WEEK RETURNS OCTOBER 26-30, 2026\", Station Austin, 701 Brazos Street. The 2026 edition has just run (ended Oct 30), so last_date 2026-10-26 and recurring-tbd are right. No 2027 dates are published yet."
+  }
+]

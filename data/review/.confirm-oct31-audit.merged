@@ -1,0 +1,9 @@
+[
+  {
+    "name": "BSides COS",
+    "city": "Colorado Springs",
+    "status": "confirmed",
+    "cycle": "oct31-audit",
+    "evidence": "AUDIT 2026-10-31-i1-B1: auditor read bsidescos.org — the 2026 edition is postponed to next year. Record (last_date 2025-10-25, next blank, url bsidescos.org, fixed in oct29-t3) is correct. The duplicate dev.events feed record is dropped via data/feeds/place-overrides.json."
+  }
+]

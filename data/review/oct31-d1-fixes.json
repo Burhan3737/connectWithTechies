@@ -1,0 +1,351 @@
+[
+  {
+    "action": "add",
+    "reason": "healthwildcatters.com/pitch-day (organiser's page): 'finale of our 2026 Cohort at our headquarters at Pegasus Park ... Thursday, November 12, 2026, Pegasus Park | Dallas, TX', two pitch showings 3:30 and 5:30 PM, all 10 startups pitch. Home page: accelerator runs a ten-week program Sept-Nov annually since 2013. No earlier Pitch Day date published, so last_date left empty.",
+    "record": {
+      "name": "Health Wildcatters Pitch Day",
+      "type": "demo-day",
+      "topics": [
+        "healthtech",
+        "startups",
+        "venture"
+      ],
+      "city": "Dallas",
+      "region": "Texas",
+      "country": "United States",
+      "venue": "Pegasus Park, 3000 Pegasus Park Drive",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-12",
+      "next_date_end": "2026-11-12",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "healthcare founders, investors, health-system leaders, mentors",
+      "url": "https://www.healthwildcatters.com/pitch-day",
+      "description": "Demo day closing the Health Wildcatters accelerator's annual ten-week cohort: every startup in the class pitches to investors and the DFW health-innovation community, followed by a networking reception.",
+      "source": "https://www.healthwildcatters.com/pitch-day"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "dallas-fort-worth.aitinkerers.org (chapter's own site; JSON-LD startDate 2026-11-05T18:30-06:00): 'AI Tinkerers Dallas-Fort Worth: November Demo Night', Thu Nov 5 2026 6:30-8:30 PM; previous demo nights Sep 3, Jul 30, Jun 4 2026. Sep 3 event page says Kiln hosts at its Dallas location and the address is emailed to accepted attendees. Published on aitinkerers.org, which no feed reads, so hand-curated.",
+    "record": {
+      "name": "AI Tinkerers Dallas-Fort Worth",
+      "type": "meetup-series",
+      "topics": [
+        "ai",
+        "llms",
+        "agents",
+        "demos"
+      ],
+      "city": "Dallas",
+      "region": "Texas",
+      "country": "United States",
+      "venue": "Kiln (Dallas; address sent to accepted attendees)",
+      "cadence": "rolling",
+      "month": "Varies",
+      "next_date": "2026-11-05",
+      "next_date_end": "2026-11-05",
+      "last_date": "2026-09-03",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "AI engineers, technical founders, ML practitioners",
+      "url": "https://dallas-fort-worth.aitinkerers.org/",
+      "description": "Evening demo nights for people building with AI: short live demos with code, architecture deep dives and networking, held roughly every one to two months. Attendance is by application.",
+      "source": "https://dallas-fort-worth.aitinkerers.org/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "TexSAW (Texas Security Awareness Week), run by UT Dallas Computer Security Group. 2026: CSG's own Eventbrite listing '[FREE] TexSAW 2026: 3-Day Cybersecurity Capture-the-Flag', JSON-LD start 2026-02-27, ECSW building, Richardson TX, with an in-person event this year. 2025: cs.utdallas.edu article on the 14th annual TexSAW, whose in-person portion spanned three days with 89 attendees. It is in Richardson, a Dallas suburb. Our curated UTD events (HackUTD, WEHack) are filed there too. texsaw.org returned HTTP 522 on 2026-10-31. No 2027 date published, so it is recurring-tbd.",
+    "record": {
+      "name": "TexSAW",
+      "type": "ctf",
+      "topics": [
+        "cybersecurity",
+        "ctf",
+        "security"
+      ],
+      "city": "Richardson",
+      "region": "Texas",
+      "country": "United States",
+      "venue": "UT Dallas, Engineering and Computer Science West (ECSW)",
+      "cadence": "annual",
+      "month": "February",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-02-27",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "students, security hobbyists, CTF players",
+      "url": "https://texsaw.org",
+      "description": "Texas Security Awareness Week: an annual UT Dallas capture-the-flag competition with an internationally ranked online CTF plus a multi-day in-person programme of hands-on security workshops on campus.",
+      "source": "https://cs.utdallas.edu/33405/texsaw-2025-brings-cybersecurity-enthusiasts-together-for-hands-on-challenges-and-global-competition"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "hack-indy-2026.devpost.com (organiser's Devpost; JSON-LD 2026-03-27 to 2026-03-29): 'Purdue University in Indianapolis flagship hackathon, taking place from March 27-29, 2026', with check-in, overnight hacking and an opening ceremony on site. purdue.edu/indianapolis update (Apr 23 2026): 'the Purdue Computer Science Club's second annual hackathon', 130 participants. hackindy.com does not resolve. No 2027 date published, so it is recurring-tbd.",
+    "record": {
+      "name": "Hack Indy",
+      "type": "hackathon",
+      "topics": [
+        "ai",
+        "fintech",
+        "students"
+      ],
+      "city": "Indianapolis",
+      "region": "Indiana",
+      "country": "United States",
+      "venue": "Purdue University in Indianapolis",
+      "cadence": "annual",
+      "month": "March",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-03-27",
+      "status": "recurring-tbd",
+      "attendance": "130",
+      "cost": "varies",
+      "audience": "college students",
+      "url": "https://hack-indy-2026.devpost.com/",
+      "description": "Purdue University in Indianapolis's flagship student hackathon, run by the Purdue Computer Science Club: a weekend of overnight hacking, workshops and keynotes, judged by industry experts.",
+      "source": "https://www.purdue.edu/indianapolis/hack-indy-2026-reflecting-the-trailblazing-spirit-of-purdue-students-in-indianapolis/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "ventureclub.org/innovation-showcase (organiser's page): 'June 18, 2026 | Biltwell Event Center', an annual pitch competition running for nearly two decades. techpoint.org event page: '18th Annual Innovation Showcase', JSON-LD 2026-06-18, Biltwell Event Center, 950 S. White River Pkwy W. Dr., Indianapolis. No 2027 date published, so it is recurring-tbd.",
+    "record": {
+      "name": "Venture Club of Indiana Innovation Showcase",
+      "type": "demo-day",
+      "topics": [
+        "startups",
+        "venture",
+        "pitch-competition"
+      ],
+      "city": "Indianapolis",
+      "region": "Indiana",
+      "country": "United States",
+      "venue": "Biltwell Event Center",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-06-18",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "founders, angel and venture investors, Indiana startup community",
+      "url": "https://www.ventureclub.org/innovation-showcase",
+      "description": "Indiana's long-running annual startup pitch competition: nominated Indiana startups pitch on the main stage for three minutes each, alongside keynotes and investor panels.",
+      "source": "https://www.ventureclub.org/innovation-showcase"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "stlgamejam.com (organiser's site): 'Jan 30 - Feb 1, 2026 ... @ UMSL Millennium Student Center (MSC) Century Room A'. Earlier posts cover 2025 (Jan 24-26, UMSL) and 2019. UMSL Triton Connect listing: JSON-LD 2026-01-30T17:00 to 2026-02-01T18:00, in person on campus. GGJ 2027 runs 25-31 January 2027 (globalgamejam.org banner), but no St. Louis 2027 site has been posted, so it is recurring-tbd.",
+    "record": {
+      "name": "STL Game Jam",
+      "type": "game-jam",
+      "topics": [
+        "game-dev",
+        "games"
+      ],
+      "city": "St. Louis",
+      "region": "Missouri",
+      "country": "United States",
+      "venue": "University of Missouri-St. Louis, Millennium Student Center",
+      "cadence": "annual",
+      "month": "January",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-01-30",
+      "status": "recurring-tbd",
+      "attendance": "95",
+      "cost": "free",
+      "audience": "game developers, artists, students, hobbyists",
+      "url": "https://www.stlgamejam.com/",
+      "description": "St. Louis's Global Game Jam site, run by the local game-dev community: 48 hours to build a game solo or in a team, with food, round-the-clock room access and a closing showcase.",
+      "source": "https://www.stlgamejam.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "archgrants.org/programs/innovation-summit (organiser's page): 'On June 4, 2026, over 100 founders, investors, and corporate leaders came together at 18 Rails at The Foundry' for curated 1:1 meetings; page says 'a new iteration ... is coming this fall' with no dates yet. It is recurring-tbd.",
+    "record": {
+      "name": "Arch Grants Innovation Summit",
+      "type": "summit",
+      "topics": [
+        "startups",
+        "venture",
+        "corporate-innovation"
+      ],
+      "city": "St. Louis",
+      "region": "Missouri",
+      "country": "United States",
+      "venue": "18 Rails at The Foundry",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-06-04",
+      "status": "recurring-tbd",
+      "attendance": "100",
+      "cost": "varies",
+      "audience": "investors, corporate innovation leaders, Arch Grants portfolio founders",
+      "url": "https://archgrants.org/programs/innovation-summit/",
+      "description": "Arch Grants' deal-flow summit pairing its portfolio founders with investors and corporate partners through a full afternoon of curated, double opt-in one-on-one meetings.",
+      "source": "https://archgrants.org/programs/innovation-summit/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "uvichacks.com (club's own site) lists in-person hackathons on the UVic campus: Inspire Hackathon Oct 3-4 2025 (Hickman 105), Strudel Music Hackathon Nov 16 2025, Startup Hackathon Feb 27-28 2026, Claude Hackathon Mar 21 2026, Healthcare Hackathon Mar 27-28 2026 (ECS First Floor). Nothing is posted for Fall 2026, so it is recurring-tbd, with last_date the most recent hackathon.",
+    "record": {
+      "name": "UVic Hacks",
+      "type": "hackathon",
+      "topics": [
+        "students",
+        "software",
+        "social-impact"
+      ],
+      "city": "Victoria",
+      "region": "British Columbia",
+      "country": "Canada",
+      "venue": "University of Victoria (Hickman Building / ECS)",
+      "cadence": "rolling",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-03-27",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "university students",
+      "url": "https://www.uvichacks.com/",
+      "description": "University of Victoria student hackathon club running several themed one- and two-day hackathons each term (startup, healthcare, social-impact, creative coding), plus workshops, on campus.",
+      "source": "https://www.uvichacks.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "rebootcommunications.com/event/vipss2027 (organiser Reboot Communications): '29th Annual Victoria International Privacy & Security Summit ... March 10-12, 2027, Victoria, BC', hosted at the Victoria Conference Centre, 'fully in-person', up to 1,000 attendees. Organiser's events list: 28th annual edition March 3-5, 2026, Victoria, BC.",
+    "record": {
+      "name": "Victoria International Privacy & Security Summit",
+      "type": "summit",
+      "topics": [
+        "privacy",
+        "cybersecurity",
+        "ai",
+        "govtech"
+      ],
+      "city": "Victoria",
+      "region": "British Columbia",
+      "country": "Canada",
+      "venue": "Victoria Conference Centre",
+      "cadence": "annual",
+      "month": "March",
+      "next_date": "2027-03-10",
+      "next_date_end": "2027-03-12",
+      "last_date": "2026-03-03",
+      "status": "upcoming",
+      "attendance": "1000",
+      "cost": "paid",
+      "audience": "public-sector privacy, security and IT professionals, CISOs, policymakers",
+      "url": "https://www.rebootcommunications.com/event/vipss2027/",
+      "description": "Long-running in-person summit on privacy, cybersecurity and AI governance for the public sector and regulated industries, with keynotes, panels and workshops.",
+      "source": "https://www.rebootcommunications.com/event/vipss2027/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "charlottefintechweek.com (organiser RevTech Labs): 'June 7 - 11, 2027, Charlotte, NC'; the page's script data gives the 2026 edition as June 8-12, 2026. grepbeat.com (Jun 16 2026) covers the 2026 week and its anchor Fintech + Insurtech Generations conference.",
+    "record": {
+      "name": "Charlotte Fintech Week",
+      "type": "tech-week",
+      "topics": [
+        "fintech",
+        "insurtech",
+        "startups"
+      ],
+      "city": "Charlotte",
+      "region": "North Carolina",
+      "country": "United States",
+      "venue": "Various venues across Charlotte",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "2027-06-07",
+      "next_date_end": "2027-06-11",
+      "last_date": "2026-06-08",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "fintech and insurtech founders, investors, bankers, corporate innovators",
+      "url": "https://www.charlottefintechweek.com/",
+      "description": "A week of community-hosted fintech and insurtech events across Charlotte (panels, workshops, pitch events, happy hours), anchored by RevTech Labs' Fintech + Insurtech Generations conference.",
+      "source": "https://www.charlottefintechweek.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "pitchbreakfast.com (organiser's site): upcoming 11 Nov 2026 and 09 Dec 2026, 8:30-10:00 AM, Sparkhouse West, 2400 Greenland Avenue; 'Charlotte's monthly founder showcase', three startups pitch. Humanitix event pages: Oct 14 2026 and Nov 11 2026 (JSON-LD), free. The feeds missed it because it is ticketed on Humanitix, which no feed reads. Its old Meetup group (meetup.com/pitchbreakfast) no longer exists.",
+    "record": {
+      "name": "PitchBreakfast",
+      "type": "demo-day",
+      "topics": [
+        "startups",
+        "pitch",
+        "venture"
+      ],
+      "city": "Charlotte",
+      "region": "North Carolina",
+      "country": "United States",
+      "venue": "Sparkhouse West (Do Greater Foundation), 2400 Greenland Avenue",
+      "cadence": "monthly",
+      "month": "Varies",
+      "next_date": "2026-11-11",
+      "next_date_end": "2026-11-11",
+      "last_date": "2026-10-14",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "founders, angel investors, Charlotte startup community",
+      "url": "https://pitchbreakfast.com/",
+      "description": "Charlotte's monthly breakfast founder showcase, held on the second Wednesday: three startups each give a six-minute pitch, then take ten minutes of feedback from an investor panel and the audience, followed by networking.",
+      "source": "https://pitchbreakfast.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "ascendleadership.org event page 'Ascend Charlotte - 2026 AI Summit' (JSON-LD 2026-06-18 08:30-17:00): 'The Charlotte AI Summit ...' at Central Piedmont Community College Parr Center, 1201 Elizabeth Ave. clture.org (Jun 16 2026): free annual summit run by the Carolinas Asian-American Chamber of Commerce. The first edition was June 20 2025, at the same venue, per cpcc.edu news. The CPCC event page (cpcc.edu/events/charlotte-ai-summit) now returns 404. No 2027 date published, so it is recurring-tbd.",
+    "record": {
+      "name": "Charlotte AI Summit",
+      "type": "summit",
+      "topics": [
+        "ai",
+        "workforce",
+        "business"
+      ],
+      "city": "Charlotte",
+      "region": "North Carolina",
+      "country": "United States",
+      "venue": "Central Piedmont Community College, Parr Center",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-06-18",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "business leaders, founders, educators, career changers",
+      "url": "https://ascendleadership.org/master-events/char-ai-summit-0626",
+      "description": "Free, full-day community summit on applying AI in healthcare, finance, entrepreneurship and the workforce, with speakers from regional employers and tech firms.",
+      "source": "https://ascendleadership.org/master-events/char-ai-summit-0626"
+    }
+  }
+]

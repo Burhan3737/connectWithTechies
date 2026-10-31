@@ -1,0 +1,133 @@
+{
+  "pass": "oct31-r1",
+  "date": "2026-10-31",
+  "returning": [
+    {
+      "name": "AgentVerse",
+      "verdict": "rejected",
+      "reason": "Held at University College London - Marshgate (London, UK), outside the US/Canada."
+    },
+    {
+      "name": "Datathon PolyFinances 2025",
+      "verdict": "added",
+      "reason": "polyfinances.ca/datathon: DATATHON 2026, 14 et 15 novembre, Polytechnique Montréal, Pavillon Lassonde; in person. Add with 2026-11-14 to 2026-11-15."
+    },
+    {
+      "name": "Cam Hack 2025",
+      "verdict": "rejected",
+      "reason": "Held in Cambridge, UK, outside the US/Canada."
+    },
+    {
+      "name": "DTE Designathon 2025",
+      "verdict": "unresolved",
+      "reason": "Dream Team Engineering (UF) Designathon. UF engineering events page lists only the 2025 edition (Nov 8-9, Newell Hall); Devpost shows it was invite-only for registered college students. Web search found no 2026 edition. Retry later."
+    },
+    {
+      "name": "✰ LIVE AI Best Coast 2025",
+      "verdict": "unresolved",
+      "reason": "Multi-campus (Berkeley/Stanford/UCLA/UCSD), described as fully hybrid. Searches found only the 2025 edition and a separate 'LIVE AI Ivy Plus 2026' (East Coast, Feb 2026); no 2026 Best Coast edition, and no organiser site beyond Devpost."
+    },
+    {
+      "name": "TigerHacks 2025",
+      "verdict": "unresolved",
+      "reason": "tigerhacks.missouri.edu still shows the 2025 edition (Fri Nov 7-9, (c) 2025); annual Mizzou hackathon held each November. No 2026 dates announced and not in MLH 2027 season, so added recurring-tbd, last_date 2025-11-07, Columbia, Missouri. — Orchestrator: not added; described as annual but no 2026 edition announced (curator brief: add only when announced)."
+    },
+    {
+      "name": "BDPA Indianapolis Hackathon",
+      "verdict": "unresolved",
+      "reason": "2025 was BDPA Indy's 'inaugural' hackathon (Eventbrite, Exos IT, Nov 8 2025, students only). No 2026 edition found by web search; no organiser event page beyond Eventbrite/Devpost."
+    },
+    {
+      "name": "Datathon - INFO Buffs and HackCU",
+      "verdict": "unresolved",
+      "reason": "calendar.colorado.edu/event/info-buffs-hackcu-datathon JSON-LD startDate 2025-11-08 (CMDI Studio, Boulder); no 2026 listing on the CU calendar or hackcu.org (whose main event is March). 6 participants in 2025."
+    },
+    {
+      "name": "HackASU - 2025",
+      "verdict": "unresolved",
+      "reason": "Debut hackathon of ASU's Claude Builder Club (Memorial Union, Tempe, Nov 2025, per State Press); Devpost restricted to ASU students, invite only. hackasu.com does not resolve; no 2026 edition found."
+    },
+    {
+      "name": "Hacktually 2025",
+      "verdict": "unresolved",
+      "reason": "One-day HackMerced mini-event at UC Merced (Nov 8 2025, 36 participants). No 2026 edition found by web search or in the MLH 2027 season; no Hacktually page on HackMerced's channels."
+    },
+    {
+      "name": "HackUTD 2025: Lost in the Pages",
+      "verdict": "exists",
+      "reason": "Curated record 'HackUTD', Richardson, Texas, next_date 2026-11-07 (MLH 2027 season also lists HackUTD Nov 7-8 2026, Richardson)."
+    },
+    {
+      "name": "UB Hacking Fall 2025",
+      "verdict": "added",
+      "reason": "ubhacking.cse.buffalo.edu (title 'UB Hacking 2026'; bundle config dates 'November 7th & 8th', year 2026) and MLH 2027 season (Nov 7-8 2026, Buffalo, physical) agree. Added Buffalo, New York, 2026-11-07 to 2026-11-08."
+    },
+    {
+      "name": "2025 UXC NYU Design-a-thon",
+      "verdict": "unresolved",
+      "reason": "2025 edition was NYU current-students-only (Luma 'Current Students Only'; NYU Engineering events page). Search found a UXC NYU Design Week listing (Nov 9-13 2026, aggregator only; its Luma link returns 404) but no 2026 Design-a-thon on an organiser page."
+    },
+    {
+      "name": "Winnipeg Stupid Hackathon",
+      "verdict": "unresolved",
+      "reason": "One-day event at Red River College Polytechnic EDC (Nov 8 2025, 22 participants). Devpost lists no organiser site; web searches for a Winnipeg stupid hackathon in 2026 found nothing."
+    },
+    {
+      "name": "Champlain Code Quest 2025",
+      "verdict": "unresolved",
+      "reason": "Champlain College Saint-Lambert's student-organised Code Quest (first held March 2025, organised by a third-year CS student; Nov 2025 edition on Devpost). champlainsaintlambert.ca news has no 2026 edition; college-internal event."
+    },
+    {
+      "name": "WiC Hack Days",
+      "verdict": "unresolved",
+      "reason": "KU Women in Computing event restricted to KU students, invite only, 16 participants (LEEP 2420, Nov 13-14 2025). No 2026 edition on ukansas-wic.github.io or in search."
+    },
+    {
+      "name": "305 Hackathon Edition November 2025 v.SB — 305Hackathons.vercel.app",
+      "verdict": "exists",
+      "reason": "Same FIU-based 305 hackathon series is already carried by the feed (bevy, GDG on Campus FIU): 'Build with Gemma: 305 Veterans Hackathon Edition November 2026' with Session A in person at FIU Everglades Hall on Nov 6 2026, plus monthly editions through July 2027 (city spelled 'Maimi' in the feed)."
+    },
+    {
+      "name": "Swan Hacks 2025",
+      "verdict": "unresolved",
+      "reason": "hackclub.ece.iastate.edu/html/swanhacks.html: 'official hackathon event held annually at Iowa State' (page still shows 2024); 2025 ran Nov 15-16 at Coover Hall. No 2026 date published, so added recurring-tbd, last_date 2025-11-15, Ames, Iowa. — Orchestrator: not added; described as annual but no 2026 edition announced (curator brief: add only when announced)."
+    },
+    {
+      "name": "VizQuest",
+      "verdict": "unresolved",
+      "reason": "UT Dallas-students-only, invite-only one-day event (Nov 15 2025). No organiser page or 2026 edition found by web search."
+    },
+    {
+      "name": "WiE Hackathon 2025",
+      "verdict": "added",
+      "reason": "uwaterloo.ca/women-in-engineering/events/wie-hackathon-2026: Saturday, November 7, 2026, 8am-8pm, PSE Faculty Hall (7th floor), Waterloo. Added."
+    },
+    {
+      "name": "Toronto Anthropic AI Hackathon",
+      "verdict": "unresolved",
+      "reason": "Student-organised hackathon at Bahen Centre, UofT (Nov 19-23 2025; Luma page marked past). EdTech Innovation Hub coverage (Nov 26 2025) mentions only hopes for 2026; no 2026 edition found."
+    },
+    {
+      "name": "FitchGroup Codeathon '25 - Drive Sustainability using AI - Chicago (Hybrid)",
+      "verdict": "rejected",
+      "reason": "Invite-only corporate codeathon restricted to UIC & UIUC students (Devpost eligibility), one in-person day at Fitch's Chicago office then virtual. Fitch's codeathons change city and theme each year (NY Oct 2024, Chicago Dec 2024, London 2023/2024); not a public in-person event and no 2026 edition announced."
+    },
+    {
+      "name": "FitchGroup Codeathon '25 - Drive Sustainability using AI - New York (Hybrid)",
+      "verdict": "rejected",
+      "reason": "Invite-only, college-students-only hybrid corporate codeathon at Fitch Ratings' NY office (Devpost: 'Invite only'). Not a public in-person event; no 2026 edition announced."
+    },
+    {
+      "name": "Figma Make-a-thon @ Waterloo",
+      "verdict": "unresolved",
+      "reason": "Accepted-students-only, invite-only one-day event at UW Engineering 7 (Nov 22 2025). Friends of Figma lists no Waterloo make-a-thon for 2026; no organiser page found."
+    },
+    {
+      "name": "HackSLC",
+      "verdict": "unresolved",
+      "reason": "St. Lawrence College Kingston's first student-led hackathon (Luma JSON-LD 2025-11-29, Innovation Hall; SLC blog Dec 9 2025). No 2026 edition announced; hackslc.ca does not resolve."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}

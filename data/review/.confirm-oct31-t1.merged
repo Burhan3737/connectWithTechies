@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Open Door Leadership Series",
+    "city": "Portland",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "Roux Institute events REST API (roux.northeastern.edu/wp-json/tribe/events/v1/events?search=open door, start 2026-01-01) returns Open Door sessions on 2026-06-03, 2026-09-30 and 2026-10-28, with none later. The past-events search shows the irregular history (2025-02-26, 2025-04-02, 2025-09-17...) at 100 Fore Street, Portland. The upcoming list (11 events through Dec 15, 2026) has no Open Door session. Record (last_date 2026-10-28, next blank, recurring-tbd, rolling) is correct."
+  },
+  {
+    "name": "Socratica",
+    "city": "Waterloo",
+    "status": "corrected",
+    "cycle": "oct31-t1",
+    "evidence": "wygo.world/o/socratica (organiser's RSVP page, linked from socratica.info): next session 'Socratica F26: Act VIII', Sunday November 1, 10:00am, Accelerator Centre, Waterloo; last was 'Spookratica F26: Act VII' on October 25 at the same venue. socratica.info (via WebFetch) confirms weekly in-person Sunday sessions in Waterloo. Set next_date 2026-11-01, upcoming."
+  },
+  {
+    "name": "Venture Café Phoenix Thursday Gathering",
+    "city": "Phoenix",
+    "status": "corrected",
+    "cycle": "oct31-t1",
+    "evidence": "community.venturecafephoenix.org event 247 (Oct 29, 2026, 4:30-7 PM MST, Thursday Gathering) has run; event 248 (Nov 5, 2026, 4:30-7 PM MST, 'Build Smart, Spend Smarter') is next; event 249 (Nov 12) is at 850 PBC. In person: mentor hours are on-site only. venturecafephoenix.org/programs/thursday-gathering (via WebFetch) says 'Every Thursday'. Set next 2026-11-05 and last 2026-10-29."
+  },
+  {
+    "name": "California Government Technology Summit",
+    "city": "Sacramento",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "events.govtech.com/California-Government-Technology-Summit: title 'California Government Technology Summit 2026', JSON-LD startDate 2026-08-25T08:00, and the banner 'This Event is now Complete. Join us next year!' gives no 2027 date. Matches last_date 2026-08-25 with recurring-tbd."
+  },
+  {
+    "name": "Capture Ohio: OCRI Statewide CTF",
+    "city": "Cincinnati",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "uc.edu/news/articles/2026/02/ocri-ctf.html (UC, which hosts OCRI): 'Event Information (passed) Date: April 11, 2026 11:00 AM - 4:00 PM, Location: Clifton Court Hall, Room 1210'. JSON-LD startDate 2026-04-11. It is the second annual edition; the 2025 edition was April 12, 2025. A web search found no 2027 date. Record correct."
+  },
+  {
+    "name": "CGU Hacks",
+    "city": "Claremont",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "research.cgu.edu/ai-humanity-lab/hackathon/ (organiser): '2nd Edition - CGU Hacks 2025, Date: November 14-15, 2025' and 'Upcoming - 3rd Edition: CGU Hacks 2026, Date: Late October or Early November 2026 (TBD), Location: Claremont Graduate University (TBD)'. No exact date published; cguhacks.devpost.com still shows only the 2025 edition. Record (last 2025-11-14, recurring-tbd) is correct, but the event may be imminent and should be re-checked soon."
+  },
+  {
+    "name": "Commit Your Code",
+    "city": "Plano",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "commityourcode.com: 'Commit Your Code 2027 ... 2027 · Dates TBA | Dallas-Fort Worth, TX', with 2026 replays for Day 1 Thu Sep 3, 2026 and Day 2 Fri Sep 4, 2026. /history: 'September 3-4, 2026 at the Capital One Campus in Plano, Texas'. /about: 'CYC27 ... Dates and venue are announced soon'. Record (last 2026-09-03, recurring-tbd) is correct."
+  },
+  {
+    "name": "Global Game Jam YYC",
+    "city": "Calgary",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "globalgamejam.org/jam-sites/2026/cgda: CGDA site at Platform Innovation Center, 407 9 Ave SE, Calgary, 'In-Person Only', January 30th to February 1st (2026). globalgamejam.org/jam-sites/2027/cgda returns 404, so no 2027 Calgary site is registered yet, although GGJ 2027 is 25-31 January 2027. Record (last 2026-01-30, recurring-tbd) is correct."
+  },
+  {
+    "name": "Global Power Platform Bootcamp Calgary",
+    "city": "Calgary",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "powerplatformbootcamp.com/2027 location-detail page for Calgary, Canada: registered for 2027 (organizer Kunal Tripathy), 'Registration: Not Open'. The only dates shown are the global 'February 19 - 20, 2027' window; the bootcamp is a one-day event per city and Calgary's day is not given, so next_date correctly stays blank. last_date 2026-02-21 was not contradicted. Record correct as recurring-tbd."
+  },
+  {
+    "name": "Hackfest CTF",
+    "city": "Quebec City",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "hackfest.ca/en/: Hackfest 2026, October 29-31, 2026, Quebec City Convention Centre, 1000 Boul. René-Lévesque Est; 'Hackfest CTF (24h) Oct 29, 6pm - Oct 30, 6pm' (also in JSON-LD 2026-10-29T18:00 to 2026-10-30T18:00). It has now run, and last_date 2026-10-29 is correct. No 2027 date is posted."
+  },
+  {
+    "name": "HackMiami",
+    "city": "Sunny Isles Beach",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "hackmiami.com: 'HackMiami 1101 May 12 -16, 2026 at Marenas Beach Resort - 18683 Collins Avenue, Sunny Isles Beach, FL' (JSON-LD startDate 2026-05-12, end 2026-05-16): trainings May 12-15, talks May 16. No later edition announced. Matches last_date 2026-05-12."
+  },
+  {
+    "name": "Impact Venture Demo Day",
+    "city": "Ann Arbor",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "luma.com/tsgc12gk (hosted by Business+Impact at Michigan Ross): 'Impact Venture Demo Day 2026', Past Event, JSON-LD startDate 2026-04-16T17:00-04:00, Davidson Winter Garden, Ross School of Business, 701 Tappan Ave, Ann Arbor. Matches the record; no 2027 event posted."
+  },
+  {
+    "name": "MAIS Hacks",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "mcgillai.com/events/2026-2027 (McGill AI Society): 'MAIS Hacks 2026 TBD Trottier Mezzanine' with no date published. MLH season pages for 2026 and 2027 have no MAIS Hacks listing. Record (last 2025-11-01, recurring-tbd, Trottier Building) is correct."
+  },
+  {
+    "name": "Midwest Tech Conference",
+    "city": "Columbia",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "mwtc.io: 'A tech conference for the people, October 7th, 2026 8am to 5pm, Stoney Creek Inn, Columbia, MO', $10 and free for students. No later date. Matches last_date 2026-10-07."
+  },
+  {
+    "name": "MidwestCon",
+    "city": "Cincinnati",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "midwestcon.live: title 'MidwestCon 2026 | AI & Tech Conference in Cincinnati', JSON-LD startDate 2026-09-08T08:00 and endDate 2026-09-11. No 2027 date. Matches last_date 2026-09-08."
+  },
+  {
+    "name": "Pipeline Innovators Pitch Showcase",
+    "city": "Kansas City",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "pipelineentrepreneurs.com/innovators2026: 'On June 5, 2026 in Kansas City, Pipeline Entrepreneurs will hold both its Annual Pitch Showcase as well as our Innovators Gala'. /pitch-showcase-2026: 'JUNE 5 | UNION STATION PLANETARIUM, 30 W Pershing Road'. Matches the record; no 2027 date."
+  },
+  {
+    "name": "Ray Summit",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "anyscale.com/ray-summit redirects to /ray-summit/2026: 'August 24 - 26 2026 · San Francisco, CA' (training day Aug 24, conference Aug 25-26), venue San Francisco Marriott Marquis (via WebFetch). No 2027 mention. Matches last_date 2026-08-24."
+  },
+  {
+    "name": "Velocity Pitch Competition",
+    "city": "Waterloo",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "uwaterloo.ca/events/events/velocity-pitch-competition: 'Saturday, September 12, 2026 10:30 am - 4:00 pm EDT ... STC room 0010', host Velocity. velocityincubator.com/programs-events/vpc shows the 2026 edition kicking off Waterloo Tech Week, with applications closed. Matches the record."
+  },
+  {
+    "name": "Venture Madness",
+    "city": "Phoenix",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "venturemadness.com (Invest Southwest): 'Congratulations to the 2026 Venture Madness Conference & Expo Winners! April 9, 2026'. No 2027 date is posted. Matches last_date 2026-04-09."
+  },
+  {
+    "name": "Waterloo Tech Week",
+    "city": "Waterloo",
+    "status": "confirmed",
+    "cycle": "oct31-t1",
+    "evidence": "waterlootechweek.ca FAQ: 'Kickoff Event on September 11, then ... six days of community-led talks, demos, panels, meetups ... from September 12-17, 2026', 'Across Waterloo'. No 2027 dates. Matches last_date 2026-09-12."
+  }
+]

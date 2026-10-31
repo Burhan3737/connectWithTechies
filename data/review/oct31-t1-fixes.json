@@ -1,0 +1,10 @@
+[
+  { "match": { "name": "Socratica", "city": "Waterloo" },
+    "action": "update",
+    "reason": "wygo.world/o/socratica (organiser's event page; socratica.info links RSVPs there): Upcoming Events lists 'November 1st Sunday, Socratica F26: Act VIII 10:00am, Accelerator Centre, Waterloo', registrations open. Past events confirm the last session was 'Spookratica F26: Act VII', Sunday October 25, Accelerator Centre, so the existing last_date stays as it is.",
+    "set": { "next_date": "2026-11-01", "next_date_end": "2026-11-01", "status": "upcoming" } },
+  { "match": { "name": "Venture Café Phoenix Thursday Gathering", "city": "Phoenix" },
+    "action": "update",
+    "reason": "community.venturecafephoenix.org (organiser's event platform): event 247 'Thursday Gathering - Unlocking the SBIR Roadmap for Deep Tech Startups, Oct 29, 2026, 4:30-7:00 PM MST' has now run, which makes it the latest edition (the record had Oct 22). Event 248 'Thursday Gathering - Build Smart, Spend Smarter, Nov 5, 2026, 4:30 PM - 7:00 PM MST' is next. It is in person: mentor hours 'must be done on-site at the event'. Event 249 (Nov 12) gives the venue as 850 PBC, matching the record.",
+    "set": { "next_date": "2026-11-05", "next_date_end": "2026-11-05", "last_date": "2026-10-29", "status": "upcoming" } }
+]

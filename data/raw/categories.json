@@ -3615,7 +3615,7 @@
       "sre",
       "open-spaces"
     ],
-    "city": "Boston",
+    "city": "Cambridge",
     "region": "Massachusetts",
     "country": "United States",
     "venue": "Microsoft NERD Center, Cambridge MA",
@@ -3630,7 +3630,7 @@
     "audience": "DevOps engineers, SREs, platform teams",
     "url": "https://devopsdays.org/events/2026-boston/welcome/",
     "description": "Boston's DevOpsDays, a two-day community conference for the New England platform engineering community.",
-    "source": "https://devopsdays.org/events"
+    "source": "https://devopsdays.org/events/2026-boston/welcome/"
   },
   {
     "name": "DevOpsDays Los Angeles",
@@ -3969,7 +3969,7 @@
     "city": "Boston",
     "region": "Massachusetts",
     "country": "United States",
-    "venue": "",
+    "venue": "Boston Convention & Exhibition Center",
     "cadence": "annual",
     "month": "Varies",
     "next_date": "2027-05-10",
@@ -3981,7 +3981,7 @@
     "audience": "data scientists, ML engineers",
     "url": "https://odsc.ai/east/",
     "description": "The east coast edition of the Open Data Science Conference, a hands-on training-heavy event for data science and machine learning practitioners.",
-    "source": "https://odsc.com/"
+    "source": "https://odsc.ai/east/"
   },
   {
     "name": "ODSC West",

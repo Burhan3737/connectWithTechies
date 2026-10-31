@@ -1,0 +1,12 @@
+[
+ {
+  "url": "https://shiftkeylabs.ca/events/?ical=1",
+  "name": "ShiftKey Labs (Dalhousie)",
+  "reason": "ShiftKey Labs is Dalhousie Faculty of Computer Science's lab in the Goldberg CS Building, Halifax, with a public The Events Calendar .ics. In 2026 it ran Global Game Jam Halifax, DHS Hack to the Future, Hack the Elements, the DalCTF capture-the-flag, SURGE Neuro-Hackathon, Mission Accepted Space Hackathon and AI2Market Demo Day, all in person. It also lists many student career workshops, which the relevance gate should drop."
+ },
+ {
+  "url": "https://api.lu.ma/ics/get?entity=calendar&id=cal-9rQK3BW0q9DvZPp",
+  "name": "Unreal LA",
+  "reason": "Unreal LA's Luma calendar (cal-9rQK3BW0q9DvZPp, no public slug), the Los Angeles Unreal Engine community. It ran the in-person Unreal Jam LA 2026 game jam (Aug 20-21, ASU California Center Broadway) and a May 2026 meetup. It covers LA's missing game-jam type."
+ }
+]

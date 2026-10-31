@@ -117,7 +117,10 @@ The snapshot matters: the queue regenerates after every run, so without it the a
 cannot tell "the curator skipped this row" from "the curator was never given it", and
 will report the former.
 
-Split the working file into chunks of ~25 rows and dispatch one `curator` per chunk in
+Split `data/review/DISPATCHED.tsv` — the snapshot, not `TO-VERIFY.tsv` — into chunks of
+~25 rows. The snapshot also carries the unsettled `NEEDS-AGENT.tsv` rows (shared pages,
+script-blocked dates) that `TO-VERIFY.tsv` does not; chunking the latter left a row
+undispatched in the oct31 cycle (audit 2026-10-31-i1-B1). Dispatch one `curator` per chunk in
 parallel. Tell each its chunk path and a distinct pass name. The curator definition
 carries everything else — do not rewrite its brief from memory, that is how hard-won
 detail gets lost.

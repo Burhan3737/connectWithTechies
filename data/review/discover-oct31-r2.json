@@ -1,0 +1,133 @@
+{
+  "pass": "oct31-r2",
+  "date": "2026-10-31",
+  "returning": [
+    {
+      "name": "SensAI Hack 2025 - San Francisco",
+      "verdict": "unresolved",
+      "reason": "Organiser site sensaihack.com lists its 2026 SF stop as 'Worlds in Action Hack [01-SF]', March 13-15 2026 (already held), and next stops LA July 18-19 2026 (held) and 'Global Online Hack: To be announced'. No San Francisco edition after March 2026 is announced. Searched 'SensAI Hack 2026 San Francisco': only past Luma pages (luma.com/sensai)."
+    },
+    {
+      "name": "CrabHacks",
+      "verdict": "unresolved",
+      "reason": "Devpost crabhacks25.devpost.com: free annual one-day hackathon for DMV high-school students, Dec 7 2025, Capital Workspaces Bethesda MD, 62 participants. Organiser domain crabhacks.org now serves only a registrar 'This domain is coming soon' placeholder; no 2026 edition announced. Searched 'CrabHacks 2026': only a 'Date TBD' aggregator listing."
+    },
+    {
+      "name": "Tiger HaCCs 1.0",
+      "verdict": "rejected",
+      "reason": "Closed campus event: tiger-haccs-1-0.devpost.com says 'Participation is limited to registered CC students' (Colorado College's first interdisciplinary hackathon, Dec 7 2025, Tutt Science Center, Colorado Springs, 13 participants). Not open to the public; no second edition announced."
+    },
+    {
+      "name": "ValleyHacks",
+      "verdict": "unresolved",
+      "reason": "Organiser site valleyhacks.org still shows the 2026 edition as done ('Mission Accomplished... Jan 10, 2026 // Newark, CA', a 7-hour student hackathon at Newark Library). No 2027 edition announced on the site."
+    },
+    {
+      "name": "Hack the Bias 2026",
+      "verdict": "unresolved",
+      "reason": "Devpost hack-the-bias-2026-28057.devpost.com: Robogals UCalgary, 36-hour in-person hackathon Jan 16-18 2026 at UCalgary ENG 60 (2025 edition was Mar 22-23 2025). No organiser site beyond a Notion guide; hackthebias.ca/.com do not resolve. Searched 'Hack the Bias 2027 Robogals Calgary': no 2027 edition."
+    },
+    {
+      "name": "HackHive 2026",
+      "verdict": "unresolved",
+      "reason": "Ontario Tech event page (events.ontariotechu.ca/2026/01/ontario-tech-university-hackathon-2026-hackhive.php) JSON-LD Jan 23-25 2026, Oshawa; news.ontariotechu.ca says the 2026 edition moved to virtual because of weather. hackhive.ca returns 404; hackhive.devfolio.co is an unrelated Indore, India event. Searched 'HackHive 2027 Ontario Tech': nothing announced."
+    },
+    {
+      "name": "13Hacks",
+      "verdict": "unresolved",
+      "reason": "Devpost 13hacks2026.devpost.com: United Sikh Movement's first hackathon, Jan 23-25 2026, UC Berkeley Anna Head Hall, 29 participants. 13hacks.com is an unrelated fitness site; no organiser page found. Searched '13Hacks United Sikh Movement 2027': nothing."
+    },
+    {
+      "name": "HackSU 2026",
+      "verdict": "unresolved",
+      "reason": "Devpost hacksu-2026.devpost.com: Seattle U ACM/ACM-W/Girls Who Code, Jan 24-25 2026, Sinegal Building, Seattle; seattleu.edu newsroom covers the 2025 and 2026 editions. No 2027 edition announced; searched 'HackSU Seattle University ACM hackathon 2027'."
+    },
+    {
+      "name": "RoseHack 2026",
+      "verdict": "unresolved",
+      "reason": "RoseHack is UCR WinC's annual women-centric hackathon (Jan 24-25 2026 per devpost). acm.cs.ucr.edu/hacks/rosehack lists editions only through 2025. rosehack.com is squatted (STAR88 slot-gambling site). Searched 'RoseHack 2027 UC Riverside': no 2027 announcement; not on the MLH 2027 season."
+    },
+    {
+      "name": "UWinnipeg Hacks",
+      "verdict": "unresolved",
+      "reason": "Devpost uwinnipeg-hacks.devpost.com: UWinnipeg ACSSA + ACM Student Chapter, Jan 24-25 2026, Bulman Centre, Winnipeg, 46 participants; uwinnipeg.acm.org event page marked passed. Searched 'UWinnipeg Hacks 2027': no next edition announced."
+    },
+    {
+      "name": "IC Hack 26",
+      "verdict": "rejected",
+      "reason": "Outside the US/Canada: IC Hack is Imperial College London's hackathon (devpost links my.ichack.org), London, UK."
+    },
+    {
+      "name": "Royal Hackaway v9",
+      "verdict": "rejected",
+      "reason": "Outside the US/Canada: Royal Hackaway is Royal Holloway, University of London's hackathon (Windsor Building, Egham, UK)."
+    },
+    {
+      "name": "UTRA Hacks 2026",
+      "verdict": "unresolved",
+      "reason": "Organiser site hackathon.utra.ca still shows 'January 31 - February 1, 2026 - In-person event' (U of T Myhal/Bahen, Toronto). No 2027 dates or announcement on the site, not on the MLH 2027 season list; searched 'UTRA Hacks 2027'. Strong annual candidate to retry nearer January."
+    },
+    {
+      "name": "SFHacks 2026 Test",
+      "verdict": "exists",
+      "reason": "Devpost test page for SF Hacks (sfhacks-2026-test.devpost.com, SFSU). Already held as 'SF Hacks', San Francisco (curated, next_date 2027-02-19, url sfhacks.io)."
+    },
+    {
+      "name": "CXC 2026 - AI Hackathon",
+      "verdict": "unresolved",
+      "reason": "Devpost cxc-2026-ai-hackathon.devpost.com: UW Data Science Club's CxC, Feb 6-8 2026, UWaterloo STC. Club sites cxc.uwdsc.ca and uwdsc.ca did not respond (curl status 0). Searched 'CxC 2027 Waterloo Data Science Club hackathon': no 2027 edition announced."
+    },
+    {
+      "name": "AstonHack11",
+      "verdict": "rejected",
+      "reason": "Outside the US/Canada: AstonHack is at Aston University, Birmingham, UK."
+    },
+    {
+      "name": "G-Hacks 2026",
+      "verdict": "unresolved",
+      "reason": "Devpost g-hacks-2026.devpost.com: Geomatics Engineering Students Society, UCalgary, Feb 7-8 2026, 'Registered Participants Only', students only, 58 participants. No organiser page found (ghacks.ca does not resolve) and no 2027 edition announced."
+    },
+    {
+      "name": "KU Intramural Programming Competition",
+      "verdict": "rejected",
+      "reason": "Intramural (in-house) contest of ACM at KU: ku-ipc.devpost.com, Feb 7 2026 at LEEP2, Lawrence, students only, 12 participants. A one-day internal programming competition for KU students rather than a public event; no next edition announced."
+    },
+    {
+      "name": "TIDALHACK:26",
+      "verdict": "unresolved",
+      "reason": "Devpost tidalhack-26.devpost.com: TIDALHACK:26, Feb 7-8 2026, Texas A&M MSC Bethancourt, College Station, 234 participants (earlier editions Spring 2025 and 2024). tidalhack.org/.com do not resolve; searched 'TIDALHACK 2027 Texas A&M': no 2027 edition announced."
+    },
+    {
+      "name": "WinHacks 2026",
+      "verdict": "unresolved",
+      "reason": "Organiser site winhacks.ca still shows WinHacks 2026, February 7-8 (Ed Lumley Centre for Engineering Innovation, Windsor ON); 'Windsor's annual hackathon' since 2019. No 2027 dates or announcement; searched 'WinHacks 2027 Windsor hackathon'. Strong annual candidate to retry."
+    },
+    {
+      "name": "Xenia Hackathon 2026",
+      "verdict": "rejected",
+      "reason": "Outside the US/Canada: Xenia Hackathon 2026 was held at PICT, Pune, India."
+    },
+    {
+      "name": "GRiP Designathon Spring 2026",
+      "verdict": "unresolved",
+      "reason": "UF engineering calendar eng.ufl.edu/news-events/events/grip-designathon: GRiP Designathon 02/15/2026, 9am-9pm, a 12-hour student design event by GRiP, Gainesville. No later edition (Fall 2026 or Spring 2027) listed on eng.ufl.edu or faculty.eng.ufl.edu/grip."
+    },
+    {
+      "name": "BamaBuilds 2026",
+      "verdict": "rejected",
+      "reason": "Closed campus event: bamabuilds-2026.devpost.com restricts entry to 'The University of Alabama Students' (college students only), Feb 20-22 2026, Cyber Hall, Tuscaloosa, 18 participants. Not open to the public; bamabuilds.com does not resolve."
+    },
+    {
+      "name": ".devHacks 2026",
+      "verdict": "unresolved",
+      "reason": "Devpost devhacks-2026.devpost.com: UofM .devClub, Feb 20-21 2026, EITC, University of Manitoba, Winnipeg. devclub.ca loads an empty SPA shell; devclub.ca/devhacks/2026 and /2027 return 404. Searched '.devHacks 2027 University of Manitoba': nothing."
+    },
+    {
+      "name": "Hack Arizona HackDay ",
+      "verdict": "unresolved",
+      "reason": "hack.arizona.edu: 'Mini Hackathon Hack Arizona: HackDay 2026 ... 52 students built 22 projects in just 7 hours' (Feb 20 2026, Tucson). It is a one-day spin-off of Hack Arizona, which we hold as 'Hack Arizona', Tucson (curated, recurring-tbd). No HackDay 2027 announced on the site."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}

@@ -1,0 +1,276 @@
+[
+ {
+  "match": {
+   "name": "Michigan DevFest",
+   "city": "Detroit"
+  },
+  "action": "update",
+  "reason": "midevfest.com (GDG Detroit's own site; the date is in the JS bundle index-BIrtMrQm.js): 'November 13-14, 2026', schema.org Event startDate 2026-11-13T08:00-05:00 endDate 2026-11-14T17:00-05:00, OfflineEventAttendanceMode, location 'Hollywood Casino Hotel at Greektown', Conference Center, 555 E. Lafayette St, Detroit. The record held next_date '' with last_date 2025-11-22. last_date is left as is because no elapsed next_date is being replaced.",
+  "set": {
+   "next_date": "2026-11-13",
+   "next_date_end": "2026-11-14",
+   "venue": "Hollywood Casino Hotel at Greektown, 555 E. Lafayette St",
+   "status": "upcoming",
+   "source": "https://www.midevfest.com/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "renvcf.com/undemo-day/ (Renaissance Venture Capital, the organiser): 'Hold the date for UnDemo Day 2027 Oct 7, 2027 Detroit, MI'. The 2026 edition, per Ann Arbor SPARK's post on annarborusa.org: 'in person on October 1, 2026 at The Department in downtown Detroit, and is free to all participants', 1-5pm. The 2027 venue is not named yet. Not in events.json under any name.",
+  "record": {
+   "name": "UnDemo Day",
+   "type": "demo-day",
+   "topics": [
+    "startups",
+    "venture-capital",
+    "pitch"
+   ],
+   "city": "Detroit",
+   "region": "Michigan",
+   "country": "United States",
+   "venue": "",
+   "cadence": "annual",
+   "month": "October",
+   "next_date": "2027-10-07",
+   "next_date_end": "2027-10-07",
+   "last_date": "2026-10-01",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "free",
+   "audience": "Michigan startup founders, venture capital investors",
+   "url": "https://renvcf.com/undemo-day/",
+   "description": "Renaissance Venture Capital's annual day connecting Michigan startups with VCs from across the US through pre-matched 1:1 meetings, startup education and open networking; startups apply in advance for meeting tables.",
+   "source": "https://renvcf.com/undemo-day/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "edmontonstartupweek.com (run by Edmonton Unlimited): title 'Edmonton Startup Week | October 5-9, 2026', with lunch-and-learns, panels, workshops, the Startup Crawl and the Launch Party. BetaKit calls 2026 the 13th edition. No 2027 dates are published, so recurring-tbd with last_date 2026-10-05. Not in events.json under any name.",
+  "record": {
+   "name": "Edmonton Startup Week",
+   "type": "startup-week",
+   "topics": [
+    "startups",
+    "entrepreneurship",
+    "innovation"
+   ],
+   "city": "Edmonton",
+   "region": "Alberta",
+   "country": "Canada",
+   "venue": "",
+   "cadence": "annual",
+   "month": "October",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-10-05",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "founders, entrepreneurs, investors, tech community",
+   "url": "https://www.edmontonstartupweek.com/",
+   "description": "Edmonton Unlimited's annual week of startup events across the city: panels, lunch-and-learns, workshops and mentorship, the Startup Crawl and the Launch Party showcasing the year's top 10 startups.",
+   "source": "https://www.edmontonstartupweek.com/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "ShiftKey Labs (Dalhousie Faculty of Computer Science) event calendar, shiftkeylabs.ca/event/mission-accepted-space-hackathon: 'Mission Accepted Space Hackathon', Oct 2-4, 2026, Goldberg Computer Science Building, 6050 University Avenue. The page says 'Mission Accepted is back for another year... Now in its 2nd year', with MDA Space and the Canadian Space Agency taking part. The 2025 edition is on the same calendar, starting 2025-10-24. Dal Innovates' Innovation Week page also lists 'Mission Accepted Space Hackathon... starts October 2, 2026'. No 2027 date yet.",
+  "record": {
+   "name": "Mission Accepted Space Hackathon",
+   "type": "hackathon",
+   "topics": [
+    "space",
+    "satellite-data",
+    "earth-observation"
+   ],
+   "city": "Halifax",
+   "region": "Nova Scotia",
+   "country": "Canada",
+   "venue": "Goldberg Computer Science Building, Dalhousie University, 6050 University Avenue",
+   "cadence": "annual",
+   "month": "October",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-10-02",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "students",
+   "url": "https://shiftkeylabs.ca/event/mission-accepted-space-hackathon",
+   "description": "A weekend student hackathon at Dalhousie on space, satellite and Earth-observation data problems, mentored and judged by people from MDA Space and the Canadian Space Agency; runs at the start of Dal Innovation Week.",
+   "source": "https://shiftkeylabs.ca/event/mission-accepted-space-hackathon"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "Global Game Jam Halifax site, hosted by ShiftKey Labs. shiftkeylabs.ca/event/global-game-jam-2026 gives 'Jan 30 - Feb 1, 2026, Dalhousie University', with registration through ShiftKey Labs' own Eventbrite event 1978174468085 (JSON-LD 2026-01-30T18:00 to 2026-02-01T21:00, location Shiftkey Labs, 6050 University Avenue, Room 426). Dalhousie CS pages show Halifax GGJ sites in 2023, 2024 and 2025. globalgamejam.org gives GGJ 2027 as 25-31 January 2027, but no Halifax site is registered yet (site registration opens Nov 1), so recurring-tbd.",
+  "record": {
+   "name": "Global Game Jam Halifax",
+   "type": "game-jam",
+   "topics": [
+    "game-development",
+    "games"
+   ],
+   "city": "Halifax",
+   "region": "Nova Scotia",
+   "country": "Canada",
+   "venue": "ShiftKey Labs, Goldberg Computer Science Building, 6050 University Avenue",
+   "cadence": "annual",
+   "month": "January",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-01-30",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "game developers, artists, students, hobbyists",
+   "url": "https://shiftkeylabs.ca/event/global-game-jam-2026",
+   "description": "Halifax's in-person Global Game Jam site, hosted by ShiftKey Labs at Dalhousie: a non-competitive weekend making a game from scratch around the worldwide theme.",
+   "source": "https://shiftkeylabs.ca/event/global-game-jam-2026"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "dalinnovates.ca/innovation-week/ (dalinnovationweek.ca redirects there): 'Join us for the annual Dal Innovation Week October 5-9, 2026', with pitch competitions, Demo Day (Demo Expo 12 pm, live pitches 1:30 pm) and the Space Hackathon; last year's drew 1,500+ students, faculty and business leaders. ShiftKey Labs' calendar also lists 'Dal Innovation Week' from 2026-10-05 to 2026-10-09. No 2027 dates, so recurring-tbd.",
+  "record": {
+   "name": "Dal Innovation Week",
+   "type": "tech-week",
+   "topics": [
+    "startups",
+    "innovation",
+    "entrepreneurship"
+   ],
+   "city": "Halifax",
+   "region": "Nova Scotia",
+   "country": "Canada",
+   "venue": "Dalhousie University",
+   "cadence": "annual",
+   "month": "October",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-10-05",
+   "status": "recurring-tbd",
+   "attendance": "1500",
+   "cost": "free",
+   "audience": "students, researchers, founders, business leaders",
+   "url": "https://dalinnovates.ca/innovation-week/",
+   "description": "Dalhousie University's annual week of entrepreneurship and innovation events on campus, with pitch competitions, workshops, a space hackathon and Dal Demo Day, where accelerator and ideaHUB startups demo and pitch.",
+   "source": "https://dalinnovates.ca/innovation-week/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "summit.upfront.com (Upfront Ventures): 'Upfront Summit 2027 ... Los Angeles, California... LA's premier technology event is back for 2027... By invitation only', registration open, no 2027 dates published. The organiser's FAQ, summit.upfront.com/faq-0, says 'the 2026 Upfront Summit will be held February 25-26th at Nya Studios' (Annual Meeting Feb 24 at Chaplin Studios). So recurring-tbd with last_date 2026-02-25.",
+  "record": {
+   "name": "Upfront Summit",
+   "type": "summit",
+   "topics": [
+    "venture-capital",
+    "startups",
+    "technology"
+   ],
+   "city": "Los Angeles",
+   "region": "California",
+   "country": "United States",
+   "venue": "",
+   "cadence": "annual",
+   "month": "February",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-02-25",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "invite-only",
+   "audience": "LPs, venture capitalists, founders, corporate executives",
+   "url": "https://summit.upfront.com/",
+   "description": "Upfront Ventures' invitation-only annual gathering of LPs, VCs, founders and executives in Los Angeles, two days of talks and networking.",
+   "source": "https://summit.upfront.com/faq-0"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "lac.tf (lactf.uclaacm.com redirects; ACM Cyber at UCLA): 'Feb 6, 2026 06:00PM PST - Feb 8, 2026 06:00PM PST', 'In-Person Event Feb 7, 2026 09:00AM PST - Feb 7, 2026 07:00PM PST Tom Bradley International Hall, Room 300, RSVP for in-person!', 'LA CTF is an annual cybersecurity competition hosted by ACM Cyber at UCLA'. The competition itself is played online. This record lists the in-person day, so last_date is 2026-02-07. The 2027 edition is not announced; recurring-tbd.",
+  "record": {
+   "name": "LA CTF",
+   "type": "ctf",
+   "topics": [
+    "cybersecurity",
+    "ctf"
+   ],
+   "city": "Los Angeles",
+   "region": "California",
+   "country": "United States",
+   "venue": "Tom Bradley International Hall, UCLA",
+   "cadence": "annual",
+   "month": "February",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-02-07",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "students, security practitioners",
+   "url": "https://lac.tf/",
+   "description": "ACM Cyber at UCLA's annual capture-the-flag; the weekend competition is played online, with an in-person day at UCLA for talks, side events and team play. UCLA and Open divisions.",
+   "source": "https://lac.tf/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "tcstartupweek.com (organiser): title 'Twin Cities Startup Week 2026', JSON-LD startDate 2026-09-14 endDate 2026-09-18. The page reads 'Thank you for five days across Minneapolis and Saint Paul: 90 sessions, 175 speakers, and 1,301 people registered. TCSW '27 is next... Join the 2027 waitlist'. Launch Day was at the University of Minnesota (Minneapolis); the other days were at St. Thomas, MCAD, Macalester and the Great Northern Building (St. Paul). Past editions on the page go back to 2018. No 2027 dates; recurring-tbd. Not in events.json under any name.",
+  "record": {
+   "name": "Twin Cities Startup Week",
+   "type": "startup-week",
+   "topics": [
+    "startups",
+    "entrepreneurship",
+    "venture-capital",
+    "ai"
+   ],
+   "city": "Minneapolis",
+   "region": "Minnesota",
+   "country": "United States",
+   "venue": "Venues across Minneapolis and Saint Paul",
+   "cadence": "annual",
+   "month": "September",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-09-14",
+   "status": "recurring-tbd",
+   "attendance": "1300",
+   "cost": "freemium",
+   "audience": "founders, investors, students, tech community",
+   "url": "https://www.tcstartupweek.com/",
+   "description": "Five days of startup programming across Minneapolis and Saint Paul, each day hosted at a different campus or venue, including the Startup World Cup Twin Cities regional pitch final and a community give-back hackathon.",
+   "source": "https://www.tcstartupweek.com/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "carlsonschool.umn.edu/conferences/agihackathon (Minnesota Carlson, the organiser): 'The Analytics for Good Hackathon returns to Minnesota Carlson January 30-31, 2026'. It is open to University of Minnesota Twin Cities and Duluth students, in teams of 4-6, who spend two days on a nonprofit partner's data problem. 'Returns' marks it as recurring. No 2027 date yet, so recurring-tbd. The audience field notes that it is restricted to UMN students.",
+  "record": {
+   "name": "Analytics for Good Hackathon",
+   "type": "hackathon",
+   "topics": [
+    "data-analytics",
+    "social-impact"
+   ],
+   "city": "Minneapolis",
+   "region": "Minnesota",
+   "country": "United States",
+   "venue": "Carlson School of Management, University of Minnesota",
+   "cadence": "annual",
+   "month": "January",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-01-30",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "University of Minnesota Twin Cities and Duluth students only",
+   "url": "https://carlsonschool.umn.edu/conferences/agihackathon",
+   "description": "A two-day student analytics hackathon at Minnesota Carlson where teams work a mission-driven community organisation's data and business problem, mentored and judged by analytics professionals. Open to UMN students only.",
+   "source": "https://carlsonschool.umn.edu/conferences/agihackathon"
+  }
+ }
+]

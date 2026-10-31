@@ -8,21 +8,21 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 | run | days since previous run | blocking | warnings | fixed | still open | scope |
 |---|---|---|---|---|---|---|
 | 2026-10-07-i3 | — | 1 | 2 | 2 | 1 | Oct 7 refresh, final re-audit (logged after the fact from AUDIT-REPORT.md; earlier runs predate the log) |
-| 2026-10-11-i1 | 4 | 4 | 7 | 7 | 4 | Oct 11 refresh: curator passes oct11-t1/t2/t3 (60 rows, 13 real updates), BSidesStPete script move, 17 new discovery cities with 121 auto-registered organisers (15 retired) |
-| 2026-10-11-i2 | re-audit | 0 | 6 | 4 | 2 | Re-audit of iteration-1 fixes: 21 retirements (sources-oct11-audit.json) and new retire/drop gate logic in run.mjs, Charleston Digital Connect removal, place-override drops, judge_each, Offensive AI Con source, ledger last_attempt / audit-run / snapshot-dispatch tooling |
+| 2026-10-11-i1 | 4 | 4 | 7 | 8 | 3 | Oct 11 refresh: curator passes oct11-t1/t2/t3 (60 rows, 13 real updates), BSidesStPete script move, 17 new discovery cities with 121 auto-registered organisers (15 retired) |
+| 2026-10-11-i2 | re-audit | 0 | 6 | 5 | 1 | Re-audit of iteration-1 fixes: 21 retirements (sources-oct11-audit.json) and new retire/drop gate logic in run.mjs, Charleston Digital Connect removal, place-override drops, judge_each, Offensive AI Con source, ledger last_attempt / audit-run / snapshot-dispatch tooling |
 | 2026-10-22-i1 | 11 | 0 | 3 | 2 | 0 | Uncommitted run vs HEAD: first 'add' patch (oct21-coverage-fixes.json -> Hack Canada, Toronto, in data/raw/discovered.json), Venture Garden patches re-applied, build:data + ledger; no queue dispatched (stale Oct 11 DISPATCHED.tsv: 60/60 covered, 0 row-skipped). |
 | 2026-10-29-i1 | 7 | 0 | 1 | 1 | 0 | 2026-10-29 refresh: feed+build, re-check passes oct29-t1/t2/t3 (60 rows), discovery oct29-d1/d2/r1/r2/rep; 27 updates, 32 adds, 0 removals vs HEAD 7bb1ee2 |
+| 2026-10-31-i1 | 2 | 1 | 1 | 2 | 0 | Cycle oct31: rechecks t1-t3 (60 rows), returning briefs r1-r2, city briefs d1-d2; 24 curated adds, 9 updates, 0 removals |
+| 2026-10-31-i2 | re-audit | 1 | 2 | 3 | 0 | Cycle oct31 re-audit: orchestrator fixes for i1-B1/i1-W1 plus feed re-run adding ShiftKey Labs, Unreal LA and 8 Eventbrite organisers |
+| 2026-10-31-i3 | re-audit | 0 | 1 | 0 | 1 | Cycle oct31 final re-audit: orchestrator fixes for i2-B1 (BSides Halifax), i2-W1 (run.mjs judgeEvents techOrg re-add), i2-W2 (AWS Prep Course drops), feed re-run from cache |
 
-**4 audit cycle(s); 2 found something blocking on its first audit.** 24 findings in total, 16 fixed, 7 open or deferred, 7 repeat(s) of an earlier finding.
+**5 audit cycle(s); 3 found something blocking on its first audit.** 30 findings in total, 23 fixed, 6 open or deferred, 9 repeat(s) of an earlier finding.
 
 ## Open
 
 - **2026-10-07-i3-W1** · warning · deferred · **Tech Week non-tech socials** — Wine tasting, speed dating, run club and a party from Tech Week calendars are listed.
   - recommended: User decision: filter non-tech socials from tech-week calendars or keep them.
   - note: Left for the user to decide.
-- **2026-10-11-i1-W3** · warning · deferred · **Tech organisers rejected in new cities** — TechSTL, Indy Hackers, ISSA Kentuckiana, New Media Manitoba, RockIT Women got 'no tech signal'; GDG Kansas City, 16 Tech, TAB rejected for 1 upcoming event.
-  - recommended: Propose them in a sources-*.json.
-  - note: Carried over as 2026-10-11-i2-W3.
 - **2026-10-11-i1-W5** · warning · deferred · **Jersey City Entrepreneurs: The Venture Garden (Jersey City)** — next_date 2026-10-10 has passed; oct05-r1 and oct07-s1 patches flip-flop next_date (cancelled 10-06 vs 10-10), correct only by sort order.
   - recommended: Re-check the Meetup group for the next active session; delete the superseded op from oct05-r1-fixes.json.
   - note: Carried over as 2026-10-11-i2-W4.
@@ -32,13 +32,46 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 - **2026-10-11-i1-W7** · warning · deferred · **Tech Week non-tech socials** — Still applies, smaller: NTW Closing Party, Hard Tech Week Opening Party, SF Funds Week party, Young Founders Hike.
   - recommended: User decision (deferred).
   - note: Carried over as 2026-10-11-i2-W6.
-- **2026-10-11-i2-W3** · warning · **Tech organisers rejected in new cities** — Unchanged: TechSTL, Indy Hackers, ISSA Kentuckiana, New Media Manitoba, RockIT Women, GDG Kansas City, 16 Tech, TAB still tech:false.
-  - recommended: Propose them in a sources-*.json.
 - **2026-10-11-i2-W6** · warning · deferred · **Tech Week non-tech socials** — Unchanged, deferred to user: NTW Closing Party, Hard Tech Week Opening Party, Big Cayman Bash, Young Founders Hike still listed.
   - recommended: No action until the user decides.
   - note: Waiting on the user's decision (same as 2026-10-07-i3-W1).
+- **2026-10-31-i3-W1** · warning · **Sac Made Market First Fridays (Sacramento)** — Upcoming feed record series:5fcdc0004983786c from judge_each MADE Makerspace (meetup:hackerlab) still has relevance 'registered tech organiser'. It was admitted 2026-10-25 by the techOrg re-add bug fixed for i2-W1 and carried forward unjudged because it was not re-read. It is an artisan and pop-up market, not tech.
+  - recommended: Add a drop for series:5fcdc0004983786c in data/feeds/place-overrides.json.
 
 ## History
+
+### 2026-10-31-i3 — 0 blocking, 1 warning(s)
+
+Scope: Cycle oct31 final re-audit: orchestrator fixes for i2-B1 (BSides Halifax), i2-W1 (run.mjs judgeEvents techOrg re-add), i2-W2 (AWS Prep Course drops), feed re-run from cache
+
+| id | severity | event | finding | status | resolution |
+|---|---|---|---|---|---|
+| W1 | warning | Sac Made Market First Fridays (Sacramento) | Upcoming feed record series:5fcdc0004983786c from judge_each MADE Makerspace (meetup:hackerlab) still has relevance 'registered tech organiser'. It was admitted 2026-10-25 by the techOrg re-add bug fixed for i2-W1 and carried forward unjudged because it was not re-read. It is an artisan and pop-up market, not tech. | open |  |
+
+Checked and sound: BSides Halifax curated next_date 2026-11-12 matches halifaxbsides.ca, ledger corrected, ShiftKey duplicate dropped; four AWS Prep drops effective; run.mjs fix holds and upcoming Red Fridge events are judged by title (socials gone); mechanical audit 0/0, 25/25 links, queue 61/61; selftest 212/212
+
+### 2026-10-31-i2 — 1 blocking, 2 warning(s)
+
+Scope: Cycle oct31 re-audit: orchestrator fixes for i1-B1/i1-W1 plus feed re-run adding ShiftKey Labs, Unreal LA and 8 Eventbrite organisers
+
+| id | severity | event | finding | status | resolution |
+|---|---|---|---|---|---|
+| B1 | blocking | BSides Halifax (Halifax) | ShiftKey Labs feed added 'BSides Cybersecurity Conference 2026' (ical:104889-1794474000-1794502800@shiftkeylabs.ca, 2026-11-12), which is BSides Halifax 2026 per its own page and halifaxbsides.ca. The curated record bsides-halifax-halifax still says recurring-tbd with next_date blank (ledger from 2026-08-26), so one event is listed twice with contradicting dates. | fixed (2026-10-31) | Curated BSides Halifax set to 2026-11-12 (oct31-audit-fixes.json, ledger confirm-oct31-audit2.json); ShiftKey duplicate ical:104889-...@shiftkeylabs.ca dropped in data/feeds/place-overrides.json. |
+| W1 | warning | Red Fridge Society (Austin) | judge_each did not take effect: all Red Fridge events still carry relevance 'registered tech organiser' (Santa Happy Hour, wine course, poker, Torque and Tacos). In scripts/feeds/run.mjs (around lines 182 and 206) the organiser found in the Luma Austin listing is re-added to techOrg regardless of judgeEvents. Even after that is fixed, the '(founders)' title suffix passes judge() on 'title: founders'. | fixed (2026-10-31) | Bug fixed in scripts/feeds/run.mjs: Luma/Meetup and Eventbrite discovery no longer re-trust an organiser marked judgeEvents. Red Fridge events are now judged by title: wine course, poker, Santa happy hour dropped. Founder Coffee Tasting and Torque and Tacos pass on '(founders)'; kept, since relevance.mjs's stated bar admits a founders' social. |
+| W2 | warning | Cloud Practitioner - AWS Prep Course (1/4) (Halifax) | ShiftKey judge_each source admitted a four-week AWS exam-prep course for first- and second-year Dalhousie students (series:3b87d6841ea212e0) on 'title: cloud, aws'. It is a student class, not an event. | fixed (2026-10-31) | All four AWS Prep Course occurrences dropped in data/feeds/place-overrides.json. |
+
+Checked and sound: i1-B1 holds (dev.events BSides COS record dropped, ledger confirmed, queue 61/61); philosophy-austin and Toronto Social Club retired with no events left; 10 events from the 8 Eventbrite organisers are in person and tech (Indy Init, GameBiz Lab checked on page); ShiftKey hackathons sound; Unreal LA 0 events; mechanical audit 0/0, 25/25 links
+
+### 2026-10-31-i1 — 1 blocking, 1 warning(s)
+
+Scope: Cycle oct31: rechecks t1-t3 (60 rows), returning briefs r1-r2, city briefs d1-d2; 24 curated adds, 9 updates, 0 removals
+
+| id | severity | event | finding | status | resolution |
+|---|---|---|---|---|---|
+| B1 | blocking | BSides COS / BSides Colorado Springs 2026 (Colorado Springs) | Dispatched SHARED-PAGE row 62 was never chunked (61 dispatched, 60 chunked), so no ledger entry. The dev.events feed record bsides-colorado-springs-colorado-springs lists a 2026-10-24 edition that bsidescos.org says was postponed to next year, so the directory shows a phantom past edition. | fixed (2026-10-31) | Feed record devevents:https://www.bsidescos.org/\|2026-10-24 dropped in data/feeds/place-overrides.json; curated BSides COS confirmed in confirm-oct31-audit.json. Cause: orchestrator chunked TO-VERIFY.tsv instead of the DISPATCHED.tsv snapshot; refresh-events SKILL.md now says which file to split. |
+| W1 | warning | Austin Philosophy Discussion Group / Toronto Social Club / Red Fridge Society (Austin, Toronto) | Registry marks meetup:philosophy-austin and meetup:greater-toronto-travel-and-social-club tech:true on a false track record. They list philosophy seminars, trivia nights and a clothing swap. Red Fridge Society (luma-cal:cal-ouHgAHCszM3INEo) added wine courses, poker and a car meet this run. | fixed (2026-10-31) | sources-oct31-audit.json retires meetup:philosophy-austin and meetup:greater-toronto-travel-and-social-club (25 events taken down) and switches Red Fridge Society to judge_each. Most Red Fridge titles carry a '(founders)' ticket label so they still pass; accepted as a founders' community. |
+
+Checked and sound: Mechanical audit otherwise clean (25/25 links). Verified on organiser pages: Great Lakes Software Symposium, dev2next, Gartner re-dates; DevOpsDays Boston city move to Cambridge; Health Wildcatters, PitchBreakfast, UnDemo Day, Datathon PolyFinances, VIPSS, WiE Hackathon, Michigan DevFest, Upfront Summit adds; Hackfest CTF, BSides Fredericton, Future Summit confirmed rows. New relevance terms admitted only 4 real tech events
 
 ### 2026-10-29-i1 — 0 blocking, 1 warning(s)
 
@@ -70,7 +103,7 @@ Scope: Re-audit of iteration-1 fixes: 21 retirements (sources-oct11-audit.json) 
 |---|---|---|---|---|---|
 | W1 | warning | aiventurelab network remnants (Salt Lake City, Nashville, Calgary) | 3 past listings from groups not named in B1 link to aiventurelab.org (plus-code venues, same Claude Vibe Coding template); lace-up-for-casual-hockey-nights is registered tech:true so new templated listings pass unjudged. | fixed (2026-10-11) | 3 groups retired (sources-oct11-audit.json). |
 | W2 | warning | The Longevity Social Club (Austin, Miami) | Registered as 'track record 10/10 clearly tech' but lists founder coffee hours, dinners, headshots, goal setting; only the two AI workshops are tech. Predates this run (added 2026-10-07). | fixed (2026-10-11) | Set to judge_each (sources-oct11-audit.json). |
-| W3 | warning | Tech organisers rejected in new cities | Unchanged: TechSTL, Indy Hackers, ISSA Kentuckiana, New Media Manitoba, RockIT Women, GDG Kansas City, 16 Tech, TAB still tech:false. | open |  |
+| W3 | warning | Tech organisers rejected in new cities | Unchanged: TechSTL, Indy Hackers, ISSA Kentuckiana, New Media Manitoba, RockIT Women, GDG Kansas City, 16 Tech, TAB still tech:false. | fixed (2026-10-31) | All eight followed via data/review/sources-oct31-audit.json. Root cause: scripts/feeds/run.mjs ignored a tech:true proposal for an organiser already in the registry, so a gate rejection could never be overturned; it now un-retires gate rejections (a person's retirement still wins and is reported). |
 | W4 | warning | Jersey City Entrepreneurs: The Venture Garden (Jersey City) | Unchanged: next_date 2026-10-10 passed, still upcoming; oct05-r1-fixes.json still carries the superseded 10-06 operation. | fixed (2026-10-29) | Jersey City Venture Garden is recurring-tbd with no elapsed date after oct29-t1 (confirmed by audit 2026-10-29-i1). |
 | W5 | warning | City spelling splits (Québec City, trailing commas) | Partly resolved: city 'United States' gone. Still 1 'Québec City' vs 16 'Quebec City', and 9 feed records with trailing comma (Boston, Seattle, Toronto, Washington, Montréal). | fixed (2026-10-11) | geo.mjs matches cities accent-blind to the curated spelling and drops separators left by a state suffix ('Boston, MA'); carried records are re-spelt. It also broke the Pages deploy: the app folds accents, so its city count disagreed with the contract test. |
 | W6 | warning | Tech Week non-tech socials | Unchanged, deferred to user: NTW Closing Party, Hard Tech Week Opening Party, Big Cayman Bash, Young Founders Hike still listed. | deferred (2026-10-11) | Waiting on the user's decision (same as 2026-10-07-i3-W1). |
@@ -89,7 +122,7 @@ Scope: Oct 11 refresh: curator passes oct11-t1/t2/t3 (60 rows, 13 real updates),
 | B4 | blocking | Tampa AI Week (West Chester Township, 2026-10-15) | Eventbrite page says Postponed / Coming in 2027, venue 'TBDB' at the organiser's Ohio address; not an Oct 15 event and not in West Chester. | fixed (2026-10-11) | Dropped via data/feeds/place-overrides.json, which now supports drop: true for reviewed listings. |
 | W1 | warning | MADE Makerspace (Sacramento), MakerSpace Charlotte | Mostly craft classes (jewellery, stained glass, woodshop) alongside a few CAD/3D-printing sessions. | fixed (2026-10-11) | Both makerspaces set to judge_each (sources-oct11-audit.json); existing organisers can now be switched. |
 | W2 | warning | Claude SMB Workshop - Virtual (Boston; San Francisco) | Two online workshops from the Claude Workshops Luma calendar (luma.com/4s64itov, luma.com/fo8eqnar) listed as in-person. | fixed (2026-10-11) | Both dropped via place-overrides.json. |
-| W3 | warning | Tech organisers rejected in new cities | TechSTL, Indy Hackers, ISSA Kentuckiana, New Media Manitoba, RockIT Women got 'no tech signal'; GDG Kansas City, 16 Tech, TAB rejected for 1 upcoming event. | deferred (2026-10-11) | Carried over as 2026-10-11-i2-W3. |
+| W3 | warning | Tech organisers rejected in new cities | TechSTL, Indy Hackers, ISSA Kentuckiana, New Media Manitoba, RockIT Women got 'no tech signal'; GDG Kansas City, 16 Tech, TAB rejected for 1 upcoming event. | fixed (2026-10-31) | Superseded by 2026-10-11-i2-W3, fixed 2026-10-31 (sources-oct31-audit.json). |
 | W4 | warning | Offensive AI Con (Oceanside) | City correction is sound but source still cites dev.events/NA/US/CA/San_Diego. | fixed (2026-10-11) | Source set to https://www.offensiveaicon.com/ (oct11-audit-fixes.json). |
 | W5 | warning | Jersey City Entrepreneurs: The Venture Garden (Jersey City) | next_date 2026-10-10 has passed; oct05-r1 and oct07-s1 patches flip-flop next_date (cancelled 10-06 vs 10-10), correct only by sort order. | deferred (2026-10-11) | Carried over as 2026-10-11-i2-W4. |
 | W6 | warning | City spelling splits (Québec City, United States, trailing commas) | Run added 'Québec City' beside 'Quebec City' and a city 'United States'; 9 older feed records have trailing commas (Boston, Seattle, Toronto, Washington, Montréal). | deferred (2026-10-11) | Carried over as 2026-10-11-i2-W5. |

@@ -46,6 +46,12 @@ const STRONG = [
   'builder', 'agent', 'evals', 'agentics', 'mcp', 'gtm', 'cto', 'ctos', 'cio', 'cfo', 'vcs',
   'investor', 'crypto', 'defi', 'electronics', 'firmware', 'mac admins', 'sysadmin', 'sysadmins',
   'devsecops', 'cyber', 'demo day', 'coworking', 'cowork', 'tech careers',
+  // Fifth pass, from a run's drops: stacks and platforms named without a field word
+  // ("Postgres Day SF Meetup", "Concord Ruby Early Birds", "Buckeye Cocoaheads").
+  'ruby', 'rails', 'postgres', 'postgresql', 'sql', 'database', 'databases', 'datafusion', 'opensearch',
+  'valkey', 'redis', 'linux', 'ios', 'android', 'android xr', 'spatial computing', 'cocoaheads',
+  'nscoder', 'nscoders', 'data structures', 'algorithms', 'dweb', 'codex', 'gerrit',
+  'shecurity', 'cyberattack', 'cyberattacks', 'ciso', 'cisos',
 ];
 
 // Clearly not our subject, or spam wearing a networking badge.

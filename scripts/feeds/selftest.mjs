@@ -256,6 +256,10 @@ for (const t of ['Waterloo.Dev Fest: Who Gets to Build, Own, and Define the Futu
   'CTO Dinner (Ripple x Mycroft x QA Wolf)', 'Toronto Mac Admins Meetup', 'Private Dinner on Personal Agent Evals']) {
   ok(judge({ title: t }).keep, `kept: ${t.slice(0, 40)}`);
 }
+// Missed in the oct31 run: a stack named without a field word.
+for (const t of ['Concord Ruby Early Birds', 'Postgres Day SF Meetup', 'Buckeye Cocoaheads', 'Valkey x OpenSearch @ Uber, Sunnyvale']) {
+  ok(judge({ title: t }).keep, `kept: ${t.slice(0, 40)}`);
+}
 ok(judgeOrganiser({ name: 'Waterloo.dev', description: '' }, []).tech, 'a .dev organiser name reads as tech');
 ok(!judge({ title: 'Real Estate Investor Pitch Night' }).keep, 'real-estate investing dropped even beside pitch words');
 ok(judge({ title: 'Proptech founders night: AI meets real estate' }).keep, 'proptech still kept');

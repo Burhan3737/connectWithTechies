@@ -1,0 +1,90 @@
+[
+  {
+    "action": "add",
+    "reason": "RETURNING row 'UB Hacking Fall 2025' (Davis Hall, University at Buffalo). Organiser's site ubhacking.cse.buffalo.edu (page title 'UB Hacking 2026'; its JS bundle config reads year '2026', title 'UB Hacking 2026', dates 'November 7th & 8th', tagline \"Western New York's largest hackathon\"). MLH 2027 season lists UB Hacking Nov 7-8 2026, Buffalo, physical, website ubhacking.cse.buffalo.edu. Both agree. 2026 venue building not published; last edition Nov 8 2025.",
+    "record": {
+      "name": "UB Hacking",
+      "type": "hackathon",
+      "topics": [
+        "hackathon",
+        "software",
+        "students"
+      ],
+      "city": "Buffalo",
+      "region": "New York",
+      "country": "United States",
+      "venue": "University at Buffalo",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-07",
+      "next_date_end": "2026-11-08",
+      "last_date": "2025-11-08",
+      "status": "upcoming",
+      "attendance": "550",
+      "cost": "free",
+      "audience": "university students from UB and nearby colleges",
+      "url": "https://ubhacking.cse.buffalo.edu/",
+      "description": "The University at Buffalo's student-run hackathon, running since 2012: a weekend of building, workshops and prizes billed as Western New York's largest hackathon.",
+      "source": "https://ubhacking.cse.buffalo.edu/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'Datathon PolyFinances 2025' (Polytechnique Montréal). Organiser's page polyfinances.ca/datathon: 'DATATHON 2026 14 et 15 novembre', Polytechnique Montréal, Pavillon Lassonde; schedule Samedi 14 novembre 9:00 accueil to Dimanche 15 novembre 16:00 'Fin du Datathon sur place'; finalist pitches and networking evening Friday Nov 20. In person.",
+    "record": {
+      "name": "Datathon PolyFinances",
+      "type": "hackathon",
+      "topics": [
+        "data-science",
+        "finance",
+        "fintech",
+        "students"
+      ],
+      "city": "Montreal",
+      "region": "Quebec",
+      "country": "Canada",
+      "venue": "Polytechnique Montréal, Pavillon Lassonde",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-14",
+      "next_date_end": "2026-11-15",
+      "last_date": "2025-11-01",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "university students in data science, engineering and finance",
+      "url": "https://polyfinances.ca/datathon",
+      "description": "PolyFinances' weekend datathon at Polytechnique Montréal: teams of four solve a financial-analysis data challenge set by industry partners, followed by finalist pitches and a networking evening.",
+      "source": "https://polyfinances.ca/datathon"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'WiE Hackathon 2025' (University of Waterloo E7). Organiser's page uwaterloo.ca/women-in-engineering/events/wie-hackathon-2026: 'WiE Hackathon 2026, Saturday, November 7, 2026, 8:00 am - 8:00 pm EST', 'PSE, Faculty Hall (7th Floor)', Pearl Sullivan Engineering Building, 200 University Ave West, Waterloo; applications due November 1. One-day, in person.",
+    "record": {
+      "name": "WiE Hackathon",
+      "type": "hackathon",
+      "topics": [
+        "hackathon",
+        "women-in-tech",
+        "students"
+      ],
+      "city": "Waterloo",
+      "region": "Ontario",
+      "country": "Canada",
+      "venue": "Pearl Sullivan Engineering Building (PSE), University of Waterloo",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-07",
+      "next_date_end": "2026-11-07",
+      "last_date": "2025-11-15",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "women and non-binary university students",
+      "url": "https://uwaterloo.ca/women-in-engineering/events/wie-hackathon-2026",
+      "description": "University of Waterloo Women in Engineering's one-day hackathon for women and non-binary students, with sponsor workshops, team matching and prizes.",
+      "source": "https://uwaterloo.ca/women-in-engineering/events/wie-hackathon-2026"
+    }
+  }
+]

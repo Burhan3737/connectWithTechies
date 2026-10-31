@@ -25,6 +25,33 @@
     "organiser retired": 25
    },
    "relisted": 77
+  },
+  {
+   "base": "ab8969c",
+   "built_on": "2026-10-31",
+   "before": 12786,
+   "after": 13111,
+   "added": {
+    "total": 405,
+    "curated": 24,
+    "feed": 381
+   },
+   "removed": {
+    "total": 80,
+    "curated": 0,
+    "feed": 80
+   },
+   "redated": {
+    "total": 18,
+    "curated": 0,
+    "feed": 18
+   },
+   "removed_by_reason": {
+    "no longer listed": 56,
+    "organiser retired": 23,
+    "now a curated record": 1
+   },
+   "relisted": 11
   }
  ]
 }

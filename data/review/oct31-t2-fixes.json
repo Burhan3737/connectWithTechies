@@ -1,0 +1,26 @@
+[
+  {
+    "match": {
+      "name": "AI & Big Data Expo North America",
+      "city": "San Jose"
+    },
+    "action": "update",
+    "reason": "Organiser page ai-expo.net/northamerica/ gives \"June 16-17, 2027\" at \"San Jose McEnery Convention Center, CA\". The record named Santa Clara Convention Center, taken from a dev.events source. The dates already match.",
+    "set": {
+      "venue": "San Jose McEnery Convention Center",
+      "source": "https://www.ai-expo.net/northamerica/"
+    }
+  },
+  {
+    "match": {
+      "name": "ODSC East",
+      "city": "Boston"
+    },
+    "action": "update",
+    "reason": "Organiser page odsc.ai/east/ hero: \"May 10 – May 12 📍 BOSTON CONVENTION & EXHIBITION CENTER\" (2027 per the hero image and registration links). The dates already match; this fills the empty venue and points source at the event page instead of the generic odsc.com.",
+    "set": {
+      "venue": "Boston Convention & Exhibition Center",
+      "source": "https://odsc.ai/east/"
+    }
+  }
+]

@@ -1,0 +1,274 @@
+{
+  "pass": "oct31-d1",
+  "date": "2026-10-31",
+  "returning": [],
+  "reported": [],
+  "cities": [
+    {
+      "city": "Dallas",
+      "region": "Texas",
+      "queries": [
+        "hackathon Dallas 2027",
+        "HackSMU 2026 SMU hackathon Dallas",
+        "Dallas Tech Week 2026",
+        "Dallas accelerator demo day 2026",
+        "Global Game Jam 2027 Dallas jam site",
+        "CTF competition Dallas in-person 2026 OR 2027 capture the flag",
+        "\"AI Tinkerers\" Dallas Kiln demo night venue address"
+      ],
+      "found": [
+        {
+          "name": "Health Wildcatters Pitch Day",
+          "url": "https://www.healthwildcatters.com/pitch-day",
+          "verdict": "added",
+          "reason": "Organiser page: Thu Nov 12 2026, Pegasus Park, Dallas; demo day closing the annual accelerator cohort."
+        },
+        {
+          "name": "AI Tinkerers Dallas-Fort Worth",
+          "url": "https://dallas-fort-worth.aitinkerers.org/",
+          "verdict": "added",
+          "reason": "Chapter site: demo nights Jul 30, Sep 3, next Nov 5 2026, hosted at Kiln's Dallas location. aitinkerers.org is not read by any feed, so it is a curated meetup-series."
+        },
+        {
+          "name": "TexSAW",
+          "url": "https://texsaw.org",
+          "verdict": "added",
+          "reason": "UT Dallas CSG's annual CTF, with a multi-day in-person portion; last held Feb 27 2026 in Richardson (CSG Eventbrite plus utdallas.edu 2025 article). Filed under Richardson, as the other UTD events are. Recurring-tbd."
+        },
+        {
+          "name": "HackSMU",
+          "url": "https://hacksmu.org",
+          "verdict": "unresolved",
+          "reason": "hacksmu.org returns a 200 script shell with no readable text or dates; found no dated edition since 2019-era coverage. Not added."
+        },
+        {
+          "name": "Techweek Dallas",
+          "url": "https://dallasinnovates.com/techweek-dallas-releases-schedule-techweek-100-list/",
+          "verdict": "rejected",
+          "reason": "Defunct Techweek brand edition (circa 2016); no current organiser site."
+        },
+        {
+          "name": "HackDFW",
+          "url": "https://www.dallaschamber.org/blog/hackdfw-returns-for-2022-to-connect-tech-talent-to-companies/",
+          "verdict": "rejected",
+          "reason": "Last coverage 2022; no current edition found."
+        },
+        {
+          "name": "Global Game Jam Dallas sites",
+          "url": "https://globalgamejam.org/",
+          "verdict": "unresolved",
+          "reason": "GGJ 2027 is Jan 25-31; site-host registration opens Nov 1 2026, so no Dallas 2027 site exists yet. Game Developers of Dallas Meetup is already a registered feed source and its jams flow in through it."
+        },
+        {
+          "name": "LAUNCH Accelerator Demo Day / Nucleate Texas",
+          "url": "https://luma.com/4laqdy3f",
+          "verdict": "rejected",
+          "reason": "One-off Luma events; Nucleate Demo Day is in Austin. Luma geo-discovery covers these."
+        }
+      ]
+    },
+    {
+      "city": "Indianapolis",
+      "region": "Indiana",
+      "queries": [
+        "Indianapolis hackathon 2026 OR 2027",
+        "Indy Startup Week OR \"Indy Tech Week\" 2026",
+        "Indianapolis Global Game Jam 2026 site",
+        "Indianapolis startup demo day OR pitch competition 2026 accelerator",
+        "Indianapolis CTF cybersecurity competition in-person 2026"
+      ],
+      "found": [
+        {
+          "name": "Hack Indy",
+          "url": "https://hack-indy-2026.devpost.com/",
+          "verdict": "added",
+          "reason": "Purdue CS Club (Indianapolis) second annual hackathon, Mar 27-29 2026, 130 participants; no 2027 date yet, so recurring-tbd."
+        },
+        {
+          "name": "Venture Club of Indiana Innovation Showcase",
+          "url": "https://www.ventureclub.org/innovation-showcase",
+          "verdict": "added",
+          "reason": "18th annual pitch competition, Jun 18 2026, Biltwell Event Center; recurring-tbd."
+        },
+        {
+          "name": "Indy Startup Week / Indy Tech Week",
+          "url": "",
+          "verdict": "rejected",
+          "reason": "No such event found; only Startup Weekend Indianapolis coverage from 2012-2024 and Indy Design Week (not tech)."
+        },
+        {
+          "name": "BDPA Indy Hackathon / Indy Civic Hack",
+          "url": "https://www.eventbrite.com/e/bdpa-indys-inaugural-hackathon-tickets-1924312954849",
+          "verdict": "unresolved",
+          "reason": "Found only an inaugural Eventbrite listing and undated civic-hack coverage; no recurring organiser page with dates."
+        },
+        {
+          "name": "Indianapolis CTF / game jam",
+          "url": "",
+          "verdict": "unresolved",
+          "reason": "Searches found no Indianapolis-hosted in-person CTF or Global Game Jam site. Indy Hackers (registered source) covers local hack nights."
+        }
+      ]
+    },
+    {
+      "city": "St. Louis",
+      "region": "Missouri",
+      "queries": [
+        "St. Louis hackathon 2026 OR 2027 in-person",
+        "St. Louis startup week OR \"Arch Grants\" startup competition 2026 OR demo day",
+        "St. Louis game jam 2026 OR \"STL game jam\"",
+        "St. Louis tech summit 2026 OR 2027 innovation summit"
+      ],
+      "found": [
+        {
+          "name": "STL Game Jam",
+          "url": "https://www.stlgamejam.com/",
+          "verdict": "added",
+          "reason": "Global Game Jam St. Louis site at UMSL, Jan 30-Feb 1 2026 (also 2025, 2019); 2027 site not yet posted, so recurring-tbd."
+        },
+        {
+          "name": "Arch Grants Innovation Summit",
+          "url": "https://archgrants.org/programs/innovation-summit/",
+          "verdict": "added",
+          "reason": "Jun 4 2026 at 18 Rails at The Foundry; a fall iteration has been announced without dates, so recurring-tbd."
+        },
+        {
+          "name": "Arch Grants neXus Gala",
+          "url": "https://archgrants.org/nexus/",
+          "verdict": "rejected",
+          "reason": "Oct 30 2026 gala at Union Station that introduces the cohort; it is a fundraising gala, not one of the missing types, and it has just run. Not added this pass; candidate awards record for a later pass."
+        },
+        {
+          "name": "Black Tech Midwest UNITE Tech Conference & Expo",
+          "url": "https://blacktechmidwest.com",
+          "verdict": "exists",
+          "reason": "Already in the data as the feed record 'Black Tech Midwest presents UNITE TECH Conference & Expo 2026' (St. Louis, 2026-10-14)."
+        },
+        {
+          "name": "GlobalHack",
+          "url": "https://eqstl.com/slu-host-globalhack-vi-chaifetz-arena-1-million-cash-prizes/",
+          "verdict": "rejected",
+          "reason": "Coverage stops at GlobalHack VII (circa 2017-2018); no current edition."
+        },
+        {
+          "name": "PickHacks",
+          "url": "https://pickhacks-website.vercel.app/",
+          "verdict": "rejected",
+          "reason": "Held in Rolla, MO (Missouri S&T), not St. Louis."
+        }
+      ]
+    },
+    {
+      "city": "Victoria",
+      "region": "British Columbia",
+      "queries": [
+        "Victoria BC hackathon 2026 OR 2027 UVic",
+        "Victoria BC game jam 2026 OR 2027",
+        "VIATEC accelerator demo day OR \"Startup Week\" OR summit Victoria 2026",
+        "Victoria BC CTF capture the flag cybersecurity competition UVic 2026",
+        "Victoria BC technology summit OR conference 2026 2027 \"Victoria\" tech summit"
+      ],
+      "found": [
+        {
+          "name": "UVic Hacks",
+          "url": "https://www.uvichacks.com/",
+          "verdict": "added",
+          "reason": "Student club running several in-person campus hackathons per term (latest Mar 27-28 2026); fall 2026 not posted, so recurring-tbd."
+        },
+        {
+          "name": "Victoria International Privacy & Security Summit",
+          "url": "https://www.rebootcommunications.com/event/vipss2027/",
+          "verdict": "added",
+          "reason": "29th annual, Mar 10-12 2027, Victoria Conference Centre, fully in-person; 28th was Mar 3-5 2026 in Victoria."
+        },
+        {
+          "name": "GGJ Victoria",
+          "url": "https://globalgamejam.org/jam-sites/2025/ggj-victoria-2025",
+          "verdict": "rejected",
+          "reason": "The 2025 GGJ Victoria site was 'Online/Virtual Only'; no 2026 site found."
+        },
+        {
+          "name": "vikeCTF",
+          "url": "https://ctftime.org/ctf/888",
+          "verdict": "rejected",
+          "reason": "UVic VikeSec's CTF is an online jeopardy CTF; last editions listed are 2023-2024."
+        },
+        {
+          "name": "VIATEC accelerator demo day",
+          "url": "https://viatec.ca/venture-acceleration-program",
+          "verdict": "rejected",
+          "reason": "VIATEC's accelerator is 'Paused Until Further Notice'."
+        },
+        {
+          "name": "Inovatec Summit 2026",
+          "url": "https://www.eventbrite.ca/e/inovatec-summit-2026-tickets-1978302613371",
+          "verdict": "rejected",
+          "reason": "Vendor customer conference by Inovatec Systems (lending software), not a public tech event."
+        }
+      ]
+    },
+    {
+      "city": "Charlotte",
+      "region": "North Carolina",
+      "queries": [
+        "Charlotte NC hackathon 2026 OR 2027",
+        "Charlotte startup week OR \"Charlotte Tech Week\" 2026",
+        "Charlotte tech summit 2026 OR 2027 AI summit Charlotte NC",
+        "Charlotte accelerator demo day 2026 RevTech OR \"Queen City\" pitch",
+        "PitchBreakfast Charlotte Juan Garzon monthly pitch",
+        "\"Charlotte AI Summit\" 2026 Central Piedmont June 18",
+        "Carolinas Asian-American Chamber of Commerce Charlotte AI Summit"
+      ],
+      "found": [
+        {
+          "name": "Charlotte Fintech Week",
+          "url": "https://www.charlottefintechweek.com/",
+          "verdict": "added",
+          "reason": "RevTech Labs' annual week: June 7-11 2027; 2026 edition June 8-12."
+        },
+        {
+          "name": "PitchBreakfast",
+          "url": "https://pitchbreakfast.com/",
+          "verdict": "added",
+          "reason": "Monthly founder pitch showcase, next Nov 11 and Dec 9 2026, at Sparkhouse West; ticketed on Humanitix, which no feed reads."
+        },
+        {
+          "name": "Charlotte AI Summit",
+          "url": "https://ascendleadership.org/master-events/char-ai-summit-0626",
+          "verdict": "added",
+          "reason": "Free annual CAACC summit at CPCC Parr Center; Jun 18 2026 (2025: Jun 20). Recurring-tbd."
+        },
+        {
+          "name": "Enterprise AI Summit Charlotte",
+          "url": "https://events.itrevolution.com/",
+          "verdict": "rejected",
+          "reason": "IT Revolution's touring summit was held in Charlotte on Oct 7-8 2026; the next editions are in Bletchley Park and Portland, so it does not recur in Charlotte."
+        },
+        {
+          "name": "AI Friendly Summit",
+          "url": "https://www.meetup.com/ai-friendly/events/316412550/",
+          "verdict": "exists",
+          "reason": "Already in the feed (Charlotte, 2026-11-04, Meetup and Eventbrite)."
+        },
+        {
+          "name": "Charlotte Hack for Humanity",
+          "url": "https://events.mlh.com/events/14621-charlotte-hack-for-humanity",
+          "verdict": "rejected",
+          "reason": "One-off city stop (Oct 3 2026) of a multi-city Luma series the feed already ingests; past."
+        },
+        {
+          "name": "HAiCK CLT",
+          "url": "https://luma.com/lj80wpnw",
+          "verdict": "unresolved",
+          "reason": "Tresata hackathon postponed in January 2026 to a date not yet announced."
+        },
+        {
+          "name": "Queen City Hackathon",
+          "url": "https://www.hackathon.com/event/queen-city-hackathon-54528834211",
+          "verdict": "rejected",
+          "reason": "Only an old hackathon.com listing; no current organiser page or date."
+        }
+      ]
+    }
+  ]
+}

@@ -866,7 +866,7 @@
     "city": "San Jose",
     "region": "California",
     "country": "United States",
-    "venue": "Santa Clara Convention Center",
+    "venue": "San Jose McEnery Convention Center",
     "cadence": "annual",
     "month": "June",
     "next_date": "2027-06-16",
@@ -878,7 +878,7 @@
     "audience": "enterprise AI leaders, data engineers, vendors",
     "url": "https://www.ai-expo.net/northamerica/",
     "description": "A large enterprise AI and data expo with free exhibition access, multiple conference tracks and a co-located IoT, cyber and cloud show.",
-    "source": "https://dev.events/NA/US/CA/San_Jose"
+    "source": "https://www.ai-expo.net/northamerica/"
   },
   {
     "name": "OPI Summit on DPU/IPUs",
@@ -2387,16 +2387,16 @@
     "venue": "",
     "cadence": "annual",
     "month": "October",
-    "next_date": "2026-10-12",
-    "next_date_end": "2026-10-15",
-    "last_date": "2025-09-29",
+    "next_date": "2027-10-18",
+    "next_date_end": "2027-10-21",
+    "last_date": "2026-10-12",
     "status": "upcoming",
     "attendance": "400",
     "cost": "paid",
     "audience": "software developers, architects, technical leads",
     "url": "https://dev2next.com/",
     "description": "A multi-track developer conference in the Denver metro area covering Java, front-end, cloud, security and AI-assisted engineering.",
-    "source": "https://dev.events/NA/US/CO"
+    "source": "https://dev2next.com/"
   },
   {
     "name": "CppCon",

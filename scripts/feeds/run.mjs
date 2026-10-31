@@ -179,7 +179,7 @@ for (const [id, o] of orgFound) {
   if (o.needsProfile) {
     const known = registered.get(id);
     if (known && (known.tech !== false || daysAgo(known.checked || known.added) < RECHECK_DAYS)) {
-      if (known.tech !== false) techOrg.add(id);
+      if (known.tech !== false && !known.judgeEvents) techOrg.add(id);
       continue;
     }
     if (profiled >= PROFILE_LIMIT) continue;
@@ -204,7 +204,8 @@ for (const [id, o] of orgFound) {
   }
 
   const verdict = judgeOrganiser(candidate, titles);
-  if (verdict.tech) techOrg.add(id);
+  // A registered organiser marked judge_each stays judged event by event.
+  if (verdict.tech && !registered.get(id)?.judgeEvents) techOrg.add(id);
   // Luma's full listing is read every run, so its organisers need not be
   // followed: following them all would only grow every refresh by hundreds of
   // calendar reads. They are still judged above, so their events count as a
@@ -263,6 +264,19 @@ for (const file of proposals) {
       techOrg.delete(src.id);
       report.newOrganisers.push(`- ${existing.name} now judged event by event — ${p.reason || file}`);
     }
+    // An organiser the gate rejected can be followed by saying so ("tech": true).
+    // A retirement a person made in a sources file is not overridden by another
+    // file — files are read by name, not date — so that conflict is reported instead.
+    if (existing && existing.tech === false && p.tech === true) {
+      if (String(existing.reason || '').startsWith('retired by ')) {
+        report.failedSources.push(`${file}: ${existing.name || src.id} is followed here but ${existing.reason.split(':')[0]}`);
+      } else {
+        existing.tech = true;
+        existing.reason = `followed by ${file}: ${p.reason || ''}`.trim();
+        if (!existing.judgeEvents) techOrg.add(src.id);
+        report.newOrganisers.push(`${existing.name} (${existing.platform}) — ${existing.reason}`);
+      }
+    }
     if (existing) continue;
     const entry = { ...src, tech: true, ...(p.judge_each ? { judgeEvents: true } : {}),
       reason: `proposed in ${file}: ${p.reason || ''}`.trim(), added: TODAY };
@@ -285,6 +299,12 @@ async function resolveProposal(p) {
       url: `https://api.lu.ma/ics/get?entity=calendar&id=${cal.api_id}`,
       name: p.name || cal.name || lumaSlug, description: cal.description_short || '', website: cal.website || '',
       home: null, page: `https://luma.com/${lumaSlug}` };
+  }
+  // A calendar with no public slug can only be given by its feed URL.
+  const lumaCal = url.match(/^https?:\/\/api\.lu\.ma\/ics\/get\?entity=calendar&id=(cal-[A-Za-z0-9]+)$/)?.[1];
+  if (lumaCal) {
+    return { id: `luma-cal:${lumaCal}`, kind: 'luma-calendar', platform: 'luma', url,
+      name: p.name || '', description: '', website: '', home: null, page: '' };
   }
   const ebOrg = url.match(/^https?:\/\/(?:www\.)?eventbrite\.(?:com|ca)\/o\/(?:[a-z0-9-]*-)?(\d{6,})/i)?.[1];
   if (ebOrg) {

@@ -1,0 +1,63 @@
+[
+  {
+    "url": "https://www.eventbrite.com/o/39058487853",
+    "tech": true,
+    "reason": "Audit 2026-10-11-i2-W3: TechSTL is a tech organiser (St. Louis); the gate rejected it for no tech signal in organiser."
+  },
+  {
+    "url": "https://www.eventbrite.com/o/1710302898",
+    "tech": true,
+    "reason": "Audit 2026-10-11-i2-W3: Indy Hackers is a tech organiser (Fishers); the gate rejected it for no tech signal in organiser."
+  },
+  {
+    "url": "https://www.eventbrite.com/o/17965555697",
+    "tech": true,
+    "reason": "Audit 2026-10-11-i2-W3: ISSA Kentuckiana is a tech organiser (Jeffersontown); the gate rejected it for no tech signal in organiser."
+  },
+  {
+    "url": "https://www.eventbrite.com/o/16074906148",
+    "tech": true,
+    "reason": "Audit 2026-10-11-i2-W3: New Media Manitoba is a tech organiser (Winnipeg); the gate rejected it for no tech signal in organiser."
+  },
+  {
+    "url": "https://www.eventbrite.com/o/15960676096",
+    "tech": true,
+    "reason": "Audit 2026-10-11-i2-W3: RockIT Women is a tech organiser (Clarksville); the gate rejected it for no tech signal in organiser."
+  },
+  {
+    "url": "https://www.eventbrite.com/o/4534282341",
+    "tech": true,
+    "reason": "Audit 2026-10-11-i2-W3: GDG Kansas City is a tech organiser (Kansas City); the gate rejected it for only 1 upcoming event(s)."
+  },
+  {
+    "url": "https://www.eventbrite.com/o/30700092802",
+    "tech": true,
+    "reason": "Audit 2026-10-11-i2-W3: 16 Tech Community Corporation is a tech organiser (Indianapolis); the gate rejected it for only 1 upcoming event(s)."
+  },
+  {
+    "url": "https://www.eventbrite.com/o/15454944584",
+    "tech": true,
+    "reason": "Audit 2026-10-11-i2-W3: TAB (Tech Association of the Bluegrass) is a tech organiser (Lexington); the gate rejected it for only 1 upcoming event(s)."
+  },
+  {
+    "url": "https://www.meetup.com/philosophy-austin/",
+    "tech": false,
+    "reason": "Audit 2026-10-31-i1-W1: not a tech organiser (philosophy seminars, social nights); let in on a false track record."
+  },
+  {
+    "url": "https://www.meetup.com/greater-toronto-travel-and-social-club/",
+    "tech": false,
+    "reason": "Audit 2026-10-31-i1-W1: not a tech organiser (trivia nights, clothing swap); let in on a false track record."
+  },
+  {
+    "url": "https://api.lu.ma/ics/get?entity=calendar&id=cal-ouHgAHCszM3INEo",
+    "name": "Red Fridge Society",
+    "judge_each": true,
+    "reason": "Audit 2026-10-31-i1-W1: mixed calendar (founder talks beside wine courses, poker, a car meet); judge its events one by one."
+  },
+  {
+    "url": "https://shiftkeylabs.ca/events/?ical=1",
+    "judge_each": true,
+    "reason": "Orchestrator oct31: ShiftKey Labs lists student career workshops beside its hackathons and CTFs (per the proposing curator); judge its events one by one."
+  }
+]

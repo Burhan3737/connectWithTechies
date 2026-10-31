@@ -1,0 +1,15 @@
+[
+  {
+    "match": {
+      "name": "BSides Halifax",
+      "city": "Halifax"
+    },
+    "action": "update",
+    "reason": "AUDIT 2026-10-31-i2-B1: halifaxbsides.ca shows November 12, 2026; ShiftKey Labs (Dalhousie CS) lists BSides Halifax 6th annual conference on Nov 12 2026.",
+    "set": {
+      "next_date": "2026-11-12",
+      "next_date_end": "2026-11-12",
+      "status": "upcoming"
+    }
+  }
+]

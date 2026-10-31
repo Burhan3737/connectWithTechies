@@ -1,0 +1,19 @@
+[
+  { "match": { "name": "Gartner IT Symposium/Xpo", "city": "Orlando" },
+    "action": "update",
+    "reason": "gartner.com/en/conferences/na/symposium-us (organiser) now carries the 2027 edition: page title 'Gartner IT Symposium/Xpo 2027 Conference in Orlando, Florida', hero '18 - 21 October 2027 Orlando, FL', JSON-LD startDate 2027-10-18 endDate 2027-10-21. The 2026 edition (Oct 19-22 2026) has run and is kept as last_date.",
+    "set": { "next_date": "2027-10-18", "next_date_end": "2027-10-21", "last_date": "2026-10-19", "status": "upcoming" } },
+  { "match": { "name": "dev2next", "city": "Lone Tree" },
+    "action": "update",
+    "reason": "dev2next.com (organiser; React shell, text is in its main.js bundle) post-event block reads 'Thank you for joining us. See you again October 18-21, 2027'; the same bundle carries 'Lone Tree, CO - October 12 - 15, 2026', the edition that has just run, kept as last_date. The 2027 text names no city, so the city stays Lone Tree from the 2026 edition. Source moved from dev.events to the organiser.",
+    "set": { "next_date": "2027-10-18", "next_date_end": "2027-10-21", "last_date": "2026-10-12", "status": "upcoming", "source": "https://dev2next.com/" } },
+  { "match": { "name": "Great Lakes Software Symposium", "city": "Chicago" },
+    "action": "update",
+    "reason": "The October 2026 edition did not run: it was moved to April 2027. nofluffjuststuff.com/chicago (organiser) now reads 'Great Lakes Software Symposium April 22 - 23, 2027 - Chicago, IL', JSON-LD startDate 2027-04-22 endDate 2027-04-23, venue 'Renaissance Schaumburg Hotel, 1551 N. Thoreau Drive, Schaumburg, Illinois'. Its 'Past Events' list goes Aug 1-2 2025, Jun 10-12 2022, Oct 25-27 2019, with no 2026 edition. The event's own October 2026 slug, nofluffjuststuff.com/conference/chicago/2026/10/travel, now redirects to that April 2027 page, while the past 2025/08 slug still serves its own August 1-2 2025 page and made-up slugs (2026/09, 2027/04) return 404. So the same edition was rescheduled. last_date goes back to 2025-08-01, the most recent edition actually held (also at the Renaissance Schaumburg, per the 2025/08/travel page). City moved from Chicago to Schaumburg, where the hotel is. In person, with an optional Zoom stream. The old record's source was dev.events.",
+    "set": { "next_date": "2027-04-22", "next_date_end": "2027-04-23", "last_date": "2025-08-01", "status": "upcoming", "month": "April",
+             "city": "Schaumburg", "region": "Illinois", "venue": "Renaissance Schaumburg Hotel", "source": "https://nofluffjuststuff.com/chicago" } },
+  { "match": { "name": "DevOpsDays Boston", "city": "Boston" },
+    "action": "update",
+    "reason": "devopsdays.org/events/2026-boston/welcome/ (organiser) gives the venue as Microsoft NERD Center, 1 Memorial Drive, Cambridge MA 02142; the record's own venue field already says Cambridge. The event is held in Cambridge, not Boston. Dates Oct 19-20 2026 match the record's last_date. No 2027 Boston page yet (2027-boston/welcome/ returns 404).",
+    "set": { "city": "Cambridge", "region": "Massachusetts", "source": "https://devopsdays.org/events/2026-boston/welcome/" } }
+]

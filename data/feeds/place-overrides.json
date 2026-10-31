@@ -36,5 +36,29 @@
   "luma:evt-EH4gqNrZc4JCzC3": {
     "drop": true,
     "reason": "AUDIT 2026-10-11-i1 W2: 'Claude SMB Workshop ... - Virtual' is online, listed as in person."
+  },
+  "devevents:https://www.bsidescos.org/|2026-10-24": {
+    "drop": true,
+    "reason": "AUDIT 2026-10-31-i1-B1: bsidescos.org says the 2026 edition was postponed to next year; the curated BSides COS record carries the event."
+  },
+  "ical:104889-1794474000-1794502800@shiftkeylabs.ca": {
+    "drop": true,
+    "reason": "AUDIT 2026-10-31-i2-B1: this is BSides Halifax (Nov 12 2026), already held as the curated record bsides-halifax-halifax."
+  },
+  "ical:104892-1793728800-1793736000@shiftkeylabs.ca": {
+    "drop": true,
+    "reason": "AUDIT 2026-10-31-i2-W2: Cloud Practitioner AWS Prep Course is a four-week exam-prep class for Dalhousie first- and second-years, not an event."
+  },
+  "ical:104896-1794333600-1794340800@shiftkeylabs.ca": {
+    "drop": true,
+    "reason": "AUDIT 2026-10-31-i2-W2: Cloud Practitioner AWS Prep Course is a four-week exam-prep class for Dalhousie first- and second-years, not an event."
+  },
+  "ical:104899-1794938400-1794945600@shiftkeylabs.ca": {
+    "drop": true,
+    "reason": "AUDIT 2026-10-31-i2-W2: Cloud Practitioner AWS Prep Course is a four-week exam-prep class for Dalhousie first- and second-years, not an event."
+  },
+  "ical:104902-1795543200-1795550400@shiftkeylabs.ca": {
+    "drop": true,
+    "reason": "AUDIT 2026-10-31-i2-W2: Cloud Practitioner AWS Prep Course is a four-week exam-prep class for Dalhousie first- and second-years, not an event."
   }
 }
