@@ -1,0 +1,14 @@
+[
+  {
+    "match": {
+      "name": "Pacific Northwest Software Symposium",
+      "city": "Redmond"
+    },
+    "action": "update",
+    "reason": "Proposed move reviewed 2026-11-02: nofluffjuststuff.com/seattle lists only 'March 18 - 19, 2027' at Aloft Redmond; no November 2026 edition on the page. End corrected to the 19th (JSON-LD gave a one-day end).",
+    "set": {
+      "next_date": "2027-03-18",
+      "next_date_end": "2027-03-19"
+    }
+  }
+]

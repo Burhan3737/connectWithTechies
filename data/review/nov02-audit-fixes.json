@@ -1,0 +1,35 @@
+[
+  {
+    "match": { "name": "Salt Lake City Day of Data", "city": "Salt Lake City" },
+    "action": "remove",
+    "reason": "AUDIT 2026-11-03-i1-B1: duplicate of the nov02-r2 'Day of Data' add (same event, same 2026-09-19 edition); the new record carries the venue (Neumont University) and the organiser's page, this one a bare sqlsaturday.com listing."
+  },
+  {
+    "match": { "name": "SF Tech Week", "city": "San Francisco" },
+    "action": "update",
+    "reason": "AUDIT 2026-11-03-i1-B2: same event as 'Tech Week San Francisco' (both tech-week.com), which nov02-t2 moved to 2027-10-04..10 from a16z's Tech Week help centre ('What are the dates for Tech Week 2027?'). Same dates so the build merges the pair again.",
+    "set": {
+      "next_date": "2027-10-04",
+      "next_date_end": "2027-10-10",
+      "last_date": "2026-10-05",
+      "status": "upcoming"
+    }
+  },
+  {
+    "match": { "name": "Pacific Northwest Software Symposium", "city": "Redmond" },
+    "action": "update",
+    "reason": "AUDIT 2026-11-03-i1-W1: date moved to March 2027 from nofluffjuststuff.com/seattle, so the source is that page and the usual month is March.",
+    "set": {
+      "source": "https://nofluffjuststuff.com/seattle",
+      "month": "March"
+    }
+  },
+  {
+    "match": { "name": "Vintage Computer Festival Montreal", "city": "Saint-Lambert" },
+    "action": "update",
+    "reason": "AUDIT 2026-11-03-i1-W2: cvcfed.org places the festival at Champlain College Saint-Lambert; description still said Montreal.",
+    "set": {
+      "description": "Canada's Vintage Computer Federation event: a two-day weekend of vintage machine exhibits and talks in Saint-Lambert, on Montreal's South Shore."
+    }
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "pass": "nov02-r2",
+  "date": "2026-11-02",
+  "returning": [
+    {
+      "name": "SLC Sql Saturday 2025",
+      "verdict": "added",
+      "reason": "Renamed: utahgeekevents.com/events/day-of-data-2026-formerly-sql-saturday/ - \"Day of Data 2026 (Formerly SQL Saturday)\", Sept 19 2026, Neumont University, Salt Lake City (moved from Sandy), free, in-person. Date passed, no 2027 date yet: add \"Day of Data\", recurring-tbd, last_date 2026-09-19."
+    },
+    {
+      "name": "Hack to the Future",
+      "verdict": "unresolved",
+      "reason": "Student hackathon (H2TF Team); its only web presence is h2tf-2025.devpost.com (May 24-25 2025, Brambleton Plaza, Ashburn). The h2tf-2026 and h2tf Devpost slugs return 404; web search found no 2026 edition and no organiser site. The May 2026 slot passed with nothing listed, but nothing says it ended."
+    },
+    {
+      "name": "AI DevSummit 2025",
+      "verdict": "added",
+      "reason": "aidevsummit.co JSON-LD 2027-09-08 to 2027-09-10, Santa Clara Convention Center (moved from SF area, May to September). 2026 edition May 27-28 2026 per organiser Luma luma.com/np3l35ui. Add with last_date 2026-05-27."
+    },
+    {
+      "name": "Open Source North",
+      "verdict": "added",
+      "reason": "opensourcenorth.com: \"05.27.2027 | St. Paul, MN\", University of St. Thomas, Thursday May 27. 2026 edition May 28 2026 per organiser Humanitix page. Add with last_date 2026-05-28."
+    },
+    {
+      "name": "NY Tech Week Minute Hackathon - Fintech, Life Sciences, Security & Defense",
+      "verdict": "rejected",
+      "reason": "One-off 4-hour side event of NY Tech Week (Jun 4 2025) run by PensarAI/OSS4AI/Coeus Collective/H*QUOTIENT on Devpost; not a recurring event and no 2026 edition."
+    },
+    {
+      "name": "East Bay Hacker's First Hackathon ",
+      "verdict": "rejected",
+      "reason": "One-off high-school hackathon billed as \"Our first Hackathon\" (Jun 6 2025, 21 participants); Devpost page only, no organiser site and no later edition found."
+    },
+    {
+      "name": "Seattle Stupid Ideas Hackathon",
+      "verdict": "rejected",
+      "reason": "One-off invite-only hackathon run by two individuals via Luma (luma.com/9qwilan6, June 8 2025, AI House Seattle); no 2026 edition found and no organisation calendar behind it."
+    },
+    {
+      "name": "Databricks Hackathon",
+      "verdict": "rejected",
+      "reason": "Attendee-only hackathon inside Databricks Data + AI Summit 2025 (Devpost: \"Attendees Registered through Data + AI Summit\", one day Jun 9 2025); not a standalone public event."
+    },
+    {
+      "name": "InfoQ Dev Summit Boston",
+      "verdict": "added",
+      "reason": "Rebranded: InfoQ now runs QCon AI Boston at the same Boston University George Sherman Union venue. boston.qcon.ai JSON-LD 2027-07-08 to 07-09; 2026 edition June 1-2 per boston.qcon.ai/schedule/boston2026. devsummit.infoq.com lists no Boston Dev Summit. Add \"QCon AI Boston\" with last_date 2026-06-01."
+    },
+    {
+      "name": "Boise Software Developer Group",
+      "verdict": "added",
+      "reason": "Monthly user group, not a one-off: bsdg.dev/groups/bsdg says it meets the 2nd Tuesday at 6pm at Boise CodeWorks; it publishes on meetup.com/bsdg-meetup (events Sep 8, Oct 13, Nov 24 2026). Listed in sources-nov02-r2.json for the feed rather than as an add."
+    },
+    {
+      "name": "DASH 2025",
+      "verdict": "unresolved",
+      "reason": "DASH by Datadog: dashcon.io redirects to dash.datadoghq.com, which still shows DASH 2026, June 9-10 2026 (JSON-LD), now elapsed; no 2027 date or announcement. Not in events.json under any name. Left for a later pass once Datadog announces DASH 2027."
+    },
+    {
+      "name": "Cyber Civil Defense Summit 2025",
+      "verdict": "unresolved",
+      "reason": "cybercivildefensesummit.org: the national DC summit was not held in 2026; UC Berkeley CLTC instead ran three regional summits (Scottsdale May 28, Union NJ Aug 20, Baton Rouge Oct 8 2026), all elapsed. No 2027 format, city or date announced."
+    },
+    {
+      "name": "Girlhacks Hackathon 2025",
+      "verdict": "rejected",
+      "reason": "Online-only: its own Devpost description says \"Girlhacks hackathon will be a 1-day (9 am to 5pm ET) virtual event\"; Cambridge, MA is the organiser location, not a venue."
+    },
+    {
+      "name": "SpurHacks",
+      "verdict": "rejected",
+      "reason": "Site gone: spurhacks.com now serves a domain-parking redirect (router.parklogic.com). Web search found no 2026 edition; spurhacks-2026 Devpost slug 404. Last edition June 20-22 2025, RIM Campus Waterloo."
+    },
+    {
+      "name": "WhatsAI Hackathon",
+      "verdict": "rejected",
+      "reason": "One-off invite-only hackathon for blind programmers run by Smith-Kettlewell Eye Research Institute (Jun 21-22 2025); no recurring edition found."
+    },
+    {
+      "name": "Akash Accelerate",
+      "verdict": "unresolved",
+      "reason": "Akash Network company summit (2025 at 74Wythe, Brooklyn). akash.network/akash-accelerate-2025 now redirects to a livestream recording; web search found no 2026 edition (June slot passed) and no 2027 announcement."
+    },
+    {
+      "name": "5th Annual BELL Business & Government Contracting Summit",
+      "verdict": "rejected",
+      "reason": "Not a tech event: bellgroupsd.com/bell-summit-2026 shows the 6th Annual BELL Business & Government Contracting Summit (June 26-27, UC San Diego Park & Market), about government contracting and certification for small businesses."
+    },
+    {
+      "name": "GDG Solution Hacks",
+      "verdict": "unresolved",
+      "reason": "thesolutionhacks.site has expired (redirects to expireddomains.com). GDG on Campus TMU listed the 2025 edition (June 27-29 2025) on gdg.community.dev; a search snippet showed \"SolutionHacks 2026\" July 24-26 at Daphne Cockwell Complex, but that event page now returns 404, so the 2026 edition could not be confirmed and no 2027 one is listed."
+    },
+    {
+      "name": "Women in Tech Montreal - OutGeekWomen",
+      "verdict": "rejected",
+      "reason": "OutGeekWomen \"Women in Tech <city>\" listings are a templated multi-city Eventbrite series with no organiser site; the row URL is an Eventbrite search-affiliate link. Feed-held Eventbrite rows already carry the series (e.g. \"Women in Tech Montreal 2026\", Oct 29 2026); no curated add warranted."
+    },
+    {
+      "name": "\"Eh I\" Summer Vibe Hackathon (Ottawa - July)",
+      "verdict": "rejected",
+      "reason": "One-off hackathon (luma.com/yet47t4v, July 5 2025) by AGI Ventures Canada; no 2026 edition found and the organiser calendar luma.com/agivc shows no upcoming events."
+    },
+    {
+      "name": "RailsConf 2025",
+      "verdict": "rejected",
+      "reason": "Ended for good: railsconf.org says \"After nearly 20 years, RailsConf 2025 will be the final gathering of its kind\"."
+    },
+    {
+      "name": "MY Hack ",
+      "verdict": "unresolved",
+      "reason": "Mafiq Foundation student hackathon (2025: Jul 12-13, Islamic Center of Maryland). Search snippets mention a 2026 edition (Jul 25-26 at ICM, and a separate \"MY-HACK2026 @ ISNA\" form) but mafiq.org/myhack shows no dates and the ADAMS Center listing returned no post, so neither the 2026 date nor a 2027 edition could be confirmed on an organiser page."
+    },
+    {
+      "name": "The 42nd International Conference on Machine Learning (ICML)",
+      "verdict": "rejected",
+      "reason": "Outside US/Canada: icml.cc - ICML 2026 was in Seoul and ICML 2027 is at Riocentro, Rio de Janeiro, Brazil, July 31 - August 6, 2027. Vancouver 2025 was a rotation stop."
+    },
+    {
+      "name": "PyHEP.dev 2025",
+      "verdict": "rejected",
+      "reason": "Outside US/Canada: PyHEP.dev 2026 was held at Nikhef, Amsterdam, Sept 7-9 2026 (hepsoftwarefoundation.org announcement, indico.nikhef.nl/event/7873); the workshop rotates and Seattle 2025 was one stop."
+    },
+    {
+      "name": "DevRel Con NYC",
+      "verdict": "added",
+      "reason": "Organiser (MLH) ticket page ti.to/mlh/devrelcon-2026: DevRelCon New York 2026, July 22-23 2026, Industry City, Brooklyn. No 2027 date yet: add \"DevRelCon New York\", Brooklyn, recurring-tbd, last_date 2026-07-22."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}

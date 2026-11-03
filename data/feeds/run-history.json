@@ -157,5 +157,126 @@
   },
   "failed": 2,
   "written": 12265
+ },
+ {
+  "run_on": "2026-11-02",
+  "discover": false,
+  "bySource": {
+   "mlh": 86,
+   "devpost": 65,
+   "confstech": 140,
+   "devevents": 147,
+   "hackclub": 10,
+   "guild": 23,
+   "localist": 9,
+   "luma": 7670,
+   "meetup": 3461,
+   "eventbrite": 469,
+   "tribe": 74,
+   "ical": 37
+  },
+  "failed": 4,
+  "written": 12654
+ },
+ {
+  "run_on": "2026-11-02",
+  "discover": true,
+  "bySource": {
+   "mlh": 86,
+   "devpost": 65,
+   "confstech": 140,
+   "devevents": 147,
+   "hackclub": 10,
+   "guild": 23,
+   "localist": 9,
+   "bevy": 253,
+   "luma": 7728,
+   "meetup": 9008,
+   "eventbrite": 6312,
+   "tribe": 74,
+   "ical": 37
+  },
+  "failed": 3,
+  "written": 13338
+ },
+ {
+  "run_on": "2026-11-02",
+  "discover": false,
+  "bySource": {
+   "mlh": 86,
+   "devpost": 65,
+   "confstech": 140,
+   "devevents": 147,
+   "hackclub": 10,
+   "guild": 23,
+   "localist": 9,
+   "luma": 7728,
+   "meetup": 3722,
+   "eventbrite": 485,
+   "tribe": 74,
+   "ical": 37
+  },
+  "failed": 3,
+  "written": 13419
+ },
+ {
+  "run_on": "2026-11-02",
+  "discover": false,
+  "bySource": {
+   "mlh": 86,
+   "devpost": 65,
+   "confstech": 140,
+   "devevents": 147,
+   "hackclub": 10,
+   "guild": 23,
+   "localist": 9,
+   "luma": 7728,
+   "meetup": 3722,
+   "eventbrite": 497,
+   "tribe": 74,
+   "ical": 37
+  },
+  "failed": 2,
+  "written": 13419
+ },
+ {
+  "run_on": "2026-11-02",
+  "discover": false,
+  "bySource": {
+   "mlh": 86,
+   "devpost": 65,
+   "confstech": 140,
+   "devevents": 147,
+   "hackclub": 10,
+   "guild": 23,
+   "localist": 9,
+   "luma": 7728,
+   "meetup": 3722,
+   "eventbrite": 497,
+   "tribe": 74,
+   "ical": 37
+  },
+  "failed": 2,
+  "written": 13418
+ },
+ {
+  "run_on": "2026-11-02",
+  "discover": false,
+  "bySource": {
+   "mlh": 86,
+   "devpost": 65,
+   "confstech": 140,
+   "devevents": 147,
+   "hackclub": 10,
+   "guild": 23,
+   "localist": 9,
+   "luma": 7728,
+   "meetup": 3722,
+   "eventbrite": 497,
+   "tribe": 74,
+   "ical": 37
+  },
+  "failed": 2,
+  "written": 13416
  }
 ]

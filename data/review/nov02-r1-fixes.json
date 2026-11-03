@@ -1,0 +1,295 @@
+[
+  {
+    "action": "add",
+    "reason": "RETURNING row 'Merge' (2025-04-28). Organiser site merge.softwaregr.org is live and carries the 2026 theme but no date. The organiser's own Sessionize CFP page (sessionize.com/merge-2026, linking website merge.softwaregr.org) gives 'event date 11 May 2026, location Grand Rapids, Michigan'. That edition has passed and 2027 is not announced, so recurring-tbd with last_date 2026-05-11. Venue left blank: only aggregator listings name it.",
+    "record": {
+      "name": "Merge",
+      "type": "conference",
+      "topics": [
+        "software",
+        "product",
+        "design",
+        "ai"
+      ],
+      "city": "Grand Rapids",
+      "region": "Michigan",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "April-May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-11",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "product managers, designers, developers",
+      "url": "https://merge.softwaregr.org/",
+      "description": "SoftwareGR's annual West Michigan software conference where product managers, designers and developers meet; the 2026 theme was AI at Work.",
+      "source": "https://sessionize.com/merge-2026"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'Into The Box' (2025-04-30). intothebox.org still shows 'INTO THE BOX 2026 ... April 29th - May 1st, 2026 - Washington, DC' with a 2026 agenda (pre-conference Apr 29). That edition has passed and no 2027 dates are published, so recurring-tbd with last_date 2026-04-29. Venue not named in the page text (rooms 'Eberly Hall side A/B' only), so left blank.",
+    "record": {
+      "name": "Into The Box",
+      "type": "conference",
+      "topics": [
+        "web-development",
+        "cfml",
+        "boxlang",
+        "coldbox"
+      ],
+      "city": "Washington",
+      "region": "District of Columbia",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "April-May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-29",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "CFML and BoxLang developers",
+      "url": "https://www.intothebox.org",
+      "description": "Ortus Solutions' annual conference for the ColdBox, BoxLang and CFML community: a pre-conference workshop day followed by two days of sessions on modern web development.",
+      "source": "https://www.intothebox.org"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'AI Agent Conference' (2025-05-06). agentconference.com (title 'Agent Conference 2027') JSON-LD startDate 2027-05-17, endDate 2027-05-18; text 'May 17-18, 2027 New York Hilton Midtown, New York City', '4,000+ attendees expected'. The page also shows a '2026 Archive' of speakers, so a 2026 edition ran, but its date appears only on aggregators (May 4-5 2026), so last_date is left blank rather than taken from them.",
+    "record": {
+      "name": "Agent Conference",
+      "type": "conference",
+      "topics": [
+        "ai",
+        "agents",
+        "enterprise"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "New York Hilton Midtown",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-05-17",
+      "next_date_end": "2027-05-18",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "4000",
+      "cost": "paid",
+      "audience": "enterprise executives, founders, AI engineers",
+      "url": "https://www.agentconference.com/",
+      "description": "Two-day enterprise conference on autonomous AI agents, programmed in ten themes from engineering and security to finance and healthcare.",
+      "source": "https://www.agentconference.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'Canadian Women in Cybersecurity' (2025-05-12). siberx.org/cwc/ redirects to the 2026 event page: JSON-LD startDate 2026-05-26; 'Start Date May 26, 2026 ... Status Expired, Location Toronto, Venue Hyatt Regency Toronto, 370 King St W'. The siberX events list shows no 2027 CWC yet, so recurring-tbd with last_date 2026-05-26.",
+    "record": {
+      "name": "Canadian Women in Cybersecurity",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "women-in-tech"
+      ],
+      "city": "Toronto",
+      "region": "Ontario",
+      "country": "Canada",
+      "venue": "Hyatt Regency Toronto",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-26",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "women in cybersecurity, security leaders and practitioners",
+      "url": "https://siberx.org/event/canadian-women-in-cybersecurity-2026/",
+      "description": "siberX's one-day Toronto conference celebrating and advancing women in Canadian cybersecurity, with talks, panels and networking.",
+      "source": "https://siberx.org/event/canadian-women-in-cybersecurity-2026/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'MLsys' (2025-05-12, Santa Clara). mlsys.org (title '2027 Conference') header: 'MLSys 2027 Tenth Annual Conference on Machine Learning and Systems Bellevue, WA June 21st - 25th 2027'; paper deadline Oct 30 2026. The same page says registration and sponsor details 'will be announced as they are confirmed', so re-check as it nears. mlsys.org/Conferences/2026: 'Bellevue, WA May 18th - 22nd, 2026' gives last_date. The conference moved from Santa Clara to Bellevue.",
+    "record": {
+      "name": "MLSys",
+      "type": "conference",
+      "topics": [
+        "machine-learning",
+        "systems",
+        "research"
+      ],
+      "city": "Bellevue",
+      "region": "Washington",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "May-June",
+      "next_date": "2027-06-21",
+      "next_date_end": "2027-06-25",
+      "last_date": "2026-05-18",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "ML and systems researchers, engineers",
+      "url": "https://mlsys.org",
+      "description": "The annual academic Conference on Machine Learning and Systems: research papers, keynotes and an industry track on training, inference and ML infrastructure.",
+      "source": "https://mlsys.org"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'UXDX' (2025-05-12, New York). uxdx.com lists 'New York May 10 - 12, 2027, New York, USA'; uxdx.com/usa/2027/ title 'UXDX New York | May 10-12, 2027'. uxdx.com/usa/2026/ title 'UXDX USA | May 11-13, 2026' gives last_date. Venue left blank: the 2027 page's venue block mixes 'New World Stages' with copy describing San Francisco's August Hall.",
+    "record": {
+      "name": "UXDX New York",
+      "type": "conference",
+      "topics": [
+        "ux",
+        "product",
+        "design",
+        "engineering"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-05-10",
+      "next_date_end": "2027-05-12",
+      "last_date": "2026-05-11",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "product managers, designers, researchers, engineers",
+      "url": "https://uxdx.com/usa/2027/",
+      "description": "Cross-functional conference where product, research, design and engineering teams learn together through talks and workshops.",
+      "source": "https://uxdx.com/usa/2027/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'AI & Machine Learning Summit' (2025-05-14, Boston). That was DBTA's AI/ML summit co-located inside Data Summit 2025; the umbrella event is what returns. dbta.com/datasummit/2027 JSON-LD startDate 2027-05-12, endDate 2027-05-13, 'May 12 - 13, 2027 | Boston, MA', venue Hyatt Regency Boston. dbta.com/datasummit/2026 JSON-LD startDate 2026-05-05 gives last_date.",
+    "record": {
+      "name": "Data Summit",
+      "type": "conference",
+      "topics": [
+        "data",
+        "analytics",
+        "ai",
+        "data-engineering"
+      ],
+      "city": "Boston",
+      "region": "Massachusetts",
+      "country": "United States",
+      "venue": "Hyatt Regency Boston",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-05-12",
+      "next_date_end": "2027-05-13",
+      "last_date": "2026-05-05",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "data leaders, architects, engineers, analytics teams",
+      "url": "https://www.dbta.com/datasummit/2027/default.aspx",
+      "description": "DBTA's annual data management, analytics and AI conference in Boston, with workshops, a Data + AI Leadership Forum and a solutions showcase.",
+      "source": "https://www.dbta.com/datasummit/2027/default.aspx"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'GDSCHACKS' (2025-05-02). Renamed GDGHacks; gdghacks.com (title 'GDGHacks 2026') reads 'May 9-10, 2026, In-Person, University of Guelph', with 250 hackers selected the previous year. 2027 not announced, so recurring-tbd with last_date 2026-05-09.",
+    "record": {
+      "name": "GDGHacks",
+      "type": "hackathon",
+      "topics": [
+        "hackathon",
+        "students",
+        "google"
+      ],
+      "city": "Guelph",
+      "region": "Ontario",
+      "country": "Canada",
+      "venue": "University of Guelph",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-09",
+      "status": "recurring-tbd",
+      "attendance": "250",
+      "cost": "free",
+      "audience": "university students",
+      "url": "https://www.gdghacks.com/",
+      "description": "Free in-person student hackathon run by Google Developer Groups at the University of Guelph, drawing hackers from dozens of universities.",
+      "source": "https://www.gdghacks.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'DesignVerse at UCR' (2025-05-10). designverseucr.org (title 'DesignVerse 2026'): 'University of California, Riverside May 16-17, 2026', a 24-hour design-a-thon. 2027 not announced, so recurring-tbd with last_date 2026-05-16.",
+    "record": {
+      "name": "DesignVerse",
+      "type": "hackathon",
+      "topics": [
+        "design",
+        "ux",
+        "students"
+      ],
+      "city": "Riverside",
+      "region": "California",
+      "country": "United States",
+      "venue": "University of California, Riverside",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-16",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "undergraduate, graduate and high school students",
+      "url": "https://www.designverseucr.org/",
+      "description": "UC Riverside's 24-hour beginner-friendly design-a-thon: teams design an app or website interface to a prompt and present it to industry judges.",
+      "source": "https://www.designverseucr.org/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'Tech + Startups Community Conference' (2025-05-01, Miami Dade College Auditorium, host Denis Hiller). Its second edition was renamed: luma.com/1b1c3qxi, hosted by Denis Hiller, '1001 VC Presents: The 2nd Annual Miami Startup Ecosystem Conference Feb 12 - 13, 2026, Miami Dade College Auditorium (Downtown, Wolfson Campus)', JSON-LD startDate 2026-02-12, and it refers to 'our 2025 Conference'. The event exists only on Luma, hence the url. No 2027 date yet: recurring-tbd.",
+    "record": {
+      "name": "Miami Startup Ecosystem Conference",
+      "type": "conference",
+      "topics": [
+        "startups",
+        "venture-capital",
+        "ai"
+      ],
+      "city": "Miami",
+      "region": "Florida",
+      "country": "United States",
+      "venue": "Miami Dade College Auditorium (Wolfson Campus)",
+      "cadence": "annual",
+      "month": "February",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-02-12",
+      "status": "recurring-tbd",
+      "attendance": "250",
+      "cost": "paid",
+      "audience": "founders, investors, startup community",
+      "url": "https://luma.com/1b1c3qxi",
+      "description": "Two-day Miami conference of fireside chats, workshops and startup demo tables for founders and active investors, run by Denis Hiller and 1001 VC.",
+      "source": "https://luma.com/1b1c3qxi"
+    }
+  }
+]

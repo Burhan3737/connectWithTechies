@@ -28,3 +28,6 @@ test-results/
 playwright-report/
 # Vite build output
 dist/
+
+# agent scratch space, never committed
+.agentTempWork/

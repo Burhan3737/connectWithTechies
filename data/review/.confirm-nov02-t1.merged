@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Socratica",
+    "city": "Waterloo",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "socratica.info (200): 'Socratica is a live, IRL co-working session hosted every Sunday in Waterloo'; two 50-min work blocks plus demos. Matches record cadence weekly, recurring-tbd; last_date 2026-11-01 is a Sunday. Venue (Accelerator Centre) not stated on the homepage, kept from the Wygo-sourced record."
+  },
+  {
+    "name": "UVic Hacks",
+    "city": "Victoria",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "uvichacks.com (200, Next.js payload): student hackathon club at UVic; most recent dated event is 'Healthcare Hackathon, March 27-28, 2026, ECS First Floor' (still under 'Upcoming events'), earlier Claude Hackathon Mar 21 2026 Hickman 105. Matches last_date 2026-03-27, rolling/recurring-tbd. No fall-2026 events posted; site looks unrefreshed since spring, so worth a re-check later."
+  },
+  {
+    "name": "Analytics for Good Hackathon",
+    "city": "Minneapolis",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "carlsonschool.umn.edu/conferences/agihackathon (200): shows 'January 30-31, 2026', University of Minnesota; no 2027 date or mention. Matches last_date 2026-01-30, recurring-tbd."
+  },
+  {
+    "name": "Arch Grants Innovation Summit",
+    "city": "St. Louis",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "archgrants.org/programs/innovation-summit (200): 'On June 4, 2026, over 100 founders, investors, and corporate leaders came together at 18 Rails at The Foundry' (past tense); no 2027 date. Matches last_date 2026-06-04, venue, recurring-tbd."
+  },
+  {
+    "name": "Charlotte AI Summit",
+    "city": "Charlotte",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "ascendleadership.org/master-events/char-ai-summit-0626 (200): JSON-LD startDate 2026-06-18T08:30-04:00, endDate same day; address 1201 Elizabeth Avenue Charlotte NC (Central Piedmont). Matches last_date 2026-06-18; no 2027 edition published."
+  },
+  {
+    "name": "Dal Innovation Week",
+    "city": "Halifax",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "dalinnovates.ca/innovation-week (200): 'October 5-9, 2026' at Dalhousie; no 2027 dates. Matches last_date 2026-10-05, recurring-tbd."
+  },
+  {
+    "name": "Edmonton Startup Week",
+    "city": "Edmonton",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "edmontonstartupweek.com (200): page title and JSON-LD WebPage name 'Edmonton Startup Week | October 5-9, 2026' (modified 2026-10-13); no 2027 dates. Matches last_date 2026-10-05, recurring-tbd."
+  },
+  {
+    "name": "Global Game Jam Halifax",
+    "city": "Halifax",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "shiftkeylabs.ca/event/global-game-jam-2026 (200): JSON-LD startDate 2026-01-30, endDate 2026-02-01, in person at ShiftKey Labs, Dalhousie. Matches last_date 2026-01-30; no 2027 Halifax site page yet, recurring-tbd correct."
+  },
+  {
+    "name": "Hack Indy",
+    "city": "Indianapolis",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "hack-indy-2026.devpost.com (organiser's Devpost, 200): JSON-LD startDate 2026-03-27T17:00-04:00, endDate 2026-03-29; Purdue Indianapolis flagship hackathon; purdue.edu recap article corroborates. Matches last_date 2026-03-27; no 2027 edition published."
+  },
+  {
+    "name": "LA CTF",
+    "city": "Los Angeles",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "lac.tf (200): CTF Feb 6 2026 6PM PST - Feb 8 2026, plus 'In-Person Event Feb 7, 2026 09:00AM-07:00PM, Tom Bradley International Hall, Room 300', ACM Cyber at UCLA. Matches last_date 2026-02-07 (the in-person day) and venue; no 2027 date yet."
+  },
+  {
+    "name": "Mission Accepted Space Hackathon",
+    "city": "Halifax",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "shiftkeylabs.ca/event/mission-accepted-space-hackathon (200): JSON-LD startDate 2026-10-02, endDate 2026-10-04, 'October 2-4, 2026'. Matches last_date 2026-10-02, recurring-tbd."
+  },
+  {
+    "name": "STL Game Jam",
+    "city": "St. Louis",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "stlgamejam.com (200): 'When: January 30-February 1 2026', UMSL Millennium Student Center, Century Room A. Matches last_date 2026-01-30 and venue; no 2027 date."
+  },
+  {
+    "name": "TexSAW",
+    "city": "Richardson",
+    "status": "blocked",
+    "cycle": "nov02-t1",
+    "evidence": "texsaw.org, www.texsaw.org and http://texsaw.org all return Cloudflare 522 (origin down) via fetch-page. WebSearch found an Eventbrite listing for 'TexSAW 2026' (start Feb 27, 2:00 PM CST, ECSW at UT Dallas, by UTD Computer Security Group) and a CTFtime entry, which agree with last_date 2026-02-27 and venue, but no organiser page could be read. No change made; record is recurring-tbd. Source field still points to a 2025 cs.utdallas.edu article."
+  },
+  {
+    "name": "Twin Cities Startup Week",
+    "city": "Minneapolis",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "tcstartupweek.com (200): JSON-LD startDate 2026-09-14, endDate 2026-09-18, 'Sept 14-18, 2026', across Minneapolis and Saint Paul; 'TCSW 27 is next... Join the 2027 waitlist', no 2027 dates. Matches last_date 2026-09-14, recurring-tbd."
+  },
+  {
+    "name": "Upfront Summit",
+    "city": "Los Angeles",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "summit.upfront.com (200): 'Upfront Summit 2027... Los Angeles, California... back for 2027', invitation only, registration open, no date given. faq page: 2026 Summit Feb 25-26 at Nya Studios West, 1520 Wilcox Ave, LA. Matches last_date 2026-02-25, recurring-tbd (2027 announced without dates)."
+  },
+  {
+    "name": "Venture Club of Indiana Innovation Showcase",
+    "city": "Indianapolis",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "ventureclub.org/innovation-showcase (200): 'June 18, 2026 | Biltwell Event Center'; no 2027 date. Matches last_date 2026-06-18 and venue, recurring-tbd."
+  },
+  {
+    "name": "UB Hacking",
+    "city": "Buffalo",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "ubhacking.cse.buffalo.edu (200, Vite SPA): page title 'UB Hacking 2026'; JS bundle index-CyMeXglg.js config {year:'2026', title:'UB Hacking 2026', dates:'November 7th & 8th', eventStart:'2026-11-07T09:00:00-04:00', eventEnd:'2026-11-08T17:00:00-04:00'}. Matches record 2026-11-07 to 2026-11-08, University at Buffalo."
+  },
+  {
+    "name": "Datathon PolyFinances",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "nov02-t1",
+    "evidence": "polyfinances.ca/datathon (200): 'DATATHON 2026 14 et 15 novembre', JSON-LD startDate 2026-11-14T09:00-05:00, endDate 2026-11-15T16:00; 'Polytechnique Montréal Pavillon Lassonde', in-person schedule. Matches record. (Separate networking evening Nov 20 also listed, not the datathon.)"
+  },
+  {
+    "name": "ElleHacks",
+    "city": "Toronto",
+    "status": "blocked",
+    "cycle": "nov02-t1",
+    "evidence": "ellehacks.com (200, Vite SPA): bundle index-CIPHbRlt.js renders 'ElleHacks 2027' with subtitle 'To Be Announced' and an MLH 2027 season badge; no month published by the organiser. Per the MLH rule, MLH-only days (2027-01-29 to 01-31) stay on the site as unverified."
+  },
+  {
+    "name": "UGAHacks",
+    "city": "Athens",
+    "status": "blocked",
+    "cycle": "nov02-t1",
+    "evidence": "ugahacks.com (200): 'Register for UGAHacks 12' linking to 12.ugahacks.com, MLH 2027 season badge; 12.ugahacks.com (200) is 'Under Construction', Schedule 'To be Announced', no month or date anywhere in HTML or 6 JS bundles. Per the MLH rule, MLH-only days (2027-02-05 to 02-07) stay as unverified."
+  }
+]

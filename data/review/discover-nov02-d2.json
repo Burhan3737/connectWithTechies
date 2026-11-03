@@ -1,0 +1,155 @@
+{
+  "pass": "nov02-d2",
+  "date": "2026-11-02",
+  "returning": [],
+  "reported": [],
+  "cities": [
+    {
+      "city": "San Diego",
+      "region": "California",
+      "queries": [
+        "San Diego Startup Week 2027 dates",
+        "San Diego Tech Week 2026",
+        "hackathon San Diego 2027 in-person",
+        "AI Tinkerers San Diego demo night",
+        "San Diego accelerator demo day 2026 EvoNexus OR \"Founders Showcase\" OR Connect",
+        "Global Game Jam 2027 San Diego jam site",
+        "San Diego CTF in-person 2026 OR 2027 capture the flag UCSD OR SDSU",
+        "\"San Diego Startup Week\" 2025 October 6-10"
+      ],
+      "found": [
+        { "name": "San Diego Startup Week", "url": "https://sandiegostartupweek.org/", "verdict": "added",
+          "reason": "Organiser site (Startup San Diego): Nov 2-6 2026, five venues from Carlsbad to SDSU; 2025 edition Oct 6-10. Running this week." },
+        { "name": "DataHacks", "url": "https://datahacks.ds3ucsd.com/", "verdict": "added",
+          "reason": "DS3 at UCSD: 'January 16–17, 2027 · 36 hours, in person', UC San Diego; 2026 edition Apr 18-19. Filed under La Jolla like Diamondhacks." },
+        { "name": "AI Tinkerers San Diego", "url": "https://san-diego.aitinkerers.org/", "verdict": "added",
+          "reason": "Chapter site: next meetup Nov 17 2026, previous Oct 29; aitinkerers.org not read by any feed." },
+        { "name": "San Diego Tech Week", "url": "https://businessofsandiego.substack.com/p/san-diego-tech-week-innovation-day", "verdict": "rejected",
+          "reason": "Only a 2023 one-day event at Del Mar Fairgrounds found; no current edition or organiser site." },
+        { "name": "EvoNexus Demo Day", "url": "https://evonexus.org/", "verdict": "unresolved",
+          "reason": "Latest demo day found is 2024 (Qualcomm Jacobs Auditorium); no 2025/2026 edition published. EvoNexus now runs Irvine meetups that the feed already reads via Luma." },
+        { "name": "San Diego CTF (SDCTF)", "url": "https://sdc.tf/", "verdict": "rejected",
+          "reason": "UCSD ACM Cyber's CTF is online (CTFtime lists the 2025 edition as On-line); not in person." },
+        { "name": "Global Game Jam San Diego", "url": "https://www.sdmesa.edu/calendar/index.php?eID=9734", "verdict": "unresolved",
+          "reason": "Mesa College hosted a 2026 site; no 2027 San Diego jam site published yet (site-host registration only opened Nov 1 2026)." }
+      ]
+    },
+    {
+      "city": "Houston",
+      "region": "Texas",
+      "queries": [
+        "Houston Tech Rodeo 2027 dates",
+        "Houston Tech Rodeo 2026 Houston Exponential dates February",
+        "\"H-Town Roundup\" 2026 OR 2027 Houston Exponential dates",
+        "Houston startup demo day 2026 accelerator Ion OR \"Rice Alliance\" OR Softeq",
+        "Houston tech summit 2027 conference Houston Texas",
+        "Machaon \"Texas Technology Summit\" 2027 Norris Houston",
+        "Machaon Advisory Texas Technology Summit 18th annual",
+        "Houston game jam 2026 in-person Global Game Jam site Houston",
+        "AI Tinkerers Houston meetup 2026",
+        "capture the flag competition Houston in-person 2026 university CTF"
+      ],
+      "found": [
+        { "name": "H-Town Roundup", "url": "https://www.houstonexponential.com/event-details/h-town-roundup-2026-2", "verdict": "added",
+          "reason": "Houston Exponential's startup week (formerly Houston Tech Rodeo): Mar 30-Apr 3 2026, various locations; 2027 not announced, recurring-tbd." },
+        { "name": "AI Tinkerers Houston", "url": "https://houston.aitinkerers.org/", "verdict": "added",
+          "reason": "Chapter site: monthly meetups, next Nov 10 2026 at 2339 Commerce St; aitinkerers.org not read by any feed." },
+        { "name": "Texas Technology Summit", "url": "https://technologysummit.net/", "verdict": "unresolved",
+          "reason": "Annual (17th held Mar 5 2026 at Norris Conference Center CityCentre, per IEEE Houston). The organiser site technologysummit.net returned an empty body; 2027 dates exist only on aggregators (Luminik Mar 4, SharedAudiences Mar 25), which disagree." },
+        { "name": "Founder Institute Houston Demo Day", "url": "https://luma.com/yj3z2vj5", "verdict": "rejected",
+          "reason": "A single cohort graduation published on Luma. That is feed territory, not a curated recurring record." },
+        { "name": "Houston CTF / game jam", "url": "", "verdict": "rejected",
+          "reason": "No in-person Houston CTF found; the only Houston game jams were a 2020 IGDA GGJ site and UH's remote itch.io jam. Houston IGDA's Meetup is already in the feed registry." }
+      ]
+    },
+    {
+      "city": "Portland",
+      "region": "Oregon",
+      "queries": [
+        "Portland Oregon hackathon 2026 OR 2027 in-person",
+        "Portland Oregon tech week OR startup week 2026",
+        "\"Portland Startup Week\" 2027 official site",
+        "\"Oregon Startup Week\" May 10-15 2027",
+        "\"Silicon Forest Tech Summit\" 2026 OR 2027 Portland",
+        "PIGSquad Portland game jam 2026",
+        "globalgamejam.org jam-sites 2026 Portland Oregon",
+        "Portland Oregon CTF OR \"capture the flag\" in-person 2026 PSU"
+      ],
+      "found": [
+        { "name": "Oregon Startup Week", "url": "https://www.oregonstartupweek.com/", "verdict": "added",
+          "reason": "Organiser site: May 10-15 2027 at Big Pink, Portland; renamed from Portland Startup Week (2026 edition May 11-15)." },
+        { "name": "Silicon Forest Tech Summit", "url": "https://www.steamcircuit.com/events/silicon-forest-tech-summit-agility-in-a-time-of-change", "verdict": "added",
+          "reason": "STEAM Circuit's page: Mar 14 2026, Oregon Convention Center (2025 edition Jan 25); 2027 not announced, recurring-tbd." },
+        { "name": "UnlockedHacks", "url": "https://community.vercel.com/t/sponsorship-request-unlockedhacks-oregons-first-large-scale-high-school-hackathon-nov-14/47260", "verdict": "rejected",
+          "reason": "A first-time, selective high-school hackathon on Nov 14 2026, known only from a sponsorship request. No organiser page and no recurrence." },
+        { "name": "PIGSquad game jams", "url": "https://pigsquad.itch.io", "verdict": "rejected",
+          "reason": "PIGSquad's 2026 jams are itch.io jams run through Discord/Twitch, not in-person events. Its GGJ site has no 2027 page yet." },
+        { "name": "Oregon AI Accelerator Demo Day", "url": "https://luma.com/bse3d90y", "verdict": "exists",
+          "reason": "Already in the feed (luma) for Dec 17 2026, Portland." },
+        { "name": "Portland CTF", "url": "", "verdict": "rejected",
+          "reason": "No in-person CTF found in Portland. BSides PDX is already held." }
+      ]
+    },
+    {
+      "city": "Raleigh",
+      "region": "North Carolina",
+      "queries": [
+        "Raleigh Innovation Week OR \"Innovate Raleigh Summit\" 2026 OR 2027",
+        "Raleigh tech week 2026 Triangle startup week",
+        "Raleigh demo day 2026 accelerator NC State OR \"Wolfpack\" OR \"Raleigh\" startup demo day",
+        "Raleigh NC summit 2027 technology OR AI OR startup summit Raleigh",
+        "NC State capture the flag competition in-person Raleigh 2026 OR 2027",
+        "Raleigh game jam 2026 OR 2027 in-person NC State OR \"Triangle\" game jam",
+        "AI Tinkerers Nashville OR Raleigh chapter meetup 2026"
+      ],
+      "found": [
+        { "name": "GRO Demo Day", "url": "https://www.cednc.co/gro12-demo-day-nov-10-2026", "verdict": "added",
+          "reason": "CED's GRO12 Demo Day: Tue Nov 10 2026, Park Alumni Center, NC State, Raleigh; biannual incubator demo day." },
+        { "name": "Raleigh-Durham Startup Week", "url": "https://www.raleighdurhamstartupweek.com/", "verdict": "added",
+          "reason": "Organiser site: returning Apr 19-23 2027 (2026: Apr 20-24). Filed under Durham, not Raleigh, because the organiser's JSON-LD gives addressLocality Durham. Events run in both cities." },
+        { "name": "AI Tinkerers Raleigh", "url": "https://raleigh.aitinkerers.org/", "verdict": "added",
+          "reason": "Chapter site: last meetup Aug 12 2026, no upcoming date, recurring-tbd; aitinkerers.org not read by any feed." },
+        { "name": "Innovate Raleigh Summit", "url": "https://web.raleighchamber.org/events/InnovateRaleighSummit2024-2818/details", "verdict": "rejected",
+          "reason": "Last edition 2024; Raleigh Chamber listing marked no longer active; no 2025-2027 edition found." },
+        { "name": "All Things AI", "url": "https://cednc.org/event/all-things-ai-2027/", "verdict": "rejected",
+          "reason": "Mar 23-24 2027 per CED, but at the Carolina Theatre in Durham, not Raleigh. Out of this city's scope; worth a Durham pass." },
+        { "name": "Andrews Launch Accelerator Demo Day", "url": "https://entrepreneurshipclinic.ncsu.edu/demo-day-andrews-launch-accelerator/", "verdict": "unresolved",
+          "reason": "NC State page is headed 'Demo Day 2027 Information' but gives no date (closed waitlist); 2025 edition was Aug 19 at Raleigh Founded. Cannot settle 2026/2027." },
+        { "name": "Triangle Game Jam", "url": "https://entrepreneurship.ncsu.edu/news/2026/04/03/triangle-game-jam-2026-three-campuses-innovation-across-the-triangle/", "verdict": "unresolved",
+          "reason": "NC State/UNC/Duke student jam (2nd edition Jan 2026, showcase Feb 22 at Hunt Library). The host campus rotates and no 2027 date or city is published." },
+        { "name": "Raleigh CTF", "url": "", "verdict": "rejected",
+          "reason": "No in-person CTF found in Raleigh (only a past NC National Guard high-school event with no date)." }
+      ]
+    },
+    {
+      "city": "Nashville",
+      "region": "Tennessee",
+      "queries": [
+        "Nashville Tech Week 2026 OR 2027",
+        "VandyHacks 2027 dates",
+        "\"VandyHacks XII\" March 2026 Vanderbilt",
+        "hackathon Nashville 2026 OR 2027 in-person",
+        "Nashville Entrepreneur Center demo day 2026 OR \"Nashville startup week\"",
+        "AI Tinkerers Nashville OR Raleigh chapter meetup 2026",
+        "globalgamejam.org jam-sites 2026 Nashville OR Raleigh OR \"San Diego\" OR Houston",
+        "Nashville CTF cybersecurity competition in-person 2026 Vanderbilt OR \"Tennessee State\" OR Lipscomb"
+      ],
+      "found": [
+        { "name": "VandyHacks", "url": "https://vandyhacks.org/", "verdict": "added",
+          "reason": "Organiser site: 'VandyHacks XIII ... Nashville, TN | March 2027', in person; no exact days and not yet on MLH 2027, so recurring-tbd; XII ran Mar 21-22 2026." },
+        { "name": "Nashville Entrepreneur Day", "url": "https://ec.co/nashville-entrepreneur-day/", "verdict": "added",
+          "reason": "Nashville Entrepreneur Center: Winter 2026 edition Thu Dec 3 2026 at GEODIS Park; Spring edition May 21 2026." },
+        { "name": "AI Tinkerers Nashville", "url": "https://nashville.aitinkerers.org/", "verdict": "added",
+          "reason": "Chapter site: next meetup Nov 17 2026 (Brentwood venue), previous Sep 29; aitinkerers.org not read by any feed." },
+        { "name": "#HackTN", "url": "https://www.hackathonsinternational.com/hacktn", "verdict": "rejected",
+          "reason": "Hackathons International x Oracle hackathon at Vanderbilt, Oct 17-18 2026. It has already run and has no prior or next edition published, so nothing shows it recurs." },
+        { "name": "Global Game Jam - Nashville Game Developers", "url": "https://globalgamejam.org/jam-sites/2026/nashville-game-developers-2026", "verdict": "rejected",
+          "reason": "The 2026 site page now reads 'Online/Virtual only': the in-person portion at TSU was cancelled for weather. NashGameDev's Meetup is already in the feed registry." },
+        { "name": "Nashville Startup Week / Tech Week", "url": "", "verdict": "rejected",
+          "reason": "No 2026 or 2027 edition of either found; Nashville AI Week (May 12-14 2026) is in Franklin, not Nashville." },
+        { "name": "InfoSec Nashville CTF", "url": "", "verdict": "unresolved",
+          "reason": "CTF held within ISSA Middle Tennessee's InfoSec Nashville conference (2023 and 2024 per Tennessee Tech news); no 2026/2027 confirmation found." }
+      ]
+    }
+  ]
+}

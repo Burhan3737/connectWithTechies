@@ -52,6 +52,8 @@ const STRONG = [
   'valkey', 'redis', 'linux', 'ios', 'android', 'android xr', 'spatial computing', 'cocoaheads',
   'nscoder', 'nscoders', 'data structures', 'algorithms', 'dweb', 'codex', 'gerrit',
   'shecurity', 'cyberattack', 'cyberattacks', 'ciso', 'cisos',
+  // Sixth pass, nov02 drops.
+  'data center', 'data centers', 'datacenter', 'datacenters',
 ];
 
 // Clearly not our subject, or spam wearing a networking badge.
@@ -59,6 +61,8 @@ const NEGATIVE = [
   'prayer', 'worship', 'church', 'bible', 'mass ', 'rosary', 'sermon', 'ministry',
   'book club', 'romantasy', 'poetry', 'knitting', 'crochet', 'watercolor', 'painting class', 'pottery',
   'yoga', 'pilates', 'meditation retreat', 'sound bath', 'breathwork',
+  // Isha Foundation's meditation course, run by local chapters across cities.
+  'inner engineering',
   'speed dating', 'singles', 'dating mixer', 'matchmaking',
   'wine tasting', 'beer tasting', 'bar crawl', 'pub crawl', 'brunch party', 'day party',
   'comedy show', 'stand-up comedy', 'open mic', 'karaoke', 'concert', 'dj set', 'rave', 'film premiere', 'premiere night',
@@ -79,15 +83,30 @@ const HARD_NEGATIVE = ['real estate', 'reia', 'forex', 'trading signals', 'day t
 
 // Phrases whose tech-sounding word means something else: a "business developers"
 // meeting is sales, a "real estate developer" builds houses. Removed before matching.
-const FALSE_FRIENDS = /\b(business|real estate|property|land|personal|self|leadership|community|economic) develop(ers?|ment)\b/g;
+const FALSE_FRIENDS = /\b(business|real estate|property|land|personal|self|leadership|community|economic)[\s-]+develop(ers?|ment)\b/g;
 // Names like "Waterloo.dev" and "Plain.ai" carry their field in the domain:
 // split the tech domain endings off so "dev" and "ai" read as words.
-const words = (s) => ` ${String(s || '').toLowerCase().replace(FALSE_FRIENDS, ' ')
-  .replace(/\.(dev|ai|io|tech)\b/g, ' $1')
-  .replace(/[^a-z0-9+#./-]+/g, ' ').replace(/\s+/g, ' ').trim()} `;
+// Dots, slashes and hyphens stay, for terms that carry them ("node.js", "ui/ux",
+// "co-founder"); a second copy with them split follows a " | " no term spans, so
+// "Claude AI.", "Ex-Google", "Founders/Investors" and "Real-Estate" match too.
+const words = (s) => {
+  const kept = String(s || '').toLowerCase().replace(FALSE_FRIENDS, ' ')
+    // "Boston/Mass", "Boston, Mass.": the state abbreviation, not the church 'mass '.
+    .replace(/([a-z])\s*[/,]\s*mass\b/g, '$1 massachusetts')
+    .replace(/\.(dev|ai|io|tech)\b/g, ' $1')
+    .replace(/[^a-z0-9+#./-]+/g, ' ').replace(/\s+/g, ' ').trim();
+  const split = kept.replace(/[./-]+/g, ' ').replace(/\s+/g, ' ').trim();
+  return split === kept ? ` ${kept} ` : ` ${kept} | ${split} `;
+};
 const has = (hay, term) => hay.includes(` ${term} `) || (term.endsWith(' ') && hay.includes(` ${term}`));
 
-function hits(hay, list) { return list.filter((t) => has(hay, t.trim())); }
+// A word found only as part of a longer punctuated term ("founder" in "co-founder",
+// "ux" in "ui/ux") is that term again, not a second signal.
+function hits(hay, list) {
+  const found = list.filter((t) => has(hay, t.trim()));
+  const within = found.filter((u) => /[./-]/.test(u)).map((u) => ` ${u.replace(/[./-]+/g, ' ').trim()} `);
+  return found.filter((t) => /[./-]/.test(t) || !within.some((w) => w.includes(` ${t.trim()} `)));
+}
 
 /**
  * Is an organiser a tech community?

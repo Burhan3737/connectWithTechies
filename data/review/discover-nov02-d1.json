@@ -1,0 +1,109 @@
+{
+ "pass": "nov02-d1",
+ "date": "2026-11-02",
+ "returning": [],
+ "reported": [],
+ "cities": [
+  {
+   "city": "Ottawa",
+   "region": "Ontario",
+   "queries": [
+    "Ottawa game jam 2026 OR 2027",
+    "Ottawa tech summit 2027",
+    "Ottawa demo day startups 2026 Invest Ottawa OR Carleton OR uOttawa demo day",
+    "Ottawa startup week 2026",
+    "Ottawa monthly tech meetup in person developers 2026"
+   ],
+   "found": [
+    { "name": "Global Game Jam - Carleton University", "url": "https://www.csit.carleton.ca/~arya/gamejam/", "verdict": "added", "reason": "game-jam. Carleton SIT's page: 'Global Game Jam, Ottawa (Hybrid) January 30 - February 1, 2026', Azrieli Pavilion, in person with a virtual option, free. No 2027 site page yet: added recurring-tbd, last_date 2026-01-30." },
+    { "name": "Ottawa Civic Tech", "url": "https://www.meetup.com/yow_ct/", "verdict": "added", "reason": "meetup-series. Monthly in-person Wednesday meetups, published on Meetup: listed in sources-nov02-d1.json rather than added as a record." },
+    { "name": "Minimum Viable Meetup Ottawa", "url": "https://www.meetup.com/minimum-viable-meetup-ottawa/", "verdict": "added", "reason": "meetup-series. In-person builders' meetup every other Tuesday, plus Demo Nights. Published on Meetup, so listed in sources-nov02-d1.json." },
+    { "name": "Ottawa Game Jam (OJAM)", "url": "https://obj.ca/ottawa-game-jam-opportunity-to-attract-talent-says-organizer/", "verdict": "rejected", "reason": "Latest coverage is OBJ, June 21, 2016. ojam.ca does not respond. No sign of an edition in years." },
+    { "name": "Ottawa Tech Investment $ummit", "url": "https://luma.com/snrb6f1y", "verdict": "rejected", "reason": "summit. First edition was May 5, 2026 at Brookstreet Hotel (KNBA, RBCx, Wesley Clover). The Luma listing is marked Private Event. No second edition is announced, so it is not yet a recurring event." },
+    { "name": "A TON of Demos", "url": "https://carleton.ca/innovationhub/event/a-ton-of-demos-february/", "verdict": "rejected", "reason": "demo-day. The latest Carleton Innovation Hub listing is Feb 27, 2025 at The Prescott. The Ottawa Network Meetup group it RSVPs through shows 0 upcoming events. No current evidence that it still runs." },
+    { "name": "Ottawa Innovation Week / AccelerateOTT", "url": "https://www.investottawa.ca/innovation-week/", "verdict": "exists", "reason": "Ottawa's startup-week equivalent is already held as 'Ottawa Innovation Week' (tech-week) and 'AccelerateOTT' (conference), both Ottawa. No separately branded Ottawa Startup Week was found." }
+   ]
+  },
+  {
+   "city": "Winnipeg",
+   "region": "Manitoba",
+   "queries": [
+    "Winnipeg hackathon 2026 OR 2027",
+    "Winnipeg tech summit 2026 OR 2027 Manitoba AI summit",
+    "North Forge demo day Winnipeg 2026",
+    "Winnipeg startup week OR \"Manitoba startup\" week 2026",
+    "Winnipeg capture the flag cybersecurity competition University of Manitoba CTF 2026"
+   ],
+   "found": [
+    { "name": "Bioscience Association Manitoba AI Summit", "url": "https://biomb.ca/events/", "verdict": "added", "reason": "summit. biomb.ca lists the 2026 edition on July 22, 2026 at The Metropolitan Entertainment Centre. The 2025 page calls that year's edition the 'second annual'. Added recurring-tbd, last_date 2026-07-22." },
+    { "name": "RampUp Weekend", "url": "https://www.northforge.ca/event-details/rampup-weekend-2026", "verdict": "added", "reason": "hackathon (startup-sprint format). North Forge page: 'RampUp Weekend returns April 10 to 12', 2026, 100 Innovation Dr. JSON-LD confirms the dates. Added recurring-tbd, last_date 2026-04-10." },
+    { "name": "UWinnipeg Hacks", "url": "https://uwinnipeg.acm.org/event/uwacm-acssa-uwinnipeg-hacks/", "verdict": "rejected", "reason": "hackathon. A single student-chapter edition ran Jan 24-25, 2026 at the UWSA Bulman Centre, with registration on Luma. The chapter's event list shows no second edition, so it is not yet recurring. Any future edition would reach us through the Luma feed." },
+    { "name": "AI Summit 2026 Winnipeg (ZOOMi Technologies)", "url": "https://www.eventbrite.ca/e/ai-summit-2026-winnipeg-tickets-1596298304199", "verdict": "rejected", "reason": "A single-company Eventbrite event on June 11, 2026, now ended. It has no organiser site and no announced next edition." },
+    { "name": "(demo-day, startup-week, ctf)", "url": "", "verdict": "rejected", "reason": "Found none. North Forge's event list has RampUp and FabLab events but no demo day. No Winnipeg startup week exists; Manitoba Tech Week is already held. No in-person Winnipeg CTF turned up." }
+   ]
+  },
+  {
+   "city": "New Orleans",
+   "region": "Louisiana",
+   "queries": [
+    "New Orleans hackathon 2026 OR 2027 in person",
+    "New Orleans tech week 2026 OR 2027",
+    "New Orleans game jam 2026 Global Game Jam New Orleans site OR Tulane OR UNO game jam",
+    "\"New Orleans Game Developers\" OR NOGD pig jam 2026 Sea Cave Arcade",
+    "New Orleans monthly tech meetup developers 2026 NOLA",
+    "\"NOLA Coders\" OR \"NOLA Hack Night\" meetup New Orleans 2026",
+    "New Orleans CTF capture the flag competition in person 2026 Louisiana"
+   ],
+   "found": [
+    { "name": "Rhythm & Algorithm", "url": "https://rhythm-algorithm.netlify.app/", "verdict": "added", "reason": "hackathon. Two-day civic AI solutions sprint plus a conference at the Ernest N. Morial Convention Center, April 8-9, 2026. The first edition was Oct 16-17, 2025. Added recurring-tbd, last_date 2026-04-08." },
+    { "name": "PIG JAM (New Orleans Game Developers)", "url": "https://itch.io/jam/pig-jam-2025", "verdict": "unresolved", "reason": "game-jam. An in-person jam at Sea Cave Arcade ran 2023 (Sep 10), 2024 (Oct 13) and 2025 (Oct 19). No 2026 edition appears on NOGD's itch.io profile (latest post a year old). neworleansgamedev.com does not respond. 'Pig Jam 2026' on itch is an unrelated online jam by another host. Not added until the group shows it is still running." },
+    { "name": "NOLA Tech Week", "url": "https://siliconbayounews.com/2013/10/08/nolatech-week-schedule-tuesday-october-8/", "verdict": "rejected", "reason": "tech-week. All coverage dates from 2013-2015. There is no current site and no recent edition. Treated as defunct." },
+    { "name": "TFA New Orleans AI Hackathon", "url": "https://luma.com/bhi9ljxs", "verdict": "rejected", "reason": "A one-off on Jan 27, 2026 for Teach For America alumni. Not public and not recurring." },
+    { "name": "NOLA Hack Night", "url": "https://www.meetup.com/nola-hack-night/", "verdict": "unresolved", "reason": "meetup-series. Search snippets describe a weekly Tuesday gathering at Scale, undated. The Meetup URLs tried (nola-hack-night, nolahackers) return 'Group not found'. No current page found." },
+    { "name": "(ctf)", "url": "", "verdict": "rejected", "reason": "No in-person New Orleans CTF found. BSides NOLA is already held." }
+   ]
+  },
+  {
+   "city": "Pittsburgh",
+   "region": "Pennsylvania",
+   "queries": [
+    "Pittsburgh tech week 2026 OR 2027",
+    "Pittsburgh game jam 2026 OR 2027 IGDA Global Game Jam site Pittsburgh",
+    "Pittsburgh capture the flag CTF in person competition 2026",
+    "Pittsburgh tech summit 2027 conference AI summit Pittsburgh",
+    "Pittsburgh Technology Council \"Think!AI\" 2026 summit date"
+   ],
+   "found": [
+    { "name": "EXPLORE Pittsburgh Tech Week", "url": "https://www.techweekpittsburgh.com/", "verdict": "added", "reason": "tech-week. techweekpittsburgh.com and its Luma calendar: Sept 10-16, 2026, citywide. Added recurring-tbd, last_date 2026-09-10. The Luma calendar is also listed in sources." },
+    { "name": "StartUP PGH", "url": "https://startuppgh.com/", "verdict": "added", "reason": "startup-week. CMU Swartz Center press release and startuppgh.com: Sept 14-18, 2026, with 15 partner organisations. It builds on CMU Startup Week (Fall 2025). Added recurring-tbd, last_date 2026-09-14." },
+    { "name": "Think!AI Summit", "url": "https://www.pghtech.org/events/ThinkAI2027-Call-for-Speakers", "verdict": "added", "reason": "summit. Pittsburgh Technology Council: 2027 edition on February 18, 2027 at The Westin Pittsburgh. The 2026 edition was February 12, 2026 at the same venue (pghtech.org/events/Think-AI)." },
+    { "name": "Pittsburgh Global Game Jam", "url": "https://globalgamejam.org/jam-sites/2026/pittsburgh-global-game-jam-2026", "verdict": "added", "reason": "game-jam. Pittsburgh IGDA, IDeATe and the CMU ETC: Jan 30 - Feb 1, 2026, hybrid with in-person jamming in Sorrells Library, Wean Hall. No 2027 site page yet: added recurring-tbd." },
+    { "name": "Guild Con (Hackers Guild PGH)", "url": "https://www.meetup.com/hackersguild/", "verdict": "exists", "reason": "ctf. The CTF tournament was part of Guild Con (Nov 22, 2025). Hackers Guild is already a registry source (meetup.com/hackersguild), so its events reach us through the feed. No standalone in-person Pittsburgh CTF found." },
+    { "name": "AI Horizons Summit", "url": "https://www.bakery-square.com/blog/ai-horizons", "verdict": "unresolved", "reason": "summit. Held at Bakery Square in Sept 2025. aihorizons.ai returns 404, and no organiser page with a 2026 or 2027 date was found. Not added." }
+   ]
+  },
+  {
+   "city": "Salt Lake City",
+   "region": "Utah",
+   "queries": [
+    "HackTheU 2027 University of Utah hackathon",
+    "Salt Lake City hackathon 2027 in person Utah",
+    "Utah Tech Week 2027 Salt Lake City",
+    "\"Utah Tech Week\" October 2026",
+    "Utah startup week 2026 Salt Lake City founders week",
+    "Salt Lake City demo day accelerator 2026 Lassonde OR Kickstart OR Convoi demo day",
+    "Salt Lake City CTF capture the flag in person 2026 Utah cybersecurity competition",
+    "Salt Lake City game jam 2026 OR 2027 Global Game Jam University of Utah EAE OR Utah game developers"
+   ],
+   "found": [
+    { "name": "Lassonde Demo Day", "url": "https://lassonde.utah.edu/demo", "verdict": "added", "reason": "demo-day. Organiser page: 2027 edition Wednesday, May 5, 2027, 3-5 p.m., at Lassonde Studios. The 2026 edition was April 29, 2026 (organiser's video post)." },
+    { "name": "Utah Tech Week", "url": "https://www.utahtechweek.com/", "verdict": "added", "reason": "tech-week. The host page and the archived Luma calendar give Feb 2-7, 2026, Salt Lake City / Lehi. The homepage also shows an unexplained 'October 26-30, 2026' that no other source confirms. Added recurring-tbd, last_date 2026-02-02." },
+    { "name": "HackTheU", "url": "https://www.hacktheu.org/", "verdict": "rejected", "reason": "hackathon. The site is frozen on the virtual Oct 2020 edition, and no later edition was found." },
+    { "name": "Sego Lily Hacks", "url": "https://www.hackathon.com/event/sego-lily-hacks-421093811927", "verdict": "rejected", "reason": "hackathon. The only dated edition is Oct 7-8, 2022, and no organiser page with a later date was found." },
+    { "name": "GGJ 2026 IGDA Utah", "url": "https://globalgamejam.org/jam-sites/2026/ggj-2026-igda-utah", "verdict": "rejected", "reason": "game-jam. The site's in-person venue is Christa McAuliffe Space Center, Pleasant Grove, not Salt Lake City. Out of scope for this city row." },
+    { "name": "Hard Tech Week (47G)", "url": "https://luma.com/47g-hardtechweek", "verdict": "exists", "reason": "tech-week/hackathon. Already a registry source (47g.org/hard-tech-week, luma.com/47g-hardtechweek). Its Oct 26-30, 2026 events, including the Hard Tech Hackathon, are in the feed." },
+    { "name": "(startup-week, ctf)", "url": "", "verdict": "rejected", "reason": "No Salt Lake City startup week found apart from Utah Tech Week. No in-person SLC CTF found: BSides SLC is already held, and the BYU statewide CTF is youth and online." }
+   ]
+  }
+ ]
+}

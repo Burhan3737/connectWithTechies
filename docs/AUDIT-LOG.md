@@ -14,9 +14,11 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 | 2026-10-29-i1 | 7 | 0 | 1 | 1 | 0 | 2026-10-29 refresh: feed+build, re-check passes oct29-t1/t2/t3 (60 rows), discovery oct29-d1/d2/r1/r2/rep; 27 updates, 32 adds, 0 removals vs HEAD 7bb1ee2 |
 | 2026-10-31-i1 | 2 | 1 | 1 | 2 | 0 | Cycle oct31: rechecks t1-t3 (60 rows), returning briefs r1-r2, city briefs d1-d2; 24 curated adds, 9 updates, 0 removals |
 | 2026-10-31-i2 | re-audit | 1 | 2 | 3 | 0 | Cycle oct31 re-audit: orchestrator fixes for i1-B1/i1-W1 plus feed re-run adding ShiftKey Labs, Unreal LA and 8 Eventbrite organisers |
-| 2026-10-31-i3 | re-audit | 0 | 1 | 0 | 1 | Cycle oct31 final re-audit: orchestrator fixes for i2-B1 (BSides Halifax), i2-W1 (run.mjs judgeEvents techOrg re-add), i2-W2 (AWS Prep Course drops), feed re-run from cache |
+| 2026-10-31-i3 | re-audit | 0 | 1 | 1 | 0 | Cycle oct31 final re-audit: orchestrator fixes for i2-B1 (BSides Halifax), i2-W1 (run.mjs judgeEvents techOrg re-add), i2-W2 (AWS Prep Course drops), feed re-run from cache |
+| 2026-11-03-i1 | 3 | 2 | 4 | 6 | 0 | Cycle nov02: re-check t1-t3 (60 rows), discovery r1/r2/d1/d2 (38 adds), PNSS move, 14 organiser retirements, place-override drop, feed-gate relevance.mjs change |
+| 2026-11-03-i2 | re-audit | 0 | 0 | 0 | 0 | Cycle nov02 re-audit: nov02-audit-fixes.json (B1, B2, W1, W2), relevance.mjs Massachusetts normalisation (W3), place-override drops (W4), rebuilt feed |
 
-**5 audit cycle(s); 3 found something blocking on its first audit.** 30 findings in total, 23 fixed, 6 open or deferred, 9 repeat(s) of an earlier finding.
+**6 audit cycle(s); 4 found something blocking on its first audit.** 36 findings in total, 30 fixed, 5 open or deferred, 9 repeat(s) of an earlier finding.
 
 ## Open
 
@@ -35,10 +37,31 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 - **2026-10-11-i2-W6** · warning · deferred · **Tech Week non-tech socials** — Unchanged, deferred to user: NTW Closing Party, Hard Tech Week Opening Party, Big Cayman Bash, Young Founders Hike still listed.
   - recommended: No action until the user decides.
   - note: Waiting on the user's decision (same as 2026-10-07-i3-W1).
-- **2026-10-31-i3-W1** · warning · **Sac Made Market First Fridays (Sacramento)** — Upcoming feed record series:5fcdc0004983786c from judge_each MADE Makerspace (meetup:hackerlab) still has relevance 'registered tech organiser'. It was admitted 2026-10-25 by the techOrg re-add bug fixed for i2-W1 and carried forward unjudged because it was not re-read. It is an artisan and pop-up market, not tech.
-  - recommended: Add a drop for series:5fcdc0004983786c in data/feeds/place-overrides.json.
 
 ## History
+
+### 2026-11-03-i2 — 0 blocking, 0 warning(s)
+
+Scope: Cycle nov02 re-audit: nov02-audit-fixes.json (B1, B2, W1, W2), relevance.mjs Massachusetts normalisation (W3), place-override drops (W4), rebuilt feed
+
+Clean.
+
+Checked and sound: All six i1 findings verified fixed in events.json; SF Tech Week pair merged to one 2027-10-04 record; one SLC Day of Data; Brain Fry admitted and its Philadelphia venue matches the Eventbrite page; W3 pattern scanned across built feed and 5,693 cache files with no new non-tech admits; 4,022 keyword admits re-judged current vs HEAD gate (13 newly admitted, all tech, none from W3; 0 newly dropped)
+
+### 2026-11-03-i1 — 2 blocking, 4 warning(s)
+
+Scope: Cycle nov02: re-check t1-t3 (60 rows), discovery r1/r2/d1/d2 (38 adds), PNSS move, 14 organiser retirements, place-override drop, feed-gate relevance.mjs change
+
+| id | severity | event | finding | status | resolution |
+|---|---|---|---|---|---|
+| B1 | blocking | Day of Data (Salt Lake City) | nov02-r2 add duplicates the existing Salt Lake City Day of Data (review-additions-2), same city and 2026-09-19 date | fixed (2026-11-03) | Older Salt Lake City Day of Data removed (nov02-audit-fixes.json); nov02-r2 'Day of Data' kept. Confirmed by re-audit 2026-11-03-i2. |
+| B2 | blocking | SF Tech Week / Tech Week San Francisco (San Francisco) | nov02-t2 moved Tech Week San Francisco to 2027-10-04, breaking the build's same-date merge with us-west SF Tech Week (shared tech-week.com); the duplicate resurfaced as recurring-tbd beside a 2027 upcoming copy | fixed (2026-11-03) | us-west SF Tech Week given 2027-10-04..10, last 2026-10-05 (nov02-audit-fixes.json); merges with Tech Week San Francisco again. Confirmed by re-audit i2. |
+| W1 | warning | Pacific Northwest Software Symposium (Redmond) | Date moved to 2027-03-18 from the organiser page but source is still dev.events and month still November | fixed (2026-11-03) | PNSS source -> nofluffjuststuff.com/seattle, month March (nov02-audit-fixes.json). |
+| W2 | warning | Vintage Computer Festival Montreal (Saint-Lambert) | City changed to Saint-Lambert (correct) but the description still says talks in Montreal | fixed (2026-11-03) | VCF Montreal description -> Saint-Lambert (nov02-audit-fixes.json). |
+| W3 | warning | Feed gate: AI Brain Fry - BOSTON/MASS (Philadelphia) | The new split copy in relevance.mjs makes BOSTON/MASS hit the NEGATIVE 'mass ' term; a CISO tech talk the old gate kept will be dropped on its next fresh judgement | fixed (2026-11-03) | relevance.mjs normalises '<place>/mass' and '<place>, mass' to massachusetts; 3 selftest cases. Re-audit confirmed Philadelphia is the Eventbrite venue. |
+| W4 | warning | Oak Park FIX IT CAFE (Sacramento); Founder-led Branding in the Built World (Boston) | The gate change newly admitted two non-tech feed records: a MADE repair cafe (same host as the dropped Sac Made Market) on makerspace/electronics, and a built-world branding session on a lone 'founder' freed by the hyphen split | fixed (2026-11-03) | Oak Park FIX IT CAFE (meetup:317200430) and Founder-led Branding (luma:evt-e4CiRHKg22Jg0BI) dropped in data/feeds/place-overrides.json; lone 'founder' left admitted by the gate's stated bar. |
+
+Checked and sound: InnovateHer Feb 13-14, Utah Tech Week recurring-tbd, Raleigh-Durham SW under Durham, VCF Saint-Lambert city/dates, PNSS Mar 2027, INTERFACE Omaha, CHM Live, UB Hacking, Lassonde, MLSys, GRO Demo Day, AI Tinkerers Houston, 62 feed delistings (re-listings), 14 retirements, Sac Made Market drop
 
 ### 2026-10-31-i3 — 0 blocking, 1 warning(s)
 
@@ -46,7 +69,7 @@ Scope: Cycle oct31 final re-audit: orchestrator fixes for i2-B1 (BSides Halifax)
 
 | id | severity | event | finding | status | resolution |
 |---|---|---|---|---|---|
-| W1 | warning | Sac Made Market First Fridays (Sacramento) | Upcoming feed record series:5fcdc0004983786c from judge_each MADE Makerspace (meetup:hackerlab) still has relevance 'registered tech organiser'. It was admitted 2026-10-25 by the techOrg re-add bug fixed for i2-W1 and carried forward unjudged because it was not re-read. It is an artisan and pop-up market, not tech. | open |  |
+| W1 | warning | Sac Made Market First Fridays (Sacramento) | Upcoming feed record series:5fcdc0004983786c from judge_each MADE Makerspace (meetup:hackerlab) still has relevance 'registered tech organiser'. It was admitted 2026-10-25 by the techOrg re-add bug fixed for i2-W1 and carried forward unjudged because it was not re-read. It is an artisan and pop-up market, not tech. | fixed (2026-11-03) | Dropped series:5fcdc0004983786c in data/feeds/place-overrides.json; nov02 feed re-run carries it no longer (0 matches in data/raw/feed.json). |
 
 Checked and sound: BSides Halifax curated next_date 2026-11-12 matches halifaxbsides.ca, ledger corrected, ShiftKey duplicate dropped; four AWS Prep drops effective; run.mjs fix holds and upcoming Red Fridge events are judged by title (socials gone); mechanical audit 0/0, 25/25 links, queue 61/61; selftest 212/212
 

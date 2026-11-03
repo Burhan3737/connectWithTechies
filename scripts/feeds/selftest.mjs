@@ -260,6 +260,20 @@ for (const t of ['Waterloo.Dev Fest: Who Gets to Build, Own, and Define the Futu
 for (const t of ['Concord Ruby Early Birds', 'Postgres Day SF Meetup', 'Buckeye Cocoaheads', 'Valkey x OpenSearch @ Uber, Sunnyvale']) {
   ok(judge({ title: t }).keep, `kept: ${t.slice(0, 40)}`);
 }
+// Missed in the nov02 run: a tech word touching punctuation ("Claude AI.", "Ex-Google",
+// "AI-Powered", "Founders/Investors") was read as one unknown word.
+for (const t of ['Your New Everyday Assistant - A free, hands-on intro to Claude AI.', 'Ex-Google Security & IT Leaders Meetup',
+  'AI-Powered Workflows Night', 'Founders/Investors mixer', 'Every Data Center Will Need Its Own Air Defense']) {
+  ok(judge({ title: t }).keep, `kept: ${t.slice(0, 40)}`);
+}
+ok(!judge({ title: 'Real-Estate Investing Night with AI' }).keep, 'hyphenated real-estate still dropped');
+ok(!judge({ title: 'Self-Development Breakfast' }).keep, 'a hyphenated non-tech title is not split into a match');
+// "Mass" after a place is Massachusetts, not a church service (audit 2026-11-03-i1-W3).
+ok(judge({ title: 'AI Brain Fry: Bypassing Digital Friction in Corporate Hiring - BOSTON/MASS' }).keep, 'Boston/Mass is a state, not a Mass');
+ok(judge({ title: 'CISO talk, Boston, Mass.' }).keep, 'Boston, Mass. is a state, not a Mass');
+ok(!judge({ title: 'Sunday Mass at St. Anne' }).keep, 'a church Mass is still off-topic');
+ok(!judge({ title: 'FREE Introduction to Inner Engineering with Meditation' }).keep, 'Isha "Inner Engineering" meditation dropped, whichever chapter hosts it');
+ok(!judge({ title: 'Co-Founder Speed Dating' }).keep, '"co-founder" is one signal, not two, so an off-topic title still loses');
 ok(judgeOrganiser({ name: 'Waterloo.dev', description: '' }, []).tech, 'a .dev organiser name reads as tech');
 ok(!judge({ title: 'Real Estate Investor Pitch Night' }).keep, 'real-estate investing dropped even beside pitch words');
 ok(judge({ title: 'Proptech founders night: AI meets real estate' }).keep, 'proptech still kept');

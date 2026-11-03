@@ -2624,7 +2624,7 @@
     "audience": "manufacturers, entrepreneurs, researchers, investors",
     "url": "https://nysinnovationsummit.com/",
     "description": "FuzeHub's statewide innovation summit hosting the NYSTAR annual meeting, with keynotes, breakouts, a commercialization competition and an exhibit hall of New York companies.",
-    "source": "https://www.innovate518.com/new-events-2/2026-new-york-state-innovation-summit"
+    "source": "https://nysinnovationsummit.com/"
   },
   {
     "name": "BSides Buffalo",
@@ -3068,9 +3068,9 @@
     "venue": "Hard Rock Casino Cincinnati",
     "cadence": "annual",
     "month": "October",
-    "next_date": "2026-10-15",
-    "next_date_end": "2026-10-15",
-    "last_date": "2025-10-16",
+    "next_date": "2027-10-14",
+    "next_date_end": "2027-10-14",
+    "last_date": "2026-10-15",
     "status": "upcoming",
     "attendance": "",
     "cost": "paid",

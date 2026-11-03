@@ -1,0 +1,133 @@
+{
+  "pass": "nov02-r1",
+  "date": "2026-11-02",
+  "returning": [
+    {
+      "name": "Merge",
+      "verdict": "added",
+      "reason": "sessionize.com/merge-2026 (organiser CFP): 11 May 2026, Grand Rapids; 2027 not announced. Added recurring-tbd, last_date 2026-05-11"
+    },
+    {
+      "name": "mesh conference",
+      "verdict": "unresolved",
+      "reason": "meshconference.com still shows only the April 29-30 2025 Calgary edition; web search for a 2026 or 2027 mesh found nothing. Not proven ended, so not rejected"
+    },
+    {
+      "name": "Claude Speedrun Hackathon @ Berkeley",
+      "verdict": "rejected",
+      "reason": "One-off 2-hour Anthropic speedrun on the UC Berkeley campus (devpost page); no recurring series or organiser site"
+    },
+    {
+      "name": "Into The Box",
+      "verdict": "added",
+      "reason": "intothebox.org: April 29-May 1 2026, Washington DC; no 2027 dates. Added recurring-tbd, last_date 2026-04-29"
+    },
+    {
+      "name": "Tech + Startups Community Conference",
+      "verdict": "added",
+      "reason": "Renamed: 2nd Annual Miami Startup Ecosystem Conference, Feb 12-13 2026, same host (Denis Hiller) and venue, luma.com/1b1c3qxi. Added as Miami Startup Ecosystem Conference, recurring-tbd"
+    },
+    {
+      "name": "GDSCHACKS",
+      "verdict": "added",
+      "reason": "Now GDGHacks: gdghacks.com May 9-10 2026, in person, University of Guelph. Added recurring-tbd, last_date 2026-05-09"
+    },
+    {
+      "name": "Vibe Code-a-thon",
+      "verdict": "rejected",
+      "reason": "One-off AI Tinkerers Ottawa build day (devpost: May 3 2025, Ottawa); web search found no 2026 Code-a-thon, the group runs differently named hackathons instead"
+    },
+    {
+      "name": "AI Agent Conference",
+      "verdict": "added",
+      "reason": "agentconference.com JSON-LD 2027-05-17 to 2027-05-18, New York Hilton Midtown. Added as Agent Conference, upcoming"
+    },
+    {
+      "name": "Infobip Shift Miami",
+      "verdict": "rejected",
+      "reason": "US edition discontinued: shift.infobip.com lists only Zadar, Croatia (2026, and Sept 12-14 2027); shift.infobip.com/us still shows May 2025, and no 2026 Miami edition was held or announced"
+    },
+    {
+      "name": "NervesConf US",
+      "verdict": "unresolved",
+      "reason": "nervesconf.us still shows May 8 2025; its 2025 co-host Gig City Elixir has announced May 7-8 2027 in Chattanooga (gigcityelixir.com) but that page does not mention NervesConf; web search found no 2026/2027 NervesConf"
+    },
+    {
+      "name": "DesignVerse at UCR",
+      "verdict": "added",
+      "reason": "designverseucr.org: May 16-17 2026, UC Riverside; 2027 not announced. Added as DesignVerse, recurring-tbd"
+    },
+    {
+      "name": "Liberation Hack",
+      "verdict": "rejected",
+      "reason": "Not a tech event: devpost page describes a one-day Palestine advocacy \"justice sprint\", \"Format: Impact sprint sessions (not tech-based)\", 4 participants"
+    },
+    {
+      "name": "Canadian Women in Cybersecurity",
+      "verdict": "added",
+      "reason": "siberx.org event page: May 26 2026, Hyatt Regency Toronto; 2027 not yet listed. Added recurring-tbd, last_date 2026-05-26"
+    },
+    {
+      "name": "MLsys",
+      "verdict": "added",
+      "reason": "mlsys.org: MLSys 2027, Bellevue WA, June 21-25 2027 (2026 edition May 18-22, Bellevue). Added as MLSys, upcoming"
+    },
+    {
+      "name": "Postgres Extensions Day",
+      "verdict": "unresolved",
+      "reason": "pgext.day still shows only May 12 2025 Montreal; web search finds no standalone 2026 edition, only an \"Extensions Day\" inside Postgres Conference 2026 (San Jose), a different organiser. Not proven ended"
+    },
+    {
+      "name": "Postgres Extensions Day Montreal 2025",
+      "verdict": "unresolved",
+      "reason": "Same event as the Postgres Extensions Day row: pgext.day shows only May 12 2025; no 2026 or 2027 standalone edition found"
+    },
+    {
+      "name": "UXDX",
+      "verdict": "added",
+      "reason": "uxdx.com/usa/2027: UXDX New York May 10-12 2027 (2026: May 11-13). Added as UXDX New York, upcoming"
+    },
+    {
+      "name": "AI & Machine Learning Summit",
+      "verdict": "added",
+      "reason": "Co-located summit inside DBTA Data Summit; dbta.com Data Summit 2027 JSON-LD May 12-13 2027, Hyatt Regency Boston. Added as Data Summit, upcoming"
+    },
+    {
+      "name": "AuthCon",
+      "verdict": "rejected",
+      "reason": "FusionAuth's CIAM conference: authcon.io still advertises only May 14 2025, New York; web search found no 2026 edition or announcement"
+    },
+    {
+      "name": "Civo Navigate Austin 2025",
+      "verdict": "rejected",
+      "reason": "civo.com/navigate lists only Navigate London (2026; Sept 27 2027) and Navigate India; no North American edition since Austin 2025"
+    },
+    {
+      "name": "KCD Texas Austin",
+      "verdict": "exists",
+      "reason": "Already in data/events.json as \"KCD Texas 2027\", Austin, 2027-04-23 (devevents feed record, pretalx.com/kcd-texas-2027)"
+    },
+    {
+      "name": "Global Agentic AI & LLM Bootcamp May 16 - 18",
+      "verdict": "rejected",
+      "reason": "globalbigdataconference.com lists the bootcamp only for May 16-18 2025 (Fremont, not San Jose); the organiser's only upcoming event is the virtual Global AI Conference, Dec 2026; no in-person repeat"
+    },
+    {
+      "name": "Proving Ground: Agentic Startup RAG-a-thon",
+      "verdict": "rejected",
+      "reason": "One-off invite-only FutureProof hackathon at 500 Global, Palo Alto, May 16-18 2025 (devpost); no recurring series found"
+    },
+    {
+      "name": "hackathon",
+      "verdict": "rejected",
+      "reason": "One-off Tech Startup Club hackathon at UW Tacoma, May 17 2025 (devpost: UWT's first hackathon in 6 years); no repeat found. UWT's separate HuskyHack with Sound Credit Union is a different organiser"
+    },
+    {
+      "name": "AgentHacks 2025",
+      "verdict": "rejected",
+      "reason": "One-off 2025 research hackathon hosted by Dex, AfterQuery and AGI House in San Francisco (devpost); web search found no 2026 edition"
+    }
+  ],
+  "cities": [],
+  "reported": []
+}

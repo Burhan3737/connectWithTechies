@@ -60,5 +60,17 @@
   "ical:104902-1795543200-1795550400@shiftkeylabs.ca": {
     "drop": true,
     "reason": "AUDIT 2026-10-31-i2-W2: Cloud Practitioner AWS Prep Course is a four-week exam-prep class for Dalhousie first- and second-years, not an event."
+  },
+  "series:5fcdc0004983786c": {
+    "drop": true,
+    "reason": "AUDIT 2026-10-31-i3-W1: Sac Made Market First Fridays (meetup.com/hackerlab/events/315494187) is an artisan and pop-up market at MADE Studio, not a tech event; admitted unjudged by the since-fixed judgeEvents techOrg re-add bug."
+  },
+  "meetup:317200430": {
+    "drop": true,
+    "reason": "AUDIT 2026-11-03-i1-W4: Oak Park FIX IT CAFE (meetup.com/hackerlab/events/317200430) is a community repair cafe run by MADE, not a tech event; admitted on 'makerspace, electronics' in its description."
+  },
+  "luma:evt-e4CiRHKg22Jg0BI": {
+    "drop": true,
+    "reason": "AUDIT 2026-11-03-i1-W4: Founder-led Branding in the Built World (luma.com/1dwyzcv4) is a branding session for real-estate and construction firms, admitted on a lone 'founder' once the hyphen split read 'founder-led'."
   }
 }

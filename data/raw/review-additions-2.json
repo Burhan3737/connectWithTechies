@@ -414,10 +414,10 @@
       "computer-history",
       "hardware"
     ],
-    "city": "Montreal",
+    "city": "Saint-Lambert",
     "region": "Quebec",
     "country": "Canada",
-    "venue": "",
+    "venue": "Champlain College Saint-Lambert",
     "cadence": "annual",
     "month": "November",
     "next_date": "2026-11-07",
@@ -427,9 +427,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "retro-computing enthusiasts and collectors in Quebec",
-    "url": "https://vcfed.org/events/vcf-montreal/",
-    "description": "Canada's Vintage Computer Federation event: a two-day weekend of vintage machine exhibits and talks in Montreal.",
-    "source": "https://vcfed.org/events/vcf-montreal/"
+    "url": "https://cvcfed.org/",
+    "description": "Canada's Vintage Computer Federation event: a two-day weekend of vintage machine exhibits and talks in Saint-Lambert, on Montreal's South Shore.",
+    "source": "https://cvcfed.org/"
   },
   {
     "name": "VCF Swap Meet",
@@ -615,32 +615,6 @@
     "audience": "database professionals, data engineers, analysts",
     "url": "https://dayofdata.org/2026-09-12-dayofdata1164/",
     "description": "A free one-day community event in the SQL Saturday tradition for database professionals and anyone working with data on any platform.",
-    "source": "https://www.sqlsaturday.com/"
-  },
-  {
-    "name": "Salt Lake City Day of Data",
-    "type": "conference",
-    "topics": [
-      "sql-server",
-      "data",
-      "analytics",
-      "user-group"
-    ],
-    "city": "Salt Lake City",
-    "region": "Utah",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "September",
-    "next_date": "2026-09-19",
-    "next_date_end": "",
-    "last_date": "",
-    "status": "upcoming",
-    "attendance": "",
-    "cost": "free",
-    "audience": "database professionals, data engineers, analysts",
-    "url": "https://sqlsaturday.com/2026-09-19-sqlsaturday1152/",
-    "description": "Free community day of sessions for database and data professionals, part of the long-running SQL Saturday network.",
     "source": "https://www.sqlsaturday.com/"
   },
   {
