@@ -570,8 +570,8 @@
     "venue": "Computer History Museum",
     "cadence": "monthly",
     "month": "Varies",
-    "next_date": "2026-11-05",
-    "next_date_end": "2026-11-05",
+    "next_date": "2026-11-12",
+    "next_date_end": "2026-11-12",
     "last_date": "2026-08-27",
     "status": "upcoming",
     "attendance": "",
@@ -579,7 +579,7 @@
     "audience": "technologists, historians, founders, general public",
     "url": "https://computerhistory.org/events/",
     "description": "The Computer History Museum's flagship live event series of original productions, interviews and panels exploring historical and current issues in technology, entrepreneurship and innovation.",
-    "source": "https://computerhistory.org/events/"
+    "source": "https://computerhistory.org/events/sri-at-80/"
   },
   {
     "name": "Hacker Dojo Events",

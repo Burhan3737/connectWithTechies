@@ -1,0 +1,14 @@
+[
+  { "match": { "name": "Full Indie Meetup", "city": "Vancouver" },
+    "action": "update",
+    "reason": "fullindie.com/meetup 'Next Meetup' block: LaSalle College, 2808 Bradfield Court, 6:00-9:00 pm, DATES November 3rd, December 1st. Nov 3 has run (already last_date); the organiser names December 1 (first Tuesday) as the next meetup.",
+    "set": { "next_date": "2026-12-01", "next_date_end": "2026-12-01", "status": "upcoming" } },
+  { "match": { "name": "Day of Data", "city": "Salt Lake City" },
+    "action": "update",
+    "reason": "url pointed at the Utah Geek Events homepage, which is shared with Kids Code Camp and Big Mountain Data & Dev. The event's own page is utahgeekevents.com/events/day-of-data-2026-formerly-sql-saturday/ (Sept 19th 2026, Neumont University, 143 S Main St, in-person only), which matches the record.",
+    "set": { "url": "https://www.utahgeekevents.com/events/day-of-data-2026-formerly-sql-saturday/" } },
+  { "match": { "name": "DevRelCon New York", "city": "Brooklyn" },
+    "action": "update",
+    "reason": "MLH's own ticket page ti.to/mlh/devrelcon-2027 reads 'DevRelCon New York 2027 July 21st-22nd, 2027 Brooklyn, New York ... Venue Industry City, 220 36th St, Brooklyn'. The 2026 page (ti.to/mlh/devrelcon-2026) gives July 22nd-23rd 2026, matching last_date 2026-07-22. nyc.devrelcon.dev is a JS shell with no readable dates.",
+    "set": { "next_date": "2027-07-21", "next_date_end": "2027-07-22", "status": "upcoming", "source": "https://ti.to/mlh/devrelcon-2027" } }
+]

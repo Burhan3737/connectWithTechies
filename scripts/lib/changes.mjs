@@ -148,11 +148,20 @@ export function changesMarkdown(diff, { since, today }) {
 }
 
 /**
- * Organisers a person retired (sources-*.json, tech: false), as the registry
- * records them. reg: data/feeds/registry.json, parsed.
+ * Names of organisers a person retired (sources-*.json, tech: false), as the
+ * registry records them — the names events are turned away by when they carry
+ * no organiser id. reg: data/feeds/registry.json, parsed.
+ *
+ * A name any organiser still followed also carries is left out: it does not
+ * identify the retired one. Eventbrite calls every unnamed organiser
+ * "Organizer", so retiring one dead page by that name (nov05) turned away 37
+ * events from 36 unrelated organisers. Retirement by id is unaffected.
  */
 export function retiredOrganisers(reg) {
-  return new Set((reg?.sources || []).filter((s) => s.tech === false && /^retired by /.test(s.reason || '')).map((s) => s.name));
+  const sources = reg?.sources || [];
+  const isRetired = (s) => s.tech === false && /^retired by /.test(s.reason || '');
+  const followed = new Set(sources.filter((s) => !isRetired(s)).map((s) => s.name));
+  return new Set(sources.filter((s) => isRetired(s) && s.name && !followed.has(s.name)).map((s) => s.name));
 }
 
 /**

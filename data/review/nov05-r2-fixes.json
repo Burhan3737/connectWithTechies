@@ -1,0 +1,14 @@
+[
+  { "match": { "name": "CHM Live", "city": "Mountain View" },
+    "action": "update",
+    "reason": "computerhistory.org/events/ lists the Nov 5, 2026 CHM Live event as 'CANCELLED: Data Are Made, Not Found' (its own page also says 'THIS EVENT IS POSTPONED'). The next CHM Live event is 'SRI at 80: Inventing the Future', Thursday Nov 12, 2026, 6:00 PM, in person at CHM, 1401 N. Shoreline Blvd, Mountain View (computerhistory.org/events/sri-at-80/; in-person attendance at capacity, waitlist open). last_date left at 2026-08-27 because the Nov 5 event did not take place.",
+    "set": { "next_date": "2026-11-12", "next_date_end": "2026-11-12", "source": "https://computerhistory.org/events/sri-at-80/" } },
+  { "match": { "name": "Prompt Victoria AI Conference", "city": "Victoria" },
+    "action": "update",
+    "reason": "The record's url is a VIATEC members-calendar page that serves a Cloudflare challenge (403) to every fetch. The conference has its own site, promptvictoria.ca, which reads 'November 5, 2026 · Victoria Conference Centre ... REGISTRATION IS NOW CLOSED!', matching the record's date and venue. Pointing url and source at the organiser's own site.",
+    "set": { "url": "https://promptvictoria.ca/", "source": "https://promptvictoria.ca/" } },
+  { "match": { "name": "Venture Café Phoenix Thursday Gathering", "city": "Phoenix" },
+    "action": "update",
+    "reason": "The record's source (community.venturecafephoenix.org/events/246) now shows the Oct 22, 2026 gathering. The Nov 5 gathering is events/248: 'Thursday Gathering - Build Smart, Spend Smarter, Nov 5, 2026, 4:30 PM - 7:00 PM MST at 850 PBC', 850 N. 5th St., Phoenix. Date and venue in the record are right; only the source pointer was stale.",
+    "set": { "source": "https://community.venturecafephoenix.org/events/248" } }
+]

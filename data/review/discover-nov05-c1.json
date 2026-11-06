@@ -1,0 +1,114 @@
+{
+ "pass": "nov05-c1",
+ "date": "2026-11-05",
+ "returning": [],
+ "reported": [],
+ "cities": [
+  {
+   "city": "Orlando",
+   "region": "Florida",
+   "queries": [
+    "Orlando tech week 2026 OR 2027",
+    "Orlando game jam 2026 UCF OR \"Global Game Jam\" Orlando in person",
+    "Orlando startup demo day 2026 Starter Studio OR UCF Business Incubation",
+    "Starter Studio Orlando accelerator Demo Day 2026",
+    "Orlando tech summit 2027 OR Synapse Orlando 2026",
+    "Orlando startup week OR \"Orlando Tech Summit\" OR \"Central Florida tech summit\" 2026",
+    "Innovate Orlando \"Orlando Tech Summit\"",
+    "MetaCenter Global Week Orlando 2026",
+    "Hack@UCF CTF Orlando in person 2026 OR Orlando capture the flag competition"
+   ],
+   "found": [
+    { "name": "Orlando Game Jam", "url": "https://ocls.org/ocls-blog/orlando-game-jam-and-gaming-expo-returns-february-19-22/", "verdict": "added", "reason": "game-jam. Orange County Library System: '2026 Orlando Game Jam and Gaming Expo, coming February 19-22' at the Melrose Center, Orlando Public Library. It ran in 2025 too. The winners post reports 36 jammers in 11 teams. No 2027 date yet: added recurring-tbd, last_date 2026-02-19." },
+    { "name": "Indie Galactic Space Jam", "url": "https://www.indienomicon.org/indie-galactic-space-jam", "verdict": "added", "reason": "game-jam. Indienomicon's page: 'RETURNING January 23-25th 2026 ORLANDO, FL' (an earlier edition ran June 2022). The Luma event places it at 6876 Marwick Ln, Orlando, in person and free. No 2027 date: added recurring-tbd. Indienomicon's Luma calendar is listed in sources-nov05-c1.json." },
+    { "name": "SunshineCTF", "url": "https://sunshinectf.org/", "verdict": "rejected", "reason": "ctf. 'A 48-hour online Jeopardy-style capture-the-flag competition'. Its only in-person part is a kickoff and awards inside BSides Orlando (Sep 26, 2026, Full Sail University), and BSides Orlando is already held. Online-first, so not a separate in-person record." },
+    { "name": "Orlando Startup Weekend (SWORL)", "url": "https://events.humanitix.com/sworl-fall-2026", "verdict": "exists", "reason": "Not a startup week: a Techstars-format Startup Weekend, Nov 13-15, 2026 at Tech Hub Orlando, run twice a year by Orlando Innovation League. It is already in the data as feed row 'SWORL Fall 26' (Orlando, 2026-11-13), via the registered meetup.com/orlando-innovation-league." },
+    { "name": "StarterStudio Demo Day", "url": "https://www.starterstudio.org/", "verdict": "unresolved", "reason": "demo-day. starterstudio.org mentions 'an amazing Demo Day last month' with no date, and its /events/ page shows 'no posts'. The only dated listing (July 16, 2025) is on cflbizlink.com, an aggregator. No date from the organiser, so not added. Its Quick Pitch Nights already reach the feed through orlando-innovation-league." },
+    { "name": "Orlando Tech Summit (Innovate Orlando)", "url": "https://www.zeffy.com/organizations/innovate-orlando-inc", "verdict": "unresolved", "reason": "summit. Only an undated Zeffy listing ('Orlando Tech Summit | Speaker and Sponsor Event', 23 N Orange Blossom Trl). There is no organiser page with a date or year." },
+    { "name": "MetaCenter Global Week / Orlando Innovation Week / Orlando Tech Week", "url": "https://events.ucf.edu/event/3154758/metacenter-global-week", "verdict": "rejected", "reason": "tech-week. Every result is a single past run: Orlando Tech Week (2015), Orlando Innovation Week (Oct 2021) and MetaCenter Global Week (Oct 17-19, 2023, Dr. Phillips Center). There is no edition since 2023 and no current site. Treated as lapsed." },
+    { "name": "FIEA Collegiate Game Jam", "url": "https://applynow.graduate.ucf.edu/register/FIEA_Game_Jam_2026", "verdict": "unresolved", "reason": "game-jam. Jan 16-18, 2026 at UCF FIEA, Creative Village. Registration runs through UCF graduate admissions and is billed as collegiate. Could not confirm from the organiser that it is open to the public or recurring, so not added." },
+    { "name": "OrlandoDevs (meetup-series)", "url": "https://www.meetup.com/OrlandoDevs/", "verdict": "exists", "reason": "meetup-series. Orlando's main developer meetup group is already a registered feed source (meetup:OrlandoDevs), as are OrlandoPython, Orlando-DevOps and orlandoaws. No curated record needed." }
+   ]
+  },
+  {
+   "city": "Tampa",
+   "region": "Florida",
+   "queries": [
+    "Tampa Bay tech week OR startup week 2026",
+    "\"Tampa Bay Startup Week\" 2026 OR 2027",
+    "Tampa game jam 2026 in person USF OR \"Tampa Bay\" game jam",
+    "Tampa CTF capture the flag in person 2026 USF OR CyberBay OR \"Tampa Bay\""
+   ],
+   "found": [
+    { "name": "Tampa Bay Tech Week", "url": "https://tampabaytechweek.com/", "verdict": "added", "reason": "tech-week. tampabaytechweek.com: 'April 12–16, 2027. Year two of the region's decentralized technology week'. The inaugural edition ran April 8-10, 2026. Added as upcoming with last_date 2026-04-08. Its Luma calendar is listed in sources-nov05-c1.json." },
+    { "name": "Startup Week Tampa Bay", "url": "https://stpetecatalyst.com/organizations/startup-week-tampa-bay/", "verdict": "rejected", "reason": "startup-week. All coverage is of older Techstars-branded editions (February editions, plus one virtual October edition). There is no current site or 2026/2027 date. Treated as lapsed; Tampa Bay Tech Week now fills that slot." },
+    { "name": "Gasparilla Capture the Flag (UTampa)", "url": "https://www.ut.edu/academics/sykes-college-of-business/information-and-technology-management-itm-degrees/cybersecurity-degree/cybersecurity-hackathon", "verdict": "rejected", "reason": "ctf. University of Tampa page: 'New in 2026 ... Feb. 7, 2026 (to be confirmed), location to be confirmed', a 4-hour in-person event 'open to all college students in the Tampa Bay area'. It is a first edition, its date was never confirmed on the page, and it is limited to students. Not added." },
+    { "name": "CyberBay Cup", "url": "https://cyberbay.org/summit/", "verdict": "exists", "reason": "ctf. The CyberBay Cup is the live CTF held inside the CyberBay Summit, which is already held (Tampa, 2027-03-22)." },
+    { "name": "(game-jam)", "url": "https://luma.com/tcm3mys8", "verdict": "rejected", "reason": "Found none. The Tampa Bay Game Developers group on Luma runs social mixers, not jams. No USF or Tampa Bay in-person jam turned up for 2026 or 2027." }
+   ]
+  },
+  {
+   "city": "Philadelphia",
+   "region": "Pennsylvania",
+   "queries": [
+    "Philadelphia game jam 2026 in person Philly",
+    "Philadelphia startup week 2026 OR Philly startup demo day 2026",
+    "Philadelphia accelerator demo day 2026 Dreamit OR \"Founders Alley\" OR \"Comcast LIFT Labs\" OR \"Venture Lab\"",
+    "Philadelphia tech summit 2027 OR Philadelphia CTF competition in person 2026",
+    "\"1PHL Startup Summit\" 2025"
+   ],
+   "found": [
+    { "name": "Global Game Jawn", "url": "https://globalgamejam.org/jam-sites/2026/global-game-jawn", "verdict": "added", "reason": "game-jam. Philly Game Mechanics' GGJ site: in person at Indy Hall, 709 N 2nd St, Jan 30-Feb 1, 2026 ('once more in 2026'). The 2027 site is not posted yet: added recurring-tbd, last_date 2026-01-30. PGM's Meetup is listed in sources-nov05-c1.json." },
+    { "name": "Pennovation Accelerator Pitch Day", "url": "https://pennovation.upenn.edu/news/2026-pennovation-accelerator", "verdict": "added", "reason": "demo-day. Penn's Pennovation Works: 'Pitch Day: October 21st' (2026), at the end of the accelerator. The 2025 Pitch Day was July 23, 2025 at the Pennovation Center, public with registration. Added recurring-tbd, last_date 2026-10-21." },
+    { "name": "PHL Game Jam 2026", "url": "https://itch.io/jam/philly-game-jam-2026", "verdict": "rejected", "reason": "game-jam. A citywide jam Oct 9-18, 2026, mostly remote, with an in-person kickoff and coworking day at Indy Hall. It is limited to Greater Philadelphia residents and run with the City and PHL Gaming Conference. The format changes yearly (2025 was the 'PGM Autumn Jam'). Covered by following PGM's Meetup instead of a record." },
+    { "name": "1PHL Startup Summit", "url": "https://www.sep.benfranklin.org/event/1phl-startup-summit/", "verdict": "rejected", "reason": "summit. A half-day event on May 6, 2026 at Ballers, billed as 'a signature event of Philly Tech Week'. 2026 is the first edition under this name (2025 had 'Future Forward: Startups'). It sits inside Philly Tech Week, which is already held. Not a standalone recurring summit yet." },
+    { "name": "(startup-week)", "url": "https://www.phillytechweek.com/", "verdict": "exists", "reason": "No separate Philly Startup Week exists. The city's startup-week role is filled by Philly Tech Week (already held, Philadelphia)." },
+    { "name": "Code for Philly / Code & Coffee Philly (meetup-series)", "url": "https://www.meetup.com/code-for-philly/", "verdict": "exists", "reason": "meetup-series. Already registered feed sources (meetup:code-for-philly, code-coffee-philly, dataphilly, philly-hardware, philly-tech-walk). No curated record needed." },
+    { "name": "(ctf)", "url": "", "verdict": "rejected", "reason": "Found none in Philadelphia. The nearest in-person CTFs were JerseyCTF (NJIT, Newark) and a Pennsylvania community-college CTF with no location given. Nothing in the city." }
+   ]
+  },
+  {
+   "city": "Denver",
+   "region": "Colorado",
+   "queries": [
+    "ETHDenver 2027 dates",
+    "Denver hackathon 2026 OR 2027 in person",
+    "Denver tech week 2026",
+    "\"Deep Tech Week\" Denver October 2026 official",
+    "Denver startup accelerator demo day 2026",
+    "Colorado CTF capture the flag competition Denver in person 2026",
+    "Denver game jam 2026 OR 2027 in person"
+   ],
+   "found": [
+    { "name": "ETHDenver", "url": "https://www.ethdenver.com/", "verdict": "added", "reason": "hackathon/festival. ethdenver.com: 'ETHDenver 10 ... March 24 & 25, 2027 · Denver'. The 2026 edition was Feb 17-21 at the National Western Center with the BUIDLathon (organiser homepage, archived Jan 2026). Typed 'festival' because the organiser calls it 'the original blockchain festival' and the 2027 page does not yet mention the BUIDLathon. Added upcoming." },
+    { "name": "Wild West Hackin' Fest @ Mile High", "url": "https://wildwesthackinfest.com/", "verdict": "added", "reason": "conference (with CTF). Feb 17-19, 2027 at the Sheraton Denver Downtown, with pre-con training Feb 16-17. The 2026 conference was Feb 11-13. Added upcoming." },
+    { "name": "Colorado Game Jam", "url": "https://coloradogamejam.com/", "verdict": "added", "reason": "game-jam, in Boulder, not Denver. CU Game Dev's '5th in person jam', Sep 26-28, 2026 at the Roser ATLAS Building, CU Boulder. Added under city Boulder as recurring-tbd." },
+    { "name": "DU Arcade", "url": "https://duarcade.cs.du.edu/", "verdict": "added", "reason": "expo (game-dev showcase, not a jam). The '7th annual DU Arcade on Saturday, May 16th, 2026' at the University of Denver, free. Added recurring-tbd." },
+    { "name": "Deep Tech Week Denver", "url": "https://www.deep-tech-week.com/conferences", "verdict": "rejected", "reason": "tech-week. A 'save the date' of Oct 19-23, 2026 circulated, but the organiser's all-editions page lists seven 2026 editions and five 2027 editions, none of them Denver. deeptechweek.com (no hyphens) is a parked HugeDomains sale page. No Denver edition happened or is announced." },
+    { "name": "SummitHack", "url": "https://summithack.vercel.app/", "verdict": "rejected", "reason": "hackathon. A 24-hour sustainability hackathon at the University of Denver, May 9-10, 2026. Only this single 2026 edition is visible (vercel subdomain, no prior years), so it is not yet shown to recur." },
+    { "name": "Techstars Boulder Demo Day", "url": "https://luma.com/t48q19mv", "verdict": "exists", "reason": "demo-day. The Front Range's accelerator demo day is already in the data as feed row 'Techstars Boulder 2026 Demo Day' (Boulder, 2026-12-07). No Denver-proper accelerator demo day with a current date was found." },
+    { "name": "(ctf)", "url": "https://zeronetworks.com/blog/contain-the-breach-an-in-person-capture-the-flag-competition", "verdict": "rejected", "reason": "Found only vendor one-offs (Zero Networks 'Contain the Breach', Apr 9, 2026, RiNo) and dated Parsons and WiCyS Colorado CTFs from 2024. No recurring public in-person Denver CTF. The WWHF Mile High conference, added above, has a CTF." }
+   ]
+  },
+  {
+   "city": "Austin",
+   "region": "Texas",
+   "queries": [
+    "Austin startup week 2026",
+    "Austin accelerator demo day 2026 Capital Factory OR Techstars OR Longhorn",
+    "\"Longhorn Startup\" Demo Day 2026 UT Austin",
+    "Austin Longhorn Startup Demo Day spring 2026 UT Austin cs.utexas.edu",
+    "Austin CTF capture the flag in person 2026 UT Austin OR BSides",
+    "Austin game jam 2026 in person"
+   ],
+   "found": [
+    { "name": "Texas Game Jam", "url": "https://itch.io/jam/texas-game-jam-2026", "verdict": "added", "reason": "game-jam. EGaDS! (UT Austin) runs its 'annual game jam' as a hybrid with an on-campus kickoff: Sep 25-27, 2026, and late Sep 2025 before it. Added recurring-tbd, last_date 2026-09-25." },
+    { "name": "Austin Startup Week", "url": "https://www.austintech.com", "verdict": "exists", "reason": "startup-week. Rebranded as Austin Tech Week in 2024, and already held as 'Austin Tech Week' (Austin)." },
+    { "name": "Longhorn Startup Demo Day", "url": "https://capitalfactory.com/event/longhorn-startup-demo-day/", "verdict": "unresolved", "reason": "demo-day. The only 2026 date (April 27, 2026) is on a Capital Factory 'Event Placeholder' that now redirects to /events. UT's own calendar entry is from 2018, and cs.utexas.edu/longhorn-startup returns 404. No organiser page confirms the event still runs." },
+    { "name": "Deep Tech Week Austin", "url": "https://www.deep-tech-week.com/conferences", "verdict": "rejected", "reason": "tech-week. One Austin edition, Sep 21-26, 2026 (30 events, 4,093 attendees, per the organiser). The organiser's 2027 list has no Austin edition, so it is not shown to recur in Austin." },
+    { "name": "UTCTF", "url": "https://ret2future.ase.ro/docs/ctfs/utctf2026/", "verdict": "rejected", "reason": "ctf. UT Austin ISSS's CTF is 'an online, jeopardy-style CTF open to all teams'. Online-only." },
+    { "name": "(demo-day other)", "url": "https://luma.com/thw0pk99", "verdict": "rejected", "reason": "DivInc's Influence & Innovation Accelerator demo day (Jul 16, 2026) and Nucleate Texas Demo Day are one-off cohort events on Luma with no recurring organiser page. Luma events in Austin reach the feed by area discovery." }
+   ]
+  }
+ ]
+}

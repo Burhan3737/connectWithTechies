@@ -1,10 +1,16 @@
 {
   "searched": {
     "Ann Arbor|Michigan": "2026-10-29",
+    "Atlanta|Georgia": "2026-11-05",
+    "Austin|Texas": "2026-11-05",
+    "Boston|Massachusetts": "2026-11-05",
     "Calgary|Alberta": "2026-10-29",
     "Charlotte|North Carolina": "2026-10-31",
+    "Chicago|Illinois": "2026-11-05",
     "Cincinnati|Ohio": "2026-10-29",
+    "Columbus|Ohio": "2026-11-05",
     "Dallas|Texas": "2026-10-31",
+    "Denver|Colorado": "2026-11-05",
     "Detroit|Michigan": "2026-10-31",
     "Edmonton|Alberta": "2026-10-31",
     "Halifax|Nova Scotia": "2026-10-31",
@@ -17,7 +23,9 @@
     "Minneapolis|Minnesota": "2026-10-31",
     "Nashville|Tennessee": "2026-11-02",
     "New Orleans|Louisiana": "2026-11-02",
+    "Orlando|Florida": "2026-11-05",
     "Ottawa|Ontario": "2026-11-02",
+    "Philadelphia|Pennsylvania": "2026-11-05",
     "Phoenix|Arizona": "2026-10-29",
     "Pittsburgh|Pennsylvania": "2026-11-02",
     "Portland|Oregon": "2026-11-02",
@@ -27,7 +35,9 @@
     "Salt Lake City|Utah": "2026-11-02",
     "San Diego|California": "2026-11-02",
     "St. Louis|Missouri": "2026-10-31",
+    "Tampa|Florida": "2026-11-05",
     "Victoria|British Columbia": "2026-10-31",
+    "Washington|District of Columbia": "2026-11-05",
     "Waterloo|Ontario": "2026-10-29",
     "Winnipeg|Manitoba": "2026-11-02"
   }

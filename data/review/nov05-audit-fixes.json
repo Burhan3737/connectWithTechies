@@ -1,0 +1,19 @@
+[
+  {
+    "match": { "name": "InfoSec Nashville", "city": "Nashville" },
+    "action": "update",
+    "reason": "AUDIT 2026-11-05-i1-B1: https://www.infosecnashville.com refuses connections on 443; the bare domain redirects to the ISSA Middle Tennessee chapter, whose event page returns 200.",
+    "set": { "url": "https://issamidtn.org/infosec-nashville-cybersecurity-conference/" }
+  },
+  {
+    "match": { "name": "API Conference New York", "city": "New York" },
+    "action": "update",
+    "reason": "AUDIT 2026-11-05-i1-W1: apiconference.net/new-york/ now shows only a 2027 teaser; the 2026-09-28 edition is confirmed on devm.io/newyork-week/.",
+    "set": { "source": "https://devm.io/newyork-week/" }
+  },
+  {
+    "match": { "name": "Startup Sioux Falls Founders Meetup", "city": "Sioux Falls" },
+    "action": "remove",
+    "reason": "AUDIT 2026-11-05-i1-W2: stale duplicate of 'Founders Meetup Sioux Falls' (same monthly Startup Sioux Falls meeting); this copy is recurring-tbd with last_date 2026-08-19 and a generic /events/ url, the kept record is current (next 2026-11-18)."
+  }
+]

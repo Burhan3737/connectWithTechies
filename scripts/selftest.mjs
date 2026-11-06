@@ -12,6 +12,7 @@ import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { validateRecord, decideAdd } from './lib/record.mjs';
+import { orderPatchFiles } from './lib/patch-order.mjs';
 import { diffEvents, changesMarkdown, historyRow, upsertHistory, delistings, retiredOrganisers } from './lib/changes.mjs';
 import { planCities, mergeSearched, candidateCities, TYPES } from '../agent/tools/discovery-plan.mjs';
 
@@ -335,6 +336,37 @@ console.log('\nrefresh history and delistings');
 
   const reg = { sources: [{ name: 'Strike Zone', tech: false, reason: 'retired by oct25 review' }, { name: 'Kept', tech: false, reason: 'gate' }, { name: 'X', tech: true }] };
   ok([...retiredOrganisers(reg)].join() === 'Strike Zone' && retiredOrganisers(null).size === 0, 'retired: only organisers a person retired');
+  // nov05: retiring a dead Eventbrite page named "Organizer" (Eventbrite's
+  // placeholder) turned away 37 events from 36 unrelated, followed organisers.
+  const shared = { sources: [
+    { name: 'Organizer', tech: false, reason: 'retired by nov05: 410 Gone' },
+    { name: 'Organizer', tech: true },
+    { name: 'Wine Club', tech: false, reason: 'retired by nov05' },
+    { name: 'Wine Club', tech: false, reason: 'retired by oct29' },
+  ] };
+  ok([...retiredOrganisers(shared)].join() === 'Wine Club',
+    'retired: a name a followed organiser also carries identifies nobody, so it is not matched by name');
+}
+
+console.log('\nretired organiser names in the feed');
+{
+  const src = readFileSync(join(dirname(fileURLToPath(import.meta.url)), 'feeds', 'run.mjs'), 'utf8');
+  ok(/retiredNames = retiredOrganisers\(registry\)/.test(src),
+    'the feed turns events away by name through retiredOrganisers, not a name set of its own');
+}
+
+console.log('\npatch file order');
+{
+  const order = (names, now) => orderPatchFiles(names, now).join(' ');
+  ok(order(['nov05-r1-fixes.json', 'oct29-t1-fixes.json', 'oct05-r1-fixes.json'], '2026-11-05')
+    === 'oct05-r1-fixes.json oct29-t1-fixes.json nov05-r1-fixes.json',
+    'by date, not name: a November fix replays after the October one it supersedes');
+  ok(order(['jan03-r1-fixes.json', 'dec30-r1-fixes.json'], '2027-01-10')
+    === 'dec30-r1-fixes.json jan03-r1-fixes.json', 'across the new year: December is last year');
+  ok(order(['nov05-r1-fixes.json', 'nov05-audit-fixes.json', 'nov05-c1-fixes.json'], '2026-11-05')
+    === 'nov05-audit-fixes.json nov05-c1-fixes.json nov05-r1-fixes.json', 'same day: name order');
+  ok(order(['oct05-r1-fixes.json', 'research-2026-10.json'], '2026-11-05')
+    === 'research-2026-10.json oct05-r1-fixes.json', 'undated names first, so any dated pass can supersede them');
 }
 
 console.log(failed ? `\n${failed} CHECK(S) FAILED` : `\nALL ${passed} SCRIPT CHECKS PASSED`);

@@ -17,8 +17,10 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 | 2026-10-31-i3 | re-audit | 0 | 1 | 1 | 0 | Cycle oct31 final re-audit: orchestrator fixes for i2-B1 (BSides Halifax), i2-W1 (run.mjs judgeEvents techOrg re-add), i2-W2 (AWS Prep Course drops), feed re-run from cache |
 | 2026-11-03-i1 | 3 | 2 | 4 | 6 | 0 | Cycle nov02: re-check t1-t3 (60 rows), discovery r1/r2/d1/d2 (38 adds), PNSS move, 14 organiser retirements, place-override drop, feed-gate relevance.mjs change |
 | 2026-11-03-i2 | re-audit | 0 | 0 | 0 | 0 | Cycle nov02 re-audit: nov02-audit-fixes.json (B1, B2, W1, W2), relevance.mjs Massachusetts normalisation (W3), place-override drops (W4), rebuilt feed |
+| 2026-11-05-i1 | 2 | 1 | 2 | 3 | 0 | nov05 cycle: re-check passes nov05-r1/r2/r3 (60 rows), discovery nov05-c1/c2/t1/t2 (47 adds), feed retirements, patch replay-order change |
+| 2026-11-05-i2 | re-audit | 0 | 1 | 0 | 1 | nov05 cycle re-audit: nov05-audit-fixes.json (i1-B1/W1/W2) and the retired-organiser name-match repair (retiredOrganisers, feed re-run from cache); CHANGES.md 70 removals |
 
-**6 audit cycle(s); 4 found something blocking on its first audit.** 36 findings in total, 30 fixed, 5 open or deferred, 9 repeat(s) of an earlier finding.
+**7 audit cycle(s); 5 found something blocking on its first audit.** 40 findings in total, 33 fixed, 6 open or deferred, 9 repeat(s) of an earlier finding.
 
 ## Open
 
@@ -37,8 +39,33 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 - **2026-10-11-i2-W6** · warning · deferred · **Tech Week non-tech socials** — Unchanged, deferred to user: NTW Closing Party, Hard Tech Week Opening Party, Big Cayman Bash, Young Founders Hike still listed.
   - recommended: No action until the user decides.
   - note: Waiting on the user's decision (same as 2026-10-07-i3-W1).
+- **2026-11-05-i2-W1** · warning · deferred · **JEWEL CITY HACKS 6.0 (Glendale) / Seattle AI Power Holiday Evening (Bellevue)** — Two live tech events (luma.com/jewelcityhacks6 2026-11-14; luma.com/edixsj8w 2026-12-06, same Luma id, retitled) were removed as 'no longer listed' because they dropped off a luma-area listing that takenDown() treats as complete. InsurTech 2027 Spring Conference (New York) was also lost, by a gate verdict that flips from run to run. Pre-existing rule, the same as 2026-10-07-i3-W2, not a regression; the count (60) is within the 56-69 baseline.
+  - recommended: Restore the two events (curate them or un-remove the feed rows); consider curating InsurTech 2027 Spring Conference; in a future pass, re-fetch an upcoming event's own page before taking it down for missing from a luma-area listing.
+  - note: takenDown() drops an upcoming event when it leaves a luma-area listing, without re-reading its own page. Changing that rule (or restoring the two events by hand) is left to the user; same root as closed 2026-10-07-i3-W2.
 
 ## History
+
+### 2026-11-05-i2 — 0 blocking, 1 warning(s)
+
+Scope: nov05 cycle re-audit: nov05-audit-fixes.json (i1-B1/W1/W2) and the retired-organiser name-match repair (retiredOrganisers, feed re-run from cache); CHANGES.md 70 removals
+
+| id | severity | event | finding | status | resolution |
+|---|---|---|---|---|---|
+| W1 | warning | JEWEL CITY HACKS 6.0 (Glendale) / Seattle AI Power Holiday Evening (Bellevue) | Two live tech events (luma.com/jewelcityhacks6 2026-11-14; luma.com/edixsj8w 2026-12-06, same Luma id, retitled) were removed as 'no longer listed' because they dropped off a luma-area listing that takenDown() treats as complete. InsurTech 2027 Spring Conference (New York) was also lost, by a gate verdict that flips from run to run. Pre-existing rule, the same as 2026-10-07-i3-W2, not a regression; the count (60) is within the 56-69 baseline. | deferred (2026-11-06) | takenDown() drops an upcoming event when it leaves a luma-area listing, without re-reading its own page. Changing that rule (or restoring the two events by hand) is left to the user; same root as closed 2026-10-07-i3-W2. |
+
+Checked and sound: All 3 i1 fixes landed; all 36 namesake 'Organizer' feed events present in feed.json and events.json; Forward Deploy Toronto (retired organiser's own) is 404/410; registry tech flips only the 2 intended; 70-removal split recomputed; 8 Sioux Falls retirements past; 6/10 sampled no-longer-listed rows really gone; CAST/Agile2027 flags are probe artefacts
+
+### 2026-11-05-i1 — 1 blocking, 2 warning(s)
+
+Scope: nov05 cycle: re-check passes nov05-r1/r2/r3 (60 rows), discovery nov05-c1/c2/t1/t2 (47 adds), feed retirements, patch replay-order change
+
+| id | severity | event | finding | status | resolution |
+|---|---|---|---|---|---|
+| B1 | blocking | InfoSec Nashville (Nashville) | url https://www.infosecnashville.com does not connect (port 443 unreachable); curator noted ECONNREFUSED and set it anyway. Bare host redirects to issamidtn.org. | fixed (2026-11-06) | url -> issamidtn.org event page (nov05-audit-fixes.json) |
+| W1 | warning | API Conference New York (New York) | source apiconference.net/new-york/ shows only a 2027 teaser, not the 2026-09-28 date; the date was confirmed on devm.io/newyork-week/. | fixed (2026-11-06) | source -> devm.io/newyork-week/ (nov05-audit-fixes.json) |
+| W2 | warning | Startup Sioux Falls Founders Meetup (Sioux Falls) | Pre-existing duplicate of 'Founders Meetup Sioux Falls' (same monthly meeting); stale recurring-tbd, last_date 2026-08-19, while the twin has next_date 2026-11-18. Missed by the duplicate check (different name and url). | fixed (2026-11-06) | stale us-central duplicate removed (nov05-audit-fixes.json) |
+
+Checked and sound: CHM Live, Full Indie, Northeast Dreamin', DevRelCon NY, Sioux Falls repoints (patch order holds); Utah Tech Week, JSNation US, PTC, Into The Box, AI Tinkerers Raleigh; ETHDenver, Agile2027, Techstars Boston/Columbus, Georgetown, Tampa Bay Tech Week, WWHF, AI Risk Summit, Enterprise AI Summit, SquiggleConf, Buffer-Free, CAST, BostonHacks; CAST/Agile2027 dead-link flags are probe artefacts
 
 ### 2026-11-03-i2 — 0 blocking, 0 warning(s)
 

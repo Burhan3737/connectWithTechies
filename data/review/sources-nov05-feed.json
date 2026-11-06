@@ -1,0 +1,12 @@
+[
+  {
+    "url": "https://www.startupsiouxfalls.com/events/?ical=1",
+    "tech": false,
+    "reason": "Feed gone 2026-11-05, not a tech verdict: Startup Sioux Falls moved to a custom site and ?ical=1 now serves the HTML events page (no iCal, no feed link found). Its tech events (Founders Meetup, AI Builder Lab Meetup) are curated records, repointed in nov05-r3-fixes.json. Re-follow if a feed reappears."
+  },
+  {
+    "url": "https://www.eventbrite.com/o/121647917107",
+    "tech": false,
+    "reason": "Feed gone 2026-11-05, not a tech verdict: Eventbrite returns 410 Gone for this organiser page (unnamed \"Organizer\", 7/7 tech track record); unreadable on every run since it was last read 2026-10-15. Re-follow if it returns under a new id."
+  }
+]

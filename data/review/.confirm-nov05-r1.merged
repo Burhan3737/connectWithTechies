@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Full Indie Meetup",
+    "city": "Vancouver",
+    "status": "corrected",
+    "cycle": "nov05-r1",
+    "evidence": "fullindie.com/meetup lists 'DATES November 3rd December 1st' at LaSalle College, 2808 Bradfield Court, 6-9 pm, first Tuesday monthly. last_date 2026-11-03 correct; next_date set to 2026-12-01 per organiser."
+  },
+  {
+    "name": "AI Tinkerers Raleigh",
+    "city": "Raleigh",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "raleigh.aitinkerers.org JSON-LD and event list: latest meetup 'AI Tinkerers Raleigh Meetup - August 12, 2026' 5:30-7:30 PM (in-person); earlier Jun 8, May 6, Feb 11 2026. No upcoming event posted, so last_date 2026-08-12 and recurring-tbd are correct."
+  },
+  {
+    "name": "Bioscience Association Manitoba AI Summit",
+    "city": "Winnipeg",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "biomb.ca/events/2026-07-22/ JSON-LD startDate 2026-07-22T08:15, venue at 281 Donald St (Metropolitan Entertainment Centre by Canad Inns). biomb.ca/events/ upcoming list (Dec 2026 to Dec 2027) has no 2027 AI Summit; last_date and recurring-tbd correct."
+  },
+  {
+    "name": "Canadian Women in Cybersecurity",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "siberx.org/event/canadian-women-in-cybersecurity-2026/: 'Start Date May 26, 2026 ... Status Expired ... Venue Hyatt Regency Toronto, 370 King St W'. siberx.org/event/ upcoming list (ODTN Calgary/Toronto/Ottawa, Think Tank, CISO Forum 2027) has no CWIC 2027; /canadian-women-in-cybersecurity-2027/ is 404. recurring-tbd correct."
+  },
+  {
+    "name": "Day of Data",
+    "city": "Salt Lake City",
+    "status": "corrected",
+    "cycle": "nov05-r1",
+    "evidence": "utahgeekevents.com/events/day-of-data-2026-formerly-sql-saturday/: 'Event Date: Sept 19th, 2026 Location: Neumont University 143 S Main St, Salt Lake City', in-person only, free; matches last_date 2026-09-19. Events list shows no 2027 Day of Data yet. url moved off the shared homepage to the event's own page (SHARED-PAGE flag)."
+  },
+  {
+    "name": "DesignVerse",
+    "city": "Riverside",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "designverseucr.org title 'DesignVerse 2026', 'University of California, Riverside May 16-17, 2026'; matches last_date 2026-05-16. No 2027 edition announced; recurring-tbd correct."
+  },
+  {
+    "name": "DevRelCon New York",
+    "city": "Brooklyn",
+    "status": "corrected",
+    "cycle": "nov05-r1",
+    "evidence": "ti.to/mlh/devrelcon-2026 (MLH, organiser) 'July 22nd-23rd, 2026', Industry City, 220 36th St, Brooklyn: matches last_date. ti.to/mlh/devrelcon-2027 'DevRelCon New York 2027 July 21st-22nd, 2027', same venue; next_date set 2027-07-21 to 2027-07-22."
+  },
+  {
+    "name": "EXPLORE Pittsburgh Tech Week",
+    "city": "Pittsburgh",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "techweekpittsburgh.com title 'EXPlore Pittsburgh Tech Week | September 10-16, 2026', 'Pittsburgh, PA Sept 10-16 2026', citywide in-person events; matches last_date 2026-09-10. No 2027 dates yet."
+  },
+  {
+    "name": "GDGHacks",
+    "city": "Guelph",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "gdghacks.com 'GDGHacks 2026 ... May 9-10, 2026 - In-Person - University of Guelph'; matches last_date 2026-05-09. Site still on 2026 edition; recurring-tbd correct."
+  },
+  {
+    "name": "Global Game Jam - Carleton University",
+    "city": "Ottawa",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "csit.carleton.ca/~arya/gamejam/ 'Global Game Jam, Ottawa (Hybrid) January 30 - February 1, 2026', starts 5pm Friday in Azrieli Pavilion, in person with Discord option; matches last_date 2026-01-30. GGJ 2027 is 25-31 Jan 2027 (globalgamejam.org) with site registration opened Nov 1; Carleton has not posted a 2027 site, so recurring-tbd stays."
+  },
+  {
+    "name": "H-Town Roundup",
+    "city": "Houston",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "houstonexponential.com/event-details/h-town-roundup-2026-2: 'Time & Location March 30 - April 3, 2026, Various Locations'; matches last_date 2026-03-30. Homepage nav still lists only H-Town Roundup 2026; no 2027 dates."
+  },
+  {
+    "name": "Into The Box",
+    "city": "Washington",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "intothebox.org: 'INTO THE BOX 2026 ... April 29th - May 1st, 2026 - Washington, DC'; pre-conference workshops Apr 29; venue Optica, 2010 Massachusetts Ave NW (via WebFetch of same page). Matches last_date 2026-04-29; no 2027 announcement."
+  },
+  {
+    "name": "Merge",
+    "city": "Grand Rapids",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "sessionize.com/merge-2026 (organiser's CFP, links merge.softwaregr.org): 'event date 11 May 2026, location Grand Rapids, Michigan'; merge.softwaregr.org still shows the 2026 theme 'AI at Work' with no dates. last_date 2026-05-11 and recurring-tbd correct."
+  },
+  {
+    "name": "Miami Startup Ecosystem Conference",
+    "city": "Miami",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "luma.com/1b1c3qxi (1001 VC's own event page) JSON-LD 2026-02-12 to 2026-02-13, 'Feb 12 - 13, 2026, Miami Dade College Auditorium (Downtown, Wolfson Campus)', marked Past Event; matches last_date. No 2027 edition posted."
+  },
+  {
+    "name": "Pittsburgh Global Game Jam",
+    "city": "Pittsburgh",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "globalgamejam.org/jam-sites/2026/pittsburgh-global-game-jam-2026: Jan 30 - Feb 1 2026, Hybrid, Sorrells Library, Wean Hall Room 4400, CMU (Friday kickoff on Discord, jam site open Sat/Sun, Sunday showcase in person); matches last_date 2026-01-30. The 2027 site page is 404; GGJ 2027 is 25-31 Jan 2027 with site registration just opened, so recurring-tbd stays."
+  },
+  {
+    "name": "RampUp Weekend",
+    "city": "Winnipeg",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "northforge.ca/event-details/rampup-weekend-2026 JSON-LD 2026-04-10T17:00 to 2026-04-12T21:00, '100 Innovation Dr, Winnipeg, MB', registration closed; matches last_date 2026-04-10. No 2027 event page (the -2027 slug serves an unrelated FabLab tour)."
+  },
+  {
+    "name": "Rhythm & Algorithm",
+    "city": "New Orleans",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "rhythm-algorithm.netlify.app: 'April 8,9th, 2026 - New Orleans, LA', solutions workshop Apr 8-9, conference Apr 9, hosted by the Ernest N. Morial Convention Center; matches last_date 2026-04-08. No 2027 edition announced."
+  },
+  {
+    "name": "San Diego Startup Week",
+    "city": "San Diego",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "sandiegostartupweek.org and startupsd.org return HTTP 520 to curl; WebFetch of Startup San Diego's own page startupsd.org/san-diego-startup-week/ reads 'Happening November 2-6, 2026', matching next_date 2026-11-02 to 2026-11-06 (event is in progress today). KPBS listing agrees (Nov 2 and Nov 3 sessions)."
+  },
+  {
+    "name": "Silicon Forest Tech Summit",
+    "city": "Portland",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "steamcircuit.com event page JSON-LD 2026-03-14 12:00-17:00, 'Location Oregon Convention Center', Event Completed; matches last_date. STEAM Circuit's events list is JS-loaded; web search for a 2027 edition found none. recurring-tbd correct."
+  },
+  {
+    "name": "StartUP PGH",
+    "city": "Pittsburgh",
+    "status": "confirmed",
+    "cycle": "nov05-r1",
+    "evidence": "startuppgh.com: 'Thank you to everyone who joined ... StartUP PGH, September 14-18, 2026', day list Sep 14-18 2026; matches last_date 2026-09-14. 'Get Updates for Next Year', no 2027 dates."
+  }
+]

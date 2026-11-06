@@ -703,9 +703,9 @@
     "attendance": "",
     "cost": "free",
     "audience": "developers, AI builders, founders",
-    "url": "https://www.startupsiouxfalls.com/series/ai-builder-lab-meetup/",
+    "url": "https://www.startupsiouxfalls.com/events/ai-builder-lab-meetup",
     "description": "Third-Thursday technical deep dive at Startup Sioux Falls for developers exploring AI tooling and turning AI projects into products.",
-    "source": "https://www.startupsiouxfalls.com/event/ai-builder-lab-meetup/"
+    "source": "https://www.startupsiouxfalls.com/events/ai-builder-lab-meetup/2026-11-19"
   },
   {
     "name": "Founders Meetup Sioux Falls",
@@ -718,7 +718,7 @@
     "city": "Sioux Falls",
     "region": "South Dakota",
     "country": "United States",
-    "venue": "Startup Sioux Falls, 100 E 6th St",
+    "venue": "",
     "cadence": "monthly",
     "month": "Varies",
     "next_date": "2026-11-18",
@@ -728,9 +728,9 @@
     "attendance": "",
     "cost": "free",
     "audience": "founders and creatives who have started a business",
-    "url": "https://www.startupsiouxfalls.com/series/founders-meetup-for-anyone-who-has-started-a-business/",
+    "url": "https://www.startupsiouxfalls.com/events/founders-meetup",
     "description": "Third-Wednesday morning gathering at Startup Sioux Falls exclusively for people who have founded a business, running monthly through the year.",
-    "source": "https://www.startupsiouxfalls.com/event/founders-meetup-1-3/"
+    "source": "https://www.startupsiouxfalls.com/events/founders-meetup/2026-11-18"
   },
   {
     "name": "BSides St. John's",

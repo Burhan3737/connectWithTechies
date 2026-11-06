@@ -28,6 +28,7 @@ import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { canonPlace } from './lib/places.mjs';
 import { today } from './lib/today.mjs';
+import { orderPatchFiles } from './lib/patch-order.mjs';
 import { decideAdd, FIELDS } from './lib/record.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -102,9 +103,10 @@ if (!store.has(DISCOVERED)) store.set(DISCOVERED, []);
 // word, the patches of any pass that happened to be called "discover-…"
 // (discover-x-fixes.json). discovery-log.json is excluded by name as before.
 const NOT_PATCHES = new Set(['verified.json', 'AUDIT.json', 'PROPOSED-moves.json', 'discovery-log.json']);
-const patchFiles = readdirSync(REVIEW_DIR)
-  .filter((f) => f.endsWith('.json') && !/^(confirm|sources)-/.test(f) && !NOT_PATCHES.has(f))
-  .sort();
+// Oldest pass first, so the latest update to a record is the one left standing
+// (scripts/lib/patch-order.mjs: name order put nov* before oct*).
+const patchFiles = orderPatchFiles(readdirSync(REVIEW_DIR)
+  .filter((f) => f.endsWith('.json') && !/^(confirm|sources)-/.test(f) && !NOT_PATCHES.has(f)), today());
 if (!patchFiles.length) { console.log('No patch files in data/review/ — nothing to do.'); process.exit(0); }
 
 let applied = 0, removed = 0, unmatched = 0, noop = 0, added = 0, rejected = 0;

@@ -1,4 +1,9 @@
-{ "date": "2026-11-03", "iteration": 2,
-  "scope": "Cycle nov02 re-audit: nov02-audit-fixes.json (B1, B2, W1, W2), relevance.mjs Massachusetts normalisation (W3), place-override drops (W4), rebuilt feed",
-  "checked": "All six i1 findings verified fixed in events.json; SF Tech Week pair merged to one 2027-10-04 record; one SLC Day of Data; Brain Fry admitted and its Philadelphia venue matches the Eventbrite page; W3 pattern scanned across built feed and 5,693 cache files with no new non-tech admits; 4,022 keyword admits re-judged current vs HEAD gate (13 newly admitted, all tech, none from W3; 0 newly dropped)",
-  "findings": [] }
+{ "date": "2026-11-05", "iteration": 2,
+  "scope": "nov05 cycle re-audit: nov05-audit-fixes.json (i1-B1/W1/W2) and the retired-organiser name-match repair (retiredOrganisers, feed re-run from cache); CHANGES.md 70 removals",
+  "checked": "All 3 i1 fixes landed; all 36 namesake 'Organizer' feed events present in feed.json and events.json; Forward Deploy Toronto (retired organiser's own) is 404/410; registry tech flips only the 2 intended; 70-removal split recomputed; 8 Sioux Falls retirements past; 6/10 sampled no-longer-listed rows really gone; CAST/Agile2027 flags are probe artefacts",
+  "findings": [
+    { "severity": "warning", "event": "JEWEL CITY HACKS 6.0 (Glendale) / Seattle AI Power Holiday Evening (Bellevue)",
+      "summary": "Two live tech events (luma.com/jewelcityhacks6 2026-11-14; luma.com/edixsj8w 2026-12-06, same Luma id, retitled) were removed as 'no longer listed' because they dropped off a luma-area listing that takenDown() treats as complete. InsurTech 2027 Spring Conference (New York) was also lost, by a gate verdict that flips from run to run. Pre-existing rule, the same as 2026-10-07-i3-W2, not a regression; the count (60) is within the 56-69 baseline.",
+      "recommendation": "Restore the two events (curate them or un-remove the feed rows); consider curating InsurTech 2027 Spring Conference; in a future pass, re-fetch an upcoming event's own page before taking it down for missing from a luma-area listing.",
+      "repeat_of": null }
+  ] }

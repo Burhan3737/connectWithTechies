@@ -51,6 +51,7 @@ import { takenDown } from './lib/history.mjs';
 import { runEntry, health } from './lib/health.mjs';
 import { typeOf, words } from './lib/type.mjs';
 import * as tribe from './adapters/tribe.mjs';
+import { retiredOrganisers } from '../lib/changes.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const RAW = join(ROOT, 'data', 'raw');
@@ -372,7 +373,8 @@ const orgIdOf = (e) => (e.registryId || (e.feed === 'luma' ? `luma-cal:${e.organ
 // the script judged non-tech itself keep per-event judging.
 const retiredOrgs = registry.sources.filter((s) => s.tech === false && /^retired by /.test(s.reason || ''));
 const retiredIds = new Set(retiredOrgs.map((s) => s.id));
-const retiredNames = new Set(retiredOrgs.map((s) => s.name).filter(Boolean));
+// By name only where no followed organiser shares it (see retiredOrganisers).
+const retiredNames = retiredOrganisers(registry);
 
 const gated = [];
 for (const e of candidates) {

@@ -278,5 +278,85 @@
   },
   "failed": 2,
   "written": 13416
+ },
+ {
+  "run_on": "2026-11-05",
+  "discover": false,
+  "bySource": {
+   "mlh": 87,
+   "devpost": 73,
+   "confstech": 140,
+   "devevents": 142,
+   "hackclub": 11,
+   "guild": 25,
+   "localist": 8,
+   "luma": 7863,
+   "meetup": 3650,
+   "eventbrite": 471,
+   "tribe": 73,
+   "ical": 36
+  },
+  "failed": 3,
+  "written": 14002
+ },
+ {
+  "run_on": "2026-11-05",
+  "discover": false,
+  "bySource": {
+   "mlh": 87,
+   "devpost": 73,
+   "confstech": 140,
+   "devevents": 142,
+   "hackclub": 11,
+   "guild": 25,
+   "localist": 8,
+   "luma": 8075,
+   "meetup": 3652,
+   "eventbrite": 471,
+   "tribe": 73,
+   "ical": 36
+  },
+  "failed": 2,
+  "written": 14005
+ },
+ {
+  "run_on": "2026-11-05",
+  "discover": false,
+  "bySource": {
+   "mlh": 87,
+   "devpost": 73,
+   "confstech": 140,
+   "devevents": 142,
+   "hackclub": 11,
+   "guild": 25,
+   "localist": 8,
+   "luma": 8075,
+   "meetup": 3652,
+   "eventbrite": 483,
+   "tribe": 73,
+   "ical": 36
+  },
+  "failed": 0,
+  "written": 13968
+ },
+ {
+  "run_on": "2026-11-05",
+  "discover": false,
+  "bySource": {
+   "mlh": 87,
+   "devpost": 73,
+   "confstech": 140,
+   "devevents": 142,
+   "hackclub": 11,
+   "guild": 25,
+   "localist": 8,
+   "luma": 8075,
+   "meetup": 3652,
+   "eventbrite": 483,
+   "tribe": 73,
+   "ical": 36
+  },
+  "failed": 0,
+  "written": 14004
  }
 ]

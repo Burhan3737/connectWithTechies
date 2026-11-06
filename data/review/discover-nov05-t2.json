@@ -1,0 +1,133 @@
+{
+  "pass": "nov05-t2",
+  "date": "2026-11-05",
+  "returning": [
+    {
+      "name": "BUILDATHON NYC",
+      "verdict": "rejected",
+      "reason": "One-off Devpost page (buildathon-nyc.devpost.com, Sep 14 2025) with only a tagline and no organiser site (Devpost organisation field just 'stanford'); web search for the tagline and for a later 'Buildathon NYC' found no further edition. One-off, not recurring."
+    },
+    {
+      "name": "Xen Project Summit",
+      "verdict": "rejected",
+      "reason": "xenproject.org/resources/summit-2026/: Xen Summit 2026 was September 15-17, 2026 in Munich (Aschheim), Germany. The summit moves between countries and its current edition is outside the US/Canada; the old xen-summit URL now 404s."
+    },
+    {
+      "name": "HPE Nonstop Technology and Business Conference",
+      "verdict": "added",
+      "reason": "nonstoptbc.com: 2026 edition Sept 15-17, 2026 at The Rosen Plaza, Orlando (2025 was Houston). 2027 not announced; added recurring-tbd, last_date 2026-09-15."
+    },
+    {
+      "name": "Make with Notion",
+      "verdict": "unresolved",
+      "reason": "makewithnotion.com now serves only 'Notion Developer Platform Launch - May 13' (a watch-the-keynote page). Web searches for Make with Notion 2026/2027 found only the earlier Pier 27 edition and a 2025 European showcase. No later in-person edition found; not proven ended."
+    },
+    {
+      "name": "SquiggleConf",
+      "verdict": "added",
+      "reason": "squiggleconf.com: May 7, 2027 (JSON-LD), New England Aquarium Simons Theater, Boston; launch party May 6. Added as upcoming, last_date 2025-09-18 (no 2026 edition found)."
+    },
+    {
+      "name": "XO Ruby NEW ORLEANS",
+      "verdict": "rejected",
+      "reason": "xoruby.com: XO Ruby is a touring one-day series; its 2026 stops were New York (Oct 10), Montreal (Oct 17), Seattle and Vancouver (SLC cancelled). New Orleans was a 2025-only stop with no 2026 or later edition."
+    },
+    {
+      "name": "InfoSec Nashville 2025",
+      "verdict": "added",
+      "reason": "sessionize.com/infosecnashville2026 (ISSA Middle Tennessee): 25th InfoSec Nashville Sept 17-18, 2026, Music City Center. 2027 not announced; added recurring-tbd, last_date 2026-09-17."
+    },
+    {
+      "name": "Enterprise Tech Leadership Summit",
+      "verdict": "added",
+      "reason": "events.itrevolution.com: the Las Vegas Enterprise Tech Leadership Summit (2025) has become the Enterprise AI Summit series (San Jose Apr 2026, Charlotte Oct 2026). Next US edition Portland, OR, May 5-6, 2027 (JSON-LD); added as 'Enterprise AI Summit', Portland."
+    },
+    {
+      "name": "Enterprise Technology Leadership Summit US 2025",
+      "verdict": "added",
+      "reason": "Same event as the 'Enterprise Tech Leadership Summit' row (IT Revolution, Las Vegas Sept 2025); one add covers both: 'Enterprise AI Summit', Portland, May 5-6, 2027."
+    },
+    {
+      "name": "custom gpt hackathon",
+      "verdict": "rejected",
+      "reason": "openai-hack.devpost.com: a 4-hour one-off Custom GPT hackathon run by a Detroit chapter of The AI Collective (Devpost organisation field). One-off chapter event, not a recurring series; The AI Collective's events already reach us through the Luma feed."
+    },
+    {
+      "name": "jake personal hackathon",
+      "verdict": "rejected",
+      "reason": "jake-personal-hackathon.devpost.com is a personal test page: subtitle 'demo', body 'Get startedd'. Not a real event."
+    },
+    {
+      "name": "STEMEPA: Innovate Challenge",
+      "verdict": "unresolved",
+      "reason": "stemepa-innovate-challenge.devpost.com: a 3-hour student-run coding contest, Sep 26 2025, Fab Lab Center Warminster PA (STEM Enrichment of Pennsylvania). Web search found no STEMEPA site and no 2026 edition (only an allhackathons copy of the 2025 page). Not proven ended."
+    },
+    {
+      "name": "HackGT 12: Midnight at the Museum",
+      "verdict": "exists",
+      "reason": "HackGT is in events.json: 'HackGT', Atlanta, last_date 2026-09-25, recurring-tbd (hack.gt)."
+    },
+    {
+      "name": "TEDxGrandJunction 2025",
+      "verdict": "rejected",
+      "reason": "tedxgj.com: TEDxGrandJunction 2026 was Oct 10, 2026 at The Art Center, Grand Junction. A general-interest TEDx ideas event, not a tech event, so out of scope for this directory."
+    },
+    {
+      "name": "API Conference New York",
+      "verdict": "added",
+      "reason": "devm.io/newyork-week: New York Week (ML, DevOps, JavaScript, API) Sept 28 - Oct 2, 2026; apiconference.net/new-york says 'API Conference New York 2027', no dates. Added recurring-tbd, last_date 2026-09-28."
+    },
+    {
+      "name": "DYNA Fall",
+      "verdict": "added",
+      "reason": "dyna.dyalog.com: DYNA26 held in New York, 27 April 2026; 'DYNA will be returning in 2027', details to come. Added as 'DYNA', recurring-tbd, last_date 2026-04-27."
+    },
+    {
+      "name": "Jax New York",
+      "verdict": "rejected",
+      "reason": "devm.io/jaxnewyork/ now redirects to devm.io/newyork-week/, whose 2026 New York Week ran DevOpsCon, MLcon, the JavaScript Conference and API Conference with no JAX; web search found no JAX New York after 2024, and jax.de lists only Mainz and Munich. The NY edition has been dropped."
+    },
+    {
+      "name": "MLcon New York",
+      "verdict": "added",
+      "reason": "mlconference.ai/new-york JSON-LD: MLcon New York 2026, Sept 28 - Oct 2, 2026, New York Marriott at the Brooklyn Bridge. No 2027 NY date (banner points to San Diego May 2027). Added recurring-tbd, last_date 2026-09-28."
+    },
+    {
+      "name": "COLLIDE Data & AI Conference",
+      "verdict": "exists",
+      "reason": "In events.json as the feed record 'COLLIDE Data + AI Conference 2026 | ATLANTA, GA', Sandy Springs, 2026-10-01 (meetup:atlanta-apache-spark-user-group); datasciconnect.com/events/collide confirms 'October 1, 2026 | ATL'."
+    },
+    {
+      "name": "DevFest DC",
+      "verdict": "added",
+      "reason": "gdg.community.dev (GDG Washington DC) JSON-LD: DevFest DC 2026 - Build Edition, Aug 28, 2026, 3351 Fairfax Dr, Arlington VA (GMU Mason Square). Added recurring-tbd, last_date 2026-08-28; the GDG-DC Meetup group added to sources."
+    },
+    {
+      "name": "Inspire Action - 2025",
+      "verdict": "unresolved",
+      "reason": "inspire-action-2025.devpost.com: UVic (Devpost organisation) 20-hour build hackathon Oct 3-4 2025, Victoria, following the INSPIRE Ideathon. Web search for a 2026 Inspire Action or UVic INSPIRE hackathon found nothing; no organiser page found."
+    },
+    {
+      "name": "SREday San Francisco 2025 Q4",
+      "verdict": "added",
+      "reason": "sreday.com/2026-san-francisco-q4: SREday San Francisco Oct 2, 2026 (one day, 29 speakers); SF runs Q2 and Q4 editions each year. No 2027 SF page yet; added 'SREday San Francisco' biannual, recurring-tbd, last_date 2026-10-02."
+    },
+    {
+      "name": "Texas Linux Festival 2025",
+      "verdict": "exists",
+      "reason": "In events.json as 'Texas Linux Fest', Austin, next_date 2026-11-06 (texaslinuxfest.org)."
+    },
+    {
+      "name": "Turtle Season Hackathon",
+      "verdict": "rejected",
+      "reason": "test-26861.devpost.com is a Devpost test page: subtitle 'I Like Turtles', body 'Submit your project to see how it looks for Admins'. Not a real event."
+    },
+    {
+      "name": "JCON USA 2025 @ IBM TechXchange",
+      "verdict": "exists",
+      "reason": "2026.usa.jcon.one: 'JCON USA 2026 The Java Community Conference within IBM TechXchange 2026, October 26-29, Atlanta, GA, Georgia World Congress Center'. It runs inside IBM TechXchange, which is in events.json as 'IBM TechXchange Conference', Atlanta, last_date 2026-10-26."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}

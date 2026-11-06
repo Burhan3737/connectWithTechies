@@ -504,6 +504,72 @@
       "blocking": 0,
       "warnings": 0,
       "findings": []
+    },
+    {
+      "id": "2026-11-05-i1",
+      "date": "2026-11-05",
+      "iteration": 1,
+      "scope": "nov05 cycle: re-check passes nov05-r1/r2/r3 (60 rows), discovery nov05-c1/c2/t1/t2 (47 adds), feed retirements, patch replay-order change",
+      "checked": "CHM Live, Full Indie, Northeast Dreamin', DevRelCon NY, Sioux Falls repoints (patch order holds); Utah Tech Week, JSNation US, PTC, Into The Box, AI Tinkerers Raleigh; ETHDenver, Agile2027, Techstars Boston/Columbus, Georgetown, Tampa Bay Tech Week, WWHF, AI Risk Summit, Enterprise AI Summit, SquiggleConf, Buffer-Free, CAST, BostonHacks; CAST/Agile2027 dead-link flags are probe artefacts",
+      "blocking": 1,
+      "warnings": 2,
+      "findings": [
+        {
+          "id": "2026-11-05-i1-B1",
+          "severity": "blocking",
+          "event": "InfoSec Nashville (Nashville)",
+          "summary": "url https://www.infosecnashville.com does not connect (port 443 unreachable); curator noted ECONNREFUSED and set it anyway. Bare host redirects to issamidtn.org.",
+          "recommendation": "Set url to https://issamidtn.org/infosec-nashville-cybersecurity-conference/",
+          "repeat_of": null,
+          "status": "fixed",
+          "resolved_on": "2026-11-06",
+          "resolution": "url -> issamidtn.org event page (nov05-audit-fixes.json)"
+        },
+        {
+          "id": "2026-11-05-i1-W1",
+          "severity": "warning",
+          "event": "API Conference New York (New York)",
+          "summary": "source apiconference.net/new-york/ shows only a 2027 teaser, not the 2026-09-28 date; the date was confirmed on devm.io/newyork-week/.",
+          "recommendation": "Set source to https://devm.io/newyork-week/",
+          "repeat_of": null,
+          "status": "fixed",
+          "resolved_on": "2026-11-06",
+          "resolution": "source -> devm.io/newyork-week/ (nov05-audit-fixes.json)"
+        },
+        {
+          "id": "2026-11-05-i1-W2",
+          "severity": "warning",
+          "event": "Startup Sioux Falls Founders Meetup (Sioux Falls)",
+          "summary": "Pre-existing duplicate of 'Founders Meetup Sioux Falls' (same monthly meeting); stale recurring-tbd, last_date 2026-08-19, while the twin has next_date 2026-11-18. Missed by the duplicate check (different name and url).",
+          "recommendation": "Remove the us-central 'Startup Sioux Falls Founders Meetup' record as a duplicate of Founders Meetup Sioux Falls",
+          "repeat_of": null,
+          "status": "fixed",
+          "resolved_on": "2026-11-06",
+          "resolution": "stale us-central duplicate removed (nov05-audit-fixes.json)"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-i2",
+      "date": "2026-11-05",
+      "iteration": 2,
+      "scope": "nov05 cycle re-audit: nov05-audit-fixes.json (i1-B1/W1/W2) and the retired-organiser name-match repair (retiredOrganisers, feed re-run from cache); CHANGES.md 70 removals",
+      "checked": "All 3 i1 fixes landed; all 36 namesake 'Organizer' feed events present in feed.json and events.json; Forward Deploy Toronto (retired organiser's own) is 404/410; registry tech flips only the 2 intended; 70-removal split recomputed; 8 Sioux Falls retirements past; 6/10 sampled no-longer-listed rows really gone; CAST/Agile2027 flags are probe artefacts",
+      "blocking": 0,
+      "warnings": 1,
+      "findings": [
+        {
+          "id": "2026-11-05-i2-W1",
+          "severity": "warning",
+          "event": "JEWEL CITY HACKS 6.0 (Glendale) / Seattle AI Power Holiday Evening (Bellevue)",
+          "summary": "Two live tech events (luma.com/jewelcityhacks6 2026-11-14; luma.com/edixsj8w 2026-12-06, same Luma id, retitled) were removed as 'no longer listed' because they dropped off a luma-area listing that takenDown() treats as complete. InsurTech 2027 Spring Conference (New York) was also lost, by a gate verdict that flips from run to run. Pre-existing rule, the same as 2026-10-07-i3-W2, not a regression; the count (60) is within the 56-69 baseline.",
+          "recommendation": "Restore the two events (curate them or un-remove the feed rows); consider curating InsurTech 2027 Spring Conference; in a future pass, re-fetch an upcoming event's own page before taking it down for missing from a luma-area listing.",
+          "repeat_of": null,
+          "status": "deferred",
+          "resolved_on": "2026-11-06",
+          "resolution": "takenDown() drops an upcoming event when it leaves a luma-area listing, without re-reading its own page. Changing that rule (or restoring the two events by hand) is left to the user; same root as closed 2026-10-07-i3-W2."
+        }
+      ]
     }
   ]
 }

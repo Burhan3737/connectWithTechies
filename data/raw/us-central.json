@@ -2745,31 +2745,6 @@
     "source": "https://itsmn.starchapter.com/meetinginfo.php?id=16&ts=1769623326"
   },
   {
-    "name": "Startup Sioux Falls Founders Meetup",
-    "type": "meetup-series",
-    "topics": [
-      "startups",
-      "entrepreneurship",
-      "community"
-    ],
-    "city": "Sioux Falls",
-    "region": "South Dakota",
-    "country": "United States",
-    "venue": "Startup Sioux Falls",
-    "cadence": "monthly",
-    "month": "Varies",
-    "next_date": "",
-    "next_date_end": "",
-    "last_date": "2026-08-19",
-    "status": "recurring-tbd",
-    "attendance": "",
-    "cost": "free",
-    "audience": "founders, remote workers, entrepreneurs",
-    "url": "https://startupsiouxfalls.com/events/",
-    "description": "A recurring free founders meetup run by Startup Sioux Falls alongside Coffee N Connections, an AI Builder Lab meetup and startup skills workshops.",
-    "source": "https://startupsiouxfalls.com/events/"
-  },
-  {
     "name": "Techlahoma Community Meetups",
     "type": "meetup-series",
     "topics": [

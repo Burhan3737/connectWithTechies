@@ -1,0 +1,468 @@
+[
+ {
+  "action": "add",
+  "reason": "bostonhacks.org (BU's own hackathon site) schedule: 'Day 1 — Sat, Nov 21 ... Day 2 — Sun, Nov 22 ... 12:00 pm Event Ends'; FAQ in the site's JS bundle: 'BostonHacks is an in-person 24-hour hackathon on November 21st-22nd, 2026. It takes place in the Boston University George Sherman Union (GSU).' and 'Is it free? Yes'. MLH 2027 season agrees (Nov 21-22, Boston, MA, physical). events.json holds it only as an MLH feed row; this curated record carries the recurrence.",
+  "record": {
+   "name": "BostonHacks",
+   "type": "hackathon",
+   "topics": [
+    "hackathon",
+    "students",
+    "software"
+   ],
+   "city": "Boston",
+   "region": "Massachusetts",
+   "country": "United States",
+   "venue": "George Sherman Union, Boston University",
+   "cadence": "annual",
+   "month": "November",
+   "next_date": "2026-11-21",
+   "next_date_end": "2026-11-22",
+   "last_date": "",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "free",
+   "audience": "college students (undergraduate and graduate)",
+   "url": "https://bostonhacks.org/",
+   "description": "Boston University's annual 24-hour student hackathon, held in person at the George Sherman Union with workshops, panels and sponsor prizes; MLH member event.",
+   "source": "https://bostonhacks.org/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "HackBeanpot's own 2026 site (2026-website-main.vercel.app, linked from hackbeanpot.com, which now reads 'Thank you for coming to HackBeanpot 2026!'): FAQ 'HackBeanpot is a three day long event, beginning on Friday, February 13th and ending on Sunday, February 15th' (2026; Feb 13 2026 is a Friday); 'a non-profit organization in the Boston area that organizes an annual undergraduate hackathon'. No 2027 dates yet: recurring-tbd, last_date 2026-02-13. Venue not stated by the organiser (an aggregator gives Maven AGI, 399 Boylston St), so left blank.",
+  "record": {
+   "name": "HackBeanpot",
+   "type": "hackathon",
+   "topics": [
+    "hackathon",
+    "students",
+    "software"
+   ],
+   "city": "Boston",
+   "region": "Massachusetts",
+   "country": "United States",
+   "venue": "",
+   "cadence": "annual",
+   "month": "February",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-02-13",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "undergraduate students",
+   "url": "https://hackbeanpot.com/",
+   "description": "An annual weekend hackathon for undergraduates run by a Boston-area non-profit, with beginner-friendly workshops, mentors and guest speakers.",
+   "source": "https://2026-website-main.vercel.app/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "startupbos.org/sbw2026 (Startup Boston, the organiser): 'September 14 - 18 Boston, MA ... Join us for the 10th annual Startup Boston Week ... at Boston University on Monday-Wednesday (September 14-16), then head to Downtown Crossing on Thursday-Friday (September 17-18)'; schedule page: 'September 14–18, 2026', 'FREE TICKET', '100+ free sessions'. The 2026 edition has run and no 2027 dates are posted: recurring-tbd, last_date 2026-09-14. Not in events.json (only feed side events such as 'Founders' Dinner @ Startup Boston Week').",
+  "record": {
+   "name": "Startup Boston Week",
+   "type": "startup-week",
+   "topics": [
+    "startups",
+    "entrepreneurship",
+    "venture-capital"
+   ],
+   "city": "Boston",
+   "region": "Massachusetts",
+   "country": "United States",
+   "venue": "Boston University and Downtown Crossing",
+   "cadence": "annual",
+   "month": "September",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-09-14",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "founders, startup operators, investors, students",
+   "url": "https://www.startupbos.org/sbw2026",
+   "description": "New England's largest annual startup gathering: five days of free sessions, panels and networking held across Boston University and Downtown Crossing each September.",
+   "source": "https://www.startupbos.org/sbw2026"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "Boston Globe Media press release (bostonglobemedia.com, June 4 2026): 'Register for June 9 event at globe.com/techsummit ... the Tech Innovation Summit, held on Tuesday, June 9, which will bring together the region's top tech leaders', presenting sponsor Axon, paid tickets (50% code). The Globe's events page (events.bostonglobe.com/2026/tech-innovation, 403 to scripts) is quoted in search results as 'June 9, 2026, 9:30 am - 4:30 pm, The State Room, 60 State St'. A 2025 edition exists (events.bostonglobe.com/tech-innovation-summit-2025), so it is annual. No 2027 date: recurring-tbd, last_date 2026-06-09.",
+  "record": {
+   "name": "Boston Globe Tech Innovation Summit",
+   "type": "summit",
+   "topics": [
+    "ai",
+    "climate-tech",
+    "health-tech",
+    "fintech"
+   ],
+   "city": "Boston",
+   "region": "Massachusetts",
+   "country": "United States",
+   "venue": "The State Room, 60 State St",
+   "cadence": "annual",
+   "month": "June",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-06-09",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "paid",
+   "audience": "tech executives, founders, investors",
+   "url": "https://events.bostonglobe.com/2026/tech-innovation",
+   "description": "The Boston Globe's annual one-day summit of New England tech leaders, with panels on AI, climate tech, health tech and fintech and the release of the Tech Power Players 50 list.",
+   "source": "https://www.bostonglobemedia.com/tech-innovation-summit/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "techstars.com/accelerators/boston (the organiser's program page): 'Inside an Accelerator: Aug 24 2026 Applications Open, Nov 18 2026 Final Deadline, Mar 08 2027 Accelerator Starts, Jun 03 2027 Demo Day'. Venue not yet published; admission not stated (Techstars demo days are typically registration-only), so cost 'varies'.",
+  "record": {
+   "name": "Techstars Boston Demo Day",
+   "type": "demo-day",
+   "topics": [
+    "startups",
+    "ai",
+    "robotics",
+    "healthtech"
+   ],
+   "city": "Boston",
+   "region": "Massachusetts",
+   "country": "United States",
+   "venue": "",
+   "cadence": "annual",
+   "month": "June",
+   "next_date": "2027-06-03",
+   "next_date_end": "2027-06-03",
+   "last_date": "",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "investors, founders, mentors",
+   "url": "https://www.techstars.com/accelerators/boston",
+   "description": "Closing showcase of the Techstars Boston accelerator cohort, where its startups (AI/ML, robotics, healthtech, tech bio) pitch to investors and the local ecosystem.",
+   "source": "https://www.techstars.com/accelerators/boston"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "globalgamejam.org/jam-sites/2026/boston-game-dev-ggj (site page run by Boston Game Dev, bostongamedev.org): 'The NonProfit Center, 89 South Street, Boston, MA 02111 ... Jam Site Type In-Person Only ... Jam Year 2026', 'host Global Game Jam for the second time', 'limited to about 60 seats', 'suggested donation ... or attend for free'; dates January 30 - February 1, 2026. globalgamejam.org gives GGJ 2027 as 25-31 January 2027 but the Boston site is not posted yet: recurring-tbd, last_date 2026-01-30. Boston Game Dev's Meetup is already a registry source; the jam itself registers via Eventbrite/GGJ.",
+  "record": {
+   "name": "Boston Game Dev Global Game Jam",
+   "type": "game-jam",
+   "topics": [
+    "game-development",
+    "games"
+   ],
+   "city": "Boston",
+   "region": "Massachusetts",
+   "country": "United States",
+   "venue": "The NonProfit Center, 89 South Street",
+   "cadence": "annual",
+   "month": "January",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-01-30",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "game developers, students, artists, hobbyists",
+   "url": "https://globalgamejam.org/jam-sites/2026/boston-game-dev-ggj",
+   "description": "Boston Game Dev's in-person Global Game Jam site near South Station: a late-January weekend of team formation and game making on the worldwide theme, with industry mentors on hand.",
+   "source": "https://globalgamejam.org/jam-sites/2026/boston-game-dev-ggj"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "georgetownventures.org/demo-day (Georgetown Ventures, the student-run accelerator): 'Fall 2026 DEMO DAY December 8th · 6:00-9:00 PM EST Lohrfink Auditorium, Hariri Building'; past demo days listed for Spring 2026, Fall 2025, Spring 2025, Fall 2024, Spring 2024, Fall 2023 (twice a year). Fall 2025's was Dec 9, 2025 in Lohrfink Auditorium (Georgetown Ventures' own Eventbrite listing); Spring 2025's Apr 29, 2025 (eship.georgetown.edu).",
+  "record": {
+   "name": "Georgetown Ventures Demo Day",
+   "type": "demo-day",
+   "topics": [
+    "startups",
+    "entrepreneurship"
+   ],
+   "city": "Washington",
+   "region": "District of Columbia",
+   "country": "United States",
+   "venue": "Lohrfink Auditorium, Hariri Building, Georgetown University",
+   "cadence": "biannual",
+   "month": "April, December",
+   "next_date": "2026-12-08",
+   "next_date_end": "2026-12-08",
+   "last_date": "",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "founders, investors, students",
+   "url": "https://www.georgetownventures.org/demo-day",
+   "description": "Twice-yearly showcase closing Georgetown Ventures' 10-week student-run accelerator, where each cohort's founders pitch the progress they have made.",
+   "source": "https://www.georgetownventures.org/demo-day"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "globalgamejam.org/jam-sites/2026/osu-game-creation-club (run by OSU Game Creation Club, org.osu.edu/gamedev): '331 Sullivant Hall, 1813 N High St, Columbus, OH ... Jam Site Type Hybrid ... Event Start Time Friday, January 30, 2026 - 18:00, Event End Time Sunday, February 1, 2026 - 18:00 ... Entrance Fee None ... Who Can Participate Anyone ... Open for entire 48 hours'. The club also ran a 2025 site (jam-sites/2025/osu-game-creation-club). 2027 site not posted: recurring-tbd, last_date 2026-01-30.",
+  "record": {
+   "name": "Global Game Jam - OSU Game Creation Club",
+   "type": "game-jam",
+   "topics": [
+    "game-development",
+    "games"
+   ],
+   "city": "Columbus",
+   "region": "Ohio",
+   "country": "United States",
+   "venue": "331 Sullivant Hall, Ohio State University",
+   "cadence": "annual",
+   "month": "January",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-01-30",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "game developers, students, hobbyists (18+)",
+   "url": "https://globalgamejam.org/jam-sites/2026/osu-game-creation-club",
+   "description": "Ohio State's Game Creation Club hosts a Global Game Jam site each January: a 48-hour jam in Sullivant Hall open to anyone 18+, with a Discord option.",
+   "source": "https://globalgamejam.org/jam-sites/2026/osu-game-creation-club"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "techstars.com/accelerators/ohio-state-university-accelerator (the organiser's program page): 'Mar 02 2026 Applications Open, Jun 10 2026 Final Deadline, Sep 08 2026 Accelerator Starts, Dec 10 2026 Demo Day'. The previous Demo Day was Dec 4, 2024 at Vitria on the Square, 14 E. 15th Ave (Ohio State Center for Software Innovation page), open by registration. 2026 venue not yet published.",
+  "record": {
+   "name": "Techstars Columbus Demo Day",
+   "type": "demo-day",
+   "topics": [
+    "startups",
+    "ai",
+    "quantum",
+    "deep-tech"
+   ],
+   "city": "Columbus",
+   "region": "Ohio",
+   "country": "United States",
+   "venue": "",
+   "cadence": "annual",
+   "month": "December",
+   "next_date": "2026-12-10",
+   "next_date_end": "2026-12-10",
+   "last_date": "",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "investors, founders, mentors, students",
+   "url": "https://www.techstars.com/accelerators/ohio-state-university-accelerator",
+   "description": "Closing pitch event of the Techstars Columbus Powered by The Ohio State University accelerator, where the fall cohort presents to Columbus investors and mentors.",
+   "source": "https://www.techstars.com/accelerators/ohio-state-university-accelerator"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "globalgamejam.org/jam-sites/2026/cmii-georgia-state-university-2026 (hosted by GSU's Creative Media Industries Institute): 'Creative Media Industries Institute, Room 306, 25 Park Place NE, Atlanta ... Event Start Time Friday, January 30, 2026 - 15:00 ... Event End Time Sunday, February 1, 2026 - 21:00 ... Entrance Fee None ... Who Can Participate Anyone ... open to anyone 18+'. GSU also ran a 2025 site (jam-sites/2025/cmii-georgia-state-university). 2027 site not posted: recurring-tbd, last_date 2026-01-30.",
+  "record": {
+   "name": "Global Game Jam - Georgia State University CMII",
+   "type": "game-jam",
+   "topics": [
+    "game-development",
+    "games"
+   ],
+   "city": "Atlanta",
+   "region": "Georgia",
+   "country": "United States",
+   "venue": "Creative Media Industries Institute, 25 Park Place NE",
+   "cadence": "annual",
+   "month": "January",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-01-30",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "students, game developers, hobbyists (18+)",
+   "url": "https://globalgamejam.org/jam-sites/2026/cmii-georgia-state-university-2026",
+   "description": "Georgia State's Creative Media Industries Institute hosts a Global Game Jam site each January, with lab PCs, a keynote and a final showcase judged by Georgia Game Developers Association members.",
+   "source": "https://globalgamejam.org/jam-sites/2026/cmii-georgia-state-university-2026"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "research.gatech.edu/create-x-demo-day-2026 (Georgia Tech): 'CREATE-X Demo Day 2026, Thursday Sep 3 2026 5:00PM — 7:00PM, Event Location The Loop (665 Marietta St NW, Atlanta, GA 30313) ... meet the 13th batch of Georgia Tech Startups'; create-x.gatech.edu/2026-demo-day lists the presenting startups. Annual (13th batch). No 2027 date yet: recurring-tbd, last_date 2026-09-03.",
+  "record": {
+   "name": "CREATE-X Demo Day",
+   "type": "demo-day",
+   "topics": [
+    "startups",
+    "entrepreneurship",
+    "students"
+   ],
+   "city": "Atlanta",
+   "region": "Georgia",
+   "country": "United States",
+   "venue": "The Loop, 665 Marietta St NW",
+   "cadence": "annual",
+   "month": "August-September",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-09-03",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "investors, founders, students, Atlanta innovation community",
+   "url": "https://create-x.gatech.edu/demo-day",
+   "description": "Georgia Tech's annual showcase of startups launched through the CREATE-X Startup Launch accelerator, where 100+ founding teams pitch and demo at booths.",
+   "source": "https://research.gatech.edu/create-x-demo-day-2026"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "atlantatechtalks.com/about (the organiser): 'Atlanta Tech Talks is a monthly meetup ... When: Every 3rd Thursday of the month, Doors 6:00 PM ... Where: Manny's Tavern, 580 Woodward Ave SE, Atlanta, GA 30312 ... no membership fee and no ticket price'. Its events.json lists sessions on 2026-06-18, 07-16, 08-20 and 09-17 at Manny's Tavern; nothing later is posted yet, so next_date is left empty and last_date is the last listed session, 2026-09-17. Feeds missed it: it publishes only on its own static site (no Meetup, Luma or .ics).",
+  "record": {
+   "name": "Atlanta Tech Talks",
+   "type": "meetup-series",
+   "topics": [
+    "software",
+    "ai",
+    "security",
+    "hardware"
+   ],
+   "city": "Atlanta",
+   "region": "Georgia",
+   "country": "United States",
+   "venue": "Manny's Tavern, 580 Woodward Ave SE (Grant Park)",
+   "cadence": "monthly",
+   "month": "Varies",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-09-17",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "developers, engineers, data scientists, founders, students",
+   "url": "https://atlantatechtalks.com/",
+   "description": "A monthly evening of talks and hands-on workshops for Atlanta tech enthusiasts, held every third Thursday at a Grant Park tavern; running since 2011.",
+   "source": "https://atlantatechtalks.com/about"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "uncommonhacks.com (UChicago student organisers): 'Hack — 24-hour college hackathon, May 16 - 17, 2026, University of Chicago'; past editions linked back to 2019 (hacks2019 to hacks2025). No 2027 date: recurring-tbd, last_date 2026-05-16.",
+  "record": {
+   "name": "Uncommon Hacks",
+   "type": "hackathon",
+   "topics": [
+    "hackathon",
+    "students",
+    "software"
+   ],
+   "city": "Chicago",
+   "region": "Illinois",
+   "country": "United States",
+   "venue": "University of Chicago",
+   "cadence": "annual",
+   "month": "May",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-05-16",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "college students",
+   "url": "https://uncommonhacks.com/",
+   "description": "The University of Chicago's annual 24-hour student hackathon, held on campus each spring since 2019.",
+   "source": "https://uncommonhacks.com/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "SparkHacks' 2026 site (spark-web-2026.vercel.app): 'University of Illinois Chicago, February 6th - 7th, 2026 ... SparkHacks is a student-led, 24-hour hackathon at the University of Illinois Chicago, hosted in partnership with the Department of Computer Science. Now in its fourth year'; FAQ 'SparkHacks is open to anyone', 'completely free'. No 2027 date: recurring-tbd, last_date 2026-02-06.",
+  "record": {
+   "name": "SparkHacks",
+   "type": "hackathon",
+   "topics": [
+    "hackathon",
+    "students",
+    "software"
+   ],
+   "city": "Chicago",
+   "region": "Illinois",
+   "country": "United States",
+   "venue": "University of Illinois Chicago",
+   "cadence": "annual",
+   "month": "February",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-02-06",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "students, beginners welcome",
+   "url": "https://spark-web-2026.vercel.app/",
+   "description": "A student-led 24-hour hackathon at the University of Illinois Chicago, run with UIC's Department of Computer Science, with workshops, mentors and track prizes.",
+   "source": "https://spark-web-2026.vercel.app/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "Organiser's own Luma event (hosted by WiCyS@UIC, Logica @ UIC and Capture the Flame; no separate site): 'Capture the Flame 2026 ... UIC Academic and Residential Complex, Chicago ... Our annual intercollegiate cybersecurity competition in Chicago has returned!'; JSON-LD startDate 2026-04-11T07:30-05:00, endDate 2026-04-11T19:30; open to undergraduate and graduate students, teams of three. No 2027 edition posted: recurring-tbd, last_date 2026-04-11.",
+  "record": {
+   "name": "Capture the Flame",
+   "type": "ctf",
+   "topics": [
+    "cybersecurity",
+    "ctf",
+    "students"
+   ],
+   "city": "Chicago",
+   "region": "Illinois",
+   "country": "United States",
+   "venue": "UIC Academic and Residential Complex, 940 W Harrison St",
+   "cadence": "annual",
+   "month": "April",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-04-11",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "undergraduate and graduate students",
+   "url": "https://luma.com/gahbzqu6",
+   "description": "An annual one-day intercollegiate Capture the Flag competition at UIC for Chicagoland students, with beginner and advanced tracks in cryptography, forensics, reverse engineering and web security.",
+   "source": "https://luma.com/gahbzqu6"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "polsky.uchicago.edu/programs-events/uchicago-tech-ventures-demo-day/ (Polsky Center, the organiser): 'The UChicago Deep Tech Demo Day is a premier showcase of next-generation deep tech ventures that takes place during TechChicago Week', agenda 11:00 a.m. to 6:00 p.m.; Polsky's Luma event (luma.com/polsky-07-20-2026-event-1686): JSON-LD startDate 2026-07-20T11:00-05:00, endDate 18:00, Gleacher Conference Center, free. Recurs each TechChicago Week (the page slug keeps its former name, UChicago Tech Ventures Demo Day). No 2027 date: recurring-tbd, last_date 2026-07-20.",
+  "record": {
+   "name": "UChicago Deep Tech Demo Day",
+   "type": "demo-day",
+   "topics": [
+    "startups",
+    "deep-tech",
+    "quantum",
+    "ai",
+    "healthcare"
+   ],
+   "city": "Chicago",
+   "region": "Illinois",
+   "country": "United States",
+   "venue": "Gleacher Center",
+   "cadence": "annual",
+   "month": "July",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-07-20",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "investors, founders, researchers, corporate partners",
+   "url": "https://polsky.uchicago.edu/programs-events/uchicago-tech-ventures-demo-day/",
+   "description": "The Polsky Center's annual showcase of University of Chicago deep tech startups during TechChicago Week, with pitches in quantum and hardtech, healthcare, and data and AI, followed by a networking reception.",
+   "source": "https://polsky.uchicago.edu/programs-events/uchicago-tech-ventures-demo-day/"
+  }
+ }
+]

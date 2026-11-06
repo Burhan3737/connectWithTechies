@@ -1,0 +1,133 @@
+{
+  "pass": "nov05-t1",
+  "date": "2026-11-05",
+  "returning": [
+    {
+      "name": "hackathon",
+      "verdict": "added",
+      "reason": "Organiser Tech Startup Club (UW Tacoma) ran UHackathon 2026 on May 22-23, 2026 in Tacoma (uhackathon2026.devpost.com, found through the Devpost API, where the organiser publishes). Added as 'UHackathon', recurring-tbd, last_date 2026-05-22."
+    },
+    {
+      "name": "AI in Production 2025",
+      "verdict": "added",
+      "reason": "aiinproduction.com: the 2025 edition was July 18 in Asheville (The Collider); the site says 'Get Notified for 2027' and shows no 2026 edition. Added as recurring-tbd with last_date 2025-07-18."
+    },
+    {
+      "name": "Data Tech Florida",
+      "verdict": "rejected",
+      "reason": "sessionize.com/data-tech-florida: the 2025-07-18 item was a one-off 'MVP Connect Florida: M365 Edition' afternoon at Microsoft's Fort Lauderdale office (the row's url is its Microsoft Forms RSVP). The group's Meetup (meetup.com/data-tech-florida, based in Tampa) shows only online sessions since, the last on Dec 6 2025. No recurring in-person event."
+    },
+    {
+      "name": "SQL Saturday Baton Rouge 2025",
+      "verdict": "added",
+      "reason": "sqlsatbr.com: the 2026 edition was July 17-18, 2026 at the LSU Business Education Complex; 2027 is not published. Added as recurring-tbd with last_date 2026-07-17."
+    },
+    {
+      "name": "Outside LLMs 2025",
+      "verdict": "added",
+      "reason": "outsidellms.com and luma.com/outsidellms3: Outside LLMs III ran on 2026-08-02 at Entrepreneurs First, San Francisco. Annual since 2013 (as Outside Hacks). Added as recurring-tbd."
+    },
+    {
+      "name": "Agile2025",
+      "verdict": "added",
+      "reason": "agilealliance.org/event/agile2027/: Agile2027 is in August 2027 in San Diego. The page's calendar links give Aug 9-11, 2027; the visible text names only August. Agile2026 ran July 26-28, 2026 in National Harbor, MD. Added with next_date 2027-08-09."
+    },
+    {
+      "name": "Laracon US 2025",
+      "verdict": "added",
+      "reason": "laracon.us: 'Get notified when Laracon 2027 goes live'. The 2026 edition ran July 28-29 in Boston (laravel-news.com). Added as recurring-tbd in Boston; the host city changes each year."
+    },
+    {
+      "name": "Buffer-Free Video^AI",
+      "verdict": "added",
+      "reason": "buffconf.gomomento.com/sponsor: the next edition is July 28-29, 2027 at the Museum of Pop Culture, Seattle. Added as upcoming."
+    },
+    {
+      "name": "EUC World: Amplify",
+      "verdict": "added",
+      "reason": "worldofeuc.org/EUCWorld2026: EUC World Amplify 2026 was at the Baird Center, Milwaukee (Sep 29-Oct 1, 2026 per sponsor listings; the organiser page gives no dates). 2027 is not announced. Added as recurring-tbd in Milwaukee."
+    },
+    {
+      "name": "Skytalks at BSidesLV",
+      "verdict": "exists",
+      "reason": "skytalks.info: Skytalks 2026 runs inside BSides Las Vegas ('To attend Skytalks you MUST have a BSidesLV badge'), so it is not a separate event. Covered by the curated record 'BSides Las Vegas' (Las Vegas, last_date 2026-08-03)."
+    },
+    {
+      "name": "The Diana Initiative",
+      "verdict": "exists",
+      "reason": "dianainitiative.org/events: no standalone conference in 2026, only 'TDI @ DEF CON - August 7-9' (a community room at DEF CON 34) and a Neurodiverse Dinner at UNLV. Covered by the curated record 'DEF CON' (Las Vegas, last_date 2026-08-06). The separate Diana Initiative conference appears to have ended."
+    },
+    {
+      "name": "The 2nd Reinforcement Learning Conference (RLC)",
+      "verdict": "added",
+      "reason": "rl-conference.cc/2026/: RLC 2026 ran Aug 15-18 in Montreal. RLC 2027 is announced for Brown University (early August) and for Odense, Denmark. Added as recurring-tbd in Providence, RI."
+    },
+    {
+      "name": "Anadi Youth Got Talent",
+      "verdict": "rejected",
+      "reason": "anadi-youth-got-talent.devpost.com: a youth talent showcase run by a religious community (the prize is 'Guruji's Rajipo + Poloroid Picture with Guruji'). Not a tech event; a one-off Devpost page with no later edition."
+    },
+    {
+      "name": "AI Risk Summit 2025",
+      "verdict": "added",
+      "reason": "airisksummit.com: the next edition is August 17-18, 2027 at the Ritz-Carlton, Half Moon Bay; 2026 ran Aug 11-12. Added as upcoming."
+    },
+    {
+      "name": "Model-Based Systems Engineering in Practice 2025",
+      "verdict": "added",
+      "reason": "SEI's Sched (mbse2026.sched.com) and SEI's Eventbrite: the 2026 edition was July 22, 2026 in Arlington, VA. SEI's own events page is stale and still shows 2025. 2027 is not announced. Added as recurring-tbd."
+    },
+    {
+      "name": "Afore x AI Valley: Agent Foundry",
+      "verdict": "rejected",
+      "reason": "afore-agent-foundry.devpost.com: a one-off sponsor hackathon (Aug 23, 2025) that has not been repeated. The organiser, AI Valley, runs frequent in-person SF events, so its Luma calendar (luma.com/aivalley) went into sources-nov05-t1.json instead."
+    },
+    {
+      "name": "CAST 2025: Leading the Quality (R)Evolution",
+      "verdict": "added",
+      "reason": "AST's CAST 2026 page (associationforsoftwaretesting.org/conference/cast-2026/) and its Sessionize CFP: CAST 2026 ran Aug 3-5, 2026 in Cocoa Beach, FL. 2027 is not announced. Added as 'CAST', recurring-tbd (the host city changes each year)."
+    },
+    {
+      "name": "Prévenir l'itinérance chez les jeunes | Preventing youth homelessness",
+      "verdict": "rejected",
+      "reason": "uOttawa interdisciplinary social-innovation sprint on preventing youth homelessness, led by the Telfer School, the Faculty of Medicine and the Alliance to End Homelessness Ottawa (Devpost page and uottawa.ca news). Not a tech event, and the sprint topic changes each edition."
+    },
+    {
+      "name": "Industry",
+      "verdict": "exists",
+      "reason": "industryconference.com redirects to mindtheproduct.com/conferences/chicago/. Mind the Product says 'the conference formerly known as INDUSTRY' moved to Chicago (Oct 7, 2026). Covered by the curated record 'Mind the Product Chicago' (Chicago)."
+    },
+    {
+      "name": "KCD San Francisco Bay Area",
+      "verdict": "exists",
+      "reason": "community2.cncf.io/kcd-sf-bay-area: the 2026 edition was Sep 1, 2026 at the Computer History Museum, Mountain View. Covered by the curated record 'KCD SF Bay Area' (Mountain View, last_date 2026-09-01)."
+    },
+    {
+      "name": "AWS Community Day Bay Area",
+      "verdict": "exists",
+      "reason": "aws-aicd.com: AWS Community Day Bay Area 2026 AI Edition, JSON-LD 2026-10-13, at AWS Builder Loft, San Francisco. Already held as the meetup feed record 'AWS Community Day (Bay Area) - AI Edition' (San Francisco, 2026-10-13)."
+    },
+    {
+      "name": "CPP_Test_Hackathon",
+      "verdict": "rejected",
+      "reason": "cpp-test-hackathon.devpost.com is titled 'CPP_Test_Hackathon: TEST.': a test listing on Devpost, not a real event."
+    },
+    {
+      "name": "Forum Ventures x Anthropic Agentic AI Hackathon",
+      "verdict": "rejected",
+      "reason": "forum-x-anthropic-hackathon.devpost.com: a one-off sponsor hackathon (Sep 12, 2025, NYC). No later edition found."
+    },
+    {
+      "name": "Redwood Research Alignment Faking Hackathon",
+      "verdict": "rejected",
+      "reason": "redwood-af.devpost.com: a one-off research hackathon by Redwood Research (Sep 13-14, 2025, Berkeley). No later edition found."
+    },
+    {
+      "name": "XO Ruby ATLANTA",
+      "verdict": "rejected",
+      "reason": "xoruby.com: the 2026 series lists only New York City (Oct 10, 2026) and Montreal (Oct 17, 2026); the /event/atlanta/ page still shows only September 13, 2025. No Atlanta edition since."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}

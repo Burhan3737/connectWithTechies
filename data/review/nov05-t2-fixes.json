@@ -1,0 +1,268 @@
+[
+  {
+    "action": "add",
+    "reason": "nonstoptbc.com (Connect Worldwide, the organiser): 'Nonstop Technology & Business Conference 2026 Orlando, Florida September 15-17 2026 | HPE Education Day Sept. 14 ... Venue The Rosen Plaza 9700 International Dr.' The 2025 edition was in Houston, so the host city moves each year. No 2027 date or city on the site yet. Not in events.json under any name.",
+    "record": {
+      "name": "HPE Nonstop Technology and Business Conference",
+      "type": "conference",
+      "topics": [
+        "enterprise",
+        "mainframe",
+        "infrastructure",
+        "hpe"
+      ],
+      "city": "Orlando",
+      "region": "Florida",
+      "country": "United States",
+      "venue": "The Rosen Plaza",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-09-15",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "HPE NonStop customers, developers, vendors",
+      "url": "https://nonstoptbc.com",
+      "description": "The annual gathering of the HPE NonStop user community, run by Connect Worldwide: three days of technical sessions, HPE roadmap briefings and a vendor expo, with an HPE Education Day beforehand. The host city changes each year.",
+      "source": "https://nonstoptbc.com"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "squiggleconf.com (organiser): page title 'SquiggleConf | May 7th 2027: Your Boston devtools field trip'; JSON-LD startDate/endDate 2027-05-07; schedule 'Friday May 7th New England Aquarium', 'New England Aquarium Simons Theater 1 Central Wharf Boston, MA 02110'; launch party Thursday May 6th at Ned Devine's; 'Get 2027 tickets'. Most recent edition found is Sep 18-19, 2025 (squiggleconf2025 site); no 2026 edition found. Not in events.json.",
+    "record": {
+      "name": "SquiggleConf",
+      "type": "conference",
+      "topics": [
+        "developer-tools",
+        "web",
+        "ai",
+        "open-source"
+      ],
+      "city": "Boston",
+      "region": "Massachusetts",
+      "country": "United States",
+      "venue": "New England Aquarium Simons Theater",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-05-07",
+      "next_date_end": "2027-05-07",
+      "last_date": "2025-09-18",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "developers, devtools builders",
+      "url": "https://squiggleconf.com",
+      "description": "A single-track conference about developer tools (linters, editors, AI coding tools, debuggers) held in the New England Aquarium's IMAX theatre, with a launch party and a morning fun run.",
+      "source": "https://squiggleconf.com"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "sessionize.com/infosecnashville2026 (the ISSA Middle Tennessee Chapter's own call-for-speakers page, linking infosecnashville.com): '25th Annual - InfoSec Nashville 2026 ... event starts 17 Sep 2026 event ends 18 Sep 2026 location Music City Center Nashville, Tennessee'; Day 1 CTF and workshops, Day 2 full conference. infosecnashville.com refused connections (ECONNREFUSED) when tried. 2027 not announced. Not in events.json.",
+    "record": {
+      "name": "InfoSec Nashville",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec"
+      ],
+      "city": "Nashville",
+      "region": "Tennessee",
+      "country": "United States",
+      "venue": "Music City Center",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-09-17",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, CISOs, students",
+      "url": "https://www.infosecnashville.com",
+      "description": "The ISSA Middle Tennessee Chapter's annual security conference, running for 25 years: a day of hands-on workshops and a capture-the-flag, then a full conference day with keynotes, breakouts and an exhibit hall.",
+      "source": "https://sessionize.com/infosecnashville2026"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "events.itrevolution.com/2027-portland/ (IT Revolution, organiser): JSON-LD startDate 2027-05-05T09:00-07:00, endDate 2027-05-06T17:00-07:00; 'Portland, OR · May 5-6, 2027 ... Porsche Studio Portland 1432 NW Johnson Street'. The events page lists 'Las Vegas 2025 Enterprise Tech Leadership Summit' in its archive and has replaced it with the Enterprise AI Summit series (San Jose Apr 9-10 2026, Charlotte Oct 7-8 2026, Portland May 2027), hosted by Gene Kim. last_date is the Charlotte edition. Not in events.json.",
+    "record": {
+      "name": "Enterprise AI Summit",
+      "type": "summit",
+      "topics": [
+        "ai",
+        "devops",
+        "enterprise",
+        "leadership"
+      ],
+      "city": "Portland",
+      "region": "Oregon",
+      "country": "United States",
+      "venue": "Porsche Studio Portland",
+      "cadence": "biannual",
+      "month": "Varies",
+      "next_date": "2027-05-05",
+      "next_date_end": "2027-05-06",
+      "last_date": "2026-10-07",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "enterprise technology leaders, engineering executives",
+      "url": "https://events.itrevolution.com/",
+      "description": "IT Revolution's successor to the DevOps Enterprise / Enterprise Technology Leadership Summit, hosted by Gene Kim: experience reports from large organisations shipping AI and agent-written code in production. The host city changes with each edition.",
+      "source": "https://events.itrevolution.com/2027-portland/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "devm.io/newyork-week/ (devmio / Software & Support Media, organiser of API Conference): 'New York Week ... Machine Learning, DevOps, JavaScript and API experts come together ... September 28 to October 2, 2026'. apiconference.net/new-york/ meta description now reads 'API Conference New York 2027 ... be the first to know when tickets go on sale': announced, no dates. Not in events.json (DevOpsCon New York is held as a separate record).",
+    "record": {
+      "name": "API Conference New York",
+      "type": "conference",
+      "topics": [
+        "apis",
+        "software-architecture",
+        "ai"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "New York Marriott at the Brooklyn Bridge",
+      "cadence": "annual",
+      "month": "September-October",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-09-28",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "developers, API architects, product managers",
+      "url": "https://apiconference.net/new-york/",
+      "description": "A conference on API design, management, security and AI-era connectivity, run alongside DevOpsCon, MLcon and the JavaScript Conference as devmio's New York Week, with workshop days and an online option.",
+      "source": "https://apiconference.net/new-york/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "mlconference.ai/new-york/ (organiser) JSON-LD: name 'MLcon New York 2026', location 'New York Marriott at the Brooklyn Bridge', startDate 2026-09-28T09:00-04:00, ending Oct 2; devm.io/newyork-week confirms New York Week Sept 28 - Oct 2, 2026 'New York or online'. The page's next-edition banner points to San Diego (May 24-28, 2027), not New York, so there is no 2027 NY date. Not in events.json (only the unrelated 'MLconf').",
+    "record": {
+      "name": "MLcon New York",
+      "type": "conference",
+      "topics": [
+        "ai",
+        "machine-learning",
+        "genai",
+        "mlops"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "New York Marriott at the Brooklyn Bridge",
+      "cadence": "annual",
+      "month": "September-October",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-09-28",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "ML engineers, data scientists, developers",
+      "url": "https://mlconference.ai/new-york/",
+      "description": "A machine learning and generative AI engineering conference with workshop days, part of devmio's New York Week alongside DevOpsCon, the JavaScript Conference and API Conference; in person in Brooklyn with an online option.",
+      "source": "https://mlconference.ai/new-york/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "dyna.dyalog.com (Dyalog Ltd, organiser): 'DYNA26 has now concluded. Thank you to everyone who joined us in New York ... DYNA will be returning in 2027 and details will be announced in due course.' Past meetings listed: 'DYNA26 New York, 27 April 2026; DYNA Fall 2025 New York, 29-30 September 2025; DYNA Spring 2025 New York, 7 April 2025'. Free, in person. Not in events.json.",
+    "record": {
+      "name": "DYNA",
+      "type": "conference",
+      "topics": [
+        "apl",
+        "programming-languages"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-27",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "APL programmers, Dyalog users",
+      "url": "https://dyna.dyalog.com",
+      "description": "Dyalog North America's free in-person user meeting for the APL community, with talks from Team Dyalog and APL users from across the Americas.",
+      "source": "https://dyna.dyalog.com"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "gdg.community.dev/events/details/google-gdg-washington-dc-presents-devfest-dc-2026-build-edition/ (GDG Washington DC, organiser) JSON-LD: startDate 2026-08-28T08:30-04:00, endDate 2026-08-28T18:00-04:00, location 3351 Fairfax Drive, Arlington VA 22201 (George Mason University, Mason Square). devfestdc.org now shows 'DevFestDC 26 | Build Edition'. 2027 not announced. Not in events.json.",
+    "record": {
+      "name": "DevFest DC",
+      "type": "conference",
+      "topics": [
+        "google",
+        "ai",
+        "cloud",
+        "web",
+        "mobile"
+      ],
+      "city": "Arlington",
+      "region": "Virginia",
+      "country": "United States",
+      "venue": "George Mason University, Mason Square",
+      "cadence": "annual",
+      "month": "August-October",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-08-28",
+      "status": "recurring-tbd",
+      "attendance": "800",
+      "cost": "paid",
+      "audience": "developers, data scientists, students",
+      "url": "https://www.devfestdc.org/",
+      "description": "GDG Washington DC's annual DevFest: a day of talks on AI agents, cloud and Google developer tools plus a companion build-a-thon, held at George Mason's Arlington campus.",
+      "source": "https://gdg.community.dev/events/details/google-gdg-washington-dc-presents-devfest-dc-2026-build-edition/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "sreday.com/2026-san-francisco-q4/ (organiser): page title 'SREday - San Francisco, CA, USA, October 2, 2026'; '1 Day 29 Speakers 2 Tracks 140 Attendees'; countdown 2026-10-02T09:00-07:00. sreday.com lists San Francisco Q2 and Q4 editions in 2024, 2025 and 2026; no 2027 San Francisco page yet (the 2027 pages are London, Warsaw, Katowice). The feed carries SREday NYC and Dallas but not San Francisco.",
+    "record": {
+      "name": "SREday San Francisco",
+      "type": "conference",
+      "topics": [
+        "sre",
+        "devops",
+        "cloud",
+        "observability"
+      ],
+      "city": "San Francisco",
+      "region": "California",
+      "country": "United States",
+      "venue": "",
+      "cadence": "biannual",
+      "month": "Varies",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-10-02",
+      "status": "recurring-tbd",
+      "attendance": "140",
+      "cost": "paid",
+      "audience": "SREs, DevOps and platform engineers",
+      "url": "https://sreday.com/",
+      "description": "A one-day, two-track community conference on site reliability, DevOps, cloud and observability, held in San Francisco twice a year as part of the worldwide SREday series.",
+      "source": "https://sreday.com/2026-san-francisco-q4/"
+    }
+  }
+]

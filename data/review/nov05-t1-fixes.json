@@ -1,0 +1,355 @@
+[
+  {
+    "action": "add",
+    "reason": "aiinproduction.com (organiser): 2025 edition 'Asheville, NC | July 18 2025' at The Collider, 1 Haywood St; the site has a 'Get Notified for 2027' call and shows no 2026 edition. Next edition announced, no dates yet.",
+    "record": {
+      "name": "AI in Production",
+      "type": "conference",
+      "topics": [
+        "ai",
+        "product",
+        "software-development"
+      ],
+      "city": "Asheville",
+      "region": "North Carolina",
+      "country": "United States",
+      "venue": "The Collider",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2025-07-18",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "product managers, software developers and teams building AI products",
+      "url": "https://www.aiinproduction.com",
+      "description": "One-day, single-track conference in Asheville on practical strategies for building and deploying AI products, with lightning talks and birds-of-a-feather sessions.",
+      "source": "https://www.aiinproduction.com"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "sqlsatbr.com (organiser, Baton Rouge User Groups): 'July 17-18, 2026 SQL Saturday Day of Data Baton Rouge'. Friday precons at Louisiana Blue, Saturday at LSU Business Education Complex. 2027 date not yet published.",
+    "record": {
+      "name": "SQL Saturday Baton Rouge",
+      "type": "conference",
+      "topics": [
+        "data",
+        "sql",
+        "analytics",
+        "cloud"
+      ],
+      "city": "Baton Rouge",
+      "region": "Louisiana",
+      "country": "United States",
+      "venue": "LSU Business Education Complex",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-17",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "IT professionals, data professionals, students",
+      "url": "https://www.sqlsatbr.com",
+      "description": "Free community day of data and IT training (now branded Day of Data) from the Baton Rouge User Groups, with preconference workshops the Friday before.",
+      "source": "https://www.sqlsatbr.com"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "agilealliance.org/event/agile2027/ (organiser): 'Agile2027: An Agile Alliance x PMI Event - August 2027 | San Diego, California, USA', save-the-date. Visible text names only August 2027; the page's own add-to-calendar links (Google dates=20270809T000000/20270811T235959, Outlook startdt 2027-08-09 enddt 2027-08-11, ctz America/Los_Angeles) give Aug 9-11. The days come from that calendar metadata; the month and city from the visible text. Agile2026 ran July 26-28, 2026 in National Harbor, MD (agilealliance.org/event/agile2026/).",
+    "record": {
+      "name": "Agile2027",
+      "type": "conference",
+      "topics": [
+        "agile",
+        "project-management",
+        "software-development"
+      ],
+      "city": "San Diego",
+      "region": "California",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "July-August",
+      "next_date": "2027-08-09",
+      "next_date_end": "2027-08-11",
+      "last_date": "2026-07-26",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "agile practitioners, coaches, product and engineering leaders",
+      "url": "https://agilealliance.org/event/agile2027/",
+      "description": "Agile Alliance's annual conference, now run jointly with PMI; the host city changes each year.",
+      "source": "https://agilealliance.org/event/agile2027/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "laracon.us (organiser, Laravel): 'Get notified when Laracon 2027 goes live', no date or city yet. The 2026 edition was July 28-29, 2026 at SoWa Power Station, Boston (laravel-news.com/laracon-us-2026-announced, Laravel's own news site). The city changes yearly; Boston is the most recent host.",
+    "record": {
+      "name": "Laracon US",
+      "type": "conference",
+      "topics": [
+        "php",
+        "laravel",
+        "web-development"
+      ],
+      "city": "Boston",
+      "region": "Massachusetts",
+      "country": "United States",
+      "venue": "SoWa Power Station",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-28",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "Laravel and PHP developers",
+      "url": "https://laracon.us/",
+      "description": "The flagship US conference of the Laravel PHP framework, two days of talks and product announcements; it moves to a different US city each year.",
+      "source": "https://laravel-news.com/laracon-us-2026-announced"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "buffconf.gomomento.com/sponsor (organiser, Momento): '(Buffer-Free Video)^AI 2027 ... July 28-29, 2027 · Museum of Pop Culture, Seattle, WA'. The 2026 edition happened (replays posted) but its date is not on the site, so last_date is left blank.",
+    "record": {
+      "name": "Buffer-Free Video^AI",
+      "type": "conference",
+      "topics": [
+        "video",
+        "streaming",
+        "ai",
+        "infrastructure"
+      ],
+      "city": "Seattle",
+      "region": "Washington",
+      "country": "United States",
+      "venue": "Museum of Pop Culture",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "2027-07-28",
+      "next_date_end": "2027-07-29",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "150",
+      "cost": "paid",
+      "audience": "video, streaming and media engineers",
+      "url": "https://buffconf.gomomento.com/",
+      "description": "#BuffConf: a no-sales-pitch conference on production lessons in video streaming, media infrastructure and AI, hosted by Momento.",
+      "source": "https://buffconf.gomomento.com/sponsor"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "worldofeuc.org/EUCWorld2026 (organiser, World of EUC): 'EUC World Amplify 2026', three days, $400, venue Baird Center & Hilton Milwaukee. The organiser page gives no dates; Sep 29-Oct 1, 2026 comes from sponsor listings (10zig.com/events/euc-world-amplify-2026, storagereview.com). The host city changes yearly (2025 Minneapolis); 2027 is not announced.",
+    "record": {
+      "name": "EUC World Amplify",
+      "type": "conference",
+      "topics": [
+        "end-user-computing",
+        "virtualization",
+        "it"
+      ],
+      "city": "Milwaukee",
+      "region": "Wisconsin",
+      "country": "United States",
+      "venue": "Baird Center",
+      "cadence": "annual",
+      "month": "August-September",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-09-29",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "EUC architects and engineers, IT directors, virtualization administrators",
+      "url": "https://worldofeuc.org/",
+      "description": "Vendor-agnostic three-day conference of the World of EUC non-profit for end-user computing and virtualization professionals; the host city changes each year.",
+      "source": "https://worldofeuc.org/EUCWorld2026"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "rl-conference.cc/2026/ (organiser): RLC 2026 'August 15th to 18th, 2026, at Jean-Brilliant Building, University of Montreal'; announcement: 'RLC 2027 will have two locations: one in Brown University, USA and one in Odense, Denmark ... RLC at Brown University will be in early August'. No 2027 dates yet; the record is placed at the US (Brown) location.",
+    "record": {
+      "name": "The Reinforcement Learning Conference (RLC)",
+      "type": "conference",
+      "topics": [
+        "ai",
+        "machine-learning",
+        "reinforcement-learning",
+        "research"
+      ],
+      "city": "Providence",
+      "region": "Rhode Island",
+      "country": "United States",
+      "venue": "Brown University",
+      "cadence": "annual",
+      "month": "August",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-08-15",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "reinforcement learning researchers and students",
+      "url": "https://rl-conference.cc",
+      "description": "Academic conference for reinforcement learning research, publishing in the Reinforcement Learning Journal; its location changes each year, and 2027 is split between Brown University and Odense.",
+      "source": "https://rl-conference.cc/2026/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "airisksummit.com (organiser, SecurityWeek): header 'AI Risk Summit August 17-18, 2027 | Ritz-Carlton, Half Moon Bay'; the 2026 edition 'takes place as an in-person only conference at the Ritz-Carlton, Half Moon Bay, California August 11-12, 2026'.",
+    "record": {
+      "name": "AI Risk Summit",
+      "type": "summit",
+      "topics": [
+        "ai",
+        "security",
+        "governance",
+        "risk"
+      ],
+      "city": "Half Moon Bay",
+      "region": "California",
+      "country": "United States",
+      "venue": "Ritz-Carlton, Half Moon Bay",
+      "cadence": "annual",
+      "month": "August",
+      "next_date": "2027-08-17",
+      "next_date_end": "2027-08-18",
+      "last_date": "2026-08-11",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security, risk and technology leaders, AI researchers, policy makers",
+      "url": "https://www.airisksummit.com/",
+      "description": "SecurityWeek's in-person conference on securing AI in the enterprise, AI governance and adversarial AI, held alongside its CISO Forum Summer Summit.",
+      "source": "https://www.airisksummit.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "SEI (organiser): sei.cmu.edu/events/mbse-in-practice/ still shows the 2025 edition (August 21, 2025, Arlington, VA). The 2026 edition ran Wednesday July 22, 2026 in Arlington per SEI's own Sched (mbse2026.sched.com, 'Wednesday, July 22') and SEI's Eventbrite (JSON-LD startDate 2026-07-22, 'Software Engineering Institute, Arlington, VA'). 2027 not announced.",
+    "record": {
+      "name": "Model-Based Systems Engineering in Practice",
+      "type": "conference",
+      "topics": [
+        "systems-engineering",
+        "mbse",
+        "defense",
+        "software-engineering"
+      ],
+      "city": "Arlington",
+      "region": "Virginia",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "July-August",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-22",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "systems engineers, acquisition professionals, MBSE practitioners",
+      "url": "https://www.sei.cmu.edu/events/mbse-in-practice/",
+      "description": "One-day conference from Carnegie Mellon's Software Engineering Institute on practical adoption of model-based systems engineering.",
+      "source": "https://mbse2026.sched.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "outsidellms.com (organiser) 'OutsideLLMS 2026 Projects', AUGUST 02 2026; the organiser's Luma page luma.com/outsidellms3 'Outside LLMs III - Outside Lands & OpenAI Hackathon', 2026-08-02 1-9pm at Entrepreneurs First, 501 Folsom St, San Francisco. An annual buildathon tied to the Outside Lands festival since 2013 (as Outside Hacks); 2027 not announced.",
+    "record": {
+      "name": "Outside LLMs",
+      "type": "hackathon",
+      "topics": [
+        "ai",
+        "music",
+        "hackathon"
+      ],
+      "city": "San Francisco",
+      "region": "California",
+      "country": "United States",
+      "venue": "Entrepreneurs First",
+      "cadence": "annual",
+      "month": "July-August",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-08-02",
+      "status": "recurring-tbd",
+      "attendance": "200",
+      "cost": "free",
+      "audience": "developers, founders, music-tech builders",
+      "url": "https://outsidellms.com/",
+      "description": "The official AI buildathon of the Outside Lands music festival; winning apps are demoed and shipped to festival-goers.",
+      "source": "https://luma.com/outsidellms3"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Devpost (organiser Tech Startup Club at UW Tacoma publishes only there): uhackathon2026.devpost.com 'UHackathon 2026', May 22-23, 2026, Tacoma, WA; in-person 24-hour build, a live in-person presentation is required. The 2025 edition was uhackathon.devpost.com, May 17, 2025. 2027 not announced.",
+    "record": {
+      "name": "UHackathon",
+      "type": "hackathon",
+      "topics": [
+        "software-development",
+        "hackathon",
+        "students"
+      ],
+      "city": "Tacoma",
+      "region": "Washington",
+      "country": "United States",
+      "venue": "University of Washington Tacoma",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-22",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "students and developers",
+      "url": "https://uhackathon2026.devpost.com/",
+      "description": "24-hour student build sprint at UW Tacoma run by the Tech Startup Club, with production and experimental tracks and in-person demos.",
+      "source": "https://uhackathon2026.devpost.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "AST (organiser) CAST 2026 page associationforsoftwaretesting.org/conference/cast-2026/: 'August 3-5, 2026, Cocoa Beach, Florida'; the same dates on AST's own Sessionize CFP (sessionize.com/association-for-software-testing-cast: starts 3 Aug 2026, ends 5 Aug 2026, Cocoa Beach). No 2027 announcement; the host city changes yearly (2025 Salt Lake City).",
+    "record": {
+      "name": "CAST",
+      "type": "conference",
+      "topics": [
+        "software-testing",
+        "quality",
+        "software-development"
+      ],
+      "city": "Cocoa Beach",
+      "region": "Florida",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "August",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-08-03",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "software testers, QA and quality engineering practitioners",
+      "url": "https://associationforsoftwaretesting.org/",
+      "description": "The annual Conference of the Association for Software Testing, a practitioner-run conference on context-driven software testing; the host city changes each year.",
+      "source": "https://associationforsoftwaretesting.org/conference/cast-2026/"
+    }
+  }
+]

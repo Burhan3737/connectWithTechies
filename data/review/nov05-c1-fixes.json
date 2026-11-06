@@ -1,0 +1,290 @@
+[
+ {
+  "action": "add",
+  "reason": "ethdenver.com (organiser's only site, per its own scam warning): 'ETHDenver 10 · Coming soon. March 24 & 25, 2027 · Denver. The original blockchain festival. 10th edition.' The 2026 edition is confirmed from the organiser's own homepage as archived by the Wayback Machine on 2026-01-13: 'ETHDenver 2026 FEBRUARY 17-21, 2026', with a schedule at the National Western Center (Stockyards Event Center, Livestock Center, Legacy Building) and the BUIDLathon hackathon. The 2027 venue is not yet published, so venue is left blank. Not in events.json under any name (searched ethdenver, eth denver, buidl).",
+  "record": {
+   "name": "ETHDenver",
+   "type": "festival",
+   "topics": [
+    "web3",
+    "blockchain",
+    "ethereum",
+    "hackathon"
+   ],
+   "city": "Denver",
+   "region": "Colorado",
+   "country": "United States",
+   "venue": "",
+   "cadence": "annual",
+   "month": "February-March",
+   "next_date": "2027-03-24",
+   "next_date_end": "2027-03-25",
+   "last_date": "2026-02-17",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "developers, founders, investors, web3 community",
+   "url": "https://www.ethdenver.com/",
+   "description": "Community-run Ethereum festival in Denver, held since 2018, combining a conference with the BUIDLathon hackathon. The 2027 tenth edition is a two-day event.",
+   "source": "https://www.ethdenver.com/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "wildwesthackinfest.com (organiser's own site): 'WWHF @ Mile High 2027 Dates and Info. Pre-Conference Training February 16-17, 2027; Live & Virtual Conference February 17-19, 2027; Location Sheraton Denver Downtown Hotel 1550 Court Pl, Denver, CO 80202'. In person, with a virtual option. The previous edition, from the organiser's homepage archived 2026-01-13: 'Wild West Hackin' Fest @ Mile High 2026 Pre-con training February 10-11 2026, Conference February 11-13 2026'. The dates recorded are the conference days. Not in events.json.",
+  "record": {
+   "name": "Wild West Hackin' Fest @ Mile High",
+   "type": "conference",
+   "topics": [
+    "cybersecurity",
+    "infosec",
+    "ctf"
+   ],
+   "city": "Denver",
+   "region": "Colorado",
+   "country": "United States",
+   "venue": "Sheraton Denver Downtown Hotel",
+   "cadence": "annual",
+   "month": "February",
+   "next_date": "2027-02-17",
+   "next_date_end": "2027-02-19",
+   "last_date": "2026-02-11",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "paid",
+   "audience": "security practitioners, pentesters, defenders",
+   "url": "https://wildwesthackinfest.com/",
+   "description": "Black Hills Information Security's Denver edition of Wild West Hackin' Fest: technical talks, hands-on labs, villages and a CTF, preceded by two days of Antisyphon pre-conference training.",
+   "source": "https://wildwesthackinfest.com/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "coloradogamejam.com (organiser's own site): 'SEPTEMBER 26-28 ... CU GAME DEV'S 5th IN PERSON JAM!', with venues Roser ATLAS Building and ENVD Building and kickoff Saturday Sep 26 at 10am. The organiser's itch.io jam page (itch.io/jam/colorado-game-jam, 'Colorado Game Jam 2026.1') says 'This is an in person game jam ... The primary jam will take place at the CU Boulder campus', and at least one team member must attend in person. It ran 2026-09-26 to 2026-09-29 UTC. No next edition is posted, so recurring-tbd. It is held in Boulder, not Denver; it was found in the Denver search as the Front Range's in-person jam. Cadence is set to rolling: the '2026.1' numbering and '5th in-person jam' suggest more than one a year, but the site states no schedule. Not in events.json.",
+  "record": {
+   "name": "Colorado Game Jam",
+   "type": "game-jam",
+   "topics": [
+    "game-development",
+    "games"
+   ],
+   "city": "Boulder",
+   "region": "Colorado",
+   "country": "United States",
+   "venue": "Roser ATLAS Building, University of Colorado Boulder",
+   "cadence": "rolling",
+   "month": "Varies",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-09-26",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "game developers, students, artists, beginners",
+   "url": "https://coloradogamejam.com/",
+   "description": "In-person weekend game jam run by CU Game Dev at CU Boulder. The theme is revealed at kickoff, teams get three days to build, mentors are on hand, and there are cash prizes. Generative AI is banned.",
+   "source": "https://coloradogamejam.com/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "duarcade.cs.du.edu (the University of Denver Game Developers' Society's own site): 'hosting the 7th annual DU Arcade on Saturday, May 16th, 2026 ... Colorado's largest student-organized gaming expo', 12 PM to 5 PM; 'Is there an entry fee? Nope!'. The location page names the Ritchie School of Engineering and Computer Science, 2155 East Wesley Avenue. That paragraph still says 'DU Arcade 2025', so the venue is carried over from the prior year's text. No 2027 date is posted. Not in events.json.",
+  "record": {
+   "name": "DU Arcade",
+   "type": "expo",
+   "topics": [
+    "game-development",
+    "games"
+   ],
+   "city": "Denver",
+   "region": "Colorado",
+   "country": "United States",
+   "venue": "Ritchie School of Engineering and Computer Science, University of Denver",
+   "cadence": "annual",
+   "month": "May",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-05-16",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "game developers, students, players",
+   "url": "https://duarcade.cs.du.edu/",
+   "description": "Annual one-day student-organised game expo at the University of Denver, where student and local developers show playable games, with talks and panels on the games industry.",
+   "source": "https://duarcade.cs.du.edu/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "tampabaytechweek.com (organiser's own site): 'April 12–16, 2027. Define & Defy. Year two of the region's decentralized technology week. Five days, five neighborhoods' (Ybor City, Downtown, St. Pete). The inaugural edition ran April 8–10, 2026 (the date is in the same page's script data, and St. Pete Catalyst ran 'Tampa Bay Tech Week announces inaugural event April 8-10, 2026'). The FAQ says many events are free or low cost and signature events are ticketed. Not in events.json.",
+  "record": {
+   "name": "Tampa Bay Tech Week",
+   "type": "tech-week",
+   "topics": [
+    "startups",
+    "ai",
+    "cybersecurity",
+    "innovation"
+   ],
+   "city": "Tampa",
+   "region": "Florida",
+   "country": "United States",
+   "venue": "",
+   "cadence": "annual",
+   "month": "April",
+   "next_date": "2027-04-12",
+   "next_date_end": "2027-04-16",
+   "last_date": "2026-04-08",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "freemium",
+   "audience": "founders, tech professionals, executives, investors, students",
+   "url": "https://tampabaytechweek.com/",
+   "description": "Decentralised, region-wide technology week held across neighbourhoods in Tampa and St. Petersburg: keynotes, panels, workshops, startup showcases and community-hosted side events.",
+   "source": "https://tampabaytechweek.com/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "ocls.org blog (Orange County Library System, the organiser), 2026-02-16: 'Orlando Public Library's Melrose Center is eagerly preparing for the 2026 Orlando Game Jam and Gaming Expo, coming February 19-22'. The post is titled 'Returns' (it also ran in 2025). The Melrose Center events page 'Game Jam Winners' reports 36 participants in 11 teams and a 2026 theme of 'Collections', with the games premiered at the Orlando Gaming EXPO. No 2027 date is posted. The old ocls.org/orlando-game-jam landing page now returns 404, so the url is the 2026 announcement. Cost: this is a public-library programme and the pages state no fee. Not in events.json.",
+  "record": {
+   "name": "Orlando Game Jam",
+   "type": "game-jam",
+   "topics": [
+    "game-development",
+    "games"
+   ],
+   "city": "Orlando",
+   "region": "Florida",
+   "country": "United States",
+   "venue": "Melrose Center, Orlando Public Library",
+   "cadence": "annual",
+   "month": "February",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-02-19",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "game developers, designers, students, hobbyists",
+   "url": "https://ocls.org/ocls-blog/orlando-game-jam-and-gaming-expo-returns-february-19-22/",
+   "description": "Orange County Library System's annual weekend game jam at the Melrose Center. It ends in a public Orlando Gaming Expo, where judges' scores and attendee votes decide the cash-prize winners.",
+   "source": "https://ocls.org/ocls-blog/orlando-game-jam-and-gaming-expo-returns-february-19-22/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "indienomicon.org/indie-galactic-space-jam (organiser's own page): 'RETURNING January 23-25th 2026 ORLANDO, FL'. The same page also shows an earlier edition, 'JUNE 24-26th 2022'. The organiser's Luma event luma.com/umksxp2x: 'Indie Galactic Space Jam Jan 23rd to Jan 25th, 2026' at 6876 Marwick Ln, Orlando, FL 32827, described as people coming 'together in a physical environment', with a JSON-LD offer price of 0. No 2027 edition is posted. Not in events.json.",
+  "record": {
+   "name": "Indie Galactic Space Jam",
+   "type": "game-jam",
+   "topics": [
+    "game-development",
+    "space",
+    "xr"
+   ],
+   "city": "Orlando",
+   "region": "Florida",
+   "country": "United States",
+   "venue": "6876 Marwick Ln, Orlando",
+   "cadence": "annual",
+   "month": "January",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-01-23",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "game developers, artists, engineers, space-industry professionals",
+   "url": "https://www.indienomicon.org/indie-galactic-space-jam",
+   "description": "Indienomicon's 48-hour in-person game jam built around challenges from the space industry. Teams form on site and prototype games and simulations.",
+   "source": "https://www.indienomicon.org/indie-galactic-space-jam"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "globalgamejam.org/jam-sites/2026/global-game-jawn (the site page posted by Philly Game Mechanics, which links to their own site): the in-person jam ran '7pm on Friday, January 30th to 5pm on Sunday, February 1st' at Indy Hall Clubhouse, 709 N 2nd St, Philadelphia. Jam Site Type is Hybrid, and the page says they are 'organizing Philly's Global Game Jawn once more in 2026'. The Meetup event (meetup.com/phillygamemechanics/events/312792798) has JSON-LD 2026-01-30T19:00 to 2026-02-01T17:00. GGJ 2027 is 25-31 January 2027, but the Philly site is not yet posted, so no date is set. Cost is not stated; this is a GGJ community site. Not in events.json.",
+  "record": {
+   "name": "Global Game Jawn",
+   "type": "game-jam",
+   "topics": [
+    "game-development",
+    "games"
+   ],
+   "city": "Philadelphia",
+   "region": "Pennsylvania",
+   "country": "United States",
+   "venue": "Indy Hall Clubhouse, 709 N 2nd St",
+   "cadence": "annual",
+   "month": "January",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-01-30",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "game developers, artists, students, first-time jammers",
+   "url": "https://globalgamejam.org/jam-sites/2026/global-game-jawn",
+   "description": "Philly Game Mechanics' Philadelphia site for the Global Game Jam: an in-person weekend jam at Indy Hall, with a week-long virtual track alongside.",
+   "source": "https://globalgamejam.org/jam-sites/2026/global-game-jawn"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "pennovation.upenn.edu/news/2026-pennovation-accelerator (Penn's Pennovation Works, the organiser): 'The Pennovation Accelerator concludes with Pitch Day, where companies pitch to mentors, investors, and peers ... Program: September 16th through October 15th; Pitch Day: October 21st' (2026). The prior edition is on the pennovation.upenn.edu calendar: 'Accelerator Pitch Day 2025, Wednesday, July 23, 2025, 1-4:30pm, Pennovation Center, 3401 Grays Ferry Avenue. Register to attend!'. Annual, in varying months; no 2027 date. The registration notice shows no fee. Not in events.json.",
+  "record": {
+   "name": "Pennovation Accelerator Pitch Day",
+   "type": "demo-day",
+   "topics": [
+    "startups",
+    "healthtech",
+    "ai",
+    "robotics"
+   ],
+   "city": "Philadelphia",
+   "region": "Pennsylvania",
+   "country": "United States",
+   "venue": "Pennovation Center, 3401 Grays Ferry Ave",
+   "cadence": "annual",
+   "month": "Varies",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-10-21",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "founders, investors, mentors",
+   "url": "https://pennovation.upenn.edu/news/2026-pennovation-accelerator",
+   "description": "The pitch afternoon that closes Penn's six-week Pennovation Accelerator. The cohort of pre-seed and seed Philadelphia startups pitch to investors, mentors and the public.",
+   "source": "https://pennovation.upenn.edu/news/2026-pennovation-accelerator"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "itch.io/jam/texas-game-jam-2026 (the jam page of EGaDS!, UT Austin's Electronic Game Developers Society): 'EGaDS! is proud to host its annual game jam again this year! ... open for EGaDS! members, UT students, developers in Austin ... hybrid event, so you can join it from anywhere or join us on campus'; 'Attend kickoff on Friday September 25th'. It ran 2026-09-26 01:00 to 2026-09-28 02:00 UTC (Sep 25-27 Central). The 2025 edition is at itch.io/jam/texas-game-jam-2025. Annual; no 2027 page yet. Not in events.json.",
+  "record": {
+   "name": "Texas Game Jam",
+   "type": "game-jam",
+   "topics": [
+    "game-development",
+    "games"
+   ],
+   "city": "Austin",
+   "region": "Texas",
+   "country": "United States",
+   "venue": "University of Texas at Austin",
+   "cadence": "annual",
+   "month": "September",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-09-25",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "students, game developers, hobbyists",
+   "url": "https://itch.io/jam/texas-game-jam-2026",
+   "description": "EGaDS!' annual weekend game jam at UT Austin, with an on-campus kickoff and industry mentors. It is open to anyone in Austin and can also be joined online.",
+   "source": "https://itch.io/jam/texas-game-jam-2026"
+  }
+ }
+]

@@ -1,0 +1,118 @@
+{
+ "pass": "nov05-c2",
+ "date": "2026-11-05",
+ "returning": [],
+ "reported": [],
+ "cities": [
+  {
+   "city": "Boston",
+   "region": "Massachusetts",
+   "queries": [
+    "Boston hackathon 2027 Northeastern OR BU in person",
+    "HackBeanpot 2026 dates Northeastern hackathon February",
+    "\"HackBeanpot\" 2026 Boston venue",
+    "Boston startup week 2026",
+    "Boston tech summit 2027 annual",
+    "\"Tech Innovation Summit\" Boston Globe 2026 June 9 State Room",
+    "Boston demo day 2026 startups accelerator MassChallenge OR Techstars",
+    "\"Techstars Boston\" \"Demo Day\" 2025 December register venue",
+    "Boston CTF capture the flag in person 2026",
+    "Boston game jam 2026 OR 2027 in person",
+    "Global Game Jam 2026 Boston site Boston Game Dev NonProfit Center",
+    "globalgamejam.org/jam-sites/2026?country=US&city=Boston",
+    "mlh.io/seasons/2027/events (Boston, MA)"
+   ],
+   "found": [
+    { "name": "BostonHacks", "url": "https://bostonhacks.org/", "verdict": "added", "reason": "hackathon. bostonhacks.org: in-person 24-hour hackathon Nov 21-22, 2026 at BU's George Sherman Union, free; MLH 2027 season agrees. Held until now only as an MLH feed row; added as a curated annual record." },
+    { "name": "HackBeanpot", "url": "https://hackbeanpot.com/", "verdict": "added", "reason": "hackathon. Organiser's 2026 site FAQ: Friday Feb 13 to Sunday Feb 15 (2026), annual undergraduate hackathon by a Boston non-profit. No 2027 dates: recurring-tbd, last_date 2026-02-13; venue only on an aggregator, left blank." },
+    { "name": "Startup Boston Week", "url": "https://www.startupbos.org/sbw2026", "verdict": "added", "reason": "startup-week. startupbos.org: 10th annual, September 14-18, 2026, Boston University (Mon-Wed) and Downtown Crossing (Thu-Fri), free. Past for 2026, no 2027 dates: recurring-tbd, last_date 2026-09-14." },
+    { "name": "Boston Globe Tech Innovation Summit", "url": "https://events.bostonglobe.com/2026/tech-innovation", "verdict": "added", "reason": "summit. Boston Globe Media press release: Tech Innovation Summit Tuesday June 9, 2026, paid; State Room, 60 State St per the Globe event page (403 to scripts, quoted in search). 2025 edition also held. recurring-tbd, last_date 2026-06-09." },
+    { "name": "Techstars Boston Demo Day", "url": "https://www.techstars.com/accelerators/boston", "verdict": "added", "reason": "demo-day. techstars.com program page: Accelerator starts Mar 08 2027, Demo Day Jun 03 2027. Venue not published." },
+    { "name": "Boston Game Dev Global Game Jam", "url": "https://globalgamejam.org/jam-sites/2026/boston-game-dev-ggj", "verdict": "added", "reason": "game-jam. GGJ site page: in-person only, The NonProfit Center, 89 South Street, Jan 30-Feb 1 2026, second year hosted by Boston Game Dev, free option. 2027 site not posted: recurring-tbd, last_date 2026-01-30." },
+    { "name": "IGDA Northeastern University GGJ 2026", "url": "https://globalgamejam.org/jam-sites/2026/igda-northeastern-university", "verdict": "rejected", "reason": "game-jam. A second Boston GGJ site (Egan Hall, Jan 30-Feb 1 2026, hybrid). Not added: one Boston GGJ site record is enough, and the Boston Game Dev site is in-person only and open to all." },
+    { "name": "Husky Jam / SMASH x Endless Game Jam", "url": "https://itch.io/jam/husky-jam-2026", "verdict": "rejected", "reason": "game-jam. Husky Jam is an itch.io club jam with no confirmed in-person venue; SMASH x Endless (Jan 10 2026) is a high-school-only event. Neither fits." },
+    { "name": "MassChallenge demo day", "url": "https://masschallenge.org/", "verdict": "unresolved", "reason": "demo-day. Search found no 2026/2027 MassChallenge Boston showcase date and masschallenge.org did not respond to curl." },
+    { "name": "Boston CTF", "url": "", "verdict": "unresolved", "reason": "ctf. No recurring, dated in-person CTF in Boston found: a CSNP CMD+CTRL listing has date TBD, a Recorded Future 'Boston CTF' page has no year and is a sales event, and an MIT LL/BU mini CTF is undated." }
+   ]
+  },
+  {
+   "city": "Washington",
+   "region": "District of Columbia",
+   "queries": [
+    "Washington DC startup demo day 2026 accelerator pitch",
+    "\"Georgetown Ventures\" Demo Day 2026",
+    "Washington DC capture the flag competition in person 2026 cybersecurity",
+    "\"Washington, DC\" in-person CTF 2026 OR 2027 hackers capture the flag event venue",
+    "Washington DC game jam 2026 in person",
+    "globalgamejam.org/jam-sites/2026 and 2025 (city=Washington, Washington DC, DC)"
+   ],
+   "found": [
+    { "name": "Georgetown Ventures Demo Day", "url": "https://www.georgetownventures.org/demo-day", "verdict": "added", "reason": "demo-day. georgetownventures.org: Fall 2026 Demo Day December 8th, 6-9 PM, Lohrfink Auditorium, Hariri Building; runs every spring and fall." },
+    { "name": "GitLab Foundation AI Demo Day", "url": "https://www.gitlabfoundation.org/aidemoday", "verdict": "rejected", "reason": "demo-day. Sept 3, 2026 at the Gallup Building, a showcase for a single grant fund's cohort; no sign that it recurs." },
+    { "name": "District Jam (IGDA DC)", "url": "https://itch.io/jam/district-jam-7", "verdict": "rejected", "reason": "game-jam. District Jam 7 (June 12-14, 2026) and IGDA DC's Global Game Jam site are hosted at George Mason University in Fairfax, Virginia, not Washington; IGDA DC's Meetup (meetup.com/igda-dc) is already a registry source. No GGJ site in Washington itself in 2025 or 2026." },
+    { "name": "Washington CTF", "url": "", "verdict": "unresolved", "reason": "ctf. Nothing in-person and recurring in DC found: Cyber 9/12 is a policy competition, not a CTF; the President's Cup is for federal employees; the WiCyS Mid-Atlantic CTF has no stated location; the NICE CCW CTF was virtual. DistrictCon (already held) includes a CTF inside the conference." }
+   ]
+  },
+  {
+   "city": "Columbus",
+   "region": "Ohio",
+   "queries": [
+    "Columbus Ohio demo day 2026 startups Rev1 OR \"Ohio State\" OR Techstars showcase",
+    "Columbus Ohio CTF capture the flag in person 2026",
+    "Columbus Ohio monthly tech meetup in person developers 2026",
+    "globalgamejam.org/jam-sites/2026?country=US&city=Columbus (and 2025)"
+   ],
+   "found": [
+    { "name": "Global Game Jam - OSU Game Creation Club", "url": "https://globalgamejam.org/jam-sites/2026/osu-game-creation-club", "verdict": "added", "reason": "game-jam. 331 Sullivant Hall, Jan 30-Feb 1 2026, open to anyone, no fee; also hosted in 2025. recurring-tbd, last_date 2026-01-30." },
+    { "name": "Columbus College of Art & Design & The Central Ohio Game Group GGJ 2026", "url": "https://globalgamejam.org/jam-sites/2026/columbus-college-art-design-central-ohio-game-group-ggj-2026", "verdict": "rejected", "reason": "game-jam. A second Columbus GGJ site (Design Studio on Broad), limited to CCAD students and COGG members; the OSU site, open to anyone, was added instead." },
+    { "name": "Techstars Columbus Demo Day", "url": "https://www.techstars.com/accelerators/ohio-state-university-accelerator", "verdict": "added", "reason": "demo-day. techstars.com program page: Demo Day Dec 10 2026; the 2024 Demo Day was Dec 4 at Vitria on the Square (OSU CSI page). Venue for 2026 not yet published." },
+    { "name": "BuckeyeCTF", "url": "https://icdt.osu.edu/competitions", "verdict": "rejected", "reason": "ctf. OSU ICDT: BuckeyeCTF 2026 Nov 6-8, but it is an online jeopardy CTF, not an in-person event." },
+    { "name": "Columbus Code & Coffee / TechLife Columbus / Central Ohio GameDev Group", "url": "https://www.meetup.com/the-cogg/", "verdict": "exists", "reason": "meetup-series. All three are Meetup groups already in the feed registry (columbus-code-and-coffee, techlifecolumbus, the-cogg), so their sessions reach us through the feed. No recurring Columbus series off Meetup/Luma was found." }
+   ]
+  },
+  {
+   "city": "Atlanta",
+   "region": "Georgia",
+   "queries": [
+    "Atlanta startup week 2026",
+    "Atlanta demo day 2026 ATDC OR Techstars OR Flashpoint startups",
+    "Atlanta monthly developer meetup in person 2026 recurring tech",
+    "Atlanta in-person capture the flag CTF 2026 Georgia Tech OR GSU OR Kennesaw",
+    "Atlanta game jam 2026 OR 2027 in person",
+    "\"ATL Jam\" 2026 Atlanta game developers jam",
+    "globalgamejam.org/jam-sites/2026?country=US&city=Atlanta (and 2025)"
+   ],
+   "found": [
+    { "name": "CREATE-X Demo Day", "url": "https://create-x.gatech.edu/demo-day", "verdict": "added", "reason": "demo-day. Georgia Tech: Thursday Sep 3 2026, 5-7 PM, The Loop, 665 Marietta St NW, 13th batch. recurring-tbd, last_date 2026-09-03." },
+    { "name": "Atlanta Tech Talks", "url": "https://atlantatechtalks.com/", "verdict": "added", "reason": "meetup-series. Monthly, every 3rd Thursday at Manny's Tavern, Grant Park, free; last listed session 2026-09-17. Publishes only on its own site, so no feed reads it." },
+    { "name": "Global Game Jam - Georgia State University CMII", "url": "https://globalgamejam.org/jam-sites/2026/cmii-georgia-state-university-2026", "verdict": "added", "reason": "game-jam. 25 Park Place NE, Jan 30-Feb 1 2026, open to anyone 18+, no fee; also hosted in 2025. recurring-tbd, last_date 2026-01-30." },
+    { "name": "GGJ26 - SCAD ATLANTA 2026", "url": "https://globalgamejam.org/jam-sites/2026/scad-atlanta-2026", "verdict": "rejected", "reason": "game-jam. Needs a SCAD ID to enter the building and asks every team to include a SCAD student, so it is not open to the public." },
+    { "name": "ATL Jam (Atlanta Game Devs)", "url": "https://itch.io/jam/atljam25", "verdict": "rejected", "reason": "game-jam. A yearly itch.io jam (Oct 3-5 2025; Dec 7-9 2024) that allows remote participation, with only an in-person meetup afterwards. No 2026 edition found, and the organiser's itch page returned 429." },
+    { "name": "Atlanta Tech Week", "url": "https://www.atl.tech/", "verdict": "exists", "reason": "startup-week. Atlanta's startup week is Atlanta Tech Week (Aug 9-14 2026), already curated as 'Atlanta Tech Week' (tech-week). No separate Atlanta Startup Week found." },
+    { "name": "DC404 / Freeside Atlanta monthly CTF", "url": "https://www.meetup.com/ethical-hackers/", "verdict": "exists", "reason": "ctf. The recurring in-person Atlanta CTFs are monthly sessions of the Ethical Hackers / DC404 Meetup group, already a registry source. GT HackerHouse x Ramp CTF is invite-only and undated." },
+    { "name": "GDG Atlanta / Atlanta .NET User Group / REFACTR.TECH", "url": "https://www.meetup.com/google-developer-groups-gdg-atlanta/", "verdict": "exists", "reason": "meetup-series. Already Meetup registry sources, so they reach us through the feed." }
+   ]
+  },
+  {
+   "city": "Chicago",
+   "region": "Illinois",
+   "queries": [
+    "Chicago hackathon 2027 UChicago OR Loyola OR DePaul OR UIC in person",
+    "Chicago startup week 2026",
+    "Chicago demo day 2026 accelerator startups Polsky OR mHUB OR Techstars OR 1871",
+    "Chicago in-person CTF competition 2026 capture the flag students",
+    "Chicago game jam 2026 in person Columbia College OR DePaul OR \"Indie City\"",
+    "globalgamejam.org/jam-sites/2026?country=US&city=Chicago (and 2025)"
+   ],
+   "found": [
+    { "name": "Uncommon Hacks", "url": "https://uncommonhacks.com/", "verdict": "added", "reason": "hackathon. uncommonhacks.com: 24-hour college hackathon May 16-17 2026, University of Chicago; editions back to 2019. recurring-tbd, last_date 2026-05-16." },
+    { "name": "SparkHacks", "url": "https://spark-web-2026.vercel.app/", "verdict": "added", "reason": "hackathon. UIC, February 6-7 2026, fourth year, open to anyone, free. recurring-tbd, last_date 2026-02-06." },
+    { "name": "Capture the Flame", "url": "https://luma.com/gahbzqu6", "verdict": "added", "reason": "ctf. Annual intercollegiate CTF by WiCyS@UIC and Logica @ UIC, Apr 11 2026, UIC Academic and Residential Complex. Hosted on a personal Luma calendar no registry entry follows. recurring-tbd, last_date 2026-04-11." },
+    { "name": "UChicago Deep Tech Demo Day", "url": "https://polsky.uchicago.edu/programs-events/uchicago-tech-ventures-demo-day/", "verdict": "added", "reason": "demo-day. Polsky Center: annual during TechChicago Week; Jul 20 2026 at Gleacher Center, free. recurring-tbd. The Polsky Luma calendar went into sources-nov05-c2.json." },
+    { "name": "TechChicago Week", "url": "https://gotechchicago.com/week/", "verdict": "exists", "reason": "startup-week. Chicago's startup week is TechChicago Week, already curated (tech-week, next 2027-07-19). The older student-run Chicago Startup Week shows no recent edition." },
+    { "name": "Junction Jam", "url": "https://www.igdachicago.com/events/junction-jam-2026", "verdict": "rejected", "reason": "game-jam. First edition Aug 15-16 2026 at DePaul's Loop campus. Organisers describe it as a pilot that Global Game Jam hopes to make annual; no second edition is announced, so it is not yet a recurring event." },
+    { "name": "IVGDA Chicago Meetup GGJ", "url": "https://globalgamejam.org/jam-sites/2026/ivgda-chicago-meetup", "verdict": "rejected", "reason": "game-jam. Mostly online: kickoff and final presentations run on Discord, and the only in-person part is a Saturday 10am-4pm study room at Harold Washington Library (2025 and 2026 alike)." }
+   ]
+  }
+ ]
+}

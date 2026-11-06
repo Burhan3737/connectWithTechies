@@ -1435,10 +1435,10 @@
     "venue": "LaSalle College Vancouver, 2808 Bradfield Court",
     "cadence": "monthly",
     "month": "Varies",
-    "next_date": "2026-11-03",
-    "next_date_end": "2026-11-03",
-    "last_date": "",
-    "status": "recurring-tbd",
+    "next_date": "2026-12-01",
+    "next_date_end": "2026-12-01",
+    "last_date": "2026-11-03",
+    "status": "upcoming",
     "attendance": "",
     "cost": "free",
     "audience": "indie game developers, hobbyists, students",
@@ -2326,9 +2326,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "professionals, business owners, technologists",
-    "url": "https://members.viatec.ca/event-calendar/Details/2026-prompt-victoria-ai-conference-1845004",
+    "url": "https://promptvictoria.ca/",
     "description": "Vancouver Island's largest AI conference, a full day of practical learning and honest conversation for professionals and businesses navigating AI adoption.",
-    "source": "https://members.viatec.ca/tech-events"
+    "source": "https://promptvictoria.ca/"
   },
   {
     "name": "VIATEC AI Meetup",
