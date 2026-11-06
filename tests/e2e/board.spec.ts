@@ -90,6 +90,11 @@ test.describe('The board', () => {
   });
 
   test('upcoming rows run in date order under month headings', async ({ page }) => {
+    // The board is virtualised: only rows within a screen (plus 1600px) exist.
+    // How many that is depends on how tall today's top rows are, so on a
+    // default-height screen it fell to exactly 10 on 2026-11-06 with the same
+    // data that passed on 11-03. A tall window keeps enough rows to compare.
+    await page.setViewportSize({ width: page.viewportSize()?.width ?? 1280, height: 2400 });
     await openBoard(page);
     const dated = await page.locator('#board').evaluate((board) => {
       const out: { group: string; day: string; mon: string }[] = [];
