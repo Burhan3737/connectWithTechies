@@ -15,8 +15,8 @@ export function CalendarView() {
 
   const { grid, day, dayEvents, title } = calendar;
   const opened = parseISO(day);
-  // A day's light is sized against the busiest day on screen, so the brightest is always 1.
-  const busiest = grid.days.reduce((m, d) => Math.max(m, d.events.length), 0);
+  // A day's light is sized against the busiest day of this month, so the brightest is always 1.
+  const busiest = grid.days.reduce((m, d) => (d.inMonth ? Math.max(m, d.events.length) : m), 0);
   const nextBusy = day ? grid.days.find((d) => d.inMonth && d.iso > day && d.events.length > 0) : undefined;
   return (
     <section className="cal" id="cal" aria-live="polite">

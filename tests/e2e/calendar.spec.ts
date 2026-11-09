@@ -280,7 +280,7 @@ test.describe('Calendar view', () => {
     await openBoard(page, 'view=calendar');
     const lit = page.locator('.cal__day.has-ev');
     expect(await lit.count()).toBeGreaterThan(0);
-    const lights = await lit.evaluateAll((els) => els.map((e) => ({
+    const lights = await page.locator('.cal__day.has-ev:not(.is-out)').evaluateAll((els) => els.map((e) => ({
       g: Number(getComputedStyle(e).getPropertyValue('--g')),
       n: Number(e.querySelector('.cal__count')?.textContent || 0),
     })));
@@ -336,6 +336,39 @@ test.describe('Calendar view', () => {
     const bar = (await page.locator('.controls').boundingBox())!;
     const head = (await page.locator('.cal__head').boundingBox())!;
     expect(head.y).toBeGreaterThanOrEqual(bar.y + bar.height - 1);
+  });
+
+  test('calendar text keeps 4.5:1 contrast on today, past and neighbouring-month days', async ({ page }) => {
+    await openBoard(page, 'view=calendar');
+    const ratios = await page.evaluate(() => {
+      const parse = (c: string) => { const m = c.match(/[\d.]+/g)!.map(Number); return { r: m[0], g: m[1], b: m[2], a: m[3] ?? 1 }; };
+      const mix = (f: { r: number; g: number; b: number; a: number }, b: { r: number; g: number; b: number }) =>
+        ({ r: f.r * f.a + b.r * (1 - f.a), g: f.g * f.a + b.g * (1 - f.a), b: f.b * f.a + b.b * (1 - f.a) });
+      const lum = (c: { r: number; g: number; b: number }) => {
+        const f = (v: number) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; };
+        return 0.2126 * f(c.r) + 0.7152 * f(c.g) + 0.0722 * f(c.b);
+      };
+      const ratio = (el: Element) => {
+        const chain: Element[] = []; for (let n: Element | null = el; n; n = n.parentElement) chain.push(n);
+        // Page ground at the sunward edge is the lightest it gets (#10171b); start from it.
+        let bg = { r: 0x10, g: 0x17, b: 0x1b };
+        for (const n of chain.reverse()) {
+          const cs = getComputedStyle(n);
+          const b = parse(cs.backgroundColor);
+          if (b.a > 0) bg = mix({ ...b, a: b.a * Number(cs.opacity) }, bg);
+        }
+        let op = 1; for (const n of chain) op *= Number(getComputedStyle(n).opacity);
+        const fg = mix({ ...parse(getComputedStyle(el).color), a: op }, bg);
+        const [hi, lo] = [lum(fg), lum(bg)].sort((a, b) => b - a);
+        return (hi + 0.05) / (lo + 0.05);
+      };
+      const sel = ['.is-today .cal__num', '.is-today .cal__count', '.is-today .cal__mo', '.is-past .cal__ev', '.is-past .cal__more',
+        '.is-out .cal__num', '.is-out .cal__mo', '.is-out .cal__count', '.is-out .cal__ev', '.is-out .cal__more', '.cal__ev', '.cal__more'];
+      return sel.flatMap((s) => Array.from(document.querySelectorAll(`.cal__day ${s}`.replace('.cal__day .is-', '.cal__day.is-')))
+        .slice(0, 6).map((el) => ({ s, r: ratio(el) })));
+    });
+    expect(ratios.length).toBeGreaterThan(0);
+    for (const x of ratios) expect(x.r, x.s).toBeGreaterThanOrEqual(4.5);
   });
 
   test('When and Sort do not apply in the calendar', async ({ page }) => {
