@@ -57,15 +57,51 @@ export function standing(e: Ev, todayIso: string = LOCAL_TODAY): Ev {
 }
 
 /** Upcoming by the visitor's clock: an event that has ended is not upcoming, whatever the data build said. */
-export const isUpcoming = (raw: Ev) => {
-  const e = standing(raw);
+const isUpcomingOn = (raw: Ev, todayIso: string) => {
+  const e = standing(raw, todayIso);
   return e.status === 'recurring-tbd' ||
-    (e.status === 'upcoming' && (!e.next_date || (e.next_date_end || e.next_date) >= LOCAL_TODAY));
+    (e.status === 'upcoming' && (!e.next_date || (e.next_date_end || e.next_date) >= todayIso));
 };
+export const isUpcoming = (raw: Ev) => isUpcomingOn(raw, LOCAL_TODAY);
 export const isPast = (raw: Ev, todayIso: string) => {
   const e = standing(raw, todayIso);
   return !!e.last_date || e.status === 'past' || (!!e.next_date && e.next_date < todayIso);
 };
+
+/** A city's key as the data files write it, worked out here rather than taken from the app. */
+const cityKey = (e: Pick<Ev, 'city' | 'region'>) => {
+  const fold = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  return `${fold(e.city)}|${fold(e.region)}`;
+};
+
+function distanceKm([lat1, lon1]: number[], [lat2, lon2]: number[]) {
+  const rad = Math.PI / 180, dLat = (lat2 - lat1) * rad, dLon = (lon2 - lon1) * rad;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1 * rad) * Math.cos(lat2 * rad) * Math.sin(dLon / 2) ** 2;
+  return 2 * 6371 * Math.asin(Math.min(1, Math.sqrt(h)));
+}
+
+/**
+ * Upcoming events the served data holds for these cities, on the browser's day.
+ * With `r`, also those at any place within `r` km of a picked city that has a
+ * position of its own; a place known only by its metro counts by the metro's centre.
+ */
+export async function expectedCount(request: APIRequestContext, page: Page, keys: string[], r = 0): Promise<number> {
+  const [data, todayIso] = await Promise.all([dataset(request), today(page)]);
+  const inScope = new Set(keys);
+  if (r) {
+    const res = await request.get('data/places.json');
+    expect(res.ok(), 'data/places.json is served').toBeTruthy();
+    const places: { cities: Record<string, number[]>; metros: { lat: number; lon: number; members: string[] }[] } = await res.json();
+    const position = new Map(Object.entries(places.cities));
+    for (const m of places.metros) for (const k of m.members) if (!position.has(k)) position.set(k, [m.lat, m.lon]);
+    const centres = keys.map((k) => places.cities[k]).filter(Boolean);
+    for (const e of data.events) {
+      const k = cityKey(e), at = position.get(k);
+      if (at && centres.some((c) => distanceKm(c, at) <= r)) inScope.add(k);
+    }
+  }
+  return data.events.filter((e) => inScope.has(cityKey(e)) && isUpcomingOn(e, todayIso)).length;
+}
 
 /** Open the board and wait until it has rendered from data. */
 export async function openBoard(page: Page, query = '') {

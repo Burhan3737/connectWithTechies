@@ -1,11 +1,53 @@
-import { scaleOf, toScreen, type Size, type View } from './mapGeometry';
+import { addDays } from './dates';
+import { mercator, scaleOf, toScreen, type Size, type View } from './mapGeometry';
+import { ownPosition, type PlaceTable } from './places';
+import type { CityOption, IndexedEvent, When } from './types';
 
 export interface DOMRectLike { left: number; top: number; right: number; bottom: number }
 
-/** One place with events, in world coordinates. `soon` is its share in the next 7 days. */
-export interface Light { key: string; x: number; y: number; n: number; soon: number }
+/** One place with events, in world coordinates. `soon` is its share in the next 7 days; `label` is its name on the map. */
+export interface Light { key: string; x: number; y: number; n: number; soon: number; label?: string }
 export interface Cluster extends Light { own: number; more: number; moreN: number; picked: boolean }
 export interface LabelBox { key: string; text: string; x: number; y: number; w: number; h: number }
+
+/**
+ * The lights for a set of matching events: one per city with a position of its
+ * own. A picked city stays lit with no matching events, so it can still be seen
+ * and un-picked.
+ */
+export function placeLights(
+  matching: readonly IndexedEvent[], cities: readonly CityOption[], places: PlaceTable,
+  picked: readonly string[], today: string, when: When,
+): Light[] {
+  const horizon = addDays(today, 6);
+  const counts = new Map<string, { n: number; soon: number }>();
+  for (const e of matching) {
+    const c = counts.get(e.cityKey) ?? { n: 0, soon: 0 };
+    c.n++;
+    if (when !== 'past' && e.next_date && (e.next_date_end || e.next_date) >= today && e.next_date <= horizon) c.soon++;
+    counts.set(e.cityKey, c);
+  }
+  const out: Light[] = [];
+  for (const city of cities) {
+    const at = ownPosition(places, city.key);
+    const c = counts.get(city.key);
+    if (!at || (!c && !picked.includes(city.key))) continue;
+    const [x, y] = mercator(at);
+    out.push({ key: city.key, label: city.city, x, y, n: c?.n ?? 0, soon: c ? c.soon / c.n : 0 });
+  }
+  return out;
+}
+
+/** How much lights swell between zoom buckets, so a zoom never makes them pop. `bucket` is the zoom they were clustered at. */
+export const zoomGrowth = (z: number, bucket: number = Math.round(z * 2) / 2) =>
+  Math.min(1.35, Math.max(0.75, 2 ** ((z - bucket) * 0.5)));
+
+/** The radius of a light in px: the same for drawing it and for keeping labels off it. */
+export const lightRadius = (n: number, top: number, growth: number, isPhone: boolean) =>
+  ((isPhone ? 2.6 : 2.8) + (isPhone ? 8.5 : 10.5) * Math.sqrt(n / top)) * growth;
+
+/** The count a light's size is measured against: the biggest cluster. */
+export const topCount = (cs: readonly Cluster[]) => cs.reduce((m, c) => Math.max(m, c.n), 1);
 
 /**
  * Merge lights that would sit within `radiusPx` of each other on screen. Zoom is
@@ -60,17 +102,16 @@ const hits = (a: Rect, b: Rect) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b
  * Screen-space labels: picked places first, then the biggest lights in view, each
  * placed beside its light where it covers no other label and no zone (the page's
  * own controls), and preferably no other light. At most `max` labels. The text is
- * the cluster's key and own count; `measure` sizes it.
+ * the place's name and own count; `measure` sizes it.
  */
 export function layoutLabels(
   cs: Cluster[], v: View, s: Size, measure: (t: string, bold: boolean) => number,
-  zones: readonly DOMRectLike[], max: number,
+  zones: readonly DOMRectLike[], max: number, isPhone: boolean,
 ): LabelBox[] {
-  const zk = Math.min(1.35, Math.max(0.75, 2 ** ((v.z - Math.round(v.z * 2) / 2) * 0.5)));
-  const top = cs.reduce((m, c) => Math.max(m, c.n), 1);
-  const phone = s.w <= 720;
+  const growth = zoomGrowth(v.z);
+  const top = topCount(cs);
   const dots = cs.map((c) => {
-    const rad = ((phone ? 2.6 : 2.8) + (phone ? 8.5 : 10.5) * Math.sqrt(c.n / top)) * zk;
+    const rad = lightRadius(c.n, top, growth, isPhone);
     const [px, py] = toScreen(v, s, c.x, c.y);
     return { c, px, py, rad, x: px - rad, y: py - rad, w: 2 * rad, h: 2 * rad };
   });
@@ -82,7 +123,7 @@ export function layoutLabels(
   const placed: LabelBox[] = [];
   for (const d of want) {
     if (placed.length >= max) break;
-    const text = `${d.c.key} ${d.c.own}`;
+    const text = `${d.c.label ?? d.c.key} ${d.c.own}`;
     const w = measure(text, d.c.picked) + LABEL_PAD;
     const R = d.rad + 3;
     const spots: [number, number][] = [

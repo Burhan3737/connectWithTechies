@@ -1,7 +1,7 @@
-Map data in map-data.js
-=======================
+Map data in map-data.json
+=========================
 
-map-data.js is generated (Web Mercator, simplified, re-encoded) from the sources below. No network access is
+map-data.json is generated (Web Mercator, simplified, re-encoded) from the sources below. No network access is
 needed at runtime; nothing is fetched from a CDN or a tile server.
 
 1. Natural Earth (naturalearthdata.com), public domain
@@ -34,4 +34,4 @@ needed at runtime; nothing is fetched from a CDN or a tile server.
    TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
    THIS SOFTWARE.
 
-City positions (the lights) come from design-lab/shared/places.js, not from these files.
+City positions (the lights) are in data/places.json, general-knowledge coordinates, not from these files.

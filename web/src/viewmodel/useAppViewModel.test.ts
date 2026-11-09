@@ -36,6 +36,16 @@ describe('useAppViewModel', () => {
     expect(window.location.search).toBe('');
   });
 
+  it('lights every placed city whatever is picked, and has no map without positions', () => {
+    expect(render().result.current.map).toEqual({ lights: [], picked: [], available: false });
+    const places = parsePlaces({ cities: { 'toronto|ontario': [43.65, -79.38], 'austin|texas': [30.27, -97.74] } });
+    const { result } = renderHook(() => useAppViewModel({ ...indexes(), places }, '?cities=toronto%7Contario'));
+    expect(result.current.map.available).toBe(true);
+    expect(result.current.map.picked).toEqual(['toronto|ontario']);
+    expect(result.current.map.lights.map((l) => l.key).sort()).toEqual(['austin|texas', 'toronto|ontario']);
+    expect(result.current.map.lights.find((l) => l.key === 'toronto|ontario')?.label).toBe('Toronto');
+  });
+
   it('reads a shared link, settling a province without its country', () => {
     const { result } = render('?region=Ontario&type=hackathon');
     expect(result.current.filters).toMatchObject({ region: 'Ontario', country: 'Canada', type: 'hackathon' });

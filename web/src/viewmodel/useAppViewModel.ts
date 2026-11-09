@@ -2,6 +2,7 @@ import { useDeferredValue, useEffect, useReducer, useState } from 'react';
 import { applyFilters } from '../model/filters';
 import { radiusScope } from '../model/places';
 import { groupLabel } from '../model/events';
+import { placeLights, type Light } from '../model/mapCluster';
 import { bandMarks, type BandMark } from '../model/bands';
 import { buildMonth, occurrenceOn, type CalendarMonth, type Occurrence } from '../model/calendar';
 import { monthTitle, todayISO } from '../model/dates';
@@ -39,6 +40,8 @@ export interface AppViewModel {
   /** `keys` is null with no city picked; `added` counts the places the radius brought in. */
   scope: { keys: ReadonlySet<string> | null; added: number };
   scopeLabel: string;
+  /** `lights`: events per place under every filter but Cities. `available`: there are positions to draw. */
+  map: { lights: Light[]; picked: string[]; available: boolean };
   actions: {
     setQuery(q: string): void;
     addCity(key: string): void; removeCity(key: string): void; popCity(): void; clearCities(): void; setRadius(r: Radius): void;
@@ -100,6 +103,13 @@ export function useAppViewModel(indexes: Indexes, search: string = window.locati
 
   const countryCount = (c: string) => indexes.countryCounts.get(c) ?? 0;
 
+  // The map shows every city whatever is picked, so its lights ignore the Cities filter.
+  const available = indexes.places.own.size > 0 || indexes.places.metro.size > 0;
+  const lightsWhen = inCalendar ? 'all' : shown.when;
+  const lights = available
+    ? placeLights(applyFilters(indexes.events, { ...shown, cities: [] }, today, lightsWhen), indexes.cities, indexes.places, shown.cities, today, lightsWhen)
+    : [];
+
   const n = shown.cities.length;
   return {
     today, filters, shown,
@@ -116,6 +126,7 @@ export function useAppViewModel(indexes: Indexes, search: string = window.locati
     scope: { keys: scopeKeys, added },
     scopeLabel: (n ? `${n} ${n === 1 ? 'city' : 'cities'}` : 'all cities') +
       (added ? ` + ${added} ${added === 1 ? 'place' : 'places'} within ${shown.r} km` : ''),
+    map: { lights, picked: shown.cities, available },
     actions: {
       setQuery: (q) => dispatch({ type: 'query', q }),
       addCity: (key) => dispatch({ type: 'addCity', key }),

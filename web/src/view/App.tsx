@@ -3,6 +3,7 @@ import { useAppViewModel } from '../viewmodel/useAppViewModel';
 import type { Indexes } from '../model/repository';
 import { AppContext } from './context';
 import { Masthead } from './components/Masthead';
+import { MapSlot } from './map/MapSlot';
 import { FilterBar } from './components/FilterBar';
 import { ResultBar } from './components/ResultBar';
 import { Board } from './components/Board';
@@ -39,6 +40,7 @@ function Ready({ indexes }: { indexes: Indexes }) {
   return (
     <AppContext value={vm}>
       <Masthead />
+      <MapSlot />
       <FilterBar />
       <main>
         <JumpProvider>

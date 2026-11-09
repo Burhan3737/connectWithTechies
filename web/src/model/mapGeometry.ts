@@ -47,15 +47,15 @@ function fitZ(s: Size, x0: number, x1: number, y0: number, y1: number, pad: numb
   return Math.log(k / 256) / Math.LN2;
 }
 
-/** Narrow screens get a tighter margin; the same width the phone layout starts at. */
-export function homeView(s: Size): View {
+/** The continent, with a tighter margin in the phone layout. */
+export function homeView(s: Size, isPhone: boolean): View {
   const { lon0, lon1, lat0, lat1 } = HOME_BOUNDS;
   const x0 = mxOf(lon0), x1 = mxOf(lon1), y0 = myOf(lat1), y1 = myOf(lat0);
-  return { x: (x0 + x1) / 2, y: (y0 + y1) / 2, z: fitZ(s, x0, x1, y0, y1, s.w <= 720 ? 6 : 24) };
+  return { x: (x0 + x1) / 2, y: (y0 + y1) / 2, z: fitZ(s, x0, x1, y0, y1, isPhone ? 6 : 24) };
 }
 
-export function fitPoints(points: LatLon[], s: Size, padPx: number): View {
-  if (!points.length) return homeView(s);
+export function fitPoints(points: LatLon[], s: Size, padPx: number, isPhone: boolean): View {
+  if (!points.length) return homeView(s, isPhone);
   let x0 = 1, x1 = 0, y0 = 1, y1 = 0;
   for (const p of points) {
     const [x, y] = mercator(p);
@@ -65,10 +65,10 @@ export function fitPoints(points: LatLon[], s: Size, padPx: number): View {
   return { x: (x0 + x1) / 2, y: (y0 + y1) / 2, z: Math.min(MAX_Z, fitZ(s, x0, x1, y0, y1, padPx)) };
 }
 
-export function clampView(v: View, s: Size): View {
+export function clampView(v: View, s: Size, isPhone: boolean): View {
   const { lon0, lon1, lat0, lat1 } = MAP_EXTENT;
   const ex0 = mxOf(lon0), ex1 = mxOf(lon1), ey0 = myOf(lat1), ey1 = myOf(lat0);
-  const zMin = Math.min(homeView(s).z - 0.6, fitZ(s, ex0, ex1, ey0, ey1, 0));
+  const zMin = Math.min(homeView(s, isPhone).z - 0.6, fitZ(s, ex0, ex1, ey0, ey1, 0));
   return {
     x: Math.max(ex0, Math.min(ex1, v.x)),
     y: Math.max(ey0, Math.min(ey1, v.y)),

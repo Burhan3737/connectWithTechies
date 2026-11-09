@@ -7,7 +7,7 @@ const s = { w: 800, h: 600 };
 
 describe('projection', () => {
   const [x, y] = mercator([43.65, -79.38]);
-  const v = fitPoints([[40.44, -80], [43.65, -79.38]], s, 40);
+  const v = fitPoints([[40.44, -80], [43.65, -79.38]], s, 40, false);
 
   it('round-trips between the world and the screen', () => {
     const [px, py] = toScreen(v, s, x, y);
@@ -40,7 +40,7 @@ describe('projection', () => {
 
 describe('views', () => {
   it('home view shows the whole of the US and Canada', () => {
-    const h = homeView(s);
+    const h = homeView(s, false);
     const [x0, y0] = toScreen(h, s, ...mercator([53.5, -126.5]));
     const [x1, y1] = toScreen(h, s, ...mercator([24, -63]));
     expect(x0).toBeGreaterThanOrEqual(0);
@@ -49,14 +49,23 @@ describe('views', () => {
     expect(y1).toBeLessThanOrEqual(600);
   });
 
+  it('uses the phone margin by the phone argument, not by the screen width', () => {
+    const landscapePhone = { w: 800, h: 360 };
+    expect(homeView(landscapePhone, true).z).toBeGreaterThan(homeView(landscapePhone, false).z);
+    const narrowDesktop = { w: 700, h: 500 };
+    expect(homeView(narrowDesktop, false).z).toBeLessThan(homeView(narrowDesktop, true).z);
+    expect(fitPoints([], landscapePhone, 40, true)).toEqual(homeView(landscapePhone, true));
+    expect(clampView({ x: 0.3, y: 0.4, z: -3 }, landscapePhone, true).z).toBeLessThan(homeView(landscapePhone, true).z);
+  });
+
   it('clamps zoom and centre without mutating the input', () => {
     const wild = { x: 5, y: -5, z: 40 };
-    const c = clampView(wild, s);
+    const c = clampView(wild, s, false);
     expect(wild).toEqual({ x: 5, y: -5, z: 40 });
     expect(c.z).toBeCloseTo(10.6, 8);
     expect(c.x).toBeLessThan(1);
     expect(c.y).toBeGreaterThan(0);
-    expect(clampView({ x: 0.2, y: 0.4, z: -3 }, s).z).toBeLessThan(homeView(s).z);
+    expect(clampView({ x: 0.2, y: 0.4, z: -3 }, s, false).z).toBeLessThan(homeView(s, false).z);
   });
 });
 

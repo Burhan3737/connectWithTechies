@@ -1,0 +1,59 @@
+/* The night map under the masthead. */
+
+.map { position: relative; max-width: var(--maxw); margin: 0 auto; }
+.map__bar { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 20px; min-height: 44px; padding: 0 var(--gutter) 4px; }
+.map__title { margin: 0; min-width: 0; font-family: var(--display); font-weight: 400; font-size: 1.625rem; line-height: 1.1; color: var(--sec); }
+.map__title b { font-weight: 700; color: var(--ink); }
+
+/* The frame: the map under a thin limb of atmosphere along its top edge. */
+.map__frame { position: relative; height: clamp(340px, 50vh, 500px); background: #04070a; overflow: hidden; contain: layout paint; }
+.map__frame::before {
+  content: ''; position: absolute; left: 0; right: 0; top: 0; height: 22px; z-index: 2; pointer-events: none;
+  background: linear-gradient(180deg, rgba(111, 155, 255, .26), rgba(111, 155, 255, 0));
+  box-shadow: inset 0 1px 0 rgba(212, 229, 255, .7);
+}
+.map__view { position: absolute; inset: 0; touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+.map__view.is-dragging { cursor: grabbing; }
+.map__canvas { position: absolute; left: 0; top: 0; display: block; }
+
+/* The date rail sits fixed over the page's right edge; the controls stay clear of it. */
+.map__zoom { position: absolute; right: 124px; top: 16px; z-index: 4; display: flex; flex-direction: column; gap: 2px; }
+.map__zb { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: rgba(8, 12, 15, .92); color: var(--ink); cursor: pointer; }
+.map__zb:hover { background: rgba(29, 40, 46, .96); }
+.map__zb .ico { width: 18px; height: 18px; }
+.map__zb:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+
+.map__tip { position: absolute; left: 0; top: 0; z-index: 5; max-width: calc(100% - 8px); padding: 5px 10px; background: rgba(10, 14, 16, .95); color: var(--ink); font-size: .8125rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: none; }
+.map__attr { position: absolute; right: 124px; bottom: 4px; z-index: 3; margin: 0; font-size: .75rem; color: var(--sec); text-shadow: 0 0 3px #04070a, 0 0 6px #04070a; }
+.map__attr a { color: var(--sec); text-underline-offset: 2px; }
+
+.map__retry { position: absolute; inset: 0; margin: auto; width: fit-content; height: fit-content; min-height: 44px; padding: 0 16px; border: 0; background: none; color: var(--ray-ink); font: inherit; font-size: .9375rem; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.map__retry:hover { color: var(--ink); }
+
+.map__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 0 18px; min-height: 44px; padding: 2px var(--gutter); }
+.map__read { flex: 1 1 320px; min-width: 0; margin: 0; font-size: .875rem; color: var(--sec); }
+.map__listbtn { min-height: 44px; padding: 0 2px; border: 0; background: none; color: var(--ray-ink); font: inherit; font-size: .875rem; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(169, 196, 255, .45); cursor: pointer; }
+.map__list { flex: 1 1 100%; padding: 4px 0 14px; }
+
+.ml { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0 28px; }
+.ml__b { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 0 4px; border: 0; background: none; text-align: left; color: var(--ink); font: inherit; font-size: .875rem; box-shadow: inset 0 -1px 0 rgba(170, 196, 255, .08); cursor: pointer; }
+.ml__b:hover { background: rgba(111, 155, 255, .08); }
+.ml__b:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.ml__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ml__reg { color: var(--sec); }
+.ml__n { text-align: right; font-family: var(--display); font-weight: 600; font-size: 1.125rem; }
+.ml__b[aria-pressed=true] .ml__name b { color: var(--sun-ink); }
+.ml__b[aria-pressed=true] .ml__n::before { content: '\25CF  '; color: var(--sun); font-size: .7em; vertical-align: .15em; }
+.ml__none { margin: 0; padding: 10px 4px; color: var(--sec); }
+
+@media (max-width: 720px), (max-height: 500px) and (pointer: coarse) and (orientation: landscape), (max-height: 460px) and (orientation: landscape) {
+  .map__title { font-size: 1.375rem; }
+  .map__reg { display: none; }
+  .map__frame { height: 50vh; height: 50svh; min-height: 250px; }
+  .map__zoom { right: var(--gutter); top: 10px; }
+  .map__attr { right: 8px; }
+  .map__read { font-size: .9375rem; line-height: 1.35; padding: 4px 0; }
+  .map__listbtn, .ml__b { font-size: .9375rem; }
+  .ml { grid-template-columns: minmax(0, 1fr); }
+  .ml__b { min-height: 48px; }
+}
