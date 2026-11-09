@@ -28,6 +28,7 @@ export function DateRail({ marks, total, position, onJump }: Props) {
   const [viewH, setViewH] = useState(() => window.innerHeight);
   const [top, setTop] = useState(0);
   const [inView, setInView] = useState(true);
+  const [pastControls, setPastControls] = useState(false);
 
   useEffect(() => {
     const onResize = () => setViewH(window.innerHeight);
@@ -55,6 +56,19 @@ export function DateRail({ marks, total, position, onJump }: Props) {
     return () => observer.disconnect();
   }, []);
 
+  // The rail is fixed over the page's right edge, so it waits until the map and the
+  // result bar have gone up past it. The browser reports that; no layout is read on scroll.
+  useEffect(() => {
+    const bar = document.querySelector('.resultbar');
+    if (!bar || typeof IntersectionObserver === 'undefined') return;
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[entries.length - 1];
+      setPastControls(!entry.isIntersecting && entry.boundingClientRect.bottom <= (entry.rootBounds?.top ?? 0));
+    }, { rootMargin: `${-top}px 0px 0px 0px` });
+    observer.observe(bar);
+    return () => observer.disconnect();
+  }, [top]);
+
   if (marks.length === 0 || total * ROW_PX < viewH * 2) return null;
 
   const height = Math.max(0, viewH - top - BOTTOM - 20);
@@ -64,7 +78,7 @@ export function DateRail({ marks, total, position, onJump }: Props) {
   const current = marks.reduce((c, m, i) => (m.index <= at ? i : c), 0);
 
   return (
-    <nav className="rail" aria-label="Jump by date" hidden={!inView} style={{ top }}>
+    <nav className="rail" aria-label="Jump by date" hidden={!inView || !pastControls} style={{ top }}>
       <div className="rail__track" style={{ height }}>
         {marks.map((m, i) => {
           const end = i + 1 < marks.length ? marks[i + 1].index : total;

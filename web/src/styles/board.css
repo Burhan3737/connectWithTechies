@@ -82,7 +82,8 @@
 
 /* ---------- the date rail (desktop) ---------------------------------------- */
 
-.board:has(.rail:not([hidden])) { padding-right: calc(var(--gutter) + 56px); }
+/* Kept while the rail is hidden too: rows must not change width, and height, as it comes and goes. */
+.board:has(.rail) { padding-right: calc(var(--gutter) + 56px); }
 .rail { position: fixed; right: 0; width: 112px; z-index: 30; }
 .rail[hidden] { display: none; }
 .rail__track { position: absolute; top: 0; right: 14px; width: 3px; }

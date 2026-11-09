@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { dataset, today, isUpcoming, isPast, standing, openBoard, shownCount, params, setWhen, rows, watchErrors } from './support';
+import { dataset, today, isUpcoming, isPast, standing, openBoard, scrollToRail, shownCount, params, setWhen, rows, watchErrors } from './support';
 
 test.describe('Boot', () => {
   test('loads from data with no errors', async ({ page, request }) => {
@@ -169,10 +169,17 @@ test.describe('Time bands', () => {
   test('Next week jumps without filtering', async ({ page }) => {
     await openBoard(page, 'cities=seattle%7Cwashington');
     const before = await page.locator('#count').textContent();
+    await scrollToRail(page);
     await page.locator('.rail [data-band=nextWeek]').click();
     const seam = page.locator('.seam', { hasText: 'Next week' });
     await expect(seam).toBeInViewport();
     await expect(page.locator('#count')).toHaveText(before!);
+    // A smooth jump passes through other bands: what counts is where it comes to rest.
+    await expect.poll(async () => {
+      const y = await page.evaluate(() => window.scrollY);
+      await page.waitForTimeout(150);
+      return y === await page.evaluate(() => window.scrollY);
+    }).toBe(true);
     // It lands clear of the sticky filter bar, and the rail follows the screen, not the overscan.
     await expect.poll(async () => (await seam.boundingBox())!.y - (await page.locator('#controls').boundingBox())!.y
       - (await page.locator('#controls').boundingBox())!.height).toBeGreaterThanOrEqual(-1);
@@ -182,6 +189,7 @@ test.describe('Time bands', () => {
   test('the rail follows an instant jump far down the list', async ({ page }) => {
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await openBoard(page);
+    await scrollToRail(page);
     await expect(page.locator('.rail [data-band=weeks6plus]')).toBeVisible();
     await page.locator('.rail [data-band=weeks6plus]').click();
     await expect(page.locator('.seam', { hasText: '6+ weeks' })).toBeInViewport();

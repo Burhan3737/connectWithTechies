@@ -1,5 +1,5 @@
 import { test, expect, type Page } from '@playwright/test';
-import { dataset, expectedCount, isUpcoming, openBoard, params, shownCount } from './support';
+import { dataset, expectedCount, isUpcoming, openBoard, params, scrollToRail, shownCount } from './support';
 
 test.describe('City positions', () => {
   test('the board works when places.json cannot be loaded', async ({ page, request }) => {
@@ -123,6 +123,38 @@ test.describe('The night map', () => {
     await expect.poll(() => page.locator('#mapView').getAttribute('data-center')).not.toBe(before);
     await page.keyboard.press('Enter');
     await expect(page.locator('#sr')).not.toBeEmpty();
+  });
+
+  test('holding Enter toggles the city under the cross once', async ({ page }) => {
+    await openBoard(page, 'cities=toronto%7Contario');
+    await expect(page.locator('#mapView')).toHaveAttribute('data-center', /^43\./);
+    await page.focus('#mapView');
+    await page.keyboard.down('Enter');
+    await expect(page.locator('#chips .chip')).toHaveCount(0);
+    await page.keyboard.down('Enter');
+    await page.keyboard.up('Enter');
+    await page.waitForTimeout(100);
+    await expect(page.locator('#chips .chip')).toHaveCount(0);
+  });
+
+  test('the date rail stays off the map and its controls, and shows once they are past', async ({ page }) => {
+    await openBoard(page, 'cities=pittsburgh%7Cpennsylvania&r=150');
+    await expect(page.locator('#mapView')).toHaveAttribute('data-center', /./);
+    await page.waitForTimeout(100);
+    const covered = () => page.evaluate(() => {
+      const shown = (el: Element) => el.getClientRects().length > 0;
+      const marks = [...document.querySelectorAll('.rail__mark')].filter(shown).map((m) => m.getBoundingClientRect());
+      const under = [...document.querySelectorAll('#mapView, .radius, .rad__b, .map__listbtn, .resultbar button, .resultbar [role=radio]')]
+        .filter(shown).map((t) => t.getBoundingClientRect());
+      return { marks: marks.length, hits: marks.filter((m) => under.some((t) =>
+        m.left < t.right && m.right > t.left && m.top < t.bottom && m.bottom > t.top)).length };
+    });
+    expect(await covered()).toEqual({ marks: 0, hits: 0 });
+    await scrollToRail(page);
+    await expect(page.locator('.rail__mark').first()).toBeVisible();
+    expect((await covered()).hits).toBe(0);
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await expect(page.locator('.rail__mark').first()).toBeHidden();
   });
 
   test('picking from the Cities box also flies there, at a city-sized view', async ({ page }) => {

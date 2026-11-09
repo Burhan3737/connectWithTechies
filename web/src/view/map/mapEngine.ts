@@ -644,6 +644,8 @@ export class MapEngine {
       case 'Home': this.moveTo(homeView(this.size, this.isPhone), 0); break;
       case 'Enter': case ' ': {
         ev.preventDefault();
+        // Held down, one press is still one toggle.
+        if (ev.repeat) return;
         this.keyboard = true;
         const light = this.crossLight();
         if (light) { this.cb.onToggle(light.key); this.setHot(light.key, true); } else this.cb.onCross(null, true);

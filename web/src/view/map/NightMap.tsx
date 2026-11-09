@@ -111,8 +111,10 @@ export function NightMap({ data }: { data: MapData }) {
   useEffect(() => {
     const before = seenPicks.current;
     seenPicks.current = map.picked;
-    const pick = mapPick.current;
+    // A pending pick counts only if this change is the one it asked for; one that changed nothing must not speak for a later change.
+    const pending = mapPick.current;
     mapPick.current = null;
+    const pick = pending && pending.adding === map.picked.includes(pending.key) && pending.adding !== before.includes(pending.key) ? pending : null;
     if (pick) {
       const name = options.cities.find((c) => c.key === pick.key);
       const scopeWords = !map.picked.length ? 'all cities' : `${map.picked.length} ${these(map.picked.length, 'city', 'cities')}`;

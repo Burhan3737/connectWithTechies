@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { GroupedVirtuoso, type GroupedVirtuosoHandle } from 'react-virtuoso';
 import { useApp } from '../context';
 import { useJump } from '../jump';
@@ -28,6 +28,9 @@ function stickyClearance(): number {
   return document.querySelector<HTMLElement>('.groupbar')?.offsetHeight ?? 0;
 }
 
+/** Rows touching the edge of the covered strip don't count as on screen. */
+const COVERED_MARGIN = 1;
+
 /**
  * The list of events, under month (or city, or letter) headings.
  *
@@ -46,6 +49,22 @@ export function Board() {
   // Indexes of the rows the browser reports on screen.
   const onScreen = useRef(new Set<number>());
   const report = () => { if (onScreen.current.size) position.current.set(Math.min(...onScreen.current)); };
+  // The top strip no row can be read in: the sticky filter bar (desktop) and the month heading stuck under it.
+  const [stickyBar, setStickyBar] = useState(0);
+  const [heading, setHeading] = useState(0);
+  const onHeading = useCallback((el: HTMLElement | null) => {
+    if (el) setHeading((h) => h || el.getBoundingClientRect().height);
+  }, []);
+  useEffect(() => {
+    const bar = document.getElementById('controls');
+    if (!bar || phone) { setStickyBar(0); return; }
+    const measure = () => setStickyBar(bar.getBoundingClientRect().height);
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(bar);
+    return () => observer.disconnect();
+  }, [phone]);
+  const covered = Math.ceil(stickyBar + heading) + COVERED_MARGIN;
 
   const jump = useCallback((mark: BandMark) => {
     const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -67,10 +86,12 @@ export function Board() {
         if (entry.isIntersecting) on.add(i); else on.delete(i);
       }
       report();
-    }, { rootMargin: `${-stickyClearance()}px 0px 0px 0px` });
+    }, { rootMargin: `${-covered}px 0px 0px 0px` });
     rowWatch.current = observer;
+    // Rows already on the page were watched by the observer this one replaces.
+    document.querySelectorAll('#board [data-row]').forEach((el) => observer.observe(el));
     return () => { observer.disconnect(); rowWatch.current = null; };
-  }, [phone]);
+  }, [phone, covered]);
 
   // A band starts a row: the seam above it is drawn inside that row, not as a group.
   const seamAt = useMemo(() => new Map(board.marks.map((m) => [m.index, m])), [board.marks]);
@@ -87,7 +108,7 @@ export function Board() {
           // Keep a screen's worth either side, so fast scrolling rarely meets blank space.
           increaseViewportBy={{ top: 800, bottom: 1600 }}
           groupCounts={board.groups.map((g) => g.count)}
-          groupContent={(i) => <h3 className="groupbar"><span>{board.groups[i].label}</span></h3>}
+          groupContent={(i) => <h3 className="groupbar" ref={onHeading}><span>{board.groups[i].label}</span></h3>}
           itemContent={(i) => {
             // The list can shrink between the virtualiser's measuring pass and
             // this call (a new search): an index past the end renders nothing.

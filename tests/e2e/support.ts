@@ -138,6 +138,12 @@ export const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 /** Rows currently in the document (a virtualised list renders only some). */
 export const rows = (page: Page) => page.locator('#board .ev');
 
+/** Scroll until the desktop date rail is showing: it only appears once the map and result bar are past. */
+export async function scrollToRail(page: Page) {
+  await page.evaluate(() => window.scrollTo(0, document.querySelector('.resultbar')!.getBoundingClientRect().bottom + window.scrollY));
+  await expect(page.locator('.rail__mark').first()).toBeVisible();
+}
+
 /** Fail the test on any uncaught page error or console error. */
 export function watchErrors(page: Page) {
   const errors: string[] = [];
