@@ -122,3 +122,8 @@
 
 .ev__go { justify-self: end; margin-top: 4px; color: var(--sec); }
 .ev:hover .ev__go { color: var(--ink); }
+
+/* Phones are read at arm's length: nothing in a row falls below 15 px. */
+@media (max-width: 720px), (max-height: 500px) and (pointer: coarse) and (orientation: landscape), (max-height: 460px) and (orientation: landscape) {
+  .ev__desc, .ev__tags, .ev__where, .ev__d2, .ev__wd, .resultbar__sort label { font-size: .9375rem; }
+}

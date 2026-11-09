@@ -25,22 +25,139 @@ test.describe('Phone layout @mobile', () => {
     expect(await page.locator('.masthead__rule').evaluate((e) => getComputedStyle(e).letterSpacing)).toBe('normal');
   });
 
-  test('filters stack into full-width controls of one height @mobile', async ({ page }) => {
-    await openBoard(page);
-    const boxes = await page.locator('.controls .field__box, .controls .segmented').evaluateAll((els) =>
-      els.map((e) => { const r = e.getBoundingClientRect(); return { w: r.width, h: r.height }; }));
-    const width = page.viewportSize()!.width;
-    for (const b of boxes) expect(b.w).toBeGreaterThan(width * 0.8);
-    expect(new Set(boxes.map((b) => Math.round(b.h))).size).toBe(1);
-  });
-
-  test('the stacked filter bar scrolls away instead of covering the screen @mobile', async ({ page }) => {
+  test('the dock stays in thumb reach while scrolling @mobile', async ({ page }) => {
     await openBoard(page);
     await page.mouse.wheel(0, 3000);
     await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(1500);
-    const bottom = await page.locator('.controls').evaluate((e) => e.getBoundingClientRect().bottom);
-    expect(bottom).toBeLessThanOrEqual(0);
+    const r = await page.locator('.controls').evaluate((e) => e.getBoundingClientRect().bottom);
+    expect(r).toBeCloseTo(page.viewportSize()!.height, -1);
   });
+
+  test('filters open in a sheet and Done shows the live count @mobile', async ({ page }) => {
+    await openBoard(page);
+    await page.tap('#deckBtn');
+    await page.tap('#type-dd');
+    await page.tap('.dd__panel li[data-label="Hackathon"]');
+    await expect(page.locator('#deckDone')).toHaveText(new RegExp(`Done · ${await shownCount(page)} events`));
+  });
+
+  test('open option lists are tall enough to use @mobile', async ({ page }) => {
+    await openBoard(page);
+    await page.tap('#deckBtn');
+    await page.tap('#type-dd');
+    const h = await page.locator('.dd__list').evaluate((e) => e.getBoundingClientRect().height);
+    expect(h).toBeGreaterThan(200);
+    const s = await page.locator('.dd__search').evaluate((e) => e.getBoundingClientRect().height);
+    expect(s).toBeLessThanOrEqual(56);
+  });
+
+  test('touch controls are at least 44 px @mobile', async ({ page }) => {
+    await openBoard(page);
+    const small = await page.locator('.controls button, .controls input, .resultbar button').evaluateAll((els) =>
+      els.filter((e) => e.getClientRects().length && Math.min(e.getBoundingClientRect().width, e.getBoundingClientRect().height) < 44).length);
+    expect(small).toBe(0);
+  });
+
+  test('the page reserves room for the dock and publishes its height @mobile', async ({ page }) => {
+    await openBoard(page);
+    const { dockH, height, pad } = await page.evaluate(() => ({
+      dockH: getComputedStyle(document.documentElement).getPropertyValue('--dockH').trim(),
+      height: document.querySelector('.controls')!.getBoundingClientRect().height,
+      pad: parseFloat(getComputedStyle(document.body).paddingBottom),
+    }));
+    expect(parseFloat(dockH)).toBeCloseTo(height, 0);
+    expect(pad).toBeGreaterThanOrEqual(height);
+  });
+
+  test('the filter sheet closes on Done, and the badge counts active filters @mobile', async ({ page }) => {
+    await openBoard(page, 'type=hackathon&when=all');
+    await expect(page.locator('#deckBtn .deckbtn__n')).toHaveText('2');
+    await page.tap('#deckBtn');
+    await expect(page.locator('#deckBtn')).toHaveAttribute('aria-expanded', 'true');
+    await page.tap('#deckDone');
+    await expect(page.locator('#deck .field--type')).toBeHidden();
+    await expect(page.locator('#deckBtn')).toHaveAttribute('aria-expanded', 'false');
+    await expect(page.locator('#deckBtn')).toBeFocused();
+  });
+
+  test('a dropdown is a full-height sheet that leaves the keyboard down @mobile', async ({ page }) => {
+    await openBoard(page);
+    await page.tap('#deckBtn');
+    await page.tap('#type-dd');
+    const panel = page.locator('.dd__panel');
+    await expect(panel).toBeVisible();
+    await expect.poll(() => panel.evaluate((e) => e.getBoundingClientRect().top)).toBeLessThanOrEqual(1);   // after the slide-in
+    const r = await panel.evaluate((e) => { const b = e.getBoundingClientRect(); return { bottom: b.bottom, w: b.width }; });
+    const vp = page.viewportSize()!;
+    expect(r.bottom).toBeCloseTo(vp.height, -1);
+    expect(r.w).toBeCloseTo(vp.width, 0);
+    expect(await page.evaluate(() => document.activeElement?.classList.contains('dd__search'))).toBe(false);
+    await page.tap('.dd__close');
+    await expect(panel).toBeHidden();
+  });
+
+  test('the city list opens at the top of a full sheet and stays on it @mobile', async ({ page }) => {
+    await openBoard(page);
+    await page.tap('#deckBtn');
+    await page.tap('#cityq');
+    await expect(page.locator('.controls')).toHaveClass(/deck-full/);
+    await expect(page.locator('#citylist li').first()).toBeVisible();
+    const fit = await page.evaluate(() => {
+      const list = document.querySelector('#citylist')!.getBoundingClientRect();
+      const body = document.querySelector('.deck__body')!.getBoundingClientRect();
+      const q = document.querySelector('#cityq')!.getBoundingClientRect();
+      return { listBottom: list.bottom, bodyBottom: body.bottom, inputTop: q.top };
+    });
+    expect(fit.listBottom).toBeLessThanOrEqual(fit.bodyBottom + 1);
+    expect(fit.inputTop).toBeLessThan(120);
+    await page.tap('#citylist li');
+    await expect(page.locator('#chips .chip')).toHaveCount(1);
+    await expect(page.locator('.controls')).not.toHaveClass(/deck-full/);
+  });
+
+  test('sheet controls keep touch-sized targets @mobile', async ({ page }) => {
+    await openBoard(page, 'cities=toronto|ontario');
+    await page.tap('#deckBtn');
+    await page.tap('#region-dd');
+    const small = (sel: string) => page.locator(sel).evaluateAll((els) =>
+      els.filter((e) => e.getClientRects().length && e.getBoundingClientRect().height < 44).length);
+    await expect(page.locator('.dd__panel [role="option"]').first()).toBeVisible();
+    expect(await small('.dd__panel [role="option"], .dd__search')).toBe(0);
+    await page.tap('.dd__close');
+    await page.tap('#cityq');
+    await expect(page.locator('#citylist li').first()).toBeVisible();
+    expect(await small('#citylist li, .field__clear, .chip button')).toBe(0);
+  });
+
+  test('row text is big enough to read on a phone @mobile', async ({ page }) => {
+    await openBoard(page, 'when=upcoming');
+    const sizes = await page.locator('.ev__desc, .ev__tags, .ev__d2, .addcal > summary').evaluateAll((els) =>
+      els.map((e) => parseFloat(getComputedStyle(e).fontSize)));
+    expect(sizes.length).toBeGreaterThan(0);
+    expect(Math.min(...sizes)).toBeGreaterThanOrEqual(15);
+  });
+
+  test('held sideways, the dock and two-column rows still apply @mobile', async ({ page }) => {
+    await page.setViewportSize({ width: 844, height: 390 });
+    await openBoard(page);
+    const placed = await page.locator('.ev').first().evaluate((e) => ({
+      cols: getComputedStyle(e).gridTemplateColumns.split(' ').length,
+      row: getComputedStyle(e.querySelector('.ev__where')!).gridRowStart,
+    }));
+    expect(placed).toEqual({ cols: 2, row: '2' });
+    await expect(page.locator('#deckBtn')).toBeVisible();
+    const b = await page.locator('.controls').evaluate((e) => e.getBoundingClientRect().bottom);
+    expect(b).toBeCloseTo(390, -1);
+  });
+
+  for (const width of [280, 320]) {
+    test(`no sideways scroll with the dock at ${width}px @mobile`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 700 });
+      await openBoard(page);
+      const overflow = await page.evaluate(() => document.documentElement.scrollWidth) - width;
+      expect(overflow).toBeLessThanOrEqual(1);
+    });
+  }
 
   test('the calendar fits and a tapped day lists its events @mobile', async ({ page }) => {
     await openBoard(page, 'view=calendar');
@@ -58,6 +175,14 @@ test.describe('Phone layout @mobile', () => {
 });
 
 test.describe('Desktop layout', () => {
+  test('the phone dock is absent from the desktop', async ({ page }) => {
+    await openBoard(page);
+    await expect(page.locator('#deckBtn')).toBeHidden();
+    await expect(page.locator('#deckDone')).toBeHidden();
+    await expect(page.locator('#cityq')).toBeVisible();
+    await expect(page.locator('#type-dd')).toBeVisible();
+  });
+
   test('filter controls share one height', async ({ page }) => {
     await openBoard(page);
     const heights = await page.locator('.controls .field__box, .controls .segmented').evaluateAll((els) =>

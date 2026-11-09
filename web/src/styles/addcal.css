@@ -35,3 +35,10 @@
 }
 .addcal__menu a:hover, .addcal__menu a:focus { background: var(--raised-2); outline: none; }
 .addcal__menu a:focus-visible { box-shadow: inset 2px 0 0 var(--focus); }
+
+@media (max-width: 720px), (max-height: 500px) and (pointer: coarse) and (orientation: landscape), (max-height: 460px) and (orientation: landscape) {
+  .addcal > summary { font-size: .9375rem; }
+  /* On a phone the row gets the width; the button sits at its foot, beside the place. */
+  .addcal { position: absolute; right: max(8px, env(safe-area-inset-right)); bottom: 0; }
+  .evrow:has(.addcal) .ev__where { padding-right: 104px; }
+}

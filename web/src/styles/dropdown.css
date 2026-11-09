@@ -46,3 +46,32 @@
 .dd__count { color: var(--sec); font-size: .8125rem; text-align: right; font-variant-numeric: tabular-nums; }
 .dd__group { padding: 12px 16px 4px; font-size: .8125rem; font-weight: 700; color: var(--sun-ink); }
 .dd__none { margin: 6px 16px 12px; font-size: .9375rem; color: var(--sec); }
+
+/* ---------- touch and phones ---------------------------------------------- */
+
+@media (pointer: coarse) {
+  .dd__list [role="option"] { min-height: 44px; }
+  .dd__panel .dd__search { height: 44px; min-height: 44px; }
+}
+
+/* A full-height sheet: every option in reach, whatever is behind it. */
+@media (max-width: 720px), (max-height: 500px) and (pointer: coarse) and (orientation: landscape), (max-height: 460px) and (orientation: landscape) {
+  .dd__panel, .dd__panel--right {
+    position: fixed; top: env(safe-area-inset-top); bottom: var(--kb, 0px); left: 0; right: 0; z-index: 90;
+    width: auto; max-width: none; min-width: 0;
+    box-shadow: none;
+  }
+  .dd__head { display: flex; flex: none; align-items: center; justify-content: space-between; min-height: 52px; padding: 8px 0 0 16px; }
+  .dd__heading { font-family: var(--display); font-weight: 600; font-size: 1.5rem; }
+  .dd__close { min-height: 44px; padding: 0 16px; border: 0; background: none; cursor: pointer; color: var(--ray-ink); font-weight: 700; }
+  .dd__panel .dd__search { width: calc(100% - 32px); margin: 4px 16px 8px; height: 48px; min-height: 48px; font-size: 1rem; }
+  .dd__list { flex: 1; min-height: 0; max-height: none; overflow: auto; padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
+  .dd__list [role="option"] { min-height: 52px; }
+  .dd__count, .dd__group { font-size: .875rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @media (max-width: 720px), (max-height: 500px) and (pointer: coarse) and (orientation: landscape), (max-height: 460px) and (orientation: landscape) {
+    .dd__panel { animation: sheet .2s cubic-bezier(.2, .8, .2, 1); }
+    @keyframes sheet { from { transform: translateY(30px); opacity: 0; } }
+  }
+}

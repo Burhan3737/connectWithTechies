@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from 'react';
 import { fold } from '../../model/text';
+import { usePhone } from '../../viewmodel/usePhone';
 
 export interface DropdownOption { value: string; label: string; count?: number }
 export interface DropdownGroup { label?: string; options: DropdownOption[] }
@@ -37,6 +38,7 @@ export function Dropdown({ id, label, value, groups, onChange, boxClassName = 'f
   const [open, setOpen] = useState(false);
   const [filter, setFilter] = useState('');
   const [alignRight, setAlignRight] = useState(false);
+  const phone = usePhone();
   const boxRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -74,7 +76,9 @@ export function Dropdown({ id, label, value, groups, onChange, boxClassName = 'f
     if (!open || !panelRef.current) return;
     const r = panelRef.current.getBoundingClientRect();
     setAlignRight(r.right > document.documentElement.clientWidth - 8);
-    const target = panelRef.current.querySelector<HTMLElement>('.dd__search') ||
+    // Focusing the filter box on a touch screen would raise the keyboard over the list.
+    const touch = window.matchMedia?.('(pointer: coarse)').matches;
+    const target = (touch ? null : panelRef.current.querySelector<HTMLElement>('.dd__search')) ||
       panelRef.current.querySelector<HTMLElement>('[aria-selected="true"]') ||
       panelRef.current.querySelector<HTMLElement>('[role="option"]');
     target?.focus();
@@ -90,6 +94,7 @@ export function Dropdown({ id, label, value, groups, onChange, boxClassName = 'f
     const active = document.activeElement as HTMLElement | null;
     const at = opts.indexOf(active as HTMLElement);
     const inSearch = !!active?.classList.contains('dd__search');
+    if (active?.classList.contains('dd__close') && (e.key === 'Enter' || e.key === ' ')) return;
     const go = (i: number) => { const o = opts[i]; if (o) { o.focus(); o.scrollIntoView?.({ block: 'nearest' }); } };
     switch (e.key) {
       case 'Escape': e.preventDefault(); close(true); return;
@@ -133,6 +138,12 @@ export function Dropdown({ id, label, value, groups, onChange, boxClassName = 'f
       </button>
       {open && (
         <div ref={panelRef} className={`dd__panel${alignRight ? ' dd__panel--right' : ''}`} onKeyDown={onPanelKey}>
+          {phone && (
+            <div className="dd__head">
+              <span className="dd__heading">{label}</span>
+              <button type="button" className="dd__close" onClick={() => close(true)}>Close</button>
+            </div>
+          )}
           {searchable && (
             <input className="dd__search" type="text" placeholder="Filter" aria-label="Filter options" autoComplete="off"
               spellCheck={false} value={filter} onChange={(e) => setFilter(e.target.value)} aria-controls={listId} />

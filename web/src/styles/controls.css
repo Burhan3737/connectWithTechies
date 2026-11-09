@@ -12,6 +12,10 @@
   align-items: end;
 }
 
+/* The sheet exists only on phones (responsive.css); elsewhere its wrappers vanish and its contents are the bar's cells. */
+.deck, .deck__body { display: contents; }
+.deck__grab, .deck__title, .deck__done, .deckbtn { display: none; }
+
 .field { min-width: 0; position: relative; }
 .field__label { display: block; margin: 0 0 4px; font-size: .8125rem; color: var(--sec); }
 /* Every field: one height, a line beneath it rather than a box around it. */
@@ -78,8 +82,7 @@
 
 /* selected-city chips */
 .chips {
-  max-width: var(--maxw); margin: 0 auto;
-  padding: 0 var(--gutter) .5rem;
+  grid-column: 1 / -1;
   display: flex; flex-wrap: wrap; gap: 6px 18px;
 }
 .chip { display: inline-flex; align-items: center; gap: 4px; font-size: .875rem; color: var(--ink); }
@@ -93,3 +96,11 @@
   color: var(--sec); font-size: 1rem;
 }
 .chip button:hover { color: var(--ink); }
+
+/* ---------- touch ---------------------------------------------------------- */
+
+@media (pointer: coarse) {
+  .field__clear { min-width: 44px; min-height: 44px; }
+  .citylist li { min-height: 44px; }
+  .chip button { width: 44px; height: 44px; }
+}
