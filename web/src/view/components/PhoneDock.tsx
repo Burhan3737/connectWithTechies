@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useLayoutEffect, useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode } from 'react';
 import { useApp } from '../context';
 import { usePhone } from '../../viewmodel/usePhone';
+import { scrollToResults } from '../scrollToResults';
 
 export type DeckState = 'closed' | 'half' | 'full';
 
@@ -92,7 +93,7 @@ export function PhoneDock({ search, children }: { search: ReactNode; children: R
   // At full height the sheet is the whole screen: nothing behind it takes focus.
   useEffect(() => {
     if (deck !== 'full') return;
-    const behind = document.querySelectorAll('.masthead, main, .foot');
+    const behind = document.querySelectorAll('.masthead, main, .foot, .viewpill');
     behind.forEach((el) => el.setAttribute('inert', ''));
     return () => behind.forEach((el) => el.removeAttribute('inert'));
   }, [deck]);
@@ -103,8 +104,7 @@ export function PhoneDock({ search, children }: { search: ReactNode; children: R
 
   const onDone = () => {
     close();
-    const top = document.querySelector('main')?.offsetTop ?? 0;
-    if (window.scrollY < top || window.scrollY > top + 40) window.scrollTo(0, top);
+    scrollToResults();
   };
 
   const onGrabDown = (e: PointerEvent<HTMLDivElement>) => {

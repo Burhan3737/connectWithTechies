@@ -2,6 +2,11 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { syncUrlToFilters } from '../../viewmodel/useAppViewModel';
 import { usePhone } from '../../viewmodel/usePhone';
 import { useApp } from '../context';
+import { scrollToResults } from '../scrollToResults';
+import type { Filters } from '../../model/types';
+
+const samePlaces = (a: Filters, b: Filters) =>
+  a.r === b.r && a.cities.length === b.cities.length && a.cities.every((k) => b.cities.includes(k));
 
 export interface MapSwitch {
   open: boolean;
@@ -45,6 +50,16 @@ export function useMapSwitch(): MapSwitch {
       root.classList.remove('map-open');
       behind.forEach((el) => el.removeAttribute('inert'));
     };
+  }, [open]);
+
+  // The list behind the map is a different list if the picks changed: it starts again from
+  // its top. Here, not in close(), because Back and a rotation close the map without it.
+  const atOpen = useRef<Filters | null>(null);
+  useLayoutEffect(() => {
+    if (open) { atOpen.current = latest.current.filters; return; }
+    const before = atOpen.current;
+    atOpen.current = null;
+    if (before && latest.current.phone && !samePlaces(before, latest.current.filters)) scrollToResults();
   }, [open]);
 
   useEffect(() => {

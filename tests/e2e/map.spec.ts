@@ -59,9 +59,20 @@ test.describe('The night map', () => {
     await expect(page.locator('#chips .chip')).toHaveCount(1);
   });
 
+  test('clicking a light on the map toggles that city', async ({ page }) => {
+    await openBoard(page, 'cities=toronto%7Contario');
+    await expect(page.locator('#chips .chip')).toHaveCount(1);
+    await expect(page.locator('#mapView')).toHaveAttribute('data-center', /^43\./);
+    const b = (await page.locator('#mapView').boundingBox())!;
+    await page.mouse.click(b.x + b.width / 2, b.y + b.height / 2);
+    await expect(page.locator('#chips .chip')).toHaveCount(0);
+  });
+
   test('an idle page does no animation work @perf', async ({ page }) => {
     await page.addInitScript(() => { const r = window.requestAnimationFrame; (window as any).__raf = 0; window.requestAnimationFrame = (f) => { (window as any).__raf++; return r(f); }; });
-    await openBoard(page); await page.waitForTimeout(3000);
+    await openBoard(page);
+    await expect(page.locator('#mapView')).toHaveAttribute('data-center', /./);
+    await page.waitForTimeout(3000);
     await page.evaluate(() => { (window as any).__raf = 0; }); await page.waitForTimeout(3000);
     expect(await page.evaluate(() => (window as any).__raf)).toBe(0);
   });
@@ -194,6 +205,12 @@ test.describe('The night map', () => {
   });
 });
 
+/** The results' first row, not somewhere down the list. */
+async function expectAtFirstResult(page: Page) {
+  await expect.poll(() => page.evaluate(() => Math.abs(scrollY - document.querySelector('main')!.offsetTop))).toBeLessThan(8);
+  await expect(page.locator('#board [data-row="0"]')).toBeInViewport();
+}
+
 test.describe('The phone List/Map switch', () => {
   test('phones open on the list with the map one tap away @mobile', async ({ page }) => {
     await openBoard(page);
@@ -225,6 +242,52 @@ test.describe('The phone List/Map switch', () => {
     await page.goBack();
     await expect(page.locator('html')).not.toHaveClass(/map-open/);
     expect(Math.abs(await page.evaluate(() => scrollY) - y)).toBeLessThan(8);
+  });
+
+  // Picks changed while the map was open: the list behind it is a new list, so it starts at its top.
+  for (const how of ['the pill', 'the back button']) {
+    test(`after a map pick, ${how} lands on the first result @mobile`, async ({ page }) => {
+      await openBoard(page);
+      await page.evaluate(() => scrollTo(0, 9000)); await page.waitForTimeout(400);
+      await page.tap('.viewpill');
+      await page.fill('#mapq', 'pittsburgh');
+      await page.tap('#mapopts li[data-key="pittsburgh|pennsylvania"]');
+      await expect(page.locator('.viewpill')).toHaveText(/^Show \d+ events$/);
+      if (how === 'the pill') await page.tap('.viewpill'); else await page.goBack();
+      await expect(page.locator('html')).not.toHaveClass(/map-open/);
+      await expectAtFirstResult(page);
+    });
+  }
+
+  test('changing the radius on the map also lands on the first result @mobile', async ({ page }) => {
+    await openBoard(page, 'cities=pittsburgh%7Cpennsylvania&r=400&when=all');
+    await page.evaluate(() => scrollTo(0, 3000)); await page.waitForTimeout(400);
+    await page.tap('.viewpill');
+    await page.tap('.rad__b[data-r="50"]');
+    await expect(page).toHaveURL(/r=50/);
+    await page.tap('.viewpill');
+    await expect(page.locator('html')).not.toHaveClass(/map-open/);
+    await expectAtFirstResult(page);
+  });
+
+  test('tapping a light on the map toggles that city @mobile', async ({ page }) => {
+    await openBoard(page, 'cities=toronto%7Contario');
+    await page.tap('.viewpill');
+    await expect(page.locator('#mapView')).toHaveAttribute('data-center', /^43\./);
+    await page.tap('#mapView');
+    await expect(page.locator('#chips .chip')).toHaveCount(0);
+  });
+
+  test('the full-height sheet puts the pill out of reach, and gives it back @mobile', async ({ page }) => {
+    await openBoard(page);
+    await page.tap('#deckBtn');
+    await page.tap('#cityq');
+    await expect(page.locator('#controls')).toHaveClass(/deck-full/);
+    await expect(page.locator('.viewpill')).toHaveAttribute('inert', '');
+    await page.keyboard.press('Escape');
+    await page.keyboard.press('Escape');
+    await expect(page.locator('#deckBtn')).toHaveAttribute('aria-expanded', 'false');
+    expect(await page.locator('.viewpill').getAttribute('inert')).toBeNull();
   });
 
   test('picks survive the back button and stay in the URL @mobile', async ({ page }) => {
