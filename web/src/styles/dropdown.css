@@ -67,7 +67,7 @@
   .dd__panel .dd__search { width: calc(100% - 32px); margin: 4px 16px 8px; height: 48px; min-height: 48px; font-size: 1rem; }
   .dd__list { flex: 1; min-height: 0; max-height: none; overflow: auto; padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
   .dd__list [role="option"] { min-height: 52px; }
-  .dd__count, .dd__group { font-size: .875rem; }
+  .dd__count, .dd__group { font-size: .9375rem; }
 }
 @media (prefers-reduced-motion: no-preference) {
   @media (max-width: 720px), (max-height: 500px) and (pointer: coarse) and (orientation: landscape), (max-height: 460px) and (orientation: landscape) {

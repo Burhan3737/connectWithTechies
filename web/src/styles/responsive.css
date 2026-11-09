@@ -71,7 +71,7 @@
   .deck__title:focus { outline: none; }
   .deck__body { display: block; flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; padding: 4px 16px 16px; }
   .deck .field { margin-bottom: 12px; }
-  .deck .field__label { font-size: .875rem; }
+  .deck .field__label { font-size: .9375rem; }
   .deck .field__box, .deck .field--when .segmented { height: 48px; }
   .deck .field--when .segmented button { flex: 1; }
   .deck .chip { font-size: .9375rem; }
@@ -87,7 +87,7 @@
   .deck-full .field--city { position: sticky; top: -12px; z-index: 4; background: var(--raised); padding-top: 4px; }
   .citylist { left: -16px; right: -16px; min-width: 0; }
   .citylist li { min-height: 48px; }
-  .citylist li small { font-size: .875rem; }
+  .citylist li small { font-size: .9375rem; }
 
   .ev__go { display: none; }
 }

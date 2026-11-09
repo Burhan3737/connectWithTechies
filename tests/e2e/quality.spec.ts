@@ -137,6 +137,27 @@ test.describe('Phone layout @mobile', () => {
     expect(Math.min(...sizes)).toBeGreaterThanOrEqual(15);
   });
 
+  test('sheet text is big enough to read on a phone @mobile', async ({ page }) => {
+    const sizes = (sel: string) => page.locator(sel).evaluateAll((els) =>
+      els.filter((e) => e.getClientRects().length).map((e) => parseFloat(getComputedStyle(e).fontSize)));
+    const expectReadable = async (sel: string) => {
+      const found = await sizes(sel);
+      expect(found.length, `${sel} is on screen`).toBeGreaterThan(0);
+      expect(Math.min(...found), sel).toBeGreaterThanOrEqual(15);
+    };
+    await openBoard(page);
+    await page.tap('#deckBtn');
+    await expectReadable('.deck .field__label');
+    await page.tap('#region-dd');
+    await expect(page.locator('.dd__panel [role="option"]').first()).toBeVisible();
+    await expectReadable('.dd__count');
+    await expectReadable('.dd__group');
+    await page.tap('.dd__close');
+    await page.tap('#cityq');
+    await expect(page.locator('#citylist li').first()).toBeVisible();
+    await expectReadable('.citylist small');
+  });
+
   test('held sideways, the dock and two-column rows still apply @mobile', async ({ page }) => {
     await page.setViewportSize({ width: 844, height: 390 });
     await openBoard(page);
