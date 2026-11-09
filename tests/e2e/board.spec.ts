@@ -170,8 +170,13 @@ test.describe('Time bands', () => {
     await openBoard(page, 'cities=seattle%7Cwashington');
     const before = await page.locator('#count').textContent();
     await page.locator('.rail [data-band=nextWeek]').click();
-    await expect(page.locator('.seam', { hasText: 'Next week' })).toBeInViewport();
+    const seam = page.locator('.seam', { hasText: 'Next week' });
+    await expect(seam).toBeInViewport();
     await expect(page.locator('#count')).toHaveText(before!);
+    // It lands clear of the sticky filter bar, and the rail follows the screen, not the overscan.
+    await expect.poll(async () => (await seam.boundingBox())!.y - (await page.locator('#controls').boundingBox())!.y
+      - (await page.locator('#controls').boundingBox())!.height).toBeGreaterThanOrEqual(-1);
+    await expect(page.locator('.rail [data-band=nextWeek]')).toHaveAttribute('aria-current', 'true');
   });
 
   test('Next week jumps from the chips on a phone @mobile', async ({ page }) => {
@@ -179,7 +184,11 @@ test.describe('Time bands', () => {
     await expect(page.locator('.rail')).toHaveCount(0);
     const before = await page.locator('#count').textContent();
     await page.locator('.jumps [data-band=nextWeek]').click();
-    await expect(page.locator('.seam', { hasText: 'Next week' })).toBeInViewport();
+    const seam = page.locator('.seam', { hasText: 'Next week' });
+    await expect(seam).toBeInViewport();
+    // Clear of the sticky month heading.
+    await expect.poll(async () => (await seam.boundingBox())!.y - (await page.locator('.groupbar').boundingBox())!.y
+      - (await page.locator('.groupbar').boundingBox())!.height).toBeGreaterThanOrEqual(-1);
     await expect(page.locator('#count')).toHaveText(before!);
   });
 });

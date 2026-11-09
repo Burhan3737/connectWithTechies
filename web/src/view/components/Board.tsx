@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
 import { GroupedVirtuoso, type GroupedVirtuosoHandle } from 'react-virtuoso';
 import { useApp } from '../context';
 import { useJump } from '../jump';
 import { usePhone } from '../../viewmodel/usePhone';
 import type { BandMark } from '../../model/bands';
-import { DateRail } from './DateRail';
+import { DateRail, type RowPosition } from './DateRail';
 import { EventRow } from './EventRow';
 
 /**
@@ -12,6 +12,16 @@ import { EventRow } from './EventRow';
  * jump is asked for. The desktop's filter bar sits over the month heading;
  * on a phone the bar is a dock below, and the heading is what covers the top.
  */
+function createRowPosition(): RowPosition {
+  let at = 0;
+  const listeners = new Set<() => void>();
+  return {
+    get: () => at,
+    set(i) { if (i !== at) { at = i; listeners.forEach((l) => l()); } },
+    subscribe(l) { listeners.add(l); return () => { listeners.delete(l); }; },
+  };
+}
+
 function stickyClearance(): number {
   const bar = document.getElementById('controls');
   if (bar && getComputedStyle(bar).position === 'sticky') return bar.offsetHeight;
@@ -30,7 +40,9 @@ export function Board() {
   const phone = usePhone();
   const { register } = useJump();
   const list = useRef<GroupedVirtuosoHandle>(null);
-  const [at, setAt] = useState(0);
+  const position = useRef<RowPosition>(null as never);
+  position.current ??= createRowPosition();
+  const rowWatch = useRef<IntersectionObserver | null>(null);
 
   const jump = useCallback((mark: BandMark) => {
     const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -38,6 +50,23 @@ export function Board() {
     list.current?.scrollToIndex({ index: mark.index, align: 'start', behavior: still ? 'auto' : 'smooth', offset: -stickyClearance() });
   }, []);
   useEffect(() => register(jump), [register, jump]);
+
+  // Which rows are on screen, as the browser reports it (not from the virtualiser's
+  // range, which includes the rows kept ready above and below). Held outside React
+  // state: a scroll moves the rail, never re-renders the list.
+  useEffect(() => {
+    if (typeof IntersectionObserver === 'undefined') return;
+    const on = new Set<number>();
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        const i = Number((entry.target as HTMLElement).dataset.row);
+        if (entry.isIntersecting) on.add(i); else on.delete(i);
+      }
+      if (on.size) position.current.set(Math.min(...on));
+    }, { rootMargin: `${-stickyClearance()}px 0px 0px 0px` });
+    rowWatch.current = observer;
+    return () => { observer.disconnect(); rowWatch.current = null; };
+  }, [phone]);
 
   // A band starts a row: the seam above it is drawn inside that row, not as a group.
   const seamAt = useMemo(() => new Map(board.marks.map((m) => [m.index, m])), [board.marks]);
@@ -53,7 +82,6 @@ export function Board() {
           useWindowScroll
           // Keep a screen's worth either side, so fast scrolling rarely meets blank space.
           increaseViewportBy={{ top: 800, bottom: 1600 }}
-          rangeChanged={(r) => setAt(r.startIndex)}
           groupCounts={board.groups.map((g) => g.count)}
           groupContent={(i) => <h3 className="groupbar"><span>{board.groups[i].label}</span></h3>}
           itemContent={(i) => {
@@ -63,7 +91,11 @@ export function Board() {
             if (!e) return null;
             const seam = seamAt.get(i);
             return (
-              <>
+              <div data-row={i} ref={(el) => {
+                if (!el) return;
+                rowWatch.current?.observe(el);
+                return () => rowWatch.current?.unobserve(el);
+              }}>
                 {seam && (
                   <p className="seam" data-band={seam.band}>
                     <span className="seam__l">{seam.label}</span>
@@ -71,13 +103,13 @@ export function Board() {
                   </p>
                 )}
                 <EventRow event={e} when={shown.when} today={today} needle={needle} index={i} menuKey={`b${e.id}`} />
-              </>
+              </div>
             );
           }}
           computeItemKey={(i) => board.events[i]?.id ?? `gone-${i}`}
         />
       )}
-      {!phone && <DateRail marks={board.marks} total={board.events.length} at={at} onJump={jump} />}
+      {!phone && <DateRail marks={board.marks} total={board.events.length} position={position.current} onJump={jump} />}
     </section>
   );
 }

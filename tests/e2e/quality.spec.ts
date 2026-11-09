@@ -131,7 +131,7 @@ test.describe('Phone layout @mobile', () => {
 
   test('row text is big enough to read on a phone @mobile', async ({ page }) => {
     await openBoard(page, 'when=upcoming');
-    const sizes = await page.locator('.ev__desc, .ev__tags, .ev__d2, .addcal > summary').evaluateAll((els) =>
+    const sizes = await page.locator('.ev__desc, .ev__tags, .ev__d2, .addcal > summary, .seam').evaluateAll((els) =>
       els.map((e) => parseFloat(getComputedStyle(e).fontSize)));
     expect(sizes.length).toBeGreaterThan(0);
     expect(Math.min(...sizes)).toBeGreaterThanOrEqual(15);

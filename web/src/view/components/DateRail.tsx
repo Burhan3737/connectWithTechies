@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState, useSyncExternalStore } from 'react';
 import type { BandMark } from '../../model/bands';
 
 /** Labels closer than this (px) are stacked apart so they stay readable. */
@@ -7,21 +7,24 @@ const LABEL_GAP = 24;
 const ROW_PX = 96;
 const BOTTOM = 24;
 
+/** The first row on screen, kept outside React state so scrolling never re-renders the list. */
+export interface RowPosition { get(): number; set(i: number): void; subscribe(l: () => void): () => void }
+
 interface Props {
   marks: BandMark[];
   total: number;
-  /** Index of the first row on screen; the board reports it when its range changes. */
-  at: number;
+  position: RowPosition;
   onJump(mark: BandMark): void;
 }
 
 /**
  * Desktop: the whole list as a strip down the window's edge, one coloured
  * stretch per time band, each a button that scrolls there. It is built from
- * the cached marks and the row index the board reports — nothing here reads
+ * the cached marks and the first-visible-row index the board reports — nothing here reads
  * layout while the page scrolls.
  */
-export function DateRail({ marks, total, at, onJump }: Props) {
+export function DateRail({ marks, total, position, onJump }: Props) {
+  const at = useSyncExternalStore(position.subscribe, position.get);
   const [viewH, setViewH] = useState(() => window.innerHeight);
   const [top, setTop] = useState(0);
   const [inView, setInView] = useState(true);
