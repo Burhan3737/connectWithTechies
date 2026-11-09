@@ -307,7 +307,7 @@ test.describe('Calendar view', () => {
   });
 
   test('an empty opened day offers nothing when no day has events', async ({ page }) => {
-    await openBoard(page, 'view=calendar&type=hackathon&cities=nowhere%7Cnone');
+    await openBoard(page, 'view=calendar&type=hackathon&q=zzzqqqxxx');
     await expect(page.locator('.cal__none')).toBeVisible();
     await expect(page.locator('.cal__next')).toHaveCount(0);
   });

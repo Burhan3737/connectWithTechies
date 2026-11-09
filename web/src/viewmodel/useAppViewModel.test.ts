@@ -52,6 +52,38 @@ describe('useAppViewModel', () => {
     expect(result.current.board.events.map((e) => e.name)).toEqual(['Hack the North']);
   });
 
+  describe('a shared link', () => {
+    const late = parsePlaces({ cities: { 'waterloo|ontario': [43.46, -80.52], 'toronto|ontario': [43.65, -79.38] } });
+
+    it('drops a city the data does not know instead of showing an empty page', () => {
+      const { result } = render('?cities=ghost%7Cnowhere&r=150');
+      expect(result.current.filters).toMatchObject({ cities: [], r: 0 });
+      expect(result.current.board.events).toHaveLength(8);
+      expect(window.location.search).toBe('');
+    });
+
+    it('keeps its radius through the wait for positions, and applies it when they come', () => {
+      const data = indexes();
+      const { result, rerender } = renderHook(({ ix }) => useAppViewModel(ix, '?cities=waterloo%7Contario&r=150'), { initialProps: { ix: data } });
+      expect(result.current.filters.r).toBe(150);
+      expect(window.location.search).toContain('r=150');
+      expect(result.current.scope.added).toBe(0);
+      rerender({ ix: { ...data, places: late } });
+      expect(result.current.filters.r).toBe(150);
+      expect(result.current.scope.added).toBe(1);
+      expect(window.location.search).toContain('r=150');
+    });
+
+    it('clears the radius once positions arrive and no pick has one', () => {
+      const data = indexes();
+      const { result, rerender } = renderHook(({ ix }) => useAppViewModel(ix, '?cities=austin%7Ctexas&r=150'), { initialProps: { ix: data } });
+      expect(result.current.filters.r).toBe(150);
+      rerender({ ix: { ...data, places: late } });
+      expect(result.current.filters).toMatchObject({ cities: ['austin|texas'], r: 0 });
+      expect(window.location.search).not.toContain('r=');
+    });
+  });
+
   describe('rangeText', () => {
     const places = parsePlaces({
       cities: { 'waterloo|ontario': [43.46, -80.52], 'toronto|ontario': [43.65, -79.38] },

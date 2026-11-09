@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { loadPlaces, type PlaceTable } from '../model/places';
+import { EMPTY_PLACES, loadPlaces, type PlaceTable } from '../model/places';
 import { buildIndexes, loadDataset, type Indexes } from '../model/repository';
 import type { Dataset } from '../model/types';
 
@@ -42,9 +42,15 @@ export function useDataset(url: string = DATA_URL, placesUrl: string = PLACES_UR
   const [state, setState] = useState<DatasetState>({ status: 'loading' });
   useEffect(() => {
     let live = true;
-    // Both downloads run side by side; positions failing soft never reach the error state.
-    Promise.all([prefetchDataset(url), prefetchPlaces(placesUrl)])
-      .then(([data, places]) => { if (live) setState({ status: 'ready', indexes: buildIndexes(data, undefined, places) }); })
+    let places: PlaceTable = EMPTY_PLACES;
+    // The two downloads run side by side and the list waits only for the events:
+    // positions join when they arrive, and never reach the error state.
+    void prefetchPlaces(placesUrl).then((arrived) => {
+      places = arrived;
+      if (live && arrived !== EMPTY_PLACES) setState((s) => (s.status === 'ready' ? { status: 'ready', indexes: { ...s.indexes, places: arrived } } : s));
+    });
+    prefetchDataset(url)
+      .then((data) => { if (live) setState({ status: 'ready', indexes: buildIndexes(data, undefined, places) }); })
       .catch((err: Error) => { if (live) setState({ status: 'error', message: `Could not load the events (${err.message}). Reload to try again.` }); });
     return () => { live = false; };
   }, [url, placesUrl]);

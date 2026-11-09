@@ -1,5 +1,7 @@
 import { type Filters, type Radius, type SortKey, type View, type When, type RegionOption } from '../model/types';
 import { shiftMonth } from '../model/dates';
+import { ownPosition } from '../model/places';
+import type { Indexes } from '../model/repository';
 
 /**
  * Every way the person can change what they are looking at, as one reducer.
@@ -24,7 +26,11 @@ export type FiltersAction =
   | { type: 'today'; today: string }
   | { type: 'selectDay'; day: string }
   | { type: 'reset' }
-  | { type: 'replace'; filters: Filters };
+  | { type: 'replace'; filters: Filters }
+  | { type: 'settle'; known: Known };
+
+/** What a state from outside is checked against. */
+type Known = Pick<Indexes, 'regions' | 'cities' | 'places'>;
 
 /** The radius reaches out from the picked cities, so it ends with the last of them. */
 const withCities = (f: Filters, cities: string[]): Filters => ({ ...f, cities, r: cities.length ? f.r : 0 });
@@ -59,17 +65,23 @@ export function filtersReducer(f: Filters, a: FiltersAction): Filters {
     // The empty state's way out: everything cleared, every date shown.
     case 'reset': return { ...f, q: '', cities: [], r: 0, when: 'all', type: '', country: '', region: '' };
     case 'replace': return a.filters.cities.length || !a.filters.r ? a.filters : { ...a.filters, r: 0 };
+    case 'settle': return settleFilters(f, a.known);
   }
 }
 
 /**
- * Settle a state that arrived from outside (a shared link): a province that
- * does not exist is dropped, and a province without its country gets it.
+ * Settle a state that arrived from outside (a shared link): a city or province
+ * that does not exist is dropped, a province without its country gets it, and a
+ * radius with no picked city to reach out from ends. Positions may not have
+ * loaded yet, so an empty table says nothing about whether a pick has one.
  */
-export function settleFilters(f: Filters, regions: ReadonlyMap<string, RegionOption>): Filters {
-  if (!f.cities.length && f.r) f = { ...f, r: 0 };
+export function settleFilters(f: Filters, known: Known): Filters {
+  const cities = f.cities.filter((key) => known.cities.some((c) => c.key === key));
+  if (cities.length !== f.cities.length) f = { ...f, cities };
+  const positioned = known.places.own.size > 0 || known.places.metro.size > 0;
+  if (f.r && (!f.cities.length || (positioned && !f.cities.some((key) => ownPosition(known.places, key))))) f = { ...f, r: 0 };
   if (!f.region) return f;
-  const r = regions.get(f.region);
+  const r = known.regions.get(f.region);
   if (!r) return { ...f, region: '' };
   return f.country === r.country ? f : { ...f, country: r.country };
 }

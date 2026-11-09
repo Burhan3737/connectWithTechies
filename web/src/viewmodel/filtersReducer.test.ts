@@ -1,8 +1,10 @@
 import { filtersReducer, settleFilters } from './filtersReducer';
 import { DEFAULT_FILTERS, type Filters } from '../model/types';
+import { EMPTY_PLACES, parsePlaces } from '../model/places';
 import { indexes, TODAY } from '../test/fixtures';
 
-const regions = indexes().regions;
+const known = indexes();
+const regions = known.regions;
 const start = (f: Partial<Filters> = {}): Filters => ({ ...DEFAULT_FILTERS, ...f });
 
 describe('filtersReducer', () => {
@@ -70,9 +72,34 @@ describe('radius', () => {
 
 describe('settleFilters', () => {
   it('a shared province link gets its country', () => {
-    expect(settleFilters(start({ region: 'Quebec' }), regions)).toMatchObject({ region: 'Quebec', country: 'Canada' });
+    expect(settleFilters(start({ region: 'Quebec' }), known)).toMatchObject({ region: 'Quebec', country: 'Canada' });
   });
   it('an unknown province is dropped', () => {
-    expect(settleFilters(start({ region: 'Atlantis' }), regions).region).toBe('');
+    expect(settleFilters(start({ region: 'Atlantis' }), known).region).toBe('');
+  });
+
+  const placed = { ...known, places: parsePlaces({ cities: { 'toronto|ontario': [43.65, -79.38] }, metros: [{ lat: 47.6, lon: -122.3, members: ['seattle|washington'] }] }) };
+
+  it('drops a city that is not in the data, keeping the ones that are', () => {
+    expect(settleFilters(start({ cities: ['ghost|nowhere', 'toronto|ontario'] }), known).cities).toEqual(['toronto|ontario']);
+  });
+  it('an unknown city alone leaves no pick and no radius, whether or not positions have loaded', () => {
+    expect(settleFilters(start({ cities: ['ghost|nowhere'], r: 150 }), known)).toMatchObject({ cities: [], r: 0 });
+    expect(settleFilters(start({ cities: ['ghost|nowhere'], r: 150 }), placed)).toMatchObject({ cities: [], r: 0 });
+  });
+  it('clears the radius when no pick has a position of its own', () => {
+    expect(settleFilters(start({ cities: ['austin|texas'], r: 150 }), placed)).toMatchObject({ cities: ['austin|texas'], r: 0 });
+    expect(settleFilters(start({ cities: ['seattle|washington'], r: 150 }), placed).r).toBe(0);      // a metro's centre is not its own
+  });
+  it('keeps the radius while any pick has a position', () => {
+    expect(settleFilters(start({ cities: ['austin|texas', 'toronto|ontario'], r: 150 }), placed).r).toBe(150);
+  });
+  it('keeps a shared radius while the positions are not there: they may yet arrive', () => {
+    expect(known.places).toBe(EMPTY_PLACES);
+    expect(settleFilters(start({ cities: ['toronto|ontario'], r: 150 }), known).r).toBe(150);
+  });
+  it('hands back the same object when there is nothing to settle', () => {
+    const f = start({ cities: ['toronto|ontario'], r: 150 });
+    expect(settleFilters(f, placed)).toBe(f);
   });
 });

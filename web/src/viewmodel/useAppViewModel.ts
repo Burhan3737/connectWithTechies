@@ -71,12 +71,15 @@ export function syncUrlToFilters(filters: Filters): void {
 export function useAppViewModel(indexes: Indexes, search: string = window.location.search): AppViewModel {
   // "Today" is fixed for the visit: a session that crosses midnight keeps one clock.
   const [today] = useState(() => todayISO());
-  const [filters, dispatch] = useReducer(filtersReducer, search, (s) => settleFilters(parseFilters(s), indexes.regions));
+  const [filters, dispatch] = useReducer(filtersReducer, search, (s) => settleFilters(parseFilters(s), indexes));
 
   // Only the search text is deferred: a keystroke never waits for the list,
   // while a click (a day, a dropdown, a toggle) shows its result at once.
   const deferredQ = useDeferredValue(filters.q);
   const shown = deferredQ === filters.q ? filters : { ...filters, q: deferredQ };
+
+  // Positions can arrive after the first screen: only then can a radius be judged.
+  useEffect(() => { dispatch({ type: 'settle', known: indexes }); }, [indexes.places]);
 
   // The URL mirrors the choices, so any view can be bookmarked or shared.
   useEffect(() => { syncUrlToFilters(filters); }, [filters]);
