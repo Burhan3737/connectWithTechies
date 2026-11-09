@@ -1,5 +1,6 @@
 import { fmtDay, fmtMonYear, fmtRange, fmtWeekday, MONTHS, parseISO } from '../../model/dates';
-import { dateLine, keyDate, monthHint, runsUntil } from '../../model/events';
+import { bandOf, dateLine, keyDate, monthHint, runsUntil } from '../../model/events';
+import { cleanDescription } from '../../model/text';
 import type { TechEvent, When } from '../../model/types';
 import { Highlight } from './Highlight';
 import { AddToCalendar } from './AddToCalendar';
@@ -22,6 +23,8 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
   const offerCalendar = !!k && k === e.next_date;
   // Under way: filed under the day it began, which on its own reads as a date gone by.
   const until = parseISO(runsUntil(e, when, today));
+  const band = bandOf(k, today, !!until);
+  const desc = cleanDescription(e.description);
 
   const tags = [<span key="kind" className="ev__tag ev__tag--kind">{e.type.replace(/-/g, ' ')}</span>];
   if (until) tags.unshift(<span key="now" className="ev__tag ev__tag--now">on until {MONTHS[until.getMonth()].slice(0, 3)} {until.getDate()}</span>);
@@ -31,7 +34,7 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
   (e.topics || []).slice(0, 4).forEach((t) => tags.push(<span key={`t-${t}`} className="ev__tag">{t}</span>));
 
   return (
-    <div className="evrow">
+    <div className={`evrow ${band}`}>
       <a className="ev" href={e.url} target="_blank" rel="noopener noreferrer"
         style={{ animationDelay: `${Math.min(index, 14) * 22}ms` }}
         aria-label={`${e.name} — ${dateLine(e, when, today, fmtRange)} — ${e.city} — opens the official site in a new tab`}>
@@ -51,7 +54,7 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
         )}
         <div className="ev__main">
           <h2 className="ev__name"><Highlight text={e.name} needle={needle} /></h2>
-          {e.description && <p className="ev__desc"><Highlight text={e.description} needle={needle} /></p>}
+          {desc && <p className="ev__desc"><Highlight text={desc} needle={needle} /></p>}
           <div className="ev__tags">{tags}</div>
         </div>
         <span className="ev__where">

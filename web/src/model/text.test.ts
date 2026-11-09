@@ -1,4 +1,4 @@
-import { fold, slugify, splitMatch } from './text';
+import { cleanDescription, fold, slugify, splitMatch } from './text';
 
 describe('fold', () => {
   it('ignores case and accents', () => {
@@ -30,4 +30,17 @@ describe('splitMatch', () => {
     expect(splitMatch('Toronto', 'zzz')).toBeNull();
     expect(splitMatch('Toronto', '')).toBeNull();
   });
+});
+
+describe('cleanDescription', () => {
+  it('drops the placeholder a feed leaves when an organiser wrote nothing', () => {
+    expect(cleanDescription('Listed on Luma by Acme')).toBe('');
+    expect(cleanDescription('Listed on Meetup by A Group')).toBe('');
+    expect(cleanDescription('Listed on Eventbrite by Someone')).toBe('');
+  });
+  it('strips escaped and plain markdown emphasis', () => {
+    expect(cleanDescription('A **bold** claim\\*\\*')).toBe('A bold claim');
+  });
+  it('copes with nothing at all', () => expect(cleanDescription(undefined)).toBe(''));
+  it('keeps a real description', () => expect(cleanDescription('Hands-on Git workshop.')).toBe('Hands-on Git workshop.'));
 });

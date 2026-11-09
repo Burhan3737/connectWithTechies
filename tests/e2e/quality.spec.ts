@@ -108,9 +108,10 @@ test.describe('Accessibility basics', () => {
   test('focus is visible on the filter boxes', async ({ page }) => {
     await openBoard(page);
     await page.locator('#q').focus();
-    // The border animates to the ray colour; wait for the transition rather than read it mid-way.
-    await expect.poll(() => page.locator('#q').locator('..').evaluate((e) => getComputedStyle(e).borderTopColor))
-      .toBe('rgb(169, 196, 255)');
+    // The field is underlined, not boxed: focus thickens the line to 2px in the limb colour.
+    // It animates, so wait for the transition rather than read it mid-way.
+    await expect.poll(() => page.locator('#q').locator('..').evaluate((e) => getComputedStyle(e).boxShadow))
+      .toMatch(/rgb\(212, 229, 255\) 0px -2px 0px 0px inset/);
   });
 
   test('motion is reduced when asked', async ({ browser }) => {

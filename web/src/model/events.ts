@@ -1,5 +1,5 @@
 import { fold } from './text';
-import { MONTHS, parseISO } from './dates';
+import { MONTHS, daysBetween, parseISO } from './dates';
 import type { TechEvent, When, SortKey } from './types';
 
 /** "Toronto, Ontario" -> "toronto|ontario": how cities are chosen and put in URLs. */
@@ -92,7 +92,9 @@ export function monthHint(e: Pick<TechEvent, 'month'>): string {
 export function groupLabel(e: TechEvent, sort: SortKey, when: When, today: string): string {
   if (sort === 'city') return `${e.city}, ${e.region}`;
   if (sort === 'name') return (e.name[0] || '#').toUpperCase();
-  const d = parseISO(keyDate(e, when, today));
+  const k = keyDate(e, when, today);
+  if (runsUntil(e, when, today) && k < today) return 'On now';
+  const d = parseISO(k);
   if (d) return `${MONTHS[d.getMonth()]} ${d.getFullYear()}`;
   const mi = monthIndex(e);
   return mi < 12 ? `Usually ${MONTHS[mi]} — date not yet announced` : 'Date not yet announced';
@@ -104,4 +106,21 @@ export function dateLine(e: TechEvent, when: When, today: string, fmt: (a: strin
   if (k) return fmt(k, keyDateEnd(e, when, today));
   const mi = monthIndex(e);
   return mi < 12 ? `usually ${MONTHS[mi]}, next date not yet announced` : 'date not yet announced';
+}
+
+/**
+ * Time as colour: how far off a row's date is, in the bands the stylesheet
+ * colours. Weeks run Monday to Sunday. 'now' is under way, 'none' undated,
+ * 'past' a date gone by.
+ */
+export type Band = 'now' | 'b0' | 'b1' | 'b2' | 'b3' | 'none' | 'past';
+export function bandOf(key: string, today: string, running = false): Band {
+  if (running) return 'now';
+  if (!key) return 'none';
+  if (key < today) return 'past';
+  const toSunday = (7 - (parseISO(today)?.getDay() ?? 0)) % 7;      // days left in this week
+  const ahead = daysBetween(today, key);
+  if (ahead <= toSunday) return 'b0';
+  const week = Math.ceil((ahead - toSunday) / 7);                    // 1 = next week
+  return week === 1 ? 'b1' : week <= 5 ? 'b2' : 'b3';
 }

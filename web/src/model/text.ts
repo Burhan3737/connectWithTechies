@@ -36,3 +36,15 @@ function walkSplit(raw: string, needle: string): [string, string, string] | null
   }
   return null;
 }
+
+/**
+ * A description fit to show. Feeds that have nothing to say write
+ * "Listed on Luma by Acme", which is the source rather than the event, so it
+ * reads as no description; markdown emphasis (escaped or plain) is stripped.
+ * Display only: search keeps the raw text.
+ */
+export function cleanDescription(desc: string | undefined): string {
+  const s = String(desc ?? '').trim();
+  if (/^Listed on (Luma|Eventbrite|Meetup) by (.+)$/.test(s)) return '';
+  return s.replace(/\\?\*/g, '').trim();
+}

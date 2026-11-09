@@ -1,4 +1,4 @@
-import { asOf, cityKeyOf, groupLabel, haystackOf, inWhen, keyDate, keyDateEnd, monthHint, monthIndex, runsUntil } from './events';
+import { asOf, bandOf, cityKeyOf, groupLabel, haystackOf, inWhen, keyDate, keyDateEnd, monthHint, monthIndex, runsUntil } from './events';
 import { EVENTS, TODAY } from '../test/fixtures';
 
 const byName = (n: string) => EVENTS.find((e) => e.name === n)!;
@@ -95,5 +95,26 @@ describe('event rules', () => {
     expect(groupLabel(e, 'city', 'upcoming', TODAY)).toBe('Waterloo, Ontario');
     expect(groupLabel(e, 'name', 'upcoming', TODAY)).toBe('H');
     expect(groupLabel(byName('DevOpsDays Austin'), 'date', 'upcoming', TODAY)).toBe('Usually May — date not yet announced');
+  });
+
+  it('files an event under way as On now, in Upcoming by date only', () => {
+    const e = byName('Hack the North');
+    const running = { ...e, next_date: '2026-08-27', next_date_end: '2026-11-19' };
+    expect(groupLabel(running, 'date', 'upcoming', '2026-10-23')).toBe('On now');
+    expect(groupLabel(running, 'date', 'all', '2026-10-23')).toBe('August 2026');
+    expect(groupLabel(running, 'city', 'upcoming', '2026-10-23')).toBe(`${running.city}, ${running.region}`);
+  });
+
+  it('puts a date in a time band, weeks running Monday to Sunday', () => {
+    const thu = '2026-10-08'; // Thursday
+    expect(bandOf('2026-10-11', thu)).toBe('b0');   // Sunday, this week
+    expect(bandOf('2026-10-12', thu)).toBe('b1');   // next Monday
+    expect(bandOf('2026-10-18', thu)).toBe('b1');
+    expect(bandOf('2026-10-19', thu)).toBe('b2');
+    expect(bandOf('2026-11-15', thu)).toBe('b2');   // end of week 5
+    expect(bandOf('2026-11-16', thu)).toBe('b3');
+    expect(bandOf('', thu)).toBe('none');
+    expect(bandOf('2026-10-01', thu)).toBe('past');
+    expect(bandOf('2026-08-27', thu, true)).toBe('now');
   });
 });

@@ -101,10 +101,13 @@ test.describe('The board', () => {
       let group = '';
       for (const n of Array.from(board.querySelectorAll('.groupbar, .ev'))) {
         if (n.classList.contains('groupbar')) group = n.textContent || '';
-        else if (!n.querySelector('.ev__when--tbd')) out.push({ group, day: n.querySelector('.ev__d1')!.textContent!, mon: n.querySelector('.ev__d2')!.textContent! });
+        // Events under way sit in a leading On now group, ahead of the month headings.
+        else if (group.trim() !== 'On now' && !n.querySelector('.ev__when--tbd')) out.push({ group, day: n.querySelector('.ev__d1')!.textContent!, mon: n.querySelector('.ev__d2')!.textContent! });
       }
       return out.slice(0, 80);
     });
+    const headings = (await page.locator('#board .groupbar').allTextContents()).map((t) => t.trim());
+    if (headings.includes('On now')) expect(headings[0]).toBe('On now');
     expect(dated.length).toBeGreaterThan(10);
     const months = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
     const key = (r: { day: string; mon: string }) => {

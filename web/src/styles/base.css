@@ -27,22 +27,16 @@
   /* Old names, mapped onto the night palette until each stylesheet is restyled. */
   --ink-dim: var(--sec);
   --ink-faint: var(--ter);
-  --paper: var(--g2);
   --paper-2: var(--raised);
-  --paper-3: var(--raised-2);
   --rule: var(--raised-3);
   --rule-soft: var(--raised-2);
   --signal: var(--ray-ink);
   --signal-dim: var(--ray);
-  --mint: var(--airglow);
   --amber: var(--sun);
   --serif: var(--display);
-  --sans: var(--font);
   --mono: var(--font);
 
   --gutter: clamp(1.15rem, 4vw, 4.5rem);
-  --ctl-h: 2.6rem;            /* one height for every filter control */
-  --ctl-pad: .8rem;           /* one inner padding */
   --maxw: 1440px;
   color-scheme: dark;
 }

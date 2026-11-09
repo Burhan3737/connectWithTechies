@@ -12,12 +12,12 @@ describe('useAppViewModel', () => {
 
   const render = (search = '') => renderHook(() => useAppViewModel(indexes(), search));
 
-  it('starts on Upcoming with every dated and undated upcoming event, grouped by month', () => {
+  it('starts on Upcoming with every dated and undated upcoming event, grouped by month, with events under way first as On now', () => {
     const { result } = render();
     expect(result.current.today).toBe(TODAY);
     expect(result.current.board.events).toHaveLength(8);
     expect(result.current.board.groups.map((g) => g.label)).toEqual([
-      'September 2026', 'October 2026', 'November 2026', 'Usually May — date not yet announced']);
+      'On now', 'October 2026', 'November 2026', 'Usually May — date not yet announced']);
     expect(result.current.board.groups.reduce((n, g) => n + g.count, 0)).toBe(8);
     expect(result.current.scopeLabel).toBe('all cities');
   });

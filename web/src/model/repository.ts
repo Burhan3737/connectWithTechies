@@ -21,6 +21,16 @@ export interface Indexes {
   counts: { events: number; cities: number; upcoming: number; tbd: number };
 }
 
+/** Kinds that are initialisms, so they are not title-cased. */
+const ACRONYMS = new Set(['ctf']);
+
+/** A kind as people read it: "tech-week" -> "Tech week", "ctf" -> "CTF". */
+export function kindLabel(value: string): string {
+  if (ACRONYMS.has(value)) return value.toUpperCase();
+  const label = value.replace(/-/g, ' ');
+  return label.charAt(0).toUpperCase() + label.slice(1);
+}
+
 /** `today` is the visitor's date: every event is filed as it stands on it, not on the build's. */
 export function buildIndexes(data: Dataset, today: string = todayISO()): Indexes {
   const events: IndexedEvent[] = data.events.map((e, id) => ({ ...asOf(e, today), id, cityKey: cityKeyOf(e), hay: haystackOf(e) }));
@@ -43,10 +53,7 @@ export function buildIndexes(data: Dataset, today: string = todayISO()): Indexes
   }
 
   const cities = [...cityMap.values()].sort((a, b) => b.count - a.count || a.city.localeCompare(b.city));
-  const kinds = [...kindCount.entries()].sort((a, b) => b[1] - a[1]).map(([value, count]) => {
-    const label = value.replace(/-/g, ' ');
-    return { value, label: label.charAt(0).toUpperCase() + label.slice(1), count };
-  });
+  const kinds = [...kindCount.entries()].sort((a, b) => b[1] - a[1]).map(([value, count]) => ({ value, label: kindLabel(value), count }));
 
   return {
     generatedOn: data.generated_on,

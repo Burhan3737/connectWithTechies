@@ -1,4 +1,4 @@
-import { buildIndexes, loadDataset } from './repository';
+import { buildIndexes, kindLabel, loadDataset } from './repository';
 import { DATASET, TODAY } from '../test/fixtures';
 
 describe('buildIndexes', () => {
@@ -48,4 +48,9 @@ describe('loadDataset', () => {
     await expect(loadDataset('x', notFound)).rejects.toThrow('HTTP 404');
     await expect(loadDataset('x', ok({ nope: 1 }))).rejects.toThrow('no events');
   });
+});
+
+describe('kindLabel', () => {
+  it('capitalises a kind for people', () => expect(kindLabel('tech-week')).toBe('Tech week'));
+  it('keeps acronyms in capitals', () => expect(kindLabel('ctf')).toBe('CTF'));
 });
