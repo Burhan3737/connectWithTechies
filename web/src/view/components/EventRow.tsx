@@ -1,5 +1,6 @@
 import { fmtDay, fmtMonYear, fmtRange, fmtWeekday, MONTHS, parseISO } from '../../model/dates';
-import { bandOf, dateLine, keyDate, monthHint, runsUntil } from '../../model/events';
+import { bandOf } from '../../model/bands';
+import { dateLine, keyDate, monthHint, runsUntil } from '../../model/events';
 import { cleanDescription } from '../../model/text';
 import type { TechEvent, When } from '../../model/types';
 import { Highlight } from './Highlight';
@@ -23,7 +24,9 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
   const offerCalendar = !!k && k === e.next_date;
   // Under way: filed under the day it began, which on its own reads as a date gone by.
   const until = parseISO(runsUntil(e, when, today));
-  const band = bandOf(k, today, !!until);
+  // Colour by how soon; a date gone by (the Past view) gets its own muted colour.
+  const band = bandOf(e, when, today);
+  const tone = !until && k && k < today ? 'past' : band;
   const desc = cleanDescription(e.description);
 
   const tags = [<span key="kind" className="ev__tag ev__tag--kind">{e.type.replace(/-/g, ' ')}</span>];
@@ -34,7 +37,7 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
   (e.topics || []).slice(0, 4).forEach((t) => tags.push(<span key={`t-${t}`} className="ev__tag">{t}</span>));
 
   return (
-    <div className={`evrow ${band}`}>
+    <div className="evrow" data-band={tone}>
       <a className="ev" href={e.url} target="_blank" rel="noopener noreferrer"
         style={{ animationDelay: `${Math.min(index, 14) * 22}ms` }}
         aria-label={`${e.name} — ${dateLine(e, when, today, fmtRange)} — ${e.city} — opens the official site in a new tab`}>

@@ -53,15 +53,66 @@
 .evrow {
   position: relative;
   display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center;
-  --band: var(--b2);
 }
-.evrow.now { --band: var(--bn); }
-.evrow.b0 { --band: var(--b0); }
-.evrow.b1 { --band: var(--b1); }
-.evrow.b2 { --band: var(--b2); }
-.evrow.b3 { --band: var(--b3); }
-.evrow.none { --band: var(--b4); }
-.evrow.past { --band: var(--bpast); }
+/* a thin edge in the row's band colour */
+.evrow::before {
+  content: ''; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px; border-radius: 2px;
+  background: var(--band); pointer-events: none;
+}
+
+/* Time as colour, shared by rows, seams, the rail and the phone's jump chips. */
+[data-band], [data-tone] { --band: var(--b2); }
+[data-band='now'], [data-tone='now'] { --band: var(--bn); }
+[data-band='thisWeek'], [data-tone='thisWeek'] { --band: var(--b0); }
+[data-band='nextWeek'], [data-tone='nextWeek'] { --band: var(--b1); }
+[data-band='weeks2to5'], [data-tone='weeks2to5'] { --band: var(--b2); }
+[data-band='weeks6plus'], [data-tone='weeks6plus'] { --band: var(--b3); }
+[data-band='noDate'], [data-tone='noDate'] { --band: var(--b4); }
+[data-band='past'] { --band: var(--bpast); }
+
+/* where a band begins in the list */
+.seam {
+  display: flex; align-items: baseline; gap: 0 12px;
+  margin: 0; padding: 18px 12px 4px;
+  font-size: .875rem; color: var(--sec);
+}
+.seam::before { content: ''; align-self: center; width: 18px; height: 2px; background: var(--band); }
+.seam__l { font-weight: 700; color: var(--band); }
+.seam__n { margin-left: auto; }
+
+/* ---------- the date rail (desktop) ---------------------------------------- */
+
+.board:has(.rail:not([hidden])) { padding-right: calc(var(--gutter) + 56px); }
+.rail { position: fixed; right: 0; width: 112px; z-index: 30; }
+.rail[hidden] { display: none; }
+.rail__track { position: absolute; top: 0; right: 14px; width: 3px; }
+.rail__seg { position: absolute; left: 0; right: 0; background: var(--band); }
+.rail__probe { position: absolute; right: -4px; width: 11px; height: 3px; margin-top: -1px; background: var(--limb); transition: top .12s linear; }
+@media (prefers-reduced-motion: reduce) { .rail__probe { transition: none; } }
+.rail__mark {
+  position: absolute; right: 26px; min-height: 24px; padding: 0 8px 0 0; border: 0; background: none; cursor: pointer;
+  display: flex; align-items: center; transform: translateY(-4px);
+  font-size: .8125rem; line-height: 1; white-space: nowrap; color: var(--sec);
+}
+.rail__mark::after { content: ''; position: absolute; right: -12px; top: 50%; width: 10px; height: 2px; background: var(--band); }
+.rail__mark:hover, .rail__mark[aria-current='true'] { color: var(--band); }
+.rail__mark[aria-current='true'] { font-weight: 700; }
+.rail__mark:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* ---------- jump chips (phones) -------------------------------------------- */
+
+.jumps {
+  flex: 1 1 100%; order: 3; min-width: 0; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none;
+  margin: 0 calc(-1 * var(--gutter)); padding: 0 calc(var(--gutter) - 8px);
+}
+.jumps::-webkit-scrollbar { display: none; }
+.jump {
+  flex: none; display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 0 10px;
+  border: 0; background: none; cursor: pointer; color: var(--sec); font-size: .9375rem; white-space: nowrap;
+}
+.jump i { width: 8px; height: 8px; border-radius: 50%; background: var(--band); }
+.jump:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.is-cal .jumps { display: none; }
 
 .ev {
   display: grid;

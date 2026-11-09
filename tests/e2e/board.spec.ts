@@ -164,3 +164,22 @@ test('the masthead speaks as a night map and uses the new type', async ({ page }
   expect(font).toContain('B612');
   await expect(page.locator('.tally dd')).toHaveCount(5);
 });
+
+test.describe('Time bands', () => {
+  test('Next week jumps without filtering', async ({ page }) => {
+    await openBoard(page, 'cities=seattle%7Cwashington');
+    const before = await page.locator('#count').textContent();
+    await page.locator('.rail [data-band=nextWeek]').click();
+    await expect(page.locator('.seam', { hasText: 'Next week' })).toBeInViewport();
+    await expect(page.locator('#count')).toHaveText(before!);
+  });
+
+  test('Next week jumps from the chips on a phone @mobile', async ({ page }) => {
+    await openBoard(page, 'cities=seattle%7Cwashington');
+    await expect(page.locator('.rail')).toHaveCount(0);
+    const before = await page.locator('#count').textContent();
+    await page.locator('.jumps [data-band=nextWeek]').click();
+    await expect(page.locator('.seam', { hasText: 'Next week' })).toBeInViewport();
+    await expect(page.locator('#count')).toHaveText(before!);
+  });
+});

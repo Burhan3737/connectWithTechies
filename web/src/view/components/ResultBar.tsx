@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useApp } from '../context';
 import { Dropdown } from './Dropdown';
+import { JumpChips } from './JumpChips';
 import type { SortKey, View } from '../../model/types';
 
 const VIEWS: { value: View; label: string }[] = [{ value: 'list', label: 'List' }, { value: 'calendar', label: 'Calendar' }];
@@ -32,6 +33,7 @@ export function ResultBar() {
       <Dropdown id="sort" label="Sort" inlineLabel boxClassName="resultbar__sort" value={filters.sort}
         onChange={(v) => actions.setSort(v as SortKey)}
         groups={[{ options: [{ value: 'date', label: 'Date' }, { value: 'city', label: 'City' }, { value: 'name', label: 'Name' }] }]} />
+      <JumpChips />
     </div>
   );
 }

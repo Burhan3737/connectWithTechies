@@ -1,6 +1,7 @@
 import { useDeferredValue, useEffect, useReducer, useState } from 'react';
 import { applyFilters } from '../model/filters';
 import { groupLabel } from '../model/events';
+import { bandMarks, type BandMark } from '../model/bands';
 import { buildMonth, occurrenceOn, type CalendarMonth, type Occurrence } from '../model/calendar';
 import { monthTitle, todayISO } from '../model/dates';
 import { parseFilters, serializeFilters } from '../model/urlState';
@@ -28,7 +29,8 @@ export interface AppViewModel {
     regionGroups: { country: string; regions: RegionOption[] }[];
     cities: Indexes['cities'];
   };
-  board: { events: IndexedEvent[]; groups: BoardGroup[]; stale: boolean };
+  /** `marks`: where each time band starts — only in Upcoming sorted by date. */
+  board: { events: IndexedEvent[]; groups: BoardGroup[]; marks: BandMark[]; stale: boolean };
   calendar: {
     month: string; title: string; grid: CalendarMonth;
     day: string; dayEvents: Occurrence[];
@@ -102,7 +104,7 @@ export function useAppViewModel(indexes: Indexes, search: string = window.locati
       regionGroups,
       cities: indexes.cities,
     },
-    board: { events, groups, stale: shown !== filters },
+    board: { events, groups, marks: shown.sort === 'date' ? bandMarks(events, shown.when, today) : [], stale: shown !== filters },
     calendar: { month, title: monthTitle(month), grid, day, dayEvents },
     scopeLabel: n ? `${n} ${n === 1 ? 'city' : 'cities'}` : 'all cities',
     actions: {

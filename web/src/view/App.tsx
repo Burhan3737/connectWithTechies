@@ -9,6 +9,7 @@ import { Board } from './components/Board';
 import { CalendarView } from './components/CalendarView';
 import { EmptyState } from './components/EmptyState';
 import { Footer } from './components/Footer';
+import { JumpProvider } from './jump';
 
 /**
  * The composition root. Loads the data, then hands an indexed dataset to the
@@ -40,8 +41,10 @@ function Ready({ indexes }: { indexes: Indexes }) {
       <Masthead />
       <FilterBar />
       <main>
-        <ResultBar />
-        <Board />
+        <JumpProvider>
+          <ResultBar />
+          <Board />
+        </JumpProvider>
         <CalendarView />
         <EmptyState />
       </main>
