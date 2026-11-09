@@ -1,82 +1,60 @@
-/* The masthead: title, standfirst and tally. */
-
-/* ---------- masthead ---------------------------------------------------- */
+/* The masthead: credit line, title, standfirst and the quiet tally. */
 
 .masthead {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: clamp(1.1rem, 3vw, 2.4rem) var(--gutter) clamp(1.6rem, 4vw, 3rem);
+  padding: env(safe-area-inset-top) var(--gutter) clamp(1rem, 2.5vw, 1.6rem);
 }
 
 .masthead__rule {
-  display: flex; align-items: baseline; gap: .9rem;
-  font-family: var(--mono);
-  font-size: .68rem; letter-spacing: .22em; text-transform: uppercase;
-  color: var(--ink-faint);
-  padding-bottom: .85rem;
-  border-bottom: 1px solid var(--rule);
+  display: flex; align-items: center; flex-wrap: wrap; gap: .2rem .9rem;
+  min-height: 2.5rem;
+  font-size: .875rem;
+  color: var(--sec);
 }
-.masthead__dots { flex: 1; align-self: center; height: 1px; background: repeating-linear-gradient(90deg, var(--rule) 0 3px, transparent 3px 8px); }
-
-.masthead__rule > span:first-child, .masthead__credit > span { white-space: nowrap; }
-/* The maker's credit, where the data stamp used to sit. Wraps rather than overflowing on phones. */
-.masthead__credit { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: flex-end; gap: .2rem .9rem; }
+.masthead__rule > span:first-child { color: var(--ink); font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
+.masthead__dots { display: none; }
+/* The maker's credit. Wraps onto two lines on narrow phones rather than overflowing. */
+.masthead__credit { margin-left: auto; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: flex-end; gap: .1rem .6rem; }
+.masthead__credit > span { white-space: nowrap; }
 .masthead__name { color: var(--ink); }
 .masthead__link {
-  color: var(--signal); text-decoration: none;
-  border-bottom: 1px solid var(--signal-dim);
-  padding: .35rem 0 .1rem;            /* a taller tap target without moving the baseline */
-  transition: color .15s, border-color .15s;
+  color: var(--ray-ink); text-underline-offset: 3px;
+  display: inline-flex; align-items: center; min-height: 44px;   /* a full-size tap target */
 }
-.masthead__link:hover, .masthead__link:focus-visible { color: var(--ink); border-color: var(--ink); }
-.masthead__link:focus-visible { outline: 1px solid var(--signal); outline-offset: 3px; }
+.masthead__link:hover { color: var(--ink); }
 
 .masthead__title {
-  margin: clamp(1rem, 3.2vw, 2.1rem) 0 0;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(3rem, 13vw, 10rem);
-  line-height: .82;
-  letter-spacing: -.03em;
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(3rem, 4.6vw, 4.25rem);
+  line-height: .86;
+  font-weight: 300;
+  letter-spacing: .005em;
+  color: var(--ink);
   display: flex; flex-wrap: wrap; align-items: baseline;
 }
-.masthead__connect {
-  font-style: italic;
-  color: var(--signal);
-  margin-right: .06em;
-}
-.masthead__techies { color: var(--ink); }
+.masthead__connect { font-weight: 300; }
+.masthead__techies { font-weight: 800; color: var(--limb); text-shadow: 0 0 28px rgba(111, 155, 255, .35); }
 
 .masthead__sub {
-  margin: clamp(1.1rem, 2.6vw, 1.9rem) 0 0;
-  max-width: 46ch;
-  font-size: clamp(1rem, 1.35vw, 1.16rem);
-  line-height: 1.5;
-  color: var(--ink-dim);
+  margin: .6rem 0 0;
+  max-width: 60rem;
+  font-size: .9375rem;
+  line-height: 1.45;
+  color: var(--sec);
 }
-.masthead__sub em { font-family: var(--serif); font-style: italic; font-size: 1.16em; color: var(--ink); }
+.masthead__sub em { font-style: normal; color: var(--ink); }
 
-.tally {
-  display: flex; flex-wrap: wrap; gap: 0;
-  margin: clamp(1.5rem, 3.5vw, 2.6rem) 0 0;
-  border-top: 1px solid var(--rule);
+/* One quiet line: "n events tracked · n cities · ..." */
+.tally { display: flex; flex-wrap: wrap; margin: .4rem 0 0; font-size: .8125rem; color: var(--sec); }
+.tally__i { display: flex; flex-direction: row-reverse; align-items: baseline; gap: 5px; }
+.tally__i + .tally__i::before { content: '\00b7'; padding: 0 8px; order: 3; }
+.tally dt, .tally dd { margin: 0; }
+.tally dt { text-transform: lowercase; }
+.tally dd .u { margin-left: .4em; }
+
+@media (max-width: 380px) {
+  .masthead__rule { flex-wrap: wrap; }
+  .masthead__credit { margin-left: 0; justify-content: flex-start; flex-basis: 100%; }
 }
-.tally > div {
-  flex: 1 1 7.5rem;
-  padding: .95rem 1.1rem .95rem 0;
-  border-right: 1px solid var(--rule-soft);
-}
-.tally > div:last-child { border-right: 0; }
-.tally dt {
-  font-family: var(--mono);
-  font-size: .62rem; letter-spacing: .2em; text-transform: uppercase;
-  color: var(--ink-faint);
-}
-.tally dd {
-  margin: .25rem 0 0;
-  font-family: var(--serif);
-  font-size: clamp(1.9rem, 4vw, 2.9rem);
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-.tally dd .u { font-family: var(--mono); font-size: .34em; color: var(--ink-faint); letter-spacing: .12em; margin-left: .4em; text-transform: uppercase; }

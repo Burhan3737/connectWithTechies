@@ -19,7 +19,6 @@ export function App() {
   if (data.status !== 'ready') {
     return (
       <>
-        <div className="grain" aria-hidden="true" />
         <Masthead />
         <main>
           <section className="board" id="board" aria-live="polite" aria-busy={data.status === 'loading'}>
@@ -38,7 +37,6 @@ function Ready({ indexes }: { indexes: Indexes }) {
   const vm = useAppViewModel(indexes);
   return (
     <AppContext value={vm}>
-      <div className="grain" aria-hidden="true" />
       <Masthead />
       <FilterBar />
       <main>

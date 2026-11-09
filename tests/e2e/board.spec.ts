@@ -152,3 +152,12 @@ test.describe('The board', () => {
     await expect(page.locator('#q')).toHaveValue('');
   });
 });
+
+test('the masthead speaks as a night map and uses the new type', async ({ page }) => {
+  await openBoard(page);
+  await expect(page.locator('.masthead__sub')).toContainText('A night map of the tech events');
+  await expect(page.locator('body')).not.toContainText('departures board');
+  const font = await page.locator('.ev__name').first().evaluate((e) => getComputedStyle(e).fontFamily);
+  expect(font).toContain('B612');
+  await expect(page.locator('.tally dd')).toHaveCount(5);
+});

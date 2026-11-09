@@ -1,61 +1,67 @@
 /* Tokens, reset and page background. */
 
 /* ==========================================================================
-   connectWithTechies — "departures board" editorial
-   warm black paper · cream ink · signal orange · ruled rows
+   connectWithTechies — a night map
+   night-side ground · cool ink · ray blue · sunward amber
    ========================================================================== */
 
-:root {
-  --ink:        #f2ece1;
-  --ink-dim:    #9d968a;
-  --ink-faint:  #605b53;
-  --paper:      #0d0c0b;
-  --paper-2:    #141310;
-  --paper-3:    #1b1915;
-  --rule:       #2a2721;
-  --rule-soft:  #201e1a;
-  --signal:     #ff5c1a;
-  --signal-dim: #b8410f;
-  --mint:       #86d9a8;
-  --amber:      #ffc247;
+@font-face { font-family: 'B612 fallback'; src: local('Arial'); size-adjust: 112%; ascent-override: 86%; descent-override: 22%; }
+@font-face { font-family: 'Display fallback'; src: local('Arial Narrow'), local('Arial'); size-adjust: 88%; }
 
-  --serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
-  --sans:  "Archivo", "Helvetica Neue", Helvetica, sans-serif;
-  --mono:  "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+:root {
+  --space: #040506;
+  /* the night side, lit from the sunward edge: one horizontal gradient shared by every full-width band,
+     so opaque sticky bars match the ground exactly at any scroll position */
+  --g0: #10171b; --g1: #0a0f12; --g2: #060809;
+  --ground: linear-gradient(90deg, var(--g0) 0%, var(--g1) 42%, var(--g2) 100%);
+  --raised: #141c21; --raised-2: #1d282e; --raised-3: #27343b;
+  --ink: #eef1f2; --sec: #b3bcc2; --ter: #98a3aa;
+  --limb: #d4e5ff; --ray: #6f9bff; --ray-ink: #a9c4ff; --airglow: #a3e3b4; --sun: #ffb768; --sun-ink: #ffcf98; --led: #e9f1ff;
+  /* time as wavelength (chromatic order): this week, next week, 2-5 weeks, 6+ weeks, no date, on now */
+  --b0: #b9b9ff; --b1: #79d0f4; --b2: #8bdfb7; --b3: #edc871; --b4: #dfe4ee; --bn: #ffb784; --bpast: #c2b7d3;
+  --focus: #ffffff;
+  --display: 'Big Shoulders Display', 'Display fallback', 'Arial Narrow', sans-serif;
+  --font: 'B612', 'B612 fallback', system-ui, sans-serif;
+  --pad: 40px;
+
+  /* Old names, mapped onto the night palette until each stylesheet is restyled. */
+  --ink-dim: var(--sec);
+  --ink-faint: var(--ter);
+  --paper: var(--g2);
+  --paper-2: var(--raised);
+  --paper-3: var(--raised-2);
+  --rule: var(--raised-3);
+  --rule-soft: var(--raised-2);
+  --signal: var(--ray-ink);
+  --signal-dim: var(--ray);
+  --mint: var(--airglow);
+  --amber: var(--sun);
+  --serif: var(--display);
+  --sans: var(--font);
+  --mono: var(--font);
 
   --gutter: clamp(1.15rem, 4vw, 4.5rem);
   --ctl-h: 2.6rem;            /* one height for every filter control */
   --ctl-pad: .8rem;           /* one inner padding */
   --maxw: 1440px;
+  color-scheme: dark;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; background: var(--g2); }
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--ground);
   color: var(--ink);
-  font-family: var(--sans);
+  font-family: var(--font);
   font-size: 16px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
-/* Film grain + a faint horizon glow, so the black is not dead flat. */
-.grain {
-  position: fixed; inset: 0; z-index: 9999; pointer-events: none;
-  opacity: .05; mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-body::before {
-  content: ""; position: fixed; inset: 0 0 auto 0; height: 62vh; z-index: 0; pointer-events: none;
-  background:
-    radial-gradient(120% 78% at 78% -18%, rgba(255,92,26,.16), transparent 62%),
-    radial-gradient(90% 60% at 8% -10%, rgba(255,194,71,.07), transparent 60%);
-}
 body > * { position: relative; z-index: 1; }
 
 a { color: inherit; }

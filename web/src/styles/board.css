@@ -98,7 +98,7 @@
 
 .ev__name {
   margin: -.2rem 0 0;
-  font-family: var(--serif); font-weight: 400;
+  font-family: var(--font); font-weight: 700;
   font-size: clamp(1.3rem, 2.1vw, 1.72rem);
   line-height: 1.14; letter-spacing: -.015em;
   color: var(--ink);

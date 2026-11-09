@@ -93,9 +93,9 @@ test.describe('Accessibility basics', () => {
   test('focus is visible on the filter boxes', async ({ page }) => {
     await openBoard(page);
     await page.locator('#q').focus();
-    // The border animates to orange; wait for the transition rather than read it mid-way.
+    // The border animates to the ray colour; wait for the transition rather than read it mid-way.
     await expect.poll(() => page.locator('#q').locator('..').evaluate((e) => getComputedStyle(e).borderTopColor))
-      .toBe('rgb(255, 92, 26)');
+      .toBe('rgb(169, 196, 255)');
   });
 
   test('motion is reduced when asked', async ({ browser }) => {

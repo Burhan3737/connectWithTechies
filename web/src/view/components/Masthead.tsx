@@ -26,8 +26,8 @@ export function Masthead() {
         <span className="masthead__connect">connectWith</span><span className="masthead__techies">Techies</span>
       </h1>
       <p className="masthead__sub">
-        A departures board for tech events — hackathons, conferences, tech&nbsp;weeks, CTFs, meetups and demo nights
-        across the <em>United&nbsp;States</em> and <em>Canada</em>. Pick your city.
+        A night map of the tech events of the <em>United&nbsp;States</em> and <em>Canada</em> — hackathons,
+        conferences, tech&nbsp;weeks, CTFs, meetups and demo nights. Pick your city.
       </p>
       <dl className="tally" id="tally">
         {t && (
@@ -46,7 +46,7 @@ export function Masthead() {
 
 function Figure({ label, value, unit }: { label: string; value: number; unit?: string }) {
   return (
-    <div>
+    <div className="tally__i">
       <dt>{label}</dt>
       <dd>{value}{unit && <span className="u">{unit}</span>}</dd>
     </div>
