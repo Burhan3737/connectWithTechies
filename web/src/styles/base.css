@@ -24,17 +24,8 @@
   --font: 'B612', 'B612 fallback', system-ui, sans-serif;
   --pad: 40px;
 
-  /* Old names, mapped onto the night palette until each stylesheet is restyled. */
-  --ink-dim: var(--sec);
-  --ink-faint: var(--ter);
-  --paper-2: var(--raised);
+  /* Footer's rule colour, until it is restyled. */
   --rule: var(--raised-3);
-  --rule-soft: var(--raised-2);
-  --signal: var(--ray-ink);
-  --signal-dim: var(--ray);
-  --amber: var(--sun);
-  --serif: var(--display);
-  --mono: var(--font);
 
   --gutter: clamp(1.15rem, 4vw, 4.5rem);
   --maxw: 1440px;

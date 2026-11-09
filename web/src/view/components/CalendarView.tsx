@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { useApp } from '../context';
 import { chipsFor } from '../../model/calendar';
 import { MONTHS, WEEKDAYS, parseISO } from '../../model/dates';
@@ -14,6 +15,9 @@ export function CalendarView() {
 
   const { grid, day, dayEvents, title } = calendar;
   const opened = parseISO(day);
+  // A day's light is sized against the busiest day on screen, so the brightest is always 1.
+  const busiest = grid.days.reduce((m, d) => Math.max(m, d.events.length), 0);
+  const nextBusy = day ? grid.days.find((d) => d.inMonth && d.iso > day && d.events.length > 0) : undefined;
   return (
     <section className="cal" id="cal" aria-live="polite">
       <div className="cal__head">
@@ -23,6 +27,8 @@ export function CalendarView() {
         <button type="button" className="cal__today linky" data-month="0" onClick={actions.goToday}>today</button>
       </div>
 
+      <p className="cal__note">Each day counts every event running that day.</p>
+
       <div className="cal__grid" aria-label={title}>
         {WEEKDAYS.map((w) => <div key={w} className="cal__wd" aria-hidden="true">{w}</div>)}
         {grid.days.map((d) => {
@@ -31,11 +37,17 @@ export function CalendarView() {
           const cls = ['cal__day',
             !d.inMonth && 'is-out', d.iso === today && 'is-today', d.iso < today && 'is-past',
             d.iso === day && 'is-sel', n > 0 && 'has-ev'].filter(Boolean).join(' ');
+          const light = n > 0 ? Math.min(1, Math.sqrt(n / busiest)) : 0;
+          const month = MONTHS[Number(d.iso.slice(5, 7)) - 1];
           return (
-            <button key={d.iso} type="button" className={cls} data-day={d.iso} aria-pressed={d.iso === day}
-              aria-label={`${WEEKDAYS[d.weekday]} ${d.date} ${MONTHS[Number(d.iso.slice(5, 7)) - 1]}, ${n} ${n === 1 ? 'event' : 'events'}`}
+            <button key={d.iso} type="button" className={cls} data-day={d.iso}
+              style={n > 0 ? { '--g': light.toFixed(3) } as CSSProperties : undefined} aria-pressed={d.iso === day}
+              aria-label={`${WEEKDAYS[d.weekday]} ${d.date} ${month}, ${n} ${n === 1 ? 'event' : 'events'}`}
               onClick={() => actions.selectDay(d.iso)}>
-              <span className="cal__num">{d.date}{n > 0 && <span className="cal__count">{n}</span>}</span>
+              <span className="cal__num">
+                {!d.inMonth && <span className="cal__mo">{month.slice(0, 3)}</span>}
+                {d.date}{n > 0 && <span className="cal__count">{n}</span>}
+              </span>
               {chips.map((e) => (
                 <span key={e.id} className={`cal__ev${e.type === 'hackathon' ? ' cal__ev--hack' : ''}`}>{e.name}</span>
               ))}
@@ -54,6 +66,11 @@ export function CalendarView() {
           {dayEvents.length ? dayEvents.map((e, i) => (
             <EventRow key={e.id} event={e} when={shown.when} today={today} needle={shown.q.trim()} index={i} menuKey={`d${day}-${e.id}`} />
           )) : <p className="cal__none">Nothing on this day with the current filters.</p>}
+          {!dayEvents.length && nextBusy && (
+            <button type="button" className="cal__next" onClick={() => actions.selectDay(nextBusy.iso)}>
+              Next day with events… {WEEKDAYS[nextBusy.weekday]}, {MONTHS[Number(nextBusy.iso.slice(5, 7)) - 1]} {nextBusy.date}
+            </button>
+          )}
         </div>
       )}
     </section>

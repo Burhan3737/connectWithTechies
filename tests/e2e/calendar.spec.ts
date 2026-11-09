@@ -276,6 +276,68 @@ test.describe('Calendar view', () => {
     await expect(page.locator('.cal__day.is-sel')).toHaveAttribute('data-day', '2026-12-10');
   });
 
+  test('each day shows a light sized by its count', async ({ page }) => {
+    await openBoard(page, 'view=calendar');
+    const lit = page.locator('.cal__day.has-ev');
+    expect(await lit.count()).toBeGreaterThan(0);
+    const lights = await lit.evaluateAll((els) => els.map((e) => ({
+      g: Number(getComputedStyle(e).getPropertyValue('--g')),
+      n: Number(e.querySelector('.cal__count')?.textContent || 0),
+    })));
+    for (const l of lights) { expect(l.g).toBeGreaterThan(0); expect(l.g).toBeLessThanOrEqual(1); }
+    const busiest = lights.reduce((a, b) => (b.n > a.n ? b : a));
+    expect(busiest.g).toBeCloseTo(1, 5);
+    for (const l of lights) expect(l.g).toBeCloseTo(Math.min(1, Math.sqrt(l.n / busiest.n)), 3);
+    // The light is the dot, not a gradient poured into the cell.
+    expect(await page.locator('.cal__day').evaluateAll((els) => els.every((e) => getComputedStyle(e).backgroundImage === 'none'))).toBe(true);
+  });
+
+  test('a one-line note says what a day counts', async ({ page }) => {
+    await openBoard(page, 'view=calendar');
+    await expect(page.locator('.cal__note')).toHaveText('Each day counts every event running that day.');
+  });
+
+  test('days of the neighbouring months say which month they belong to', async ({ page }) => {
+    await openBoard(page, 'view=calendar');
+    const out = page.locator('.cal__day.is-out');
+    test.skip(!(await out.count()), 'the month fills whole weeks');
+    for (const mo of await out.locator('.cal__mo').allTextContents()) expect(mo).toMatch(/^[A-Z][a-z]{2}$/);
+    expect(await out.evaluateAll((els) => els.every((e) => e.querySelector('.cal__mo')))).toBe(true);
+    await expect(page.locator('.cal__day:not(.is-out) .cal__mo')).toHaveCount(0);
+  });
+
+  test('an empty opened day offers nothing when no day has events', async ({ page }) => {
+    await openBoard(page, 'view=calendar&type=hackathon&cities=nowhere%7Cnone');
+    await expect(page.locator('.cal__none')).toBeVisible();
+    await expect(page.locator('.cal__next')).toHaveCount(0);
+  });
+
+  test('an empty opened day offers the next day with events, and tapping it opens that day', async ({ page }) => {
+    const t = await today(page);
+    let target: string | null = null;
+    for (const type of ['hackathon', 'conference', 'workshop', 'ctf', 'game-jam', 'summit', 'meetup']) {
+      await openBoard(page, `view=calendar&type=${type}`);
+      const busy = await page.locator('.cal__day.has-ev').evaluateAll((els) => els.map((e) => e.getAttribute('data-day')!));
+      const quietToday = !busy.includes(t);
+      const later = busy.filter((d) => d > t).sort()[0];
+      if (quietToday && later) { target = later; break; }
+    }
+    test.skip(!target, 'no filter leaves today empty with a later day busy');
+    await expect(page.locator('.cal__day.is-sel')).toHaveAttribute('data-day', t);
+    await expect(page.locator('.cal__none')).toBeVisible();
+    await page.locator('.cal__next').click();
+    await expect(page.locator('.cal__day.is-sel')).toHaveAttribute('data-day', target!);
+    await expect(page.locator('.cal__next')).toHaveCount(0);
+  });
+
+  test('the sticky filter bar does not cover the calendar head when it is scrolled to', async ({ page }) => {
+    await openBoard(page, 'view=calendar');
+    await page.locator('#cal').evaluate((el) => el.scrollIntoView());
+    const bar = (await page.locator('.controls').boundingBox())!;
+    const head = (await page.locator('.cal__head').boundingBox())!;
+    expect(head.y).toBeGreaterThanOrEqual(bar.y + bar.height - 1);
+  });
+
   test('When and Sort do not apply in the calendar', async ({ page }) => {
     await openBoard(page, 'view=calendar');
     await expect(page.locator('.field--when')).toHaveCSS('pointer-events', 'none');
