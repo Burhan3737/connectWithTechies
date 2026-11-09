@@ -24,9 +24,6 @@
   --font: 'B612', 'B612 fallback', system-ui, sans-serif;
   --pad: 40px;
 
-  /* Footer's rule colour, until it is restyled. */
-  --rule: var(--raised-3);
-
   --gutter: clamp(1.15rem, 4vw, 4.5rem);
   --maxw: 1440px;
   color-scheme: dark;

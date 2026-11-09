@@ -166,7 +166,10 @@
 /* Source text carries raw URLs with no spaces in them (one Luma description had
    a 161-character link). Unbroken, a phone zooms the whole page out to fit it;
    so a word too long for its line breaks wherever it must. */
-.ev__name, .ev__desc, .ev__city, .ev__venue { overflow-wrap: anywhere; }
+.ev__name, .ev__desc, .ev__venue { overflow-wrap: anywhere; }
+/* A city is a short word that sits inline beside its province on a phone: `anywhere` would let the line
+   break it mid-word to fill the space left over ("Pitt/sbu/rgh"). `break-word` only breaks one too long for a line of its own. */
+.ev__city { overflow-wrap: break-word; }
 
 .ev__where { display: flex; flex-direction: column; min-width: 0; font-size: .8125rem; color: var(--sec); line-height: 1.35; }
 .ev__city { font-size: .9375rem; font-weight: 700; color: var(--ink); }

@@ -42,3 +42,8 @@
   .addcal { position: absolute; right: max(8px, env(safe-area-inset-right)); bottom: 0; }
   .evrow:has(.addcal) .ev__where { padding-right: 104px; }
 }
+/* On a narrow phone the place column is too thin to share with the button: it keeps the full width and the
+   button gets a line of its own beneath. */
+@media (max-width: 380px) {
+  .evrow:has(.addcal) .ev__where { padding-right: 0; padding-bottom: 44px; }
+}

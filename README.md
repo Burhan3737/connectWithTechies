@@ -1,6 +1,6 @@
 # connectWithTechies
 
-A departures board for tech events across the **United States** and **Canada** — hackathons,
+A night map and list of tech events across the **United States** and **Canada** — hackathons,
 conferences, tech weeks, CTFs, game jams, unconferences, demo days, awards nights,
 recurring meetup series, and tonight's founders' mixer or AI builders' night: anywhere you
 might meet tech people. Pick your city, see what is on, click straight through to the
@@ -30,6 +30,7 @@ npm ci
 npm run dev        # http://localhost:5173/connectWithTechies/ — hot reload
 npm test           # feed parsers + app unit tests (Vitest)
 npm run test:e2e   # builds, serves and tests the site in a real browser (Playwright)
+npm run check:places # every city has a position on the map (data/places.json)
 npm run build      # type-check and build to dist/
 ```
 

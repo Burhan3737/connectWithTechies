@@ -270,6 +270,20 @@ test.describe('Accessibility basics', () => {
   });
 });
 
+test.describe('Bundle budget @mobile', () => {
+  test('the first load on a phone does not fetch the map data until the map is opened @mobile', async ({ page }) => {
+    const urls: string[] = [];
+    page.on('response', (r) => urls.push(r.url()));
+    await openBoard(page);
+    await expect(page.locator('.viewpill')).toBeVisible();
+    await page.waitForTimeout(1500);
+    expect(urls.filter((u) => /map-data/.test(u))).toEqual([]);
+    await page.tap('.viewpill');
+    await expect(page.locator('#mapView')).toBeVisible();
+    expect(urls.some((u) => /map-data/.test(u))).toBe(true);
+  });
+});
+
 test.describe('Performance @perf', () => {
   test.describe.configure({ mode: 'serial' });
   test('first rows appear quickly', async ({ page }) => {

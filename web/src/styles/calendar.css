@@ -94,7 +94,7 @@ mark { background: rgba(255, 183, 104, .24); color: var(--sun-ink); padding: 0 .
   .cal__title { flex: 1; min-width: 0; font-size: 1.75rem; }
   .cal__note { padding: 0 6px; font-size: .9375rem; }
   .cal__grid { gap: 3px; }
-  .cal__wd { padding: 2px 4px; font-size: .75rem; text-align: center; }
+  .cal__wd { padding: 2px 4px; font-size: .8125rem; text-align: center; }
   .cal__day { min-height: 58px; padding: 5px 4px; align-items: center; gap: 0; }
   .cal__num { flex-direction: column; align-items: center; gap: 2px; }
   .cal__count { margin-left: 0; font-size: 1.125rem; }
