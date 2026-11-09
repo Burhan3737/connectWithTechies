@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { clusterLights, layoutLabels, lightRadius, placeLights, zoomGrowth, type Cluster, type LabelBox } from './mapCluster';
+import { clusterLights, layoutLabels, lightRadius, metroLights, placeLights, zoomGrowth, type Cluster, type LabelBox } from './mapCluster';
 import { fitPoints, mercator, toScreen } from './mapGeometry';
 import { parsePlaces } from './places';
 import type { CityOption, IndexedEvent } from './types';
@@ -134,5 +134,30 @@ describe('placeLights', () => {
 
   it('leaves out cities with no position of their own', () => {
     expect(placeLights([ev('nowhere|x', '2026-11-10')], cities, places, ['nowhere|x'], TODAY, 'upcoming')).toEqual([]);
+  });
+
+  it('labels same-name places with their state or province', () => {
+    const twins: CityOption[] = [
+      { key: 'vancouver|washington', city: 'Vancouver', region: 'Washington', country: 'United States', count: 1 },
+      { key: 'vancouver|british columbia', city: 'Vancouver', region: 'British Columbia', country: 'Canada', count: 1 },
+    ];
+    const at = parsePlaces({ cities: { 'vancouver|washington': [45.6, -122.7], 'vancouver|british columbia': [49.3, -123.1] } });
+    const out = placeLights([ev('vancouver|washington', '2026-11-20'), ev('vancouver|british columbia', '2026-11-20')], twins, at, [], TODAY, 'upcoming');
+    expect(out.map((l) => l.label)).toEqual(['Vancouver WA', 'Vancouver BC']);
+  });
+});
+
+describe('metroLights', () => {
+  const places = parsePlaces({ cities: { 'p|x': [40, -80] }, metros: [{ lat: 41, lon: -81, members: ['town|x', 'p|x', 'idle|x'] }] });
+  const ev = (key: string) => ({ cityKey: key }) as unknown as IndexedEvent;
+
+  it('lists the places in scope known only by their metro, with their matching events', () => {
+    const out = metroLights([ev('town|x'), ev('town|x'), ev('p|x')], new Set(['p|x', 'town|x', 'idle|x']), places);
+    const [x, y] = mercator([41, -81]);
+    expect(out).toEqual([{ key: 'town|x', x, y, n: 2, soon: 0 }]);
+  });
+
+  it('is empty with nothing in scope', () => {
+    expect(metroLights([ev('town|x')], null, places)).toEqual([]);
   });
 });

@@ -65,6 +65,11 @@ export function fitPoints(points: LatLon[], s: Size, padPx: number, isPhone: boo
   return { x: (x0 + x1) / 2, y: (y0 + y1) / 2, z: Math.min(MAX_Z, fitZ(s, x0, x1, y0, y1, padPx)) };
 }
 
+/** The zoom at which `width` px spans about 520 km at this latitude: one city and its surroundings. */
+export function cityZoom(lat: number, width: number): number {
+  return Math.log((width * 40075 * Math.cos(lat * RAD)) / 520 / 256) / Math.LN2;
+}
+
 export function clampView(v: View, s: Size, isPhone: boolean): View {
   const { lon0, lon1, lat0, lat1 } = MAP_EXTENT;
   const ex0 = mxOf(lon0), ex1 = mxOf(lon1), ey0 = myOf(lat1), ey1 = myOf(lat0);

@@ -1,8 +1,9 @@
-import { useDeferredValue, useEffect, useReducer, useState } from 'react';
+import { useDeferredValue, useEffect, useMemo, useReducer, useState } from 'react';
 import { applyFilters } from '../model/filters';
-import { radiusScope } from '../model/places';
+import { formatKm } from '../model/geo';
+import { anyPosition, ownPosition, placeNames, radiusScope, rangeFrom, type LatLon } from '../model/places';
 import { groupLabel } from '../model/events';
-import { placeLights, type Light } from '../model/mapCluster';
+import { metroLights, placeLights, type Light } from '../model/mapCluster';
 import { bandMarks, type BandMark } from '../model/bands';
 import { buildMonth, occurrenceOn, type CalendarMonth, type Occurrence } from '../model/calendar';
 import { monthTitle, todayISO } from '../model/dates';
@@ -40,8 +41,17 @@ export interface AppViewModel {
   /** `keys` is null with no city picked; `added` counts the places the radius brought in. */
   scope: { keys: ReadonlySet<string> | null; added: number };
   scopeLabel: string;
-  /** `lights`: events per place under every filter but Cities. `available`: there are positions to draw. */
-  map: { lights: Light[]; picked: string[]; available: boolean };
+  /** How far a place is from the nearest picked city: '', 'here' or '305 km SE of Pittsburgh'. */
+  rangeText(cityKey: string): string;
+  /**
+   * `lights`: events per place under every filter but Cities. `available`: there are positions to draw.
+   * `placed`: the picked cities with a position of their own, the only ones a radius reaches out from.
+   * `byMetro`: places in scope known only by their metro. `positionOf`: where to look for a place.
+   */
+  map: {
+    lights: Light[]; picked: string[]; available: boolean; placed: string[]; byMetro: Light[];
+    positionOf(key: string): LatLon | undefined;
+  };
   actions: {
     setQuery(q: string): void;
     addCity(key: string): void; removeCity(key: string): void; popCity(): void; clearCities(): void; setRadius(r: Radius): void;
@@ -106,9 +116,17 @@ export function useAppViewModel(indexes: Indexes, search: string = window.locati
   // The map shows every city whatever is picked, so its lights ignore the Cities filter.
   const available = indexes.places.own.size > 0 || indexes.places.metro.size > 0;
   const lightsWhen = inCalendar ? 'all' : shown.when;
-  const lights = available
-    ? placeLights(applyFilters(indexes.events, { ...shown, cities: [] }, today, lightsWhen), indexes.cities, indexes.places, shown.cities, today, lightsWhen)
-    : [];
+  const matching = available ? applyFilters(indexes.events, { ...shown, cities: [] }, today, lightsWhen) : [];
+  const lights = available ? placeLights(matching, indexes.cities, indexes.places, shown.cities, today, lightsWhen) : [];
+  const names = useMemo(() => placeNames(indexes.cities), [indexes.cities]);
+
+  const rangeText = (cityKey: string): string => {
+    // A pick with no position of its own has no "here" to speak of.
+    if (!ownPosition(indexes.places, cityKey)) return '';
+    const range = rangeFrom(cityKey, shown.cities, indexes.places);
+    if (!range) return '';
+    return range.kind === 'here' ? 'here' : `${formatKm(range.km)} ${range.dir} of ${names.get(range.fromKey) ?? range.fromKey}`;
+  };
 
   const n = shown.cities.length;
   return {
@@ -126,7 +144,13 @@ export function useAppViewModel(indexes: Indexes, search: string = window.locati
     scope: { keys: scopeKeys, added },
     scopeLabel: (n ? `${n} ${n === 1 ? 'city' : 'cities'}` : 'all cities') +
       (added ? ` + ${added} ${added === 1 ? 'place' : 'places'} within ${shown.r} km` : ''),
-    map: { lights, picked: shown.cities, available },
+    rangeText,
+    map: {
+      lights, picked: shown.cities, available,
+      placed: shown.cities.filter((k) => ownPosition(indexes.places, k)),
+      byMetro: metroLights(matching, scopeKeys, indexes.places),
+      positionOf: (key) => anyPosition(indexes.places, key),
+    },
     actions: {
       setQuery: (q) => dispatch({ type: 'query', q }),
       addCity: (key) => dispatch({ type: 'addCity', key }),

@@ -1,6 +1,6 @@
 import { addDays } from './dates';
 import { mercator, scaleOf, toScreen, type Size, type View } from './mapGeometry';
-import { ownPosition, type PlaceTable } from './places';
+import { anyPosition, ownPosition, placeNames, type PlaceTable } from './places';
 import type { CityOption, IndexedEvent, When } from './types';
 
 export interface DOMRectLike { left: number; top: number; right: number; bottom: number }
@@ -27,13 +27,33 @@ export function placeLights(
     if (when !== 'past' && e.next_date && (e.next_date_end || e.next_date) >= today && e.next_date <= horizon) c.soon++;
     counts.set(e.cityKey, c);
   }
+  const names = placeNames(cities);
   const out: Light[] = [];
   for (const city of cities) {
     const at = ownPosition(places, city.key);
     const c = counts.get(city.key);
     if (!at || (!c && !picked.includes(city.key))) continue;
     const [x, y] = mercator(at);
-    out.push({ key: city.key, label: city.city, x, y, n: c?.n ?? 0, soon: c ? c.soon / c.n : 0 });
+    out.push({ key: city.key, label: names.get(city.key), x, y, n: c?.n ?? 0, soon: c ? c.soon / c.n : 0 });
+  }
+  return out;
+}
+
+/**
+ * The places in scope known only by the metro they belong to, each at the metro's
+ * centre. They have no light of their own: they are listed, and never given a distance.
+ */
+export function metroLights(matching: readonly IndexedEvent[], scope: ReadonlySet<string> | null, places: PlaceTable): Light[] {
+  if (!scope) return [];
+  const counts = new Map<string, number>();
+  for (const e of matching) if (scope.has(e.cityKey)) counts.set(e.cityKey, (counts.get(e.cityKey) ?? 0) + 1);
+  const out: Light[] = [];
+  for (const [key, n] of counts) {
+    if (ownPosition(places, key)) continue;
+    const at = anyPosition(places, key);
+    if (!at) continue;
+    const [x, y] = mercator(at);
+    out.push({ key, x, y, n, soon: 0 });
   }
   return out;
 }

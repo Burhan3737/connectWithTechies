@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
-  clampView, decodeLine, fitPoints, homeView, mercator, scaleOf, toScreen, toWorld, unmercator,
+  cityZoom, clampView, decodeLine, fitPoints, homeView, mercator, scaleOf, toScreen, toWorld, unmercator,
 } from './mapGeometry';
 
 const s = { w: 800, h: 600 };
@@ -98,5 +98,17 @@ describe('shipped map data', () => {
       }
     }
     expect(lines).toBeGreaterThan(100);
+  });
+});
+
+describe('cityZoom', () => {
+  it('frames about 520 km across the width at that latitude', () => {
+    const lat = 43.65, z = cityZoom(lat, 1000);
+    const kmPerWorld = 40075 * Math.cos((lat * Math.PI) / 180);
+    expect((1000 / scaleOf(z)) * kmPerWorld).toBeCloseTo(520, 3);
+  });
+
+  it('stays well under the closest zoom the map allows', () => {
+    expect(cityZoom(40, 1440)).toBeLessThan(9);
   });
 });

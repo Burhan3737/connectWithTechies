@@ -14,7 +14,28 @@
 }
 .map__view { position: absolute; inset: 0; touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
 .map__view.is-dragging { cursor: grabbing; }
+.map__view:focus-visible::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 0 2px var(--focus); pointer-events: none; }
 .map__canvas { position: absolute; left: 0; top: 0; display: block; }
+
+/* Include nearby: a radio group above the map. */
+.radius { display: flex; flex-wrap: wrap; align-items: center; margin-left: auto; }
+.rad__b { position: relative; min-height: 44px; padding: 0 10px; border: 0; background: none; color: var(--sec); font: inherit; font-size: .875rem; white-space: nowrap; cursor: pointer; }
+.rad__b:hover { color: var(--ink); }
+.rad__b[aria-checked=true] { color: var(--ink); font-weight: 700; }
+.rad__b[aria-checked=true]::after { content: ''; position: absolute; left: 8px; right: 8px; bottom: 5px; height: 2px; background: var(--airglow); box-shadow: 0 0 8px rgba(163, 227, 180, .7); }
+.rad__b:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+
+/* Find a city: floats over the map, with its list kept inside the frame. */
+.map__find { position: absolute; left: var(--gutter); top: 16px; z-index: 4; display: flex; align-items: center; gap: 8px; width: min(340px, calc(100% - 2 * var(--gutter) - 60px)); height: 44px; padding: 0 12px; background: rgba(8, 12, 15, .92); box-shadow: inset 0 -1px 0 rgba(170, 196, 255, .4), 0 10px 26px rgba(0, 0, 0, .45); }
+.map__find:focus-within { box-shadow: inset 0 -2px 0 var(--limb), 0 10px 26px rgba(0, 0, 0, .45); }
+.map__findico { flex: none; width: 16px; height: 16px; color: var(--sec); }
+.map__find input { flex: 1; min-width: 0; height: 100%; border: 0; background: none; outline: none; color: var(--ink); font: inherit; font-size: .9375rem; }
+.map__find input::placeholder { color: #9aa5b8; }
+.map__find .map__opts { left: 0; right: 0; top: calc(100% + 4px); min-width: 0; max-height: calc(clamp(340px, 50vh, 500px) - 72px); }
+
+.chip--rad::before { background: none; box-shadow: inset 0 0 0 1.5px var(--airglow); }
+
+.ev__range { color: var(--ray-ink); font-size: .8125rem; }
 
 /* The date rail sits fixed over the page's right edge; the controls stay clear of it. */
 .map__zoom { position: absolute; right: 124px; top: 16px; z-index: 4; display: flex; flex-direction: column; gap: 2px; }
@@ -45,9 +66,19 @@
 .ml__b[aria-pressed=true] .ml__name b { color: var(--sun-ink); }
 .ml__b[aria-pressed=true] .ml__n::before { content: '\25CF  '; color: var(--sun); font-size: .7em; vertical-align: .15em; }
 .ml__none { margin: 0; padding: 10px 4px; color: var(--sec); }
+.ml__more { grid-column: 1 / -1; padding: 10px 4px; font-size: .875rem; color: var(--sec); }
+.ml__metro { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 10px; min-height: 44px; padding: 0 4px; font-size: .875rem; color: var(--ink); box-shadow: inset 0 -1px 0 rgba(170, 196, 255, .08); }
+.ml__by { font-size: .8125rem; color: var(--sec); white-space: nowrap; }
 
 @media (max-width: 720px), (max-height: 500px) and (pointer: coarse) and (orientation: landscape), (max-height: 460px) and (orientation: landscape) {
   .map__title { font-size: 1.375rem; }
+  .radius { margin-left: -8px; width: calc(100% + 8px); }
+  .rad__b { padding: 0 8px; font-size: .9375rem; }
+  .map__find { left: 12px; right: 64px; top: 10px; width: auto; }
+  .map__find .map__opts { max-height: calc(max(250px, 50svh) - 62px); }
+  .ev__range { font-size: .9375rem; flex-basis: 100%; display: block; }
+  .ml__metro { font-size: .9375rem; min-height: 48px; }
+  .ml__by, .ml__more { font-size: .9375rem; }
   .map__reg { display: none; }
   .map__frame { height: 50vh; height: 50svh; min-height: 250px; }
   .map__zoom { right: var(--gutter); top: 10px; }

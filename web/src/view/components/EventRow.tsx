@@ -1,8 +1,9 @@
 import { fmtDay, fmtMonYear, fmtRange, fmtWeekday, MONTHS, parseISO } from '../../model/dates';
 import { bandOf } from '../../model/bands';
-import { dateLine, keyDate, monthHint, runsUntil } from '../../model/events';
+import { cityKeyOf, dateLine, keyDate, monthHint, runsUntil } from '../../model/events';
 import { cleanDescription } from '../../model/text';
 import type { TechEvent, When } from '../../model/types';
+import { useApp } from '../context';
 import { Highlight } from './Highlight';
 import { AddToCalendar } from './AddToCalendar';
 
@@ -18,6 +19,8 @@ interface Props {
 
 /** One event: the whole row links to the organiser; + Calendar sits beside it. */
 export function EventRow({ event: e, when, today, needle, index, menuKey }: Props) {
+  const { rangeText } = useApp();
+  const range = rangeText(cityKeyOf(e));
   const k = keyDate(e, when, today);
   // + Calendar only when the row shows the date that would go in a calendar:
   // under Past an annual event shows the edition held, not the next one.
@@ -40,7 +43,7 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
     <div className="evrow" data-band={tone}>
       <a className="ev" href={e.url} target="_blank" rel="noopener noreferrer"
         style={{ animationDelay: `${Math.min(index, 14) * 22}ms` }}
-        aria-label={`${e.name} — ${dateLine(e, when, today, fmtRange)} — ${e.city} — opens the official site in a new tab`}>
+        aria-label={`${e.name} — ${dateLine(e, when, today, fmtRange)} — ${e.city}${range ? `, ${range}` : ''} — opens the official site in a new tab`}>
         {k ? (
           <span className="ev__when">
             <span className="ev__day">
@@ -63,6 +66,7 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
         <span className="ev__where">
           <span className="ev__city"><Highlight text={e.city} needle={needle} /></span>
           <span className="ev__geo">{e.region}{e.country === 'Canada' ? ' · CA' : ' · US'}</span>
+          {range && <span className="ev__range">{range}</span>}
           {e.venue && <span className="ev__venue">{e.venue}</span>}
         </span>
         <span className="ev__go" aria-hidden="true">↗</span>

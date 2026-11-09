@@ -1,5 +1,6 @@
 import { bearingDeg, compass8, haversineKm } from './geo';
-import type { Radius } from './types';
+import { fold } from './text';
+import type { CityOption, Radius } from './types';
 
 /**
  * Where cities are. Positions are optional data: the list, filters and
@@ -94,4 +95,25 @@ export function rangeFrom(cityKey: string, picked: readonly string[], t: PlaceTa
   if (!best) return null;
   if (best.km < 1) return { kind: 'here' };
   return { kind: 'away', km: best.km, dir: compass8(bearingDeg(best.pos, here)), fromKey: best.key };
+}
+
+/** Abbreviations for the regions that share a city name with another region. Any other region is spelled out. */
+const REGION_ABBR: Readonly<Record<string, string>> = {
+  Alabama: 'AL', Arizona: 'AZ', Arkansas: 'AR', California: 'CA', Colorado: 'CO', Connecticut: 'CT', Delaware: 'DE',
+  Florida: 'FL', Georgia: 'GA', Illinois: 'IL', Indiana: 'IN', Kansas: 'KS', Kentucky: 'KY', Louisiana: 'LA', Maine: 'ME',
+  Maryland: 'MD', Massachusetts: 'MA', Michigan: 'MI', Minnesota: 'MN', Mississippi: 'MS', Missouri: 'MO', Montana: 'MT',
+  Nebraska: 'NE', 'New Hampshire': 'NH', 'New Jersey': 'NJ', 'New York': 'NY', 'North Carolina': 'NC', Ohio: 'OH',
+  Oregon: 'OR', Pennsylvania: 'PA', 'Rhode Island': 'RI', 'South Carolina': 'SC', 'South Dakota': 'SD', Tennessee: 'TN',
+  Texas: 'TX', Vermont: 'VT', Virginia: 'VA', Washington: 'WA', 'West Virginia': 'WV', Wisconsin: 'WI', Wyoming: 'WY',
+  'British Columbia': 'BC', Ontario: 'ON',
+};
+
+/** What to call each place by key: its city, with its state or province when another region has a city of that name. */
+export function placeNames(cities: readonly CityOption[]): Map<string, string> {
+  const uses = new Map<string, number>();
+  for (const c of cities) uses.set(fold(c.city), (uses.get(fold(c.city)) ?? 0) + 1);
+  return new Map(cities.map((c) => [
+    c.key,
+    (uses.get(fold(c.city)) ?? 0) > 1 ? `${c.city} ${REGION_ABBR[c.region] ?? c.region}` : c.city,
+  ]));
 }

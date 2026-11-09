@@ -37,7 +37,7 @@ describe('useAppViewModel', () => {
   });
 
   it('lights every placed city whatever is picked, and has no map without positions', () => {
-    expect(render().result.current.map).toEqual({ lights: [], picked: [], available: false });
+    expect(render().result.current.map).toMatchObject({ lights: [], picked: [], available: false });
     const places = parsePlaces({ cities: { 'toronto|ontario': [43.65, -79.38], 'austin|texas': [30.27, -97.74] } });
     const { result } = renderHook(() => useAppViewModel({ ...indexes(), places }, '?cities=toronto%7Contario'));
     expect(result.current.map.available).toBe(true);
@@ -50,6 +50,37 @@ describe('useAppViewModel', () => {
     const { result } = render('?region=Ontario&type=hackathon');
     expect(result.current.filters).toMatchObject({ region: 'Ontario', country: 'Canada', type: 'hackathon' });
     expect(result.current.board.events.map((e) => e.name)).toEqual(['Hack the North']);
+  });
+
+  describe('rangeText', () => {
+    const places = parsePlaces({
+      cities: { 'waterloo|ontario': [43.46, -80.52], 'toronto|ontario': [43.65, -79.38] },
+      metros: [{ lat: 43.7, lon: -79.4, members: ['seattle|washington'] }],
+    });
+    const at = (search: string) => renderHook(() => useAppViewModel({ ...indexes(), places }, search)).result.current;
+
+    it('is empty with no city picked', () => {
+      expect(at('').rangeText('toronto|ontario')).toBe('');
+    });
+
+    it('says here for a picked city and how far from the nearest pick for the rest', () => {
+      const vm = at('?cities=waterloo%7Contario');
+      expect(vm.rangeText('waterloo|ontario')).toBe('here');
+      expect(vm.rangeText('toronto|ontario')).toMatch(/^\d+ km E of Waterloo$/);
+    });
+
+    it('gives no distance to a place known only by its metro or to a pick with no position', () => {
+      expect(at('?cities=waterloo%7Contario').rangeText('seattle|washington')).toBe('');
+      const vm = at('?cities=austin%7Ctexas');
+      expect(vm.rangeText('austin|texas')).toBe('');
+      expect(vm.rangeText('toronto|ontario')).toBe('');
+    });
+
+    it('lists places the radius reached only by metro area', () => {
+      const vm = at('?cities=waterloo%7Contario&r=150');
+      expect(vm.map.placed).toEqual(['waterloo|ontario']);
+      expect(vm.map.byMetro.map((l) => [l.key, l.n])).toEqual([['seattle|washington', 1]]);
+    });
   });
 
   it('commands change the board and are mirrored to the URL', () => {

@@ -51,6 +51,7 @@ function Ready({ indexes }: { indexes: Indexes }) {
         <EmptyState />
       </main>
       <Footer />
+      <div id="sr" className="sr" aria-live="polite" />
     </AppContext>
   );
 }

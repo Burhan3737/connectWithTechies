@@ -1,4 +1,5 @@
-import { EMPTY_PLACES, anyPosition, loadPlaces, ownPosition, parsePlaces, radiusScope, rangeFrom } from './places';
+import { EMPTY_PLACES, anyPosition, loadPlaces, ownPosition, parsePlaces, placeNames, radiusScope, rangeFrom } from './places';
+import type { CityOption } from './types';
 
 describe('parsePlaces', () => {
   const t = parsePlaces({ cities: { 'a|b': [1, 2] }, metros: [{ lat: 5, lon: 6, members: ['c|d', 'a|b'] }] });
@@ -61,5 +62,27 @@ describe('radius', () => {
     const r = rangeFrom('near|x', ['p|x', 'far|x'], t);
     expect(r).toMatchObject({ kind: 'away', dir: 'N', fromKey: 'p|x' });
     expect((r as { km: number }).km).toBeCloseTo(6.7, 0);
+  });
+});
+
+describe('placeNames', () => {
+  const city = (name: string, region: string): CityOption =>
+    ({ key: `${name.toLowerCase()}|${region.toLowerCase()}`, city: name, region, country: 'United States', count: 1 });
+
+  it('leaves a name that only one region has alone', () => {
+    expect(placeNames([city('Pittsburgh', 'Pennsylvania')]).get('pittsburgh|pennsylvania')).toBe('Pittsburgh');
+  });
+
+  it('adds the state or province when the same name is in more than one region', () => {
+    const names = placeNames([city('Vancouver', 'Washington'), city('Vancouver', 'British Columbia'), city('Portland', 'Oregon')]);
+    expect(names.get('vancouver|washington')).toBe('Vancouver WA');
+    expect(names.get('vancouver|british columbia')).toBe('Vancouver BC');
+    expect(names.get('portland|oregon')).toBe('Portland');
+  });
+
+  it('treats accents as the same name and spells out a region with no abbreviation', () => {
+    const names = placeNames([city('Montréal', 'Quebec'), city('Montreal', 'Wisconsin')]);
+    expect(names.get('montréal|quebec')).toBe('Montréal Quebec');
+    expect(names.get('montreal|wisconsin')).toBe('Montreal WI');
   });
 });

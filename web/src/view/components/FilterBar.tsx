@@ -63,7 +63,7 @@ export function FilterBar() {
 }
 
 function Chips() {
-  const { filters, options, actions } = useApp();
+  const { filters, options, map, scope, actions } = useApp();
   if (!filters.cities.length) return null;
   return (
     <div className="chips" id="chips" aria-live="polite">
@@ -77,6 +77,13 @@ function Chips() {
           </span>
         );
       })}
+      {filters.r > 0 && map.placed.length > 0 && (
+        <span className="chip chip--rad">
+          + {scope.added} {scope.added === 1 ? 'place' : 'places'} within {filters.r} km
+          <button type="button" data-radius="0" aria-label={`Remove the ${filters.r} km radius (keep just the picked cities)`}
+            onClick={() => actions.setRadius(0)}>×</button>
+        </span>
+      )}
     </div>
   );
 }
