@@ -141,7 +141,7 @@ export function NightMap({ data, mode }: { data: MapData; mode: MapMode }) {
 
   // Back on screen: the view is as it was left, unless the picks or the radius changed while it was away.
   const picksAndRadius = `${map.picked.join(';')}|${shown.r}`;
-  const lastOnScreen = useRef(picksAndRadius);
+  const lastOnScreen = useRef(hidden ? '' : picksAndRadius);
   useEffect(() => {
     const engine = engineRef.current;
     if (!engine || hidden) return;

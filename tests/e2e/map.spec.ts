@@ -286,11 +286,16 @@ test.describe('The phone List/Map switch', () => {
     await page.tap('.viewpill');
     await expect(page.locator('#mapView')).toHaveAttribute('data-center', /./);
     const home = await center();
+    await expect(page.locator('#mapView')).toBeFocused();
+    await page.keyboard.press('ArrowRight');
+    await expect.poll(center).not.toBe(home);
+    const moved = await center();
     await page.tap('.viewpill');
     await expect(page.locator('html')).not.toHaveClass(/map-open/);
     await page.tap('.viewpill');
     await expect(page.locator('html')).toHaveClass(/map-open/);
-    expect(await center()).toBe(home);
+    await expect(page.locator('#mapView')).toBeFocused();
+    expect(await center()).toBe(moved);
     await page.tap('.viewpill');
     await expect(page.locator('html')).not.toHaveClass(/map-open/);
     await page.tap('#deckBtn');
