@@ -1,5 +1,6 @@
 import { todayISO } from './dates';
 import { asOf, cityKeyOf, haystackOf } from './events';
+import { EMPTY_PLACES, type PlaceTable } from './places';
 import type { CityOption, Dataset, IndexedEvent, KindOption, RegionOption } from './types';
 
 /**
@@ -13,6 +14,7 @@ const NOT_A_REGION = /^(various|multiple|n\/a|us & canada)$/i;
 
 export interface Indexes {
   generatedOn: string;
+  places: PlaceTable;                  // where cities are; empty when the file could not be loaded
   events: IndexedEvent[];
   cities: CityOption[];                // most events first
   regions: Map<string, RegionOption>;  // by region name
@@ -32,7 +34,7 @@ export function kindLabel(value: string): string {
 }
 
 /** `today` is the visitor's date: every event is filed as it stands on it, not on the build's. */
-export function buildIndexes(data: Dataset, today: string = todayISO()): Indexes {
+export function buildIndexes(data: Dataset, today: string = todayISO(), places: PlaceTable = EMPTY_PLACES): Indexes {
   const events: IndexedEvent[] = data.events.map((e, id) => ({ ...asOf(e, today), id, cityKey: cityKeyOf(e), hay: haystackOf(e) }));
 
   const cityMap = new Map<string, CityOption>();
@@ -57,6 +59,7 @@ export function buildIndexes(data: Dataset, today: string = todayISO()): Indexes
 
   return {
     generatedOn: data.generated_on,
+    places,
     events, cities, regions, kinds, countryCounts,
     counts: {
       events: events.length,

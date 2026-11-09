@@ -1,4 +1,5 @@
 import { buildIndexes, kindLabel, loadDataset } from './repository';
+import { EMPTY_PLACES, parsePlaces } from './places';
 import { DATASET, TODAY } from '../test/fixtures';
 
 describe('buildIndexes', () => {
@@ -53,4 +54,12 @@ describe('loadDataset', () => {
 describe('kindLabel', () => {
   it('capitalises a kind for people', () => expect(kindLabel('tech-week')).toBe('Tech week'));
   it('keeps acronyms in capitals', () => expect(kindLabel('ctf')).toBe('CTF'));
+});
+
+describe('buildIndexes places', () => {
+  it('carries the place table, empty by default', () => {
+    expect(buildIndexes(DATASET, TODAY).places).toBe(EMPTY_PLACES);
+    const t = parsePlaces({ cities: { 'a|b': [1, 2] } });
+    expect(buildIndexes(DATASET, TODAY, t).places).toBe(t);
+  });
 });

@@ -1,13 +1,15 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
 import type { Plugin } from 'vite';
 
 /**
- * Serves data/events.json to the app — in dev from the pipeline's file, in a
+ * Serves data/events.json and data/places.json to the app — in dev from the pipeline's file, in a
  * build as an emitted asset — trimmed to the fields the app reads.
  *
  * The pipeline (scripts/, agent/) owns data/events.json and keeps writing it
  * there; the app never imports it, so a data refresh needs no code change and
- * the bundle stays small. Fields like source, feed_id and feed_relevance are
+ * the bundle stays small. places.json (city positions) is served as it is,
+ * minified; the app treats it as optional. Fields like source, feed_id and feed_relevance are
  * the pipeline's bookkeeping and are dropped here.
  */
 const KEEP = ['name', 'type', 'topics', 'city', 'region', 'country', 'venue', 'cadence', 'month',
@@ -28,8 +30,9 @@ export function slimDataset(raw: string): string {
   return JSON.stringify({ generated_on: data.generated_on, event_count: events.length, city_count: data.city_count, events });
 }
 
-export function eventsData(sourcePath: string): Plugin {
+export function eventsData(sourcePath: string, placesPath: string = join(dirname(sourcePath), 'places.json')): Plugin {
   const read = () => slimDataset(readFileSync(sourcePath, 'utf8'));
+  const readPlaces = () => JSON.stringify(JSON.parse(readFileSync(placesPath, 'utf8')));
   let base = '/';
   return {
     name: 'connectwithtechies:events-data',
@@ -37,14 +40,17 @@ export function eventsData(sourcePath: string): Plugin {
     configureServer(server) {
       server.middlewares.use((req: { url?: string }, res, next) => {
         const path = (req.url || '').split('?')[0];
-        if (path !== `${base}data/events.json` && path !== '/data/events.json') return next();
+        const isEvents = path === `${base}data/events.json` || path === '/data/events.json';
+        const isPlaces = path === `${base}data/places.json` || path === '/data/places.json';
+        if (!isEvents && !(isPlaces && existsSync(placesPath))) return next();
         res.setHeader('Content-Type', 'application/json; charset=utf-8');
         res.setHeader('Cache-Control', 'no-cache');
-        res.end(read());      // read per request: a fresh pipeline run shows on reload
+        res.end(isEvents ? read() : readPlaces());      // read per request: a fresh pipeline run shows on reload
       });
     },
     generateBundle() {
       this.emitFile({ type: 'asset', fileName: 'data/events.json', source: read() });
+      if (existsSync(placesPath)) this.emitFile({ type: 'asset', fileName: 'data/places.json', source: readPlaces() });
     },
   };
 }

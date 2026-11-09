@@ -75,6 +75,7 @@ data/events.json    the single file the app reads
 | `npm run ledger` | merge confirmations, regenerate the ledger and queue |
 | `npm run verify:dates` | script-side date confirmation (dry run) |
 | `npm run check:data` | data audit: coverage, near-duplicates, field gaps, date sanity |
+| `npm run check:places` | events in cities with no map position (fails above 3%) |
 | `npm run check:links` | probe every event URL, report dead links and redirects |
 | `npm run dev` | run the site locally with hot reload |
 | `npm run build` | type-check and build the site to `dist/` |

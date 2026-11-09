@@ -128,6 +128,7 @@ approaching, or the check has aged (90 days; 180 for recurring groups).
 | `data/review/discovery-log.json` (when each city was last searched) | `discovery-plan.mjs --record` | agents |
 | `data/review/APPLIED.md` (every applied change and its reason; an add's line there is what stops it applying twice) | `apply-patches.mjs`, append only | anyone by hand |
 | `data/events.json` | `build-data.mjs` | anyone else |
+| `data/places.json` (city positions, one key per city, folded as the app does) | by hand; `check-places.mjs` lists what is missing | agents |
 
 ## Cheat sheet
 
@@ -140,7 +141,7 @@ approaching, or the check has aged (90 days; 180 for recurring groups).
 | Retire a noisy organiser | add `{ "url": "...", "tech": false, "reason": "..." }` to `data/review/sources-<name>.json` — its events leave the feed on the next run |
 | Follow a new organiser | add `{ "url": "https://luma.com/<cal>", "reason": "..." }` to the same kind of file |
 | Full agent cycle | ask Claude to "refresh the events" (runs the `refresh-events` skill) |
-| Check before shipping | `npm test` · `npm run audit` · `npm run check:data` |
+| Check before shipping | `npm test` · `npm run audit` · `npm run check:data` · `npm run check:places` |
 | What auditors flagged, and what was fixed | [AUDIT-LOG.md](AUDIT-LOG.md) · `node agent/tools/audit-log.mjs open` |
 | Publish | commit and push `main`; the workflow tests, builds and deploys to GitHub Pages |
 
@@ -158,7 +159,7 @@ scripts/feeds/lib/           http (polite + cached), geo (place + time zone), re
                              type (event type from the title), history (takedowns)
 scripts/ledger.mjs           verification ledger + re-check queue
 scripts/apply-patches.mjs    applies agent patches to curated files
-agent/tools/                 what agents call: verify-dates, fetch-page, check-links, audit-run…
+agent/tools/                 what agents call: verify-dates, fetch-page, check-links, check-places, audit-run…
 .claude/agents/              curator and auditor definitions
 .claude/skills/refresh-events/  the orchestrator's procedure
 ```
