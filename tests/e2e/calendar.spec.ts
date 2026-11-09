@@ -350,9 +350,10 @@ test.describe('Calendar view', () => {
       };
       const ratio = (el: Element) => {
         const chain: Element[] = []; for (let n: Element | null = el; n; n = n.parentElement) chain.push(n);
-        // Page ground at the sunward edge is the lightest it gets (#10171b); start from it.
-        let bg = { r: 0x10, g: 0x17, b: 0x1b };
+        // The page ground is a gradient; its lightest stop (--g0, the sunward edge) is the worst case.
+        let bg: { r: number; g: number; b: number } = parse(getComputedStyle(document.documentElement).getPropertyValue('--g0').trim().replace(/^#(..)(..)(..)$/, (_m, r, g, b) => `${parseInt(r, 16)} ${parseInt(g, 16)} ${parseInt(b, 16)}`));
         for (const n of chain.reverse()) {
+          if (n === document.documentElement || n === document.body) continue;
           const cs = getComputedStyle(n);
           const b = parse(cs.backgroundColor);
           if (b.a > 0) bg = mix({ ...b, a: b.a * Number(cs.opacity) }, bg);
@@ -362,13 +363,12 @@ test.describe('Calendar view', () => {
         const [hi, lo] = [lum(fg), lum(bg)].sort((a, b) => b - a);
         return (hi + 0.05) / (lo + 0.05);
       };
-      const sel = ['.is-today .cal__num', '.is-today .cal__count', '.is-today .cal__mo', '.is-past .cal__ev', '.is-past .cal__more',
+      const sel = ['.is-today .cal__num', '.is-today .cal__count', '.is-past .cal__ev', '.is-past .cal__more',
         '.is-out .cal__num', '.is-out .cal__mo', '.is-out .cal__count', '.is-out .cal__ev', '.is-out .cal__more', '.cal__ev', '.cal__more'];
-      return sel.flatMap((s) => Array.from(document.querySelectorAll(`.cal__day ${s}`.replace('.cal__day .is-', '.cal__day.is-')))
-        .slice(0, 6).map((el) => ({ s, r: ratio(el) })));
+      return sel.map((s) => ({ s, rs: Array.from(document.querySelectorAll(`.cal__day ${s}`.replace('.cal__day .is-', '.cal__day.is-'))).map(ratio) }));
     });
-    expect(ratios.length).toBeGreaterThan(0);
-    for (const x of ratios) expect(x.r, x.s).toBeGreaterThanOrEqual(4.5);
+    for (const g of ratios) expect(g.rs.length, `${g.s} matched nothing`).toBeGreaterThan(0);
+    for (const g of ratios) for (const r of g.rs) expect(r, g.s).toBeGreaterThanOrEqual(4.5);
   });
 
   test('When and Sort do not apply in the calendar', async ({ page }) => {
