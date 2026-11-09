@@ -7,11 +7,6 @@ import type { BandMark } from '../../model/bands';
 import { DateRail, type RowPosition } from './DateRail';
 import { EventRow } from './EventRow';
 
-/**
- * How much of the top of the window the sticky bars cover, measured when a
- * jump is asked for. The desktop's filter bar sits over the month heading;
- * on a phone the bar is a dock below, and the heading is what covers the top.
- */
 function createRowPosition(): RowPosition {
   let at = 0;
   const listeners = new Set<() => void>();
@@ -22,6 +17,11 @@ function createRowPosition(): RowPosition {
   };
 }
 
+/**
+ * How much of the top of the window the sticky bars cover, measured when a
+ * jump is asked for. The desktop's filter bar sits over the month heading;
+ * on a phone the bar is a dock below, and the heading is what covers the top.
+ */
 function stickyClearance(): number {
   const bar = document.getElementById('controls');
   if (bar && getComputedStyle(bar).position === 'sticky') return bar.offsetHeight;
@@ -43,6 +43,9 @@ export function Board() {
   const position = useRef<RowPosition>(null as never);
   position.current ??= createRowPosition();
   const rowWatch = useRef<IntersectionObserver | null>(null);
+  // Indexes of the rows the browser reports on screen.
+  const onScreen = useRef(new Set<number>());
+  const report = () => { if (onScreen.current.size) position.current.set(Math.min(...onScreen.current)); };
 
   const jump = useCallback((mark: BandMark) => {
     const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -56,13 +59,14 @@ export function Board() {
   // state: a scroll moves the rail, never re-renders the list.
   useEffect(() => {
     if (typeof IntersectionObserver === 'undefined') return;
-    const on = new Set<number>();
+    const on = onScreen.current;
+    on.clear();
     const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         const i = Number((entry.target as HTMLElement).dataset.row);
         if (entry.isIntersecting) on.add(i); else on.delete(i);
       }
-      if (on.size) position.current.set(Math.min(...on));
+      report();
     }, { rootMargin: `${-stickyClearance()}px 0px 0px 0px` });
     rowWatch.current = observer;
     return () => { observer.disconnect(); rowWatch.current = null; };
@@ -94,7 +98,13 @@ export function Board() {
               <div data-row={i} ref={(el) => {
                 if (!el) return;
                 rowWatch.current?.observe(el);
-                return () => rowWatch.current?.unobserve(el);
+                // unobserve() sends no last entry: a row that leaves the page while on
+                // screen (an instant jump, a new filter) must be forgotten here.
+                return () => {
+                  rowWatch.current?.unobserve(el);
+                  onScreen.current.delete(i);
+                  report();
+                };
               }}>
                 {seam && (
                   <p className="seam" data-band={seam.band}>

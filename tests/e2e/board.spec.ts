@@ -179,6 +179,17 @@ test.describe('Time bands', () => {
     await expect(page.locator('.rail [data-band=nextWeek]')).toHaveAttribute('aria-current', 'true');
   });
 
+  test('the rail follows an instant jump far down the list', async ({ page }) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await openBoard(page);
+    await expect(page.locator('.rail [data-band=weeks6plus]')).toBeVisible();
+    await page.locator('.rail [data-band=weeks6plus]').click();
+    await expect(page.locator('.seam', { hasText: '6+ weeks' })).toBeInViewport();
+    // A long instant jump can land a row short of the seam, so the band above may still be
+    // the first on screen; what must not happen is the rail staying where the list began.
+    await expect(page.locator('.rail [aria-current=true]')).toHaveAttribute('data-band', /weeks2to5|weeks6plus/);
+  });
+
   test('Next week jumps from the chips on a phone @mobile', async ({ page }) => {
     await openBoard(page, 'cities=seattle%7Cwashington');
     await expect(page.locator('.rail')).toHaveCount(0);
