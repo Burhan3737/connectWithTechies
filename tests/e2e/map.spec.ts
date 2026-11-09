@@ -34,6 +34,19 @@ test.describe('The night map', () => {
     expect(await shownCount(page)).toBe(n);
   });
 
+  test('a click that stops a glide still reports where the map stopped', async ({ page }) => {
+    await openBoard(page);
+    const before = await center(page);
+    const b = (await page.locator('#mapView').boundingBox())!;
+    await page.mouse.move(b.x + 700, b.y + 200); await page.mouse.down();
+    await page.mouse.move(b.x + 400, b.y + 120, { steps: 6 }); await page.mouse.up();
+    await page.mouse.down(); await page.mouse.up();
+    await expect.poll(() => center(page)).not.toBe(before);
+    const stopped = await center(page);
+    await page.waitForTimeout(500);
+    expect(await center(page)).toBe(stopped);
+  });
+
   test('picks add up and a second tap removes', async ({ page, request }) => {
     await openBoard(page);
     await page.click('.map__listbtn');

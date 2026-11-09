@@ -550,6 +550,8 @@ export class MapEngine {
     this.host.setPointerCapture(ev.pointerId);
     const p = this.at(ev);
     this.pointers.set(ev.pointerId, p);
+    // A stopped glide or flight no longer settles itself, and a plain click after it would not either.
+    if (this.anim || this.inertia) this.settleSoon();
     this.anim = null;
     this.inertia = null;
     const now = performance.now();
