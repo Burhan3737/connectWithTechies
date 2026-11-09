@@ -126,7 +126,7 @@ export function MapSlot() {
           </h2>
           <RadiusControl />
         </div>
-        {(wanted || loaded) && (
+        {loaded && (
           <MapBoundary key={attempt.n} onRetry={retry} takeFocus={open}>
             <Suspense fallback={<div className="map__frame" />}>
               <attempt.View mode={mode} />

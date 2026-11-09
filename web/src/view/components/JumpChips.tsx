@@ -17,7 +17,7 @@ export function JumpChips() {
     <div className="jumps" role="group" aria-label="Jump to">
       {board.marks.map((m) => (
         <button key={m.band} type="button" className="jump" data-band={m.band} onClick={() => jump(m)}
-          aria-label={`${m.label}, ${m.count} ${m.count === 1 ? 'event' : 'events'}`}>
+          aria-label={`${SHORT[m.band]}: ${m.label}, ${m.count} ${m.count === 1 ? 'event' : 'events'}`}>
           <i aria-hidden="true" />{SHORT[m.band]}
         </button>
       ))}

@@ -7,7 +7,7 @@ How the site is built, and where to make a change. For where the data comes from
 
 | | |
 |---|---|
-| UI | **React 19**, compiled by the **React Compiler 1.0** — components and hooks are memoised automatically, so there is no hand-written `useMemo`/`useCallback` |
+| UI | **React 19**, compiled by the **React Compiler 1.0** — components and hooks are memoised automatically, so a hand-written `useMemo` or `useCallback` is the exception, kept only where the identity itself matters |
 | Build | **Vite 8** (Rolldown, Rust) with `@vitejs/plugin-react` |
 | Language | **TypeScript 7** (the native compiler), strict |
 | Long lists | `react-virtuoso` — only the rows near the screen exist in the page |
@@ -168,7 +168,7 @@ The first page load on a phone must not fetch the map data; that is asserted in 
 | first rows visible | 11.3 s | ~0.9 s alone, ~2 s in the test harness |
 | a filter change | 4.5 s | ~0.2 s |
 | rows in the page | all 4,000+ | ~30 (virtualised) |
-| data shipped | 3.5 MB | 2.5 MB (583 KB gzipped) — pipeline-only fields dropped |
+| data shipped | 3.5 MB | 7.85 MB (1.71 MB gzipped) — pipeline-only fields dropped, and the dataset has grown since |
 | third-party requests | Google Fonts | none |
 
 ## Map data and its licence

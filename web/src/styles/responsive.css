@@ -113,7 +113,3 @@
   .addcal { position: relative; right: auto; bottom: auto; }
   .evrow:has(.addcal) .ev__where { padding-right: 0; }
 }
-@media (max-width: 720px), (max-height: 500px) and (orientation: landscape) {
-  /* a description that cannot get a readable width drops to its own line */
-  .ev__desc { flex: 1 1 120px; }
-}

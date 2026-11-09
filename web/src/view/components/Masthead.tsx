@@ -12,7 +12,6 @@ export function Masthead() {
     <header className="masthead">
       <div className="masthead__rule">
         <span>NORTH AMERICA</span>
-        <span className="masthead__dots" aria-hidden="true" />
         <span className="masthead__credit">
           <span>Created by <span className="masthead__name">Burhan</span></span>
           {CREDIT_LINKS.map((link) => (

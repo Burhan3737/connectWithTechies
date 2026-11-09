@@ -13,7 +13,6 @@
   color: var(--sec);
 }
 .masthead__rule > span:first-child { color: var(--ink); font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
-.masthead__dots { display: none; }
 /* The maker's credit. Wraps onto two lines on narrow phones rather than overflowing. */
 .masthead__credit { margin-left: auto; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: flex-end; gap: .1rem .6rem; }
 .masthead__credit > span { white-space: nowrap; }
@@ -29,13 +28,13 @@
   font-family: var(--display);
   font-size: clamp(3rem, 4.6vw, 4.25rem);
   line-height: .86;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: .005em;
   color: var(--ink);
   display: flex; flex-wrap: wrap; align-items: baseline;
 }
-.masthead__connect { font-weight: 300; }
-.masthead__techies { font-weight: 800; color: var(--limb); text-shadow: 0 0 28px rgba(111, 155, 255, .35); }
+.masthead__connect { font-weight: 400; }
+.masthead__techies { font-weight: 700; color: var(--limb); text-shadow: 0 0 28px rgba(111, 155, 255, .35); }
 
 .masthead__sub {
   margin: .6rem 0 0;

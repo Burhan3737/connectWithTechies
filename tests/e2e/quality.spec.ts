@@ -280,7 +280,7 @@ test.describe('Bundle budget @mobile', () => {
     expect(urls.filter((u) => /map-data/.test(u))).toEqual([]);
     await page.tap('.viewpill');
     await expect(page.locator('#mapView')).toBeVisible();
-    expect(urls.some((u) => /map-data/.test(u))).toBe(true);
+    await expect.poll(() => urls.some((u) => /map-data/.test(u))).toBe(true);
   });
 });
 

@@ -16,13 +16,12 @@
   --ground: linear-gradient(90deg, var(--g0) 0%, var(--g1) 42%, var(--g2) 100%);
   --raised: #141c21; --raised-2: #1d282e; --raised-3: #27343b;
   --ink: #eef1f2; --sec: #b3bcc2; --ter: #98a3aa;
-  --limb: #d4e5ff; --ray: #6f9bff; --ray-ink: #a9c4ff; --airglow: #a3e3b4; --sun: #ffb768; --sun-ink: #ffcf98; --led: #e9f1ff;
+  --limb: #d4e5ff; --ray-ink: #a9c4ff; --airglow: #a3e3b4; --sun: #ffb768; --sun-ink: #ffcf98;
   /* time as wavelength (chromatic order): this week, next week, 2-5 weeks, 6+ weeks, no date, on now */
   --b0: #b9b9ff; --b1: #79d0f4; --b2: #8bdfb7; --b3: #edc871; --b4: #dfe4ee; --bn: #ffb784; --bpast: #c2b7d3;
   --focus: #ffffff;
   --display: 'Big Shoulders Display', 'Display fallback', 'Arial Narrow', sans-serif;
   --font: 'B612', 'B612 fallback', system-ui, sans-serif;
-  --pad: 40px;
 
   --gutter: clamp(1.15rem, 4vw, 4.5rem);
   --maxw: 1440px;

@@ -43,12 +43,22 @@ export function Board() {
   const phone = usePhone();
   const { register } = useJump();
   const list = useRef<GroupedVirtuosoHandle>(null);
-  const position = useRef<RowPosition>(null as never);
-  position.current ??= createRowPosition();
+  const [position] = useState(createRowPosition);
   const rowWatch = useRef<IntersectionObserver | null>(null);
   // Indexes of the rows the browser reports on screen.
   const onScreen = useRef(new Set<number>());
-  const report = () => { if (onScreen.current.size) position.current.set(Math.min(...onScreen.current)); };
+  const report = useCallback(() => { if (onScreen.current.size) position.set(Math.min(...onScreen.current)); }, [position]);
+  const watchRow = useCallback((el: HTMLDivElement | null) => {
+    if (!el) return;
+    rowWatch.current?.observe(el);
+    // unobserve() sends no last entry: a row that leaves the page while on
+    // screen (an instant jump, a new filter) must be forgotten here.
+    return () => {
+      rowWatch.current?.unobserve(el);
+      onScreen.current.delete(Number(el.dataset.row));
+      report();
+    };
+  }, [report]);
   // The top strip no row can be read in: the sticky filter bar (desktop) and the month heading stuck under it.
   const [stickyBar, setStickyBar] = useState(0);
   const [heading, setHeading] = useState(0);
@@ -75,9 +85,10 @@ export function Board() {
 
   // Which rows are on screen, as the browser reports it (not from the virtualiser's
   // range, which includes the rows kept ready above and below). Held outside React
-  // state: a scroll moves the rail, never re-renders the list.
+  // state: a scroll moves the rail, never re-renders the list. Only the desktop
+  // rail reads it. A new list renumbers rows that stay on the page, so it starts over.
   useEffect(() => {
-    if (typeof IntersectionObserver === 'undefined') return;
+    if (phone || typeof IntersectionObserver === 'undefined') return;
     const on = onScreen.current;
     on.clear();
     const observer = new IntersectionObserver((entries) => {
@@ -91,7 +102,7 @@ export function Board() {
     // Rows already on the page were watched by the observer this one replaces.
     document.querySelectorAll('#board [data-row]').forEach((el) => observer.observe(el));
     return () => { observer.disconnect(); rowWatch.current = null; };
-  }, [phone, covered]);
+  }, [phone, covered, board.events, report]);
 
   // A band starts a row: the seam above it is drawn inside that row, not as a group.
   const seamAt = useMemo(() => new Map(board.marks.map((m) => [m.index, m])), [board.marks]);
@@ -116,17 +127,7 @@ export function Board() {
             if (!e) return null;
             const seam = seamAt.get(i);
             return (
-              <div data-row={i} ref={(el) => {
-                if (!el) return;
-                rowWatch.current?.observe(el);
-                // unobserve() sends no last entry: a row that leaves the page while on
-                // screen (an instant jump, a new filter) must be forgotten here.
-                return () => {
-                  rowWatch.current?.unobserve(el);
-                  onScreen.current.delete(i);
-                  report();
-                };
-              }}>
+              <div data-row={i} ref={watchRow}>
                 {seam && (
                   <p className="seam" data-band={seam.band}>
                     <span className="seam__l">{seam.label}</span>
@@ -140,7 +141,7 @@ export function Board() {
           computeItemKey={(i) => board.events[i]?.id ?? `gone-${i}`}
         />
       )}
-      {!phone && <DateRail marks={board.marks} total={board.events.length} position={position.current} onJump={jump} />}
+      {!phone && <DateRail marks={board.marks} total={board.events.length} position={position} onJump={jump} />}
     </section>
   );
 }

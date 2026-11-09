@@ -25,7 +25,7 @@ export function App() {
         <main>
           <section className="board" id="board" aria-live="polite" aria-busy={data.status === 'loading'}>
             <p className="board__loading" role={data.status === 'error' ? 'alert' : undefined}>
-              {data.status === 'error' ? data.message : 'Reading the board…'}
+              {data.status === 'error' ? data.message : 'The lights are coming on…'}
             </p>
           </section>
         </main>

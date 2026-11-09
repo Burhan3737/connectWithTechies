@@ -22,7 +22,7 @@ async function smallControls(page: Page) {
     if (el.classList.contains('cal__day')) return [];
     if (cs.position === 'absolute' && (r.width <= 1 || r.height <= 1)) return [];     // visually hidden
     if (cs.clipPath !== 'none' || /rect\(0/.test(cs.clip)) return [];
-    if (el.tagName === 'A' && el.closest('p')) return [];                               // the map's attribution
+    if (el.matches('.map__attr a')) return [];                                         // the map's attribution
     const side = Math.min(r.width, r.height);
     return side < 44 ? [`${el.tagName.toLowerCase()}.${el.className || el.id} ${Math.round(r.width)}x${Math.round(r.height)}`] : [];
   }));
