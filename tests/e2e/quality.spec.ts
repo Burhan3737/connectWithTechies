@@ -318,3 +318,20 @@ test.describe('Performance @perf', () => {
     expect(ms).toBeLessThan(3000);
   });
 });
+
+test.describe('Wide screens', () => {
+  test('the page runs edge to edge with one 40 px margin', async ({ page }) => {
+    await page.setViewportSize({ width: 1920, height: 1000 });
+    await openBoard(page);
+    await expect(page.locator('#mapView')).toHaveAttribute('data-center', /,/);
+    for (const sel of ['.masthead', '#mapView', '.controls__inner', '.resultbar', '#board', '.foot']) {
+      const box = await page.locator(sel).first().evaluate((e) => {
+        const r = e.getBoundingClientRect();
+        return { left: r.left, right: window.innerWidth - r.right };
+      });
+      expect(box, sel).toEqual({ left: 0, right: 0 });
+    }
+    const title = await page.locator('.masthead__title').evaluate((e) => e.getBoundingClientRect().left);
+    expect(title).toBe(40);
+  });
+});

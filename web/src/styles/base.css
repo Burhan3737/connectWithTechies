@@ -23,8 +23,8 @@
   --display: 'Big Shoulders Display', 'Display fallback', 'Arial Narrow', sans-serif;
   --font: 'B612', 'B612 fallback', system-ui, sans-serif;
 
-  --gutter: clamp(1.15rem, 4vw, 4.5rem);
-  --maxw: 1440px;
+  --gutter: clamp(1.15rem, 4vw, 40px);
+  --maxw: none;
   color-scheme: dark;
 }
 
