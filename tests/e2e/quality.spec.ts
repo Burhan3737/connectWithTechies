@@ -10,6 +10,21 @@ test.describe('Phone layout @mobile', () => {
     expect(overflow).toBeLessThanOrEqual(1);
   });
 
+  test('the masthead holds at 360px: credit on screen, tally on one flowing line @mobile', async ({ page }) => {
+    await page.setViewportSize({ width: 360, height: 740 });
+    await openBoard(page);
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth) - 360;
+    expect(overflow).toBeLessThanOrEqual(1);
+    const credit = await page.locator('.masthead__credit').boundingBox();
+    expect(credit!.x).toBeGreaterThanOrEqual(0);
+    expect(credit!.x + credit!.width).toBeLessThanOrEqual(360);
+    // Not a two-column grid: the first two tally items sit on the same row and are narrower than half the width.
+    const [a, b] = await page.locator('.tally__i').evaluateAll((els) => els.slice(0, 2).map((e) => e.getBoundingClientRect()));
+    expect(Math.abs(a.top - b.top)).toBeLessThan(4);
+    expect(a.width).toBeLessThan(180);
+    expect(await page.locator('.masthead__rule').evaluate((e) => getComputedStyle(e).letterSpacing)).toBe('normal');
+  });
+
   test('filters stack into full-width controls of one height @mobile', async ({ page }) => {
     await openBoard(page);
     const boxes = await page.locator('.controls .field__box, .controls .segmented').evaluateAll((els) =>
