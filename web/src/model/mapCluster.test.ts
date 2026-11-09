@@ -35,18 +35,27 @@ describe('layoutLabels', () => {
     key: `c${i}`, x: 0.28 + (i % 10) * 0.0016, y: 0.37 + Math.floor(i / 10) * 0.0016,
     n: 60 - i, soon: 0, own: 60 - i, more: 0, moreN: 0, picked: i === 7,
   }));
-  const zone = { left: 0, top: 0, right: 200, bottom: 60 };
   const overlap = (p: LabelBox, q: LabelBox) =>
     p.x < q.x + q.w && p.x + p.w > q.x && p.y < q.y + q.h && p.y + p.h > q.y;
 
   it('never overlaps, never sits under a zone, and respects the cap', () => {
-    const boxes = layoutLabels(manyClusters, v, s, () => 60, [zone], 12);
+    const boxes = layoutLabels(manyClusters, v, s, () => 60, [], 12);
     expect(boxes.length).toBeGreaterThan(0);
     expect(boxes.length).toBeLessThanOrEqual(12);
     for (let i = 0; i < boxes.length; i++) {
       for (let j = i + 1; j < boxes.length; j++) expect(overlap(boxes[i], boxes[j])).toBe(false);
     }
-    expect(boxes.some((q) => overlap(q, { key: '', text: '', x: 0, y: 0, w: 200, h: 60 }))).toBe(false);
+  });
+
+  it('keeps labels out of a zone placed where they would otherwise fall', () => {
+    const free = layoutLabels(manyClusters, v, s, () => 60, [], 12);
+    const first = free[0];
+    const zone = { left: first.x - 1, top: first.y - 1, right: first.x + first.w + 1, bottom: first.y + first.h + 1 };
+    const rect = { key: '', text: '', x: zone.left, y: zone.top, w: zone.right - zone.left, h: zone.bottom - zone.top };
+    expect(free.some((q) => overlap(q, rect))).toBe(true);
+    const zoned = layoutLabels(manyClusters, v, s, () => 60, [zone], 12);
+    expect(zoned.length).toBeGreaterThan(0);
+    expect(zoned.some((q) => overlap(q, rect))).toBe(false);
   });
 
   it('labels a picked city first, in bold width, even among many', () => {
