@@ -1,0 +1,37 @@
+Map data in map-data.js
+=======================
+
+map-data.js is generated (Web Mercator, simplified, re-encoded) from the sources below. No network access is
+needed at runtime; nothing is fetched from a CDN or a tile server.
+
+1. Natural Earth (naturalearthdata.com), public domain
+   - 1:10m and 1:50m Admin 0 countries (land and national borders), via world-atlas
+   - 1:10m Admin 1 states/provinces boundary lines (the Canadian province lines)
+   - 1:50m lakes
+   "All versions of Natural Earth raster + vector map data found on this website are in the public domain. You may
+   use the maps in any manner, including modifying the content and design, electronic dissemination, and offset
+   printing. The primary authors, Tom Patterson and Nathaniel Vaughn Kelso, and all other contributors renounce all
+   financial claim to the maps and invites you to use them for personal, educational, and commercial purposes."
+   Made with Natural Earth. Free vector and raster map data @ naturalearthdata.com.
+
+2. world-atlas 2.0.2 (npm), countries-10m.json and countries-50m.json (derived from Natural Earth)
+3. us-atlas 3.0.1 (npm), states-10m.json (the US state lines; derived from the US Census Bureau's cartographic
+   state boundaries, 2017 edition, a US government work in the public domain)
+
+   Both world-atlas and us-atlas are under the ISC licence:
+
+   Copyright 2013-2019 Michael Bostock
+
+   Permission to use, copy, modify, and/or distribute this software for any purpose
+   with or without fee is hereby granted, provided that the above copyright notice
+   and this permission notice appear in all copies.
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+   REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+   FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+   INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+   OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+   TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+   THIS SOFTWARE.
+
+City positions (the lights) come from design-lab/shared/places.js, not from these files.
