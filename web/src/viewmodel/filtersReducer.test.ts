@@ -51,6 +51,23 @@ describe('filtersReducer', () => {
   });
 });
 
+describe('radius', () => {
+  it('goes when the last city goes', () => {
+    expect(filtersReducer(start({ cities: ['p|x'], r: 150 }), { type: 'removeCity', key: 'p|x' }).r).toBe(0);
+    expect(filtersReducer(start({ cities: ['p|x'], r: 150 }), { type: 'popCity' }).r).toBe(0);
+    expect(filtersReducer(start({ cities: ['p|x'], r: 150 }), { type: 'clearCities' }).r).toBe(0);
+    expect(filtersReducer(start({ cities: ['p|x'], r: 150 }), { type: 'reset' }).r).toBe(0);
+  });
+  it('stays while a city remains, and can be set with one', () => {
+    expect(filtersReducer(start({ cities: ['p|x', 'q|x'], r: 150 }), { type: 'removeCity', key: 'p|x' }).r).toBe(150);
+    expect(filtersReducer(start({ cities: ['p|x'] }), { type: 'radius', r: 400 }).r).toBe(400);
+  });
+  it('is refused with no city, including through replace', () => {
+    expect(filtersReducer(start(), { type: 'radius', r: 400 }).r).toBe(0);
+    expect(filtersReducer(start(), { type: 'replace', filters: start({ r: 150 }) }).r).toBe(0);
+  });
+});
+
 describe('settleFilters', () => {
   it('a shared province link gets its country', () => {
     expect(settleFilters(start({ region: 'Quebec' }), regions)).toMatchObject({ region: 'Quebec', country: 'Canada' });

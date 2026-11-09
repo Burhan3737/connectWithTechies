@@ -27,3 +27,18 @@ describe('URL state', () => {
     expect(serializeFilters({ ...DEFAULT_FILTERS, month: '2026-12', day: '2026-12-10' })).toBe('');
   });
 });
+
+describe('radius in the URL', () => {
+  it('honours r only for 50, 150 or 400 and only with a city', () => {
+    expect(parseFilters('?r=150').r).toBe(0);
+    expect(parseFilters('?cities=p%7Cx&r=banana').r).toBe(0);
+    expect(parseFilters('?cities=p%7Cx&r=75').r).toBe(0);
+    expect(parseFilters('?cities=p%7Cx&r=150').r).toBe(150);
+  });
+
+  it('writes r only with a city', () => {
+    expect(serializeFilters({ ...DEFAULT_FILTERS, cities: ['p|x'], r: 150 })).toContain('r=150');
+    expect(serializeFilters({ ...DEFAULT_FILTERS, cities: ['p|x'] })).not.toContain('r=');
+    expect(serializeFilters({ ...DEFAULT_FILTERS, r: 150 })).not.toContain('r=');
+  });
+});

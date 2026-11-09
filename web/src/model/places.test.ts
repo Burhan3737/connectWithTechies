@@ -1,4 +1,4 @@
-import { EMPTY_PLACES, anyPosition, loadPlaces, ownPosition, parsePlaces } from './places';
+import { EMPTY_PLACES, anyPosition, loadPlaces, ownPosition, parsePlaces, radiusScope, rangeFrom } from './places';
 
 describe('parsePlaces', () => {
   const t = parsePlaces({ cities: { 'a|b': [1, 2] }, metros: [{ lat: 5, lon: 6, members: ['c|d', 'a|b'] }] });
@@ -32,5 +32,34 @@ describe('loadPlaces', () => {
     const body = JSON.stringify({ cities: { 'a|b': [1, 2] } });
     const t = await loadPlaces('u', async () => new Response(body, { status: 200 }));
     expect(ownPosition(t, 'a|b')).toEqual([1, 2]);
+  });
+});
+
+describe('radius', () => {
+  const t = parsePlaces({ cities: { 'p|x': [40.44, -80], 'near|x': [40.5, -80], 'far|x': [50, -80] }, metros: [{ lat: 40.45, lon: -80, members: ['town|x'] }] });
+  const all = ['p|x', 'near|x', 'far|x', 'town|x'];
+
+  it('adds every place within r of any picked city, metro members by their centre', () => {
+    expect([...radiusScope(['p|x'], 50, t, all)].sort()).toEqual(['near|x', 'p|x', 'town|x']);
+    expect([...radiusScope(['far|x'], 50, t, all)]).toEqual(['far|x']);
+    expect([...radiusScope(['p|x', 'far|x'], 50, t, all)].sort()).toEqual(['far|x', 'near|x', 'p|x', 'town|x']);
+  });
+
+  it('is just the picked cities with no radius', () => {
+    expect([...radiusScope(['p|x'], 0, t, ['p|x', 'near|x'])]).toEqual(['p|x']);
+  });
+
+  it('lets a picked city with no position contribute itself only', () => {
+    expect([...radiusScope(['ghost|x'], 150, t, ['ghost|x', 'near|x'])]).toEqual(['ghost|x']);
+  });
+
+  it('says here, or how far and which way from the nearest picked city', () => {
+    expect(rangeFrom('p|x', ['p|x'], t)).toEqual({ kind: 'here' });
+    expect(rangeFrom('town|x', ['p|x'], t)).toBeNull();
+    expect(rangeFrom('near|x', ['ghost|x'], t)).toBeNull();
+    expect(rangeFrom('near|x', [], t)).toBeNull();
+    const r = rangeFrom('near|x', ['p|x', 'far|x'], t);
+    expect(r).toMatchObject({ kind: 'away', dir: 'N', fromKey: 'p|x' });
+    expect((r as { km: number }).km).toBeCloseTo(6.7, 0);
   });
 });

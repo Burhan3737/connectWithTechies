@@ -1,6 +1,7 @@
 import { act, renderHook } from '@testing-library/react';
 import { useAppViewModel } from './useAppViewModel';
 import { indexes, TODAY } from '../test/fixtures';
+import { parsePlaces } from '../model/places';
 
 describe('useAppViewModel', () => {
   beforeEach(() => {
@@ -20,6 +21,19 @@ describe('useAppViewModel', () => {
       'On now', 'October 2026', 'November 2026', 'Usually May — date not yet announced']);
     expect(result.current.board.groups.reduce((n, g) => n + g.count, 0)).toBe(8);
     expect(result.current.scopeLabel).toBe('all cities');
+  });
+
+  it('brings nearby places in with a radius, and says so', () => {
+    const places = parsePlaces({ cities: { 'waterloo|ontario': [43.46, -80.52], 'toronto|ontario': [43.65, -79.38], 'austin|texas': [30.27, -97.74] } });
+    const { result } = renderHook(() => useAppViewModel({ ...indexes(), places }, '?cities=waterloo%7Contario&r=150'));
+    expect(result.current.filters.r).toBe(150);
+    expect(result.current.scope.added).toBe(1);
+    expect(result.current.scope.keys).toEqual(new Set(['waterloo|ontario', 'toronto|ontario']));
+    expect(result.current.scopeLabel).toBe('1 city + 1 place within 150 km');
+    expect(result.current.board.events.some((e) => e.city === 'Toronto')).toBe(true);
+    act(() => result.current.actions.clearCities());
+    expect(result.current.scope.keys).toBeNull();
+    expect(window.location.search).toBe('');
   });
 
   it('reads a shared link, settling a province without its country', () => {

@@ -1,3 +1,6 @@
+import { bearingDeg, compass8, haversineKm } from './geo';
+import type { Radius } from './types';
+
 /**
  * Where cities are. Positions are optional data: the list, filters and
  * calendar never depend on them, so every failure here ends in the empty table.
@@ -51,4 +54,44 @@ export async function loadPlaces(url: string, fetchImpl: typeof fetch = fetch): 
   } catch {
     return EMPTY_PLACES;
   }
+}
+
+/**
+ * Every place the filter should show: the picked cities, plus (with a radius)
+ * any place within `r` km of any picked city. A picked city with no position of
+ * its own adds only itself; a place with no position at all is never added.
+ */
+export function radiusScope(picked: readonly string[], r: Radius, t: PlaceTable, allKeys: Iterable<string>): Set<string> {
+  const scope = new Set(picked);
+  if (!r) return scope;
+  const centres = picked.map((k) => ownPosition(t, k)).filter((p): p is LatLon => !!p);
+  if (!centres.length) return scope;
+  for (const key of allKeys) {
+    if (scope.has(key)) continue;
+    const pos = anyPosition(t, key);
+    if (pos && centres.some((c) => haversineKm(c, pos) <= r)) scope.add(key);
+  }
+  return scope;
+}
+
+export type Range = { kind: 'here' } | { kind: 'away'; km: number; dir: string; fromKey: string };
+
+/**
+ * How far a city is from the nearest picked one. Only cities with a position of
+ * their own get a distance: a metro-only place or an unplaced one gives null.
+ */
+export function rangeFrom(cityKey: string, picked: readonly string[], t: PlaceTable): Range | null {
+  if (picked.includes(cityKey)) return { kind: 'here' };
+  const here = ownPosition(t, cityKey);
+  if (!here) return null;
+  let best: { km: number; key: string; pos: LatLon } | null = null;
+  for (const key of picked) {
+    const pos = ownPosition(t, key);
+    if (!pos) continue;
+    const km = haversineKm(pos, here);
+    if (!best || km < best.km) best = { km, key, pos };
+  }
+  if (!best) return null;
+  if (best.km < 1) return { kind: 'here' };
+  return { kind: 'away', km: best.km, dir: compass8(bearingDeg(best.pos, here)), fromKey: best.key };
 }

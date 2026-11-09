@@ -1,4 +1,4 @@
-import { type Filters, type SortKey, type View, type When, type RegionOption } from '../model/types';
+import { type Filters, type Radius, type SortKey, type View, type When, type RegionOption } from '../model/types';
 import { shiftMonth } from '../model/dates';
 
 /**
@@ -13,6 +13,7 @@ export type FiltersAction =
   | { type: 'removeCity'; key: string }
   | { type: 'popCity' }
   | { type: 'clearCities' }
+  | { type: 'radius'; r: Radius }
   | { type: 'when'; when: When }
   | { type: 'kind'; kind: string }
   | { type: 'country'; country: string; regions: ReadonlyMap<string, RegionOption> }
@@ -25,13 +26,17 @@ export type FiltersAction =
   | { type: 'reset' }
   | { type: 'replace'; filters: Filters };
 
+/** The radius reaches out from the picked cities, so it ends with the last of them. */
+const withCities = (f: Filters, cities: string[]): Filters => ({ ...f, cities, r: cities.length ? f.r : 0 });
+
 export function filtersReducer(f: Filters, a: FiltersAction): Filters {
   switch (a.type) {
     case 'query': return { ...f, q: a.q };
     case 'addCity': return f.cities.includes(a.key) ? f : { ...f, cities: [...f.cities, a.key] };
-    case 'removeCity': return { ...f, cities: f.cities.filter((k) => k !== a.key) };
-    case 'popCity': return f.cities.length ? { ...f, cities: f.cities.slice(0, -1) } : f;
-    case 'clearCities': return { ...f, cities: [] };
+    case 'removeCity': return withCities(f, f.cities.filter((k) => k !== a.key));
+    case 'popCity': return f.cities.length ? withCities(f, f.cities.slice(0, -1)) : f;
+    case 'clearCities': return withCities(f, []);
+    case 'radius': return f.cities.length ? { ...f, r: a.r } : f;
     case 'when': return { ...f, when: a.when };
     case 'kind': return { ...f, type: a.kind };
     case 'country': {
@@ -52,8 +57,8 @@ export function filtersReducer(f: Filters, a: FiltersAction): Filters {
     case 'today': return { ...f, month: a.today.slice(0, 7), day: a.today };
     case 'selectDay': return { ...f, month: a.day.slice(0, 7), day: a.day };
     // The empty state's way out: everything cleared, every date shown.
-    case 'reset': return { ...f, q: '', cities: [], when: 'all', type: '', country: '', region: '' };
-    case 'replace': return a.filters;
+    case 'reset': return { ...f, q: '', cities: [], r: 0, when: 'all', type: '', country: '', region: '' };
+    case 'replace': return a.filters.cities.length || !a.filters.r ? a.filters : { ...a.filters, r: 0 };
   }
 }
 
@@ -62,6 +67,7 @@ export function filtersReducer(f: Filters, a: FiltersAction): Filters {
  * does not exist is dropped, and a province without its country gets it.
  */
 export function settleFilters(f: Filters, regions: ReadonlyMap<string, RegionOption>): Filters {
+  if (!f.cities.length && f.r) f = { ...f, r: 0 };
   if (!f.region) return f;
   const r = regions.get(f.region);
   if (!r) return { ...f, region: '' };

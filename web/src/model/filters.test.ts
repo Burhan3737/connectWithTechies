@@ -41,3 +41,20 @@ describe('applyFilters', () => {
     expect(isFiltered({ ...DEFAULT_FILTERS, when: 'all' })).toBe(true);
   });
 });
+
+describe('applyFilters with a radius scope', () => {
+  const scope = new Set(['waterloo|ontario', 'ithaca|new york']);
+  const evs = indexes().events;
+
+  it('lets the scope stand in for the cities while other filters still apply', () => {
+    const out = applyFilters(evs, { ...DEFAULT_FILTERS, cities: ['waterloo|ontario'], type: 'hackathon' }, TODAY, undefined, scope);
+    expect(out.map((e) => e.name).sort()).toEqual(['BigRed//Hacks', 'Hack the North']);
+    const other = applyFilters(evs, { ...DEFAULT_FILTERS, cities: ['waterloo|ontario'], type: 'workshop' }, TODAY, undefined, scope);
+    expect(other.map((e) => e.name)).toEqual(['Long Workshop Series']);
+    expect(applyFilters(evs, { ...DEFAULT_FILTERS, cities: ['waterloo|ontario'], type: 'meetup' }, TODAY, undefined, scope)).toEqual([]);
+  });
+
+  it('is ignored when no city is picked', () => {
+    expect(applyFilters(evs, DEFAULT_FILTERS, TODAY, undefined, scope)).toHaveLength(applyFilters(evs, DEFAULT_FILTERS, TODAY).length);
+  });
+});

@@ -1,5 +1,5 @@
 import { fold } from './text';
-import { DEFAULT_FILTERS, type Filters } from './types';
+import { DEFAULT_FILTERS, RADII, type Filters, type Radius } from './types';
 
 /**
  * Filters <-> query string. Every view can be bookmarked or shared, and the
@@ -21,6 +21,8 @@ export function parseFilters(search: string): Filters {
   if (/^\d{4}-\d{2}$/.test(p.get('month') || '')) f.month = p.get('month')!;
   if (/^\d{4}-\d{2}-\d{2}$/.test(p.get('day') || '')) f.day = p.get('day')!;
   if (p.get('cities')) f.cities = p.get('cities')!.split(',').map(fold).filter(Boolean);
+  const r = Number(p.get('r'));
+  if (f.cities.length && (RADII as readonly number[]).includes(r)) f.r = r as Radius;
   return f;
 }
 
@@ -28,6 +30,7 @@ export function serializeFilters(f: Filters): string {
   const p = new URLSearchParams();
   if (f.q) p.set('q', f.q);
   if (f.cities.length) p.set('cities', f.cities.join(','));
+  if (f.cities.length && f.r) p.set('r', String(f.r));
   if (f.when !== 'upcoming') p.set('when', f.when);
   if (f.type) p.set('type', f.type);
   if (f.country) p.set('country', f.country);

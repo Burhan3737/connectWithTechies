@@ -3,13 +3,14 @@ import { inWhen, keyDate, monthIndex } from './events';
 import type { Filters, IndexedEvent, When } from './types';
 
 /**
- * Apply every filter, then sort. Pure: the same inputs always give the same
+ * Apply every filter, then sort. `scope` is the cities plus what the radius adds. Pure: the same inputs always give the same
  * list, which is what lets the view-model memoise it and the tests pin it.
  */
-export function applyFilters(events: readonly IndexedEvent[], f: Filters, today: string, whenOverride?: When): IndexedEvent[] {
+export function applyFilters(events: readonly IndexedEvent[], f: Filters, today: string, whenOverride?: When, scope?: ReadonlySet<string>): IndexedEvent[] {
   const when = whenOverride ?? f.when;
   const needle = fold(f.q.trim());
-  const cities = f.cities.length ? new Set(f.cities) : null;
+  // A radius scope already contains the picked cities, so it stands in for them.
+  const cities = f.cities.length ? (scope ?? new Set(f.cities)) : null;
   const out = events.filter((e) =>
     (!cities || cities.has(e.cityKey)) &&
     (!f.country || e.country === f.country) &&

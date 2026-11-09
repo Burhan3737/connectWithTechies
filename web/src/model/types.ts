@@ -41,6 +41,9 @@ export type When = 'upcoming' | 'past' | 'all';
 export type SortKey = 'date' | 'city' | 'name';
 export type View = 'list' | 'calendar';
 
+export type Radius = 0 | 50 | 150 | 400;
+export const RADII: readonly Radius[] = [50, 150, 400];
+
 /** Everything the person has chosen. Serialised to the URL. */
 export interface Filters {
   q: string;
@@ -53,11 +56,12 @@ export interface Filters {
   view: View;
   month: string;           // calendar month, YYYY-MM
   day: string;             // calendar day opened, YYYY-MM-DD
+  r: Radius;               // include places within this many km of a picked city; 0 is off
 }
 
 export const DEFAULT_FILTERS: Filters = {
   q: '', cities: [], when: 'upcoming', type: '', country: '', region: '',
-  sort: 'date', view: 'list', month: '', day: '',
+  sort: 'date', view: 'list', month: '', day: '', r: 0,
 };
 
 /** An event as the app holds it: the record plus precomputed lookups. */
