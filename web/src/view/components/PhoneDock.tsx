@@ -67,6 +67,7 @@ export function PhoneDock({ search, children }: { search: ReactNode; children: R
       root.style.setProperty('--vvh', `${vv.height}px`);
       const keyboard = window.innerHeight - vv.height - vv.offsetTop;
       root.style.setProperty('--kb', `${keyboard > 40 ? keyboard : 0}px`);
+      root.classList.toggle('kb-up', keyboard > 40);
     };
     onViewport();
     vv.addEventListener('resize', onViewport);
@@ -76,6 +77,7 @@ export function PhoneDock({ search, children }: { search: ReactNode; children: R
       vv.removeEventListener('scroll', onViewport);
       root.style.removeProperty('--vvh');
       root.style.removeProperty('--kb');
+      root.classList.remove('kb-up');
     };
   }, [phone]);
 

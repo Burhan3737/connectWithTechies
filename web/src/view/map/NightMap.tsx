@@ -28,12 +28,15 @@ function clusterLine(c: Cluster, cities: readonly CityOption[]): string {
     : ''}`;
 }
 
+/** On the page (`inline`), a phone's open map (`open`), or a phone's map parked behind the list (`hidden`). */
+export type MapMode = 'inline' | 'open' | 'hidden';
+
 /**
  * The map and what floats on it. The engine is created once and told what
  * changed through its setters; the view only re-renders when a move settles
  * or the hovered light changes, so a drag never touches React.
  */
-export function NightMap({ data }: { data: MapData }) {
+export function NightMap({ data, mode }: { data: MapData; mode: MapMode }) {
   const { map, options, actions, shown, board, calendar } = useApp();
   const hostRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -47,6 +50,7 @@ export function NightMap({ data }: { data: MapData }) {
   const [hot, setHot] = useState<DrawnLight | null>(null);
   const [hotByKeys, setHotByKeys] = useState(false);
   const [coarse] = useState(() => window.matchMedia('(pointer: coarse)').matches);
+  const hidden = mode === 'hidden';
 
   useLayoutEffect(() => { latest.current = { picked: map.picked, placed: map.placed, positionOf: map.positionOf, r: shown.r, cities: options.cities, actions }; });
 
@@ -93,18 +97,19 @@ export function NightMap({ data }: { data: MapData }) {
     return () => { engine.destroy(); engineRef.current = null; };
   }, [data]);
 
-  useEffect(() => { engineRef.current?.setLights(map.lights); }, [map.lights]);
-  useEffect(() => { engineRef.current?.setPicked(map.picked); }, [map.picked]);
+  // Parked behind the list it draws nothing; these run again when it comes back.
+  useEffect(() => { if (!hidden) engineRef.current?.setLights(map.lights); }, [map.lights, hidden]);
+  useEffect(() => { if (!hidden) engineRef.current?.setPicked(map.picked); }, [map.picked, hidden]);
 
   const eventCount = shown.view === 'calendar' ? calendar.grid.eventsInMonth : board.events.length;
 
   // True-distance outlines of the radius around every pick with a position.
   useEffect(() => {
     const engine = engineRef.current;
-    if (!engine) return;
+    if (!engine || hidden) return;
     const centres = map.placed.map(map.positionOf) as LatLon[];
     engine.setRings(shown.r ? centres.map((c) => circle(c, shown.r)) : []);
-  }, [map.placed.join('|'), shown.r]);
+  }, [map.placed.join('|'), shown.r, hidden]);
 
   // A pick from the Cities box also flies there; one made on the map speaks instead (and stays put, unless Find a city moved it).
   const seenPicks = useRef(map.picked);
@@ -122,7 +127,7 @@ export function NightMap({ data }: { data: MapData }) {
       return;
     }
     const added = map.picked.filter((k) => !before.includes(k));
-    if (added.length) flyTo(added[added.length - 1]);
+    if (added.length && !hidden) flyTo(added[added.length - 1]);
   }, [map.picked]);
 
   // A wider radius: keep its rings whole on screen, whichever control changed it.
@@ -131,8 +136,26 @@ export function NightMap({ data }: { data: MapData }) {
     if (seenRadius.current === shown.r) return;
     seenRadius.current = shown.r;
     const centres = map.placed.map(map.positionOf) as LatLon[];
-    if (shown.r && centres.length) engineRef.current?.revealRings(centres, shown.r);
+    if (shown.r && centres.length && !hidden) engineRef.current?.revealRings(centres, shown.r);
   }, [shown.r]);
+
+  // Back on screen: the view is as it was left, unless the picks or the radius changed while it was away.
+  const picksAndRadius = `${map.picked.join(';')}|${shown.r}`;
+  const lastOnScreen = useRef(picksAndRadius);
+  useEffect(() => {
+    const engine = engineRef.current;
+    if (!engine || hidden) return;
+    engine.resize();
+    if (lastOnScreen.current !== picksAndRadius) {
+      const points = map.placed.map(map.positionOf) as LatLon[];
+      if (points.length) engine.fitTo(points, 0, shown.r);
+    }
+    if (mode === 'open') {
+      hostRef.current?.focus({ preventScroll: true });
+      announce(`Map open. ${hint(coarse, shown.when !== 'past' && shown.view !== 'calendar')}`);
+    }
+  }, [mode]);
+  useEffect(() => { if (!hidden) lastOnScreen.current = picksAndRadius; }, [hidden, picksAndRadius]);
 
   // The light under the pointer is a snapshot; whether it is picked is not.
   const hotPicked = !!hot && map.picked.includes(hot.cluster.key);

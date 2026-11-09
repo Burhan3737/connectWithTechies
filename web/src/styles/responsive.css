@@ -33,7 +33,7 @@
 
 @media (max-width: 720px), (max-height: 500px) and (pointer: coarse) and (orientation: landscape), (max-height: 460px) and (orientation: landscape) {
   html { scroll-padding-bottom: var(--dockH, 0px); }
-  body { padding-bottom: calc(var(--dockH, 0px) + 28px + var(--kb, 0px)); }
+  body { padding-bottom: calc(var(--dockH) + 84px + env(safe-area-inset-bottom) + var(--kb, 0px)); }
 
   .controls {
     position: fixed; top: auto; bottom: var(--kb, 0px); left: 0; right: 0; z-index: 56;

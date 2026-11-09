@@ -1,6 +1,7 @@
 /* The night map under the masthead. */
 
 .map { position: relative; max-width: var(--maxw); margin: 0 auto; }
+.map:focus { outline: none; }
 .map__bar { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 20px; min-height: 44px; padding: 0 var(--gutter) 4px; }
 .map__title { margin: 0; min-width: 0; font-family: var(--display); font-weight: 400; font-size: 1.625rem; line-height: 1.1; color: var(--sec); }
 .map__title b { font-weight: 700; color: var(--ink); }
@@ -87,4 +88,34 @@
   .map__listbtn, .ml__b { font-size: .9375rem; }
   .ml { grid-template-columns: minmax(0, 1fr); }
   .ml__b { min-height: 48px; }
+}
+
+/* List / Map switch: on phones the list is home and the map is a full-screen view. */
+.viewpill { display: none; }
+@media (max-width: 720px), (max-height: 500px) and (pointer: coarse) and (orientation: landscape), (max-height: 460px) and (orientation: landscape) {
+  .map { display: none; }
+  .board__empty { scroll-margin-bottom: calc(var(--dockH) + var(--kb, 0px) + 76px); }
+  .viewpill { position: fixed; left: 50%; bottom: calc(var(--dockH) + 12px); transform: translateX(-50%); z-index: 50; display: inline-flex; align-items: center; gap: 8px; min-height: 48px; max-width: calc(100vw - 32px); padding: 0 20px; border: 0; border-radius: 24px; background: var(--limb); color: #070809; font: inherit; font-size: 1rem; font-weight: 700; white-space: nowrap; box-shadow: 0 6px 22px rgba(0, 0, 0, .55); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .viewpill:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .viewpill__ico { width: 18px; height: 18px; flex: none; }
+  .viewpill__ico--list { display: none; }
+  .viewpill__n { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: #070809; color: var(--ink); font-size: .8125rem; line-height: 22px; text-align: center; }
+  .kb-up .viewpill { display: none; }
+  .map-open body { overflow: hidden; }
+  .map-open .map { display: flex; flex-direction: column; position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 80; max-width: none; margin: 0; padding-bottom: calc(68px + env(safe-area-inset-bottom)); background: var(--space); }
+  .map-open .map__bar { flex: none; padding-top: calc(4px + env(safe-area-inset-top)); }
+  .map-open .map__frame { flex: 1 1 auto; height: auto; min-height: 0; }
+  .map-open .map__foot { flex: none; }
+  .map-open .map__list { flex: none; max-height: 38vh; overflow: auto; }
+  .map-open .viewpill { z-index: 90; bottom: calc(12px + env(safe-area-inset-bottom)); }
+  .map-open .viewpill__ico--map { display: none; }
+  .map-open .viewpill__ico--list { display: block; }
+}
+@media (max-height: 500px) and (pointer: coarse) and (orientation: landscape), (max-height: 460px) and (orientation: landscape) {
+  /* Sideways, the pill shares the foot's row so the map keeps its height, and sits in the corner off the list's rows. */
+  .viewpill { left: auto; right: max(12px, env(safe-area-inset-right)); transform: none; }
+  .map-open .map { padding-bottom: env(safe-area-inset-bottom); }
+  .map-open .map__read { display: none; }
+  .map-open .map__foot { padding-right: 230px; }
+  .map-open .viewpill { bottom: calc(4px + env(safe-area-inset-bottom)); }
 }

@@ -1,25 +1,29 @@
-import { Component, lazy, Suspense, useEffect, useRef, useState, type ComponentType, type KeyboardEvent, type ReactNode } from 'react';
+import { Component, lazy, Suspense, useEffect, useLayoutEffect, useRef, useState, type ComponentType, type KeyboardEvent, type ReactNode } from 'react';
 import { RADII, type CityOption, type Radius } from '../../model/types';
 import { announce } from '../announce';
 import { useApp } from '../context';
+import { usePhone } from '../../viewmodel/usePhone';
 import type { MapData } from './mapEngine';
+import type { MapMode } from './NightMap';
+import { useMapSwitch } from './useMapSwitch';
+import { ViewPill } from './ViewPill';
 
 /** The map's code and data arrive together; the list above and below never waits for them. */
-function loadMap(): ComponentType {
+function loadMap(): ComponentType<{ mode: MapMode }> {
   return lazy(async () => {
     const [{ NightMap }, data] = await Promise.all([import('./NightMap'), import('./map-data.json')]);
-    return { default: () => <NightMap data={data.default as MapData} /> };
+    return { default: ({ mode }: { mode: MapMode }) => <NightMap data={data.default as MapData} mode={mode} /> };
   });
 }
 
-class MapBoundary extends Component<{ onRetry(): void; children: ReactNode }, { failed: boolean }> {
+class MapBoundary extends Component<{ onRetry(): void; takeFocus: boolean; children: ReactNode }, { failed: boolean }> {
   state = { failed: false };
   static getDerivedStateFromError() { return { failed: true }; }
   render() {
     if (!this.state.failed) return this.props.children;
     return (
       <div className="map__frame">
-        <button type="button" className="map__retry" onClick={this.props.onRetry}>The map didn&apos;t load. Try again</button>
+        <button type="button" className="map__retry" autoFocus={this.props.takeFocus} onClick={this.props.onRetry}>The map didn&apos;t load. Try again</button>
       </div>
     );
   }
@@ -75,29 +79,62 @@ function useRadiusAnnouncement() {
   }, [shown.r]);
 }
 
-/** The map section under the masthead: absent with no positions, a retry if its download fails. */
+/**
+ * The map section under the masthead: absent with no positions, a retry if its
+ * download fails. On a phone it is a screen behind the pill, and its code and
+ * data wait for the first open; after that it stays mounted, keeping its view.
+ */
 export function MapSlot() {
   const { map, options } = useApp();
   useRadiusAnnouncement();
+  const phone = usePhone();
+  const { open, toggle } = useMapSwitch();
   const [attempt, setAttempt] = useState(() => ({ n: 0, View: loadMap() }));
+  const sectionRef = useRef<HTMLElement>(null);
+  const pillRef = useRef<HTMLButtonElement>(null);
+
+  const wanted = !phone || open;
+  const [loaded, setLoaded] = useState(wanted);
+  if (wanted && !loaded) setLoaded(true);
+
+  // Focus follows the switch. A map already on the page takes it itself, once it has been sized.
+  const wasOpen = useRef(false);
+  useLayoutEffect(() => {
+    if (open === wasOpen.current) return;
+    wasOpen.current = open;
+    if (!open) { pillRef.current?.focus({ preventScroll: true }); return; }
+    const section = sectionRef.current;
+    if (section && !section.querySelector('#mapView')) (section.querySelector<HTMLElement>('.map__retry') ?? section).focus({ preventScroll: true });
+  }, [open]);
+
   if (!map.available) return null;
 
+  const retry = () => {
+    if (open) sectionRef.current?.focus({ preventScroll: true });
+    setAttempt({ n: attempt.n + 1, View: loadMap() });
+  };
+  const mode: MapMode = !phone ? 'inline' : open ? 'open' : 'hidden';
   const single = map.picked.length === 1 ? options.cities.find((c) => c.key === map.picked[0]) : undefined;
   return (
-    <section id="map" className="map" aria-labelledby="mapTitle">
-      <div className="map__bar">
-        <h2 className="map__title" id="mapTitle">
-          Over{' '}
-          {single ? <><b>{single.city}</b><span className="map__reg">, {single.region}</span></>
-            : <b>{map.picked.length ? cityNames(map.picked, options.cities) : 'North America'}</b>}
-        </h2>
-        <RadiusControl />
-      </div>
-      <MapBoundary key={attempt.n} onRetry={() => setAttempt({ n: attempt.n + 1, View: loadMap() })}>
-        <Suspense fallback={<div className="map__frame" />}>
-          <attempt.View />
-        </Suspense>
-      </MapBoundary>
-    </section>
+    <>
+      <section ref={sectionRef} id="map" className="map" aria-labelledby="mapTitle" tabIndex={-1}>
+        <div className="map__bar">
+          <h2 className="map__title" id="mapTitle">
+            Over{' '}
+            {single ? <><b>{single.city}</b><span className="map__reg">, {single.region}</span></>
+              : <b>{map.picked.length ? cityNames(map.picked, options.cities) : 'North America'}</b>}
+          </h2>
+          <RadiusControl />
+        </div>
+        {(wanted || loaded) && (
+          <MapBoundary key={attempt.n} onRetry={retry} takeFocus={open}>
+            <Suspense fallback={<div className="map__frame" />}>
+              <attempt.View mode={mode} />
+            </Suspense>
+          </MapBoundary>
+        )}
+      </section>
+      <ViewPill open={open} onToggle={toggle} buttonRef={pillRef} />
+    </>
   );
 }

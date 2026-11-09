@@ -62,6 +62,12 @@ export interface AppViewModel {
   };
 }
 
+/** Writes the choices to the current history entry, keeping its state: the phone map's entry is marked there. */
+export function syncUrlToFilters(filters: Filters): void {
+  const qs = serializeFilters(filters);
+  if (qs !== window.location.search) window.history.replaceState(window.history.state, '', qs || window.location.pathname);
+}
+
 export function useAppViewModel(indexes: Indexes, search: string = window.location.search): AppViewModel {
   // "Today" is fixed for the visit: a session that crosses midnight keeps one clock.
   const [today] = useState(() => todayISO());
@@ -73,10 +79,7 @@ export function useAppViewModel(indexes: Indexes, search: string = window.locati
   const shown = deferredQ === filters.q ? filters : { ...filters, q: deferredQ };
 
   // The URL mirrors the choices, so any view can be bookmarked or shared.
-  useEffect(() => {
-    const qs = serializeFilters(filters);
-    if (qs !== window.location.search) window.history.replaceState(null, '', qs || window.location.pathname);
-  }, [filters]);
+  useEffect(() => { syncUrlToFilters(filters); }, [filters]);
 
   // The picked cities plus whatever the radius adds, worked out once for both views.
   const scopeKeys = shown.cities.length ? radiusScope(shown.cities, shown.r, indexes.places, indexes.cities.map((c) => c.key)) : null;

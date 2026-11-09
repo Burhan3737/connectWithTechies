@@ -193,3 +193,112 @@ test.describe('The night map', () => {
     expect(await shownCount(page)).toBeGreaterThan(0);
   });
 });
+
+test.describe('The phone List/Map switch', () => {
+  test('phones open on the list with the map one tap away @mobile', async ({ page }) => {
+    await openBoard(page);
+    await expect(page.locator('html')).not.toHaveClass(/map-open/);
+    await expect(page.locator('#mapView')).toHaveCount(0);
+    await expect(page.locator('.viewpill')).toHaveText('Map');
+    const top = await page.locator('.ev').first().evaluate((e) => e.getBoundingClientRect().top);
+    expect(top).toBeLessThan(page.viewportSize()!.height - 140);
+  });
+
+  test('picking on the map updates the pill and the list @mobile', async ({ page, request }) => {
+    await openBoard(page);
+    await page.tap('.viewpill');
+    await page.fill('#mapq', 'pittsburgh');
+    await page.tap('#mapopts li[data-key="pittsburgh|pennsylvania"]');
+    const n = await expectedCount(request, page, ['pittsburgh|pennsylvania']);
+    await expect(page.locator('.viewpill')).toHaveText(`Show ${n} events`);
+    await page.tap('.viewpill');
+    await expect(page.locator('.viewpill')).toContainText('Map');
+    await expect(page.locator('.viewpill__n')).toHaveText('1');
+    expect(await shownCount(page)).toBe(n);
+  });
+
+  test('the list keeps its place and the back button closes the map @mobile', async ({ page }) => {
+    await openBoard(page);
+    await page.evaluate(() => scrollTo(0, 1500)); await page.waitForTimeout(400);
+    const y = await page.evaluate(() => scrollY);
+    await page.tap('.viewpill');
+    await page.goBack();
+    await expect(page.locator('html')).not.toHaveClass(/map-open/);
+    expect(Math.abs(await page.evaluate(() => scrollY) - y)).toBeLessThan(8);
+  });
+
+  test('picks survive the back button and stay in the URL @mobile', async ({ page }) => {
+    await openBoard(page);
+    await page.tap('.viewpill');
+    await page.fill('#mapq', 'toronto'); await page.tap('#mapopts li[data-key="toronto|ontario"]');
+    await page.goBack();
+    await expect(page).toHaveURL(/toronto/);
+    await expect(page.locator('#chips .chip')).toHaveCount(1);
+  });
+
+  test('rotating with the map open leaves a usable page @mobile', async ({ page }) => {
+    await openBoard(page);
+    await page.tap('.viewpill');
+    await page.setViewportSize({ width: 1024, height: 900 });
+    await expect(page.locator('html')).not.toHaveClass(/map-open/);
+    expect(await page.locator('main').getAttribute('inert')).toBeNull();
+    await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
+  });
+
+  test('the pill never covers the empty-state reset @mobile', async ({ page }) => {
+    await openBoard(page, 'q=zzzzqqq');
+    await page.locator('#empty [data-reset], .empty button').first().tap();
+    await expect.poll(() => shownCount(page)).toBeGreaterThan(0);
+  });
+
+  test('with no city positions there is no pill and no map @mobile', async ({ page }) => {
+    await page.route('**/data/places.json', (route) => route.abort());
+    await openBoard(page);
+    await expect(page.locator('.viewpill')).toHaveCount(0);
+    await expect(page.locator('#map')).toHaveCount(0);
+  });
+
+  test('a failed download shows the retry in the open map, and the pill still returns to the list @mobile', async ({ page }) => {
+    await page.route(/map-data.*\.js|NightMap.*\.js/, (r) => r.abort());
+    await openBoard(page);
+    await expect(page.locator('.map__retry')).toHaveCount(0);
+    await page.tap('.viewpill');
+    await expect(page.locator('.map__retry')).toBeVisible();
+    await page.tap('.viewpill');
+    await expect(page.locator('html')).not.toHaveClass(/map-open/);
+    await expect(page.locator('.ev').first()).toBeVisible();
+    await expect(page.locator('.map__retry')).toBeHidden();
+  });
+
+  test('opening moves focus to the map and closing returns it to the pill @mobile', async ({ page }) => {
+    await openBoard(page);
+    await page.tap('.viewpill');
+    await expect(page.locator('#mapView')).toBeFocused();
+    await expect(page.locator('main')).toHaveAttribute('inert', '');
+    await page.tap('.viewpill');
+    await expect(page.locator('.viewpill')).toBeFocused();
+    expect(await page.locator('main').getAttribute('inert')).toBeNull();
+  });
+
+  test('reopening keeps the view, unless the picks changed while it was closed @mobile', async ({ page }) => {
+    const center = () => page.locator('#mapView').getAttribute('data-center');
+    await openBoard(page);
+    await page.tap('.viewpill');
+    await expect(page.locator('#mapView')).toHaveAttribute('data-center', /./);
+    const home = await center();
+    await page.tap('.viewpill');
+    await expect(page.locator('html')).not.toHaveClass(/map-open/);
+    await page.tap('.viewpill');
+    await expect(page.locator('html')).toHaveClass(/map-open/);
+    expect(await center()).toBe(home);
+    await page.tap('.viewpill');
+    await expect(page.locator('html')).not.toHaveClass(/map-open/);
+    await page.tap('#deckBtn');
+    await page.fill('#cityq', 'toronto');
+    await page.tap('#citylist li[data-key="toronto|ontario"]');
+    await expect(page.locator('#chips .chip')).toHaveCount(1);
+    await page.tap('#deckDone');
+    await page.tap('.viewpill');
+    await expect(page.locator('#mapView')).toHaveAttribute('data-center', /^43\./);
+  });
+});
