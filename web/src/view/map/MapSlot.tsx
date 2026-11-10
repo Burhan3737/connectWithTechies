@@ -89,7 +89,7 @@ export function MapSlot() {
   useRadiusAnnouncement();
   const phone = usePhone();
   const { open, toggle } = useMapSwitch();
-  const [attempt, setAttempt] = useState(() => ({ n: 0, View: loadMap() }));
+  const [MapView] = useState(loadMap);
   const sectionRef = useRef<HTMLElement>(null);
   const pillRef = useRef<HTMLButtonElement>(null);
 
@@ -109,10 +109,9 @@ export function MapSlot() {
 
   if (!map.available) return null;
 
-  const retry = () => {
-    if (open) sectionRef.current?.focus({ preventScroll: true });
-    setAttempt({ n: attempt.n + 1, View: loadMap() });
-  };
+  // Chrome remembers a failed dynamic import for the life of the page, so importing
+  // again can never succeed. A reload can, and the URL keeps every choice.
+  const retry = () => window.location.reload();
   const mode: MapMode = !phone ? 'inline' : open ? 'open' : 'hidden';
   const single = map.picked.length === 1 ? options.cities.find((c) => c.key === map.picked[0]) : undefined;
   return (
@@ -127,9 +126,9 @@ export function MapSlot() {
           <RadiusControl />
         </div>
         {loaded && (
-          <MapBoundary key={attempt.n} onRetry={retry} takeFocus={open}>
+          <MapBoundary onRetry={retry} takeFocus={open}>
             <Suspense fallback={<div className="map__frame" />}>
-              <attempt.View mode={mode} />
+              <MapView mode={mode} />
             </Suspense>
           </MapBoundary>
         )}

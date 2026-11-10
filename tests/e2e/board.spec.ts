@@ -96,7 +96,7 @@ test.describe('The board', () => {
     // data that passed on 11-03. A tall window keeps enough rows to compare.
     await page.setViewportSize({ width: page.viewportSize()?.width ?? 1280, height: 2400 });
     await openBoard(page);
-    const dated = await page.locator('#board').evaluate((board) => {
+    const readDated = () => page.locator('#board').evaluate((board) => {
       const out: { group: string; day: string; mon: string }[] = [];
       let group = '';
       for (const n of Array.from(board.querySelectorAll('.groupbar, .ev'))) {
@@ -106,9 +106,11 @@ test.describe('The board', () => {
       }
       return out.slice(0, 80);
     });
+    // The first rows are measured before the list fills in; on a slow machine that gap shows.
+    await expect.poll(async () => (await readDated()).length).toBeGreaterThan(10);
+    const dated = await readDated();
     const headings = (await page.locator('#board .groupbar').allTextContents()).map((t) => t.trim());
     if (headings.includes('On now')) expect(headings[0]).toBe('On now');
-    expect(dated.length).toBeGreaterThan(10);
     const months = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
     const key = (r: { day: string; mon: string }) => {
       const [mon, yr] = r.mon.trim().toLowerCase().split(/\s+/);
