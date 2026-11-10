@@ -106,11 +106,15 @@ test.describe('The board', () => {
       }
       return out.slice(0, 80);
     });
-    // The first rows are measured before the list fills in; on a slow machine that gap shows.
-    await expect.poll(async () => (await readDated()).length).toBeGreaterThan(10);
-    const dated = await readDated();
     const headings = (await page.locator('#board .groupbar').allTextContents()).map((t) => t.trim());
     if (headings.includes('On now')) expect(headings[0]).toBe('On now');
+    // On a day with many events under way, On now fills the rows that exist: scroll past it.
+    await expect.poll(async () => {
+      const found = (await readDated()).length;
+      if (found <= 10) await page.evaluate(() => window.scrollBy(0, 800));
+      return found;
+    }).toBeGreaterThan(10);
+    const dated = await readDated();
     const months = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
     const key = (r: { day: string; mon: string }) => {
       const [mon, yr] = r.mon.trim().toLowerCase().split(/\s+/);
