@@ -211,3 +211,16 @@ test.describe('Time bands', () => {
     await expect(page.locator('#count')).toHaveText(before!);
   });
 });
+
+test.describe('Row descriptions', () => {
+  test('an event with no description names its organiser instead', async ({ page, request }) => {
+    const data = await dataset(request);
+    const stock = /^Listed on Luma by (.+)\.$/;
+    const ev = data.events.find((e) => stock.test(e.description || '') && isUpcoming(e) && e.name.length > 12)!;
+    const organiser = stock.exec(ev.description!)![1];
+    await openBoard(page, `q=${encodeURIComponent(ev.name)}`);
+    const row = page.locator('.evrow', { hasText: ev.name }).first();
+    await expect(row.locator('.ev__desc')).toHaveText(`by ${organiser}`);
+    await expect(page.locator('#board')).not.toContainText('Listed on');
+  });
+});

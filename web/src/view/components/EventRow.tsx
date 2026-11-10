@@ -1,7 +1,7 @@
 import { fmtDay, fmtMonYear, fmtRange, fmtWeekday, MONTHS, parseISO } from '../../model/dates';
 import { bandOf } from '../../model/bands';
 import { cityKeyOf, dateLine, keyDate, monthHint, runsUntil } from '../../model/events';
-import { cleanDescription } from '../../model/text';
+import { descriptionLine } from '../../model/text';
 import type { TechEvent, When } from '../../model/types';
 import { useApp } from '../context';
 import { Highlight } from './Highlight';
@@ -30,7 +30,7 @@ export function EventRow({ event: e, when, today, needle, index, menuKey }: Prop
   // Colour by how soon; a date gone by (the Past view) gets its own muted colour.
   const band = bandOf(e, when, today);
   const tone = !until && k && k < today ? 'past' : band;
-  const desc = cleanDescription(e.description);
+  const desc = descriptionLine(e.description);
 
   const tags = [<span key="kind" className="ev__tag ev__tag--kind">{e.type.replace(/-/g, ' ')}</span>];
   if (until) tags.unshift(<span key="now" className="ev__tag ev__tag--now">on until {MONTHS[until.getMonth()].slice(0, 3)} {until.getDate()}</span>);

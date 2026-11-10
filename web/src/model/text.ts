@@ -37,14 +37,24 @@ function walkSplit(raw: string, needle: string): [string, string, string] | null
   return null;
 }
 
+const PLACEHOLDER = /^(?:(Meets [^.]*)\. )?Listed on (.+?)(?: by (.+?))?\.?$/;
+const FEED_NAME = /^(luma|eventbrite|meetup|bevy|guild|localist|tribe|ical)$/i;
+
 /**
- * A description fit to show. Feeds that have nothing to say write
- * "Listed on Luma by Acme", which is the source rather than the event, so it
- * reads as no description; markdown emphasis (escaped or plain) is stripped.
- * Display only: search keeps the raw text.
+ * The line a row shows under an event's name. A feed with no description
+ * writes "Listed on Luma by Acme", which says where the listing came from, so
+ * the row names the organiser instead; a recurring series keeps its schedule
+ * in front. Real text only loses its markdown emphasis. Display only: search
+ * keeps the raw text.
  */
-export function cleanDescription(desc: string | undefined): string {
+export function descriptionLine(desc: string | undefined): string {
   const s = String(desc ?? '').trim();
-  if (/^Listed on (Luma|Eventbrite|Meetup) by (.+)$/.test(s)) return '';
+  const m = PLACEHOLDER.exec(s);
+  if (m) {
+    const [, series, source, organiser] = m;
+    if (FEED_NAME.test(source) || organiser === source) {
+      return [series, organiser && `by ${organiser}`].filter(Boolean).join(' · ');
+    }
+  }
   return s.replace(/\\?\*/g, '').trim();
 }
