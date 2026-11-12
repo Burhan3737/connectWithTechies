@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { Analytics } from '@vercel/analytics/react';
 import '@fontsource/b612/400.css';
 import '@fontsource/b612/700.css';
 import '@fontsource/big-shoulders-display/400';
@@ -16,5 +17,6 @@ prefetchPlaces();
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
+    {import.meta.env.VITE_ON_VERCEL && <Analytics />}
   </StrictMode>,
 );

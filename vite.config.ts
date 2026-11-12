@@ -21,6 +21,10 @@ export default defineConfig({
   // Vercel (which sets VERCEL=1 while building) serves it at the root.
   // BASE_PATH overrides both, for any other host.
   base: process.env.BASE_PATH || (process.env.VERCEL ? '/' : '/connectWithTechies/'),
+  // Vercel Analytics loads /_vercel/insights/script.js, which only Vercel serves:
+  // on GitHub Pages and the local preview it is a 404 in the console. So the
+  // component is rendered only in builds made on Vercel.
+  define: { 'import.meta.env.VITE_ON_VERCEL': JSON.stringify(Boolean(process.env.VERCEL)) },
   plugins: [react(), babel({ presets: [reactCompilerPreset()] }), eventsData(dataFile)],
   build: {
     outDir: fileURLToPath(new URL('./dist', import.meta.url)),
