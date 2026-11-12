@@ -1,6 +1,6 @@
 ---
 name: refresh-events
-description: Run the event-data refresh cycle as orchestrator — script-confirm what can be confirmed, dispatch curator agents for the rest, have an auditor check their work, and loop until the audit is clean or three iterations are spent. Use when the user asks to refresh, re-verify, update or audit the event data, or when `npm run stale` shows a queue worth working.
+description: Run the event-data refresh cycle as orchestrator — script-confirm what can be confirmed, dispatch curator agents for the rest, have an auditor check their work once, apply its fixes, re-check only the rows those fixes changed, and stop. Use when the user asks to refresh, re-verify, update or audit the event data, or when `npm run stale` shows a queue worth working.
 ---
 
 # Refreshing the event data
@@ -14,7 +14,7 @@ Three roles:
 
 | role | what it does | where it lives |
 |---|---|---|
-| **orchestrator** (you) | runs the cycle, decides whether to loop | this skill |
+| **orchestrator** (you) | runs the cycle, applies the audit's fixes | this skill |
 | **curator** | researches and updates: dates, links, new events, retirements | `.claude/agents/curator.md` |
 | **auditor** | independently checks the curator's output, reports discrepancies | `.claude/agents/auditor.md` |
 
@@ -33,13 +33,17 @@ apply their patches, rebuild
   ↓
 dispatch auditor               reads AUDIT.json + spot-checks judgement
   ↓
-YOU decide  ─── blocking findings? ──> hand the report back to a curator, go again
-            └── none? ──────────────> done: report; publish only when asked
+apply its fixes                fix-ready: you write the patch; research: one curator
+  ↓
+re-check the changed rows      one auditor on Sonnet, only the rows the fixes touched
+  ↓
+stop                           report; anything still wrong goes to a person
 ```
 
-**Stop after three iterations regardless.** If it is not clean by then, report what
-remains rather than burning another cycle — a third failure usually means the problem
-needs a person, not another pass.
+**One audit, one fix stage, one scoped re-check — then stop.** There is no second full
+audit and no loop. Measured on the lean-loop eval (2026-11-11): every second audit found
+0 blocking issues, so it cost ~11% of a run and ~2 min for no change in the data; the
+scoped re-check caught 4 of 4 deliberately planted bad fixes with no false alarms.
 
 ---
 
@@ -224,46 +228,63 @@ node agent/tools/audit-log.mjs resolve <finding-id> deferred "<waiting on what>"
 node agent/tools/audit-log.mjs open     # what is still outstanding
 ```
 
-A finding fixed by a re-audit's clean result is still resolved explicitly — the log should
-never need to be inferred. Open findings from earlier cycles are part of each new cycle:
+A finding fixed in the fix stage is resolved explicitly once the re-check passes it — the
+log should never need to be inferred. Open findings from earlier cycles are part of each new cycle:
 work them before the queue.
 
-## Step 5 — decide
+## Step 5 — fix, re-check the changed rows, stop
 
 Read only the auditor's counts. Do not re-litigate its findings.
 
 | auditor says | you do |
 |---|---|
 | 0 blocking | **done.** Report and stop, even with warnings outstanding |
-| 1–3 blocking | usually **apply them yourself** — see below — then re-audit |
-| 4+ blocking, or findings needing research | hand the report to curators, then re-audit |
-| iteration 3 reached | **stop.** Report what is still open and why |
+| blocking, all with their fix | **apply them yourself** (below), then the scoped re-check |
+| blocking that needs research | **one** curator fixes them from the report, then the scoped re-check |
 
 **A finding that arrives with its fix does not need a curator.** The auditor has already
 read the page and verified the correction; dispatching an agent to transcribe an audit
 report into a patch file is exactly the waste this whole design exists to avoid. Write
-the patch yourself, cite the audit as the reason, and re-audit.
+the patch yourself and cite the audit as the reason. A patch for a name+city replaces
+earlier ones, so carry the earlier patch's fields into it.
 
-Send it back to a curator when the fix genuinely needs work the auditor did not do —
-a date nobody has found yet, a replacement URL, a judgement about whether an event is
-dead. Then the curator's input is the audit report itself, not the queue: it is fixing
-named problems, not re-verifying. Give it the report path and say so explicitly.
+Send it to a curator when the fix genuinely needs work the auditor did not do — a date
+nobody has found yet, a replacement URL, a judgement about whether an event is dead. Then
+the curator's input is the audit report itself, not the queue: it is fixing named
+problems, not re-verifying. Give it the report path and say so explicitly. One fix-up
+curator at most (split by finding across two in parallel only if there are more than ~25).
+
+**Then re-check only what the fix stage changed.** Apply and rebuild (Step 3), then
+dispatch one `auditor` with `model: sonnet` and a scoped brief: the list of rows the fix
+stage patched, each with its before and after values and the patch reason. For each row it
+re-reads the organiser's page and answers `ok`, `wrong` (quoting what the page actually
+says) or `unsure`. It does not re-audit anything else. Then:
+
+- `wrong` → revert that row's fix-stage patch (back to its pre-fix state), or set the value
+  the re-check quoted, and rebuild.
+- `unsure` → keep the fix and list it as open.
+
+**Stop there.** No second full audit, no further fix-up, no loop. Anything still wrong or
+unsure is reported for a person to look at — it is listed, not retried. Run
+`node agent/tools/audit-run.mjs` once more after the final rebuild; if its mechanical
+check shows a blocking item, report it rather than starting another pass.
 
 **Fix the cause, not just the instance.** If a finding reveals a gap in the curator brief
-or a bug in the tooling, change that too — otherwise the next run reproduces it. Iteration
-1 of the first real cycle produced two: a curator overwriting an elapsed `next_date` and
+or a bug in the tooling, change that too — otherwise the next run reproduces it. The first
+real cycle's audit produced two: a curator overwriting an elapsed `next_date` and
 destroying the rollover's input, and this audit script reporting every city correction as
 a removal plus a skipped row.
 
-Between iterations, re-run `node agent/tools/snapshot-dispatch.mjs` only if you are
-dispatching from the queue again — a fix-up pass is scoped by the report instead.
+Do not re-run `node agent/tools/snapshot-dispatch.mjs` for the fix stage — a fix-up pass is
+scoped by the report, not the queue.
 
 ## Step 6 — report
 
-Say plainly: how many iterations it took, what the curator changed, what the auditor
-caught, and what is still open (`audit-log.mjs open`; every finding should be logged and
-either resolved or visibly open in `docs/AUDIT-LOG.md`). If you stopped at three iterations with findings
-outstanding, lead with that — it is the most important thing in the report.
+Say plainly: what the curator changed, what the auditor caught, what the fix stage
+changed, what the re-check reverted, and what is still open (`audit-log.mjs open`; every
+finding should be logged and either resolved or visibly open in `docs/AUDIT-LOG.md`). If
+the re-check reverted any fix or left anything unsure, lead with that — it is the most
+important thing in the report.
 
 Include the feed's health warnings and what you did about each, the organisers you
 retired or followed, and the before/after event counts — take those from the table at
