@@ -30,6 +30,7 @@ import { fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { today as todayInDirectory } from '../../scripts/lib/today.mjs';
+import { judgePage } from '../../scripts/lib/date-match.mjs';
 
 const run = promisify(execFile);
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -48,8 +49,6 @@ const num = (f, d) => { const i = args.indexOf(f); return i > -1 ? Number(args[i
 const WRITE = has('--write');
 const CONC = Number(process.env.CONCURRENCY || 6);
 
-const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December'];
 
 /* ---- which events to check --------------------------------------------- */
 
@@ -65,44 +64,7 @@ if (has('--queue')) {
 const N = num('--n', 0);
 if (N > 0) targets = targets.slice(0, N);
 
-/* ---- rendering a known date every way a site might print it -------------- */
-
-/**
- * The point is recall, not precision: we already know the date, so a generous
- * set of renderings costs nothing and a missed rendering costs a false alarm.
- */
-function renderings(iso) {
-  const [y, m, d] = iso.split('-').map(Number);
-  const M = MONTHS[m - 1], Mon = M.slice(0, 3);
-  const dd = String(d).padStart(2, '0'), mm = String(m).padStart(2, '0');
-  const out = [
-    iso,
-    `${M} ${d}, ${y}`, `${M} ${d} ${y}`, `${M} ${d}`,
-    `${Mon} ${d}, ${y}`, `${Mon} ${d} ${y}`, `${Mon}. ${d}, ${y}`, `${Mon} ${d}`,
-    `${d} ${M} ${y}`, `${d} ${Mon} ${y}`,
-    `${m}/${d}/${y}`, `${mm}/${dd}/${y}`, `${mm}/${dd}`,
-    `${y}/${mm}/${dd}`, `${dd}.${mm}.${y}`,
-  ];
-  return [...new Set(out.map((s) => s.toLowerCase()))];
-}
-
-const strip = (h) => h
-  .replace(/<script[\s\S]*?<\/script>/gi, ' ')
-  .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-  .replace(/<[^>]+>/g, ' ')
-  .replace(/&nbsp;|&#160;/g, ' ')
-  .replace(/&amp;/g, '&')
-  .replace(/&#8211;|&ndash;|&mdash;|&#8212;/g, '-')
-  .replace(/\s+/g, ' ')
-  .toLowerCase();
-
-/** JSON-LD is the only extraction trusted enough to propose a replacement. */
-function jsonLdDates(body) {
-  const m = [...body.matchAll(/"startDate"\s*:\s*"(\d{4}-\d{2}-\d{2})[^"]*"(?:[\s\S]{0,400}?"endDate"\s*:\s*"(\d{4}-\d{2}-\d{2})[^"]*")?/g)];
-  return m.map((x) => ({ start: x[1], end: x[2] || x[1] }))
-    .filter((x) => x.start >= today)
-    .sort((a, b) => a.start.localeCompare(b.start));
-}
+/* ---- the check: page judgement lives in scripts/lib/date-match.mjs ------ */
 
 async function fetchBody(url) {
   try {
@@ -112,58 +74,10 @@ async function fetchBody(url) {
   } catch { return ''; }
 }
 
-/* ---- the check ----------------------------------------------------------- */
-
 async function check(e) {
-  const body = await fetchBody(e.url);
-  if (!body || body.length < 500) return { e, verdict: 'unreadable', note: body ? `${body.length}-byte stub, likely a captcha` : 'no response' };
-
-  /**
-   * Match against readable text only, never the raw HTML.
-   *
-   * Matching the source let hits land inside another event's JSON-LD, an .ics
-   * href query string, and The Events Calendar's own `selected_end_datetime`
-   * view window — which made an ISO match close to self-fulfilling on any
-   * WordPress events page.
-   */
-  const text = strip(body);
-  const hit = renderings(e.next_date).find((r) => text.includes(r));
-
-  if (hit) {
-    /**
-     * The decoy test: does this page also "confirm" dates the event does not
-     * have? If it does, it is a page the matcher cannot read — a listing of
-     * many events, a calendar grid, a run of unrelated dates — and a hit on the
-     * real date there is a coincidence, not evidence.
-     *
-     * An audit measured this: on listing pages, 32% of confirmations also
-     * matched a fabricated date. Those were being recorded as settled, so
-     * nothing would ever look at them again. An unchecked event is recoverable;
-     * a falsely-confirmed one is not.
-     */
-    const decoys = [7, -21, 35, 14].map((d) => {
-      const dt = new Date(`${e.next_date}T00:00:00Z`);
-      dt.setUTCDate(dt.getUTCDate() + d);   // pure date arithmetic, pinned to UTC
-      return dt.toISOString().slice(0, 10);
-    });
-    const fooled = decoys.filter((d) => renderings(d).some((r) => text.includes(r)));
-    if (fooled.length) {
-      return {
-        e, verdict: 'ambiguous',
-        note: `"${hit}" appears, but so do ${fooled.length} date(s) this event does not have ` +
-              `(e.g. ${fooled[0]}) — the page lists too many dates for a match to mean anything`,
-      };
-    }
-    return { e, verdict: 'confirmed', note: `page shows "${hit}" and no decoy date` };
-  }
-
-  // Not found. Only JSON-LD is trusted to say where it went.
-  const ld = jsonLdDates(body);
-  if (ld.length && ld[0].start !== e.next_date) {
-    return { e, verdict: 'moved', note: `page JSON-LD gives ${ld[0].start}${ld[0].end !== ld[0].start ? '..' + ld[0].end : ''}`, proposed: ld[0] };
-  }
-  return { e, verdict: 'ambiguous', note: 'page loads but the stored date is not on it and it publishes no structured date' };
+  return { e, ...judgePage(e, await fetchBody(e.url), today) };
 }
+
 
 const results = [];
 let cursor = 0;

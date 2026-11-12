@@ -13,6 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { validateRecord, decideAdd } from './lib/record.mjs';
 import { orderPatchFiles } from './lib/patch-order.mjs';
+import { renderings, jsonLdEvents, judgePage } from './lib/date-match.mjs';
 import { diffEvents, changesMarkdown, historyRow, upsertHistory, delistings, retiredOrganisers } from './lib/changes.mjs';
 import { planCities, mergeSearched, candidateCities, TYPES } from '../agent/tools/discovery-plan.mjs';
 
@@ -372,6 +373,45 @@ console.log('\npatch file order');
     === 'oct31-t1-fixes.json nov12-t1-fixes.json', 'a pass dated a day ahead of today() is this year, not last');
   ok(order(['jan01-t1-fixes.json', 'dec30-t1-fixes.json'], '2026-12-31')
     === 'dec30-t1-fixes.json jan01-t1-fixes.json', 'a day ahead across the new year: next year, not last');
+}
+
+console.log('\nverify-dates page matching');
+{
+  const NOW = '2026-11-12';
+  const pad = (s) => s + ' '.repeat(600);   // judgePage treats a body under 500 bytes as a stub
+  const ld = (obj) => `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;
+  // The Techstars accelerator page, cut down: a timeline in separate elements, and
+  // JSON-LD for the programme (not an event) whose startDate is the programme start.
+  const techstars = pad(
+    '<div><span>Mar 08</span><span>2027</span><p>Accelerator Starts</p></div>' +
+    '<div><span>Jun 03</span><span>2027</span><p>Demo Day</p></div>' +
+    ld({ '@context': 'https://schema.org', '@graph': [
+      { '@type': 'EducationalOccupationalProgram', name: 'Techstars Boston Accelerator', startDate: '2027-03-08' },
+      { '@type': 'BreadcrumbList', itemListElement: [] }] }));
+  const demoDay = { name: 'Techstars Boston Demo Day', next_date: '2027-06-03' };
+
+  ok(renderings('2027-06-03').includes('jun 03 2027'), 'renders a zero-padded day with a month name');
+  ok(judgePage(demoDay, techstars, NOW).verdict === 'confirmed',
+    'Techstars: "Jun 03 2027" in separate elements confirms the stored date (audit 2026-11-12)');
+
+  const gone = { name: 'Techstars Boston Demo Day', next_date: '2027-05-20' };
+  const v = judgePage(gone, techstars, NOW);
+  ok(v.verdict === 'ambiguous', 'a programme\'s startDate is never proposed as an event\'s move', v.verdict);
+
+  const moved = pad('<p>Our next meetup</p>' +
+    ld({ '@context': 'https://schema.org', '@type': 'Event', name: 'Meetup', startDate: '2026-12-10T18:00:00-05:00', endDate: '2026-12-10T21:00:00-05:00' }));
+  const m = judgePage({ name: 'Meetup', next_date: '2026-12-03' }, moved, NOW);
+  ok(m.verdict === 'moved' && m.proposed.start === '2026-12-10', 'an Event\'s JSON-LD still proposes a move', JSON.stringify(m));
+
+  const typed = jsonLdEvents(ld({ '@graph': [
+    { '@type': ['Event', 'Hackathon'], startDate: '2027-01-17' },
+    { '@type': 'BusinessEvent', startDate: '2027-02-01', endDate: '2027-02-02' },
+    { '@type': 'Course', startDate: '2027-01-05' },
+    { '@type': 'Event', startDate: '2026-10-01' }] }), NOW);
+  ok(typed.map((e) => e.start).join(' ') === '2027-01-17 2027-02-01',
+    'jsonLdEvents keeps upcoming Event-typed objects only, soonest first', JSON.stringify(typed));
+  ok(jsonLdEvents('<script type="application/ld+json">{not json</script>', NOW).length === 0,
+    'unparseable JSON-LD is skipped, not fatal');
 }
 
 console.log(failed ? `\n${failed} CHECK(S) FAILED` : `\nALL ${passed} SCRIPT CHECKS PASSED`);
