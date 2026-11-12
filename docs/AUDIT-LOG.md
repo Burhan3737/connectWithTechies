@@ -19,8 +19,9 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 | 2026-11-03-i2 | re-audit | 0 | 0 | 0 | 0 | Cycle nov02 re-audit: nov02-audit-fixes.json (B1, B2, W1, W2), relevance.mjs Massachusetts normalisation (W3), place-override drops (W4), rebuilt feed |
 | 2026-11-05-i1 | 2 | 1 | 2 | 3 | 0 | nov05 cycle: re-check passes nov05-r1/r2/r3 (60 rows), discovery nov05-c1/c2/t1/t2 (47 adds), feed retirements, patch replay-order change |
 | 2026-11-05-i2 | re-audit | 0 | 1 | 0 | 1 | nov05 cycle re-audit: nov05-audit-fixes.json (i1-B1/W1/W2) and the retired-organiser name-match repair (retiredOrganisers, feed re-run from cache); CHANGES.md 70 removals |
+| 2026-11-12-i1 | 7 | 2 | 2 | 3 | 1 | nov12 cycle: re-check t1-t3 (60 rows, 6 corrections), discovery r1/r2/d1/d2 (31 adds), sources-nov12-* follows/retirements |
 
-**7 audit cycle(s); 5 found something blocking on its first audit.** 40 findings in total, 33 fixed, 6 open or deferred, 9 repeat(s) of an earlier finding.
+**8 audit cycle(s); 6 found something blocking on its first audit.** 44 findings in total, 36 fixed, 7 open or deferred, 9 repeat(s) of an earlier finding.
 
 ## Open
 
@@ -42,8 +43,24 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 - **2026-11-05-i2-W1** · warning · deferred · **JEWEL CITY HACKS 6.0 (Glendale) / Seattle AI Power Holiday Evening (Bellevue)** — Two live tech events (luma.com/jewelcityhacks6 2026-11-14; luma.com/edixsj8w 2026-12-06, same Luma id, retitled) were removed as 'no longer listed' because they dropped off a luma-area listing that takenDown() treats as complete. InsurTech 2027 Spring Conference (New York) was also lost, by a gate verdict that flips from run to run. Pre-existing rule, the same as 2026-10-07-i3-W2, not a regression; the count (60) is within the 56-69 baseline.
   - recommended: Restore the two events (curate them or un-remove the feed rows); consider curating InsurTech 2027 Spring Conference; in a future pass, re-fetch an upcoming event's own page before taking it down for missing from a luma-area listing.
   - note: takenDown() drops an upcoming event when it leaves a luma-area listing, without re-reading its own page. Changing that rule (or restoring the two events by hand) is left to the user; same root as closed 2026-10-07-i3-W2.
+- **2026-11-12-i1-W2** · warning · deferred · **audit-run.mjs / build-data.mjs (tooling)** — Mechanical audit reported 0/0 despite 4 updates not landing and 1 curated add merged away; build-data merges different-named curated records by shared page silently.
+  - recommended: audit-run: verify each this-cycle update op's set fields and each add's presence in events.json. build-data: warn when two curated records of different names merge by page.
+  - note: Tooling change for the user to approve: audit-run.mjs to verify every patch value reached events.json and every add survived; build-data.mjs to warn when it merges differently-named curated records by shared page.
 
 ## History
+
+### 2026-11-12-i1 — 2 blocking, 2 warning(s)
+
+Scope: nov12 cycle: re-check t1-t3 (60 rows, 6 corrections), discovery r1/r2/d1/d2 (31 adds), sources-nov12-* follows/retirements
+
+| id | severity | event | finding | status | resolution |
+|---|---|---|---|---|---|
+| B1 | blocking | Milwaukee Tech Hub Code & Coffee (Milwaukee); SecKC (Kansas City); tech SAVannah Tech Tuesday (Savannah); Venture Café Phoenix Thursday Gathering (Phoenix) | nov12-t1 corrections did not land: patch-order dated nov12 as 2025-11-12 because today() (Honolulu) was still 2026-11-11 at apply time, so older oct05-r1/oct29-t1/oct31-t1 updates replayed after it and the build rolled the records to recurring-tbd with no next_date. | fixed (2026-11-12) | Re-applied nov12-t1 with scripts/lib/patch-order.mjs fixed: patchDate now accepts passes dated up to 7 days ahead of today() (Honolulu), with selftest cases incl. across new year. All 4 rows re-checked ok (RECHECK-nov12.md). |
+| B2 | blocking | DubHacks (Seattle) | Added by nov12-d1 but merged away by build-data: it and DubHacks NEXT Demo Day share url https://dubhacks.co/ and one name contains the other, so samePageSameEvent folded the hackathon (Oct 17-18 2026) into the Demo Day record. | fixed (2026-11-12) | nov12-xaudit-fixes.json sets DubHacks NEXT Demo Day url to https://next.dubhacks.co/; DubHacks (Seattle) now survives the build. Re-checked ok. |
+| W1 | warning | The Reinforcement Learning Conference (RLC) (Providence) | last_date 2026-08-15 is the Montreal edition (rl-conference.cc/2026/); RLC has not been held in Providence before (2024 Amherst, 2025 Edmonton). next_date 2027-08-02..06 is correct. | fixed (2026-11-12) | nov12-xaudit-fixes.json clears RLC (Providence) last_date (2026 edition was Montreal), carries nov12-t2's 2027-08-02..06. Re-checked ok. |
+| W2 | warning | audit-run.mjs / build-data.mjs (tooling) | Mechanical audit reported 0/0 despite 4 updates not landing and 1 curated add merged away; build-data merges different-named curated records by shared page silently. | deferred (2026-11-12) | Tooling change for the user to approve: audit-run.mjs to verify every patch value reached events.json and every add survived; build-data.mjs to warn when it merges differently-named curated records by shared page. |
+
+Checked and sound: InfoSec Nashville and RLC 2027 dates; Techstars Boston/NYC Jun 03 2027 (PROPOSED-moves rightly rejected: JSON-LD is Accelerator Starts); Splunk .conf, SpiceWorld confirms; adds Cognite Impact, LDX3 NY, UXCON, Global AI Conf Toronto, CyberSci Toronto, Jam @ GDC, Tech Alley Vegas, Kong Summit, GGJ Vancouver, Data Saturday Chicago; feed retirements
 
 ### 2026-11-05-i2 — 0 blocking, 1 warning(s)
 

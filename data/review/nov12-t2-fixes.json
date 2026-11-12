@@ -1,0 +1,10 @@
+[
+  { "match": { "name": "InfoSec Nashville", "city": "Nashville" },
+    "action": "update",
+    "reason": "Organiser page issamidtn.org/infosec-nashville-cybersecurity-conference/ (ISSA Middle TN) reads 'Save the date for InfoSec 2027 September 8 - 9' with a countdown to InfoSec 2027. The 2026 edition (last_date 2026-09-17) has run; last_date is unchanged. Venue for 2027 is not stated on the page; Music City Center (2026 venue) left as is.",
+    "set": { "next_date": "2027-09-08", "next_date_end": "2027-09-09", "status": "upcoming", "source": "https://issamidtn.org/infosec-nashville-cybersecurity-conference/" } },
+  { "match": { "name": "The Reinforcement Learning Conference (RLC)", "city": "Providence" },
+    "action": "update",
+    "reason": "rl-conference.cc/2027/: 'The fourth Reinforcement Learning Conference (RLC) will take place in 2027 at two locations: Brown University, Providence, RI, USA and Nyborg, Denmark (joint with EWRL)'; 'Conference (Providence) August 2 - 6'. Providence/Brown matches the record's city and venue. Note: the 2026 edition (last_date 2026-08-15) was held in Montreal per rl-conference.cc/2026/ (Aug 15-18, 2026, Jean-Brillant Building, Universite de Montreal); last_date is kept as the series' most recent edition.",
+    "set": { "next_date": "2027-08-02", "next_date_end": "2027-08-06", "status": "upcoming", "source": "https://rl-conference.cc/2027/" } }
+]

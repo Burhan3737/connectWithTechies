@@ -1,0 +1,141 @@
+{
+  "pass": "nov12-d2",
+  "date": "2026-11-12",
+  "returning": [],
+  "reported": [],
+  "cities": [
+    {
+      "city": "Toronto",
+      "region": "Ontario",
+      "queries": [
+        "Toronto startup week 2026 OR 2027",
+        "Toronto in-person CTF capture the flag 2026 OR 2027",
+        "\"Unleashing Cyber Champions\" capture the flag Ontario",
+        "UofTCTF 2027 OR \"MapleCTF\" OR \"Toronto CTF\" in person 2026",
+        "CyberSci Regionals Toronto 2026 OR 2027 in-person CTF"
+      ],
+      "found": [
+        { "name": "University of Toronto Entrepreneurship Week", "url": "https://entrepreneurs.utoronto.ca/event/university-of-toronto-entrepreneurship-week-2026/", "verdict": "added",
+          "reason": "startup-week. Organiser page: March 2-6 2026, ninth annual, public events across the tri-campus. 2027 page 404s, so added recurring-tbd with last_date 2026-03-02." },
+        { "name": "CyberSci Toronto Regional", "url": "https://cybersci.ca/", "verdict": "added",
+          "reason": "ctf. cybersci.ca: Regionals 2026/27 on November 21, 2026, in person, Toronto among the cities; Toronto 2025 regional was Nov 22, 2025. Venue not published. Same shape as the existing CyberSci Calgary Regional record." },
+        { "name": "Toronto Tech Week", "url": "https://www.torontotechweek.com/", "verdict": "exists",
+          "reason": "The only 'startup week' style hit besides U of T's; already held as Toronto Tech Week (tech-week)." },
+        { "name": "UofTCTF", "url": "https://uoftctf.org/", "verdict": "rejected",
+          "reason": "The club's annual January CTF ran online (Jan 9-11 2026 per pwn.college archive); no in-person component found." },
+        { "name": "Unleashing Cyber Champions CTF (Ontario Cyber Security Centre of Excellence)", "url": "https://employees.senecapolytechnic.ca/spaces/238/itas/articles/news/23353/ontario-government-s-unleashing-cyber-champions-capture-the-flag-event", "verdict": "rejected",
+          "reason": "Oct 8 2025 at the Marriott Eaton Centre; the only page is a Seneca intranet article now 404, no organiser page and no 2026 edition found. The 2024 provincial CTF was in Guelph, so not a stable Toronto event." },
+        { "name": "Palo Alto Networks Security CTF Workshop", "url": "https://its.utoronto.ca/event/palo-alto-networks-security-capture-the-flag-workshop/", "verdict": "rejected",
+          "reason": "One-off 2-hour U of T ITS staff session on Apr 10 2026; not public, not recurring." }
+      ]
+    },
+    {
+      "city": "San Francisco",
+      "region": "California",
+      "queries": [
+        "\"San Francisco Startup Week\" 2026 OR 2027",
+        "San Francisco in-person CTF capture the flag 2026 OR 2027",
+        "\"Pacific Hackers\" PRE-DEFCON CTF BBQ 2025",
+        "San Francisco game jam 2026 OR 2027 in person",
+        "Global Game Jam 2026 jam site San Francisco",
+        "San Francisco annual game jam Gray Area OR \"Indie Game\" OR \"SF Game Dev\" recurring"
+      ],
+      "found": [
+        { "name": "The Jam @ GDC", "url": "https://gdconf.com/the-jam-gdc/", "verdict": "added",
+          "reason": "game-jam. gdconf.com: official GDC jam with Global Game Jam, kick-off at Moscone Center 9am Feb 28 2027, two days (Feb 28-Mar 1), ~100 jammers by application (closed Oct 19). Added as upcoming, cost invite-only." },
+        { "name": "Pacific Hackers PRE-DEFCON CTF & BBQ", "url": "https://www.meetup.com/pacifichackers/", "verdict": "added",
+          "reason": "ctf. Annual two-day pre-DEF CON CTF (2026: Jun 26 SF at AI Start Academy + Jun 27 Palo Alto; 2025: Oakland), but the host city moves around the Bay Area, so not added as an SF record. The organiser publishes on Meetup and Luma: Meetup group listed in sources-nov12-d2.json." },
+        { "name": "2026 Epic AI MegaJam", "url": "https://www.eventbrite.com/e/2026-epic-ai-megajam-in-person-event-tickets-2003723451783", "verdict": "exists",
+          "reason": "Nov 14-15 2026 in-person SF site; already in the feed (eventbrite). One-off, so not curated." },
+        { "name": "BSidesSF CTF", "url": "https://bsidessf.org/ctf", "verdict": "exists",
+          "reason": "Runs inside BSidesSF, already held as a conference." },
+        { "name": "SF Tech Week / Tech Week San Francisco", "url": "https://www.tech-week.com/", "verdict": "exists",
+          "reason": "Closest thing to a startup week; already held as Tech Week San Francisco (tech-week). No event named San Francisco Startup Week exists." },
+        { "name": "WikiGameJam SF / Jabali AI Game Jam @ GDC", "url": "https://gamesbeat.com/jam-city-backs-wikigamejam-sf-at-gdc-festival-of-gaming/", "verdict": "rejected",
+          "reason": "Both March 2026 one-offs around GDC; no sign of a next edition." },
+        { "name": "Blue Team CTF (YC)", "url": "https://lu.ma/vhjlxad5", "verdict": "rejected",
+          "reason": "Invite-only, not taking registrations, no date." }
+      ]
+    },
+    {
+      "city": "Abilene",
+      "region": "Texas",
+      "queries": [
+        "Abilene Texas hackathon 2026 OR 2027",
+        "Abilene TX tech conference OR startup week OR pitch competition 2026",
+        "Abilene Texas tech meetup OR cybersecurity CTF OR \"1 Million Cups Abilene\"",
+        "\"Paradox Lab\" Abilene venture studio events",
+        "Abilene Christian University OR Hardin-Simmons OR McMurry hackathon OR \"pitch competition\" OR \"demo day\" 2026",
+        "DC325 OR DCG325 Abilene DEF CON group meeting",
+        "Abilene TX meetup group developers OR AI OR \"tech\" monthly 2026"
+      ],
+      "found": [
+        { "name": "Texas Venture Fest: Abilene", "url": "https://lu.ma/texas-venture-fest-abilene-2025", "verdict": "rejected",
+          "reason": "One 5-8pm networking evening on Oct 2 2025 (Grain Theory, host Paradox Lab). The 2026 Abilene Luma page is 404 and texasventurefest.com does not list Abilene among its 2026 cities." },
+        { "name": "DCG Abilene (DCG325)", "url": "https://forum.defcon.org/node/253948", "verdict": "unresolved",
+          "reason": "Only a DEF CON forum template entry; page unreachable by curl, and no meeting time, place or recent activity found anywhere." },
+        { "name": "Hardin-Simmons Cowboy Coders", "url": "https://www.hsutx.edu/?p=43535", "verdict": "rejected",
+          "reason": "Competitive-programming team, not a public event." }
+      ]
+    },
+    {
+      "city": "Amherst",
+      "region": "Massachusetts",
+      "queries": [
+        "UMassCTF 2026 in person OR online",
+        "UMass Amherst Innovation Challenge finals 2026 Berthiaume Center",
+        "Amherst Massachusetts game jam 2026 UMass OR Hampshire OR Amherst College",
+        "Amherst MA tech conference OR summit OR symposium 2026 OR 2027 UMass computing",
+        "Amherst Massachusetts tech meetup OR \"startup\" networking monthly Pioneer Valley 2026",
+        "\"Voices of Data Science\" conference UMass Amherst 2025 OR 2024"
+      ],
+      "found": [
+        { "name": "UMassCTF", "url": "https://umasscybersec.org/events/UMassCTF/UMassCTF-2026", "verdict": "added",
+          "reason": "ctf. Apr 10-12 2026 with a starting ceremony in CSL E144; annual since 2020; hybrid (online worldwide plus on-campus room). recurring-tbd, last_date 2026-04-10." },
+        { "name": "Innovation Challenge: The Final", "url": "https://events.umass.edu/event/innovation-challenge-the-final", "verdict": "added",
+          "reason": "demo-day. Berthiaume Center's annual public pitch final, Apr 30 2026 at Old Chapel, $65K prize pool. recurring-tbd." },
+        { "name": "Voices of Data Science Conference", "url": "https://www.cics.umass.edu/events/vds-conference-2026", "verdict": "added",
+          "reason": "conference. Apr 15 2026 at CS Laboratories, in person; annual student-run (2023, 2024, 2026). recurring-tbd." },
+        { "name": "Amherst Security Group (AmherstSec)", "url": "https://www.meetup.com/amherstsec/", "verdict": "added",
+          "reason": "meetup-series. Monthly 3rd-Thursday in-person security meetup at Paragus IT in Hadley (adjoins Amherst). Publishes on Meetup: listed in sources-nov12-d2.json, not added as a record." },
+        { "name": "MinutemanCTF", "url": "https://umasscybersec.org/events/MinutemanCTF/MinutemanCTF-2025", "verdict": "rejected",
+          "reason": "Restricted to UMass/Five College students; the Oct 2025 edition is the latest listed and no Oct 2026 edition appeared." },
+        { "name": "UMass Game Dev Club Spring Game Jam", "url": "https://www.cics.umass.edu/events/umass-game-dev-club-spring-game-jam", "verdict": "rejected",
+          "reason": "Apr 17-24 2026 in the CS makerspace, but posted for current students only and no further edition listed; the itch.io Fall 2025 jam found alongside it refers to UML, so its location is unclear." },
+        { "name": "CICS Tech Conference", "url": "https://cicstechconference.netlify.app/", "verdict": "rejected",
+          "reason": "Apr 18 2026 student-run conference, first edition found with no sign it recurs; audience listed as students." },
+        { "name": "2026 UMass IT Innovation Summit", "url": "https://www.umass.edu/it/2026-UMass-IT-Summit", "verdict": "rejected",
+          "reason": "Open only to UMass IT staff." }
+      ]
+    },
+    {
+      "city": "Athens",
+      "region": "Georgia",
+      "queries": [
+        "Athens Georgia startup week OR tech week OR \"Four Athens\" 2026",
+        "University of Georgia CTF capture the flag in person Athens 2026",
+        "Athens GA game jam 2026 UGA",
+        "Athens GA tech conference OR summit 2026 OR 2027",
+        "NMIXpo UGA New Media Institute fall 2025 OR fall 2026",
+        "UGA cybersecurity club CTF competition hosted Athens \"Cyber\" 2025 OR 2026",
+        "innovation.uga.edu/events past listings Nov 2025 - Nov 2026"
+      ],
+      "found": [
+        { "name": "UGA Venture Prize Competition", "url": "https://innovation.uga.edu/event/uga-venture-prize-competition/", "verdict": "added",
+          "reason": "demo-day. 5th annual, Feb 19 2026 at Studio 225, free audience. recurring-tbd." },
+        { "name": "Athens Innovates Networking & Happy Hour", "url": "https://www.eventbrite.com/o/26765539381", "verdict": "added",
+          "reason": "meetup-series. UGA Innovation Gateway + ATDC tech networking at Delta Innovation Hub, Feb 11, Mar 11, May 13 2026; none listed since May. Organiser (UGA Startup Program) publishes on Eventbrite: listed in sources-nov12-d2.json rather than added as a record." },
+        { "name": "Athens Startup Week", "url": "https://research.uga.edu/gateway/athens-startup-week-is-april-12-16/", "verdict": "rejected",
+          "reason": "Latest edition found is April 12-16, 2021; nothing since." },
+        { "name": "NMIXpo", "url": "https://innovation.uga.edu/event/spring-2026-nmixpo", "verdict": "rejected",
+          "reason": "Semesterly New Media capstone showcase, but Fall 2025 was held at Atlanta Tech Village Buckhead and Spring 2026 in Athens, so no stable city." },
+        { "name": "UGA Idea Accelerator Demo Day", "url": "https://innovation.uga.edu/event/uga-idea-accelerator-demo-day-pitch-competition-spring-i/", "verdict": "rejected",
+          "reason": "Small cohort pitch night (Feb 23 2026) for a 4-week student boot camp; covered by the UGA Startup Program source if it recurs." },
+        { "name": "Athens Game Jam (GGDA Athens)", "url": "https://cow-amethyst-6aab.squarespace.com/news/2018-athens-game-jam-results", "verdict": "rejected",
+          "reason": "Last edition found was 2018." },
+        { "name": "The Hack Pack (UGA cybersecurity club)", "url": "https://cybersecurity.uga.edu/news/stories/2025/hack-pack-uga-practical-competitive-cybersecurity-club", "verdict": "rejected",
+          "reason": "Competes in outside CTFs; hosts no CTF of its own that I could find. No in-person Athens CTF found." }
+      ]
+    }
+  ]
+}

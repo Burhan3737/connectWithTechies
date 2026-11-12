@@ -1,0 +1,106 @@
+{
+  "pass": "nov12-d1",
+  "date": "2026-11-12",
+  "returning": [],
+  "cities": [
+    {
+      "city": "Seattle",
+      "region": "Washington",
+      "queries": [
+        "Seattle startup week 2026",
+        "Seattle accelerator demo day 2026",
+        "Seattle CTF capture the flag in-person 2026 competition",
+        "Seattle game jam 2026 in-person Seattle Indies",
+        "globalgamejam.org jam-sites 2026 Seattle",
+        "dubhacks.co (organiser site, direct)"
+      ],
+      "found": [
+        { "name": "DubHacks", "url": "https://dubhacks.co/", "verdict": "added", "reason": "hackathon: dubhacks.co shows Oct 17-18 2026 at UW Seattle, now concluded; annual; added recurring-tbd with last_date 2026-10-17" },
+        { "name": "DubHacks NEXT Demo Day", "url": "https://luma.com/v5rj3a1w", "verdict": "added", "reason": "demo-day: Batch 5 Demo Day May 7 2026, Kane Hall UW, on the organiser's Luma page; one batch a year; added recurring-tbd" },
+        { "name": "Global Game Jam - Seattle Interactive Media Lab (SiM)", "url": "https://globalgamejam.org/jam-sites/2026/seattle-interactive-media-lab-sim", "verdict": "added", "reason": "game-jam: returning GGJ site at 3131 Western Ave, Seattle, Jan 30 - Feb 1 2026; 2027 sites not listed yet" },
+        { "name": "Global Game Jam - Seattle Indies", "url": "https://globalgamejam.org/jam-sites/2026/seattle-indies-ggj-2026", "verdict": "added", "reason": "game-jam: Seattle Indies' 11th GGJ site, Jan 30 - Feb 1 2026; main room at DigiPen, so recorded under Redmond, not Seattle" },
+        { "name": "Seattle Indies (organiser)", "url": "https://www.meetup.com/seattleindies/", "verdict": "added", "reason": "recurring in-person game-dev organiser on Meetup, not registered; listed in sources-nov12-d1.json rather than as one-offs" },
+        { "name": "Seattle Startup Week", "url": "", "verdict": "rejected", "reason": "startup-week: no event of that name found for 2026; the city's week-long events are Seattle Tech Week (held) and Seattle AI Week" },
+        { "name": "Amazon x Fortinet x WiCyS 'Together We Hack' CTF", "url": "https://www.wicys.org/event/wicys-amazon-x-fortinet-together-we-hack-capture-the-flag-ctf-1/", "verdict": "rejected", "reason": "ctf: one-off sponsor event on Aug 4 2026 at Amazon; no recurring public in-person Seattle CTF found" },
+        { "name": "WTIA Founder Cohort Demo Day", "url": "https://members.washingtontechnology.org/calendar/Details/wtia-founder-cohort-14-demo-day-1902483", "verdict": "unresolved", "reason": "demo-day: page is behind a Cloudflare challenge (403), so the date and venue could not be read on the organiser's page; not added" }
+      ]
+    },
+    {
+      "city": "Vancouver",
+      "region": "British Columbia",
+      "queries": [
+        "Vancouver tech week 2026",
+        "\"Vancouver AI Week\" OR \"BC Tech Week\" OR \"Vancouver Tech Week\" 2026 OR 2027",
+        "\"Vancouver Tech Week\" luma events builders hackers",
+        "Vancouver BC CTF capture the flag in-person 2026",
+        "Vancouver game jam 2026 in-person Global Game Jam site Vancouver",
+        "globalgamejam.org jam-sites 2026 country=CA (site list)"
+      ],
+      "found": [
+        { "name": "Global Game Jam - LaSalle College Vancouver", "url": "https://globalgamejam.org/jam-sites/2026/lasalle-college-vancouver", "verdict": "added", "reason": "game-jam: LaSalle College Vancouver, Jan 26 - Feb 1 2026, free and open to the public; recurring-tbd" },
+        { "name": "Global Game Jam Vancouver", "url": "https://ggjvancouver.ca/", "verdict": "added", "reason": "game-jam: running since 2010, Jan 30 - Feb 1 2026 at Douglas College; recorded under New Westminster, where it is held" },
+        { "name": "Vancouver Tech Week", "url": "https://luma.com/vantechweek", "verdict": "rejected", "reason": "tech-week: only edition was Sep 12-18 2024; its Luma calendar is empty and says the next date is undecided, so no edition in over two years" },
+        { "name": "Vancouver Tech Journal Events (organiser)", "url": "https://luma.com/vantechjournal", "verdict": "added", "reason": "runs Vancouver Tech Days (Oct 19-20 2026, a conference rather than a tech week); listed in sources-nov12-d1.json" },
+        { "name": "BCNET Connect CTF / BSides Vancouver PicoCTF workshop", "url": "https://www.bc.net/connect/themes/workshops/free-cyber-scenarios-challenge-capture-flag-ctf", "verdict": "rejected", "reason": "ctf: the BCNET one is an inaugural workshop inside a higher-ed IT conference and the BSides one is a workshop inside BSides Vancouver (already held); no standalone recurring in-person Vancouver CTF found" }
+      ]
+    },
+    {
+      "city": "Montreal",
+      "region": "Quebec",
+      "queries": [
+        "Montreal startup week 2026 semaine startups Montréal",
+        "Montreal demo day 2026 accelerator Centech District 3 FounderFuel",
+        "\"Demo Day\" Montréal 2026 McGill OR Centech OR \"District 3\" OR Concordia startups pitch",
+        "\"Gina Cody School Innovation Fund\" Demo Day fall"
+      ],
+      "found": [
+        { "name": "Gina Cody School Innovation Fund Demo Day", "url": "https://luma.com/i3bpafep", "verdict": "added", "reason": "demo-day: May 25 2026 at Concordia's EV Building; also held May 2024 and May 2025; recurring-tbd" },
+        { "name": "Montreal Startup Week", "url": "", "verdict": "rejected", "reason": "startup-week: no Montréal startup week exists; the city's startup gathering is Startupfest, already held" },
+        { "name": "FounderFuel Demo Day", "url": "https://founderfuel.com/", "verdict": "unresolved", "reason": "demo-day: no 2026 cohort or demo day date published on founderfuel.com; not added" },
+        { "name": "McGill Engine TechAccel Showcase", "url": "https://www.mcgill.ca/engine/channels/event/techaccel-showcase-366948", "verdict": "rejected", "reason": "Sep 17 2026 showcase held as part of the McGill Engine Open House; no earlier edition found, so recurrence is not shown and it was not added" }
+      ]
+    },
+    {
+      "city": "Las Vegas",
+      "region": "Nevada",
+      "queries": [
+        "UNLV hackathon 2026 OR 2027 Las Vegas student hackathon",
+        "Las Vegas startup week OR tech week 2026 Vegas Tech Alley",
+        "StartUpNV demo day 2026 AngelNV finale Las Vegas",
+        "Las Vegas game jam 2026 Global Game Jam UNLV OR Las Vegas site",
+        "\"CyberWeek@UNLV\" OR \"CyberWeek @ UNLV\" capture the flag 2025",
+        "Las Vegas monthly tech meetup developers in-person 2026",
+        "FEE \"Liberty LaunchPad\" hackathon 2025 FreedomFest",
+        "globalgamejam.org jam-sites 2026 country=US (site list)"
+      ],
+      "found": [
+        { "name": "AngelNV Finale", "url": "https://angelnv.com/", "verdict": "added", "reason": "demo-day: AngelNV 6 Finale Apr 11 2026 at Las Vegas City Hall; AngelNV 7 starts Jan 2027; recurring-tbd" },
+        { "name": "CyberWeek@UNLV Capture the Flag", "url": "https://www.unlv.edu/event/cyberweekunlv-capture-flag-ctf-competition", "verdict": "added", "reason": "ctf: Oct 2 2026 and Oct 3 2025 on UNLV's calendar; in person; recurring-tbd" },
+        { "name": "Tech Alley Vegas", "url": "https://www.meetup.com/tech-alley/", "verdict": "added", "reason": "meetup-series: free monthly 'meetup of meetups' every 3rd Saturday; next Nov 21 2026 at 814 S 3rd St. Its Meetup feed is already in the registry" },
+        { "name": "Liberty LaunchPad (FEE Hackathon)", "url": "https://fee.org/hackathon/", "verdict": "rejected", "reason": "hackathon: Jul 6-8 2026 at Caesars Forum, but no earlier edition found and none announced, so treated as one-off and not added" },
+        { "name": "Jackpot Hackathon (Hack Club)", "url": "https://jackpot.hackclub.com/hackathon_info", "verdict": "rejected", "reason": "hackathon: May 9-10 at UNLV with no year stated; site now read-only; a one-off programme" },
+        { "name": "Las Vegas tech week / startup week", "url": "", "verdict": "rejected", "reason": "tech-week, startup-week: none exists; searches returned only CES and Startup Vegas's CES-week LevelUp night" },
+        { "name": "Las Vegas game jam", "url": "", "verdict": "rejected", "reason": "game-jam: no Nevada site in the GGJ 2026 list and no local jam found; the last Vegas GGJ site found was 2019" }
+      ]
+    },
+    {
+      "city": "New York",
+      "region": "New York",
+      "queries": [
+        "\"NYC Startup Week\" OR \"New York Startup Week\" 2026",
+        "ERA Entrepreneurs Roundtable Accelerator demo day 2026 New York",
+        "Cornell Tech Startup Studio Demo Day 2026 OR Techstars NYC demo day 2026",
+        "New York City in-person CTF capture the flag competition 2026 Manhattan"
+      ],
+      "found": [
+        { "name": "Tech@NYU Startup Week", "url": "https://nyusw.com/", "verdict": "added", "reason": "startup-week: Feb 20-27 2026, 1k+ attendees; organisers are planning Startup Week 2027; recurring-tbd" },
+        { "name": "Techstars NYC Demo Day", "url": "https://www.techstars.com/accelerators/nyc", "verdict": "added", "reason": "demo-day: Techstars' page gives Demo Day Jun 03 2027" },
+        { "name": "Tech@NYU (organiser)", "url": "https://luma.com/techatnyu", "verdict": "added", "reason": "student tech org with regular in-person hackdays; listed in sources-nov12-d1.json" },
+        { "name": "CSAW Cybersecurity Games and Conference", "url": "https://www.csaw.io/", "verdict": "exists", "reason": "ctf: already curated under Brooklyn (NYU Tandon), next_date 2026-11-12" },
+        { "name": "ERA (Entrepreneurs Roundtable Accelerator) Demo Day", "url": "https://www.eranyc.com/", "verdict": "unresolved", "reason": "demo-day: ERA30 Winter 2026 Luma page shows no date and is invite-only for accredited investors; eranyc.com gives no demo day date; not added" },
+        { "name": "Wiz / Fortinet / Zero Networks vendor CTFs", "url": "https://www.wiz.io/events/haunted-house-ctf", "verdict": "rejected", "reason": "ctf: one-off vendor marketing events, not a recurring public CTF" }
+      ]
+    }
+  ],
+  "reported": []
+}

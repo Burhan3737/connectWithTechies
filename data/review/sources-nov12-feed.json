@@ -1,0 +1,22 @@
+[
+  { "url": "https://www.meetup.com/sustainablecapitolhill/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: neighbourhood mutual-aid group (de-escalation skillshare, protest radio, woodshop, repair circle); the 2/2 tech track record was two repair/3D-printing sessions." },
+  { "url": "https://www.meetup.com/boston-modular-and-synth-meetup/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: electronic-music synth meetup and concerts (Temple Darkness), not tech." },
+  { "url": "https://www.meetup.com/networkingafterworkchicago/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: templated industry-rotating networking (Women in Business, Healthcare & Pharma, Sales, Freelancers); one AI & Tech title among them." },
+  { "url": "https://www.meetup.com/do-stuff-and-make-friends-in-toronto/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: social group relaying a templated networking series (Dentistry & Healthcare, Engineering & Energy, Technology); the series' own Eventbrite listings are read directly." },
+  { "url": "https://www.meetup.com/stellar-socials-vancouver-meetup-group/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: social group relaying the same templated AI/Tech/Finance networking series; 2/2 track record is that template, read directly from Eventbrite." },
+  { "url": "https://www.eventbrite.com/o/7996717910", "tech": false, "reason": "Discovery review 2026-11-12: UCPBA, Ukrainian Canadian professional business association (holiday celebration, one defence-tech forum)." },
+  { "url": "https://www.eventbrite.com/o/121913992689", "tech": false, "reason": "Discovery review 2026-11-12: Curious Hour, general-interest talks (negotiation psychology); one AI-themed talk." },
+  { "url": "https://www.meetup.com/International-Development-Networking/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: international affairs / NGO happy hours, not tech." },
+  { "url": "https://www.meetup.com/SDFilmNet/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: Filmmakers Network San Diego, film-industry monthly events and gala; one AI video workshop." },
+  { "url": "https://www.meetup.com/the-entrepreneur-social/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: general entrepreneur social hour, one-word description match ('entrepreneur')." },
+  { "url": "https://www.eventbrite.com/o/120858755375", "tech": false, "reason": "Discovery review 2026-11-12: Bow Valley College career services (interview and job-search workshops)." },
+  { "url": "https://www.eventbrite.com/o/112206448241", "tech": false, "reason": "Discovery review 2026-11-12: NPower community help desk, basic digital-literacy classes for the public." },
+  { "url": "https://www.meetup.com/indianapolis-cafe-cowork/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: café co-working drop-ins, one-word description match ('cowork')." },
+  { "url": "https://www.meetup.com/coffee-and-co-work/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: café co-working drop-ins in Madison; track record misread." },
+  { "url": "https://www.meetup.com/real-estate/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: Ann Arbor Real Estate Investors Club, one-word description match ('investors')." },
+  { "url": "https://www.meetup.com/sons-of-technology/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: food-and-drinks and motorcycle bike nights; name match only." },
+  { "url": "https://www.meetup.com/sacmadestudio/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: craft studio (jewelry soldering, bullet journaling, woodshop, laser cutting classes)." },
+  { "url": "https://www.meetup.com/pswscience/events/ical/", "tech": false, "reason": "Discovery review 2026-11-12: Philosophical Society of Washington, general science lectures; one-word description match ('engineering')." },
+  { "url": "https://www.eventbrite.com/o/15040710099", "tech": false, "reason": "Discovery review 2026-11-12: Montréal Cowork, a co-working space's general programme; one-word description match ('cowork')." },
+  { "url": "https://luma.com/nixos", "tech": true, "reason": "Discovery review 2026-11-12: Bay Area Nix/NixOS User Group; the gate dropped 'Bay Area Nix Meetup' for no tech signal." }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "match": { "name": "DubHacks NEXT Demo Day", "city": "Seattle" },
+    "action": "update",
+    "reason": "Audit 2026-11-12-i1-B2: DubHacks and DubHacks NEXT Demo Day were both added with url https://dubhacks.co/, so build-data merged the hackathon away. NEXT has its own site, https://next.dubhacks.co/ (linked from dubhacks.co as 'NEXT Website', returns 200). Named xaudit so it replays after nov12-d1 on the same day.",
+    "set": { "url": "https://next.dubhacks.co/" }
+  },
+  {
+    "match": { "name": "The Reinforcement Learning Conference (RLC)", "city": "Providence" },
+    "action": "update",
+    "reason": "Audit 2026-11-12-i1-W1: carries nov12-t2's verified 2027 date (rl-conference.cc/2027/: Brown University, Providence, August 2-6) and clears last_date: 2026-08-15 was the Montreal edition (rl-conference.cc/2026/), not a Providence one.",
+    "set": {
+      "next_date": "2027-08-02",
+      "next_date_end": "2027-08-06",
+      "status": "upcoming",
+      "source": "https://rl-conference.cc/2027/",
+      "last_date": ""
+    }
+  }
+]

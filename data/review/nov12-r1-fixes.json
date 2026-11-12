@@ -1,0 +1,203 @@
+[
+  {
+    "action": "add",
+    "reason": "cognite.com/en/impact-conference (Cognite's own page, title 'Impact 2027 | Cognite'): 'When May 10 – May 13 ... Where Hilton of the Americas, Houston, TX, USA'. Page says the most recent global conference was 2025 (~700 attendees); 2025 edition Oct 13-16 Houston per the confs.tech row.",
+    "record": {
+      "name": "Cognite Impact",
+      "type": "conference",
+      "topics": [
+        "ai",
+        "industrial",
+        "data"
+      ],
+      "city": "Houston",
+      "region": "Texas",
+      "country": "United States",
+      "venue": "Hilton of the Americas",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-05-10",
+      "next_date_end": "2027-05-13",
+      "last_date": "2025-10-13",
+      "status": "upcoming",
+      "attendance": "700",
+      "cost": "varies",
+      "audience": "industrial operations leaders, data and AI engineers",
+      "url": "https://www.cognite.com/en/impact-conference",
+      "description": "Cognite's flagship conference on industrial AI and data, with customer keynotes, breakout sessions and networking for the energy and manufacturing sectors.",
+      "source": "https://www.cognite.com/en/impact-conference"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "leaddev.com/leaddev-new-york now serves 'LDX3 New York by LeadDev': 'New York • September 8 & 9, 2027 ... What an incredible first year in New York ... 2027 pre-sale tickets are live'. leaddev.com/staffplus-new-york and /leadingeng-new-york now carry the merged event: 'September 15 & 16, 2026 ... The new flagship New York event takes place at the Javits Center'. LeadDev New York, StaffPlus New York and LeadingEng New York were folded into this one festival.",
+    "record": {
+      "name": "LDX3 New York",
+      "type": "festival",
+      "topics": [
+        "engineering-leadership",
+        "management"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "Javits Center",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "2027-09-08",
+      "next_date_end": "2027-09-09",
+      "last_date": "2026-09-15",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "engineering managers, staff+ engineers, engineering executives",
+      "url": "https://leaddev.com/leaddev-new-york",
+      "description": "LeadDev's New York festival for engineering leadership, combining the former LeadDev, StaffPlus and LeadingEng New York conferences into two days of talks, workshops and an expo.",
+      "source": "https://leaddev.com/leaddev-new-york"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "uxconference.org (organiser's site): 'UXCON27 · Oct 6-7, 2027 · Downtown Silver Spring, MD ... UXCON26 is a wrap'. UXCON26 per organiser UX University's meetup page (meetup.com/ux-university/events/312486031): Thursday Oct 8 2026, Silver Spring Civic Building at Veterans Plaza. The feed row's 'Washington, DC' is the metro; the event is held in Silver Spring.",
+    "record": {
+      "name": "UXCON",
+      "type": "conference",
+      "topics": [
+        "ux",
+        "design",
+        "product"
+      ],
+      "city": "Silver Spring",
+      "region": "Maryland",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "2027-10-06",
+      "next_date_end": "2027-10-07",
+      "last_date": "2026-10-08",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "UX designers, researchers, product managers, engineers",
+      "url": "https://www.uxconference.org/",
+      "description": "Community UX conference run by UX University in downtown Silver Spring, near DC, bringing designers, researchers and product people together for talks, workshops and a happy hour.",
+      "source": "https://www.uxconference.org/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "moz.com/mozcon JSON-LD startDate/endDate 2026-07-14 for MozCon New York; page now promotes 'MozCon London 2026 Roadshow ... November 13, 2026 in London' and 'join us in London or New York City'. No 2027 New York date published, so recurring-tbd with last_date 2026-07-14.",
+    "record": {
+      "name": "MozCon",
+      "type": "conference",
+      "topics": [
+        "seo",
+        "marketing",
+        "ai-search"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-14",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "SEO and digital marketing professionals",
+      "url": "https://moz.com/mozcon",
+      "description": "Moz's SEO and AI-search marketing conference, now run as a one-day, single-track in-person roadshow with a New York stop.",
+      "source": "https://moz.com/mozcon"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "konghq.com/events/conferences/api-summit redirects to /api-ai-summit, titled 'Kong Summit 2027 | Save the Date' with 'Be first to know when Summit 2027 details are announced' (no dates or city yet). Kong's press release (konghq.com/company/press-room/press-release/kong-announces-conference-agenda-for-api--ai-summit-2026): 2026 edition 'Sept. 30-Oct. 1 at the InterContinental in Los Angeles'; page JSON-LD startDate 2026-09-30. 2025 edition was New York. City is the 2026 host; the 2027 host city is not yet announced.",
+    "record": {
+      "name": "Kong Summit",
+      "type": "conference",
+      "topics": [
+        "api",
+        "ai",
+        "platform-engineering"
+      ],
+      "city": "Los Angeles",
+      "region": "California",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "September-October",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-09-30",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "platform engineers, API and AI engineers, engineering leaders",
+      "url": "https://konghq.com/events/conferences/api-ai-summit",
+      "description": "Kong's annual API + AI summit with technical breakouts, hands-on labs, certification and an expo; the host city changes year to year and the 2027 location is not yet announced.",
+      "source": "https://konghq.com/events/conferences/api-ai-summit"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "current.confluent.io (Confluent's own site): 'Current San Francisco November 4-5, 2026'; current.confluent.io/san-francisco: 'Thank You for Making Current a Success! ... watch Current 2026 on demand'. 2025 US edition was New Orleans; no 2027 US edition announced yet.",
+    "record": {
+      "name": "Current",
+      "type": "conference",
+      "topics": [
+        "data-streaming",
+        "kafka",
+        "flink"
+      ],
+      "city": "San Francisco",
+      "region": "California",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "October-November",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-11-04",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "developers, data engineers, architects",
+      "url": "https://current.confluent.io/",
+      "description": "Confluent's data streaming conference on Apache Kafka, Flink and Iceberg, with 80+ sessions, certification and an expo; the US edition moves between cities.",
+      "source": "https://current.confluent.io/san-francisco"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "unpromptedcon.org (organiser): '[un]prompted II The AI Security Practitioner Conference October 27-29, 2026, San Francisco'; archive menu shows the first edition March 2026 (Mar 3-4, matching the feed rows). Both have run; no third edition announced yet.",
+    "record": {
+      "name": "[un]prompted",
+      "type": "conference",
+      "topics": [
+        "ai",
+        "security"
+      ],
+      "city": "San Francisco",
+      "region": "California",
+      "country": "United States",
+      "venue": "",
+      "cadence": "biannual",
+      "month": "March, October",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-10-27",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, CISOs, AI security researchers",
+      "url": "https://unpromptedcon.org/",
+      "description": "Practitioner-focused AI security conference with talks, demos and workshops covering offense, threat hunting and program building.",
+      "source": "https://unpromptedcon.org/"
+    }
+  }
+]

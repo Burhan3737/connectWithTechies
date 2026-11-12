@@ -367,6 +367,11 @@ console.log('\npatch file order');
     === 'nov05-audit-fixes.json nov05-c1-fixes.json nov05-r1-fixes.json', 'same day: name order');
   ok(order(['oct05-r1-fixes.json', 'research-2026-10.json'], '2026-11-05')
     === 'research-2026-10.json oct05-r1-fixes.json', 'undated names first, so any dated pass can supersede them');
+  // Passes are named by the Eastern date; today() is Honolulu's, up to a day behind (audit 2026-11-12-i1-B1).
+  ok(order(['nov12-t1-fixes.json', 'oct31-t1-fixes.json'], '2026-11-11')
+    === 'oct31-t1-fixes.json nov12-t1-fixes.json', 'a pass dated a day ahead of today() is this year, not last');
+  ok(order(['jan01-t1-fixes.json', 'dec30-t1-fixes.json'], '2026-12-31')
+    === 'dec30-t1-fixes.json jan01-t1-fixes.json', 'a day ahead across the new year: next year, not last');
 }
 
 console.log(failed ? `\n${failed} CHECK(S) FAILED` : `\nALL ${passed} SCRIPT CHECKS PASSED`);

@@ -1,0 +1,18 @@
+[
+  { "match": { "name": "Milwaukee Tech Hub Code & Coffee", "city": "Milwaukee" },
+    "action": "update",
+    "reason": "meetup.com/mitobyte (organiser's group page), Upcoming events: 'December Code & Coffee, Sat, Dec 5 · 9:00 AM CST, Wantable Cafe, 123 East Walker Street, Milwaukee' (JSON-LD startDate 2026-12-05T15:00Z). The other upcoming items (Nov 18, Dec 9) are the separate evening 'Code + Brews', so they were not used. Last Code & Coffee Nov 7 already matches the record's last_date.",
+    "set": { "next_date": "2026-12-05", "next_date_end": "2026-12-05", "status": "upcoming" } },
+  { "match": { "name": "SecKC", "city": "Kansas City" },
+    "action": "update",
+    "reason": "seckc.org home page, 'Next Meeting / Upcoming Events': 'SecKC - December 2026, December 8, 2026'. The record's last_date of Nov 10 stays as it is.",
+    "set": { "next_date": "2026-12-08", "next_date_end": "2026-12-08", "status": "upcoming" } },
+  { "match": { "name": "tech SAVannah Tech Tuesday", "city": "Savannah" },
+    "action": "update",
+    "reason": "meetup.com/techsav (organiser's group page), Upcoming events: 'Tech Tuesday, Tue, Dec 8 · 5:30 PM EST, Hop Atomica, 535 E. 39th St., Savannah' (JSON-LD startDate 2026-12-08T22:30Z), followed by Jan 12 and Feb 9 2027. Past events list Tue Nov 10 at Hop Atomica, which matches the record's last_date.",
+    "set": { "next_date": "2026-12-08", "next_date_end": "2026-12-08", "status": "upcoming" } },
+  { "match": { "name": "Venture Café Phoenix Thursday Gathering", "city": "Phoenix" },
+    "action": "update",
+    "reason": "community.venturecafephoenix.org/events/249 (organiser's event platform): 'Thursday Gathering, Runway to 2027 - Fundraising Night!, Nov 12, 2026, 4:30 PM - 7:00 PM MST', which is tonight. Event 250, 'Thursday Gathering, The Venture Advantage', on Nov 19, 2026, is the one after it. The record's last_date of Nov 5 (event 248) stays as it is.",
+    "set": { "next_date": "2026-11-12", "next_date_end": "2026-11-12", "status": "upcoming" } }
+]

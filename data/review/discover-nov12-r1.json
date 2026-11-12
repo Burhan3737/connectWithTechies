@@ -1,0 +1,133 @@
+{
+  "pass": "nov12-r1",
+  "date": "2026-11-12",
+  "returning": [
+    {
+      "name": "hackathon",
+      "verdict": "exists",
+      "reason": "Already curated as 'UHackathon' (Tacoma, last_date 2026-05-22, url uhackathon2026.devpost.com); the devpost row uhackathon.devpost.com is its 2025 edition."
+    },
+    {
+      "name": "SmashingConf New York",
+      "verdict": "unresolved",
+      "reason": "smashingconf.com/ny-2026 returns 404; smashingconf.com 'Meet SmashingConfs 2027!' lists only Amsterdam (May 18-21 2027) and Freiburg (Sep 6-9 2027). No New York edition in 2026 or 2027. Not marked rejected because Smashing has not said the NY event has ended."
+    },
+    {
+      "name": "ReactConf",
+      "verdict": "unresolved",
+      "reason": "conf.react.dev still titled 'React Conf 2025 | October 7-8 | Henderson, Nevada'; search 'React Conf 2026 dates location' found no official 2026 edition (only an unverified aggregator listing of an online event). No next edition announced."
+    },
+    {
+      "name": "MozCon",
+      "verdict": "added",
+      "reason": "moz.com/mozcon JSON-LD 2026-07-14 (MozCon New York 2026 has run); next NYC date not published. Added 'MozCon', New York, recurring-tbd, last_date 2026-07-14."
+    },
+    {
+      "name": "UXCON",
+      "verdict": "added",
+      "reason": "uxconference.org: 'UXCON27 · Oct 6-7, 2027 · Downtown Silver Spring, MD'. Added with city Silver Spring, Maryland (row said Washington DC); last_date 2026-10-08 from the organiser's meetup page. Only a past feed meetup row existed in events.json."
+    },
+    {
+      "name": "IMPACT - The Industrial AI and Data Conference",
+      "verdict": "added",
+      "reason": "cognite.com/en/impact-conference: 'Impact 2027', May 10-13 [2027], Hilton of the Americas, Houston. Added as 'Cognite Impact'."
+    },
+    {
+      "name": "API Summit",
+      "verdict": "added",
+      "reason": "Renamed Kong Summit: konghq.com 'Kong Summit 2027 | Save the Date', no dates/city yet. 2026 ran Sep 30-Oct 1 at InterContinental Los Angeles (Kong press release). Added recurring-tbd with last_date 2026-09-30, city Los Angeles as the latest host; 2027 city unannounced."
+    },
+    {
+      "name": "CATMA 2025 Transportation Summit",
+      "verdict": "rejected",
+      "reason": "catmavt.org: Chittenden Area Transportation Management Association's commuter/housing/sustainable-mobility summit (Oct 14 2025, UVM Davis Center). Not a tech event; no 2026 edition on the page either."
+    },
+    {
+      "name": "LeadDev New York",
+      "verdict": "added",
+      "reason": "Merged into LDX3 New York: leaddev.com/leaddev-new-york 'New York • September 8 & 9, 2027', first edition Sep 15-16 2026 at Javits Center. Added 'LDX3 New York'."
+    },
+    {
+      "name": "StaffPlus New York",
+      "verdict": "added",
+      "reason": "leaddev.com/staffplus-new-york now promotes the merged LDX3 New York (Sep 15-16 2026, Javits Center); covered by the 'LDX3 New York' add this pass (next Sep 8-9 2027)."
+    },
+    {
+      "name": "LeadingEng New York",
+      "verdict": "added",
+      "reason": "leaddev.com/leadingeng-new-york now promotes the merged LDX3 New York (Sep 15-16 2026, Javits Center); covered by the 'LDX3 New York' add this pass (next Sep 8-9 2027)."
+    },
+    {
+      "name": "Northern VA CodeCamp Fall 2025",
+      "verdict": "unresolved",
+      "reason": "novacodecamp.org still shows 'Saturday, October 18, 2025' with Fall 2025 CFP; no 2026 edition posted although October 2026 has passed. Search 'Northern VA CodeCamp 2026 Reston' found nothing. Could be lapsed or just unannounced."
+    },
+    {
+      "name": "Magnolia Conf",
+      "verdict": "unresolved",
+      "reason": "magnoliaconf.com serves a bare 'Magnolia Conf' title with no content; 2026.magnoliaconf.com does not resolve. Search 'Magnolia Conf 2026 Jackson Mississippi' found only the 2025 edition (Oct 21-23 2025, Mississippi Museum of Art)."
+    },
+    {
+      "name": "PyData Vermont 2025",
+      "verdict": "unresolved",
+      "reason": "pydata.org/vermont2025 now 'Squarespace - Website Expired'; pydata.org/vermont2026 is 404. Search 'PyData Vermont 2026' found only 2025 pages. No 2026 edition seen."
+    },
+    {
+      "name": "GoWest Conf 2025",
+      "verdict": "unresolved",
+      "reason": "gowestconf.com: 'Go West Conference — Site Update In Progress', no dates. Search 'GoWest Conf 2026 Lehi Utah' found only unrelated GoWest credit-union and Carlson events."
+    },
+    {
+      "name": "Stanford Green AI Hackathon",
+      "verdict": "unresolved",
+      "reason": "Devpost shows only Oct 24-25 2025 (Stanford Climate Week); Luma page luma.com/60c18aav 'Green AI Hackathon' is a past event at CoDa. No 2026 Green AI edition found; Stanford Climate Week 2026 instead had a 'Cleantech Hackathon at Stanford' (Oct 23 2026, already in feed) that may or may not be its successor."
+    },
+    {
+      "name": "Code for the Goals",
+      "verdict": "unresolved",
+      "reason": "Devpost shows only Oct 25 2025 at Stanford; search '\"Code for the Goals\" hackathon Stanford 2026' found only 2025 listings. No next edition announced."
+    },
+    {
+      "name": "UF Claude Builder Club 3hr Hackathon",
+      "verdict": "rejected",
+      "reason": "A one-off 3-hour club sprint (Oct 26 2025, UF Cascades) per ufcbc.devpost.com; search found no further edition. Not a recurring event."
+    },
+    {
+      "name": "STARCANADA",
+      "verdict": "rejected",
+      "reason": "starcanada.techwell.com redirects to conferences.techwell.com/archives/starcanada-2025; TechWell's conference list (techwell.com/software-conferences) now names only STAREAST 2027, STARWEST 2027 and AI Con USA 2027. No 2026 Toronto edition ran; dropped by the organiser."
+    },
+    {
+      "name": "Current New Orleans 2025",
+      "verdict": "added",
+      "reason": "current.confluent.io: US edition moved to 'Current San Francisco November 4-5, 2026' (held). Added 'Current', San Francisco, recurring-tbd, last_date 2026-11-04."
+    },
+    {
+      "name": "Hacks 2025",
+      "verdict": "exists",
+      "reason": "Already curated as 'CGU Hacks' (Claremont, last_date 2025-11-14, research.cgu.edu/ai-humanity-lab/hackathon/)."
+    },
+    {
+      "name": "[un]prompted | The AI Security Practitioner Conference",
+      "verdict": "added",
+      "reason": "unpromptedcon.org: '[un]prompted II ... October 27-29, 2026, San Francisco' after the March 2026 first edition. Added '[un]prompted', biannual, recurring-tbd, last_date 2026-10-27."
+    },
+    {
+      "name": "unprompted | The AI Security Practitioner Conference",
+      "verdict": "added",
+      "reason": "Same event as the confs.tech row; covered by the single '[un]prompted' add this pass (unpromptedcon.org: Oct 27-29 2026 SF, after March 2026)."
+    },
+    {
+      "name": "Hack the Case",
+      "verdict": "unresolved",
+      "reason": "hack-the-case.devpost.com: Lunaris Hacks event at TMU for TMU engineering students, March 2026; Eventbrite calls it hybrid. Search for a 2027 edition found nothing."
+    },
+    {
+      "name": "LLMday NYC 2026 Q1",
+      "verdict": "exists",
+      "reason": "LLMday NYC runs quarterly and is in events.json via the feed: 'LLMday NYC 2026 Q4' (luma, New York, 2026-10-29) and its meetup twin. No 2027 Q1 date yet on llmday.com."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}
