@@ -2957,9 +2957,9 @@
     "city": "Detroit",
     "region": "Michigan",
     "country": "United States",
-    "venue": "",
+    "venue": "The Department at Hudson's",
     "cadence": "annual",
-    "month": "September",
+    "month": "November",
     "next_date": "2026-11-05",
     "next_date_end": "2026-11-05",
     "last_date": "",
@@ -2969,7 +2969,7 @@
     "audience": "software developers, technologists",
     "url": "https://www.beyondconf.com/",
     "description": "A one-day Detroit developer conference bringing the southeast Michigan software community together for technical talks and networking.",
-    "source": "https://dev.events/conferences/beyond-conf-2026-zldqdtqr"
+    "source": "https://www.beyondconf.com/"
   },
   {
     "name": "Michigan Technology Conference",

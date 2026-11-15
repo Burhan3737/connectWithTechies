@@ -1354,9 +1354,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "security practitioners, students, researchers",
-    "url": "https://bsides.org/event/bsides-flood-city/",
+    "url": "https://www.bsidesfloodcity.com/",
     "description": "Western Pennsylvania's BSides security conference, held in Johnstown for the regional infosec community.",
-    "source": "https://bsides.org/events/"
+    "source": "https://www.bsidesfloodcity.com/"
   },
   {
     "name": "BSidesDFW",
@@ -1365,10 +1365,10 @@
       "cybersecurity",
       "infosec"
     ],
-    "city": "Dallas",
+    "city": "Arlington",
     "region": "Texas",
     "country": "United States",
-    "venue": "",
+    "venue": "Nedderman Hall, University of Texas at Arlington",
     "cadence": "annual",
     "month": "November",
     "next_date": "2026-11-07",
@@ -1378,9 +1378,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "security practitioners, students, researchers",
-    "url": "https://bsides.org/event/bsidesdfw-5/",
+    "url": "https://bsidesdfw.com/",
     "description": "The Dallas-Fort Worth metroplex BSides conference, a one-day community security event with talks, villages and CTF activity.",
-    "source": "https://bsides.org/events/"
+    "source": "https://bsidesdfw.com/"
   },
   {
     "name": "BSidesStPete",

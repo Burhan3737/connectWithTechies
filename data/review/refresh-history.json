@@ -133,6 +133,32 @@
     "organiser retired": 4
    },
    "relisted": 57
+  },
+  {
+   "base": "f19e7c2",
+   "built_on": "2026-11-15",
+   "before": 16508,
+   "after": 16943,
+   "added": {
+    "total": 487,
+    "curated": 11,
+    "feed": 476
+   },
+   "removed": {
+    "total": 53,
+    "curated": 0,
+    "feed": 53
+   },
+   "redated": {
+    "total": 27,
+    "curated": 1,
+    "feed": 26
+   },
+   "removed_by_reason": {
+    "no longer listed": 52,
+    "now a curated record": 1
+   },
+   "relisted": 26
   }
  ]
 }

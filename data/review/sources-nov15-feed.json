@@ -1,0 +1,4 @@
+[
+  { "url": "https://www.meetup.com/okta-workflows/events/ical/", "tech": true, "reason": "Okta Workflows community: Okta's workflow-automation user group, in-person meetups (Okta Workflows Community Meetup, San Francisco). Seen in the gate's dropped sample on the 2026-11-15 run: the title carries no tech word the gate recognises." },
+  { "url": "https://luma.com/ReplitHQ", "tech": true, "reason": "Replit (luma.com/ReplitHQ): the coding platform's own calendar of in-person builder events (In Good Company w/ Replit, San Francisco). Seen in the gate's dropped sample on the 2026-11-15 run: 'Replit' alone gives the gate no tech signal." }
+]

@@ -1028,16 +1028,16 @@
     "venue": "Cultivator HQ, 2375 College Ave",
     "cadence": "annual",
     "month": "January",
-    "next_date": "2027-01-28",
-    "next_date_end": "2027-01-28",
+    "next_date": "2027-01-19",
+    "next_date_end": "2027-01-19",
     "last_date": "2026-01-28",
     "status": "upcoming",
     "attendance": "",
     "cost": "free",
     "audience": "founders, students, investors, Saskatchewan tech community",
-    "url": "https://www.cultivator.ca/community-night-2026-big-ideas-bold-founders-and-saskatchewan-innovation-in-action",
+    "url": "https://www.cultivator.ca/events",
     "description": "An open community night hosted by Cultivator powered by Conexus, showcasing big ideas, bold founders and Saskatchewan innovation with short talks and open networking.",
-    "source": "https://cultivator.ca/events/"
+    "source": "https://www.cultivator.ca/events"
   },
   {
     "name": "24 Hour Startup: AGTECH",

@@ -1,0 +1,202 @@
+[
+  {
+    "action": "add",
+    "reason": "Organiser page luddy.iu.edu/student-experience/academic-events/hackathon.html: \"Join us April 17-18th for the fifth annual Luddy Hackathon\", schedule April 17th, 2026 / April 18th, 2026, Luddy Hall, 700 N Woodlawn Ave, \"The event is in-person\", free. 2027 dates not yet published, so recurring-tbd with last_date 2026-04-17.",
+    "record": {
+      "name": "Luddy Hackathon",
+      "type": "hackathon",
+      "topics": [
+        "software",
+        "ai",
+        "students"
+      ],
+      "city": "Bloomington",
+      "region": "Indiana",
+      "country": "United States",
+      "venue": "Luddy Hall",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-17",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "university students from any accredited institution, beginners welcome",
+      "url": "https://luddy.iu.edu/student-experience/academic-events/hackathon.html",
+      "description": "Annual in-person overnight student hackathon at the IU Luddy School of Informatics, Computing, and Engineering; teams of 2-4 build apps, games or AI projects, with mentors, food and travel reimbursement.",
+      "source": "https://luddy.iu.edu/student-experience/academic-events/hackathon.html"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Organiser site summitctf.org (CyberVT, the Cybersecurity Club at Virginia Tech): \"SummitCTF is an annual Capture the Flag (CTF) competition\", 2026 in-person competition April 18th and 19th in the Data and Decision Sciences Building, Virginia Tech campus, \"There is no virtual option this year\". Site still shows 2026; 2027 not announced, so recurring-tbd with last_date 2026-04-18. The 2025 edition ran online (ctftime event 2662), so the format of the next edition should be re-checked when announced.",
+    "record": {
+      "name": "SummitCTF",
+      "type": "ctf",
+      "topics": [
+        "cybersecurity",
+        "ctf"
+      ],
+      "city": "Blacksburg",
+      "region": "Virginia",
+      "country": "United States",
+      "venue": "Data and Decision Sciences Building, Virginia Tech",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-18",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "university and community college students, teams of up to four",
+      "url": "https://summitctf.org/",
+      "description": "Annual 24-hour jeopardy-style capture-the-flag competition hosted by CyberVT; the 2026 edition was in person only and added an airport red-teaming component.",
+      "source": "https://summitctf.org/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Organiser page member.rbtc.tech/events/demo-day-and-tech-the-halls-2025 (Roanoke Blacksburg Technology Council): RAMP Fall 2025 startups pitch live at German Club Manor in Blacksburg, December 3, 2025, free, open to the public. The prior fall Demo Day (Dec 11, 2024) was at the Inn at Virginia Tech, also Blacksburg (Cardinal News). No 2026 edition listed on member.rbtc.tech/events yet, so recurring-tbd; venue left blank because it has moved between editions.",
+    "record": {
+      "name": "Demo Day & Tech the Halls",
+      "type": "demo-day",
+      "topics": [
+        "startups",
+        "accelerator"
+      ],
+      "city": "Blacksburg",
+      "region": "Virginia",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "December",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2025-12-03",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "founders, investors, RAMP alumni, regional tech community",
+      "url": "https://member.rbtc.tech/events/demo-day-and-tech-the-halls-2025",
+      "description": "RAMP accelerator fall cohort pitches its startups on stage, followed by the Roanoke Blacksburg Technology Council holiday social; free with RSVP.",
+      "source": "https://member.rbtc.tech/events/demo-day-and-tech-the-halls-2025"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Organiser page iuventures.com/founders-funders-network-venture-summit-2026/ (IU Ventures): programme Thursday, May 21 and Friday, May 22 (2026), Indiana Memorial Union, paid registration covering Thursday and Friday programming; homepage iuventures.com reads \"May 21-22, 2026, Bloomington, IN\". The page also says \"Nights of May 20-21\", which is the hotel block, not event days. 2027 not announced, so recurring-tbd with last_date 2026-05-21.",
+    "record": {
+      "name": "IU Founders and Funders Network Venture Summit",
+      "type": "summit",
+      "topics": [
+        "startups",
+        "venture capital",
+        "entrepreneurship"
+      ],
+      "city": "Bloomington",
+      "region": "Indiana",
+      "country": "United States",
+      "venue": "Indiana Memorial Union",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-21",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "IU-affiliated founders, investors, alumni",
+      "url": "https://iuventures.com/venture-summit/",
+      "description": "Two-day annual summit by IU Ventures bringing Indiana University founders, angel investors and VCs together for talks, pitches and networking on the Bloomington campus.",
+      "source": "https://iuventures.com/founders-funders-network-venture-summit-2026/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Organiser site mmsmoa.com and mmsmoa.com/mms2027moa: \"MMS 2027 at MOA May 2-6, 2027 at the Radisson Blu in Bloomington, MN\"; welcome reception 5pm May 2, sessions May 3 to 6:30pm May 6; $1899. The MMS 2026 at MOA recap confirms it was held at the Radisson Blu at MOA with 765 attendees, but gives no 2026 date, so last_date is left blank rather than guessed.",
+    "record": {
+      "name": "MMS - Midwest Management Summit",
+      "type": "conference",
+      "topics": [
+        "endpoint management",
+        "microsoft",
+        "intune",
+        "sysadmin"
+      ],
+      "city": "Bloomington",
+      "region": "Minnesota",
+      "country": "United States",
+      "venue": "Radisson Blu Mall of America",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-05-02",
+      "next_date_end": "2027-05-06",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "765",
+      "cost": "paid",
+      "audience": "IT pros, systems and endpoint management admins",
+      "url": "https://mmsmoa.com/mms2027moa",
+      "description": "Deliberately small, deeply technical week-long conference on Microsoft Intune, ConfigMgr, Windows and endpoint management, with long Q&A sessions and MVP speakers.",
+      "source": "https://mmsmoa.com/mms2027moa"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Organiser page secureworld.io/events/twin-cities-mn-2026: \"Join us at SecureWorld Twin Cities on Nov. 19\" (2026), Conference Pass registration open. Venue JW Marriott Minneapolis Mall of America (Bloomington) from SecureWorld's own Meetup listing (meetup.com/secureworld/events/317261986). The feed already carries this as a one-off Meetup row; this is the curated annual conference record.",
+    "record": {
+      "name": "SecureWorld Twin Cities",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "infosec"
+      ],
+      "city": "Bloomington",
+      "region": "Minnesota",
+      "country": "United States",
+      "venue": "JW Marriott Minneapolis Mall of America",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "2026-11-19",
+      "next_date_end": "2026-11-19",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "freemium",
+      "audience": "security practitioners, CISOs, IT leaders",
+      "url": "https://www.secureworld.io/events/twin-cities-mn-2026",
+      "description": "Regional one-day cybersecurity conference with keynotes, panels and breakouts developed with a local CISO advisory council; CPE credits and a vendor exhibit hall.",
+      "source": "https://www.secureworld.io/events/twin-cities-mn-2026"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Organiser site rgvstartup.com: \"SAVE THE DATE FOR 2027 NEXT EVENT COMING APRIL 26 - 30, 2027\"; \"Located in the heart of Brownsville\". Co-organised by the Brownsville Community Improvement Corporation and UTRGV ECC. The 2026 edition ran April 24 - May 1, 2026 (Valley Business Report and Texas Border Business announcements of the third annual edition), set as last_date.",
+    "record": {
+      "name": "RGV Startup Week",
+      "type": "startup-week",
+      "topics": [
+        "startups",
+        "entrepreneurship"
+      ],
+      "city": "Brownsville",
+      "region": "Texas",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "2027-04-26",
+      "next_date_end": "2027-04-30",
+      "last_date": "2026-04-24",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "founders, small business owners, students, investors",
+      "url": "https://www.rgvstartup.com/",
+      "description": "The Rio Grande Valley week-long entrepreneurship festival of workshops, panels, pitch events and networking, centred on downtown Brownsville with partner events across the Valley.",
+      "source": "https://www.rgvstartup.com/"
+    }
+  }
+]

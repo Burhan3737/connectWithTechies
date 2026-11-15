@@ -1,0 +1,27 @@
+[
+  {
+    "action": "add",
+    "reason": "Returning-candidate row 'DrupalCamp NJ 2026' (Princeton, Mar 12 2026). The camp has renamed itself: drupalcampnj.org now redirects to webcampnj.org, whose event page (https://www.webcampnj.org/events/webcamp-nj-2027) reads 'WebCamp NJ 2027, Thursday, March 11 - Friday, March 12, 2027 ... WebCamp NJ is the evolution of DrupalCamp New Jersey, an annual, volunteer-organized, web development conference held since 2012'. The directions page (https://www.webcampnj.org/directions-and-parking) says 'The 2027 camp will be held on March 11-12 in McDonnell & Jadwin Halls at Princeton University'; sessions are 'live and in-person'. Early-bird registration opened Nov 2 2026. Not in data/events.json under either name.",
+    "record": {
+      "name": "WebCamp NJ",
+      "type": "conference",
+      "topics": ["web", "drupal", "open-source", "ai"],
+      "city": "Princeton",
+      "region": "New Jersey",
+      "country": "United States",
+      "venue": "McDonnell & Jadwin Halls, Princeton University",
+      "cadence": "annual",
+      "month": "March",
+      "next_date": "2027-03-11",
+      "next_date_end": "2027-03-12",
+      "last_date": "2026-03-12",
+      "status": "upcoming",
+      "attendance": "175",
+      "cost": "paid",
+      "audience": "web developers, Drupal and open-source practitioners, site builders",
+      "url": "https://www.webcampnj.org/",
+      "description": "Volunteer-run two-day web development conference in Princeton, formerly DrupalCamp New Jersey (held since 2012): summits and trainings on day one, a keynote and about 25 sessions on day two.",
+      "source": "https://www.webcampnj.org/events/webcamp-nj-2027"
+    }
+  }
+]

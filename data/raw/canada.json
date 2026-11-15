@@ -2240,9 +2240,9 @@
     "city": "St. John's",
     "region": "Newfoundland and Labrador",
     "country": "Canada",
-    "venue": "",
+    "venue": "St. John's Convention Centre",
     "cadence": "annual",
-    "month": "March",
+    "month": "April",
     "next_date": "2027-04-27",
     "next_date_end": "2027-04-28",
     "last_date": "2026-03-10",
@@ -2250,9 +2250,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "offshore energy operators, ocean tech vendors, engineers",
-    "url": "https://www.digitaloffshore.ca/overview",
+    "url": "https://www.digitaloffshore.ca/overview-1",
     "description": "A St. John's conference on digital transformation in the offshore energy and ocean industries, with industry insights, networking and innovation showcases.",
-    "source": "https://www.digitaloffshore.ca/overview"
+    "source": "https://www.digitaloffshore.ca/overview-1"
   },
   {
     "name": "Victoria Tech Week",

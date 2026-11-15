@@ -20,8 +20,9 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 | 2026-11-05-i1 | 2 | 1 | 2 | 3 | 0 | nov05 cycle: re-check passes nov05-r1/r2/r3 (60 rows), discovery nov05-c1/c2/t1/t2 (47 adds), feed retirements, patch replay-order change |
 | 2026-11-05-i2 | re-audit | 0 | 1 | 0 | 1 | nov05 cycle re-audit: nov05-audit-fixes.json (i1-B1/W1/W2) and the retired-organiser name-match repair (retiredOrganisers, feed re-run from cache); CHANGES.md 70 removals |
 | 2026-11-12-i1 | 7 | 2 | 2 | 3 | 1 | nov12 cycle: re-check t1-t3 (60 rows, 6 corrections), discovery r1/r2/d1/d2 (31 adds), sources-nov12-* follows/retirements |
+| 2026-11-15-i1 | 3 | 0 | 1 | 0 | 1 | 2026-11-15 cycle: re-check nov15-c1/c2/c3 (60 rows), returning nov15-r1/r2, cities nov15-d1/d2 (12 curated adds), sources-nov15-d1/feed |
 
-**8 audit cycle(s); 6 found something blocking on its first audit.** 44 findings in total, 36 fixed, 7 open or deferred, 9 repeat(s) of an earlier finding.
+**9 audit cycle(s); 6 found something blocking on its first audit.** 45 findings in total, 36 fixed, 8 open or deferred, 9 repeat(s) of an earlier finding.
 
 ## Open
 
@@ -46,8 +47,20 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 - **2026-11-12-i1-W2** · warning · deferred · **audit-run.mjs / build-data.mjs (tooling)** — Mechanical audit reported 0/0 despite 4 updates not landing and 1 curated add merged away; build-data merges different-named curated records by shared page silently.
   - recommended: audit-run: verify each this-cycle update op's set fields and each add's presence in events.json. build-data: warn when two curated records of different names merge by page.
   - note: Tooling change for the user to approve: audit-run.mjs to verify every patch value reached events.json and every add survived; build-data.mjs to warn when it merges differently-named curated records by shared page.
+- **2026-11-15-i1-W1** · warning · **BSides CMH (Columbus)** — month still 'September' although the edition held as last_date ran November 4-6, 2026 (bsidescolumbus.com); record is recurring-tbd so month is the only timing hint; source is the allbsides.com listing
+  - recommended: match {name:'BSides CMH', city:'Columbus'}; set month 'November' and source 'https://www.bsidescolumbus.com/'
 
 ## History
+
+### 2026-11-15-i1 — 0 blocking, 1 warning(s)
+
+Scope: 2026-11-15 cycle: re-check nov15-c1/c2/c3 (60 rows), returning nov15-r1/r2, cities nov15-d1/d2 (12 curated adds), sources-nov15-d1/feed
+
+| id | severity | event | finding | status | resolution |
+|---|---|---|---|---|---|
+| W1 | warning | BSides CMH (Columbus) | month still 'September' although the edition held as last_date ran November 4-6, 2026 (bsidescolumbus.com); record is recurring-tbd so month is the only timing hint; source is the allbsides.com listing | open |  |
+
+Checked and sound: BSidesDFW city move; DevLearn, AFROTECH, UofT E-Week, Cultivator (card image), Digital Offshore re-dates; PitchBreakfast, Steel City AI, Venture Cafe Phoenix rolls; all 12 adds (TechNet Augusta, AFCEA HITS, HackPSU, MMS, RGV Startup Week, WebCamp NJ, SecureWorld Twin Cities, Startup425 Summit, IU Venture Summit, SummitCTF, Luddy, RBTC Demo Day); confirmed rows Tech Alley, Current, AngelNV, BSides Philly, CSAW, Capital Hacks, GEWKC, CyberForce, BSides Halifax, Ignite; all patches landed
 
 ### 2026-11-12-i1 — 2 blocking, 2 warning(s)
 

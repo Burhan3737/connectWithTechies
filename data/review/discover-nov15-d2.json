@@ -1,0 +1,90 @@
+{
+  "pass": "nov15-d2",
+  "date": "2026-11-15",
+  "returning": [],
+  "cities": [
+    {
+      "city": "Blacksburg",
+      "region": "Virginia",
+      "queries": [
+        "Virginia Tech Blacksburg tech conference OR CTF OR game jam 2026",
+        "SummitCTF CyberVT Virginia Tech capture the flag",
+        "Blacksburg Virginia tech summit OR startup week OR demo day 2026",
+        "RAMP Fall 2026 Demo Day Blacksburg OR Roanoke December 2026",
+        "VTCRC \"Game Changer Week\" 2026"
+      ],
+      "found": [
+        { "name": "SummitCTF", "url": "https://summitctf.org/", "verdict": "added", "reason": "summitctf.org: annual CTF by CyberVT, 2026 in person April 18-19 at the Data and Decision Sciences Building, Virginia Tech; 2027 not announced, added recurring-tbd with last_date 2026-04-18" },
+        { "name": "Demo Day & Tech the Halls", "url": "https://member.rbtc.tech/events/demo-day-and-tech-the-halls-2025", "verdict": "added", "reason": "RBTC page: RAMP Fall 2025 demo day Dec 3 2025 at German Club Manor, Blacksburg (2024 edition Dec 11 at the Inn at Virginia Tech); no 2026 edition listed yet, added recurring-tbd" },
+        { "name": "VTHacks", "url": "https://vthacks.com/", "verdict": "exists", "reason": "already curated as VTHacks, Blacksburg" },
+        { "name": "Game Changer Week (VTCRC)", "url": "https://www.vtcrc.com/game-changer-week/", "verdict": "unresolved", "reason": "VTCRC tech week mentioned in 2024 Cardinal News coverage; the vtcrc.com page now redirects to an image and no 2025 or 2026 edition was found, so cannot tell whether it still runs" },
+        { "name": "RAMP Spring Demo Day", "url": "https://www.vtcrc.com/events/list/", "verdict": "rejected", "reason": "spring demo day has been held in Radford (Highlander Hotel), not reliably Blacksburg; venue conflicts between listings" }
+      ]
+    },
+    {
+      "city": "Bloomfield",
+      "region": "New Jersey",
+      "queries": [
+        "Bloomfield New Jersey hackathon OR tech conference 2026",
+        "Bloomfield College Montclair hackathon OR game dev conference OR demo day 2026"
+      ],
+      "found": [
+        { "name": "Global Game Jam - The Sheep's Meow at Bloomfield College", "url": "https://globalgamejam.org/jam-sites/2026/2026-sheeps-meow-onlinevirtual-bloomfield-college-person", "verdict": "exists", "reason": "already curated; the only recurring tech event found in Bloomfield" },
+        { "name": "New Jersey Game Developers playtest meetups", "url": "https://www.meetup.com/new-jersey-game-developers/", "verdict": "exists", "reason": "already reaching the site through the Meetup feed (Game Dev Playtest Meetup @ Bloomfield College Center for Technology + Creativity)" },
+        { "name": "Stevens business AI hackathon / Ridgehacks", "url": "https://ailab.stevens.edu/business-ai-hackathon-2026/", "verdict": "rejected", "reason": "not in Bloomfield (Hoboken / Princeton area); nothing of the missing types found in Bloomfield itself" }
+      ]
+    },
+    {
+      "city": "Bloomington",
+      "region": "Indiana",
+      "queries": [
+        "Luddy Hackathon Indiana University Bloomington 2026",
+        "Bloomington Indiana game jam OR startup weekend OR tech summit 2026 2027",
+        "IU Ventures Founders & Funders Network Venture Summit 2027",
+        "\"BIG Night\" Bloomington Indie Game developers monthly 2026",
+        "Indiana University Bloomington capture the flag CTF competition 2026 Hoosier"
+      ],
+      "found": [
+        { "name": "Luddy Hackathon", "url": "https://luddy.iu.edu/student-experience/academic-events/hackathon.html", "verdict": "added", "reason": "organiser page: fifth annual Luddy Hackathon April 17-18 2026, Luddy Hall, in person, free; 2027 not published, added recurring-tbd with last_date 2026-04-17" },
+        { "name": "IU Founders and Funders Network Venture Summit", "url": "https://iuventures.com/venture-summit/", "verdict": "added", "reason": "iuventures.com: May 21-22 2026 at Indiana Memorial Union, fifth annual; 2027 not announced, added recurring-tbd with last_date 2026-05-21" },
+        { "name": "BSides Bloomington", "url": "https://www.bsidesbloomington.org/", "verdict": "exists", "reason": "already curated (conference)" },
+        { "name": "BIG Night (Bloomington Independent Game Night)", "url": "https://bignight.org/", "verdict": "unresolved", "reason": "bignight.org is stale: its latest notice is a Feb 2022 Zoom session and it calls itself both monthly and quarterly; no current schedule found" },
+        { "name": "Hoosier Conservation Jam", "url": "https://itch.io/jam/hoosier-conservation-jam", "verdict": "rejected", "reason": "online itch.io jam, no Bloomington in-person venue stated" },
+        { "name": "IU CTF Club competition", "url": "https://spice.luddy.indiana.edu/news-events/_news/iu-capture-the-flag-club-opening-at-luddy.html", "verdict": "unresolved", "reason": "SPICE news mentions the club hosting a CTF at Luddy Hall on an undated November 18th; no current event page found" }
+      ]
+    },
+    {
+      "city": "Bloomington",
+      "region": "Minnesota",
+      "queries": [
+        "MinnAnalytics Data Tech conference Normandale Bloomington 2026",
+        "tech conference Bloomington Minnesota 2027",
+        "hackathon Bloomington Minnesota 2026 OR 2027",
+        "\"MMS 2026\" MOA Midwest Management Summit May 2026 dates Radisson Blu"
+      ],
+      "found": [
+        { "name": "MMS - Midwest Management Summit", "url": "https://mmsmoa.com/mms2027moa", "verdict": "added", "reason": "mmsmoa.com: MMS 2027 at MOA May 2-6 2027 at the Radisson Blu, Bloomington MN" },
+        { "name": "SecureWorld Twin Cities", "url": "https://www.secureworld.io/events/twin-cities-mn-2026", "verdict": "added", "reason": "secureworld.io: Nov 19 2026; venue JW Marriott Minneapolis Mall of America from SecureWorld's own Meetup listing. Previously only a one-off feed row" },
+        { "name": "MinneAnalytics Data Tech", "url": "https://datatech2026.sched.com/", "verdict": "rejected", "reason": "2026 edition was at Best Buy HQ in Richfield, not Bloomington (Normandale venue was 2018-2019)" },
+        { "name": "FutureCon Minneapolis CyberSecurity Conference", "url": "https://futureconevents.info/", "verdict": "unresolved", "reason": "infosec-conferences.com lists Mar 11 2027 at Sheraton Bloomington, hybrid; futureconevents.info returned nothing to curl, so not confirmed on the organiser page" }
+      ]
+    },
+    {
+      "city": "Brownsville",
+      "region": "Texas",
+      "queries": [
+        "UTRGV hackathon Brownsville 2026",
+        "RGV Startup Week 2027 Brownsville BCIC",
+        "Brownsville Texas tech conference OR game jam OR coding meetup 2026 2027"
+      ],
+      "found": [
+        { "name": "RGV Startup Week", "url": "https://www.rgvstartup.com/", "verdict": "added", "reason": "rgvstartup.com: next event April 26-30 2027, in the heart of Brownsville; 2026 ran April 24 - May 1" },
+        { "name": "Maker Faire Brownsville", "url": "https://www.btxspacefest.com/makerfaire", "verdict": "exists", "reason": "already curated" },
+        { "name": "Texas Venture Fest: Rio Grande Valley", "url": "https://luma.com/tvf26", "verdict": "exists", "reason": "already in the Luma feed (eBridge Center, Oct 1 2026)" },
+        { "name": "YTEXAS Brownsville regional", "url": "https://ytexas.com/", "verdict": "unresolved", "reason": "listing shows a May 2026 regional with time and place TBD; no 2027 edition found and it is a business-membership event, not clearly tech" },
+        { "name": "UTRGV hackathon", "url": "https://www.utrgv.edu/", "verdict": "unresolved", "reason": "no current UTRGV or Brownsville hackathon found; Battle of the Brains article undated" }
+      ]
+    }
+  ],
+  "reported": []
+}

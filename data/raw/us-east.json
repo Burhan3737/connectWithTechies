@@ -1089,16 +1089,16 @@
     "venue": "Pittsburgh Technology Council",
     "cadence": "monthly",
     "month": "Varies",
-    "next_date": "2026-11-11",
-    "next_date_end": "2026-11-11",
-    "last_date": "2026-10-14",
+    "next_date": "2026-12-09",
+    "next_date_end": "2026-12-09",
+    "last_date": "2026-11-11",
     "status": "upcoming",
     "attendance": "",
     "cost": "free",
     "audience": "AI practitioners, founders, researchers",
     "url": "https://www.pghtech.org/events/Steel_City_AI_11_1",
     "description": "A monthly Pittsburgh Technology Council community meetup for AI builders and researchers, with short talks and open networking.",
-    "source": "https://www.pghtech.org/events"
+    "source": "https://www.eventbrite.com/e/steel-city-ai-innovators-monthly-meetup-tickets-1980999306252"
   },
   {
     "name": "RenderATL",

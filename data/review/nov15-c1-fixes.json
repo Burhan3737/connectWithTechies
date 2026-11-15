@@ -1,0 +1,14 @@
+[
+  { "match": { "name": "PitchBreakfast", "city": "Charlotte" },
+    "action": "update",
+    "reason": "pitchbreakfast.com (organiser) UPCOMING EVENTS lists 'Day 1 11 Nov 2026' and 'Day 2 09 Dec 2026', with 'PitchBreakfast December ... will be hosted Wednesday, December 9th at Sparkhouse West', 8:30-10:00 AM, 2400 Greenland Avenue. The Nov 11 2026 edition has run and is kept as last_date.",
+    "set": { "next_date": "2026-12-09", "next_date_end": "2026-12-09", "last_date": "2026-11-11" } },
+  { "match": { "name": "Steel City AI Innovators Meetup", "city": "Pittsburgh" },
+    "action": "update",
+    "reason": "Organiser's own Eventbrite listing (by Steel City AI Innovators, venue Pittsburgh Technology Council) eventbrite.com/e/steel-city-ai-innovators-monthly-meetup-tickets-1980999306252 JSON-LD startDate 2026-12-09T17:30-05:00, endDate 2026-12-09T19:30; matches the '2nd Wed, 5:30pm' cadence stated on pghtech.org/events/Steel_City_AI_11_1. The Nov 11 2026 meetup has run and is kept as last_date.",
+    "set": { "next_date": "2026-12-09", "next_date_end": "2026-12-09", "last_date": "2026-11-11", "source": "https://www.eventbrite.com/e/steel-city-ai-innovators-monthly-meetup-tickets-1980999306252" } },
+  { "match": { "name": "Venture Café Phoenix Thursday Gathering", "city": "Phoenix" },
+    "action": "update",
+    "reason": "community.venturecafephoenix.org/events/250 (organiser's event platform) 'Thursday Gathering - The Venture Advantage', Nov 19, 2026, 4:30-7:00 PM MST, location 850 PBC. Events 251-256 are 'Closed for the Holidays' Nov 26 through Dec 31, so Nov 19 is the last gathering of 2026. Event 249 (Nov 12, 2026) has run and is kept as last_date.",
+    "set": { "next_date": "2026-11-19", "next_date_end": "2026-11-19", "last_date": "2026-11-12", "source": "https://community.venturecafephoenix.org/events/250" } }
+]

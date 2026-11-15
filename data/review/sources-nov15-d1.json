@@ -1,0 +1,5 @@
+[
+  { "url": "https://luma.com/arkaderetail", "reason": "Arkade | Bentonville: retail-tech innovation hub at 240 S Main St, Bentonville AR; public Luma calendar with recurring in-person events (Coffee SHOP weekly, BiteSized mini-conferences on retail/robotics tech). Calendar cal-5Eku7G26P5JSO3o not in the registry." },
+  { "url": "https://api.lu.ma/ics/get?entity=calendar&id=cal-jdCgkEwwEFgOnwY", "reason": "Startup425 (Eastside cities of Bellevue, Kirkland, Redmond, Renton, Issaquah, Bothell): calendar with no public slug; runs the annual Eastside Summit, accelerator demo days and city-hall coworking/workshops. Mixed small-business content, so leave it to the relevance gate." },
+  { "url": "https://www.meetup.com/bethesda-gdg/", "reason": "Google Developer Group Bethesda (1,747 members): mostly online study sessions but some in-person events (DevFest Bethesda 2025 on 2025-11-08, Tech & Tacos 2026-09-05). Not in the registry." }
+]

@@ -1,0 +1,45 @@
+{ "pass": "nov15-d1", "date": "2026-11-15",
+  "returning": [],
+  "cities": [
+    { "city": "Augusta", "region": "Georgia",
+      "queries": ["Augusta Georgia hackathon 2027", "Augusta GA tech summit OR startup week OR tech week 2027", "TechNet Augusta 2027 dates"],
+      "found": [
+        { "name": "TechNet Augusta", "url": "https://events.afcea.org/Augusta27/Public/enter.aspx", "verdict": "added", "reason": "AFCEA organiser page: August 17-19, 2027, Augusta Marriott at the Convention Center; 2026 edition Aug 17, 2026. Conference type (not on the missing list) but no record of it existed." },
+        { "name": "Hack Augusta", "url": "https://www.meetup.com/hackaugusta/events/", "verdict": "rejected", "reason": "Meetup group (921 members) has 0 upcoming events; last activity December 3, 2025. Not worth following until it is active again." },
+        { "name": "INNOVATE: Pitches for a Purpose", "url": "https://www.augusta.edu/academic-entrepreneurship/innovate-pitch-competition/", "verdict": "rejected", "reason": "Augusta University community-problem pitch competition (final Feb 26, 2027 at Georgia Cyber Center); general social-innovation pitches, not a tech event." },
+        { "name": "Alliance for Fort Gordon events (CyberPatriot camps)", "url": "https://www.fortgordonalliance.com/events/", "verdict": "rejected", "reason": "Calendar shows 0 upcoming events; past items are K-12 CyberPatriot summer camps and teacher bootcamps, not public tech events." }
+      ] },
+    { "city": "Bellefonte", "region": "Pennsylvania",
+      "queries": ["Bellefonte PA tech event OR hackathon OR conference OR meetup 2026 2027", "Bellefonte Pennsylvania startup OR game jam OR pitch OR demo day OR maker event", "HackPSU Spring 2026 date ECoRE"],
+      "found": [
+        { "name": "Maker Faire Happy Valley", "url": "https://happyvalley.makerfaire.com/", "verdict": "exists", "reason": "Already held as the curated Bellefonte record (Maker Faire Happy Valley)." },
+        { "name": "HackPSU", "url": "https://hackpsu.org", "verdict": "added", "reason": "Nothing tech held in Bellefonte itself; nearest is HackPSU at Penn State (State College), biannual, last edition Oct 24, 2026 at ECoRE per hackpsu.org; no Spring 2027 date yet, added recurring-tbd under State College." },
+        { "name": "Creator Network Meetup", "url": "https://www.eventbrite.com/e/creator-network-meetup-summer-session-tickets-1357336252269", "verdict": "rejected", "reason": "Content-creator social at Harmony Forge Inn, not a tech event." }
+      ] },
+    { "city": "Bellevue", "region": "Washington",
+      "queries": ["Bellevue Washington hackathon 2027", "Bellevue WA tech summit 2027 Meydenbauer Center", "Bellevue Eastside startup week OR tech week OR game jam 2026", "Startup425 Eastside Summit 2024 OR 2025 location", "Bellevue WA capture the flag OR game jam in-person 2026"],
+      "found": [
+        { "name": "Startup425 Eastside Summit", "url": "https://luma.com/dftosyqq", "verdict": "added", "reason": "Third annual summit July 29, 2026 at Bellevue City Hall (2024 edition same venue); no 2027 date, added recurring-tbd. Startup425 calendar also proposed as a source." },
+        { "name": "TECHSPO Seattle", "url": "https://techsposeattle.com/", "verdict": "unresolved", "reason": "Organiser page gives May 6-7, 2027 but names two venues: 'InterContinental Seattle Bellevue Hotel' in one paragraph and 'The Westin Seattle Hotel, 10 Huntington Ave' in another; the venue page says 'Venue TBD'. City (Bellevue vs Seattle) cannot be settled; not added." },
+        { "name": "ThinkCity Smart City Hackathon", "url": "https://www.bellevuecollege.edu/cs/thinkcity/", "verdict": "unresolved", "reason": "Bellevue College + City of Bellevue one-day hackathon ran Jan 10, 2026; the page now redirects to a 2026 recap with no 2027 edition announced. Not added until a second edition is announced." },
+        { "name": "Global Game Jam (Bellevue College site)", "url": "https://bellevuecollege.edu/connectedlearning/?p=985", "verdict": "rejected", "reason": "Bellevue College hosted a site in 2025 only; the 2026 Seattle-area site was DigiPen in Redmond. No current Bellevue game jam or CTF found." }
+      ] },
+    { "city": "Bentonville", "region": "Arkansas",
+      "queries": ["Bentonville Arkansas hackathon 2026 OR 2027", "Northwest Arkansas tech conference OR startup week OR tech week OR demo day Bentonville 2027", "Bentonville game jam OR CTF OR developer meetup OR DevOpsDays OR code camp", "Heartland Challenge 2027 Bentonville startup competition dates"],
+      "found": [
+        { "name": "NWA Tech Summit", "url": "https://bentonvillearea.com/nwa-tech-summit/", "verdict": "exists", "reason": "Already the curated Bentonville record. KUAF calendar lists the 2026 edition Sep 1 at The Ledger; worth a re-check of that record's last_date." },
+        { "name": "Arkade | Bentonville", "url": "https://luma.com/arkaderetail", "verdict": "added", "reason": "Retail-tech hub with an active public Luma calendar (weekly Coffee SHOP, BiteSized mini-conferences); proposed in sources-nov15-d1.json rather than one-off adds." },
+        { "name": "Heartland Challenge", "url": "https://entrepreneurship.uark.edu/programs/heartland-challenge.php", "verdict": "unresolved", "reason": "U of A graduate startup competition, last held April 3-5, 2025 in Bentonville; paused in 2026 and 'will return in 2027 with a renewed approach'. Format and location for 2027 unpublished, so not added." },
+        { "name": "FEMHACK [ARKANSAS]", "url": "https://lu.ma/sazezp5v", "verdict": "rejected", "reason": "Only edition found is Oct 5-6, 2024 on a personal Luma calendar; no later edition." },
+        { "name": "Ozark Game Developers", "url": "https://www.meetup.com/ozark-game-developers/events/", "verdict": "rejected", "reason": "Meetup group based in Fayetteville with 0 upcoming events." }
+      ] },
+    { "city": "Bethesda", "region": "Maryland",
+      "queries": ["Bethesda Maryland hackathon 2027", "AFCEA Bethesda Health IT Summit 2027", "Bethesda MD tech summit OR startup week OR tech week OR demo day OR game jam 2026 2027", "AFCEA Bethesda chapter Health IT Summit January 25-26, 2027 Bethesda North Marriott"],
+      "found": [
+        { "name": "AFCEA Bethesda Health IT Summit", "url": "https://bethesdaevents.afceachapters.org/hits27", "verdict": "added", "reason": "Jan 25-26, 2027 per organiser page; venue Bethesda North Marriott has a Rockville MD 20852 address, so added under Rockville, not Bethesda." },
+        { "name": "Google Developer Group Bethesda", "url": "https://www.meetup.com/bethesda-gdg/", "verdict": "added", "reason": "Active Meetup group with occasional in-person events (DevFest Bethesda 2025, Tech & Tacos Sep 2026); proposed as a source. No DevFest Bethesda 2026 announced, so no one-off add." },
+        { "name": "CrabHacks", "url": "https://crabhacks.org", "verdict": "rejected", "reason": "High-school hackathon (Dec 7, 2025, Bethesda); crabhacks.org now serves a 'domain coming soon' placeholder and no 2026/2027 edition is announced." }
+      ] }
+  ],
+  "reported": []
+}

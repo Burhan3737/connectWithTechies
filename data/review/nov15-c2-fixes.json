@@ -1,0 +1,17 @@
+[
+  { "match": { "name": "University of Toronto Entrepreneurship Week", "city": "Toronto" },
+    "action": "update",
+    "reason": "Organiser's own Desjardins Startup Prize page (entrepreneurs.utoronto.ca/for-entrepreneurs/desjardins-startup-prize/) states finalists pitch 'during U of T Entrepreneurship Week (March 1-5, 2027)'. Record held recurring-tbd with the 2026 event page (Mar 2-6, 2026) as its link; last_date 2026-03-02 is kept.",
+    "set": { "next_date": "2027-03-01", "next_date_end": "2027-03-05", "status": "upcoming",
+             "url": "https://entrepreneurs.utoronto.ca/for-entrepreneurs/desjardins-startup-prize/",
+             "source": "https://entrepreneurs.utoronto.ca/for-entrepreneurs/desjardins-startup-prize/" } },
+  { "match": { "name": "Digital Offshore Conference", "city": "St. John's" },
+    "action": "update",
+    "reason": "Stored url https://www.digitaloffshore.ca/overview now returns 404. The DO27 overview moved to /overview-1, which reads 'April 27-28, 2027, St. John's Convention Centre, St. John's, NL' (dates match the record). Venue was empty and month said March; the 2027 edition is in April.",
+    "set": { "url": "https://www.digitaloffshore.ca/overview-1", "source": "https://www.digitaloffshore.ca/overview-1",
+             "venue": "St. John's Convention Centre", "month": "April" } },
+  { "match": { "name": "Cultivator Community Night", "city": "Regina" },
+    "action": "update",
+    "reason": "Cultivator's own Upcoming Events page (cultivator.ca/events) shows the Community Night card image reading 'JAN 19 2027 - Community Night - Cultivator HQ'. Record had 2027-01-28, which appears to be the 2026 date rolled forward a year; no organiser page shows Jan 28 2027. Old url was the 2026 recap page. last_date 2026-01-28 kept.",
+    "set": { "next_date": "2027-01-19", "next_date_end": "2027-01-19", "url": "https://www.cultivator.ca/events", "source": "https://www.cultivator.ca/events" } }
+]

@@ -2821,7 +2821,7 @@
     "city": "Sundance",
     "region": "Utah",
     "country": "United States",
-    "venue": "",
+    "venue": "Sundance Resort",
     "cadence": "annual",
     "month": "November",
     "next_date": "2026-11-05",
@@ -2833,7 +2833,7 @@
     "audience": "CISOs, security executives",
     "url": "https://cisofireside.org",
     "description": "An invitation-oriented gathering of security executives at Sundance for off-the-record discussion of security strategy and risk.",
-    "source": "https://dev.events/NA/US/UT"
+    "source": "https://cisofireside.org/"
   },
   {
     "name": "CES",
@@ -3058,19 +3058,19 @@
     "city": "Las Vegas",
     "region": "Nevada",
     "country": "United States",
-    "venue": "",
+    "venue": "Caesars Forum",
     "cadence": "annual",
-    "month": "November",
-    "next_date": "2026-11-04",
-    "next_date_end": "2026-11-06",
-    "last_date": "2025-11-05",
+    "month": "October-November",
+    "next_date": "2027-10-06",
+    "next_date_end": "2027-10-08",
+    "last_date": "2026-11-04",
     "status": "upcoming",
     "attendance": "4000",
     "cost": "paid",
     "audience": "learning technologists, instructional designers, L&D leaders",
     "url": "https://devlearn.com/",
     "description": "The Learning Guild's flagship conference on learning technology, with an expo, hands-on labs and sessions on AI in workplace learning.",
-    "source": "https://dev.events/NA/US/NV"
+    "source": "https://devlearn.com/"
   },
   {
     "name": "SAP Connect",

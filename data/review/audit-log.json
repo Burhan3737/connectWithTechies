@@ -625,6 +625,28 @@
           "resolution": "Tooling change for the user to approve: audit-run.mjs to verify every patch value reached events.json and every add survived; build-data.mjs to warn when it merges differently-named curated records by shared page."
         }
       ]
+    },
+    {
+      "id": "2026-11-15-i1",
+      "date": "2026-11-15",
+      "iteration": 1,
+      "scope": "2026-11-15 cycle: re-check nov15-c1/c2/c3 (60 rows), returning nov15-r1/r2, cities nov15-d1/d2 (12 curated adds), sources-nov15-d1/feed",
+      "checked": "BSidesDFW city move; DevLearn, AFROTECH, UofT E-Week, Cultivator (card image), Digital Offshore re-dates; PitchBreakfast, Steel City AI, Venture Cafe Phoenix rolls; all 12 adds (TechNet Augusta, AFCEA HITS, HackPSU, MMS, RGV Startup Week, WebCamp NJ, SecureWorld Twin Cities, Startup425 Summit, IU Venture Summit, SummitCTF, Luddy, RBTC Demo Day); confirmed rows Tech Alley, Current, AngelNV, BSides Philly, CSAW, Capital Hacks, GEWKC, CyberForce, BSides Halifax, Ignite; all patches landed",
+      "blocking": 0,
+      "warnings": 1,
+      "findings": [
+        {
+          "id": "2026-11-15-i1-W1",
+          "severity": "warning",
+          "event": "BSides CMH (Columbus)",
+          "summary": "month still 'September' although the edition held as last_date ran November 4-6, 2026 (bsidescolumbus.com); record is recurring-tbd so month is the only timing hint; source is the allbsides.com listing",
+          "recommendation": "match {name:'BSides CMH', city:'Columbus'}; set month 'November' and source 'https://www.bsidescolumbus.com/'",
+          "repeat_of": null,
+          "status": "open",
+          "resolved_on": null,
+          "resolution": null
+        }
+      ]
     }
   ]
 }
