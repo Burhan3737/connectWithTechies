@@ -479,5 +479,45 @@
   },
   "failed": 2,
   "written": 15987
+ },
+ {
+  "run_on": "2026-11-16",
+  "discover": false,
+  "bySource": {
+   "mlh": 51,
+   "devpost": 47,
+   "confstech": 145,
+   "devevents": 114,
+   "hackclub": 10,
+   "guild": 21,
+   "localist": 8,
+   "luma": 7090,
+   "meetup": 3661,
+   "eventbrite": 408,
+   "tribe": 63,
+   "ical": 35
+  },
+  "failed": 3,
+  "written": 16193
+ },
+ {
+  "run_on": "2026-11-16",
+  "discover": false,
+  "bySource": {
+   "mlh": 51,
+   "devpost": 47,
+   "confstech": 145,
+   "devevents": 114,
+   "hackclub": 10,
+   "guild": 21,
+   "localist": 8,
+   "luma": 7096,
+   "meetup": 3662,
+   "eventbrite": 408,
+   "tribe": 63,
+   "ical": 44
+  },
+  "failed": 2,
+  "written": 16202
  }
 ]

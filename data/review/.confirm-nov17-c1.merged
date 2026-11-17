@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Demo Day & Tech the Halls",
+    "city": "Blacksburg",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "member.rbtc.tech/events/demo-day-and-tech-the-halls-2025: Wednesday December 3, 2025, 5-8 PM, German Club Manor, 711 Southgate Drive, Blacksburg, in person, matches last_date 2025-12-03. RBTC events listing (member.rbtc.tech/events) shows only Morning Jolt and AI Decoded for December 2026; /demo-day-and-tech-the-halls-2026 returns 404. No 2026 date published, so recurring-tbd is correct."
+  },
+  {
+    "name": "HackPSU",
+    "city": "State College",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "hackpsu.org: 'HackPSU Fall 2026', 'October 24th, 2026 - ECoRE Building, Penn State', bi-annual - matches last_date 2026-10-24 and venue. No Spring 2027 date on the page, and HackPSU is not in the MLH 2027 season listing; recurring-tbd correct."
+  },
+  {
+    "name": "IU Founders and Funders Network Venture Summit",
+    "city": "Bloomington",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "iuventures.com/venture-summit/ (redirects to founders-funders-network-venture-summit-2026): schedule Thursday May 21 (Henke Hall, Memorial Stadium) and Friday May 22 (Alumni Hall, Indiana Memorial Union); the 'May 20-21' on the page is the Biddle Hotel room-block nights, not event days. last_date 2026-05-21 is the correct start. No 2027 edition announced; recurring-tbd correct."
+  },
+  {
+    "name": "Luddy Hackathon",
+    "city": "Bloomington",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "luddy.iu.edu hackathon page: 'Join us April 17-18th for the fifth annual Luddy Hackathon', schedule April 17th, 2026 / April 18th, 2026, Luddy Hall, 700 N Woodlawn Ave, in person. Matches last_date 2026-04-17. No 2027 date yet; recurring-tbd correct."
+  },
+  {
+    "name": "Startup425 Eastside Summit",
+    "city": "Bellevue",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "luma.com/dftosyqq (presented by Startup425): 'Startup425 Eastside Summit 3 (Seattle Tech Week)', JSON-LD startDate 2026-07-29, Bellevue City Hall, 450 110th Ave NE, marked Past Event. Matches last_date and venue. startup425.org lists only workshops for Nov-Dec 2026, no 2027 summit; recurring-tbd correct."
+  },
+  {
+    "name": "SummitCTF",
+    "city": "Blacksburg",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "summitctf.org ('SummitCTF 2026'): 'The in person competition will take place April 18th and 19th', Virginia Tech campus, Data and Decision Sciences Building. Matches last_date 2026-04-18 and venue. No 2027 date published; recurring-tbd correct."
+  },
+  {
+    "name": "AI Tinkerers Nashville",
+    "city": "Nashville",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "nashville.aitinkerers.org JSON-LD: event startDate 2026-11-17T17:00-06:00, endDate 2026-11-17T20:00, location 5501 Virginia Way #120, Brentwood - matches next_date and venue. Previous event 2026-09-29 matches last_date. The 'ambiguous' second date (Nov 24) is 'Next: Nov 24' in the site's city directory for Valencia, not a Nashville event."
+  },
+  {
+    "name": "AI Tinkerers San Diego",
+    "city": "San Diego",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "san-diego.aitinkerers.org JSON-LD: event startDate 2026-11-17T18:00-08:00, endDate 20:00, location 'Private venue', 811 Prospect Street - matches next_date and venue. Previous event 2026-10-29 matches last_date (a further event Dec 4, 2026 is also listed). The 'ambiguous' Nov 24 is the city directory's 'Next: Nov 24' for Valencia, not San Diego."
+  },
+  {
+    "name": "Georgia Tech All-Majors Career Fair",
+    "city": "Atlanta",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "career.gatech.edu/career-fair: 'Spring 2027 All-Majors Career Fair ... Days: January 25 - January 26, 2027, 10 A.M. - 4 P.M., Location: Georgia Tech Exhibition Hall'. Matches next_date/next_date_end. The 'ambiguous' 2027-01-04 is the employer refund deadline in the FAQ. Fall 2027 fair also listed Sept 13-14, 2027."
+  },
+  {
+    "name": "ElleHacks",
+    "city": "Toronto",
+    "status": "blocked",
+    "cycle": "nov17-c1",
+    "evidence": "MLH 2027 season (mlh.com/seasons/2027/events) lists ElleHacks Jan 29-31, Toronto, In-Person, websiteUrl ellehacks.com - matches record. Organiser's page ellehacks.com is a JS shell; its bundle renders 'ElleHacks 2027' / 'To Be Announced - In-person event', no month named. Organiser gives no month -> blocked per MLH rule; MLH date stays."
+  },
+  {
+    "name": "UGAHacks",
+    "city": "Athens",
+    "status": "blocked",
+    "cycle": "nov17-c1",
+    "evidence": "MLH 2027 season lists 'UGAHacks' Feb 05-07, Athens, Georgia, In-Person, websiteUrl 12.ugahacks.com - matches record. Organiser pages ugahacks.com and 12.ugahacks.com (UGAHacks 12, Next.js) show only 'Classified Mission' placeholders and the about text; no month or date in HTML or JS bundles. Organiser names no month -> blocked; MLH date stays."
+  },
+  {
+    "name": "MakeUofT",
+    "city": "Toronto",
+    "status": "blocked",
+    "cycle": "nov17-c1",
+    "evidence": "MLH 2027 season lists MakeUofT Feb 13-14, Toronto, In-Person, websiteUrl makeuoft.ca - matches record. Organiser page makeuoft.ca reads 'MakeUofT 2027 ... University of Toronto TBD, 2027' with a register-interest form; its countdown scripts still carry 2026 dates (Feb 14, 2026). Organiser names no month -> blocked; MLH date stays."
+  },
+  {
+    "name": "RevolutionUC",
+    "city": "Cincinnati",
+    "status": "blocked",
+    "cycle": "nov17-c1",
+    "evidence": "MLH 2027 season (page 2) lists RevolutionUC 2027-02-27 to 2027-02-28 - matches record. Organiser page revolutionuc.com ('RevolutionUC 2027') says only 'RevolutionUC Spring 2027...' with interest forms; a season, not a month -> blocked; MLH date stays."
+  },
+  {
+    "name": "WEHack",
+    "city": "Richardson",
+    "status": "blocked",
+    "cycle": "nov17-c1",
+    "evidence": "MLH 2027 season (page 2) lists WEHack 2027-04-10 to 2027-04-11 - matches record. Organiser page wehackutd.com: 'WEHack 2027 Coming Soon Spring 2027 Fill out our Interest Form!'; a season, not a month -> blocked; MLH date stays."
+  },
+  {
+    "name": "Global Entrepreneurship Week Kansas City",
+    "city": "Kansas City",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "gewkc.com: 'Global Entrepreneurship Week Nov. 16 - 20 Union Station', 2026 schedule, keynote Wednesday Nov. 18, 2026. Matches next_date 2026-11-16 to 2026-11-20 and venue; in progress now."
+  },
+  {
+    "name": "JSNation US",
+    "city": "Jersey City",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "jsnation.us JSON-LD startDate 2026-11-16; page: 'November 16 (hybrid in New York) & November 19 (remote), 2026'; venue copy 'Over 500 devs will gather at the iconic 300,000-square-foot Liberty Science Center'. In-person day matches next_date 2026-11-16 (single day) and venue; Nov 19 is remote-only so the record correctly omits it."
+  },
+  {
+    "name": "Microsoft Ignite",
+    "city": "San Francisco",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "ignite.microsoft.com/en-US/home meta: 'Microsoft Ignite | November 17-20, 2026 in San Francisco, CA'; FAQ: 'takes place November 17-20, 2026, in San Francisco at Moscone Center, with a digital event experience'. Matches next_date/end and venue; last_date 2025-11-18 unchanged."
+  },
+  {
+    "name": "UofTHacks",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "Organiser page uofthacks.com (Astro hero component /_astro/App.*.js) reads 'January 15 - 17, 2027 - University of Toronto' - exact days from the organiser; MLH 2027 season agrees (UofTHacks JAN 15-17, Toronto, In-Person). Matches next_date 2027-01-15 to 2027-01-17."
+  },
+  {
+    "name": "Datathon PolyFinances",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "polyfinances.ca/datathon JSON-LD startDate 2026-11-14T09:00-05:00, endDate 2026-11-15T16:00 - the edition just held, matching rolled last_date 2026-11-14. No 2027 edition published; recurring-tbd correct."
+  },
+  {
+    "name": "EWF Annual Conference",
+    "city": "Aurora",
+    "status": "corrected",
+    "cycle": "nov17-c1",
+    "evidence": "ewfglobal.com/events/: 'The 2026 Annual Conference is taking place at the Gaylord Rockies Resort in Denver, Colorado, November 4-6, 2026' - matches rolled last_date 2026-11-04. Gaylord Rockies is physically in Aurora, so city stands. Patched: empty venue filled and source moved from dev.events to the organiser page. No 2027 date yet."
+  },
+  {
+    "name": "Future Summit",
+    "city": "Calgary",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "futuresummit.ai ('Future Summit 2026 | AI, Energy and Compute Conference, Calgary'): November 10, 2026 - matches rolled last_date 2026-11-10. No 2027 date published; recurring-tbd correct."
+  },
+  {
+    "name": "Global Day of Coderetreat",
+    "city": "Multiple cities",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "coderetreat.org: Global Day of Coderetreat 'Nov 13-Nov 14, 2026' - matches rolled last_date 2026-11-13. No 2027 date announced; recurring-tbd correct."
+  },
+  {
+    "name": "GOVIT Leadership Summit & Symposium",
+    "city": "Bloomington",
+    "status": "corrected",
+    "cycle": "nov17-c1",
+    "evidence": "fusionlp.org/govit-2026 (redirects to /govit-2026-awards/): '2026 GOVIT Leadership Summit & Symposium ... November 8-10, 2026 DoubleTree by Hilton, Bloomington, MN' - matches rolled last_date 2026-11-08 and city/region (Minnesota). Patched: empty venue filled and source moved from dev.events to the organiser page. No 2027 date yet."
+  },
+  {
+    "name": "GRO Demo Day",
+    "city": "Raleigh",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "cednc.co/gro12-demo-day-nov-10-2026 ('GRO12 Demo Day'): November 10, 2026, 2450 Alumni Dr, Raleigh - matches rolled last_date 2026-11-10 and venue. Next cohort's demo day not yet published; recurring-tbd correct."
+  },
+  {
+    "name": "HACK.COMS",
+    "city": "Rochester",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "events.mlh.com/events/14418-hack-coms-2026 (organiser-run MLH event page, the event's only site): November 7, 2026 (2026-11-07 to 2026-11-08), Golisano College of Computing & Information Sciences, 70 Lomb Memorial Drive, Rochester; 'this event is only in person'. MLH 2027 season shows it ended Nov 07-08. Matches rolled last_date."
+  },
+  {
+    "name": "Hackaday Superconference",
+    "city": "Pasadena",
+    "status": "corrected",
+    "cycle": "nov17-c1",
+    "evidence": "hackaday.io/superconference/ ('Hackaday Supercon 2026'): 'November 6 to 8, Pasadena, California'; Fri at Supplyframe HQ, 61 S. Fair Oaks Ave, Sat-Sun at ArtCenter South Campus, 950 S. Raymond Ave. Hackaday blog (2026-08-13) agrees 'Nov 6-8 in Pasadena'. Matches rolled last_date 2026-11-06. Patched: url was an Eventbrite ticket page, now the official hackaday.io/superconference page; empty venue filled."
+  },
+  {
+    "name": "HackRPI",
+    "city": "Troy",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "hackrpi.com ('HackRPI 2026: In the Clouds'): 'HackRPI 2026 will take place on Sat. November 7th and Sun. November 8th', Darrin Communications Center, 51 College Ave, Troy, NY. Matches rolled last_date 2026-11-07; MLH 2027 season shows it ended Nov 07-08."
+  },
+  {
+    "name": "HackUMass",
+    "city": "Amherst",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "hackumass.com ('HackUMass XIV'): schedule dated 2026-11-13 to 2026-11-15, Campus Center Auditorium, UMass Amherst campus; MLH 2027 season agrees (ended, Nov 13-15, Amherst). Matches rolled last_date 2026-11-13."
+  },
+  {
+    "name": "HackUTD",
+    "city": "Richardson",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "zeroday.hackutd.co ('HackUTD 2026: Zero Day'): JSON-LD startDate 2026-11-07T09:00-06:00, endDate 2026-11-08T17:00, 'University of Texas at Dallas, November 7-8, 2026'. Matches rolled last_date 2026-11-07; MLH season agrees (ended)."
+  },
+  {
+    "name": "Health Wildcatters Pitch Day",
+    "city": "Dallas",
+    "status": "confirmed",
+    "cycle": "nov17-c1",
+    "evidence": "healthwildcatters.com/events: 'Health Wildcatters Pitch Day, Thursday, November 12, 2026, 3:30 PM - 8:00 PM', at Health Wildcatters (3000 Pegasus Park Drive). /pitch-day now reads 'PITCH DAY 2026 RECORDING COMING SOON!', i.e. it has been held. Matches rolled last_date 2026-11-12; no 2027 date yet."
+  }
+]

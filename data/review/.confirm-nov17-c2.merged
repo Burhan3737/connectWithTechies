@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Humanoid Robots Summit North America",
+    "city": "Chicago",
+    "status": "blocked",
+    "cycle": "nov17-c2",
+    "evidence": "acgrobotus.com (organiser) returns 200 but serves only 'Humanoid Robots Summit is under maintenance', no dates or event content. WebSearch for a 2027 North America edition found only listings of the Nov 3-4 2026 Chicago edition (eco-business, massrobotics, boothsquare) and nothing for 2027. Record's recurring-tbd / last 2026-11-03 is consistent with those but could not be read on the organiser's page."
+  },
+  {
+    "name": "INTERFACE Omaha",
+    "city": "Omaha",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "f2fevents.com/event/neb26/ title 'INTERFACE Omaha | November 5th, 2026', CHI Health Center Omaha South Ballroom, 455 N 10th Street - matches last_date 2026-11-05. f2fevents.com home 'Sneak Peek: INTERFACE 2027' lists only 'November 2027 CHI Health Center Omaha' with no day, so recurring-tbd is correct."
+  },
+  {
+    "name": "Iowa Code Camp",
+    "city": "Des Moines",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "iowacodecamp.com shows only 'November 7, 2026' (matches last_date); no later camp announced, so recurring-tbd is correct."
+  },
+  {
+    "name": "KubeCon + CloudNativeCon North America",
+    "city": "Salt Lake City",
+    "status": "corrected",
+    "cycle": "nov17-c2",
+    "evidence": "events.linuxfoundation.org KubeCon NA page: SLC Nov 9-12 2026 marked passed; 'Save the Dates!' gives North America 2027 November 8-11, New Orleans, Louisiana. Patched city/region/venue and dates, last_date 2026-11-09."
+  },
+  {
+    "name": "MadHacks",
+    "city": "Madison",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "madhacks.io: 'Thanks for coming! See you next year! MadHacks 2026 took place on November 14th & 15th, 2026 at Morgridge Hall' - matches last_date 2026-11-14; no 2027 date published, recurring-tbd correct."
+  },
+  {
+    "name": "Maker Faire Orlando",
+    "city": "Orlando",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "makerfaireorlando.com shows 'November 7 & 8, 2026' (matches last_date 2026-11-07); no 2027 date on the page, recurring-tbd correct."
+  },
+  {
+    "name": "MDEV",
+    "city": "Madison",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "mdevconf.com (title 'MDEV 26') JSON-LD startDate 2026-11-06, endDate 2026-11-07 - matches last_date; no MDEV 27 date published, recurring-tbd correct."
+  },
+  {
+    "name": "Michigan DevFest",
+    "city": "Detroit",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "midevfest.com is a JS shell (title 'Michigan DevFest 2026'); its bundle gives 'November 13-14, 2026' - matches last_date 2026-11-13. No 2027 date in the bundle, recurring-tbd correct."
+  },
+  {
+    "name": "Montreal International Game Summit (MIGS)",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "migs.biz/en/: 'Join us at Grand Quay, November 10 - 11' 2026 - matches last_date 2026-11-10 and venue; page mentions 2027 only for XP Gaming business events, no MIGS 2027 date, recurring-tbd correct."
+  },
+  {
+    "name": "New England Drupal Camp",
+    "city": "Providence",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "nedcamp.org: 'November 13-14, 2026' on the RIC campus near Providence - matches last_date 2026-11-13 and venue; 'Don't miss our next NEDCamp announcement' with no 2027 date, recurring-tbd correct."
+  },
+  {
+    "name": "Ocean Exchange",
+    "city": "Fort Lauderdale",
+    "status": "corrected",
+    "cycle": "nov17-c2",
+    "evidence": "oceanexchange.org and /register/: 'Ocean Exchange 2027, October 24-26, Fort Lauderdale, FL' (home timeline alone says 24-27; two explicit announcements say 24-26). 2026 edition Oct 25-27 matches last_date. Patched next 2027-10-24..26."
+  },
+  {
+    "name": "OIN Connect",
+    "city": "San Jose",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "openinventionnetwork.com/oin-connect-2026/ gives October 19 and October 20-21, 2026 (record last_date 2026-10-19); OIN home links only 'OIN Connect 2026', WebSearch for 'OIN Connect 2027' found nothing. recurring-tbd correct."
+  },
+  {
+    "name": "Open Source AI Week",
+    "city": "San Jose",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "events.linuxfoundation.org/open-source-ai-week/: 'This event has passed ... October 16-25, 2026 Bay Area, CA' - matches last_date 2026-10-16. LF calendar and WebSearch show no dated 2027 edition, recurring-tbd correct."
+  },
+  {
+    "name": "Open Source in Finance Forum New York",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "events.linuxfoundation.org/open-source-finance-forum-new-york/: 'This event has passed ... November 4-5 New York, NY', 'Thank you to all who joined us for Open Source in Finance Forum New York 2026!' - matches last_date 2026-11-04; no 2027 date, recurring-tbd correct."
+  },
+  {
+    "name": "OPI Summit on DPU/IPUs",
+    "city": "San Jose",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "opiproject.org/events/ JSON-LD startDate 2026-10-15T08:00 - matches last_date 2026-10-15; the other entries on the page are Jul 2026 and Oct 2025, nothing later, so recurring-tbd correct."
+  },
+  {
+    "name": "Oracle AI World",
+    "city": "Las Vegas",
+    "status": "corrected",
+    "cycle": "nov17-c2",
+    "evidence": "oracle.com/ai-world/: 2026 JSON-LD 2026-10-25..28, 'See you next year in Las Vegas, October 18-21'. Patched next 2027-10-18..21, last_date 2026-10-25."
+  },
+  {
+    "name": "OWASP Global AppSec USA",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "nov17-c2",
+    "evidence": "owasp.org/events data (OWASP/owasp.github.io _data/events.yml): 'OWASP Global AppSec USA 2027 - Atlanta, GA', 'September 20-24, 2027'. 2026 SF edition Nov 2-6 per owasp.glueup.com. Patched city Atlanta/Georgia, dates, month, url/source; last_date 2026-11-02."
+  },
+  {
+    "name": "Pacific NW Software Quality Conference",
+    "city": "Portland",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "pnsqc.org shows 'October 12-14, 2026' (matches last_date 2026-10-12); no 2027 date on the page, recurring-tbd correct."
+  },
+  {
+    "name": "PASS Data Community Summit West",
+    "city": "Seattle",
+    "status": "corrected",
+    "cycle": "nov17-c2",
+    "evidence": "passdatacommunitysummit.com/north-america/: West 2026 ran at Hyatt Regency Seattle Nov 9-11 2026; 'PASS Summit North America Denver, Colorado. October 13-15, 2027'. Patched city Denver/Colorado, dates, month, url/source; last_date 2026-11-09. Name not changed."
+  },
+  {
+    "name": "Pittsburgh TechFest",
+    "city": "Moon Township",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "pghtech.org/events/2026TechFest_1 (Pittsburgh Technology Council) shows October 30, 2026 - matches last_date; no 2027 TechFest page found, recurring-tbd correct."
+  },
+  {
+    "name": "PNW Day of Data",
+    "city": "Vancouver",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "dayofdata.org lists Nov 7 2026 among past events (matches last_date 2026-11-07); its scheduled and reserved-dates lists (Houston, Trujillo, Richmond, Jacksonville, Atlanta) have no Vancouver 2027 date, recurring-tbd correct."
+  },
+  {
+    "name": "Product-Led Summit Toronto",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "world.productledalliance.com/location/toronto JSON-LD 2026-11-12..13 - matches last_date; the series list on world.productledalliance.com runs to Oct 2027 with no Toronto 2027 card, recurring-tbd correct."
+  },
+  {
+    "name": "Prompt Victoria AI Conference",
+    "city": "Victoria",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "promptvictoria.ca: 'November 5, 2026', Victoria Conference Centre - matches last_date; no 2027 date, recurring-tbd correct."
+  },
+  {
+    "name": "PyTorch Conference",
+    "city": "San Jose",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "events.linuxfoundation.org/pytorch-conference-north-america/ shows Oct 20-21, 2026 (matches last_date 2026-10-20); no 2027 date on LF or pytorch.org. A beri.net 'Oct 6-7 2027' listing is an aggregator projection and was not used. recurring-tbd correct."
+  },
+  {
+    "name": "Rochester Security Summit",
+    "city": "Rochester",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "rochestersecurity.org: 'RSS:2026' October 14 - 15, 2026 at the Convention Center, Rochester NY - matches last_date 2026-10-14; no 2027 date, recurring-tbd correct."
+  },
+  {
+    "name": "SAAS NORTH",
+    "city": "Ottawa",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "saasnorth.com (title 'SAAS NORTH 2026'): 'NOV 4-5 2026', 55 Colonel By Dr, Ottawa - matches last_date 2026-11-04; no 2027 date, recurring-tbd correct."
+  },
+  {
+    "name": "Sacramento Tech Week",
+    "city": "Sacramento",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "sactechweek.org is now 'First-Year Recap & Event Archive': 'Thank you for making the first Sac Tech Week happen', 'Get 2027 updates by email ... as the next chapter comes together' - a 2027 edition is promised with no date, so recurring-tbd is correct. The page gives no 2026 day, so last_date 2026-10-19 was not re-read here."
+  },
+  {
+    "name": "SAINTCON",
+    "city": "Provo",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "saintcon.org JSON-LD startDate 2026-10-27, endDate 2026-10-30 - matches last_date; no 2027 date, recurring-tbd correct."
+  },
+  {
+    "name": "San Diego CyberCon",
+    "city": "San Diego",
+    "status": "confirmed",
+    "cycle": "nov17-c2",
+    "evidence": "sdcybercon.org title 'San Diego CyberCon 2026 | November 13, Marriott Marquis San Diego Marina', JSON-LD 2026-11-13 - matches last_date and venue; 'See you next year!' with no 2027 date, recurring-tbd correct."
+  },
+  {
+    "name": "SANS AI Cybersecurity Summit",
+    "city": "Arlington",
+    "status": "corrected",
+    "cycle": "nov17-c2",
+    "evidence": "sans.org Fall 2026 page 'Summit: Nov 2-3, 2026 ... Explore AI Summit Spring 2027'; ai-summit-spring-2027 'Summit: Apr 27-28 ... Hilton Denver City Center & Virtual (MT) 1701 California Street, Denver, CO'; ai-summit-fall-2027 is 404. Patched to Denver Apr 27-28 2027, last_date 2026-11-02."
+  }
+]

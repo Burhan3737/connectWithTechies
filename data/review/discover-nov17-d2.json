@@ -1,0 +1,105 @@
+{
+  "pass": "nov17-d2",
+  "date": "2026-11-17",
+  "returning": [],
+  "cities": [
+    {
+      "city": "Cheyenne",
+      "region": "Wyoming",
+      "queries": [
+        "Cheyenne Wyoming hackathon OR startup week OR tech summit 2026",
+        "TEKCON LCCC Cheyenne TEK Club tech festival",
+        "Cheyenne Wyoming tech meetup OR \"Wyoming Startup Showcase\" OR \"Cheyenne hackathon\" OR \"CTF\" 2026",
+        "\"Cyber Cheyenne\" 2026 summit ISSA Laramie County Community College",
+        "\"Cyber Wyoming\" Cyber Cheyenne October 16 2026"
+      ],
+      "found": [
+        { "name": "Wyoming Digital Government Summit", "url": "https://events.govtech.com/Wyoming-Digital-Government-Summit", "verdict": "added", "reason": "GovTech organiser page: JSON-LD startDate 2027-05-27, Little America Hotel & Resort Cheyenne, free for public sector; last_date left empty because the 2026 date (May 20) appears only on govevents.com" },
+        { "name": "TEKCON", "url": "https://lccctekcon.com/", "verdict": "added", "reason": "lccctekcon.com: 'TEKCON 27 · April 24, 2027 · Cheyenne, Wyoming', Pathfinder Building, LCCC; inaugural edition Apr 18 2026 per LCCC news release" },
+        { "name": "INTERFACE Wyoming", "url": "https://f2fevents.com/event/wyo26/", "verdict": "exists", "reason": "already curated, Cheyenne" },
+        { "name": "Cyber Cheyenne", "url": "https://infosec-conferences.com/event/20261016-cyber-cheyenne-2026/", "verdict": "unresolved", "reason": "annual one-day cybersecurity summit at LCCC (2026 edition Oct 16 per infosec-conferences.com, an aggregator). The organiser's Cyber Wyoming call-for-presenters Google Form is closed and shows no date; cyberwyoming.org did not respond to curl. No organiser page confirms a date or the next edition" },
+        { "name": "Wyoming Startup Showcase (gBETA Wyoming)", "url": "https://www.wyomingpublicmedia.org/community-calendar/event/wyoming-startup-showcase-cheyenne-04-12-2025-16-19-55", "verdict": "unresolved", "reason": "only a community-calendar listing (Jan 22 2026, LCCC Flex Tech Building); no organiser page found showing a recurring schedule or next date" },
+        { "name": "Tech Builders on the High Plains / AI Builders on the High Plains", "url": "https://www.meetup.com/tech-builders-on-the-high-plains/", "verdict": "rejected", "reason": "both Meetup group URLs return 'Group not found'" },
+        { "name": "Wyoming Global Tech Summit / UW Innovation Week / Wyoming Computing Symposium", "url": "https://www.jacksonholetechpartnership.org/wyomingglobaltechsummit", "verdict": "rejected", "reason": "held in Jackson and Laramie, not Cheyenne" }
+      ]
+    },
+    {
+      "city": "Claremont",
+      "region": "California",
+      "queries": [
+        "Claremont Colleges hackathon OR CTF OR game jam OR conference 2026",
+        "Harvey Mudd College hackathon OR CTF OR game jam OR \"Projects Day\" 2026 Claremont",
+        "Claremont California tech conference OR startup pitch OR demo day 2027",
+        "globalgamejam.org jam site Claremont 2026"
+      ],
+      "found": [
+        { "name": "CGU Hacks", "url": "https://research.cgu.edu/hackathon/", "verdict": "exists", "reason": "already curated. Its own page shows the 2026 edition on Nov 13-14 2026 at The Hive, 130 E. 7th St, which has now elapsed, so an update patch moves last_date to 2026-11-13 and the url to the dedicated page" },
+        { "name": "5C Hackathon", "url": "https://5chackathon.github.io/", "verdict": "rejected", "reason": "site still advertises the Oct 21 2023 5C Datathon; no later edition found" },
+        { "name": "CLAC 2026 (Consortium of Liberal Arts Colleges)", "url": "https://clac2026.cmc.edu/schedule.html", "verdict": "rejected", "reason": "higher-ed IT conference hosted by CMC June 9-11 2026, but the host college rotates each year, so it does not recur in Claremont" },
+        { "name": "Tech Forward Industry Summit (CGU)", "url": "https://research.cgu.edu/upe/2026/02/13/tech-forward-2026/", "verdict": "rejected", "reason": "a 2.5-hour panel and networking session (Mar 5 2026, Burkle Institute) with registration through Handshake for students; no sign that it recurs" },
+        { "name": "Harvey Mudd Clinic Projects Day", "url": "https://clinicprojectsday2026.g.hmc.edu/", "verdict": "unresolved", "reason": "56th annual student clinic showcase (May 5 2026 per HMC). The organiser site redirects to a Google sign-in, and the event is described as being for the HMC community and sponsors, so I could not confirm it is open to the public" },
+        { "name": "Connect Entrepreneurship Challenge (Pitzer)", "url": "https://www.pitzer.edu/events/connect-entrepreneurship-challenge", "verdict": "rejected", "reason": "organiser page returns 404; no current edition found" },
+        { "name": "Claremont Global Game Jam site", "url": "https://globalgamejam.org/", "verdict": "rejected", "reason": "no Claremont jam site found for 2026 or 2027" }
+      ]
+    },
+    {
+      "city": "Clemson",
+      "region": "South Carolina",
+      "queries": [
+        "Clemson University tech conference OR CTF OR game jam OR demo day 2026",
+        "Clemson University \"game jam\" OR \"Clemson Game Development\" 2027 OR 2026",
+        "Clemson SC \"Business of AI Symposium\" OR \"HPC Day\" OR \"Launchpad\" demo day pitch 2027"
+      ],
+      "found": [
+        { "name": "AI Symposium at Clemson", "url": "https://www.clemson.edu/ccit/research/learn/ai-symposium.html", "verdict": "added", "reason": "organiser page: Apr 17 2026 at Watt Family Innovation Center, open to the public, free; '2027 AI Research Symposium' promised, no date yet, so recurring-tbd" },
+        { "name": "CUhackit", "url": "https://cuhack.it/", "verdict": "exists", "reason": "already curated, Clemson" },
+        { "name": "Business of AI Symposium (Brook T. Smith Launchpad)", "url": "https://news.clemson.edu/brook-t-smith-launchpad-hosts-third-annual-business-of-ai-symposium-in-downtown-clemson/", "verdict": "unresolved", "reason": "third annual edition in downtown Clemson reported May 20 2026, but neither the article nor Launchpad pages give the date of the edition; panelists are Clemson-affiliated" },
+        { "name": "HPC Day at Clemson", "url": "https://www.clemson.edu/ccit/research/learn/hpc-day.html", "verdict": "rejected", "reason": "Sep 18 2026 at Hendrix Student Center, but explicitly for Clemson faculty, students, researchers and staff, so internal rather than public" },
+        { "name": "Clemson AI Pitch Competition (Launchpad)", "url": "https://www.clemson.edu/centers-institutes/launchpad/events-resources/ai-competition.html", "verdict": "rejected", "reason": "a 2-hour pitch slot for up to 10 Clemson student teams (Apr 24 2026); internal student competition" },
+        { "name": "Clemson Game Development game jam", "url": "https://itch.io/jam/clemson-game-development-game-jam", "verdict": "rejected", "reason": "fall 2025 jam ran its submissions online through itch.io; no in-person 2026 or 2027 jam found" },
+        { "name": "NASTT Southeast Conference", "url": "https://nastt.org/events/conference_sestt26/", "verdict": "rejected", "reason": "trenchless construction (pipeline engineering) conference, not a tech event; the regional host rotates" }
+      ]
+    },
+    {
+      "city": "Cocoa Beach",
+      "region": "Florida",
+      "queries": [
+        "Cocoa Beach Florida tech conference OR hackathon OR space summit 2027",
+        "\"Cocoa Beach\" hackathon OR \"startup week\" OR \"pitch\" OR \"demo day\" OR CTF 2026 space coast",
+        "Cocoa Beach Florida technology conference 2026 hotel Hilton Cocoa Beach space industry summit"
+      ],
+      "found": [
+        { "name": "CAST", "url": "https://associationforsoftwaretesting.org/", "verdict": "exists", "reason": "already curated, Cocoa Beach; nothing else tech-related is held in Cocoa Beach itself" },
+        { "name": "SCI Hackathon", "url": "https://ti.to/space-coast-initiative/hackathon-2026", "verdict": "added", "reason": "nearest Space Coast match, held in Melbourne FL, not Cocoa Beach. Groundswell Startups' Tito page gives Apr 10-12 2026 at 2412 Irwin St, Melbourne; the previous edition ran Aug 22-24 2025; added recurring-tbd under city Melbourne" },
+        { "name": "Pitch the Future", "url": "https://swellstartups.beehiiv.com/p/introducing-pitch-the-future-2026", "verdict": "added", "reason": "Groundswell's annual SCI pitch competition, Nov 13 2026 at Groundswell Startups, Melbourne FL; elapsed, so added recurring-tbd under Melbourne" },
+        { "name": "SCI Product Futures Summit", "url": "https://swellstartups.beehiiv.com/p/product-futures-summit-2026-a-day-of-discovery", "verdict": "added", "reason": "Groundswell's newsletter says it was held 'Yesterday' in a post dated Feb 6 2026, so Feb 5 2026; opens the annual SCI series; added recurring-tbd under Melbourne. The organiser's Meetup group goes in sources-nov17-d2.json" },
+        { "name": "CruiseCon 2027", "url": "https://www.luminik.io/events/cruisecon/", "verdict": "rejected", "reason": "cybersecurity conference held on a cruise ship departing Port Canaveral, so not a Cocoa Beach venue; known only from an aggregator" },
+        { "name": "Spacecoast Hard Tech Hackathon", "url": "https://lu.ma/eax4lcbo", "verdict": "unresolved", "reason": "Luma listing at Florida Tech (Melbourne) for May 18-19 with no year shown; not settled" }
+      ]
+    },
+    {
+      "city": "Columbia",
+      "region": "Missouri",
+      "queries": [
+        "Columbia Missouri hackathon OR startup week OR tech summit 2026",
+        "TigerHacks 2026 University of Missouri hackathon November 2026",
+        "TigerHacks 2025 Mizzou November 7 hackathon",
+        "\"Missouri Startup Weekend\" 2027 dates",
+        "\"Main Street Summit\" Columbia Missouri founders 2026",
+        "Columbia MO tech meetup OR \"game jam\" OR CTF Mizzou 2026 \"Columbia, MO\"",
+        "DevWorks Columbia Missouri developer meetup group meetup.com",
+        "\"ShowMe IT Summit\" OR \"Show Me IT Summit\" Columbia Missouri",
+        "Secure Data Technologies \"ShowMe IT\" 2026 Columbia"
+      ],
+      "found": [
+        { "name": "TigerHacks", "url": "https://tigerhacks.missouri.edu/", "verdict": "added", "reason": "organiser site shows the 2025 edition (MLH 2026 season, (c) 2025, Fri Nov 7 to Sun Nov 9, Lafferre Hall); not in the MLH 2027 list and no 2026 edition posted, so added recurring-tbd with last_date 2025-11-07" },
+        { "name": "Roots Weekend", "url": "https://rootsweekend.com/", "verdict": "added", "reason": "rebrand of Missouri Startup Weekend (mostartupweekend.com redirects here): April 23-25 2027, Columbia MO, 400 attendees; the 2026 edition ran Apr 17-19 at EquipmentShare HQ per Redbud VC's posts" },
+        { "name": "Midwest Tech Conference", "url": "https://mwtc.io", "verdict": "exists", "reason": "already curated, Columbia MO" },
+        { "name": "Main Street Summit", "url": "https://www.mainstreetsummit.com/", "verdict": "rejected", "reason": "organiser site now reads 'Thanks for four years of Main Street Summit. Leave your email to receive any future announcements', so it has ended; it was also a small-business event rather than a tech event" },
+        { "name": "DevWorks", "url": "https://www.meetup.com/devworks_columbia/", "verdict": "rejected", "reason": "Meetup group's last event was Mar 22 2021; dormant" },
+        { "name": "ShowMe IT Summit", "url": "https://infosec-conferences.com/event/20260505-showme-it-2026/", "verdict": "unresolved", "reason": "vendor-run IT summit (Secure Data Technologies) listed for May 5 2026 only on infosec-conferences.com; no organiser page found" }
+      ]
+    }
+  ],
+  "reported": []
+}

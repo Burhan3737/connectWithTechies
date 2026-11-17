@@ -1,8 +1,12 @@
-{ "date": "2026-11-15", "iteration": 1,
-  "scope": "2026-11-15 cycle: re-check nov15-c1/c2/c3 (60 rows), returning nov15-r1/r2, cities nov15-d1/d2 (12 curated adds), sources-nov15-d1/feed",
-  "checked": "BSidesDFW city move; DevLearn, AFROTECH, UofT E-Week, Cultivator (card image), Digital Offshore re-dates; PitchBreakfast, Steel City AI, Venture Cafe Phoenix rolls; all 12 adds (TechNet Augusta, AFCEA HITS, HackPSU, MMS, RGV Startup Week, WebCamp NJ, SecureWorld Twin Cities, Startup425 Summit, IU Venture Summit, SummitCTF, Luddy, RBTC Demo Day); confirmed rows Tech Alley, Current, AngelNV, BSides Philly, CSAW, Capital Hacks, GEWKC, CyberForce, BSides Halifax, Ignite; all patches landed",
+{ "date": "2026-11-17", "iteration": 1,
+  "scope": "2026-11-17 cycle: re-check nov17-c1/c2 (60 rows), cities nov17-d1/d2 (17 curated adds + CGU Hacks update), nov17-xaudit (BSides CMH), sources-nov17-feed/d1/d2",
+  "checked": "KubeCon NA (SLC->New Orleans), OWASP AppSec USA (SF->Atlanta), PASS (Seattle->Denver), SANS AI Summit (Arlington->Denver), Oracle AI World, Ocean Exchange re-dates; BSides CMH month fix (closes 2026-11-15-i1-W1); adds NABS, Boston Code Camp, HackUTA, Roots Weekend, Wyoming DGS, TEKCON, TigerHacks, CGU Hacks; confirmed Ignite, JSNation US, GEWKC; dry-run apply shows no KubeCon replay removal",
   "findings": [
-    { "severity": "warning", "event": "BSides CMH (Columbus)",
-      "summary": "month still 'September' although the edition held as last_date ran November 4-6, 2026 (bsidescolumbus.com); record is recurring-tbd so month is the only timing hint; source is the allbsides.com listing",
-      "recommendation": "match {name:'BSides CMH', city:'Columbus'}; set month 'November' and source 'https://www.bsidescolumbus.com/'",
+    { "severity": "warning", "event": "Iowa Code Camp (Des Moines)",
+      "summary": "organiser page iowacodecamp.com reads 'November 7, 2026 Ankeny, IA'; record city is Des Moines with empty venue, and nov17-c2 confirmed it without noting the mismatch",
+      "recommendation": "match {name:'Iowa Code Camp', city:'Des Moines'}; set city 'Ankeny' (or, if kept as a metro listing, set venue 'Ankeny, IA')",
+      "repeat_of": null },
+    { "severity": "warning", "event": "PASS Data Community Summit West (Denver)",
+      "summary": "c2 correctly moved the record to the 2027 Denver edition, but the organiser page replaces the West/East pair with one 'PASS Summit North America'; the record keeps the obsolete 'West' name",
+      "recommendation": "match {name:'PASS Data Community Summit West', city:'Denver'}; set name 'PASS Data Community Summit North America'",
       "repeat_of": null } ] }

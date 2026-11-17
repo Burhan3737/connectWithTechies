@@ -1,0 +1,107 @@
+{
+ "pass": "nov17-d1",
+ "date": "2026-11-17",
+ "returning": [],
+ "reported": [],
+ "cities": [
+  {
+   "city": "Arlington",
+   "region": "Texas",
+   "queries": [
+    "HackUTA 2026 hackathon UT Arlington dates",
+    "hackathon OR game jam OR CTF Arlington Texas 2027",
+    "UT Arlington game jam OR \"capture the flag\" OR CTF student 2026",
+    "Arlington Texas tech summit OR demo day OR startup week 2026 2027",
+    "North American Blockchain Summit 2026 Arlington Texas Blockchain Council official site",
+    "MLH 2027 season registry (mlh.io/seasons/2027/events), filtered to Texas"
+   ],
+   "found": [
+    { "name": "HackUTA", "url": "https://hackuta.com/", "verdict": "added",
+      "reason": "hackathon. hackuta.com: 'November 14-15, 2026 - UT Arlington, Arlington, Texas', a 24-hour in-person student hackathon; MLH agrees. Just ran, so added recurring-tbd with last_date 2026-11-14. Feeds probably missed it because hackuta.org (old domain) is now an empty index." },
+    { "name": "North American Blockchain Summit", "url": "https://www.northamericanblockchainsummit.com/", "verdict": "added",
+      "reason": "summit. Organiser site: Nov 18-19, 2026, National Medal of Honor Museum, Arlington, Texas; Texas Blockchain Council events page agrees. Only its Luma after-party was in our data." },
+    { "name": "Texas Venture Fest: North Texas", "url": "https://luma.com/texas-venture-fest-north-texas-2026", "verdict": "exists",
+      "reason": "startup-week/tech-week. Arlington's part of Texas Startup & Tech Week is already held as feed record 'Texas Venture Fest: North Texas 2026' (Dallas)." },
+    { "name": "Counterspell Arlington (Hack Club)", "url": "https://counterspell.hackclub.com/arlington", "verdict": "rejected",
+      "reason": "game-jam. Only edition found was Nov 23-24, 2024, a high-school jam; nothing since." },
+    { "name": "VGDO game jams (UTA)", "url": "https://itch.io/jam/vgdo-creative-jam-fall-2026", "verdict": "rejected",
+      "reason": "game-jam. Itch.io submission windows only, the 2024 edition restricted to UTA students and alumni; no in-person public event shown." },
+    { "name": "BioNTX iC3 Summit", "url": "https://business.biontx.org/ap/Events/Register/DgFjR86C1CQCW", "verdict": "rejected",
+      "reason": "Life science and healthcare summit at Loews Arlington, not a tech event." }
+   ]
+  },
+  {
+   "city": "Burlington",
+   "region": "Massachusetts",
+   "queries": [
+    "hackathon Burlington Massachusetts 2026 OR 2027",
+    "Burlington MA tech summit OR demo day OR startup 2026 Northeastern Innovation Campus",
+    "Boston Code Camp 41 November 2026 Burlington"
+   ],
+   "found": [
+    { "name": "Boston Code Camp", "url": "https://www.bostoncodecamp.com/", "verdict": "added",
+      "reason": "conference (not a missing type, but not held). Sessionize CFP: 'Boston Code Camp 41, 21 Nov 2026, Burlington, Massachusetts'; Boston Azure AI Meetup: Microsoft, 5 Wayside Rd, Burlington, 8am-5pm, free. BCC 40 was Mar 28, 2026. Only the Meetup partner-event copy was in the feed." },
+    { "name": "Hackathons / demo days / summits in Burlington", "url": "", "verdict": "rejected",
+      "reason": "Nothing found held in Burlington itself: UVMHacks is Burlington, Vermont; BOTSHack, Tough Tech Demo Day and MIT delta v are in Cambridge or Boston; BasisTech Demo Day is members-only with no date or location. The AUVSI aviation summit at Northeastern's Innovation Campus (Mar 19, 2026) is not a tech-community event." },
+    { "name": "New England SQL Server User Group / NEJUG / Boston Azure AI", "url": "https://www.meetup.com/nesqlug/", "verdict": "exists",
+      "reason": "meetup-series. Burlington's recurring in-person meetups (nesqlug, nejug1, bostonazureai) are all already in data/feeds/registry.json." }
+   ]
+  },
+  {
+   "city": "Cambridge",
+   "region": "Maryland",
+   "queries": [
+    "Cambridge Maryland tech summit OR hackathon OR startup 2026 2027 Eastern Shore",
+    "\"Cambridge, MD\" OR \"Cambridge, Maryland\" hackathon OR \"tech conference\" OR \"game jam\" OR \"pitch competition\" 2026"
+   ],
+   "found": []
+  },
+  {
+   "city": "Canal Winchester",
+   "region": "Ohio",
+   "queries": [
+    "Canal Winchester Ohio tech event hackathon OR CTF OR summit 2026",
+    "\"Canal Winchester\" Ohio meetup OR hackathon OR conference technology cybersecurity 2026 2027"
+   ],
+   "found": [
+    { "name": "BSides Columbus", "url": "https://www.bsidescolumbus.com/", "verdict": "exists",
+      "reason": "Held as curated 'BSides CMH' (Columbus); organiser page reads Nov 4-6, 2026, matching last_date 2026-11-04. Third-party listings put the venue at BrewDog DogTap, 96 Gender Rd, Canal Winchester. The organiser calls it Columbus, so the city is left alone. The record's month 'September' looks stale against the November edition." },
+    { "name": "Hackers Teaching Hackers CTF", "url": "https://hthackers.com/", "verdict": "exists",
+      "reason": "ctf. The town's CTF is part of the curated 'Hackers Teaching Hackers' conference (Canal Winchester), not a separate event." },
+    { "name": "HackOHI/O, BuckeyeCTF, Construct I/O", "url": "https://hack.osu.edu/2026", "verdict": "rejected",
+      "reason": "All held at Ohio State in Columbus, not Canal Winchester." }
+   ]
+  },
+  {
+   "city": "Chapel Hill",
+   "region": "North Carolina",
+   "queries": [
+    "Pearl Hacks 2027 UNC Chapel Hill hackathon",
+    "\"Pearl Hacks 2026\" February date Chapel Hill",
+    "Launch Chapel Hill demo day 2026",
+    "Chapel Hill tech conference 2027 OR UNC CTF OR game jam Chapel Hill",
+    "UNC Chapel Hill \"game jam\" OR \"CTF\" 2026 student club",
+    "UNC \"AI for Public Good\" conference 2027",
+    "junction.unc.edu iCal feed (events, past demo days)"
+   ],
+   "found": [
+    { "name": "Launch Powered by KPMG Demo Day Showcase", "url": "https://junction.unc.edu/event/launch-powered-by-kpmg-demo-day-showcase/", "verdict": "added",
+      "reason": "demo-day. Cohort 4 showcase held Oct 20, 2026 at Innovate Carolina Junction; spring and fall cohorts. Added recurring-tbd. The Junction iCal feed also went into sources-nov17-d1.json." },
+    { "name": "Launch student accelerator demo days", "url": "https://junction.unc.edu/event/launch-demo-day-summer-cohort-1/", "verdict": "rejected",
+      "reason": "Student-cohort showcases (May 28 and Jul 16, 2026) are irregular one-offs; the Junction iCal source will carry them." },
+    { "name": "Pearl Hacks", "url": "https://pearlhacks.com/", "verdict": "added",
+      "reason": "hackathon (not a missing type, but not held). Annual since 2014 at UNC; 2026 edition Feb 21-22 (Devpost); no 2027 date, so recurring-tbd." },
+    { "name": "Triangle Game Jam", "url": "https://entrepreneurship.ncsu.edu/trianglegamejam/", "verdict": "added",
+      "reason": "game-jam. Duke/UNC/NC State jam with a work day at UNC Sitterson Hall; added under Raleigh (organiser NC State, showcase at Hunt Library). The organiser's 2027 schedule contradicts itself, so recurring-tbd." },
+    { "name": "UNC AI for Public Good Conference", "url": "https://www.unc.edu/posts/2026/04/13/carolina-hosts-first-ai-for-public-good-conference/", "verdict": "rejected",
+      "reason": "conference. Inaugural edition Apr 13, 2026 at the Friday Center; only a co-chair's hope that it continues, and no second edition announced." },
+    { "name": "Google Developer Group Chapel Hill", "url": "https://www.meetup.com/google-developer-group-chapel-hill/", "verdict": "rejected",
+      "reason": "meetup-series. Its iCal feed's only upcoming event (Kubernetes Learning Series, Sat 8pm) carries no venue and looks online, so not added as a source." },
+    { "name": "UNC Cleantech Summit", "url": "https://www.luminik.io/events/unc-cleantech-summit/", "verdict": "rejected",
+      "reason": "Energy and cleantech business summit, not a tech-community event; only an aggregator listing found." },
+    { "name": "Chapel Hill CTF", "url": "", "verdict": "rejected",
+      "reason": "ctf. No in-person UNC or Chapel Hill CTF found." }
+   ]
+  }
+ ]
+}

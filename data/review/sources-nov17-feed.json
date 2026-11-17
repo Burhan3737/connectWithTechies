@@ -1,0 +1,5 @@
+[
+  { "url": "https://luma.com/netlifycommunity", "tech": true, "reason": "Netlify Community Events (luma.com/netlifycommunity): the web platform's own community calendar (Netlify Launch Party, San Francisco). Seen in the gate's dropped sample on the 2026-11-17 run: 'Netlify' alone gives the gate no tech signal." },
+  { "url": "https://luma.com/sec-nerds", "tech": true, "reason": "Sec Nerds Monthly (luma.com/sec-nerds): a monthly security-practitioner meetup (Sec Nerds - Nov 2026, San Francisco). Seen in the gate's dropped sample on the 2026-11-17 run: 'Sec Nerds' carries no word the gate recognises." },
+  { "url": "https://luma.com/germnetwork", "tech": true, "reason": "Germ Network (luma.com/germnetwork): the atproto messaging app's calendar, hosting the SF Atproto Meetup for AT Protocol developers. Seen in the gate's dropped sample on the 2026-11-17 run: 'Atproto' is not a gate keyword." }
+]

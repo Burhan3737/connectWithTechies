@@ -1,0 +1,39 @@
+[
+  {
+    "match": {
+      "name": "EWF Annual Conference",
+      "city": "Aurora"
+    },
+    "action": "update",
+    "reason": "ewfglobal.com/events/: 'The 2026 Annual Conference is taking place at the Gaylord Rockies Resort in Denver, Colorado, November 4-6, 2026'. Venue was empty and source was dev.events (an aggregator); dates already matched. Gaylord Rockies is at 6700 N Gaylord Rockies Blvd, Aurora, so city stays.",
+    "set": {
+      "venue": "Gaylord Rockies Resort & Convention Center",
+      "source": "https://www.ewfglobal.com/events/"
+    }
+  },
+  {
+    "match": {
+      "name": "GOVIT Leadership Summit & Symposium",
+      "city": "Bloomington"
+    },
+    "action": "update",
+    "reason": "fusionlp.org/govit-2026-awards/ (redirect target of the record's url): 'November 8-10, 2026 DoubleTree by Hilton, Bloomington, MN'. Venue was empty and source was dev.events; dates already matched.",
+    "set": {
+      "venue": "DoubleTree by Hilton, Bloomington, MN",
+      "source": "https://fusionlp.org/govit-2026-awards/"
+    }
+  },
+  {
+    "match": {
+      "name": "Hackaday Superconference",
+      "city": "Pasadena"
+    },
+    "action": "update",
+    "reason": "url pointed at an Eventbrite ticket page; the official event page hackaday.io/superconference/ reads 'Hackaday Supercon 2026, November 6 to 8, Pasadena, California', Friday kick-off at Supplyframe HQ (61 S. Fair Oaks Ave), Saturday-Sunday at ArtCenter South Campus (950 S. Raymond Ave). Venue was empty; dates already matched.",
+    "set": {
+      "url": "https://hackaday.io/superconference/",
+      "venue": "ArtCenter College of Design South Campus, 950 S. Raymond Ave (Friday kick-off at Supplyframe HQ)",
+      "source": "https://hackaday.io/superconference/"
+    }
+  }
+]

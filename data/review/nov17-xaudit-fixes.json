@@ -1,0 +1,8 @@
+[
+  {
+    "match": { "name": "BSides CMH", "city": "Columbus" },
+    "action": "update",
+    "reason": "Audit 2026-11-15-i1-W1: the edition held as last_date ran November 4-6, 2026 (bsidescolumbus.com), so the usual month is November, not September; the record's only timing hint once it rolls to recurring-tbd. Source moved from the allbsides.com listing to the organiser's own site, as the audit recommended.",
+    "set": { "month": "November", "source": "https://www.bsidescolumbus.com/" }
+  }
+]
