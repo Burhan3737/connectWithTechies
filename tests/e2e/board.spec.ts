@@ -211,9 +211,16 @@ test.describe('Time bands', () => {
     await page.locator('.jumps [data-band=nextWeek]').click();
     const seam = page.locator('.seam', { hasText: 'Next week' });
     await expect(seam).toBeInViewport();
-    // Clear of the sticky month heading.
-    await expect.poll(async () => (await seam.boundingBox())!.y - (await page.locator('.groupbar').boundingBox())!.y
-      - (await page.locator('.groupbar').boundingBox())!.height).toBeGreaterThanOrEqual(-1);
+    // Clear of the sticky month heading. The list can hold several month headings (November and
+    // December once the window spans a month end), so measure against the one sitting above the
+    // seam — the heading that is stuck to the top — not whichever `.groupbar` comes first.
+    await expect.poll(() => seam.evaluate((el) => {
+      const top = el.getBoundingClientRect().top;
+      const above = [...document.querySelectorAll('.groupbar')]
+        .map((h) => h.getBoundingClientRect())
+        .filter((r) => r.top <= top);
+      return above.length ? top - Math.max(...above.map((r) => r.bottom)) : Infinity;
+    })).toBeGreaterThanOrEqual(-1);
     await expect(page.locator('#count')).toHaveText(before!);
   });
 });
