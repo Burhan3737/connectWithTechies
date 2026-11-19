@@ -1,0 +1,8 @@
+[
+  {
+    "match": { "name": "PASS Data Community Summit West", "city": "Denver" },
+    "action": "update",
+    "reason": "Audit 2026-11-17-i1-W2: for 2027 the organiser (passdatacommunitysummit.com/north-america/) replaces the West/East pair with one 'PASS Summit North America' in Denver, October 13-15, 2027; the 'West' name is obsolete. Dates, city and url already set by nov17-c2.",
+    "set": { "name": "PASS Data Community Summit North America" }
+  }
+]

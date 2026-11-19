@@ -1,0 +1,6 @@
+[
+  { "url": "https://www.meetup.com/chicagoazure/",
+    "reason": "Chicago Azure Users Group (Oak Brook, IL, about 900 members, 209 past events). It ran Chicago Global Azure 2025 on this group (May 9 2025) and holds in-person Azure meetups. Not in the registry, so Chicago Global Azure never reached the feed." },
+  { "url": "https://www.meetup.com/aws-sbg-at-university-of-california-irvine-irvine-campus/",
+    "reason": "AWS Cloud Club at UC Irvine. It posted the in-person 2026 AWS CloudHacks hackathon here (Apr 17-19 2026, UCI campus) along with AWS workshops. Not in the registry; the feed saw CloudHacks only through Devpost." }
+]

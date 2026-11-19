@@ -1,0 +1,407 @@
+[
+  {
+    "action": "add",
+    "reason": "socon.specterops.io (specterops.io/so-con redirects there): 'SO-CON 2027 | April 26 - May 1', conference Apr 26-27 2027 and training Apr 28-May 1 2027 at Convene, 1201 Wilson Blvd, Arlington, VA. 2026 edition began 2026-04-13 (RETURNING row).",
+    "record": {
+      "name": "SO-CON",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "identity",
+        "red-team",
+        "training"
+      ],
+      "city": "Arlington",
+      "region": "Virginia",
+      "country": "United States",
+      "venue": "Convene, 1201 Wilson Blvd",
+      "cadence": "annual",
+      "month": "April-May",
+      "next_date": "2027-04-26",
+      "next_date_end": "2027-05-01",
+      "last_date": "2026-04-13",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security researchers, red and blue teamers, identity engineers",
+      "url": "https://socon.specterops.io/",
+      "description": "SpecterOps' conference on identity attack paths and adversary tradecraft: two days of talks (Apr 26-27) followed by four days of hands-on training courses.",
+      "source": "https://socon.specterops.io/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "first.org/conference/vulncon27/: 'Join us for VulnCon 2027, March 30-April 2, 2027, in Scottsdale, Arizona'; venue page: DoubleTree Resort by Hilton Paradise Valley, 5401 N Scottsdale Rd. first.org/conference/ lists VulnCon 2026 as April 13-16, 2026.",
+    "record": {
+      "name": "VulnCon",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "vulnerability-management",
+        "cve"
+      ],
+      "city": "Scottsdale",
+      "region": "Arizona",
+      "country": "United States",
+      "venue": "DoubleTree Resort by Hilton Paradise Valley",
+      "cadence": "annual",
+      "month": "March-April",
+      "next_date": "2027-03-30",
+      "next_date_end": "2027-04-02",
+      "last_date": "2026-04-13",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "vulnerability management practitioners, CVE Numbering Authorities, security researchers",
+      "url": "https://www.first.org/conference/vulncon27/",
+      "description": "Conference hosted by FIRST and the CVE Program for the people who build and run vulnerability programs: disclosure, CVE assignment, scoring and coordination.",
+      "source": "https://www.first.org/conference/vulncon27/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "appliedml.us redirects to appliedml.us/2027/: '2027 Applied Machine Learning Conference ... April 16-17, 2027, Charlottesville, Virginia', 'a two-day, in-person event'; Apr 16 talks at Violet Crown Cinema, Apr 17 workshops at UVA School of Data Science. 2026 edition began 2026-04-17 (RETURNING row; page links a 2026 gallery).",
+    "record": {
+      "name": "Applied Machine Learning Conference",
+      "type": "conference",
+      "topics": [
+        "ai",
+        "machine-learning",
+        "data-science"
+      ],
+      "city": "Charlottesville",
+      "region": "Virginia",
+      "country": "United States",
+      "venue": "Violet Crown Cinema (talks); UVA School of Data Science (workshops)",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "2027-04-16",
+      "next_date_end": "2027-04-17",
+      "last_date": "2026-04-17",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "data scientists, AI engineers, computational researchers",
+      "url": "https://appliedml.us/",
+      "description": "Two-day in-person conference: keynotes and technical talks on applied ML and AI on day one, 90-minute hands-on workshops on day two.",
+      "source": "https://appliedml.us/2027/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "postgresconf.org/conferences/2027: 'Postgres Conference 2027 ... San Jose / United States April 21 - 23, 2027', venue San Jose Marriott, 301 South Market Street; CFP open Oct 15 2026 - Jan 31 2027. postgresconf.org/conferences lists the 2026 edition as April 21 - 23, 2026.",
+    "record": {
+      "name": "Postgres Conference",
+      "type": "conference",
+      "topics": [
+        "postgres",
+        "databases",
+        "open-source"
+      ],
+      "city": "San Jose",
+      "region": "California",
+      "country": "United States",
+      "venue": "San Jose Marriott",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "2027-04-21",
+      "next_date_end": "2027-04-23",
+      "last_date": "2026-04-21",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "PostgreSQL developers, DBAs, database operators",
+      "url": "https://postgresconf.org/conferences/2027",
+      "description": "Annual PostgreSQL conference run by the PGCentral Foundation, with tracks on extensions, development, operations, AI and professional development.",
+      "source": "https://postgresconf.org/conferences/2027"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "snowfroc.com still advertises 'SNOWFROC '26 ... April 16-17, 2026 at Denver Cable Center'; no 2027 dates published (web search found none). Annual OWASP Denver conference held every spring (2024, 2025, 2026 editions found), site live, so added as recurring-tbd with last_date 2026-04-16 rather than guessing.",
+    "record": {
+      "name": "OWASP SnowFROC",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "appsec",
+        "owasp"
+      ],
+      "city": "Denver",
+      "region": "Colorado",
+      "country": "United States",
+      "venue": "Cable Center, University of Denver",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-16",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "application security practitioners, developers, security engineers",
+      "url": "https://snowfroc.com",
+      "description": "OWASP Denver chapter's annual application security conference; 2026 added a training day before the conference day.",
+      "source": "https://snowfroc.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Organiser's Sessionize page (sessionize.com/chicago-global-azure-2026): 'event date 17 Apr 2026, Microsoft Chicago, 200 E Randolph ... free in-person event'. The Chicago Azure Users Group ran it on Meetup in 2025 (meetup.com/chicagoazure/events/307660096, May 9 2025) and on Eventbrite in 2026. Global Azure 2027 is set for April 8-10 2027 (globalazure.net JSON-LD) but no Chicago date yet, so recurring-tbd.",
+    "record": {
+      "name": "Chicago Global Azure",
+      "type": "conference",
+      "topics": [
+        "azure",
+        "cloud",
+        "microsoft",
+        "ai"
+      ],
+      "city": "Chicago",
+      "region": "Illinois",
+      "country": "United States",
+      "venue": "Microsoft Chicago, 200 E Randolph St",
+      "cadence": "annual",
+      "month": "April-May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-17",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "Azure developers, cloud architects, IT professionals",
+      "url": "https://www.meetup.com/chicagoazure/",
+      "description": "Chicago's one-day local edition of the worldwide Global Azure community event, with talks from MVPs and Microsoft staff.",
+      "source": "https://sessionize.com/chicago-global-azure-2026/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Organiser's Sessionize page (sessionize.com/global-azure-bootcamp-2026-Toronto): event date 18 Apr 2026 (a Saturday; its description says April 19), location Microsoft Canada, Toronto, linked to the Metro Toronto Azure Community Meetup group. Ran 2024 (Meetup event 297401028, Apr 20 2024), 2025 and 2026. No 2027 date yet; recurring-tbd. The dev.events row's URL pointed at the 2024 Meetup event.",
+    "record": {
+      "name": "Global Azure Bootcamp – Greater Toronto Area Edition",
+      "type": "conference",
+      "topics": [
+        "azure",
+        "cloud",
+        "microsoft",
+        "ai"
+      ],
+      "city": "Toronto",
+      "region": "Ontario",
+      "country": "Canada",
+      "venue": "Microsoft Canada",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-18",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "Azure developers, administrators, architects",
+      "url": "https://www.meetup.com/metro-toronto-azure-community/",
+      "description": "Metro Toronto Azure Community's one-day in-person edition of Global Azure, with sessions on IaaS, PaaS and AI from Microsoft staff, partners and MVPs.",
+      "source": "https://sessionize.com/global-azure-bootcamp-2026-Toronto"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "ubcyoucode.com: 'UBC WiCS x WiDS@UBC 2026 ... April 4th - 5th, 2026', in person at UBC, valid UBC student ID required. UBC CS news calls it annual each spring since 2024; organiser LinkedIn is recruiting youCode 2027 leads. No 2027 dates, so recurring-tbd.",
+    "record": {
+      "name": "youCode",
+      "type": "hackathon",
+      "topics": [
+        "students",
+        "diversity",
+        "women-in-tech"
+      ],
+      "city": "Vancouver",
+      "region": "British Columbia",
+      "country": "Canada",
+      "venue": "University of British Columbia",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-04",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "UBC students (UBC student ID required); centres underrepresented genders",
+      "url": "https://ubcyoucode.com",
+      "description": "Annual 24-hour student hackathon run by UBC Women in Computer Science and WiDS@UBC, with beginner and advanced streams.",
+      "source": "https://ubcyoucode.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Georgia Tech event page (hg.gatech.edu/node/689489): 'COC Ramblin' Hacks', 12pm Fri April 10 - 4:45pm Sat April 11 2026, Klaus Atrium, 'the College of Computing's annual hackathon' (second edition; inaugural was spring 2025 per cc.gatech.edu news). No 2027 date, so recurring-tbd.",
+    "record": {
+      "name": "Ramblin' Hacks",
+      "type": "hackathon",
+      "topics": [
+        "students",
+        "ai"
+      ],
+      "city": "Atlanta",
+      "region": "Georgia",
+      "country": "United States",
+      "venue": "Klaus Advanced Computing Building atrium, Georgia Tech",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-10",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "Georgia Tech students",
+      "url": "https://ramblin-hacks-2026.devpost.com/",
+      "description": "Georgia Tech College of Computing's annual hackathon with tracks sponsored by Corporate Affiliates Program partners.",
+      "source": "https://hg.gatech.edu/node/689489"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "jachacks.pages.dev: 'April 11-12 ... JACHacks is John Abbott College's annual hackathon', organised by JAC's CompSci department, MLH 2026 season badge. Devpost (organiser-submitted) gives the address 21275 Lakeshore, Sainte-Anne-de-Bellevue, QC H9X 1S2 (the JAC campus), not Montreal proper. Ran 2024, 2025, 2026. No 2027 date, so recurring-tbd.",
+    "record": {
+      "name": "JACHacks",
+      "type": "hackathon",
+      "topics": [
+        "students"
+      ],
+      "city": "Sainte-Anne-de-Bellevue",
+      "region": "Quebec",
+      "country": "Canada",
+      "venue": "John Abbott College",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-11",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "CEGEP and university students",
+      "url": "https://jachacks.pages.dev",
+      "description": "John Abbott College's annual 24-hour in-person hackathon for about 200 CEGEP and university students, with workshops and industry mentors.",
+      "source": "https://jachacks.pages.dev/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Organiser's site (fronterahacksplaceholder.pages.dev, linked from Frontera Devs): 'April 18th - 19th, 2026 ... the 3rd annual hackathon hosted by Frontera Devs ... in the RGV', 24 hours. Devpost (organiser-submitted) gives Edinburg, TX 78541 (UTRGV). No 2027 date, so recurring-tbd.",
+    "record": {
+      "name": "Frontera Hacks",
+      "type": "hackathon",
+      "topics": [
+        "students",
+        "social-good"
+      ],
+      "city": "Edinburg",
+      "region": "Texas",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-18",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "students of all majors, Rio Grande Valley developers",
+      "url": "https://fronteradevs.com",
+      "description": "Annual 24-hour hackathon run by Frontera Devs (UTRGV) to grow the developer community in the Rio Grande Valley, with workshops and mentors.",
+      "source": "https://fronterahacksplaceholder.pages.dev/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Organiser's Meetup event (AWS SBG at UCI, meetup.com/.../events/314100951): '2026 AWS CloudHacks', Fri Apr 17 8:00 AM - Sun Apr 19 7:00 PM PDT 2026, University of California Irvine, run by AWS Cloud Club at UCI, AI@UCI, AWS and UCI OIT. 2025 edition ran May 10-11 2025 (aws-cloudhacks.devpost.com). No 2027 date, so recurring-tbd; the Meetup group is also proposed in sources-nov19-t1.json.",
+    "record": {
+      "name": "AWS CloudHacks",
+      "type": "hackathon",
+      "topics": [
+        "cloud",
+        "aws",
+        "ai",
+        "students"
+      ],
+      "city": "Irvine",
+      "region": "California",
+      "country": "United States",
+      "venue": "University of California, Irvine",
+      "cadence": "annual",
+      "month": "April-May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-17",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "university students",
+      "url": "https://www.meetup.com/aws-sbg-at-university-of-california-irvine-irvine-campus/",
+      "description": "Three-day student hackathon at UCI building AI-driven projects on AWS, with workshops, industry mentors and guest speakers.",
+      "source": "https://www.meetup.com/aws-sbg-at-university-of-california-irvine-irvine-campus/events/314100951/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "devfestwashu.com redirects to the GDG on Campus WashU event page: 'DevFest WashU 2026', Apr 11 9:00 AM - Apr 12 7:30 PM CDT, Charles F. Knight Executive Education & Conference Center; 'a conference-hackathon combination'. happenings.washu.edu confirms Apr 11 2026 at Bauer Hall and the Build with AI Hackathon (the Devpost row). No 2027 date, so recurring-tbd.",
+    "record": {
+      "name": "DevFest WashU",
+      "type": "conference",
+      "topics": [
+        "ai",
+        "hackathon",
+        "students",
+        "google"
+      ],
+      "city": "St. Louis",
+      "region": "Missouri",
+      "country": "United States",
+      "venue": "Knight Center / Bauer Hall, Washington University in St. Louis",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-04-11",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "students and the St. Louis developer community",
+      "url": "https://devfestwashu.com",
+      "description": "WashU student tech groups' two-day DevFest: talks and workshops from industry speakers plus the Build with AI hackathon.",
+      "source": "https://gdg.community.dev/events/details/google-gdg-on-campus-washington-university-in-st-louis-st-louis-united-states-presents-devfest-washu-2026/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "palmettohacks.com: 'PalmettoHacks 2026 - Hosted by Kappa Theta Pi', 24 hours starting Saturday, October 10, 2026 at the University of South Carolina, official MLH event. The same organiser ran a 12-hour 'Palmetto Hacks Hack Day' on April 11 2026 (the Devpost row). Both 2026 editions are past and no next date is published, so recurring-tbd.",
+    "record": {
+      "name": "PalmettoHacks",
+      "type": "hackathon",
+      "topics": [
+        "students"
+      ],
+      "city": "Columbia",
+      "region": "South Carolina",
+      "country": "United States",
+      "venue": "University of South Carolina",
+      "cadence": "annual",
+      "month": "October",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-10-10",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "students of any major and skill level",
+      "url": "https://www.palmettohacks.com",
+      "description": "24-hour beginner-friendly student hackathon run by Kappa Theta Pi at the University of South Carolina, with workshops, mentors and meals.",
+      "source": "https://www.palmettohacks.com/"
+    }
+  }
+]

@@ -1,0 +1,261 @@
+[
+ {
+  "action": "add",
+  "reason": "coe.miami.edu/events/horizon-ai-hackathon/2027/index.html (University of Miami College of Engineering, organiser): 'Save the Date! February 6-7, 2027, Lakeside Expo Center', registration opening soon; student, high-school and community/startup tracks. Earlier editions Feb 10 2024 and Feb 22-23 2025 at the same venue per UM news; no Feb 2026 edition found (the 2026-labelled page now 404s and the 2027 page body still says 'Horizon AI Hackathon 2026'), so last_date left blank rather than guessed.",
+  "record": {
+   "name": "Horizon AI Hackathon",
+   "type": "hackathon",
+   "topics": [
+    "ai",
+    "students",
+    "startups"
+   ],
+   "city": "Coral Gables",
+   "region": "Florida",
+   "country": "United States",
+   "venue": "Lakeside Expo Center, University of Miami",
+   "cadence": "annual",
+   "month": "February",
+   "next_date": "2027-02-06",
+   "next_date_end": "2027-02-07",
+   "last_date": "",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "university and high-school students, local startups and tech community",
+   "url": "https://www.coe.miami.edu/events/horizon-ai-hackathon/2027/index.html",
+   "description": "A two-day in-person hackathon run by the University of Miami College of Engineering and Business School where teams build AI-powered solutions with societal impact, with student, high-school and community/startup tracks.",
+   "source": "https://www.coe.miami.edu/events/horizon-ai-hackathon/2027/index.html"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "smartcities.miami.edu (organiser): 'Smart Cities MIAMI 2026, held on the University of Miami's Coral Gables Campus on March 26', its 10th year, staged by the School of Architecture, College of Engineering and Frost Institute for Data Science and Computing. No 2027 date published yet.",
+  "record": {
+   "name": "Smart Cities MIAMI Conference",
+   "type": "conference",
+   "topics": [
+    "smart-cities",
+    "ai",
+    "urban-tech",
+    "data-science"
+   ],
+   "city": "Coral Gables",
+   "region": "Florida",
+   "country": "United States",
+   "venue": "University of Miami Coral Gables Campus",
+   "cadence": "annual",
+   "month": "March",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-03-26",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "researchers, urban planners, industry and students",
+   "url": "https://smartcities.miami.edu/",
+   "description": "The University of Miami's annual one-day conference on technology for cities, with talks and panels on AI, sensors, mobility, quantum computing and the built environment.",
+   "source": "https://smartcities.miami.edu/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "cupertino.gov/hackcupertino (City of Cupertino Parks and Recreation, organiser; read via WebFetch, curl gets an Akamai 403): next Hack Cupertino April 10-11, 2027, registration opens in February; overnight in-person lock-in at Quinlan Community Center, 10185 N Stelling Rd, ages 13-18. The city page as indexed for 2026 gave April 11-12, 2026.",
+  "record": {
+   "name": "Hack Cupertino",
+   "type": "hackathon",
+   "topics": [
+    "students",
+    "coding",
+    "high-school"
+   ],
+   "city": "Cupertino",
+   "region": "California",
+   "country": "United States",
+   "venue": "Quinlan Community Center",
+   "cadence": "annual",
+   "month": "April",
+   "next_date": "2027-04-10",
+   "next_date_end": "2027-04-11",
+   "last_date": "2026-04-11",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "middle and high school students aged 13-18",
+   "url": "https://www.cupertino.gov/hackcupertino",
+   "description": "An overnight in-person hackathon for teens run by the City of Cupertino and its Teen Commission, with mentors, workshops and judging.",
+   "source": "https://www.cupertino.gov/hackcupertino"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "launchdayton.com/events/startup-week/ (Launch Dayton, maintained by the Entrepreneurs' Center): 'The 2026 conference will take place from September 15-17 at The Hub Powered by PNC', 31 S. Main St, Dayton; free three-day conference. 2026 edition has passed and no 2027 date is published.",
+  "record": {
+   "name": "Launch Dayton Startup Week",
+   "type": "startup-week",
+   "topics": [
+    "startups",
+    "entrepreneurship"
+   ],
+   "city": "Dayton",
+   "region": "Ohio",
+   "country": "United States",
+   "venue": "The Hub Powered by PNC, 31 S. Main St",
+   "cadence": "annual",
+   "month": "September",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-09-15",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "founders, small business owners, entrepreneurs",
+   "url": "https://launchdayton.com/events/startup-week/",
+   "description": "A free three-day conference of talks, hands-on workshops and networking for the Dayton region's startup founders and business owners.",
+   "source": "https://launchdayton.com/events/startup-week/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "launchdayton.com/events/techstarsdyt/ (Launch Dayton, organiser): 'the next Techstars Startup Weekend, November 6-8, 2026', 54-hour in-person event with access to The Hub; tickets include meals. That edition has passed and no 2027 date is published; arcadedayton.com lists a 2025 edition, so it recurs yearly.",
+  "record": {
+   "name": "Techstars Startup Weekend Dayton",
+   "type": "hackathon",
+   "topics": [
+    "startups",
+    "entrepreneurship"
+   ],
+   "city": "Dayton",
+   "region": "Ohio",
+   "country": "United States",
+   "venue": "The Hub Powered by PNC, Dayton Arcade",
+   "cadence": "annual",
+   "month": "November",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-11-06",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "paid",
+   "audience": "aspiring founders, developers, designers, students",
+   "url": "https://launchdayton.com/events/techstarsdyt/",
+   "description": "A 54-hour weekend where participants pitch ideas, form teams and build a startup prototype with mentors from Dayton's business community.",
+   "source": "https://launchdayton.com/events/techstarsdyt/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "technologyfirst.wildapricot.org/oaic (Technology First, organiser): 'Save The Date Ohio AI Conference 2027 August 25, 2027 Sinclair Event Center | Dayton, Ohio'; 'Dayton AI Day becomes the Ohio AI Conference (OAIC)'. The 2026 Dayton AI Day ran 08/26/2026 at Sinclair Conference Center, 301 W 4th St (technologyfirst.wildapricot.org/event-6430053, 421 registrants, sold out).",
+  "record": {
+   "name": "Ohio AI Conference",
+   "type": "conference",
+   "topics": [
+    "ai",
+    "enterprise-it"
+   ],
+   "city": "Dayton",
+   "region": "Ohio",
+   "country": "United States",
+   "venue": "Sinclair Event Center",
+   "cadence": "annual",
+   "month": "August",
+   "next_date": "2027-08-25",
+   "next_date_end": "2027-08-25",
+   "last_date": "2026-08-26",
+   "status": "upcoming",
+   "attendance": "421",
+   "cost": "paid",
+   "audience": "technology leaders, practitioners, business leaders, educators",
+   "url": "https://technologyfirst.wildapricot.org/oaic",
+   "description": "Technology First's one-day conference on applying AI in organisations, formerly Dayton AI Day, with keynotes, breakouts and networking.",
+   "source": "https://technologyfirst.wildapricot.org/oaic"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "technologyfirst.wildapricot.org/event-6388152 (Technology First, organiser): '2026 Ohio Information Security Conference, When 03/11/2026, Sinclair Conference Center, 301 W Fourth St, Dayton', 437 registrants. The conference page announces the 2027 OISC with its call for presentations open Nov 11 - Dec 11, but no 2027 date yet.",
+  "record": {
+   "name": "Ohio Information Security Conference",
+   "type": "conference",
+   "topics": [
+    "cybersecurity",
+    "ai"
+   ],
+   "city": "Dayton",
+   "region": "Ohio",
+   "country": "United States",
+   "venue": "Sinclair Conference Center",
+   "cadence": "annual",
+   "month": "March",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-03-11",
+   "status": "recurring-tbd",
+   "attendance": "437",
+   "cost": "paid",
+   "audience": "cybersecurity professionals, IT leaders, students",
+   "url": "https://technologyfirst.wildapricot.org/Ohio-Information-Security-Conference",
+   "description": "Technology First's annual one-day Ohio cybersecurity conference with keynotes, breakout sessions, a demo zone and exhibitors.",
+   "source": "https://technologyfirst.wildapricot.org/event-6388152"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "technologyfirst.wildapricot.org/toit (Technology First, organiser): 'Taste of IT 26: The Connected Stack, Sinclair Conference Center | Nov 18, 2026', 'now in its 19th year'. Held yesterday; no 2027 date published.",
+  "record": {
+   "name": "Taste of IT",
+   "type": "conference",
+   "topics": [
+    "enterprise-it",
+    "ai",
+    "cybersecurity",
+    "infrastructure"
+   ],
+   "city": "Dayton",
+   "region": "Ohio",
+   "country": "United States",
+   "venue": "Sinclair Conference Center",
+   "cadence": "annual",
+   "month": "November",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-11-18",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "paid",
+   "audience": "CIOs, IT practitioners, industry analysts, service providers",
+   "url": "https://technologyfirst.wildapricot.org/toit",
+   "description": "Technology First's annual one-day IT conference for the Dayton region, covering AI, data, cybersecurity and infrastructure through keynotes and breakouts.",
+   "source": "https://technologyfirst.wildapricot.org/toit"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "wright.edu/events/hackathon (Wright State University, organiser): 'Hackathon, Friday, February 6, 2026, 3 pm - Saturday, February 7, 2026, 3 pm, Campus Dayton, Russ Engineering Center', 24 hours, 80+ students. Wright State also ran it in Feb 2023 and Feb 2025 (wright.edu, wsuguardian.com). No 2027 date published.",
+  "record": {
+   "name": "Wright State University Hackathon",
+   "type": "hackathon",
+   "topics": [
+    "students",
+    "software",
+    "hardware"
+   ],
+   "city": "Dayton",
+   "region": "Ohio",
+   "country": "United States",
+   "venue": "Russ Engineering Center, Wright State University",
+   "cadence": "annual",
+   "month": "February",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-02-06",
+   "status": "recurring-tbd",
+   "attendance": "80",
+   "cost": "free",
+   "audience": "Wright State computer science and engineering students and alumni",
+   "url": "https://www.wright.edu/events/hackathon",
+   "description": "A 24-hour in-person hackathon at Wright State where students build software and hardware projects with industry mentors, then demo them to judges.",
+   "source": "https://www.wright.edu/events/hackathon"
+  }
+ }
+]

@@ -1,0 +1,208 @@
+[
+  {
+    "action": "add",
+    "reason": "RETURNING row 'cackalackycon|2026'. Organiser site cackalackycon.org (title 'cackalackycon 2027 | Hacker Conference in Durham, NC'): 'MAY 14-16, 2027, DoubleTree by Hilton, Durham, NC RDU Airport at Research Triangle Park, 4810 Page Creek Lane'; tickets coming soon. Last edition May 15-17 2026.",
+    "record": {
+      "name": "cackalackycon",
+      "type": "conference",
+      "topics": [
+        "security",
+        "hacking",
+        "infosec"
+      ],
+      "city": "Durham",
+      "region": "North Carolina",
+      "country": "United States",
+      "venue": "DoubleTree by Hilton Durham (RDU Airport at Research Triangle Park)",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-05-14",
+      "next_date_end": "2027-05-16",
+      "last_date": "2026-05-15",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners, hackers, students (students attend free)",
+      "url": "https://cackalackycon.org/",
+      "description": "Community-funded non-profit hacker conference serving the Research Triangle since 2019, with talks, villages and events over three days.",
+      "source": "https://cackalackycon.org/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'MSPGeekCon 2026'. Organiser site mspgeekcon.com: JSON-LD startDate 2027-05-23 endDate 2027-05-25; text 'find your community at MSPGeekCon in Orlando, May 23-25, 2027'; describes itself as the annual, in-person, volunteer-run event. Venue not named on the page. Last edition May 17-19 2026.",
+    "record": {
+      "name": "MSPGeekCon",
+      "type": "conference",
+      "topics": [
+        "msp",
+        "it",
+        "cybersecurity",
+        "automation"
+      ],
+      "city": "Orlando",
+      "region": "Florida",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-05-23",
+      "next_date_end": "2027-05-25",
+      "last_date": "2026-05-17",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "managed service provider technicians, managers and owners",
+      "url": "https://mspgeekcon.com/",
+      "description": "Volunteer-run, education-focused in-person conference for the teams that run IT for small and mid-sized businesses, with operational and technical tracks and workshops.",
+      "source": "https://mspgeekcon.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'MAU Vegas'. Organiser site mauvegas.com (title 'MAU27 | Mobile App Growth Conference | Las Vegas | May 4-6'): JSON-LD startDate 2027-05-04 endDate 2027-05-06; text 'May 4-6, 2027 at Bellagio Las Vegas'. Last edition May 19-21 2026.",
+    "record": {
+      "name": "MAU Vegas",
+      "type": "conference",
+      "topics": [
+        "mobile",
+        "apps",
+        "growth",
+        "marketing"
+      ],
+      "city": "Las Vegas",
+      "region": "Nevada",
+      "country": "United States",
+      "venue": "Bellagio Las Vegas",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-05-04",
+      "next_date_end": "2027-05-06",
+      "last_date": "2026-05-19",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "mobile app founders, product, growth and engineering leaders",
+      "url": "https://mauvegas.com/",
+      "description": "Mobile app growth conference for the people building and scaling apps and games: sessions, meetups and networking on acquisition, retention, monetization and product.",
+      "source": "https://mauvegas.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'Ekoparty Security Conference 2026 MIAMI'. Organiser page ekoparty.org/miami: 'Latin America's Leading Hacking & Cybersecurity Conference Returns to Miami May 2027'; no days published. The 2026 edition ran May 21-22 2026 at Loews Miami Beach Hotel, 1601 Collins Ave, Miami Beach (same page). Month only, so next_date left empty.",
+    "record": {
+      "name": "Ekoparty Miami",
+      "type": "conference",
+      "topics": [
+        "security",
+        "hacking",
+        "infosec"
+      ],
+      "city": "Miami Beach",
+      "region": "Florida",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-21",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "hackers, security researchers, cybersecurity professionals",
+      "url": "https://ekoparty.org/miami/",
+      "description": "US edition of Ekoparty, Latin America's long-running hacking conference: talks, villages, CTFs, trainings and a live hacking event, bridging the LATAM and US security communities.",
+      "source": "https://ekoparty.org/miami/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'Code To Cloud Summit 2026'. Organiser page codetocloud.io/summit: 'Summit 2026 - Complete - May 23, 2026 - Calgary, Alberta' (JSON-LD startDate 2026-05-23); 'Coming 2027: Summit 2027 - Stay Tuned... Details on Summit 2027 are coming soon'; call for speakers opens February 2027. Announced without dates, so recurring-tbd.",
+    "record": {
+      "name": "Code To Cloud Summit",
+      "type": "summit",
+      "topics": [
+        "cloud",
+        "azure",
+        "devops",
+        "ai"
+      ],
+      "city": "Calgary",
+      "region": "Alberta",
+      "country": "Canada",
+      "venue": "",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-23",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "developers, engineers, architects, tech leaders, founders",
+      "url": "https://codetocloud.io/summit/",
+      "description": "One-day community summit in Calgary for builders of cloud-native and AI applications, with speakers, competitions and sponsors, run by Code To Cloud.",
+      "source": "https://codetocloud.io/summit/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'Cyber Security for Critical Assets Canada'. Organiser site canada.cs4ca.com: 'June 1st - 2nd, 2027 // Calgary, Canada... CS4CA Canada Returns to Calgary For Its 5th Edition on June 1st-2nd, 2027'. Venue page still says 'Venue details coming soon'. Last edition June 2-3 2026.",
+    "record": {
+      "name": "CS4CA Canada",
+      "type": "summit",
+      "topics": [
+        "cybersecurity",
+        "ot security",
+        "critical infrastructure"
+      ],
+      "city": "Calgary",
+      "region": "Alberta",
+      "country": "Canada",
+      "venue": "",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "2027-06-01",
+      "next_date_end": "2027-06-02",
+      "last_date": "2026-06-02",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "senior cybersecurity and OT security leaders in energy, utilities, aviation and manufacturing",
+      "url": "https://canada.cs4ca.com/",
+      "description": "Cyber Security for Critical Assets Canada: a two-day summit on securing critical infrastructure, IT/OT convergence and regulatory compliance for Canada's industrial sectors.",
+      "source": "https://canada.cs4ca.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'Quackhacks 3'. Organiser site quackhacks.org (React app; config in its JS bundle): QuackHacks 3 'May 30 - Jun 1, 2026, Eugene, OR'; QuackHacks 4 'Spring 2027', 'Spring 2027 · dates TBD', 'Where: Eugene, Oregon', 24 hours, 'Registration Open Now!'. A season, not a month, so next_date left empty. Not on MLH's 2027 season list. Last edition started May 30 2026.",
+    "record": {
+      "name": "QuackHacks",
+      "type": "hackathon",
+      "topics": [
+        "hackathon",
+        "software",
+        "students"
+      ],
+      "city": "Eugene",
+      "region": "Oregon",
+      "country": "United States",
+      "venue": "University of Oregon",
+      "cadence": "annual",
+      "month": "Spring",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-30",
+      "status": "recurring-tbd",
+      "attendance": "200",
+      "cost": "free",
+      "audience": "university students",
+      "url": "https://www.quackhacks.org/",
+      "description": "The University of Oregon's student-run 24-hour hackathon: teams build a project over a weekend with workshops, mentors and prizes; free to enter.",
+      "source": "https://www.quackhacks.org/"
+    }
+  }
+]

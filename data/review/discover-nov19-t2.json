@@ -1,0 +1,133 @@
+{
+  "pass": "nov19-t2",
+  "date": "2026-11-19",
+  "returning": [
+    {
+      "name": "Compton Tech Week 2026 Hackathon",
+      "verdict": "rejected",
+      "reason": "compton-techweek26.devpost.com: 'Invite only', 'Who can participate: Students registered for Compton Tech Week 2026. Ages 14+', 16 participants. It was a closed track of TouchUp Inc's six-day youth bootcamp (Douglas Dollarhide Community Center, Apr 20-25 2026, per TouchUp press release), not a publicly attendable event."
+    },
+    {
+      "name": "Hacktech",
+      "verdict": "added",
+      "reason": "hack.caltech.edu (organiser, Caltech): JSON-LD startDate 2027-02-26 endDate 2027-02-28 and page text 'February 26-28, 2027'; page says fully in-person on Caltech's campus. Last edition Apr 24-26 2026 (row, MLH)."
+    },
+    {
+      "name": "BroncoHacks 2026",
+      "verdict": "unresolved",
+      "reason": "broncohacks.org still titled 'BroncoHacks 2026'; its JS bundle carries only 'April 25 - April 26, 2026' (plus 2025 dates). Web search 'BroncoHacks 2027 Cal Poly Pomona' found only the 2026 GDG on Campus listing. No 2027 edition announced."
+    },
+    {
+      "name": "Build Guild Toronto",
+      "verdict": "rejected",
+      "reason": "build-guild-toronto.devpost.com: a one-off local event under Hack Club's Blueprint programme ('one of many local events running through Hack Club's Blueprint'), ages 13-19, 3 participants, no organiser site and no follow-up edition. Hack Club events already reach us through the hackclub feed."
+    },
+    {
+      "name": "HackMHS 8",
+      "verdict": "rejected",
+      "reason": "hackmhs-8.devpost.com: 'Invite only', 'AISD students only', 'High school students only', hosted by Martin High School Computer Science Club, 30 participants. Closed school event, not publicly attendable."
+    },
+    {
+      "name": "KeanUHackThis",
+      "verdict": "added",
+      "reason": "keanuhackthis.com (organiser; page title 'KeanUHackThis 2027'): hero in the site's JS bundle reads 'KeanUHackThis 2027' with date aria-label 'April 2, 2027'; FAQ says it is a 24-hour overnight in-person hackathon, free, open to undergrad/grad students 18+. End day not published, so next_date_end left blank."
+    },
+    {
+      "name": "Ramhacks GDG",
+      "verdict": "unresolved",
+      "reason": "ramhacks-gdg.devpost.com was a single GDG track (3 participants) of RamHacks 2026 at Farmingdale State College, Apr 26 2026. RamHacks itself ran 2025 and 2026 (GDG on Campus Farmingdale listings), but searched 'RamHacks Farmingdale State College hackathon' and found no 2027 edition or organiser site. GDG chapters reach us through the bevy dataset sweep."
+    },
+    {
+      "name": "Blue Ridge Ruby 2026",
+      "verdict": "added",
+      "reason": "blueridgeruby.com (organiser): title 'Blue Ridge Ruby: April 29 & 30, 2027 in Asheville, NC'; text 'Thursday, April 29th and Friday, April 30th, 2027'; venue YMI Cultural Center, 39 S Market St, Asheville."
+    },
+    {
+      "name": "LLMday Austin 2026 Q2",
+      "verdict": "exists",
+      "reason": "Series already in data/events.json via the feed: 'LLMday Austin 2026 Q4' (Austin, 2026-10-14, luma) and 'LLMday: In-Person Event on LLMs, AI & ML | AUSTIN 2026 Q4' (meetup techeventsftx, already a registry source). Each quarterly Austin edition is published on Luma/Meetup, which the feeds read. llmday.com/2026-austin-q2 actually reads 'May 12, 2026' (row's Apr 30 came from dev.events). No 2027 Austin edition announced yet."
+    },
+    {
+      "name": "Claude Builders Club - Hackathon 2026",
+      "verdict": "unresolved",
+      "reason": "cbc-hackathon-mizzou.devpost.com: campus club hackathon at University of Missouri, May 2-3 2026, 9 participants. Searched 'Claude Builders Club Mizzou hackathon': no Mizzou club site or 2027 edition found."
+    },
+    {
+      "name": "Global Scrum Gathering Vancouver 2026",
+      "verdict": "rejected",
+      "reason": "Global Scrum Gathering rotates host city each year (Munich May 4-7 2025, Vancouver May 3-6 2026 per gsgvan26.com JSON-LD). The Vancouver edition will not recur; Scrum Alliance's events page and search 'Global Scrum Gathering 2027 location dates' show no 2027 host announced, in Canada/US or elsewhere."
+    },
+    {
+      "name": "NDC Toronto",
+      "verdict": "unresolved",
+      "reason": "ndctoronto.com still serves the 2026 edition (JSON-LD 2026-05-05 to 05-08). Its 'Worldwide Events' block and ndcconferences.com list Porto Nov 2026, NDC AI Dec 2026, London Jan 2027, Security Feb 2027, Oslo May-Jun 2027 and no Toronto 2027. Search 'NDC Toronto 2027' found nothing."
+    },
+    {
+      "name": "AgentCon - Raleigh",
+      "verdict": "unresolved",
+      "reason": "agentcon.city/raleigh returns 404 (agentcon.city redirects to globalai.community). 2026 edition May 6 at NC Biotech Center, Durham (sessionize, attendee blog). Global AI's AgentCon 2027 events doc lists Mukono and Amsterdam confirmed and a provisional list without Raleigh; locations are chosen by Global AI HQ. Not announced, not ruled out."
+    },
+    {
+      "name": "Code w/ Claude San Francisco",
+      "verdict": "unresolved",
+      "reason": "claude.com/code-with-claude still shows the 2026 series (SF May 6, London May 19, Tokyo June 10; applications closed). Search 'Code with Claude 2027' found only an aggregator projection, no Anthropic announcement."
+    },
+    {
+      "name": "2026 Technology Summit",
+      "verdict": "unresolved",
+      "reason": "events.cbh.com/2026-Technology-Summit: Cherry Bekaert's inaugural client Technology Summit, May 6-7 2026, Atlanta (Grand Hyatt Buckhead). Search 'Cherry Bekaert Technology Summit 2027' found no 2027 edition."
+    },
+    {
+      "name": "Unlocked Seattle",
+      "verdict": "unresolved",
+      "reason": "unlockedconf.io still titled 'Unlocked 2026 | Valkey Conference | May 7, Seattle' (JSON-LD 2026-05-07). Search 'Unlocked Valkey conference 2027' found Momento's recap promising to 'continue to grow' Unlocked but no 2027 date or city."
+    },
+    {
+      "name": "LAGCC Spring 2026 Hackathon",
+      "verdict": "rejected",
+      "reason": "lagcc-spring-2026-hackathon.devpost.com: 'Invite only', 'Who can participate: LaGuardia Community College Students', 21 participants. Closed college event, not publicly attendable."
+    },
+    {
+      "name": "M365 Philly 2026",
+      "verdict": "unresolved",
+      "reason": "Annual community day (May 18 2024, Apr 26 2025, May 8 2026, Microsoft hub Malvern, per sessionize/eventbrite). Searched 'M365 Philly 2027' and the communitydays.org listing: no 2027 edition announced yet."
+    },
+    {
+      "name": "VARLAB 2026 Game Jam",
+      "verdict": "rejected",
+      "reason": "varlab-2026-game-jam.devpost.com: 'Invite only', 'Who can participate: VARLab People', 'a fun game jam for people from the lab to bond'; hack 'in the lab or at home'. Internal UCF lab social, not public."
+    },
+    {
+      "name": "HackDavis 2026 Hackathon",
+      "verdict": "unresolved",
+      "reason": "hackdavis.io still titled 'HackDavis 2026'; no date in HTML or its six JS bundles. Search 'HackDavis 2027' found only 2026 (May 9-10) and 2025 editions."
+    },
+    {
+      "name": "JEWEL CITY HACKS 4.0",
+      "verdict": "exists",
+      "reason": "Series already in data/events.json via feed: 'JEWEL CITY HACKS 6.0 - 3rd Party Event' (Glendale, 2026-11-14, meetup startmadadtla). Organiser (Hacker Fund, City of Glendale grant) publishes every edition on luma.com/jewelcityhacks, which is not in the registry; added to sources-nov19-t2.json."
+    },
+    {
+      "name": "KCD Toronto 2026",
+      "verdict": "added",
+      "reason": "CNCF's 'Announcing H1 2027 KCDs' (cncf.io/blog/2026/08/20) lists under May: 'TBD - KCD Toronto (Independent)'. Day not set, so recurring-tbd with month May. Last edition May 13 2026 (kcdtoronto.ca)."
+    },
+    {
+      "name": "UPSCALE CONF 2026",
+      "verdict": "added",
+      "reason": "upscaleconf.com (organiser, Magnific): 'Upcoming Upscale Conf New York, May 5-6, 2027'; FAQ 'The venue is The Refinery, 300 Kent Ave, Brooklyn, NY 11249'. The 2026 edition was in San Francisco; the next one moves to Brooklyn, so added as a Brooklyn record."
+    },
+    {
+      "name": "BSides Maine",
+      "verdict": "added",
+      "reason": "bsidesmaine.org (organiser): 'BSides Maine is coming June 5th 2027'; FAQ 'When: June 5th 2027, 8am to 5pm, Location: Hannaford Hall, Portland Maine'. Site meta title still reads 'coming May 30th 2026', which is the last edition (row's May 14-15 came from dev.events)."
+    },
+    {
+      "name": "Security BSides Knoxville 2026",
+      "verdict": "exists",
+      "reason": "Curated record 'BSides Knoxville' (Knoxville, url 10-sec.org/bsides-knoxville, last_date 2026-05-22). bsidesknoxville.com meta-refreshes to that page, which reads 'BSides Knoxville May 22nd, 2026'. Row's May 14-15 came from dev.events."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}

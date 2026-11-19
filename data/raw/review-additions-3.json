@@ -721,16 +721,16 @@
     "venue": "",
     "cadence": "monthly",
     "month": "Varies",
-    "next_date": "2026-11-18",
-    "next_date_end": "2026-11-18",
-    "last_date": "2026-10-21",
+    "next_date": "2026-12-16",
+    "next_date_end": "2026-12-16",
+    "last_date": "2026-11-18",
     "status": "upcoming",
     "attendance": "",
     "cost": "free",
     "audience": "founders and creatives who have started a business",
     "url": "https://www.startupsiouxfalls.com/events/founders-meetup",
     "description": "Third-Wednesday morning gathering at Startup Sioux Falls exclusively for people who have founded a business, running monthly through the year.",
-    "source": "https://www.startupsiouxfalls.com/events/founders-meetup/2026-11-18"
+    "source": "https://www.startupsiouxfalls.com/events/founders-meetup"
   },
   {
     "name": "BSides St. John's",

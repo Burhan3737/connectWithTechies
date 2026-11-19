@@ -1,12 +1,4 @@
-{ "date": "2026-11-17", "iteration": 1,
-  "scope": "2026-11-17 cycle: re-check nov17-c1/c2 (60 rows), cities nov17-d1/d2 (17 curated adds + CGU Hacks update), nov17-xaudit (BSides CMH), sources-nov17-feed/d1/d2",
-  "checked": "KubeCon NA (SLC->New Orleans), OWASP AppSec USA (SF->Atlanta), PASS (Seattle->Denver), SANS AI Summit (Arlington->Denver), Oracle AI World, Ocean Exchange re-dates; BSides CMH month fix (closes 2026-11-15-i1-W1); adds NABS, Boston Code Camp, HackUTA, Roots Weekend, Wyoming DGS, TEKCON, TigerHacks, CGU Hacks; confirmed Ignite, JSNation US, GEWKC; dry-run apply shows no KubeCon replay removal",
-  "findings": [
-    { "severity": "warning", "event": "Iowa Code Camp (Des Moines)",
-      "summary": "organiser page iowacodecamp.com reads 'November 7, 2026 Ankeny, IA'; record city is Des Moines with empty venue, and nov17-c2 confirmed it without noting the mismatch",
-      "recommendation": "match {name:'Iowa Code Camp', city:'Des Moines'}; set city 'Ankeny' (or, if kept as a metro listing, set venue 'Ankeny, IA')",
-      "repeat_of": null },
-    { "severity": "warning", "event": "PASS Data Community Summit West (Denver)",
-      "summary": "c2 correctly moved the record to the 2027 Denver edition, but the organiser page replaces the West/East pair with one 'PASS Summit North America'; the record keeps the obsolete 'West' name",
-      "recommendation": "match {name:'PASS Data Community Summit West', city:'Denver'}; set name 'PASS Data Community Summit North America'",
-      "repeat_of": null } ] }
+{ "date": "2026-11-19", "iteration": 1,
+  "scope": "nov19 cycle: re-check c1/c2 (60 dispatched rows), returning-event discovery t1-t3, city discovery d1-d2 (46 adds), xaudit PASS rename",
+  "checked": "audit-run 0/0; organiser pages re-read for all 4 city changes (SANS DFIR, SHPE, Scrum Day Madison, Upscale Conf), 8 large date moves (Pearl Hacks, TigerHacks, Toronto Game Expo, Triangle InfoSeCon, Venture Atlanta, VCF Swap Meet, AI Tinkerers SD, PASS NA), 2 random confirmed rows and 19 new adds; no aggregator-sourced dates; open finding 2026-11-17-i1-W2 fixed by the rename",
+  "findings": [] }

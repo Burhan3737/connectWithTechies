@@ -1,0 +1,133 @@
+{
+  "pass": "nov19-t1",
+  "date": "2026-11-19",
+  "returning": [
+    {
+      "name": "Hacks 2025",
+      "verdict": "exists",
+      "reason": "Already held as curated 'CGU Hacks' (Claremont, California; research.cgu.edu/hackathon/), last_date 2026-11-13, recurring-tbd. The Devpost 'Hacks 2025' is the same CGU hackathon."
+    },
+    {
+      "name": "LexTalk Tech Spring",
+      "verdict": "exists",
+      "reason": "Already in data/events.json as the Eventbrite feed record 'Lex Talk Tech- Fall 2026' (Lexington, 2026-11-05). lextalk.tech confirms Thursday Nov 5 2026 at The Cornerstone, 401 S Limestone; /past lists 2026-04-01, 2025-11-06, 2024-11-07. Runs about twice a year; no next date published yet."
+    },
+    {
+      "name": "Claude Builders AI Hackathon",
+      "verdict": "rejected",
+      "reason": "One-off: a single-day themed hackathon by the McGill Claude Builder Club (Montreal, Apr 4 2026) on Devpost. No earlier or later edition found, and no organiser page announces another."
+    },
+    {
+      "name": "youCode 2026",
+      "verdict": "added",
+      "reason": "ubcyoucode.com: April 4-5 2026, in person at UBC, run by UBC WiCS x WiDS@UBC. Annual each spring since 2024 (UBC CS news); organiser is recruiting youCode 2027 leads. No 2027 dates, so added as recurring-tbd. UBC students only."
+    },
+    {
+      "name": "DataHub x Nebius AI Hackathon",
+      "verdict": "rejected",
+      "reason": "One-off sponsor hackathon: DataHub, Nebius and Entrepreneurs First, one day in San Francisco (Luma 49k20jo8). Nothing suggests a second edition."
+    },
+    {
+      "name": "NYU DSC X Pulse Foundry AI NYC",
+      "verdict": "rejected",
+      "reason": "One-off sponsored datathon: the NYU Data Science Club with Pulse Foundry on a single HVAC-margin challenge, Apr 10-12 2026, New York. No series."
+    },
+    {
+      "name": "Ramblin' Hacks 2026",
+      "verdict": "added",
+      "reason": "hg.gatech.edu/node/689489: Apr 10-11 2026, Klaus Atrium, 'the College of Computing's annual hackathon' (2nd edition; 1st was spring 2025). No 2027 date, so added as recurring-tbd. Georgia Tech students only."
+    },
+    {
+      "name": "Draft Hackathon",
+      "verdict": "rejected",
+      "reason": "Devpost page draft-hackathon-29666 is an empty placeholder ('About the challenge / Get started / Hello'), Detroit 48226. No organiser, site or other listing found by web search. Not a real public event to list."
+    },
+    {
+      "name": "Global Neurohack",
+      "verdict": "unresolved",
+      "reason": "global-neurohack.github.io: Global NeuroHack 2026, Apr 10-12 2026 at Frontier Tower, San Francisco (NeuroTechX and Imperial Neurotech Society, student-led). No 2027 edition or city announced. NeuroTechX global hackathons have moved between cities and online formats, so the next venue cannot be assumed. Retry in early 2027."
+    },
+    {
+      "name": "Google Build with AI Hackathon ",
+      "verdict": "added",
+      "reason": "This was the hackathon inside DevFest WashU: devfestwashu.com redirects to the GDG on Campus WashU page, Apr 11-12 2026 at the Knight Center, St. Louis. Added as 'DevFest WashU', recurring-tbd, because no 2027 date is published."
+    },
+    {
+      "name": "JACHacks 2026",
+      "verdict": "added",
+      "reason": "jachacks.pages.dev: April 11-12 2026, 'John Abbott College's annual hackathon'. The campus is at 21275 Lakeshore, Sainte-Anne-de-Bellevue, QC (Devpost address), not Montreal, so the record uses that city. Recurring-tbd."
+    },
+    {
+      "name": "Palmetto Hacks Hack Day",
+      "verdict": "added",
+      "reason": "The April 11 2026 Hack Day was the 12-hour spring event of PalmettoHacks (Kappa Theta Pi, University of South Carolina). palmettohacks.com: 24-hour PalmettoHacks 2026 on Oct 10 2026, MLH event. Added as 'PalmettoHacks', recurring-tbd, last_date 2026-10-10."
+    },
+    {
+      "name": "vibeFORWARD",
+      "verdict": "rejected",
+      "reason": "One-off: a single one-day AI-trust hackathon in New York (Devpost only). No organiser site and no further edition found."
+    },
+    {
+      "name": "ConveyUX",
+      "verdict": "unresolved",
+      "reason": "conveyux.com now redirects to www.conveyux.com, which serves only 'ConveyUX Virtual': JSON-LD eventAttendanceMode Online, Aug 18 2026. The old pages (/hotel/, /travel-tips, /announcing-the-2026-program/) return 404. The 2026 Seattle edition was in person (Apr 13 2026, Grand Hyatt Seattle per blinkux.com). Dovetail and clocate say 'February 2027, Seattle' with no organiser source. No in-person 2027 is announced, so it is not added."
+    },
+    {
+      "name": "SO-CON 2026",
+      "verdict": "added",
+      "reason": "socon.specterops.io: SO-CON 2027, Apr 26-May 1 2027 (conference Apr 26-27, training Apr 28-May 1), Convene, 1201 Wilson Blvd, Arlington VA."
+    },
+    {
+      "name": "VulnCon 2026",
+      "verdict": "added",
+      "reason": "first.org/conference/vulncon27/: VulnCon 2027, March 30-April 2 2027, DoubleTree Resort by Hilton Paradise Valley, Scottsdale AZ."
+    },
+    {
+      "name": "OWASP SnowFROC 2026 - CFP",
+      "verdict": "added",
+      "reason": "Added as 'OWASP SnowFROC'. snowfroc.com still shows Apr 16-17 2026 at the Denver Cable Center and no 2027 date has been published. It is an annual spring conference (2024-2026), so added as recurring-tbd. The row name came from the CFP listing."
+    },
+    {
+      "name": "2026 Applied Machine Learning Conference",
+      "verdict": "added",
+      "reason": "appliedml.us/2027/: April 16-17 2027, Charlottesville VA (Violet Crown Cinema; UVA School of Data Science), in person."
+    },
+    {
+      "name": "Chicago Global Azure 2026",
+      "verdict": "added",
+      "reason": "sessionize.com/chicago-global-azure-2026: Apr 17 2026 at Microsoft Chicago, 200 E Randolph, free and in person. Held 2024, 2025 and 2026 by the Chicago Azure Users Group. Global Azure 2027 is Apr 8-10 2027 but has no Chicago date, so added as recurring-tbd. The group's Meetup is proposed in sources-nov19-t1.json."
+    },
+    {
+      "name": "Critical Ops: A DC National Security Hackathon",
+      "verdict": "unresolved",
+      "reason": "dcnatsechackathon.com: 'Critical Ops ... April 17-19, 2026, Washington, DC', organised by JHU, Georgetown and GW students. The site gives Washington DC, not the Devpost row's Arlington. Appears to be a first edition, and no 2027 edition is announced, so recurrence is unproven. Retry in early 2027."
+    },
+    {
+      "name": "Frontera Hacks",
+      "verdict": "added",
+      "reason": "Frontera Devs' event site: April 18-19 2026, 'the 3rd annual hackathon hosted by Frontera Devs' in the RGV. Edinburg TX per Devpost. Recurring-tbd."
+    },
+    {
+      "name": "Global Azure Bootcamp 2026 – Greater Toronto Area Edition",
+      "verdict": "added",
+      "reason": "sessionize.com/global-azure-bootcamp-2026-Toronto: Apr 18 2026 (description says Apr 19) at Microsoft Canada, Toronto, by the Metro Toronto Azure Community. That group is already in the feed registry, but its yearly edition is held as a curated recurring-tbd. The dev.events URL was the 2024 Meetup event (Apr 20 2024)."
+    },
+    {
+      "name": "UCI AWS Cloud Hacks - 2026",
+      "verdict": "added",
+      "reason": "The organiser's Meetup event 314100951: 2026 AWS CloudHacks, Apr 17-19 2026, UC Irvine (AWS Cloud Club at UCI and AI@UCI). The 2025 edition ran May 10-11. Added as 'AWS CloudHacks', recurring-tbd. The Meetup group is proposed in sources-nov19-t1.json."
+    },
+    {
+      "name": "Great Place To Work For All Summit 2026",
+      "verdict": "rejected",
+      "reason": "Not a tech event: an HR and workplace-culture leadership summit (forallsummit.com). Its next edition is May 18-20 2027 at the Atlanta Marriott Marquis, not Las Vegas, but it is out of scope for a tech directory."
+    },
+    {
+      "name": "Postgres Conference: 2026",
+      "verdict": "added",
+      "reason": "postgresconf.org/conferences/2027: Postgres Conference 2027, April 21-23 2027, San Jose Marriott, San Jose CA."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}

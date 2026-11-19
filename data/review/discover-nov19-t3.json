@@ -1,0 +1,133 @@
+{
+  "pass": "nov19-t3",
+  "date": "2026-11-19",
+  "returning": [
+    {
+      "name": "cackalackycon|2026",
+      "verdict": "added",
+      "reason": "cackalackycon.org: May 14-16 2027, DoubleTree by Hilton RDU Airport, Durham NC. Added."
+    },
+    {
+      "name": "MN Microsoft 365 User Group",
+      "verdict": "exists",
+      "reason": "mn365.org events API (tribe/events/v1): the monthly meetings are all 'Online Event'; the in-person events are the twice-yearly Workshop Days at Microsoft Technology Center, Edina (Spring May 15 2026 = this row; Fall Nov 13 2026). The Fall one is already in events.json as the Eventbrite feed record 'Minnesota Microsoft 365 User Group - Fall Workshop Day 2026' (Edina, 2026-11-13). Spring 2027 Workshop Day not yet published. The site's ?ical=1 feed returns an empty body, so not listed as a source."
+    },
+    {
+      "name": "VenusHacks 2026",
+      "verdict": "unresolved",
+      "reason": "venushacks.com still shows VenusHacks 2026 (May 16-17, UCI, fully in person); no 2027 edition announced. Search 'VenusHacks 2027 UCI' found nothing newer; not on MLH 2027 season page. Annual women-centric UCI hackathon, likely back in late May, but nothing published."
+    },
+    {
+      "name": "MSPGeekCon 2026",
+      "verdict": "added",
+      "reason": "mspgeekcon.com JSON-LD 2027-05-23 to 2027-05-25, Orlando. Added."
+    },
+    {
+      "name": "Cyber Security & Cloud Congress",
+      "verdict": "exists",
+      "reason": "Organiser site cybersecuritycloudexpo.com returns 502. Search: Cyber Security & Cloud Congress North America is the cyber track of TechEx North America (TechEx Events Ltd), 2027 edition at San Jose McEnery Convention Center June 16-17 per sanjose.org and helpnetsecurity. Held as 'TechEx North America' (San Jose, 2027-06-16, confstech feed) and the co-located curated 'AI & Big Data Expo North America' (San Jose, 2027-06-16). Row's San Francisco city not confirmed by any organiser page."
+    },
+    {
+      "name": "GraphQLConf",
+      "verdict": "unresolved",
+      "reason": "graphql.org/conf redirects to the 2026 page (May 19-20 2026, actually Fremont CA, moved from Meta's campus to DoubleTree Newark-Fremont; not Menlo Park). graphql.org/conf/2027 is 404; search 'GraphQLConf 2027 dates' found nothing. Annual Linux Foundation event, not yet announced."
+    },
+    {
+      "name": "MAU Vegas",
+      "verdict": "added",
+      "reason": "mauvegas.com JSON-LD 2027-05-04 to 2027-05-06, Bellagio Las Vegas. Added."
+    },
+    {
+      "name": "VueconfUS",
+      "verdict": "unresolved",
+      "reason": "vueconf.us still advertises May 19-21 2026, Georgia Tech, Atlanta. Search 'VueConf US 2027' found no announcement. Annual (Tampa 2025, Atlanta 2026) but 2027 city and dates unpublished."
+    },
+    {
+      "name": "ProductCon",
+      "verdict": "exists",
+      "reason": "productschool.com/productcon: 'Onsite - ProductCon New York - May 18, 2027 - Metropolitan Pavilion'. Already in events.json as the Eventbrite feed record '#ProductCon New York: The AI Conference for Product Leaders' (New York, 2027-05-18), matching the organiser page."
+    },
+    {
+      "name": "Ekoparty Miami 2026 - DevSecOps Space",
+      "verdict": "rejected",
+      "reason": "Not a separate event: DevSecOps Space is a village inside Ekoparty. ekodevsecops.space now advertises only its presence at Ekoparty Buenos Aires (Oct 7-9 2026, Argentina). The Miami appearance is covered by the Ekoparty Miami add in this pass."
+    },
+    {
+      "name": "Ekoparty Security Conference 2026 MIAMI",
+      "verdict": "added",
+      "reason": "ekoparty.org/miami: 'Returns to Miami May 2027', no days; 2026 at Loews Miami Beach. Added as recurring-tbd, city Miami Beach (where the venue is)."
+    },
+    {
+      "name": "Code To Cloud Summit 2026",
+      "verdict": "added",
+      "reason": "codetocloud.io/summit: 2026 complete (May 23, Calgary); 'Summit 2027 - Stay Tuned', details coming soon. Added recurring-tbd."
+    },
+    {
+      "name": "Sandcastle",
+      "verdict": "rejected",
+      "reason": "luma.com/zru66iwq ('sandcastle by SANDBOX', May 24 2026, Toronto): a 30-person, handpicked, invite-only sprint run as a Toronto Tech Week 2026 side event. One-off, no series; organiser domain sandbox.to does not respond."
+    },
+    {
+      "name": "Agentic Summit",
+      "verdict": "unresolved",
+      "reason": "agenticsummit.org resolves in DNS but refuses connections (curl status 0, with and without www). Sessionize: one-day single-track conference, Toronto, 28 May 2026, finished. Searches for a 2027 edition found only unrelated AI Accelerator Institute 'Agentic AI Summit' listings (Nov 2026). No organiser page to confirm a return."
+    },
+    {
+      "name": "CommunityDays KC 2026",
+      "verdict": "unresolved",
+      "reason": "communitydays.info still shows 'CommunityDays KC 2026! May 28th & 29th at Lifted Logic, Overland Park, KS' (KCDC-run; tickets on ti.to). Described as a new event in 2026; search 'CommunityDays KC 2027' found nothing. Note the 2026 venue was Overland Park KS, not Kansas City MO."
+    },
+    {
+      "name": "Hardwear.io USA",
+      "verdict": "unresolved",
+      "reason": "hardwear.io/usa-2026: 2026 ran May 26-30 at Santa Clara Marriott (not Anaheim); 'Thank you for attending'. hardwear.io/usa-2027 is 404; homepage advertises only Hardwear.io NL 2026. Search found no USA 2027 announcement."
+    },
+    {
+      "name": "SWECCathon 2026",
+      "verdict": "unresolved",
+      "reason": "Devpost sweccathon-2026: May 29-Jun 1 2026, UW Seattle, open to UW undergrads only. Annual since 2024 (May 2024, Apr 2025, May 2026) but no 2027 edition announced on SWECC's Notion/Luma; search found nothing. Restricted to UW students."
+    },
+    {
+      "name": "AI Accelerator Lab: Build. Test. Deploy. Today.",
+      "verdict": "unresolved",
+      "reason": "sfwit.org (South Florida Women in Tech) lists no events; /events is 404. Only source is Sessionize 'ai-accelerator-lab-2026' (30 May 2026, Broward College, Fort Lauderdale). The group says it runs a 'yearly symposium' and hybrid workshops; no 2027 edition found."
+    },
+    {
+      "name": "Atlanta Cloud+AI Conference 2026",
+      "verdict": "unresolved",
+      "reason": "atlcloudconf.com still shows 'May 30th, 2026'; search found no 2027 edition. Search results place the 2026 event at FCS Innovation Academy, Alpharetta GA, not Atlanta proper."
+    },
+    {
+      "name": "Quackhacks 3",
+      "verdict": "added",
+      "reason": "quackhacks.org bundle: QuackHacks 4 'Spring 2027 · dates TBD', Eugene OR, registration open. Season only, so added recurring-tbd with last_date 2026-05-30."
+    },
+    {
+      "name": "AgentCon - Austin",
+      "verdict": "rejected",
+      "reason": "agentcon.city/Austin is 404 and the Global AI chapter event page now 404s (search snippet showed it marked cancelled). AgentCon is now 'Global AI Conference 2027' (globalaiconference.city); its 2027 tour lists Copenhagen, Houston, New York, Silicon Valley, Sofia, Toronto, Berlin, Bengaluru, Singapore, Melbourne - no Austin."
+    },
+    {
+      "name": "fwd:cloudsec North America 2026",
+      "verdict": "unresolved",
+      "reason": "fwdcloudsec.org still shows North America June 1-2 2026, Meydenbauer Center, Bellevue WA; no 2027 NA dates. Venue moves yearly (Arlington 2024, Denver 2025, Bellevue 2026). Search 'fwd:cloudsec North America 2027' found nothing."
+    },
+    {
+      "name": "Cyber Security for Critical Assets Canada",
+      "verdict": "added",
+      "reason": "canada.cs4ca.com: 5th edition June 1-2 2027, Calgary. Added as CS4CA Canada."
+    },
+    {
+      "name": "SymfonyDay",
+      "verdict": "unresolved",
+      "reason": "live.symfony.com/2026-montreal now reads 'Did you miss SymfonyDay Montreal 2026?' (June 4 2026, L'Espace Quartier Latin UQAM). The live.symfony.com JSON-LD upcoming list (Warsaw Nov 2026, Online Jan 2027, Paris Mar 2027, Germany May 2027) has no Montreal. SymfonyDay rotates North American cities (Chicago 2025, Montreal 2026)."
+    },
+    {
+      "name": "SymfonyDay Montreal 2026",
+      "verdict": "unresolved",
+      "reason": "Same event as the 'SymfonyDay' row. live.symfony.com lists no 2027 Montreal edition; the 2026 page asks 'Did you miss SymfonyDay Montreal 2026?'. Search found no 2027 Montreal date."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}

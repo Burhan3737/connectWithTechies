@@ -664,9 +664,9 @@
           "summary": "organiser page iowacodecamp.com reads 'November 7, 2026 Ankeny, IA'; record city is Des Moines with empty venue, and nov17-c2 confirmed it without noting the mismatch",
           "recommendation": "match {name:'Iowa Code Camp', city:'Des Moines'}; set city 'Ankeny' (or, if kept as a metro listing, set venue 'Ankeny, IA')",
           "repeat_of": null,
-          "status": "open",
-          "resolved_on": null,
-          "resolution": null
+          "status": "wont-fix",
+          "resolved_on": "2026-11-19",
+          "resolution": "No change needed: data/raw/us-central.json already holds city 'Ankeny'. The build files Ankeny under the Des Moines metro on purpose (scripts/lib/places.mjs), so the published record reads Des Moines. A venue of 'Ankeny, IA' would not be a real venue."
         },
         {
           "id": "2026-11-17-i1-W2",
@@ -675,11 +675,21 @@
           "summary": "c2 correctly moved the record to the 2027 Denver edition, but the organiser page replaces the West/East pair with one 'PASS Summit North America'; the record keeps the obsolete 'West' name",
           "recommendation": "match {name:'PASS Data Community Summit West', city:'Denver'}; set name 'PASS Data Community Summit North America'",
           "repeat_of": null,
-          "status": "open",
-          "resolved_on": null,
-          "resolution": null
+          "status": "fixed",
+          "resolved_on": "2026-11-19",
+          "resolution": "Renamed to 'PASS Data Community Summit North America' (Denver, 2027-10-13..15) by data/review/nov19-xaudit-fixes.json; audit 2026-11-19-i1 confirmed it in events.json. apply-patches.mjs now follows renames on replay so the rename and the earlier nov17-c2 patch do not read MISS."
         }
       ]
+    },
+    {
+      "id": "2026-11-19-i1",
+      "date": "2026-11-19",
+      "iteration": 1,
+      "scope": "nov19 cycle: re-check c1/c2 (60 dispatched rows), returning-event discovery t1-t3, city discovery d1-d2 (46 adds), xaudit PASS rename",
+      "checked": "audit-run 0/0; organiser pages re-read for all 4 city changes (SANS DFIR, SHPE, Scrum Day Madison, Upscale Conf), 8 large date moves (Pearl Hacks, TigerHacks, Toronto Game Expo, Triangle InfoSeCon, Venture Atlanta, VCF Swap Meet, AI Tinkerers SD, PASS NA), 2 random confirmed rows and 19 new adds; no aggregator-sourced dates; open finding 2026-11-17-i1-W2 fixed by the rename",
+      "blocking": 0,
+      "warnings": 0,
+      "findings": []
     }
   ]
 }

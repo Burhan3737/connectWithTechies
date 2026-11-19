@@ -21,9 +21,10 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 | 2026-11-05-i2 | re-audit | 0 | 1 | 0 | 1 | nov05 cycle re-audit: nov05-audit-fixes.json (i1-B1/W1/W2) and the retired-organiser name-match repair (retiredOrganisers, feed re-run from cache); CHANGES.md 70 removals |
 | 2026-11-12-i1 | 7 | 2 | 2 | 3 | 1 | nov12 cycle: re-check t1-t3 (60 rows, 6 corrections), discovery r1/r2/d1/d2 (31 adds), sources-nov12-* follows/retirements |
 | 2026-11-15-i1 | 3 | 0 | 1 | 1 | 0 | 2026-11-15 cycle: re-check nov15-c1/c2/c3 (60 rows), returning nov15-r1/r2, cities nov15-d1/d2 (12 curated adds), sources-nov15-d1/feed |
-| 2026-11-17-i1 | 2 | 0 | 2 | 0 | 2 | 2026-11-17 cycle: re-check nov17-c1/c2 (60 rows), cities nov17-d1/d2 (17 curated adds + CGU Hacks update), nov17-xaudit (BSides CMH), sources-nov17-feed/d1/d2 |
+| 2026-11-17-i1 | 2 | 0 | 2 | 1 | 0 | 2026-11-17 cycle: re-check nov17-c1/c2 (60 rows), cities nov17-d1/d2 (17 curated adds + CGU Hacks update), nov17-xaudit (BSides CMH), sources-nov17-feed/d1/d2 |
+| 2026-11-19-i1 | 2 | 0 | 0 | 0 | 0 | nov19 cycle: re-check c1/c2 (60 dispatched rows), returning-event discovery t1-t3, city discovery d1-d2 (46 adds), xaudit PASS rename |
 
-**10 audit cycle(s); 6 found something blocking on its first audit.** 47 findings in total, 37 fixed, 9 open or deferred, 9 repeat(s) of an earlier finding.
+**11 audit cycle(s); 6 found something blocking on its first audit.** 47 findings in total, 38 fixed, 7 open or deferred, 9 repeat(s) of an earlier finding.
 
 ## Open
 
@@ -48,12 +49,16 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 - **2026-11-12-i1-W2** · warning · deferred · **audit-run.mjs / build-data.mjs (tooling)** — Mechanical audit reported 0/0 despite 4 updates not landing and 1 curated add merged away; build-data merges different-named curated records by shared page silently.
   - recommended: audit-run: verify each this-cycle update op's set fields and each add's presence in events.json. build-data: warn when two curated records of different names merge by page.
   - note: Tooling change for the user to approve: audit-run.mjs to verify every patch value reached events.json and every add survived; build-data.mjs to warn when it merges differently-named curated records by shared page.
-- **2026-11-17-i1-W1** · warning · **Iowa Code Camp (Des Moines)** — organiser page iowacodecamp.com reads 'November 7, 2026 Ankeny, IA'; record city is Des Moines with empty venue, and nov17-c2 confirmed it without noting the mismatch
-  - recommended: match {name:'Iowa Code Camp', city:'Des Moines'}; set city 'Ankeny' (or, if kept as a metro listing, set venue 'Ankeny, IA')
-- **2026-11-17-i1-W2** · warning · **PASS Data Community Summit West (Denver)** — c2 correctly moved the record to the 2027 Denver edition, but the organiser page replaces the West/East pair with one 'PASS Summit North America'; the record keeps the obsolete 'West' name
-  - recommended: match {name:'PASS Data Community Summit West', city:'Denver'}; set name 'PASS Data Community Summit North America'
 
 ## History
+
+### 2026-11-19-i1 — 0 blocking, 0 warning(s)
+
+Scope: nov19 cycle: re-check c1/c2 (60 dispatched rows), returning-event discovery t1-t3, city discovery d1-d2 (46 adds), xaudit PASS rename
+
+Clean.
+
+Checked and sound: audit-run 0/0; organiser pages re-read for all 4 city changes (SANS DFIR, SHPE, Scrum Day Madison, Upscale Conf), 8 large date moves (Pearl Hacks, TigerHacks, Toronto Game Expo, Triangle InfoSeCon, Venture Atlanta, VCF Swap Meet, AI Tinkerers SD, PASS NA), 2 random confirmed rows and 19 new adds; no aggregator-sourced dates; open finding 2026-11-17-i1-W2 fixed by the rename
 
 ### 2026-11-17-i1 — 0 blocking, 2 warning(s)
 
@@ -61,8 +66,8 @@ Scope: 2026-11-17 cycle: re-check nov17-c1/c2 (60 rows), cities nov17-d1/d2 (17 
 
 | id | severity | event | finding | status | resolution |
 |---|---|---|---|---|---|
-| W1 | warning | Iowa Code Camp (Des Moines) | organiser page iowacodecamp.com reads 'November 7, 2026 Ankeny, IA'; record city is Des Moines with empty venue, and nov17-c2 confirmed it without noting the mismatch | open |  |
-| W2 | warning | PASS Data Community Summit West (Denver) | c2 correctly moved the record to the 2027 Denver edition, but the organiser page replaces the West/East pair with one 'PASS Summit North America'; the record keeps the obsolete 'West' name | open |  |
+| W1 | warning | Iowa Code Camp (Des Moines) | organiser page iowacodecamp.com reads 'November 7, 2026 Ankeny, IA'; record city is Des Moines with empty venue, and nov17-c2 confirmed it without noting the mismatch | wont-fix (2026-11-19) | No change needed: data/raw/us-central.json already holds city 'Ankeny'. The build files Ankeny under the Des Moines metro on purpose (scripts/lib/places.mjs), so the published record reads Des Moines. A venue of 'Ankeny, IA' would not be a real venue. |
+| W2 | warning | PASS Data Community Summit West (Denver) | c2 correctly moved the record to the 2027 Denver edition, but the organiser page replaces the West/East pair with one 'PASS Summit North America'; the record keeps the obsolete 'West' name | fixed (2026-11-19) | Renamed to 'PASS Data Community Summit North America' (Denver, 2027-10-13..15) by data/review/nov19-xaudit-fixes.json; audit 2026-11-19-i1 confirmed it in events.json. apply-patches.mjs now follows renames on replay so the rename and the earlier nov17-c2 patch do not read MISS. |
 
 Checked and sound: KubeCon NA (SLC->New Orleans), OWASP AppSec USA (SF->Atlanta), PASS (Seattle->Denver), SANS AI Summit (Arlington->Denver), Oracle AI World, Ocean Exchange re-dates; BSides CMH month fix (closes 2026-11-15-i1-W1); adds NABS, Boston Code Camp, HackUTA, Roots Weekend, Wyoming DGS, TEKCON, TigerHacks, CGU Hacks; confirmed Ignite, JSNation US, GEWKC; dry-run apply shows no KubeCon replay removal
 

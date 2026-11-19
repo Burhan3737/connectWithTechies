@@ -1,0 +1,128 @@
+{
+ "pass": "nov19-d2",
+ "date": "2026-11-19",
+ "returning": [],
+ "reported": [],
+ "cities": [
+  {
+   "city": "Dearborn",
+   "region": "Michigan",
+   "queries": [
+    "Dearborn Michigan tech conference 2027",
+    "we.CONECT Tech.AD USA 2026 Dearborn",
+    "Car.HMI USA 2026 Dearborn we.CONECT",
+    "\"Car.HMI USA 2026\" December The Henry Dearborn",
+    "UM-Dearborn CTF OR \"game jam\" OR \"pitch competition\" 2026",
+    "Dearborn Michigan summit OR \"startup week\" OR meetup tech 2026",
+    "\"Future Mobility USA\" 2027 Automotive World Dearborn The Henry"
+   ],
+   "found": [
+    { "name": "Tech.AD USA", "url": "https://ti.to/weconect/techad-usa", "verdict": "added",
+      "reason": "conference. we.CONECT's Tito page: Dec 8-9, 2025, The Henry, Fairlane Plaza, Dearborn. The 2026 edition exists (organiser site redirects to an events/...-2026 page) but that page is a React shell with no dates, and aggregators disagree on the days, so added as recurring-tbd, last_date 2025-12-08." },
+    { "name": "Car.HMI USA", "url": "https://ti.to/weconect/car-hmi-usa", "verdict": "added",
+      "reason": "conference, co-located with Tech.AD USA. Organiser Tito page: Dec 8-9, 2025, The Henry, Dearborn. 2026 days unreadable on the organiser site (aggregators say Nov 30-Dec 3 or Dec 1-2), so recurring-tbd." },
+    { "name": "Future Mobility USA", "url": "https://www.automotiveworld.com/events/future-mobility-usa-26", "verdict": "unresolved",
+      "reason": "Automotive World conference reported at The Henry, Dearborn, Feb 3-5, 2026. The organiser page returns a Cloudflare 403 to curl and a 404 to WebFetch, and fmu.automotiveworld.com does not connect. No 2027 edition found. Not added without reading the organiser's page." },
+    { "name": "Night of Innovation (Dearborn pitch competition)", "url": "https://dearborn.gov/finalists-announced-2026-dearborn-pitch-competition-night-innovation", "verdict": "rejected",
+      "reason": "City of Dearborn small-business pitch night (May 12, 2026, Ford Community & Performing Arts Center). Its 2026 finalists were a balloon-decor shop, a scrubs brand and a print shop. It is not a tech event." },
+    { "name": "Smart Manufacturing for Automotive / CIO Community Executive Summit / Electric & Hybrid Vehicle Technology Expo", "url": "https://www.luminik.io/events/cio-community-executive-summit-detroit-dearborn/", "verdict": "rejected",
+      "reason": "Only on aggregators (luminik, clocate) with 2027 dates. No organiser page was found to confirm the dates or a Dearborn venue, so nothing was added." }
+   ]
+  },
+  {
+   "city": "Durango",
+   "region": "Colorado",
+   "queries": [
+    "Durango Colorado hackathon OR tech conference 2027",
+    "\"Four Corners AI Conference\" 2026 Fort Lewis College third annual",
+    "Durango \"Startup Weekend\" 2026",
+    "Durango Colorado tech meetup monthly developers OR \"coffee and code\" OR \"AI meetup\" 2026"
+   ],
+   "found": [
+    { "name": "Four Corners AI Conference", "url": "https://ai.fortlewis.edu/four-corners-ai-conference", "verdict": "added",
+      "reason": "conference. FLC AI Institute page: 2nd annual, December 16, 2025, Fort Lewis College campus, Durango. No 2026 edition announced, so recurring-tbd." },
+    { "name": "AI Tinkerers Durango", "url": "https://durango.aitinkerers.org/", "verdict": "added",
+      "reason": "meetup-series. The chapter page's JSON-LD lists seven in-person 2026 meetups at the FLC Innovation Center (latest Oct 28, 2026). AI Tinkerers runs its own platform, which no feed reads." },
+    { "name": "Durango WordPress Meetup", "url": "https://www.meetup.com/durango-wordpress-meetup/", "verdict": "added",
+      "reason": "Monthly in-person Meetup group (next Nov 25, 2026, Taco Libre). It publishes on Meetup, so it went in sources-nov19-d2.json, not as an add." },
+    { "name": "Techstars Startup Weekend: AI Edition (Durango)", "url": "https://www.fortlewis.edu/fort-lewis-college-news/article/techstars-startup-weekend-ai-edition-comes-to-durango-for-the-first-time", "verdict": "rejected",
+      "reason": "Ran once, Oct 9-10, 2025, at the FLC Center for Innovation. No 2026 or later edition found, so there is no recurring event to add." },
+    { "name": "West Slope Startup Week", "url": "https://westslopestartupweek.com/", "verdict": "exists",
+      "reason": "Already a curated record in Durango." }
+   ]
+  },
+  {
+   "city": "East Lansing",
+   "region": "Michigan",
+   "queries": [
+    "East Lansing Michigan State tech conference 2027",
+    "East Lansing hackathon OR CTF OR \"game jam\" OR \"demo day\" Michigan State 2027",
+    "\"Women in Tech Summit\" MSU Research Foundation 2026 OR 2027 East Lansing",
+    "MSU Research Foundation \"Data Science + AI Summit\" 2026 October Graduate East Lansing date",
+    "Michigan State University game jam OR \"Global Game Jam\" East Lansing 2027",
+    "\"Demo Camp Lansing\" 2026"
+   ],
+   "found": [
+    { "name": "Data Science + AI Summit", "url": "https://msufoundation.org/data-science-summit/", "verdict": "added",
+      "reason": "summit. MSU Research Foundation page: 'Data Science + AI Summit October 20, 2027'. The 2026 edition was held at the Graduate East Lansing Hotel (foundation article datelined Oct. 21, 2026). The 2027 venue is not published." },
+    { "name": "Women of Innovation Summit", "url": "https://msufoundation.org/women-of-innovation/", "verdict": "rejected",
+      "reason": "Successor to the foundation's Women in Tech Summit. The 2026 edition (Mar 10, Graduate by Hilton East Lansing) covers women's leadership across research and industry, not tech specifically. 2027 is given only as 'Spring 2027'." },
+    { "name": "Demo Camp Lansing", "url": "https://www.eventbrite.com/e/demo-camp-lansing-2025-tickets-1740630686239", "verdict": "unresolved",
+      "reason": "A tech demo night at MSUFCU HQ, East Lansing, on Dec 9, 2025. The only source is an Eventbrite listing; no organiser site and no 2026 edition were found." },
+    { "name": "TEDxMSU", "url": "https://www.ted.com/tedx/events/70593", "verdict": "rejected",
+      "reason": "A general-interest TEDx event (Mar 21, 2027), not a tech event." },
+    { "name": "SpartaHack", "url": "https://www.spartahack.com/", "verdict": "exists",
+      "reason": "Already a curated record in East Lansing (2027-02-06)." }
+   ]
+  },
+  {
+   "city": "Evanston",
+   "region": "Illinois",
+   "queries": [
+    "Evanston Northwestern tech conference 2027",
+    "Northwestern Evanston \"Quantum Week\" 2027 INQUIRE",
+    "Evanston startup demo day OR pitch OR \"game jam\" OR CTF Northwestern 2027",
+    "\"Kellogg Tech Conference\" 2026 OR 2027 Evanston",
+    "Northwestern University CTF OR \"game jam\" OR \"Tech Week\" Evanston 2026",
+    "\"Northwestern Quantum Week 2026\" April 20"
+   ],
+   "found": [
+    { "name": "Northwestern Quantum Week", "url": "https://quantum.northwestern.edu/events/northwestern-quantum-week/", "verdict": "added",
+      "reason": "conference. INQUIRE page and PlanIt Purple both read March 15-19, 2027, Evanston (older search snippets said April 12-16; the live pages now say March). The 2026 edition was April 20-24, 2026." },
+    { "name": "VentureCat", "url": "https://www.venturecat.northwestern.edu/", "verdict": "added",
+      "reason": "demo-day. Schedule page: 'Thursday, May 27, 2027: VentureCat Competition and Public Showcase'. The 2026 showcase was May 27, 2026, Kellogg Global Hub." },
+    { "name": "Kellogg Tech Conference", "url": "https://kellogg.campusgroups.com/ktech/kellogg-tech-conference/", "verdict": "unresolved",
+      "reason": "Student-run MBA tech conference at Kellogg. The organiser pages (campusgroups, squarespace) still show the Feb 12, 2025 edition. The Feb 21, 2026 date appears only on an aggregator, and a Kellogg blog confirms a 2026 edition without giving its date. No 2027 date. Not added without an organiser-confirmed last date." },
+    { "name": "Winter Buffett Symposium on Space", "url": "https://www.luminik.io/events/winter-buffett-symposium-on-space/", "verdict": "rejected",
+      "reason": "A Buffett Institute global-affairs symposium. It is a policy event, not a tech event, and it is already in the feed via the geopolitics Meetup group." },
+    { "name": "WildHacks", "url": "https://www.wildhacks.net", "verdict": "exists",
+      "reason": "Already a curated record in Evanston." }
+   ]
+  },
+  {
+   "city": "Fairfield",
+   "region": "Connecticut",
+   "queries": [
+    "Fairfield Connecticut hackathon 2027",
+    "Sacred Heart University Fairfield hackathon OR \"cyber\" competition OR \"game jam\" 2026",
+    "\"Fairfield StartUp Showcase\" 2026 April",
+    "Fairfield CT tech meetup OR summit OR \"demo day\" OR \"startup week\" 2026 2027 Fairfield County",
+    "\"Lantern Point Labs\" Fairfield accelerator"
+   ],
+   "found": [
+    { "name": "StagHack", "url": "https://www.fairfield.edu/staghack/", "verdict": "added",
+      "reason": "hackathon. Fairfield University page: StagHack February 28, 2026, on campus. Earlier editions ran Feb 2025 and Oct 2021. No 2027 date, so recurring-tbd." },
+    { "name": "Fairfield StartUp Showcase", "url": "https://www.fairfield.edu/startup/", "verdict": "added",
+      "reason": "demo-day. Organiser page: Thursday, April 15, 2027, Regina A. Quick Center for the Arts. The 2026 edition was April 23, 2026." },
+    { "name": "Lantern Point Labs Demo Day", "url": "https://luma.com/k84m8f0b", "verdict": "added",
+      "reason": "demo-day. Host's Luma pages: Jun 26, 2025 and Jun 2, 2026, both at Penfield Pavilion, Fairfield Beach. No 2027 date, so recurring-tbd." },
+    { "name": "CT Tech Week", "url": "https://luma.com/16a4l4mb", "verdict": "exists",
+      "reason": "Already a curated record ('CT Tech Week', Multiple cities, 2027-06-07). It is statewide, not a Fairfield event." },
+    { "name": "Fairfield University Vibe Coding Hackathon", "url": "https://www.fairfield.edu/news/2026/april/ai-apps-vibe-coding-hackathon.html", "verdict": "rejected",
+      "reason": "A first-time event (April 2026) for Meditz program students, reported only in a news story. It is not public and not announced as recurring." },
+    { "name": "BSidesCT", "url": "https://www.bsidesct.org/", "verdict": "exists",
+      "reason": "Already a curated record in Fairfield (conference)." }
+   ]
+  }
+ ]
+}

@@ -218,10 +218,10 @@
     "country": "United States",
     "venue": "AT&T Hotel & Conference Center",
     "cadence": "annual",
-    "month": "November",
-    "next_date": "2026-11-12",
-    "next_date_end": "2026-11-13",
-    "last_date": "",
+    "month": "October",
+    "next_date": "2027-10-26",
+    "next_date_end": "2027-10-27",
+    "last_date": "2026-11-12",
     "status": "upcoming",
     "attendance": "",
     "cost": "paid",
@@ -2828,10 +2828,10 @@
       "scrum",
       "product-management"
     ],
-    "city": "Madison",
+    "city": "Middleton",
     "region": "Wisconsin",
     "country": "United States",
-    "venue": "",
+    "venue": "Madison Marriott West, 1313 John Q Hammons Drive",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-15",
@@ -2841,9 +2841,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "scrum masters, agile coaches, product owners",
-    "url": "https://dev.events/NA/US/WI/tech",
+    "url": "https://www.scrumday.org/",
     "description": "A one-day agile and Scrum practitioner conference in Madison with talks and workshops for scrum masters, coaches and product owners.",
-    "source": "https://dev.events/NA/US/WI/tech"
+    "source": "https://www.scrumday.org/"
   },
   {
     "name": "Tech Fuse Des Moines",
@@ -2856,7 +2856,7 @@
     "city": "Des Moines",
     "region": "Iowa",
     "country": "United States",
-    "venue": "",
+    "venue": "Community Choice Convention Center, 833 5th Ave",
     "cadence": "annual",
     "month": "October",
     "next_date": "2026-10-15",
@@ -2866,9 +2866,9 @@
     "attendance": "",
     "cost": "paid",
     "audience": "technology professionals, business leaders",
-    "url": "https://dev.events/NA/US/IA/tech",
+    "url": "https://techfusedsm.com/",
     "description": "A rebranded, interactive Iowa conference focused on fusing business value with AI, spanning two days of sessions for technology and business practitioners.",
-    "source": "https://dev.events/NA/US/IA/tech"
+    "source": "https://techfusedsm.com/"
   },
   {
     "name": "DevOps Midwest",

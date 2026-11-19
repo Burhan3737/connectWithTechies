@@ -185,6 +185,32 @@
     "now a curated record": 1
    },
    "relisted": 16
+  },
+  {
+   "base": "a6360aa",
+   "built_on": "2026-11-18",
+   "before": 17169,
+   "after": 17631,
+   "added": {
+    "total": 505,
+    "curated": 47,
+    "feed": 458
+   },
+   "removed": {
+    "total": 43,
+    "curated": 1,
+    "feed": 42
+   },
+   "redated": {
+    "total": 71,
+    "curated": 1,
+    "feed": 70
+   },
+   "removed_by_reason": {
+    "no longer listed": 42,
+    "curated record removed": 1
+   },
+   "relisted": 15
   }
  ]
 }

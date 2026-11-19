@@ -1,0 +1,12 @@
+[
+ {
+  "url": "https://www.meetup.com/gem-city-tech/",
+  "name": "GemCityTECH (Dayton)",
+  "reason": "Dayton's umbrella tech community Meetup group, not in the registry or the feed. It hosts recurring in-person Hack Dayton nights, Code for Dayton, the Dynamic Languages SIG and 'Make & Play - Gem City Game Developers' (upcoming: Hack Dayton Nov 27 and Dec 25, Code For Dayton Dec 1, holiday potluck Dec 3, 2026). Covers Dayton's missing meetup-series and game-dev types."
+ },
+ {
+  "url": "https://api.lu.ma/ics/get?entity=calendar&id=cal-kQLf8Lts3EySj28",
+  "name": "De Anza Hacks (DAHacks)",
+  "reason": "Luma calendar of De Anza Hacks, the student-run semiannual hackathon at De Anza College, 21250 Stevens Creek Blvd, Cupertino. Public ICS lists DAHacks 3.5 (May 30 2025), De Anza Hackathon 4.0 (Nov 21-22 2025) and De Anza Hackathon 5.0 (Oct 16 2026); DASG budget names 4.5 and 5.0 for 2026-27. Not in the registry; covers Cupertino's hackathon type."
+ }
+]

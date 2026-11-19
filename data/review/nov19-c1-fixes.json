@@ -1,0 +1,18 @@
+[
+  { "match": { "name": "AI Tinkerers San Diego", "city": "San Diego" },
+    "action": "update",
+    "reason": "san-diego.aitinkerers.org lists the next meetup 'Agents, Harnesses, and Software Factories' on Thursday December 3, 2026, 5:00-7:00 PM Pacific, in San Diego (JSON-LD startDate 2026-12-03T17:00-08:00; event page san-diego.aitinkerers.org/p/san-diego-agents-harnesses-and-software-factories names Google as venue and sponsor, requires a valid ID at entry and provides dinner, so in person). last_date 2026-11-17 is left as is.",
+    "set": { "next_date": "2026-12-03", "next_date_end": "2026-12-03", "status": "upcoming", "venue": "Rotating venues; Dec 3 meetup hosted at Google, San Diego" } },
+  { "match": { "name": "TigerHacks", "city": "Columbia" },
+    "action": "update",
+    "reason": "The organiser has moved to tigerhacks.dev (the website MLH's 2027 season links for TigerHacks). Its JS bundle reads 'September 25th - 27th, 2026' and 'University of Missouri - September 25-27', with schedule rooms in Lafferre Hall. MLH 2027 season lists TigerHacks, Columbia, Missouri, In Person, SEP 25 - 27, status ended. tigerhacks.missouri.edu is the stale 2025 page (Friday November 7th, (c) 2025). The 2026 edition has run, so last_date moves from 2025-11-07 to 2026-09-25. No 2027 date has been published.",
+    "set": { "last_date": "2026-09-25", "month": "September", "url": "https://tigerhacks.dev/", "source": "https://tigerhacks.dev/" } },
+  { "match": { "name": "Founders Meetup Sioux Falls", "city": "Sioux Falls" },
+    "action": "update",
+    "reason": "The 2026-11-18 meetup has passed: its JSON-LD on startupsiouxfalls.com/events/founders-meetup reads 2026-11-18 09:00-10:00. The same page and the /events listing now show the next session as 'Founders Meetup December 16, 2026 | 9am - 10am'. The elapsed date becomes last_date.",
+    "set": { "next_date": "2026-12-16", "next_date_end": "2026-12-16", "last_date": "2026-11-18", "source": "https://www.startupsiouxfalls.com/events/founders-meetup" } },
+  { "match": { "name": "Pearl Hacks", "city": "Chapel Hill" },
+    "action": "update",
+    "reason": "pearlhacks.com home-page JS bundle: the countdown runs to 2026-02-21 through 2026-02-22 23:00, which confirms last_date 2026-02-21. After that window the page renders 'Pearl Hacks 2027 is happening Feb 13-14!', so a browser shows that text today. Feb 13-14 2027 falls on a Saturday and Sunday. The site metadata places it at UNC-Chapel Hill, in person. Pearl Hacks is not in MLH's 2027 season, so the date rests on the organiser's own page alone.",
+    "set": { "next_date": "2027-02-13", "next_date_end": "2027-02-14", "status": "upcoming" } }
+]

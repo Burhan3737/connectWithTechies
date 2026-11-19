@@ -1,0 +1,237 @@
+{
+ "pass": "nov19-d1",
+ "date": "2026-11-19",
+ "returning": [],
+ "reported": [],
+ "cities": [
+  {
+   "city": "Cookeville",
+   "region": "Tennessee",
+   "queries": [
+    "Tennessee Tech hackathon Cookeville 2026",
+    "Cookeville tech conference OR startup week OR meetup 2026 Upper Cumberland",
+    "Tennessee Tech CTF OR game jam OR pitch competition Cookeville 2026"
+   ],
+   "found": [
+    {
+     "name": "Portobello America AI Hackathon",
+     "url": "https://blogs.tntech.edu/techtimes/2025/events/portobello-america-hackathon/",
+     "verdict": "rejected",
+     "reason": "One-off 24-hour company-sponsored hackathon for TN Tech students, Oct 2025; no further edition announced."
+    },
+    {
+     "name": "From Lab to Market: Accelerating AI Innovation",
+     "url": "https://utconferences.eventsair.com/from-lab-to-market/registration/Site/Register",
+     "verdict": "rejected",
+     "reason": "Statewide AI showcase at TN Tech's Ashraf Islam Engineering Building, May 19 2026 (AI TechX / UT conferences); a single event with no sign it recurs."
+    },
+    {
+     "name": "Eagle Works",
+     "url": "https://www.tntech.edu/eagleworks/",
+     "verdict": "rejected",
+     "reason": "TN Tech student business-idea pitch competition (Apr 18 2026); general entrepreneurship scholarship contest, not a tech event."
+    },
+    {
+     "name": "Cookeville Tech + AI Meetup",
+     "url": "https://www.meetup.com/cookeville-tech-ai-meetup",
+     "verdict": "rejected",
+     "reason": "Search hit, but meetup.com returns a null group for this urlname (group gone or private); nothing to follow."
+    },
+    {
+     "name": "HackTN 2026",
+     "url": "https://events.humanitix.com/hacktn26",
+     "verdict": "unresolved",
+     "reason": "Statewide hackathon Oct 17-18 2026 (Hackathons International, Oracle); no evidence it is held in Cookeville, location not established."
+    }
+   ]
+  },
+  {
+   "city": "Coral Gables",
+   "region": "Florida",
+   "queries": [
+    "University of Miami hackathon Coral Gables 2026",
+    "University of Miami CTF OR game jam OR demo day OR startup week Coral Gables 2026",
+    "Horizon AI Hackathon 2026 University of Miami February"
+   ],
+   "found": [
+    {
+     "name": "Horizon AI Hackathon",
+     "url": "https://www.coe.miami.edu/events/horizon-ai-hackathon/2027/index.html",
+     "verdict": "added",
+     "reason": "UM College of Engineering page: Feb 6-7 2027, Lakeside Expo Center; open to students, HS juniors/seniors and community/startups."
+    },
+    {
+     "name": "Smart Cities MIAMI Conference",
+     "url": "https://smartcities.miami.edu/",
+     "verdict": "added",
+     "reason": "10th edition held Mar 26 2026 on UM's Coral Gables campus; 2027 not yet dated, added recurring-tbd."
+    },
+    {
+     "name": "AI Hackathon Weekend (IDSC x Miami Business School)",
+     "url": "https://idsc.miami.edu/ai-hackathon-2026/",
+     "verdict": "rejected",
+     "reason": "Nov 7-8 2026, past; 50 UM students selected by application, closed to the public, no recurrence announced."
+    },
+    {
+     "name": "EPIC innovation competition",
+     "url": "https://coe.miami.edu/events/epic/2026/index.html",
+     "verdict": "rejected",
+     "reason": "UM-internal student innovation competition with an Apr 28 demo day; closed to UM students."
+    },
+    {
+     "name": "GDG on Campus University of Miami",
+     "url": "https://gdg.community.dev/events/details/google-gdg-on-campus-university-of-miami-coral-gables-united-states-presents-get-into-gear/",
+     "verdict": "exists",
+     "reason": "Already reaches us through the Bevy feed (Get into GEAR, Coral Gables)."
+    }
+   ]
+  },
+  {
+   "city": "Costa Mesa",
+   "region": "California",
+   "queries": [
+    "Costa Mesa tech conference 2027",
+    "Costa Mesa hackathon 2026",
+    "Costa Mesa summit OR startup week OR game jam OR demo day tech 2026 Orange County",
+    "HackCC Orange Coast College hackathon",
+    "Spookathon Orange Coast College 2026 hackathon Iota Xi"
+   ],
+   "found": [
+    {
+     "name": "HackCC",
+     "url": "https://us.allhackathons.com/hackathon/hackcc",
+     "verdict": "unresolved",
+     "reason": "Orange Coast College hackathon; latest edition found ended Nov 17 2024 (aggregator only), no organiser page or 2025/2026 edition found."
+    },
+    {
+     "name": "Spookathon",
+     "url": "https://spookathon-2025.devpost.com",
+     "verdict": "unresolved",
+     "reason": "Iota Xi Honor Society hackathon at Orange Coast College, 2025 edition on Devpost only; no 2026 edition, date or organiser site found."
+    },
+    {
+     "name": "Bolt Hackathon: Final Build Session",
+     "url": "https://lu.ma/6z7gc27w",
+     "verdict": "rejected",
+     "reason": "One-off Luma meetup tied to a 2025 online Bolt.new hackathon."
+    },
+    {
+     "name": "OC Tech Week",
+     "url": "https://www.meetup.com/orange-county-entrepreneurs-investors-networking/events/316478956/",
+     "verdict": "exists",
+     "reason": "OC Tech Week events reach us via feed, held in Irvine/Newport Beach, not Costa Mesa."
+    }
+   ]
+  },
+  {
+   "city": "Cupertino",
+   "region": "California",
+   "queries": [
+    "Cupertino hackathon 2027 De Anza",
+    "DA Hacks De Anza hackathon 2026 dahacks",
+    "Cupertino tech summit OR demo day OR CTF OR game jam 2026",
+    "Hack Cupertino 2026 April Quinlan"
+   ],
+   "found": [
+    {
+     "name": "Hack Cupertino",
+     "url": "https://www.cupertino.gov/hackcupertino",
+     "verdict": "added",
+     "reason": "City of Cupertino page: April 10-11 2027 at Quinlan Community Center, ages 13-18, in-person overnight."
+    },
+    {
+     "name": "De Anza Hacks (DAHacks)",
+     "url": "https://luma.com/4ugdc5mt",
+     "verdict": "added",
+     "reason": "Semiannual student hackathon at De Anza College; publishes on Luma (cal-kQLf8Lts3EySj28), so proposed in sources-nov19-d1.json rather than a one-off add. Latest: De Anza Hackathon 5.0, Oct 16 2026."
+    },
+    {
+     "name": "Beacon Hacks",
+     "url": "https://luma.com/03m37vgx",
+     "verdict": "exists",
+     "reason": "Already in the feed (Cupertino, 2027-01-30)."
+    }
+   ]
+  },
+  {
+   "city": "Dayton",
+   "region": "Ohio",
+   "queries": [
+    "Dayton Ohio hackathon 2026 OR 2027",
+    "Dayton startup week OR tech week OR demo day Dayton Ohio 2026",
+    "Launch Dayton Startup Week 2026 dates venue",
+    "Dayton AI Day 2026 Sinclair Conference Center",
+    "Dayton CTF OR game jam OR tech summit Ohio 2026 University of Dayton",
+    "Wright State hackathon 2027 Russ Engineering Center"
+   ],
+   "found": [
+    {
+     "name": "Launch Dayton Startup Week",
+     "url": "https://launchdayton.com/events/startup-week/",
+     "verdict": "added",
+     "reason": "Sept 15-17 2026 at The Hub Powered by PNC; free; 2027 not dated, recurring-tbd."
+    },
+    {
+     "name": "Techstars Startup Weekend Dayton",
+     "url": "https://launchdayton.com/events/techstarsdyt/",
+     "verdict": "added",
+     "reason": "Nov 6-8 2026 at The Hub; recurring-tbd."
+    },
+    {
+     "name": "Ohio AI Conference",
+     "url": "https://technologyfirst.wildapricot.org/oaic",
+     "verdict": "added",
+     "reason": "Technology First: Aug 25 2027, Sinclair Event Center; renamed from Dayton AI Day (Aug 26 2026)."
+    },
+    {
+     "name": "Ohio Information Security Conference",
+     "url": "https://technologyfirst.wildapricot.org/Ohio-Information-Security-Conference",
+     "verdict": "added",
+     "reason": "Mar 11 2026 at Sinclair Conference Center; 2027 CFP open, no date; recurring-tbd."
+    },
+    {
+     "name": "Taste of IT",
+     "url": "https://technologyfirst.wildapricot.org/toit",
+     "verdict": "added",
+     "reason": "19th edition Nov 18 2026 at Sinclair Conference Center; recurring-tbd."
+    },
+    {
+     "name": "Wright State University Hackathon",
+     "url": "https://www.wright.edu/events/hackathon",
+     "verdict": "added",
+     "reason": "Feb 6-7 2026, Russ Engineering Center; 2027 not dated; recurring-tbd."
+    },
+    {
+     "name": "GemCityTECH",
+     "url": "https://www.meetup.com/gem-city-tech/",
+     "verdict": "added",
+     "reason": "Meetup group running Hack Dayton, Code for Dayton and Gem City Game Developers nights; proposed in sources-nov19-d1.json."
+    },
+    {
+     "name": "TECH CORPS Hackathon",
+     "url": "https://www.techcorps.org/?p=18069",
+     "verdict": "rejected",
+     "reason": "Statewide one-day high-school hackathon Nov 7 2026 with a Dayton site at Central State University's Dayton campus; one of several satellite sites, not a Dayton event of its own."
+    },
+    {
+     "name": "Women 4 Technology Conference (NEXT LEVEL)",
+     "url": "https://technologyfirst.wildapricot.org/women-4-technology-conference",
+     "verdict": "rejected",
+     "reason": "Technology First leadership-development conference for all industries; not a tech event."
+    },
+    {
+     "name": "Capture Ohio CTF",
+     "url": "https://www.uc.edu/news/articles/2026/02/ocri-ctf.html",
+     "verdict": "rejected",
+     "reason": "Ohio Cyber Range Institute statewide CTF, Apr 11 2026, hosted at University of Cincinnati, not Dayton."
+    },
+    {
+     "name": "Dayton Digital Transformation Summit",
+     "url": "https://aiaa.org/events/dayton-digital-transformation-summit-2/",
+     "verdict": "unresolved",
+     "reason": "AIAA summit at Sinclair Conference Center (May 2025; a June 8-10 2026 edition appears in search); organiser page at ohioinnovationexchange.org returned 403 and the 2026 dates were not confirmed on an organiser page."
+    }
+   ]
+  }
+ ]
+}

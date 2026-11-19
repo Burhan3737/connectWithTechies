@@ -1,0 +1,212 @@
+[
+  {
+    "name": "AI Tinkerers Nashville",
+    "city": "Nashville",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "nashville.aitinkerers.org JSON-LD lists the most recent meetup at 2026-11-17 17:00-20:00 CST (earlier ones 2026-09-29 and 2026-07-21) and none after it. The city menu reads 'Nashville Last: 2d ago', with no 'Next'. That matches last_date 2026-11-17 with next_date empty and status recurring-tbd."
+  },
+  {
+    "name": "AI Tinkerers San Diego",
+    "city": "San Diego",
+    "status": "corrected",
+    "cycle": "nov19-c1",
+    "evidence": "san-diego.aitinkerers.org JSON-LD and its event page show the next meetup 'Agents, Harnesses, and Software Factories' on Thu December 3, 2026, 5:00-7:00 PM Pacific in San Diego. It is in person: Google hosts as venue sponsor, ID is checked at entry and dinner is provided. The record had no next_date; the patch sets 2026-12-03 and keeps last_date 2026-11-17, which the same JSON-LD confirms."
+  },
+  {
+    "name": "AI Symposium at Clemson",
+    "city": "Clemson",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "clemson.edu/ccit/research/learn/ai-symposium.html shows only April 17, 2026, matching last_date 2026-04-17. No 2027 edition is announced, so next_date stays empty (recurring-tbd)."
+  },
+  {
+    "name": "HackUTA",
+    "city": "Arlington",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "hackuta.com: 'HackUTA 2026 November 14-15, 2026 - UT Arlington, Arlington, Texas'. MLH 2027 season lists HackUTA, Arlington, In Person, NOV 14-15, ended. Matches last_date 2026-11-14 with no next edition published (recurring-tbd)."
+  },
+  {
+    "name": "Launch Powered by KPMG Demo Day Showcase",
+    "city": "Chapel Hill",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "junction.unc.edu event page JSON-LD 2026-10-20 17:00-20:00 at Innovate Carolina Junction, 136 E. Rosemary St, Chapel Hill. Its body copy still carries a stale 'Date: Tuesday, April 14, 2026' block from the previous edition, but the header, JSON-LD and details box all read October 20. Matches last_date 2026-10-20. launchchapelhill.com lists no next demo day ('fall cohort applications closed'), so recurring-tbd is right."
+  },
+  {
+    "name": "Pearl Hacks",
+    "city": "Chapel Hill",
+    "status": "corrected",
+    "cycle": "nov19-c1",
+    "evidence": "pearlhacks.com home-page bundle: the countdown targets 2026-02-21 to 2026-02-22, confirming last_date 2026-02-21. Once that window has passed, which is the state a browser renders today, the page shows 'Pearl Hacks 2027 is happening Feb 13-14!'. Site metadata: UNC-Chapel Hill, in person. Not in MLH's 2027 season; the organiser's page is the only source. Patched next_date 2027-02-13 to 2027-02-14, status upcoming."
+  },
+  {
+    "name": "Pitch the Future",
+    "city": "Melbourne",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "swellstartups.beehiiv.com (Groundswell Startups, the organiser) announcement: finalists 'Pitch live at Groundswell Startups on November 13th, 2026'. Its recap post of Nov 16, 2026 says 'On November 13th, eight founders stepped onto the stage at Groundswell Startups'. Matches last_date 2026-11-13 with no 2027 date (recurring-tbd)."
+  },
+  {
+    "name": "SCI Hackathon",
+    "city": "Melbourne",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "ti.to/space-coast-initiative/hackathon-2026 (the organiser's ticket page): '5pm, April 10th - 6:30pm, April 12th, 2026', at Groundswell Startups, 2412 Irwin St, Melbourne FL. Groundswell posted a recap on April 13, 2026. Matches last_date 2026-04-10. No 2027 edition announced."
+  },
+  {
+    "name": "SCI Product Futures Summit",
+    "city": "Melbourne",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "Groundswell's post, dated February 06, 2026, opens 'Yesterday, Groundswell Startups hosted the SCI Product Futures Summit 2026', putting it on 2026-02-05 and matching last_date. The newsletter archive has no 2027 summit post, so recurring-tbd stands."
+  },
+  {
+    "name": "TigerHacks",
+    "city": "Columbia",
+    "status": "corrected",
+    "cycle": "nov19-c1",
+    "evidence": "The record pointed at tigerhacks.missouri.edu, a stale 2025 page ('Friday | November 7th', (c) 2025). MLH 2027 season lists TigerHacks, Columbia, Missouri, In Person, SEP 25-27 2026, ended, with websiteUrl tigerhacks.dev. tigerhacks.dev's own bundle reads 'September 25th - 27th, 2026' at the University of Missouri, in Lafferre Hall rooms. Patched last_date 2025-11-07 to 2026-09-25, month to September, and url/source to tigerhacks.dev. No 2027 date published."
+  },
+  {
+    "name": "Triangle Game Jam",
+    "city": "Raleigh",
+    "status": "blocked",
+    "cycle": "nov19-c1",
+    "evidence": "entrepreneurship.ncsu.edu/trianglegamejam/ is partly updated and contradicts itself. It now says 'Triangle Game Jam 2027' with 'Saturday, February 13' kickoff at Duke, 'Saturday, February 14' at UNC, 'Saturday, February 20' at NC State and the showcase 'Sunday, February 21', but it still says 'Accepting registrations until Thursday, January 15, 2026'. Feb 14 is a Sunday in 2027 and Feb 13 a Friday in 2026, so neither year fits every weekday. No date taken; the record stays recurring-tbd with last_date 2026-01-16, which this page neither confirms nor contradicts. Re-check once the page is fully updated."
+  },
+  {
+    "name": "Founders Meetup Sioux Falls",
+    "city": "Sioux Falls",
+    "status": "corrected",
+    "cycle": "nov19-c1",
+    "evidence": "startupsiouxfalls.com/events/founders-meetup JSON-LD shows the 2026-11-18 09:00-10:00 session (elapsed as of today). The page body and the /events listing now show 'Founders Meetup December 16, 2026 | 9am - 10am'. Patched next_date to 2026-12-16 and last_date to 2026-11-18."
+  },
+  {
+    "name": "Founders Retreat",
+    "city": "Fort Ransom",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "emergingprairie.com's 'Founders Retreat 2026' menu item links to FoundersRetreat2026.eventbrite.com, the organiser's own listing, 'By Emerging Prairie'. That page: JSON-LD 2026-11-18T17:00 to 2026-11-20T11:00 CST, at Stiklestad Lodge, Fort Ransom, ND, founders only, sold out. Matches next_date 2026-11-18 to 2026-11-20, which is in progress today."
+  },
+  {
+    "name": "AI Builder Lab Meetup",
+    "city": "Sioux Falls",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "startupsiouxfalls.com/events listing: 'AI Builder Lab Meetup November 19, 2026 | 4:30pm - 6:00pm', and the event page's JSON-LD 2026-11-19T16:30-18:00 CST at Startup Sioux Falls, 100 E 6th St. The detail page body already shows the following session, December 17, 2026. Matches next_date 2026-11-19 (today). The NEEDS-AGENT 'ambiguous' flag arose because the detail page body shows the following session."
+  },
+  {
+    "name": "Boston Code Camp",
+    "city": "Burlington",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "bostoncodecamp.com returns a Cloudflare 403 to curl and to WebFetch. The organiser's own Eventbrite listing (organiser 'Boston Code Camp', boston-code-camp-41-tickets-2001428991992) reads: 'Boston Code Camp 41 is on Saturday, November 21, 2026 at Microsoft Sales and Technology Center, 5 Wayside Road, Burlington, MA', JSON-LD 2026-11-21 08:30-17:00 EST, free. The organiser's Sessionize CFP page also gives event date 21 Nov 2026, Burlington. Matches the record."
+  },
+  {
+    "name": "ElleHacks",
+    "city": "Toronto",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "ellehacks.com is a Vite single-page shell (the 476-byte 'unreadable' stub). Its bundle /assets/index-BLxzYu-7.js reads 'January 29th - 31st, 2027 . In-person event', 'ElleHacks 2027', venue 'Accolade East at York University, 4700 Keele St'. MLH 2027 season agrees: JAN 29-31, Toronto, In Person. Matches next_date 2027-01-29 to 2027-01-31. The organiser names the month and days, so this is confirmed."
+  },
+  {
+    "name": "UGAHacks",
+    "city": "Athens",
+    "status": "blocked",
+    "cycle": "nov19-c1",
+    "evidence": "ugahacks.com says only 'Register for UGAHacks 12', linking to 12.ugahacks.com. That page reads 'Under Construction' / 'Classified Mission' with no date, month or season in its HTML or its six JS chunks. MLH 2027 season gives UGAHacks, Athens, Georgia, In Person, FEB 05-07 2027, matching the record. The organiser names no month, so the MLH date stays as an unverified date."
+  },
+  {
+    "name": "MakeUofT",
+    "city": "Toronto",
+    "status": "blocked",
+    "cycle": "nov19-c1",
+    "evidence": "makeuoft.ca header: 'MakeUofT 2027 ... University of Toronto TBD, 2027'. Its countdown scripts still target the 2026 edition (Feb 14, 2026). MLH 2027 season gives MakeUofT, Toronto, In Person, FEB 13-14 2027, matching the record. The organiser says TBD, so the MLH date stays as an unverified date."
+  },
+  {
+    "name": "RevolutionUC",
+    "city": "Cincinnati",
+    "status": "blocked",
+    "cycle": "nov19-c1",
+    "evidence": "revolutionuc.com (title 'RevolutionUC 2027') says only 'Spring 2027...' with interest forms. A grep of the page and its Next.js chunks finds no month or day. MLH 2027 season gives RevolutionUC, Cincinnati, In Person, FEB 27-28 2027, matching the record. A season is not a month, so this stays blocked."
+  },
+  {
+    "name": "WEHack",
+    "city": "Richardson",
+    "status": "blocked",
+    "cycle": "nov19-c1",
+    "evidence": "wehackutd.com: 'WEHack 2027 Coming Soon Spring 2027'. Its FAQ still carries the stale 2026 answer, 'WEHack 2026 will be from April 11-12th' in ECSW, UT Dallas. MLH 2027 season gives WEHack, Richardson TX, In Person, APR 10-11 2027, matching the record. The organiser gives only a season, so this stays blocked."
+  },
+  {
+    "name": "Roots Weekend",
+    "city": "Columbia",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "rootsweekend.com: 'Location Columbia, MO Date April 23-25, 2027', 400 attendees, 3-day in-person startup competition. Matches next_date 2027-04-23 to 2027-04-25. The 'other date' 2027-04-02 that flagged it as ambiguous is not an event date on this page; the page states only the one date range."
+  },
+  {
+    "name": "Buffalo Game Space Game Development Meeting",
+    "city": "Buffalo",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "meetup.com/buffalogamespace events (Apollo state): 'BGS Game Development (In-Person) Meeting', PHYSICAL, 2026-11-19 19:00 EST at Buffalo Game Space, 2495 Main Street, Suite #454, Buffalo. The next one is 2026-12-17. The 'Virtual game developer hangout' (ONLINE, Dec 3) is a different event and was not taken. Matches next_date 2026-11-19 (today), last_date 2026-10-22 (also on the list)."
+  },
+  {
+    "name": "Venture Café Phoenix Thursday Gathering",
+    "city": "Phoenix",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "venturecafephoenix.org did not respond (curl status 000). The organiser's community platform event page community.venturecafephoenix.org/events/250 reads: 'Thursday Gathering - The Venture Advantage', Nov 19, 2026, 4:30 PM - 7:00 PM MST, venue 850 PBC, 850 N. 5th St., Phoenix AZ 85004. Matches next_date 2026-11-19 and the venue."
+  },
+  {
+    "name": "Tech Alley Vegas",
+    "city": "Las Vegas",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "meetup.com/tech-alley events (Apollo state): 'Tech Alley Vegas November 2026 Event', PHYSICAL, 2026-11-21 10:00 PST at Third Street, 814 S 3rd St, Las Vegas. Then Dec 19 and Jan 16. techalley.org also carries November 21, 2026. Matches next_date 2026-11-21 and the venue. The Henderson chapter's events on the same group are a different event and were ignored."
+  },
+  {
+    "name": "HackIllinois",
+    "city": "Urbana-Champaign",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "hackillinois.org redirects to hype.hackillinois.org. Its countdown component's targetDate in the page payload is 2027-02-26T18:00Z ('Until we ride into Hack...'), i.e. Feb 26 2027, so the organiser publishes the date itself. MLH 2027 season gives HackIllinois, Urbana, Illinois, In Person, FEB 26-28 2027. The start date is from the organiser's countdown and the end date (Feb 28) from MLH. Matches the record."
+  },
+  {
+    "name": "WiCHacks",
+    "city": "Rochester",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "wichacks.io is a single-page shell. Its bundle /assets/index-DUQx0HQX.js counts down to 2027-02-27T12:00-05:00 and its FAQ reads 'The Hackathon will be in person only, at the RIT main campus'. MLH 2027 season gives WiCHacks, Rochester, New York, In Person, FEB 27-28 2027. The start date is from the organiser's countdown and the end date from MLH. Matches next_date 2027-02-27 to 2027-02-28."
+  },
+  {
+    "name": "CGU Hacks",
+    "city": "Claremont",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "research.cgu.edu/hackathon/: 'The 2026 Hackathon is on November 13th and 14th', 'CGU Hacks 2026 ... November 13-14, 2026'. Matches last_date 2026-11-13. No 2027 edition announced (recurring-tbd)."
+  },
+  {
+    "name": "Humanoid Robots Summit North America",
+    "city": "Chicago",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "acgrobotus.com now serves a WordPress maintenance page ('Site is undergoing maintenance'); the Wayback CDX shows the maintenance plugin from 2026-11-10. The organiser's archived home page (web.archive.org 2026-07-22) reads 'November 3-4, 2026 Chicago', 'FIRST DAY-November 3, 2026 SECOND DAY-November 4, 2026', at Sheraton Grand Chicago Riverwalk, hybrid online-offline. Matches last_date 2026-11-03 and the venue. No 2027 edition is published. The domain is not squatted, but re-check whether the site comes back."
+  },
+  {
+    "name": "JSNation US",
+    "city": "Jersey City",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "jsnation.us JSON-LD: 2026-11-16 to 2026-11-19. The ticket tiers read 'In-person participation on Nov 16-17, remote on Nov 19-20', and the venue block reads 'Liberty Science Center 222 Jersey City Blvd, Jersey City, NJ'. Matches last_date 2026-11-16 and the venue. The site has not announced a 2027 edition yet (recurring-tbd)."
+  },
+  {
+    "name": "Montreal Games Week",
+    "city": "Montreal",
+    "status": "confirmed",
+    "cycle": "nov19-c1",
+    "evidence": "semainedujeuvideodemontreal.com (the organiser's site) hero: 'Nov 10 - 16, 2026', with the programme of events across the city and (c) Montreal Games Week 2026. Its title tag still reads 2025. Matches last_date 2026-11-10. No 2027 dates published. The record's source is a mobilesyrup.com article; the organiser's own site now confirms the dates."
+  }
+]

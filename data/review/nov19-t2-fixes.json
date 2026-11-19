@@ -1,0 +1,176 @@
+[
+  {
+    "action": "add",
+    "reason": "hack.caltech.edu (organiser, Caltech): JSON-LD startDate 2027-02-26 endDate 2027-02-28 and page text 'February 26-28, 2027'; page says fully in-person on Caltech's campus. Last edition Apr 24-26 2026 (row, MLH).",
+    "record": {
+      "name": "Hacktech",
+      "type": "hackathon",
+      "topics": [
+        "hackathon",
+        "software",
+        "students"
+      ],
+      "city": "Pasadena",
+      "region": "California",
+      "country": "United States",
+      "venue": "Caltech",
+      "cadence": "annual",
+      "month": "February",
+      "next_date": "2027-02-26",
+      "next_date_end": "2027-02-28",
+      "last_date": "2026-04-24",
+      "status": "upcoming",
+      "attendance": "400",
+      "cost": "free",
+      "audience": "university students",
+      "url": "https://hack.caltech.edu/",
+      "description": "Caltech's annual 36-hour intercollegiate hackathon, held in person on campus, where teams of up to four build projects aimed at realistic real-world impact.",
+      "source": "https://hack.caltech.edu/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "keanuhackthis.com (organiser; page title 'KeanUHackThis 2027'): hero in the site's JS bundle reads 'KeanUHackThis 2027' with date aria-label 'April 2, 2027'; FAQ says it is a 24-hour overnight in-person hackathon, free, open to undergrad/grad students 18+. End day not published, so next_date_end left blank.",
+    "record": {
+      "name": "KeanUHackThis",
+      "type": "hackathon",
+      "topics": [
+        "hackathon",
+        "software",
+        "students"
+      ],
+      "city": "Union",
+      "region": "New Jersey",
+      "country": "United States",
+      "venue": "Kean University",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "2027-04-02",
+      "next_date_end": "",
+      "last_date": "2026-04-25",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "free",
+      "audience": "undergraduate and graduate students",
+      "url": "https://www.keanuhackthis.com/",
+      "description": "Kean University's free 24-hour overnight student hackathon, open to undergraduate and graduate students of any major and experience level.",
+      "source": "https://www.keanuhackthis.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "blueridgeruby.com (organiser): title 'Blue Ridge Ruby: April 29 & 30, 2027 in Asheville, NC'; text 'Thursday, April 29th and Friday, April 30th, 2027'; venue YMI Cultural Center, 39 S Market St, Asheville.",
+    "record": {
+      "name": "Blue Ridge Ruby",
+      "type": "conference",
+      "topics": [
+        "ruby",
+        "software",
+        "community"
+      ],
+      "city": "Asheville",
+      "region": "North Carolina",
+      "country": "United States",
+      "venue": "YMI Cultural Center, 39 S Market St",
+      "cadence": "annual",
+      "month": "April",
+      "next_date": "2027-04-29",
+      "next_date_end": "2027-04-30",
+      "last_date": "2026-04-30",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "Ruby developers",
+      "url": "https://blueridgeruby.com/",
+      "description": "A friendly two-day, single-track regional Ruby conference in downtown Asheville, with speaker talks and lightning talks.",
+      "source": "https://blueridgeruby.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "CNCF's 'Announcing H1 2027 KCDs' (cncf.io/blog/2026/08/20) lists under May: 'TBD - KCD Toronto (Independent)'. Day not set, so recurring-tbd with month May. Last edition May 13 2026 (kcdtoronto.ca).",
+    "record": {
+      "name": "KCD Toronto",
+      "type": "conference",
+      "topics": [
+        "kubernetes",
+        "cloud-native",
+        "devops"
+      ],
+      "city": "Toronto",
+      "region": "Ontario",
+      "country": "Canada",
+      "venue": "",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-05-13",
+      "status": "recurring-tbd",
+      "attendance": "300",
+      "cost": "paid",
+      "audience": "cloud-native engineers, platform and DevOps teams",
+      "url": "https://kcdtoronto.ca/",
+      "description": "Kubernetes Community Days Toronto, a community-run one-day cloud-native conference under the CNCF KCD programme.",
+      "source": "https://www.cncf.io/blog/2026/08/20/announcing-h1-2027-kcds/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "upscaleconf.com (organiser, Magnific): 'Upcoming Upscale Conf New York, May 5-6, 2027'; FAQ 'The venue is The Refinery, 300 Kent Ave, Brooklyn, NY 11249'. The 2026 edition was in San Francisco; the next one moves to Brooklyn, so added as a Brooklyn record.",
+    "record": {
+      "name": "Upscale Conf",
+      "type": "conference",
+      "topics": [
+        "ai",
+        "design",
+        "creative-tech"
+      ],
+      "city": "Brooklyn",
+      "region": "New York",
+      "country": "United States",
+      "venue": "The Refinery, 300 Kent Ave",
+      "cadence": "annual",
+      "month": "May",
+      "next_date": "2027-05-05",
+      "next_date_end": "2027-05-06",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "creatives, technologists, agencies and studios using AI",
+      "url": "https://www.upscaleconf.com/",
+      "description": "Magnific's two-day conference on AI in advertising and film, with talks, workshops and hands-on sessions for creatives and technologists.",
+      "source": "https://www.upscaleconf.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "bsidesmaine.org (organiser): 'BSides Maine is coming June 5th 2027'; FAQ 'When: June 5th 2027, 8am to 5pm, Location: Hannaford Hall, Portland Maine'. Site meta title still reads 'coming May 30th 2026', which is the last edition (row's May 14-15 came from dev.events).",
+    "record": {
+      "name": "BSides Maine",
+      "type": "conference",
+      "topics": [
+        "security",
+        "hacking",
+        "community"
+      ],
+      "city": "Portland",
+      "region": "Maine",
+      "country": "United States",
+      "venue": "Hannaford Hall",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "2027-06-05",
+      "next_date_end": "2027-06-05",
+      "last_date": "2026-05-30",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "hackers, security practitioners, students, makers",
+      "url": "https://www.bsidesmaine.org/",
+      "description": "Maine's community-built hacker conference: a day of talks, workshops, hardware hacking and demos for builders, breakers and experimenters.",
+      "source": "https://www.bsidesmaine.org/"
+    }
+  }
+]
