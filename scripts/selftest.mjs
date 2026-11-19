@@ -171,6 +171,16 @@ console.log('apply-patches (sandboxed copy)');
         && s.found()[0]?.next_date === '2027-03-11', 'added, then updated: the add is DONE, never REJECT, and the update holds', line(r2, 'oct21-x-fixes.json'));
     }
     {
+      // A city move, then a rename by a later pass: on replay neither patch finds
+      // its own match, and both used to read MISS forever (audit 2026-11-17-i1-W2).
+      const s = sandbox({ 'curated.json': [rec] }); sb.push(s);
+      s.put('oct20-x-fixes.json', [{ match: { name: rec.name, city: 'Toronto' }, action: 'update', reason: 'moved', set: { city: 'Ottawa' } }]);
+      s.put('oct21-x-fixes.json', [{ match: { name: rec.name, city: 'Ottawa' }, action: 'update', reason: 'renamed', set: { name: 'Foo Conf North' } }]);
+      const r1 = s.run(), r2 = s.run();
+      ok(/UPDATE Foo Conf North/.test(r1) && !/MISS/.test(r2) && (r2.match(/DONE {3}Foo Conf/g) || []).length === 2,
+        'a moved, then renamed record: both patches replay as DONE, not MISS', `${line(r2, 'oct20-x-fixes.json')} || ${line(r2, 'oct21-x-fixes.json')}`);
+    }
+    {
       const s = sandbox({ 'curated.json': [{ ...rec, city: 'New York City', region: 'New York', country: 'United States' }] }); sb.push(s);
       s.put('oct21-x-fixes.json', add({ ...rec, city: 'NYC', region: 'New York', country: 'United States' }));
       const out = s.run();

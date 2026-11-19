@@ -109,6 +109,37 @@ const patchFiles = orderPatchFiles(readdirSync(REVIEW_DIR)
   .filter((f) => f.endsWith('.json') && !/^(confirm|sources)-/.test(f) && !NOT_PATCHES.has(f)), today());
 if (!patchFiles.length) { console.log('No patch files in data/review/ — nothing to do.'); process.exit(0); }
 
+/**
+ * Renames, so a replayed patch can find a record a later patch renamed.
+ *
+ * Records are addressed by name+city, and a patch that sets `name` moves the
+ * record to a new key. On the next replay that rename patch no longer finds its
+ * own match, and neither does any earlier patch on the old name: both read as
+ * MISS forever, noise in the dry-run that gates an apply. Patches replay oldest
+ * first, so an earlier patch meets the record before the rename that explains
+ * its absence has run. Every rename is therefore collected up front, old key ->
+ * new key, and a miss follows the chain before it is called one. Raised by the
+ * PASS Summit West -> North America rename (audit 2026-11-17-i1-W2).
+ */
+const renames = new Map();
+for (const pf of patchFiles) {
+  let ops; try { ops = JSON.parse(readFileSync(join(REVIEW_DIR, pf), 'utf8')); } catch { continue; }
+  if (!Array.isArray(ops)) continue;
+  for (const op of ops) {
+    if (op?.action !== 'update' || !op.set?.name || !op.match) continue;
+    const from = `${norm(op.match.name)}|${norm(op.set.city ?? op.match.city)}`;
+    const to = `${norm(op.set.name)}|${norm(op.set.city ?? op.match.city)}`;
+    if (from !== to) renames.set(from, to);
+  }
+}
+function findRenamed(key) {
+  for (let hop = 0; key && hop < 10; hop++, key = renames.get(key)) {
+    const hits = index.get(key);
+    if (hits && hits.length) return hits;
+  }
+  return null;
+}
+
 let applied = 0, removed = 0, unmatched = 0, noop = 0, added = 0, rejected = 0;
 const touched = new Set();
 const log = [];
@@ -210,7 +241,8 @@ for (const pf of patchFiles) {
         console.log(`  DONE   ${name} — ${city}  (already removed)`);
         continue;
       }
-      const moved = op.set?.city ? index.get(`${norm(name)}|${norm(op.set.city)}`) : null;
+      const moved = (op.set?.city || op.set?.name)
+        ? findRenamed(`${norm(op.set?.name ?? name)}|${norm(op.set?.city ?? city)}`) : null;
       if (moved && moved.length) {
         const settled = moved.every(({ file, i }) => {
           const rec = store.get(file)[i];
@@ -219,7 +251,7 @@ for (const pf of patchFiles) {
         });
         if (settled) {
           noop++;
-          console.log(`  DONE   ${name} — ${city} -> ${op.set.city}  (already applied)`);
+          console.log(`  DONE   ${name} — ${city} -> ${op.set.name ?? name} — ${op.set.city ?? city}  (already applied)`);
           continue;
         }
       }
@@ -270,6 +302,9 @@ for (const pf of patchFiles) {
         rec[k] = v;
       }
       if (!changes.length) { noop++; console.log(`  SAME   ${rec.name} — ${rec.city}  (already matches)`); continue; }
+      // A record that changed name or city is now addressed by its new key too,
+      // so a later patch in this same run that matches it there finds it.
+      if ('name' in set || 'city' in set) indexRecord(rec, file, i);
       applied++; touched.add(file);
       log.push(`${pf}: UPDATE ${rec.name} (${rec.city}) — ${op.reason || ''} — ${changes.join('; ')}`);
       console.log(`  UPDATE ${rec.name} — ${rec.city}  [${file}]`);
