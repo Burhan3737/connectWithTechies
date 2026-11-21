@@ -23,8 +23,9 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 | 2026-11-15-i1 | 3 | 0 | 1 | 1 | 0 | 2026-11-15 cycle: re-check nov15-c1/c2/c3 (60 rows), returning nov15-r1/r2, cities nov15-d1/d2 (12 curated adds), sources-nov15-d1/feed |
 | 2026-11-17-i1 | 2 | 0 | 2 | 1 | 0 | 2026-11-17 cycle: re-check nov17-c1/c2 (60 rows), cities nov17-d1/d2 (17 curated adds + CGU Hacks update), nov17-xaudit (BSides CMH), sources-nov17-feed/d1/d2 |
 | 2026-11-19-i1 | 2 | 0 | 0 | 0 | 0 | nov19 cycle: re-check c1/c2 (60 dispatched rows), returning-event discovery t1-t3, city discovery d1-d2 (46 adds), xaudit PASS rename |
+| 2026-11-21-i1 | 2 | 0 | 2 | 0 | 2 | nov21 cycle: recheck c1/c2/c3 (60 dispatched + 2 Techstars rows), discovery t1/t2/t3 and d1/d2 (22 adds, 1 removal), 15 organiser retirements, d1/d2 follows |
 
-**11 audit cycle(s); 6 found something blocking on its first audit.** 47 findings in total, 38 fixed, 7 open or deferred, 9 repeat(s) of an earlier finding.
+**12 audit cycle(s); 6 found something blocking on its first audit.** 49 findings in total, 38 fixed, 9 open or deferred, 9 repeat(s) of an earlier finding.
 
 ## Open
 
@@ -49,8 +50,25 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 - **2026-11-12-i1-W2** · warning · deferred · **audit-run.mjs / build-data.mjs (tooling)** — Mechanical audit reported 0/0 despite 4 updates not landing and 1 curated add merged away; build-data merges different-named curated records by shared page silently.
   - recommended: audit-run: verify each this-cycle update op's set fields and each add's presence in events.json. build-data: warn when two curated records of different names merge by page.
   - note: Tooling change for the user to approve: audit-run.mjs to verify every patch value reached events.json and every add survived; build-data.mjs to warn when it merges differently-named curated records by shared page.
+- **2026-11-21-i1-W1** · warning · deferred · **Hack the Change (Calgary); HackED Beta (Edmonton); Immerse the Bay (Stanford); Opportunity Hack ASU Fall Hackathon (Tempe)** — RETURNING rows added as recurring-tbd although the row is the 2026 edition just held and no next edition is announced. This contradicts the curator brief's RETURNING table and the oct31 TigerHacks ruling, which t1 applied correctly the same cycle (HackCamp, BADCamp, MakeUC, sunhacks, Simply Cyber Con declined). MakeCU, DTE Designathon, Swan Hacks and Hacktually are sound: the row's following edition was announced and held.
+  - recommended: Revert the four add patches (nov21-t2 Hack the Change; nov21-t3 HackED Beta, Immerse the Bay, Opportunity Hack ASU Fall Hackathon) and record them as unresolved with a retry date. Alternatively the orchestrator removes the gate from curator.md, since DISCOVER rows have none and d1/d2 added 8 such records; in that case keep the four and add t1's five. Either way, apply one rule to both sections.
+  - note: Policy choice for the owner: either gate RETURNING adds on an announced next edition (revert the 4 adds) or drop the gate in curator.md and add t1's 5; DISCOVER section has no such gate either way.
+- **2026-11-21-i1-W2** · warning · deferred · **Analytics for Good Hackathon (Minneapolis); curator brief (single-institution events)** — Ruling: t2/t3 were right to reject hackathons open only to one institution's students (verified on KTPHacks 2 and Grizzly Hacks VII; consistent with 8+ earlier rejections). The brief does not state this rule, and the oct31-d2 add Analytics for Good Hackathon breaks it: its organiser page says it is open only to University of Minnesota Twin Cities and Duluth students. That page also announces January 29-30, 2027, while the record still shows recurring-tbd.
+  - recommended: Add to curator.md: an event open only to one institution's students or members is rejected as not publicly attendable, and Devpost 'Invite only' alone is not the test. Remove Analytics for Good Hackathon under that rule, or if it is kept, set next_date 2027-01-29, next_date_end 2027-01-30, status upcoming.
+  - note: Cause fixed: curator.md RETURNING table now rejects single-institution events (quote eligibility; Devpost 'Invite only' alone is not the test). Analytics for Good Hackathon record left in place pending owner decision (remove, or date it 2027-01-29..30).
 
 ## History
+
+### 2026-11-21-i1 — 0 blocking, 2 warning(s)
+
+Scope: nov21 cycle: recheck c1/c2/c3 (60 dispatched + 2 Techstars rows), discovery t1/t2/t3 and d1/d2 (22 adds, 1 removal), 15 organiser retirements, d1/d2 follows
+
+| id | severity | event | finding | status | resolution |
+|---|---|---|---|---|---|
+| W1 | warning | Hack the Change (Calgary); HackED Beta (Edmonton); Immerse the Bay (Stanford); Opportunity Hack ASU Fall Hackathon (Tempe) | RETURNING rows added as recurring-tbd although the row is the 2026 edition just held and no next edition is announced. This contradicts the curator brief's RETURNING table and the oct31 TigerHacks ruling, which t1 applied correctly the same cycle (HackCamp, BADCamp, MakeUC, sunhacks, Simply Cyber Con declined). MakeCU, DTE Designathon, Swan Hacks and Hacktually are sound: the row's following edition was announced and held. | deferred (2026-11-21) | Policy choice for the owner: either gate RETURNING adds on an announced next edition (revert the 4 adds) or drop the gate in curator.md and add t1's 5; DISCOVER section has no such gate either way. |
+| W2 | warning | Analytics for Good Hackathon (Minneapolis); curator brief (single-institution events) | Ruling: t2/t3 were right to reject hackathons open only to one institution's students (verified on KTPHacks 2 and Grizzly Hacks VII; consistent with 8+ earlier rejections). The brief does not state this rule, and the oct31-d2 add Analytics for Good Hackathon breaks it: its organiser page says it is open only to University of Minnesota Twin Cities and Duluth students. That page also announces January 29-30, 2027, while the record still shows recurring-tbd. | deferred (2026-11-21) | Cause fixed: curator.md RETURNING table now rejects single-institution events (quote eligibility; Devpost 'Invite only' alone is not the test). Analytics for Good Hackathon record left in place pending owner decision (remove, or date it 2027-01-29..30). |
+
+Checked and sound: audit-run 0/0; Vibe Coding Con removal (cancellation on ai-devcraft.com); re-dates HLTH USA, Florida Technology Summit, Vermont Tech Jam, VGLX, Taste of IT; confirmed MSPGeekCon, Hacktech, KCD Toronto, Pittsburgh Tech 50, Techstars Boston Demo Day; adds OCRS, SCITDA, Tom Tom, MakeCU, DTE Designathon, Swan Hacks, Hacktually; invite-only claims KTPHacks 2, Grizzly Hacks VII; 15 retirements; no aggregator-sourced next dates; no city changes
 
 ### 2026-11-19-i1 — 0 blocking, 0 warning(s)
 

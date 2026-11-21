@@ -1,0 +1,133 @@
+{
+  "pass": "nov21-t3",
+  "date": "2026-11-21",
+  "returning": [
+    {
+      "name": "HackED Beta 2026",
+      "verdict": "added",
+      "reason": "hacked-beta-2026.devpost.com: UAlberta Computer Engineering Club's beginner hackathon, Fri Nov 13 - Sun Nov 15 2026, in person on the U of A campus. Devpost has an edition every November since 2018. No 2027 date yet: added as 'HackED Beta', Edmonton, recurring-tbd, last_date 2026-11-13. It is a separate event from the curated January 'HackED' (Edmonton)."
+    },
+    {
+      "name": "Central Hacks",
+      "verdict": "rejected",
+      "reason": "Closed campus event. central-hacks.devpost.com: 'Central Michigan University students only', invite only; WiT at CMU, Nov 14-15 2026, Pearce Hall, Mount Pleasant MI (26 participants). Not open to the public."
+    },
+    {
+      "name": "Datathon PolyFinances BNC x AWS",
+      "verdict": "exists",
+      "reason": "Curated record 'Datathon PolyFinances' (Montreal, last_date 2026-11-14, url polyfinances.ca/datathon). The Devpost page datathon-polyfinances-bnc-aws.devpost.com is the same 2026 edition at Polytechnique Montréal (JSON-LD Nov 14-16 2026, 'Le Datathon PolyFinances 2026')."
+    },
+    {
+      "name": "Haven Princeton Game Jam - High School",
+      "verdict": "rejected",
+      "reason": "One-off campaign, not a recurring event: haven.hackclub.com is Hack Club's single worldwide 'game jam for teens in 200+ cities, Nov 14-15, 2026'; haven.hackclub.com/princeton gives Nov 14 at 1435 Capital, Skillman NJ, ages 13-18 only. No further edition announced."
+    },
+    {
+      "name": "Immerse the Bay 2026",
+      "verdict": "added",
+      "reason": "stanfordxr.org: 'the annual Stanford XR Hackathon: Immerse the Bay'. 2026 Devpost: 'Dates: November 13-15, 2026. Location: Jen-Hsun Huang Engineering Center, Stanford University'. Editions 2023-2026. No 2027 date yet: added as 'Immerse the Bay', Stanford, recurring-tbd, last_date 2026-11-13."
+    },
+    {
+      "name": "M365 Community Days Atlanta 2026",
+      "verdict": "unresolved",
+      "reason": "sessionize.com/m365-atlanta-2026: 'inaugural M365 Community Days Atlanta', Nov 14 2026, Clayton State University, Morrow GA, in person (the row's own Eventbrite listing agrees). First edition; no 2027 edition announced. Searched 'M365 Community Days Atlanta 2027': only the 2026 listings and the unrelated online M365Con 2027."
+    },
+    {
+      "name": "Opportunity Hack 2026 | ASU Fall Hackathon 2026 | Tempe Arizona - Nov 14-15",
+      "verdict": "added",
+      "reason": "ohack.dev/hack/fall-2026 (organiser): ASU Fall Hackathon 2026, Nov 14-15, Engineering Center G Wing, 501 E Tyler Mall, Tempe; Opportunity Hack 'since 2013'; in person, open to non-ASU applicants. ohack.dev/hack lists no next event. Added as 'Opportunity Hack ASU Fall Hackathon', Tempe, recurring-tbd, last_date 2026-11-14."
+    },
+    {
+      "name": "The Next Frontier 2026: A Space Innovation Hackathon",
+      "verdict": "exists",
+      "reason": "Its in-person sessions are already in data/events.json as luma feed records from AI Collective Hampton Roads: 'The Next Frontier | Launchpad' (Virginia Beach, 2026-11-13) and 'The Next Frontier | Mission Control' (Virginia Beach, 2026-11-14), at ECPI University. aichr-space.devpost.com: the build days and finale are otherwise online via Discord. First edition; no 2027 edition announced."
+    },
+    {
+      "name": "UBC eProjects x n8n LOOP Hackathon",
+      "verdict": "exists",
+      "reason": "Already in data/events.json as the luma feed record 'LOOP · UBC eProjects x n8n Buildathon' (Vancouver, 2026-11-14, n8n Community Events). loop.devpost.com: Nov 14-15 2026, UBC LIFE Building room 2201. First edition; no next edition announced."
+    },
+    {
+      "name": "Haven Las Vegas",
+      "verdict": "rejected",
+      "reason": "One-off campaign, not a recurring event: part of Hack Club's single worldwide Haven game jam (haven.hackclub.com, Nov 14-15 2026); haven-las-vegas.devpost.com: free 12-hour game jam for ages 13-18 only at Pololu Corporation, Nov 15 2026. No further edition announced."
+    },
+    {
+      "name": "Stupid Ideas Hackathon (Ottawa F26)",
+      "verdict": "unresolved",
+      "reason": "Organiser stupideas.com (the stupid ideas hackathon community) lists '2026 ottawa 11-15' (held, Bayview Yards per Devpost) and for 2027 only 'montreal TBD, athens TBD, dubai TBD, windsor TBD, bucharest TBD'. No second Ottawa edition announced. Each city edition is run by local hosts, so the Montreal/Windsor TBDs were not added as this event."
+    },
+    {
+      "name": "DTE Designathon 2025",
+      "verdict": "added",
+      "reason": "Next edition already ran: dte-designathon-2026.devpost.com, 'Designathon is an annual medtech-themed hackathon hosted by Dream Team Engineering at UF', Oct 3-4 2026, UF Newell Hall. Added as 'Dream Team Engineering Designathon', Gainesville, recurring-tbd, last_date 2026-10-03."
+    },
+    {
+      "name": "✰ LIVE AI Best Coast 2025",
+      "verdict": "unresolved",
+      "reason": "No 2026 Best Coast edition found. liveai.org returns an empty 114-byte page; liveai-bestcoast-2026.devpost.com is 404; Devpost search for 'live ai' shows no new edition. Searched 'LIVE AI Best Coast 2026 hackathon': only 2025 listings and LIVE AI Ivy Plus 2026 (East Coast, Feb 2026). The 2025 event was also fully hybrid across four campuses."
+    },
+    {
+      "name": "BDPA Indianapolis Hackathon",
+      "verdict": "unresolved",
+      "reason": "2025 was BDPA Indy's inaugural hackathon (Eventbrite 'BDPA Indy's Inaugural Hackathon', Nov 8 at EXOS, Indianapolis). bdpa-indianapolis-hackathon-2026.devpost.com is 404; Devpost search for 'bdpa' shows only the 2025 event. Searched 'BDPA Indianapolis Hackathon 2026': no 2026 edition."
+    },
+    {
+      "name": "Datathon - INFO Buffs and HackCU",
+      "verdict": "unresolved",
+      "reason": "One-day datathon at CU Boulder CMDI Studio, Nov 8 2025, 6 participants. HackCU's Devpost history shows only its spring HackCU hackathons; no second datathon. Searched Devpost for 'hackcu': nothing after 2025."
+    },
+    {
+      "name": "HackASU - 2025",
+      "verdict": "rejected",
+      "reason": "Closed campus event: hackasu-2025.devpost.com eligibility 'Arizona State University' students only, invite only (ASU Claude Builder Club, Nov 8-9 2025). Club's claudebuilder.club/hackathon now returns 404 and hackasu-2026.devpost.com is 404; no 2026 edition found."
+    },
+    {
+      "name": "Hacktually 2025",
+      "verdict": "added",
+      "reason": "HackMerced ran it again: hacktually-hack-day-hackmerced.devpost.com 'Hacktually Hacktoberfest @HackMerced', Oct 24 2026, COB2 110, UC Merced, in person. Added as 'Hacktually', Merced, recurring-tbd, last_date 2026-10-24."
+    },
+    {
+      "name": "2025 UXC NYU Design-a-thon",
+      "verdict": "rejected",
+      "reason": "No longer in person: the 2026 edition (uxc-fall-2026-design-a-thon.devpost.com) is 'an online design challenge from November 2-6', open to anyone in New York State, with only three finalist teams presenting at the Nov 13 Design Mixer at 370 Jay St. The 2025 edition was also limited to current NYU students (Luma page)."
+    },
+    {
+      "name": "Winnipeg Stupid Hackathon",
+      "verdict": "unresolved",
+      "reason": "Devpost: 'winnipeg's first stupid hackathon', Nov 8 2025, RRC Polytech EDC, 22 participants. winnipeg-stupid-hackathon-2026.devpost.com is 404; not on stupideas.com's city list. Searched 'Winnipeg Stupid Hackathon 2026 Red River College': nothing."
+    },
+    {
+      "name": "WiC Hack Days",
+      "verdict": "rejected",
+      "reason": "Closed campus event: wic-hack-days.devpost.com 'KU students only', invite only; a 6-hour Thursday-evening event by Women in Computing @ KU, LEEP 2420, Lawrence KS, Nov 13 2025."
+    },
+    {
+      "name": "Swan Hacks 2025",
+      "verdict": "added",
+      "reason": "Iowa State Hackathon Club: 'our official hackathon event held annually at Iowa State' (hackclub.ece.iastate.edu). Devpost shows Fall 2024, Fall 2025 and Swan Hacks Spring 2026 (May 2-3 2026, Coover Hall, in person). No Fall 2026 or 2027 date published. Added as 'Swan Hacks', Ames, biannual, recurring-tbd, last_date 2026-05-02."
+    },
+    {
+      "name": "VizQuest",
+      "verdict": "rejected",
+      "reason": "Closed campus event: vizquest.devpost.com 'University of Texas - Dallas students only', invite only (EnVision UTD, Nov 15 2025)."
+    },
+    {
+      "name": "Toronto Anthropic AI Hackathon",
+      "verdict": "unresolved",
+      "reason": "2025 edition: 3-week build ending in a Nov 23 2025 demo day at UofT Bahen Centre, student-organised (James Han, with UofT AI, Blueprint and UTMIST). anthropic-ai-hackathon-toronto-2026.devpost.com is 404; Devpost search shows no new edition; searched 'Anthropic AI Hackathon Toronto 2026': only 2025 coverage."
+    },
+    {
+      "name": "Figma Make-a-thon @ Waterloo",
+      "verdict": "unresolved",
+      "reason": "One-day make-a-thon at UW Engineering 7, Nov 22 2025, accepted students only. figma-make-a-thon-waterloo-2026.devpost.com is 404; searched 'Figma Make-a-thon Waterloo 2026': only other cities' Friends of Figma events."
+    },
+    {
+      "name": "HackSLC",
+      "verdict": "unresolved",
+      "reason": "St. Lawrence College's first student-led hackathon (luma.com/j0itjwh2, Nov 29 2025, Innovation Hall, Kingston campus, 25 attended). No 2026 edition: Devpost search for 'hackslc' shows only 2025, hackslc-2026 slug 404; searched 'HackSLC 2026 Kingston': nothing new."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}

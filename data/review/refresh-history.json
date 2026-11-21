@@ -211,6 +211,34 @@
     "curated record removed": 1
    },
    "relisted": 15
+  },
+  {
+   "base": "4286647",
+   "built_on": "2026-11-21",
+   "before": 17631,
+   "after": 18812,
+   "added": {
+    "total": 1240,
+    "curated": 21,
+    "feed": 1219
+   },
+   "removed": {
+    "total": 58,
+    "curated": 1,
+    "feed": 57
+   },
+   "redated": {
+    "total": 45,
+    "curated": 0,
+    "feed": 45
+   },
+   "removed_by_reason": {
+    "no longer listed": 53,
+    "organiser retired": 3,
+    "curated record removed": 1,
+    "now a curated record": 1
+   },
+   "relisted": 36
   }
  ]
 }

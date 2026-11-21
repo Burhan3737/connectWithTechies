@@ -1,0 +1,58 @@
+{ "pass": "nov21-d2", "date": "2026-11-21",
+  "returning": [],
+  "cities": [
+    { "city": "Flushing", "region": "New York",
+      "queries": ["Flushing Queens tech conference OR summit 2026 2027", "Queens College Flushing CTF OR game jam OR tech conference 2026"],
+      "found": [
+        { "name": "Flushing Tech Bi-Weekly Hackathon", "url": "https://www.meetup.com/flushingtech/", "verdict": "exists",
+          "reason": "Bi-weekly Saturday mini-hackathon at the Tech Incubator at Queens College, 65-30 Kissena Blvd. Already followed as registry source meetup:flushingtech, and its events are in data/events.json as feed records under city 'Queens' (e.g. 2026-11-28, meetup.com/flushingtech/events/317280969). Not re-added as a curated one-off." },
+        { "name": "Queens Tech & Career Expo", "url": "https://www.queensbp.nyc.gov/?p=4397325", "verdict": "rejected",
+          "reason": "Queens Borough President's expo, held 2026-01-31 at the New York Hall of Science in Corona, not Flushing. It is a career fair, which is not one of the missing types, and no 2027 edition is announced." }
+      ] },
+    { "city": "Fort Ransom", "region": "North Dakota",
+      "queries": ["Fort Ransom North Dakota tech event 2027", "\"Never Quitters\" Emerging Prairie Stiklestad Fort Ransom"],
+      "found": [
+        { "name": "Never Quitters conversation series (Emerging Prairie)", "url": "https://www.emergingprairie.com/calendar", "verdict": "rejected",
+          "reason": "Emerging Prairie's fall 2026 conversation series on business history (Howard Dahl's book). It is held at the Grand Farm Innovation Campus in Wheatland, not Fort Ransom, and is not a tech event. Fort Ransom's only tech-adjacent event is Emerging Prairie's Founders Retreat at Stiklestad Lodge, which is already in data/events.json." }
+      ] },
+    { "city": "Fort Wayne", "region": "Indiana",
+      "queries": ["Fort Wayne startup week OR tech week 2026", "hackathon Fort Wayne Indiana 2026", "\"Dons DevFest\" Purdue Fort Wayne", "Purdue Fort Wayne hackathon \"DevFest\" 2026 OR 2027", "\"AI in Fort Wayne\" meetup", "\"Fort Wayne\" \"tech summit\" OR \"innovation summit\" OR \"AI summit\" 2026 2027", "globalgamejam.org jam site Purdue Fort Wayne 2026"],
+      "found": [
+        { "name": "AI Tinkerers Fort Wayne", "url": "https://fort-wayne.aitinkerers.org/", "verdict": "added",
+          "reason": "Chapter page lists quarterly meetups 2026-02-21, 05-16, 07-25 and 10-21, with no next date announced. Added as a meetup-series with recurring-tbd and last_date 2026-10-21. Its public .ics is behind a Cloudflare challenge, so it cannot be a feed source." },
+        { "name": "AI in Fort Wayne monthly community meetup", "url": "https://www.eventbrite.com/o/angie-carel-gen-ai-consultant-educator-75959297953", "verdict": "added",
+          "reason": "Monthly free meetup at Indiana Tech's Keene Building. Upcoming events on Eventbrite are 2026-12-10 and 2027-01-08. Listed in sources-nov21-d2.json as an Eventbrite organiser, not as a one-off add." },
+        { "name": "Vibe Code Hack Night (NIIC)", "url": "https://www.eventbrite.com/o/northeast-indiana-innovation-community-19983518242", "verdict": "added",
+          "reason": "Evening hack nights at the Northeast Indiana Innovation Community, 2026-08-20 and 2026-10-29. NIIC's Eventbrite organiser went into sources-nov21-d2.json." },
+        { "name": "Dons DevFest", "url": "https://allhackathons.com/hackathon/dons-devfest", "verdict": "unresolved",
+          "reason": "The only listing is on the allhackathons.com aggregator (HTTP 502 when fetched), which describes it as a Purdue Fort Wayne hackathon with no date. No organiser page was found on pfw.edu or elsewhere." },
+        { "name": "Purdue Fort Wayne ACM Global Game Jam", "url": "https://www.pfw.edu/news-center/global-game-jam-event-offers-collaboration-across-disciplines", "verdict": "unresolved",
+          "reason": "PFW news from 2024-01-24 describes an annual ACM-run Global Game Jam in Neff Hall. No 2025, 2026 or 2027 jam-site evidence was found, so it is not added." },
+        { "name": "Startup Week Fort Wayne", "url": "https://inputfortwayne.com/startup-week-2019/", "verdict": "rejected",
+          "reason": "Only the 2018 and 2019 editions are documented. No later edition was found." },
+        { "name": "Innovate Northeast Indiana - Fort Wayne", "url": "https://www.insideindianabusiness.com/events/2026/innovate-northeast-indiana-fort-wayne", "verdict": "rejected",
+          "reason": "IBJ's regional lunch programme (2026-05-15, Clyde Theatre): a governor keynote and economic-development panel. It is a business-media event, not a tech summit." }
+      ] },
+    { "city": "Gainesville", "region": "Florida",
+      "queries": ["Gainesville Florida tech conference 2027", "Startup Week Gainesville 2026 OR 2027", "SwampCTF 2027 University of Florida", "Gainesville Innovation Summit 2026 OR 2027 UF", "Gainesville UF game jam OR \"demo day\" OR hackathon 2027"],
+      "found": [
+        { "name": "Florida Startup Summit", "url": "https://luma.com/onesixone-6gbz", "verdict": "added",
+          "reason": "OneSixOne Ventures' 4th annual summit, 2026-10-09 at UF's Reitz Union, per the organiser's Luma page. Added as an annual summit with recurring-tbd and last_date 2026-10-09." },
+        { "name": "Florida Tech Summit / Gainesville Startup Hour (OneSixOne Ventures)", "url": "https://api.lu.ma/ics/get?entity=calendar&id=cal-l5GBqxYU8nBUW0h", "verdict": "added",
+          "reason": "Florida Tech Summit (2026-03-26, Emerson Alumni Hall) and irregular Startup Hour mixers are both on OneSixOne's public Luma calendar. That calendar went into sources-nov21-d2.json, not as one-off adds; only one Florida Tech Summit edition is known." },
+        { "name": "SwampCTF", "url": "https://ctftime.org/ctf/241", "verdict": "rejected",
+          "reason": "UFSIT's CTF is run online (CTFtime: online jeopardy, 20-22 Nov 2026), so it is not in person." },
+        { "name": "Gainesville Artifact Summit", "url": "https://innovate.research.ufl.edu/events/gainesville-artifact-summit/", "verdict": "unresolved",
+          "reason": "Held once on 2026-02-13, per UF Innovate's calendar. No organiser page or later edition was found, so recurrence cannot be established." }
+      ] },
+    { "city": "Glassboro", "region": "New Jersey",
+      "queries": ["ProfHacks Rowan University hackathon 2027", "Rowan University Glassboro tech conference OR summit OR game jam 2026", "Glassboro NJ Rowan hackathon OR CTF OR \"game jam\" OR \"demo day\" 2026 2027"],
+      "found": [
+        { "name": "ProfHacks", "url": "https://profhacks.rowanieee.org/", "verdict": "added",
+          "reason": "Rowan IEEE's annual hackathon. The organiser site shows the 2026 edition on March 20-21, 2026. Added with recurring-tbd and last_date 2026-03-20; no 2027 date yet." },
+        { "name": "UPitchNJ", "url": "https://happeningnext.com/event/upitchnj-2026-eid1ef0krg614ia", "verdict": "unresolved",
+          "reason": "Statewide student pitch competition, hosted at Rowan's Business Hall on 2026-05-01 according to an aggregator only. No organiser page was found, and it is unclear whether it stays at Rowan or rotates between universities." }
+      ] }
+  ],
+  "reported": []
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "action": "add",
+    "reason": "RETURNING row 'DevFest Montréal'. Organiser's site devfest.gdgmontreal.com/fr/ (GDG Montréal): '8e Édition · 6 novembre 2026 · Merci Montréal !', venue 'Espace Ax.c, 800 Square-Victoria, Montréal', 368 tickets sold, held in person; first DevFest Montréal 2017. The page announces the next edition: 'Édition 2027 · Rendez-vous au début novembre de l'an prochain !' with no exact date, so recurring-tbd with last_date 2026-11-06.",
+    "record": {
+      "name": "DevFest Montréal",
+      "type": "conference",
+      "topics": ["ai", "cloud", "mobile", "web", "google"],
+      "city": "Montreal",
+      "region": "Quebec",
+      "country": "Canada",
+      "venue": "Espace Ax.c, 800 Square-Victoria",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-11-06",
+      "status": "recurring-tbd",
+      "attendance": "370",
+      "cost": "paid",
+      "audience": "developers, AI builders, students, professionals and founders",
+      "url": "https://devfest.gdgmontreal.com/",
+      "description": "GDG Montréal's volunteer-run, one-day community tech conference, held since 2017: technical talks and hands-on workshops on AI, cloud, mobile and web, with no sales pitches on stage.",
+      "source": "https://devfest.gdgmontreal.com/fr/"
+    }
+  }
+]

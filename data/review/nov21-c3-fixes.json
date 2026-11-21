@@ -1,0 +1,26 @@
+[
+  { "match": { "name": "Computing Foundations Workshop Series", "city": "Cookeville" },
+    "action": "update",
+    "reason": "rcd.tntech.edu/2026-08-27-tntech/ (organiser, Tennessee Tech RCD) schedule for the Fall 2026 series lists sessions Aug 27, Sep 3/10/17/24, Oct 1/8/22/29, Nov 5/12 and Dec 3, Thursdays 6-9 PM, Bruner Hall Rm 126. The stored end of 2026-11-19 is not on the page; the series runs to 2026-12-03, so it was rolled over while still in progress. Start date kept, end moved to the final listed session.",
+    "set": { "next_date": "2026-08-27", "next_date_end": "2026-12-03", "month": "August-December" } },
+  { "match": { "name": "Florida Technology Summit", "city": "St. Petersburg" },
+    "action": "update",
+    "reason": "technologysummit.net/florida.html: 'The 8th Annual Florida Technology Summit will be held on November 18th, 2027 at the Hilton St. Petersburg Carillon Park (950 Lake Carillon Drive) from 8am-4pm.' The 2026 edition (2026-11-19) has been held and is kept as last_date.",
+    "set": { "next_date": "2027-11-18", "next_date_end": "2027-11-18", "last_date": "2026-11-19" } },
+  { "match": { "name": "HLTH USA", "city": "Las Vegas" },
+    "action": "update",
+    "reason": "hlth.com/events/usa/ (title 'HLTH USA 2027'): 'Join Healthcare's #1 Innovation Event October 17 - 20, 2027 | The Venetian Expo Center', Pre-Register open. The 2026 edition (2026-11-15 to 11-18, page JSON-LD) has been held and is kept as last_date. Month moves from November to October.",
+    "set": { "next_date": "2027-10-17", "next_date_end": "2027-10-20", "last_date": "2026-11-15", "month": "October" } },
+  { "match": { "name": "Vermont Tech Jam", "city": "Burlington" },
+    "action": "update",
+    "reason": "techjamvt.com (organiser, Seven Days): 'More than 1,000 people attended the 2026 Jam held at Hula' ... 'Join us for Tech Jam 2027 on Saturday, October 23' and 'See you again on October 23, 2027!'. Oct 23 2027 is a Saturday. Venue for 2027 not stated; kept. 2026 edition (2026-10-24) kept as last_date.",
+    "set": { "next_date": "2027-10-23", "next_date_end": "2027-10-23", "last_date": "2026-10-24" } },
+  { "match": { "name": "Video Game Live Expo (VGLX)", "city": "Mississauga" },
+    "action": "update",
+    "reason": "vglx.ca hero: 'October 16 - 17, 2027 SAT 10AM-6PM | SUN 10AM-5PM Hall 4, The International Centre, Mississauga, ON.' (Oct 16 2027 is a Saturday). 2026 edition (Oct 24-25 2026, also on the page) kept as last_date; venue was blank.",
+    "set": { "next_date": "2027-10-16", "next_date_end": "2027-10-17", "last_date": "2026-10-24", "venue": "Hall 4, The International Centre" } },
+  { "match": { "name": "Vibe Coding Con", "city": "Las Vegas" },
+    "action": "remove",
+    "reason": "The record's url vibecodingcon.ai returns 301 to https://ai-devcraft.com/, whose page states: 'due to unforeseen circumstances beyond our control, the difficult decision has been made to cancel the 2026 Ai Dev Craft conference' (October 27-28, 2026, Red Rock Resort, Las Vegas, the same dates as this record). The 2026 edition never ran, so the rolled last_date 2026-10-27 is false; no earlier edition under either name was found (web search for 'Vibe Coding Con' Las Vegas returns only unrelated meetups) and no future edition is announced. The record was sourced from dev.events, not the organiser."
+  }
+]

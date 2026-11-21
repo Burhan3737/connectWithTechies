@@ -1,0 +1,281 @@
+{
+ "pass": "nov21-d1",
+ "date": "2026-11-21",
+ "returning": [],
+ "reported": [],
+ "cities": [
+  {
+   "city": "Charlottesville",
+   "region": "Virginia",
+   "queries": [
+    "HooHacks 2027 UVA hackathon",
+    "Tom Tom Festival 2027 Charlottesville dates",
+    "Charlottesville tech meetup OR pitch competition OR CTF OR game jam 2026"
+   ],
+   "found": [
+    {
+     "name": "HooHacks",
+     "url": "https://hoohacks.io",
+     "verdict": "added",
+     "reason": "Organiser site says it returns to UVA in 2027, dates TBA; added recurring-tbd with last_date 2026-03-21 from its Devpost."
+    },
+    {
+     "name": "beCamp",
+     "url": "https://be.camp",
+     "verdict": "added",
+     "reason": "Charlottesville's 20th-anniversary tech un-conference, Oct 2-3 2026 at UVA School of Data Science; added recurring-tbd."
+    },
+    {
+     "name": "Tom Tom Festival Innovation Summit",
+     "url": "https://www.tomtomfoundation.org/innovation-summit",
+     "verdict": "added",
+     "reason": "Organiser page: April 22-23, 2027 at the 15th Tom Tom Festival; startup and emerging-tech summit."
+    },
+    {
+     "name": "Charlottesville Technologists",
+     "url": "https://www.meetup.com/cville-tech/",
+     "verdict": "added",
+     "reason": "Active in-person Meetup group (2-3 events a month); went to sources-nov21-d1.json, not as a one-off add."
+    },
+    {
+     "name": "UVA Entrepreneurship Cup",
+     "url": "https://tomtomfestival2026.sched.com/event/2IxGN/uva-e-cup-100k-in-prize-money",
+     "verdict": "rejected",
+     "reason": "General student business-plan competition (Apr 24 2026), held within Tom Tom; not a tech event in its own right."
+    },
+    {
+     "name": "SummitCTF 2026",
+     "url": "https://www.eventbrite.com/e/summitctf-2026-tickets-1982439422679",
+     "verdict": "rejected",
+     "reason": "Held at Virginia Tech in Blacksburg, not Charlottesville. No Charlottesville CTF or game jam found."
+    }
+   ]
+  },
+  {
+   "city": "Columbia",
+   "region": "South Carolina",
+   "queries": [
+    "Columbia SC tech conference 2027",
+    "Columbia South Carolina startup week OR demo day OR pitch competition OR CTF OR game jam 2026",
+    "Columbia SC developer meetup group Meetup tech monthly",
+    "\"SC Capitol Defense\" cybersecurity Columbia Museum of Art"
+   ],
+   "found": [
+    {
+     "name": "SCITDA Fall Conference",
+     "url": "https://scitda40.wildapricot.org/Fall-Conference",
+     "verdict": "added",
+     "reason": "Organiser page: Sep 27-28, 2027 at the Columbia Marriott; 2026 edition Oct 5-6."
+    },
+    {
+     "name": "SCGMIS Management, Innovation and Security Conference",
+     "url": "https://scgmis1.wildapricot.org/event-6735147",
+     "verdict": "added",
+     "reason": "Third annual public-sector IT conference, Aug 6 2026 at Saluda Shoals River Center, Columbia; no 2027 date, added recurring-tbd."
+    },
+    {
+     "name": "Silicon Swamp",
+     "url": "https://luma.com/siliconswamp",
+     "verdict": "added",
+     "reason": "Monthly technologist meetup at Boyd Innovation Center on Luma, next Dec 10 2026; went to sources-nov21-d1.json."
+    },
+    {
+     "name": "TechTalk - Columbia (SC)",
+     "url": "https://www.meetup.com/techtalk-columbia-technology-society-meetup-group/",
+     "verdict": "added",
+     "reason": "In-person AI/cyber/health-informatics talks about twice a month; went to sources-nov21-d1.json."
+    },
+    {
+     "name": "Launchpad COLA Pitch Night",
+     "url": "https://www.eventbrite.com/e/launchpad-cola-pitch-night-tickets-1968649987106",
+     "verdict": "exists",
+     "reason": "Boyd Innovation Center's incubator demo night (last Dec 18 2025). Boyd's Eventbrite organiser page is already in the feed registry, so it arrives through the feed; no curated add."
+    },
+    {
+     "name": "#GrowCola (Boyd Innovation Center) Luma calendar",
+     "url": "https://luma.com/growcola",
+     "verdict": "rejected",
+     "reason": "Luma calendar dormant since June 2025; Boyd now publishes on Eventbrite, which the registry already reads."
+    },
+    {
+     "name": "SC Capitol Defense",
+     "url": "",
+     "verdict": "unresolved",
+     "reason": "A search summary mentioned a July 15 2026 cybersecurity event at the Columbia Museum of Art; a targeted search found no organiser page, so nothing was added."
+    }
+   ]
+  },
+  {
+   "city": "Edinburg",
+   "region": "Texas",
+   "queries": [
+    "Edinburg Texas tech conference OR summit 2026 2027 UTRGV technology",
+    "UTRGV CTF OR game jam OR hackathon OR demo day Edinburg 2026",
+    "Rio Grande Valley tech meetup McAllen Edinburg developers Meetup Luma",
+    "Region One ESC \"Cybersecurity Summit\" Edinburg",
+    "Edinburg TX startup pitch competition OR startup week OR tech week 2026 UTRGV entrepreneurship"
+   ],
+   "found": [
+    {
+     "name": "Region One ESC Cybersecurity Summit",
+     "url": "https://form.jotform.com/260565201665152",
+     "verdict": "unresolved",
+     "reason": "Search snippets describe a 10th annual summit on Oct 29 2026 at the Region One ESC Conference Center, 1900 W. Schunior St, Edinburg, for K-12 and municipal IT staff. The organiser's registration and presenter forms on Jotform now say 'This form is currently unavailable' and there is no other organiser page, so the date could not be confirmed."
+    },
+    {
+     "name": "Hack The Box Meetup - RGV",
+     "url": "https://www.meetup.com/hack-the-box-meetup-mcallen-tx-usa/",
+     "verdict": "added",
+     "reason": "Cybersecurity meetup in McAllen, next to Edinburg, in person Sep and Oct 2026; went to sources-nov21-d1.json at low priority."
+    },
+    {
+     "name": "UTRGV Big Idea Competition",
+     "url": "https://valleybusinessreport.com/community/education/utrgv-students-win-big-at-big-idea-competition/",
+     "verdict": "rejected",
+     "reason": "General student business-idea pitch contest with no published date; not a tech event."
+    },
+    {
+     "name": "RISE Up Harlingen / InnovationTX Demo Day / RGV Startup Week",
+     "url": "https://harlingenedc.com/riseupharlingen",
+     "verdict": "rejected",
+     "reason": "These are held in Harlingen, McAllen and Brownsville, not Edinburg (RGV Startup Week is already held under Brownsville). No Edinburg tech week, CTF, game jam or demo day found."
+    }
+   ]
+  },
+  {
+   "city": "Eugene",
+   "region": "Oregon",
+   "queries": [
+    "Eugene Oregon tech conference 2027",
+    "Eugene Oregon startup week OR demo day OR angel conference OR pitch 2026 2027 tech",
+    "Eugene Oregon game jam OR CTF OR tech meetup 2026 University of Oregon",
+    "\"Indie Game Con\" Eugene 2026",
+    "\"Oregon Cyber Resilience Summit\" 2027 Erb Memorial Union",
+    "\"Epic Oregon Game Jam\" Eugene",
+    "Eugene Web Developers meetup Innovation Hub OR \"Open Eugene\" Tech Tuesday"
+   ],
+   "found": [
+    {
+     "name": "Oregon Cyber Resilience Summit",
+     "url": "https://ocrs.uoregon.edu/",
+     "verdict": "added",
+     "reason": "Organiser site: Oct 6, 2027 at the EMU, University of Oregon; 2026 edition Oct 7."
+    },
+    {
+     "name": "EugeneTech (Tech Tuesday)",
+     "url": "https://www.meetup.com/EugeneTech/",
+     "verdict": "added",
+     "reason": "Weekly in-person Tuesday tech gathering; went to sources-nov21-d1.json."
+    },
+    {
+     "name": "Bitforest (Eugene Area Game Developers)",
+     "url": "https://www.meetup.com/bitforest/",
+     "verdict": "added",
+     "reason": "Weekly game-dev meetup that hosts Eugene's game-jam sites; went to sources-nov21-d1.json."
+    },
+    {
+     "name": "Eugene Web Developers",
+     "url": "https://www.meetup.com/eugenewebdevs/",
+     "verdict": "added",
+     "reason": "Monthly in-person web-dev meetup; went to sources-nov21-d1.json."
+    },
+    {
+     "name": "Eugene-Springfield Startups",
+     "url": "https://www.meetup.com/eugene-startups/",
+     "verdict": "added",
+     "reason": "Monthly in-person startup programme (PubTalks); went to sources-nov21-d1.json."
+    },
+    {
+     "name": "Indie Game Con / Epic Oregon Game Jam",
+     "url": "https://meetup.com/Bitforest",
+     "verdict": "rejected",
+     "reason": "Both are named only in Bitforest's group blurb; the newest coverage of Indie Game Con is from 2014 and no current page exists for either. Treated as defunct."
+    },
+    {
+     "name": "ORTII Annual Conference",
+     "url": "https://www.luminik.io/events/ortii-annual-conference/",
+     "verdict": "rejected",
+     "reason": "Conference for K-12 educators and district staff (Apr 14-16 2027 per an aggregator), not a tech-industry event; not pursued."
+    },
+    {
+     "name": "Oregon Cybersecurity Challenge Cup",
+     "url": "https://ocrs.uoregon.edu/?p=5087",
+     "verdict": "rejected",
+     "reason": "Online-only CTF."
+    },
+    {
+     "name": "eChai Eugene Startup Mixer",
+     "url": "https://echai.ventures/events/echai-eugene-startup-mixer-nov-12-2026",
+     "verdict": "rejected",
+     "reason": "One-off mixer (Nov 12 2026, already rescheduled once); not a recurring event."
+    }
+   ]
+  },
+  {
+   "city": "Fayetteville",
+   "region": "Arkansas",
+   "queries": [
+    "University of Arkansas hackathon Fayetteville 2026 2027",
+    "Fayetteville Arkansas tech conference OR startup week OR demo day 2026 2027 Startup Junkie",
+    "Northwest Arkansas tech meetup Fayetteville developers Meetup game jam CTF",
+    "\"NWA TechFest\" conference 2026"
+   ],
+   "found": [
+    {
+     "name": "HogHacks",
+     "url": "https://uark-acm.github.io/hoghacks/",
+     "verdict": "added",
+     "reason": "UARK ACM's 24-hour hackathon held each semester; last Apr 3-4 2026 at the J.B. Hunt Center; added recurring-tbd."
+    },
+    {
+     "name": "Razorhack Cyber Competition",
+     "url": "https://events.vtools.ieee.org/m/570373",
+     "verdict": "added",
+     "reason": "IEEE CS Ozark / CyberHogs CTF, Nov 6-8 2026 at the J.B. Hunt Center; added recurring-tbd."
+    },
+    {
+     "name": "Startup Crawl",
+     "url": "https://startupjunkie.org/startup-crawl/",
+     "verdict": "added",
+     "reason": "Startup Junkie's annual startup open house on the Fayetteville Square, Sep 25 2026; added recurring-tbd."
+    },
+    {
+     "name": "Ozark Game Developers",
+     "url": "https://www.meetup.com/ozark-game-developers/",
+     "verdict": "added",
+     "reason": "NWA game-dev group and Unity User Group, meets fortnightly; went to sources-nov21-d1.json."
+    },
+    {
+     "name": "NWA TechFest",
+     "url": "https://www.meetup.com/nwa-techfest/",
+     "verdict": "added",
+     "reason": "Monthly in-person meetup; went to sources-nov21-d1.json. Its yearly conference has no dated page, so no add."
+    },
+    {
+     "name": "NWA Tech Summit",
+     "url": "https://bentonvillearea.com/nwa-tech-summit/",
+     "verdict": "exists",
+     "reason": "Already held as 'NWA Tech Summit' in Bentonville (2026 at The Ledger); it was in Fayetteville only for 2025."
+    },
+    {
+     "name": "fayetteville.js / nwa.codes",
+     "url": "https://www.meetup.com/fayettevillejs",
+     "verdict": "rejected",
+     "reason": "The Meetup events page returned no events; current activity not established."
+    },
+    {
+     "name": "OpenAI Build Week Hackathon - Fayetteville",
+     "url": "https://luma.com/1z24h4a2",
+     "verdict": "rejected",
+     "reason": "One-off sponsored hackathon (Jul 18 2026)."
+    },
+    {
+     "name": "AI in Agriculture Symposium hackathon",
+     "url": "https://uaex.uada.edu/media-resources/news/2026/august/08-27-2026-ai-in-ag-symposium.aspx",
+     "verdict": "unresolved",
+     "reason": "UA Division of Agriculture held it in Sep 2025 and Sep 2026 (Mullins Library); I did not read a standalone organiser event page for it in this pass, so it was not added."
+    }
+   ]
+  }
+ ]
+}

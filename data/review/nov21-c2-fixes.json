@@ -1,0 +1,6 @@
+[
+  { "match": { "name": "Taste of IT", "city": "Dayton" },
+    "action": "update",
+    "reason": "technologyfirst.wildapricot.org/toit: 'thank you for a great taste of it 2026! Save the date for next year - November 10, 2027'. 2026 edition was Nov 18, 2026 (already in last_date). Venue for 2027 not stated; left unchanged.",
+    "set": { "next_date": "2027-11-10", "next_date_end": "2027-11-10", "status": "upcoming" } }
+]

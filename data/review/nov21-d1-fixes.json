@@ -1,0 +1,258 @@
+[
+ {
+  "action": "add",
+  "reason": "hoohacks.io (organiser, UVA student group): page title 'HooHacks 2027', meta description 'Virginia's largest hackathon returns to the University of Virginia in 2027 ... Dates and theme to be announced.' No 2027 date yet. Last edition from the organiser's Devpost page hoohacks-2026.devpost.com: JSON-LD startDate 2026-03-21, endDate 2026-03-22, in person at the University of Virginia.",
+  "record": {
+   "name": "HooHacks",
+   "type": "hackathon",
+   "topics": [
+    "students",
+    "software"
+   ],
+   "city": "Charlottesville",
+   "region": "Virginia",
+   "country": "United States",
+   "venue": "University of Virginia",
+   "cadence": "annual",
+   "month": "March",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-03-21",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "university students of any major",
+   "url": "https://hoohacks.io",
+   "description": "Virginia's largest hackathon, a free 24-hour in-person build event run by UVA students and open to students of any major.",
+   "source": "https://hoohacks.io"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "be.camp (organiser): 'beCamp starts October 2-3 ... Join us in October of 2026', 20th anniversary, Fri Oct 2 reception and pitch night (The Poplar / UVA School of Data Science), Sat Oct 3 sessions at UVA School of Data Science, free, 165 registered. That edition has passed and no 2027 date is posted, so recurring-tbd with last_date 2026-10-02.",
+  "record": {
+   "name": "beCamp",
+   "type": "unconference",
+   "topics": [
+    "software",
+    "community"
+   ],
+   "city": "Charlottesville",
+   "region": "Virginia",
+   "country": "United States",
+   "venue": "UVA School of Data Science",
+   "cadence": "annual",
+   "month": "October",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-10-02",
+   "status": "recurring-tbd",
+   "attendance": "165",
+   "cost": "free",
+   "audience": "local technologists, developers, students",
+   "url": "https://be.camp",
+   "description": "Charlottesville's free two-day tech un-conference: a Friday reception and pitch night where attendees vote on topics, then a Saturday of self-organised sessions.",
+   "source": "https://be.camp"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "tomtomfoundation.org/innovation-summit (organiser, Tom Tom Foundation): 'April 22-23, 2027 in Charlottesville, VA - INNOVATION SUMMIT at the 15th Annual Tom Tom Festival', founders, investors, researchers; tracks on AI, biotech, energy, robotics, quantum; early-bird tickets on sale. Festival homepage gives April 21-25, 2027; the organiser's Humanitix listing repeats 'Innovation Summit | April 22 & 23'. Venue not yet published. 2026 summit dates not stated on the page, so last_date left blank.",
+  "record": {
+   "name": "Tom Tom Festival Innovation Summit",
+   "type": "summit",
+   "topics": [
+    "startups",
+    "venture-capital",
+    "ai",
+    "biotech"
+   ],
+   "city": "Charlottesville",
+   "region": "Virginia",
+   "country": "United States",
+   "venue": "",
+   "cadence": "annual",
+   "month": "April",
+   "next_date": "2027-04-22",
+   "next_date_end": "2027-04-23",
+   "last_date": "",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "paid",
+   "audience": "founders, investors, researchers, policymakers, students",
+   "url": "https://www.tomtomfoundation.org/innovation-summit",
+   "description": "Two-day innovation and entrepreneurship summit within Charlottesville's Tom Tom Festival, convening Virginia founders, investors and ecosystem leaders around emerging industries and startup capital.",
+   "source": "https://www.tomtomfoundation.org/innovation-summit"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "scitda40.wildapricot.org/Fall-Conference (organiser, SC Information Technology Directors Association): 'The 2027 Fall Conference will be held September 27 - 28, 2027 - Columbia Marriott.' Past conferences listed on the same page: 2026 Oct 5-6, 2025 Sep 29-30, 2024 Sep 23-24, 2023 Sep 18-19, all at the Columbia Marriott.",
+  "record": {
+   "name": "SCITDA Fall Conference",
+   "type": "conference",
+   "topics": [
+    "government-it",
+    "cybersecurity",
+    "ai"
+   ],
+   "city": "Columbia",
+   "region": "South Carolina",
+   "country": "United States",
+   "venue": "Columbia Marriott",
+   "cadence": "annual",
+   "month": "September",
+   "next_date": "2027-09-27",
+   "next_date_end": "2027-09-28",
+   "last_date": "2026-10-05",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "state and local government IT professionals, technology vendors",
+   "url": "https://scitda40.wildapricot.org/Fall-Conference",
+   "description": "The South Carolina IT Directors Association's two-day conference for state and local government IT staff and industry partners, with keynotes, an agency roundtable and agency and corporate presentations.",
+   "source": "https://scitda40.wildapricot.org/Fall-Conference"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "scgmis1.wildapricot.org/event-6735147 (organiser, SC GMIS chapter): 'its third annual Management, Innovation and Security (MIS) Conference has been scheduled for Aug. 6, 2026, at the Saluda Shoals River Center in Columbia, S.C.', 9am-4pm, members free, guests $75; topics AI literacy, IT compliance, SC Critical Infrastructure Cybersecurity. No 2027 date published.",
+  "record": {
+   "name": "SCGMIS Management, Innovation and Security Conference",
+   "type": "conference",
+   "topics": [
+    "government-it",
+    "cybersecurity",
+    "ai"
+   ],
+   "city": "Columbia",
+   "region": "South Carolina",
+   "country": "United States",
+   "venue": "Saluda Shoals River Center",
+   "cadence": "annual",
+   "month": "August",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-08-06",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "public-sector IT employees, managers and directors",
+   "url": "https://scgmis1.wildapricot.org/event-6735147",
+   "description": "One-day annual conference of the South Carolina chapter of GMIS for public-sector technologists, covering management, AI, compliance and cybersecurity.",
+   "source": "https://scgmis1.wildapricot.org/event-6735147"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "ocrs.uoregon.edu (organiser, University of Oregon): 'OCRS 2027 will be on October 6th, 2027! ... TIME: 8:30am to 5:45pm LOCATION: Erb Memorial Union (EMU), Level 2, Eugene, OR', with CISA, FBI, Oregon Titan Fusion Center and TAO. The site's Past Events page lists a Summit 2026; its date (Wednesday Oct 7, 2026) is from infosec-conferences.com JSON-LD startDate 2026-10-07, which matches the organiser's earlier front page as indexed.",
+  "record": {
+   "name": "Oregon Cyber Resilience Summit",
+   "type": "summit",
+   "topics": [
+    "cybersecurity",
+    "critical-infrastructure"
+   ],
+   "city": "Eugene",
+   "region": "Oregon",
+   "country": "United States",
+   "venue": "Erb Memorial Union, University of Oregon",
+   "cadence": "annual",
+   "month": "October",
+   "next_date": "2027-10-06",
+   "next_date_end": "2027-10-06",
+   "last_date": "2026-10-07",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "security practitioners, public-sector and critical-infrastructure staff, students",
+   "url": "https://ocrs.uoregon.edu/",
+   "description": "A one-day cybersecurity summit at the University of Oregon with CISA, the FBI and the Technology Association of Oregon on defending critical infrastructure and supply chains.",
+   "source": "https://ocrs.uoregon.edu/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "uark-acm.github.io/hoghacks (organiser, UARK ACM Student Chapter): 'Spring 2026 Hackathon! April 3 & 4 2026', 24-hour overnight competition at the J.B. Hunt Center for Academic Excellence, 227 N. Harmon Ave, Fayetteville; 'takes place every semester'. No later edition posted, so recurring-tbd with last_date 2026-04-03.",
+  "record": {
+   "name": "HogHacks",
+   "type": "hackathon",
+   "topics": [
+    "students",
+    "software"
+   ],
+   "city": "Fayetteville",
+   "region": "Arkansas",
+   "country": "United States",
+   "venue": "J.B. Hunt Center for Academic Excellence, University of Arkansas",
+   "cadence": "biannual",
+   "month": "April",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-04-03",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "students of any school, level or major",
+   "url": "https://uark-acm.github.io/hoghacks/",
+   "description": "The University of Arkansas ACM chapter's 24-hour overnight hackathon, held each semester, with teams judged by engineers from Northwest Arkansas companies.",
+   "source": "https://uark-acm.github.io/hoghacks/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "events.vtools.ieee.org/m/570373 (organiser, IEEE Computer Society Ozark section with UArk CyberHogs): '2026 Razorhack Cyber Competition', event time Nov 6 2026 6:00 PM to Nov 8 2026 1:00 PM CST at the J.B. Hunt Center for Academic Excellence, 227 N Harmon Ave, Fayetteville; teams of up to 4, $75-$100 including the CTF game, banquet and food. A 2025 edition exists at vtools m/495498. Next edition not yet posted.",
+  "record": {
+   "name": "Razorhack Cyber Competition",
+   "type": "ctf",
+   "topics": [
+    "cybersecurity",
+    "students"
+   ],
+   "city": "Fayetteville",
+   "region": "Arkansas",
+   "country": "United States",
+   "venue": "J.B. Hunt Center for Academic Excellence, University of Arkansas",
+   "cadence": "annual",
+   "month": "November",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-11-06",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "paid",
+   "audience": "students and security professionals in teams of up to four",
+   "url": "https://events.vtools.ieee.org/m/570373",
+   "description": "A weekend capture-the-flag cyber competition run by the IEEE Computer Society Ozark section and the University of Arkansas CyberHogs club, with an opening banquet.",
+   "source": "https://events.vtools.ieee.org/m/570373"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "startupjunkie.org/startup-crawl (organiser, Startup Junkie): 'Thank you, Startup Crawl 2026! ... packed the Fayetteville Square on September 25 ... See you next year! Get involved in 2027'; every fall, free, 70+ startups showing demos, 2,000+ attendees. No 2027 date yet.",
+  "record": {
+   "name": "Startup Crawl",
+   "type": "festival",
+   "topics": [
+    "startups",
+    "entrepreneurship"
+   ],
+   "city": "Fayetteville",
+   "region": "Arkansas",
+   "country": "United States",
+   "venue": "Fayetteville Square",
+   "cadence": "annual",
+   "month": "September",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-09-25",
+   "status": "recurring-tbd",
+   "attendance": "2000",
+   "cost": "free",
+   "audience": "founders, startup employees, investors, the public",
+   "url": "https://startupjunkie.org/startup-crawl/",
+   "description": "Startup Junkie's annual evening startup open house on the Fayetteville Square, where attendees hop between stops to meet Northwest Arkansas founders and see demos.",
+   "source": "https://startupjunkie.org/startup-crawl/"
+  }
+ }
+]

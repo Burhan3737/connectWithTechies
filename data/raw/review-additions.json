@@ -1457,16 +1457,16 @@
     "venue": "TriMain Center, 2495 Main Street Suite 454",
     "cadence": "monthly",
     "month": "Varies",
-    "next_date": "2026-11-19",
-    "next_date_end": "2026-11-19",
-    "last_date": "2026-10-22",
+    "next_date": "2026-12-17",
+    "next_date_end": "2026-12-17",
+    "last_date": "2026-11-19",
     "status": "upcoming",
     "attendance": "",
     "cost": "free",
     "audience": "game developers, artists, musicians, designers",
     "url": "https://www.meetup.com/buffalogamespace/",
     "description": "The monthly in-person gathering of Buffalo Game Space, a 501(c)(3) makerspace for game creators, where members discuss development techniques and show works in progress. Paired with a virtual project night and a virtual game developer hangout for the group's 1,290 members.",
-    "source": "https://www.meetup.com/buffalo-game-space/"
+    "source": "https://www.meetup.com/buffalogamespace/events/314417144/"
   },
   {
     "name": "43North Speaker Series",

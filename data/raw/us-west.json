@@ -3099,31 +3099,6 @@
     "source": "https://dev.events/NA/US/NV"
   },
   {
-    "name": "Vibe Coding Con",
-    "type": "conference",
-    "topics": [
-      "ai",
-      "developer-tools",
-      "software-development"
-    ],
-    "city": "Las Vegas",
-    "region": "Nevada",
-    "country": "United States",
-    "venue": "",
-    "cadence": "annual",
-    "month": "October",
-    "next_date": "2026-10-27",
-    "next_date_end": "2026-10-28",
-    "last_date": "",
-    "status": "upcoming",
-    "attendance": "",
-    "cost": "paid",
-    "audience": "developers, AI-assisted builders, founders",
-    "url": "https://vibecodingcon.ai",
-    "description": "A conference on AI-assisted software development practice - agentic coding tools, prompt-driven engineering and shipping software with LLMs.",
-    "source": "https://dev.events/NA/US/NV"
-  },
-  {
     "name": "Gartner Identity & Access Management Summit",
     "type": "summit",
     "topics": [

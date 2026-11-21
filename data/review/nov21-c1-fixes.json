@@ -1,0 +1,14 @@
+[
+  { "match": { "name": "AI Builder Lab Meetup", "city": "Sioux Falls" },
+    "action": "update",
+    "reason": "startupsiouxfalls.com/events/ai-builder-lab-meetup (organiser's own page): 'AI Builder Lab Meetup December 17, 2026 4:30pm - 6:00pm Startup Sioux Falls'; JSON-LD startDate 2026-12-17T16:30-06:00. The Nov 19, 2026 session has elapsed, so it moves to last_date in the same patch.",
+    "set": { "next_date": "2026-12-17", "next_date_end": "2026-12-17", "last_date": "2026-11-19", "status": "upcoming", "source": "https://www.startupsiouxfalls.com/events/ai-builder-lab-meetup" } },
+  { "match": { "name": "Buffalo Game Space Game Development Meeting", "city": "Buffalo" },
+    "action": "update",
+    "reason": "meetup.com/buffalo-game-space (group page Apollo state): next 'BGS Game Development (In-Person) Meeting', eventType PHYSICAL, 2026-12-17 19:00 EST at Buffalo Game Space, 2495 Main Street Suite #454 (event 314417144). The Dec 3 'Virtual game developer hangout' is ONLINE and was deliberately not taken. Nov 19 in-person meeting (event 314417097, PAST) moves to last_date.",
+    "set": { "next_date": "2026-12-17", "next_date_end": "2026-12-17", "last_date": "2026-11-19", "status": "upcoming", "source": "https://www.meetup.com/buffalogamespace/events/314417144/" } },
+  { "match": { "name": "Venture Café Phoenix Thursday Gathering", "city": "Phoenix" },
+    "action": "update",
+    "reason": "community.venturecafephoenix.org (organiser's event platform): events/251-256 are 'Closed for the Holidays' on every Thursday Nov 26 - Dec 31, 2026; events/257 is Thursday Gathering 'Founders Resource Night' Jan 7, 2027, 4:30-7:00 PM MST at 850 PBC. Nov 19, 2026 gathering (events/250) moves to last_date.",
+    "set": { "next_date": "2027-01-07", "next_date_end": "2027-01-07", "last_date": "2026-11-19", "status": "upcoming", "source": "https://community.venturecafephoenix.org/events/257" } }
+]

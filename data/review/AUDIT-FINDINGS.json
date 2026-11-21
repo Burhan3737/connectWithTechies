@@ -1,4 +1,15 @@
-{ "date": "2026-11-19", "iteration": 1,
-  "scope": "nov19 cycle: re-check c1/c2 (60 dispatched rows), returning-event discovery t1-t3, city discovery d1-d2 (46 adds), xaudit PASS rename",
-  "checked": "audit-run 0/0; organiser pages re-read for all 4 city changes (SANS DFIR, SHPE, Scrum Day Madison, Upscale Conf), 8 large date moves (Pearl Hacks, TigerHacks, Toronto Game Expo, Triangle InfoSeCon, Venture Atlanta, VCF Swap Meet, AI Tinkerers SD, PASS NA), 2 random confirmed rows and 19 new adds; no aggregator-sourced dates; open finding 2026-11-17-i1-W2 fixed by the rename",
-  "findings": [] }
+{ "date": "2026-11-21", "iteration": 1,
+  "scope": "nov21 cycle: recheck c1/c2/c3 (60 dispatched + 2 Techstars rows), discovery t1/t2/t3 and d1/d2 (22 adds, 1 removal), 15 organiser retirements, d1/d2 follows",
+  "checked": "audit-run 0/0; Vibe Coding Con removal (cancellation on ai-devcraft.com); re-dates HLTH USA, Florida Technology Summit, Vermont Tech Jam, VGLX, Taste of IT; confirmed MSPGeekCon, Hacktech, KCD Toronto, Pittsburgh Tech 50, Techstars Boston Demo Day; adds OCRS, SCITDA, Tom Tom, MakeCU, DTE Designathon, Swan Hacks, Hacktually; invite-only claims KTPHacks 2, Grizzly Hacks VII; 15 retirements; no aggregator-sourced next dates; no city changes",
+  "findings": [
+    { "severity": "warning",
+      "event": "Hack the Change (Calgary); HackED Beta (Edmonton); Immerse the Bay (Stanford); Opportunity Hack ASU Fall Hackathon (Tempe)",
+      "summary": "RETURNING rows added as recurring-tbd although the row is the 2026 edition just held and no next edition is announced. This contradicts the curator brief's RETURNING table and the oct31 TigerHacks ruling, which t1 applied correctly the same cycle (HackCamp, BADCamp, MakeUC, sunhacks, Simply Cyber Con declined). MakeCU, DTE Designathon, Swan Hacks and Hacktually are sound: the row's following edition was announced and held.",
+      "recommendation": "Revert the four add patches (nov21-t2 Hack the Change; nov21-t3 HackED Beta, Immerse the Bay, Opportunity Hack ASU Fall Hackathon) and record them as unresolved with a retry date. Alternatively the orchestrator removes the gate from curator.md, since DISCOVER rows have none and d1/d2 added 8 such records; in that case keep the four and add t1's five. Either way, apply one rule to both sections.",
+      "repeat_of": "" },
+    { "severity": "warning",
+      "event": "Analytics for Good Hackathon (Minneapolis); curator brief (single-institution events)",
+      "summary": "Ruling: t2/t3 were right to reject hackathons open only to one institution's students (verified on KTPHacks 2 and Grizzly Hacks VII; consistent with 8+ earlier rejections). The brief does not state this rule, and the oct31-d2 add Analytics for Good Hackathon breaks it: its organiser page says it is open only to University of Minnesota Twin Cities and Duluth students. That page also announces January 29-30, 2027, while the record still shows recurring-tbd.",
+      "recommendation": "Add to curator.md: an event open only to one institution's students or members is rejected as not publicly attendable, and Devpost 'Invite only' alone is not the test. Remove Analytics for Good Hackathon under that rule, or if it is kept, set next_date 2027-01-29, next_date_end 2027-01-30, status upcoming.",
+      "repeat_of": "" }
+  ] }
