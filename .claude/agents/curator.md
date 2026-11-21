@@ -36,6 +36,7 @@ site (the `url` is often a Devpost or MLH page, not the organiser's), then:
 | next edition announced, with dates | `added` | an `add` patch with the dates |
 | next edition announced, no dates yet | `added` | an `add` with `next_date: ""`, `status: "recurring-tbd"`, `last_date` from the row |
 | ended for good, site gone or squatted, outside the US/Canada, or online-only | `rejected` | nothing; give the reason |
+| closed to everyone outside one institution's enrolment ("must be a student at …") | `rejected` | nothing; quote the eligibility line. Devpost's "Invite only" label alone is not this — an event taking applicants from any college is open |
 | already in `data/events.json` under another name or city | `exists` | nothing; say which record |
 | cannot be settled | `unresolved` | nothing; say what you tried |
 
