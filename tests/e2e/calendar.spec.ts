@@ -317,7 +317,8 @@ test.describe('Calendar view', () => {
     let target: string | null = null;
     for (const type of ['hackathon', 'conference', 'workshop', 'ctf', 'game-jam', 'summit', 'meetup']) {
       await openBoard(page, `view=calendar&type=${type}`);
-      const busy = await page.locator('.cal__day.has-ev').evaluateAll((els) => els.map((e) => e.getAttribute('data-day')!));
+      // The offer only looks within the opened month, so the next-month days that pad the last week don't count.
+      const busy = await page.locator('.cal__day.has-ev:not(.is-out)').evaluateAll((els) => els.map((e) => e.getAttribute('data-day')!));
       const quietToday = !busy.includes(t);
       const later = busy.filter((d) => d > t).sort()[0];
       if (quietToday && later) { target = later; break; }
