@@ -1,15 +1,13 @@
-# Audit report — 2026-11-21
+# Audit report — 2026-11-24
 
-**Verdict: 2 DISCREPANCIES** (0 blocking, 2 warnings)
+**Verdict: 1 DISCREPANCY** (0 blocking, 1 warning, a repeat of a deferred policy finding)
 
-Scope: nov21 cycle. Recheck passes nov21-c1/c2/c3 (60 dispatched rows plus the two Techstars
-Demo Day rows), discovery passes nov21-t1/t2/t3 (RETURNING) and nov21-d1/d2 (city search),
-which made 22 adds and 1 removal, 15 organiser retirements (sources-nov21-review.json) and the
-new follows in sources-nov21-d1/d2.json.
+Scope: nov24 cycle. Script refresh, then 60 re-check rows (nov24-c1/c2/c3), 10 DISCOVER cities
+(nov24-d1/d2) and 75 RETURNING rows (nov24-t1/t2/t3). 41 updates, 45 adds and 1 removal were applied.
 
-Mechanical audit (agent/tools/audit-run.mjs): 0 blocking, 0 warnings. 1147 -> 1168 curated
-events; the one removal carries a reason; 60/60 dispatched rows have a ledger entry; 22/22 new
-or changed links resolve; no duplicates, malformed dates or feed-delisting spikes.
+Mechanical audit (`audit-run.mjs`): 0 blocking, 0 warnings. 1168 -> 1212 curated events, 1 gone (with a
+reason), 60/60 dispatched rows have a ledger entry, 49/49 new or changed links resolve, no unexplained
+re-dates, no feed delistings over threshold, no duplicates, no internal-consistency errors.
 
 ## Blocking
 
@@ -17,109 +15,98 @@ None.
 
 ## Warnings
 
-- **Hack the Change (Calgary), HackED Beta (Edmonton), Immerse the Bay (Stanford), Opportunity
-  Hack ASU Fall Hackathon (Tempe)**: these are RETURNING adds made as recurring-tbd when no next
-  edition is announced. This goes against the curator brief and the oct31 TigerHacks ruling.
-  The brief's RETURNING table (.claude/agents/curator.md) adds a row only when the "next
-  edition [is] announced", with or without dates. On oct31 the orchestrator applied that rule to
-  TigerHacks 2025: "described as annual but no 2026 edition announced (curator brief: add only
-  when announced)" (discover-oct31-r1.json). Each of these four rows *is* the 2026 edition, and
-  that edition has just run. Its page announces nothing after it:
-  - hack-the-change-2026.devpost.com: "November 7-8th", University of Calgary.
-  - hacked-beta-2026.devpost.com: "Friday, November 13 to Sunday, November 15, 2026".
-  - immerse-the-bay-2026.devpost.com: "November 13-15, 2026".
-  - ohack.dev/hack/fall-2026: "Nov 14-15".
-
-  t1's declines were in exactly this position, and t1 applied the rule correctly: HackCamp
-  ("November 7-8, 2026", no 2027), BADCamp ("November 12-13, 2026", nothing on 2027), MakeUC,
-  sunhacks and Simply Cyber Con. **Ruling: t1 is right and the four t2/t3 adds are wrong.**
-
-  This is a warning, not blocking. The four records are accurate: real annual events with a
-  true last_date and no invented next_date. The problem is that one rule was applied two ways in
-  the same cycle.
-
-  The other contested adds are sound because the row's following edition was announced and
-  has since been held. That is a stronger signal than an announcement:
-  - MakeCU: the row is 2025; makecu.dev shows 2026, Nov 7-8.
-  - Dream Team Engineering Designathon: the row is 2025; the 2026 edition ran Oct 3-4.
-  - Swan Hacks: the row is Fall 2025; Spring 2026 ran May 2-3.
-  - Hacktually: the row is 2025; the 2026 edition ran Oct 24.
-  - DevFest Montreal: announces a 2027 edition for early November.
-  - Cutie Hack: dated Nov 21, 2026.
-
-  **Action:** revert the four add patches (nov21-t2: Hack the Change; nov21-t3: HackED Beta,
-  Immerse the Bay, Opportunity Hack ASU Fall Hackathon). Record them as "unresolved" with a
-  retry date, as t1 did.
-
-  Note for the orchestrator: the DISCOVER section of the brief has no announcement gate. This
-  cycle d1/d2 legitimately added 8 records of the same kind (beCamp, SCGMIS, HogHacks,
-  Razorhack, Startup Crawl, ProfHacks, Florida Startup Summit, AI Tinkerers Fort Wayne), and
-  TigerHacks itself reached the data through nov17-d2. If the gate is not wanted, amend the
-  RETURNING table in curator.md instead. In that case keep the four adds and add t1's five.
-  Either way, the rule should be applied the same way in both sections.
-
-- **Single-institution "invite-only" hackathons (ruling) / Analytics for Good Hackathon
-  (Minneapolis)**: t2 and t3 rejected hackathons that only one school's enrolled students may
-  enter. **Ruling: the rejections are right.** The directory is for events a reader can
-  physically attend, and an event closed to everyone outside one school's enrolment is not one
-  of them.
-
-  The claims hold. Devpost shows "Invite only" next to institution-only eligibility:
-  - KTPHacks 2: "Must be a student at Virginia Tech".
-  - Grizzly Hacks VII: "GGC Students (Or those who have been approved)".
-
-  Earlier passes rejected events on this ground at least 8 times: UD Honors CISC106,
-  HackASU 2025, KU WiC Hack Days, VizQuest (UTD), Figma Make-a-thon Waterloo, KU IPC and the
-  Fitch codeathons.
-
-  Two gaps remain:
-  1. The brief does not state the rule. Devpost's "Invite only" label is not the test by itself.
-     Dream Team Engineering Designathon is "Invite only" for "Designathon attendees, college
-     students only, US only", which means accepted applicants from any college. That is open,
-     and t3 rightly kept it.
-  2. One curated record breaks the rule. **Analytics for Good Hackathon (Minneapolis)** was
-     added in oct31-d2. carlsonschool.umn.edu/conferences/agihackathon says "This event is open
-     to undergraduate and graduate students from the University of Minnesota's Twin Cities and
-     Duluth campuses". The same page also announces "January 29-30, 2027", while the record
-     still shows recurring-tbd with next_date blank.
-
-  **Action:**
-  - Add a line to curator.md: an event open only to one institution's students or members is
-    "rejected" as not publicly attendable; Devpost "Invite only" alone is not the test.
-  - Remove Analytics for Good Hackathon under that rule. If the orchestrator decides to keep it
-    instead, set next_date 2027-01-29 and next_date_end 2027-01-30, status upcoming.
+- **RETURNING adds with no announced next edition (repeat of 2026-11-21-i1-W1, still deferred to owner)**
+  - **What is wrong:** t1/t2/t3 added about 14 RETURNING rows as `recurring-tbd` even though each
+    organiser's page shows only the edition that just ran. The curators' own reasons say "no 2027 date",
+    "no 2027 edition announced" or similar for each one:
+    - t1: Memphis Microsoft Community Days, Power BI Days DC, State of the Map US, Beam Summit, UN Open
+      Source Week, AWS Community Day Midwest, IEEE Cloud Summit, The Perl and Raku Conference.
+    - t2: Summercon, SciPy, MY Hackathon. Denver Dev Day ("COMING SOON!") is borderline.
+    - t3: Chain React, M365 Community Days NYC, Secure Carolinas Conference.
+  - **Why it matters:** curator.md's RETURNING table allows `added` / `recurring-tbd` only when "next
+    edition announced, no dates yet". The same curators did not apply one rule:
+    - t1 marked AWS Community Day - East Canada and Accelerate Chicago `unresolved` because no 2027
+      edition was announced, but added Power BI Days DC and IEEE Cloud Summit on the same facts.
+    - SciPy (Tacoma 2025, Minneapolis 2026), State of the Map US (a new US city every year), AWS Community
+      Day Midwest (Milwaukee 2025, Indianapolis 2026) and TPRC (Las Vegas 2024, Greenville 2025-26) are
+      rotating events. Each is now pinned to its last host city with no next city known. Meanwhile t2
+      rejected AlmaLinux Day, bitcoin++ and Worlds in Action Hack as "one-time city stop of a rotating
+      series".
+  - **What I checked:** the dates and cities in these records are true as historical facts. I found
+    nothing fabricated. This is the policy gap the 2026-11-21 audit raised and the owner deferred.
+  - **What to do:** the owner decides one rule for both RETURNING and DISCOVER:
+    - **(a) Keep the gate:** revert the adds listed above and record them `unresolved` with a retry date.
+    - **(b) Drop the gate in curator.md:** keep them, and add a line telling curators how to place a
+      rotating-city event that has no announced next host. Either leave it unplaced or leave it out.
+      Do not pin it to the last host city.
 
 ## Checked and sound
 
-- **Removal: Vibe Coding Con (Las Vegas).** vibecodingcon.ai 301s to ai-devcraft.com, which reads
-  "the difficult decision has been made to cancel the 2026 Ai Dev Craft conference" for
-  Oct 27-28, 2026, Red Rock Resort. The removal reason holds.
-- **Large date moves, re-read on organiser pages:**
-  - HLTH USA: "October 17 - 20, 2027 | The Venetian Expo Center"; the month change to October is right.
-  - Florida Technology Summit: "November 18th, 2027 at the Hilton St. Petersburg Carillon Park".
-  - Vermont Tech Jam: "October 23, 2027".
-  - VGLX: "October 16 - 17, 2027 ... Hall 4, The International Centre, Mississauga".
-  - Taste of IT: "Save the date for next year - November 10, 2027".
-- **Confirmed rows sampled:**
-  - MSPGeekCon: JSON-LD 2027-05-23/25.
-  - Hacktech: JSON-LD 2027-02-26/28.
-  - KCD Toronto: page still shows May 13, 2026, so it stays recurring-tbd.
-  - Pittsburgh Tech 50 Awards: Tech50_2026_1 gives November 19, 2026, and no 2027 is listed.
-  - Techstars Boston Demo Day: the timeline reads "Jun 03 2027 Demo Day". The proposed move to
-    2027-03-08, which is the accelerator start, was rightly rejected.
-- **New adds re-read:**
-  - Oregon Cyber Resilience Summit: "October 6th, 2027", EMU, Eugene.
-  - SCITDA Fall Conference: "September 27 - 28, 2027 - Columbia Marriott".
-  - Tom Tom Innovation Summit: "April 22-23, 2027".
-  - The four contested t2/t3 Devpost pages, for dates, venues and public eligibility.
-  - t1's HackCamp and BADCamp pages: nothing about 2027.
-- **No aggregator-sourced next dates** among the 22 adds. Oregon Cyber Resilience Summit took
-  its last_date from infosec-conferences.com, but the organiser's page backs that edition and
-  its next_date comes from the organiser.
-- **No city changes** this cycle. Curated coverage only grew (+21 net).
-- **Retirements:** all 15 organisers in sources-nov21-review.json are clearly non-tech by their
-  own descriptions (walking club, indie-rock group, matchmaking, philosophy reading group, chess
-  hall arts programming, PEO civil and structural talks, and so on). Only 3 feed events left
-  with them.
-- **Follows** in sources-nov21-d1/d2.json are in-person tech groups in the cities that lacked
-  them (Charlottesville, Columbia SC, Eugene, NWA, Fort Wayne, Gainesville).
+I checked these against the organisers' own pages, so the next auditor does not need to repeat them.
+
+- **Removal: Central Ohio Software Symposium (Columbus).** Holds up.
+  - nofluffjuststuff.com/columbus still shows "Sep 29 - Oct 1, 2023" (JSON-LD 2023-09-29).
+  - /conference/columbus/2025/04/canceled reads "the Central Ohio Software Symposium scheduled for
+    April 11 - 12, 2025 has been canceled".
+  - The removed 2026-04-10 last_date had no organiser support.
+- **Django Girls New York City.** The Nov 27-28 2026 -> May 7-8 2027 move is correct.
+  - djangogirls.org/en/nyc/ reads "May 7th & 8th, 2027 at Fractal Tech Hub, 111 Conselyea St, Brooklyn".
+  - The /en/events/ listing reads "New York City 8th May 2027".
+  - The old /en/newyorkcity/ source has no Wayback capture, and no Nov 2026 NYC edition is listed.
+- **Tech Alley Vegas.** meetup.com/tech-alley JSON-LD gives 2026-12-19T18:00Z to 2026-12-20T00:00Z
+  ("Tech Alley Vegas December 2026 Event", Third Street). last_date 2026-11-21 is carried correctly.
+- **City change: SC Conference (Supercomputing), Chicago -> Denver.**
+  - sc27.supercomputing.org/all-dates-deadlines/ reads "Program Sunday-Friday 14-19 November 2027".
+  - The SC27 home page reads "Explore our host city, Denver" and names the Colorado Convention Center.
+- **City change: BSides SLC, Salt Lake City -> Sandy.** bsidesslc.org reads "BUY TICKETS May 6-7, 2027"
+  and gives the venue as "Conference Center at Miller Campus, 9750 S 300 W Sandy, Utah 84070". The
+  "March 26, 2027" on the same page is BSides Red Rocks and was correctly ignored.
+- **City change: CDAO New York (added in Hoboken).** The organiser's pages read "JOIN US April 14, 2027,
+  W Hoboken" and give the venue as "W Hoboken 225 River St Hoboken, New Jersey 07030".
+- **City change: BSDCan (added in Vancouver).** bsdcan.org/2027/ reads "BSDCan 2027 July 7 - 11, 2027
+  Vancouver, Canada".
+- **Microsoft Ignite.** The banner reads "Mark your calendar: Microsoft Ignite in San Francisco, November
+  16-19, 2027".
+- **Live! 360 Tech Con.** The orlando-2027 page reads "November 14-19, 2027".
+- **BSides MKE.**
+  - bsidesmke.org reads "March 26, 2027".
+  - Its ticket block still says "Sept 2027". That contradiction is on the organiser's own page.
+  - sessionize.com/CypherCon2027 independently reads "BSidesMKE March 26, 2027", so March 26 is right.
+- **BSidesKC.** bsideskc.org reads "April 24, 2027" and gives "7250 State Ave, Kansas City KS". BSides KC
+  and BSidesKC are two raw records that build merges into one, which is why APPLIED.md shows the patch
+  twice. The same applies to the doubled BSides MKE line.
+- **BSides San Diego.** bsidessd.org reads "Saturday, March 27, 2027, Location 6075 Aztec Circle Dr".
+- **Confirmed rows sampled at random:**
+  - All Things Open: "Save the date for All Things Open 2027! Join us in Raleigh, NC October 17-19".
+  - Florida Startup Summit: Luma JSON-LD 2026-10-09, Reitz Union.
+  - East Meets West: JSON-LD 2026-04-08/09, no 2027 date.
+  - AI Tinkerers Fort Wayne: JSON-LD latest 2026-10-21, none after it.
+  - QCon San Francisco: the 2027 dates on its page are QCon London and QCon AI Boston, not SF, so
+    `recurring-tbd` is right.
+  - Cutie Hack: "November 21, 2026".
+- **New adds checked on organiser pages:**
+  - GrrCON: "September 16th and 17th, 2027", DeVos Place.
+  - Tech Week Grand Rapids: "tech week 2027 9.13 - 9.18". The 2026 JSON-LD gives 2026-09-14/19.
+  - Blastoff Rails: "June 10 - 11, 2027".
+  - ÜberConf: JSON-LD 2027-07-13/16.
+  - PA TechCon: "08.12.2027".
+  - HU Data Analytics Summit: "4/29/2027".
+  - Stevens Innovation Expo: JSON-LD 2027-05-07.
+  - ISU Startup Factory Demo Day: JSON-LD 2026-12-08 17:30, ISU Research Park.
+  - Community College Cyber Defense Challenge: "December 4-5, 2026". The page reads "open to any
+    community college in Iowa and surrounding states", and the ISU-only CDCs were correctly left out.
+  - AI in Finance Summit NY: "April 12-13, 2027".
+  - Perl Community Conference: "December 17-18, 2026, Austin, Texas and online ... Join us in person".
+  - swampUP: JSON-LD 2026-09-01/03, "Waitlist for 2027".
+  - DC864: monthly, hybrid with an in-person meeting. Its latest post is still Sep 3.
+- **Eligibility note, not a finding: MY Hackathon (Gaithersburg).** The Devpost rules read "Open to Muslim
+  high school, college, and university students". This is an identity-community audience, like Django
+  Girls (women). It is not a single-institution enrolment limit. The record discloses it in `audience`.
+  It is a candidate for the W1 revert only because no 2027 edition is announced.
+- **Aggregators:** no curated record changed this run cites dev.events, 10times, Eventbrite search or MLH
+  as its `source`. Every new date comes from an organiser page.
+- **Coverage:** the only curated city or state losses are the three explained moves above: Columbus -1
+  (removal), Chicago -1 (SC moved to Denver), Salt Lake City -1 (BSides SLC moved to Sandy). No feed
+  region lost more than 20% of its non-past records.
+- **Duplicates:** none of the 45 adds collides with an existing record under another name. The 6 new
+  organiser follows are in-person groups, and their online-only series are named for the feed to drop.

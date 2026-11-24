@@ -1,0 +1,142 @@
+[
+ {
+  "name": "Tech Alley Vegas",
+  "city": "Las Vegas",
+  "status": "corrected",
+  "cycle": "nov24-c1",
+  "evidence": "meetup.com/tech-alley (organiser's Meetup group): Nov 21 2026 edition matches last_date; next event 'Tech Alley Vegas December 2026 Event' Sat Dec 19 2026 10 AM PST at Third Street, 814 S 3rd St, Las Vegas (JSON-LD startDate 2026-12-19T18:00Z, OfflineEventAttendanceMode). Record had next_date empty / recurring-tbd; patched next_date 2026-12-19, status upcoming. Jan 16 2027 also listed."
+ },
+ {
+  "name": "AI Tinkerers Fort Wayne",
+  "city": "Fort Wayne",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "fort-wayne.aitinkerers.org JSON-LD: most recent event 'AI Tinkerers Fort Wayne: October 2026 Meetup' startDate 2026-10-21T18:00-04:00, OfflineEventAttendanceMode, 3201 Stellhorn Road, Fort Wayne, IN; earlier 2026 events Feb 21, May 16, Jul 25 (quarterly-ish). City nav reads 'Fort Wayne Last: 4w ago' with no next event, so recurring-tbd with last_date 2026-10-21 is correct."
+ },
+ {
+  "name": "beCamp",
+  "city": "Charlottesville",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "be.camp (organiser): 'October 2-3 in Charlottesville, VA ... Join us in October of 2026', Fri Oct 2 reception/pitch night, Sat Oct 3 sessions at UVA School of Data Science, free, 165 peers. That edition has passed and no 2027 date is posted, so last_date 2026-10-02 / recurring-tbd is correct."
+ },
+ {
+  "name": "DevFest Montréal",
+  "city": "Montreal",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "devfest.gdgmontreal.com/fr/ (GDG Montréal): '8e Édition · 6 novembre 2026 · Merci Montréal !', Espace Ax.c, 800 Square-Victoria, 368 tickets sold; 'Édition 2027 · Rendez-vous au début novembre de l'an prochain' with no 2027 date. last_date 2026-11-06, recurring-tbd correct."
+ },
+ {
+  "name": "Dream Team Engineering Designathon",
+  "city": "Gainesville",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "dte-designathon-2026.devpost.com (organiser's Devpost): JSON-LD startDate 2026-10-03, endDate 2026-10-04, 'Oct 3 – 4, 2026, University of Florida - Newell Hall', schedule 10/3 12 PM to 10/4 12 PM. In person. Labelled 'Invite only' / 'College students only, US only' but the rules page has no UF-only eligibility line. No 2027 edition on Devpost (search shows 2022-2026 only). last_date 2026-10-03, recurring-tbd correct."
+ },
+ {
+  "name": "Florida Startup Summit",
+  "city": "Gainesville",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "luma.com/onesixone-6gbz (OneSixOne Ventures, the organiser): 'Florida Startup Summit 2026', JSON-LD startDate 2026-10-09T10:00-04:00, endDate 16:00, 'Rion Ballroom in the Reitz Student Union', 4th annual, $25, marked Past Event with 334 went. Matches last_date 2026-10-09 and venue; no 2027 edition posted, recurring-tbd correct."
+ },
+ {
+  "name": "Hack the Change",
+  "city": "Calgary",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "hack-the-change-2026.devpost.com (Code the Change YYC's Devpost): JSON-LD startDate 2026-11-07, endDate 2026-11-08, 'Nov 7 – 8, 2026', University of Calgary campus, hybrid with in-person component, 204 participants. codethechangeyyc.ca/events is stale (still shows 'Hack the Change 2025') and gives no 2027 date. last_date 2026-11-07, recurring-tbd correct."
+ },
+ {
+  "name": "HackED Beta",
+  "city": "Edmonton",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "hacked-beta-2026.devpost.com (UAlberta Computer Engineering Club): 'runs from Friday, November 13 to Sunday, November 15, 2026, in person at the U of A campus', banner 'Nov 13 – 14, 2026, University of Alberta - UComms', ended. Matches last_date 2026-11-13; no later edition on Devpost, recurring-tbd correct."
+ },
+ {
+  "name": "Hacktually",
+  "city": "Merced",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "hacktually-hack-day-hackmerced.devpost.com (HackMerced): 'Oct 24, 2026, COB2 110', check-in 10 AM 10/24, closing ceremony 9:30 PM, 'Located at UC Merced', ended. Matches last_date 2026-10-24 (previous edition Hacktually 2025 Nov 8 2025 per Devpost). No later edition posted, recurring-tbd correct."
+ },
+ {
+  "name": "HogHacks",
+  "city": "Fayetteville",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "uark-acm.github.io/hoghacks (UARK ACM): 'Spring 2026 Hackathon ... April 3 & 4 2026', J.B. Hunt Center for Academic Excellence, 227 N. Harmon Ave, Fayetteville; open to students of any school. Site says it runs every semester, but no fall 2026 edition is published there, on Devpost, or found by web search. last_date 2026-04-03, recurring-tbd correct."
+ },
+ {
+  "name": "HooHacks",
+  "city": "Charlottesville",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "hoohacks.io (organiser): title 'HooHacks 2027', meta description 'returns to the University of Virginia in 2027 ... Dates and theme to be announced.' Last edition hoohacks-2026.devpost.com Mar 21-22 2026 at UVA (Devpost search). Not on MLH 2027 season list. last_date 2026-03-21, recurring-tbd correct."
+ },
+ {
+  "name": "Immerse the Bay",
+  "city": "Stanford",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "immerse-the-bay-2026.devpost.com (Stanford XR): 'Join Stanford XR at Stanford University on November 13–15, 2026', place Stanford University, 450 Jane Stanford Way, organizer Stanford XR, in person, ended. Matches last_date 2026-11-13. stanfordxr.org still shows the 2025 edition (Nov 14-16, 2025), no 2027 date. recurring-tbd correct."
+ },
+ {
+  "name": "MakeCU",
+  "city": "New York",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "makecu.dev (Columbia University Robotics Club): 'MakeCU 2026', 'November 7-8, 2026', Carleton Commons, in-person hardware hackathon; Devpost makecu2026 agrees (Nov 07-08 2026, Carleton Commons at Mudd Building). Matches last_date 2026-11-07; no 2027 date, recurring-tbd correct."
+ },
+ {
+  "name": "Opportunity Hack ASU Fall Hackathon",
+  "city": "Tempe",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "ohack.dev/hack/fall-2026 (Opportunity Hack): title 'ASU Fall Hackathon 2026 ... Nov 14-15 - Engineering Center G Wing 501 E Tyler Mall Tempe, AZ 85281'; ohack.dev/hack JSON-LD startDate 2026-11-14T09:00, endDate 2026-11-15T18:00. Matches last_date 2026-11-14 and venue; next fall edition not posted, recurring-tbd correct."
+ },
+ {
+  "name": "ProfHacks",
+  "city": "Glassboro",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "profhacks.rowanieee.org (Rowan IEEE): page title 'ProfHacks 2026 - Space Cowboys', JS bundle carries 'March 20–21, 2026'. Matches last_date 2026-03-20; Devpost history (2016-2025, all Rowan University) shows a Feb/Mar annual pattern. No 2027 date published and not on MLH 2027 list, recurring-tbd correct."
+ },
+ {
+  "name": "Razorhack Cyber Competition",
+  "city": "Fayetteville",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "events.vtools.ieee.org/m/570373 (IEEE CS Ozark section, organiser): '2026 Razorhack Cyber Competition', date/time fragment 'Event: 06 November 2026 06:00 PM' to '08 November 2026 01:00 PM' CST, at J.B. Hunt Center for Academic Excellence, 227 N Harmon Ave, Fayetteville; $75/$100 fee. Matches last_date 2026-11-06 (the 31 Jul-2 Nov dates on the page are the registration window). No 2027 posting, recurring-tbd correct."
+ },
+ {
+  "name": "SCGMIS Management, Innovation and Security Conference",
+  "city": "Columbia",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "scgmis1.wildapricot.org/event-6735147 (SCGMIS): 'When 06 Aug 2026 9:00 AM - 4:00 PM, Location Saluda Shoals River Center', 'third annual ... Aug. 6, 2026 ... Columbia, S.C.', registration closed. SCGMIS events page shows 'No upcoming events'. last_date 2026-08-06, recurring-tbd correct."
+ },
+ {
+  "name": "Startup Crawl",
+  "city": "Fayetteville",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "startupjunkie.org/startup-crawl (Startup Junkie): 'Thank you, Startup Crawl 2026! ... packed the Fayetteville Square on September 25 ... See you next year!' and 'Get involved in 2027', no 2027 date. Matches last_date 2026-09-25, venue Fayetteville Square, recurring-tbd correct."
+ },
+ {
+  "name": "Swan Hacks",
+  "city": "Ames",
+  "status": "confirmed",
+  "cycle": "nov24-c1",
+  "evidence": "swan-hacks-spring-2026.devpost.com (Iowa State Hackathon Club): JSON-LD startDate 2026-05-02, endDate 2026-05-03, Coover Hall TLA (Room 1313), in person. Devpost history: Nov 2024, Nov 15-16 2025, May 2-3 2026; no fall 2026 edition on Devpost (swan-hacks-fall-2026 / swan-hacks-2026 404) and none in web search; hackclub.ece.iastate.edu page is stale (Nov 16-17, 2024). last_date 2026-05-02, recurring-tbd correct; worth re-checking in case a fall 2026 edition surfaces late."
+ },
+ {
+  "name": "Django Girls New York City",
+  "city": "New York",
+  "status": "corrected",
+  "cycle": "nov24-c1",
+  "evidence": "djangogirls.org/en/nyc/ (the workshop's own page): 'May 7th - 8th, 2027 ... at Fractal Tech Hub, 111 Conselyea St, Brooklyn', Fri May 7 2027 install party, Sat May 8 2027 workshop, applications close April 17th 2027; djangogirls.org/en/events/ lists 'New York City 8th May 2027'. Stored Nov 27-28 2026 dates appear on neither page. Patched next_date 2027-05-07, end 2027-05-08, month May; source /en/newyorkcity/ was a 404, replaced with /en/nyc/."
+ }
+]

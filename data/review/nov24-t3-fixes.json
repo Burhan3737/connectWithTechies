@@ -1,0 +1,150 @@
+[
+  {
+    "action": "add",
+    "reason": "RETURNING row 'Chain React 2026'. chainreactconf.com (organiser, Infinite Red/Expo/React Foundation): '6th annual, Portland, Oregon', July 30-31 2026 at The Armory, workshops July 29; annual since 2017. Site still shows 2026 and announces no 2027 date. Added as 'Chain React', recurring-tbd, last_date 2026-07-29.",
+    "record": {
+      "name": "Chain React",
+      "type": "conference",
+      "topics": [
+        "react-native",
+        "mobile",
+        "javascript"
+      ],
+      "city": "Portland",
+      "region": "Oregon",
+      "country": "United States",
+      "venue": "The Armory",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-29",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "React Native and mobile developers",
+      "url": "https://chainreactconf.com/",
+      "description": "The US React Native conference, hosted by Infinite Red, Expo and the React Foundation: a day of hands-on workshops followed by two days of talks from teams at Meta, Expo, Amazon and others.",
+      "source": "https://chainreactconf.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'M365 Community Days NYC'. communitydays.org/event/2026-07-31/m365-community-days-nyc: July 31 2026, Microsoft, 11 Times Square, in person. Annual: 2024 edition (July 26, Microsoft Times Square, MVP blog recap on techcommunity.microsoft.com) and 2025 (July 25). No 2027 listing yet. Added recurring-tbd, last_date 2026-07-31.",
+    "record": {
+      "name": "M365 Community Days NYC",
+      "type": "conference",
+      "topics": [
+        "microsoft 365",
+        "copilot",
+        "power platform",
+        "ai"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "Microsoft, 11 Times Square",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-31",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "IT pros, developers, Microsoft 365 admins and business users",
+      "url": "https://www.communitydays.org/event/2026-07-31/m365-community-days-nyc",
+      "description": "A volunteer-run, low-cost day of Microsoft 365 sessions across six tracks (Copilot and AI, modern work, BI, development, IT admin), with MVP speakers and sponsors at Microsoft Times Square.",
+      "source": "https://www.communitydays.org/event/2026-07-31/m365-community-days-nyc"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'Tulsa AWS Community Day'. awsdaytulsa.com (JS bundle): 'Thank You, Tulsa! - Tulsa AWS Community Day 2026', Saturday, August 22, 2026; 'Planning for Tulsa AWS Community Day 2027 begins this fall' (2027 announced, no date). Venue OSU-Tulsa Conference Center per the organiser's Sessionize CFP. Added recurring-tbd, last_date 2026-08-22.",
+    "record": {
+      "name": "Tulsa AWS Community Day",
+      "type": "conference",
+      "topics": [
+        "aws",
+        "cloud",
+        "ai",
+        "security"
+      ],
+      "city": "Tulsa",
+      "region": "Oklahoma",
+      "country": "United States",
+      "venue": "OSU-Tulsa Conference Center",
+      "cadence": "annual",
+      "month": "August",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-08-22",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "cloud practitioners, developers, architects, students",
+      "url": "https://awsdaytulsa.com/",
+      "description": "A volunteer-run, one-day AWS community conference with technical tracks on cloud, generative AI and security, plus career sessions, first held in 2026.",
+      "source": "https://awsdaytulsa.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row '2026 Secure Carolinas Conference'. aegisx.events (organiser) and its Sessionize CFP: 2026 Secure Carolinas Conference, Aug 26-27 2026, Roam Center, downtown Greenville SC, 350+ attendees. CyberSC's site has photo galleries for the 2024, 2025 and 2026 conferences (annual). No 2027 announced. Added as 'Secure Carolinas Conference', Greenville, recurring-tbd, last_date 2026-08-26.",
+    "record": {
+      "name": "Secure Carolinas Conference",
+      "type": "conference",
+      "topics": [
+        "cybersecurity",
+        "ai",
+        "supply chain"
+      ],
+      "city": "Greenville",
+      "region": "South Carolina",
+      "country": "United States",
+      "venue": "Roam Center",
+      "cadence": "annual",
+      "month": "August",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-08-26",
+      "status": "recurring-tbd",
+      "attendance": "350",
+      "cost": "varies",
+      "audience": "security leaders, practitioners, CISOs",
+      "url": "https://aegisx.events/",
+      "description": "A two-day regional cybersecurity conference for the manufacturing, energy, technology and healthcare sectors, with keynotes, panels, technical sessions, workshops and an exhibitor floor.",
+      "source": "https://aegisx.events/event/2026-secure-carolinas-conference/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "RETURNING row 'swampUP 2026'. swampup.jfrog.com JSON-LD: swampUP 2026, startDate 2026-09-01, endDate 2026-09-03, The Glasshouse, 660 12th Ave, New York, in person (OfflineEventAttendanceMode). Page says 'MEET US NEXT YEAR - Join the Waitlist for JFrog swampUP 2027', no date or city. Added recurring-tbd in New York (last host city), last_date 2026-09-01.",
+    "record": {
+      "name": "swampUP",
+      "type": "conference",
+      "topics": [
+        "devops",
+        "devsecops",
+        "software supply chain",
+        "ai"
+      ],
+      "city": "New York",
+      "region": "New York",
+      "country": "United States",
+      "venue": "The Glasshouse",
+      "cadence": "annual",
+      "month": "September",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-09-01",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "DevOps, DevSecOps and platform engineers",
+      "url": "https://swampup.jfrog.com/",
+      "description": "JFrog's annual user conference on software supply chain security, DevOps and AI-native release workflows; the host city changes from year to year.",
+      "source": "https://swampup.jfrog.com/"
+    }
+  }
+]

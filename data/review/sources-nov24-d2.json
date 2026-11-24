@@ -1,0 +1,8 @@
+[
+  { "url": "https://api.lu.ma/ics/get?entity=calendar&id=cal-D2EpRdUdCUkA9om",
+    "name": "Toast (luma.com/toast-events)",
+    "reason": "Canadian women-in-tech collective's public Luma calendar (cal-D2EpRdUdCUkA9om, 83 events in the ICS). It runs in-person city meetups in Guelph (Guelph Tech Girl Walk; 'Guelph Women Doing Cool $h!t' panel, 2026-05-19), Calgary, Edmonton, Vancouver, Victoria, Ottawa, Montreal, Saskatoon and NYC, plus the Toast Summit (2026-10-01). Some sessions are online (Toast Dash online hackathon, career webinars), which the gate should drop. Its Calgary events already reach the feed through Luma discovery, but the calendar is not in the registry." },
+  { "url": "https://www.meetup.com/ethical-hackers-of-pa-meetup/",
+    "name": "PAHackers (Ethical Hackers of PA)",
+    "reason": "Central Pennsylvania cybersecurity and IT group, meeting in person every month. Upcoming events from its Meetup JSON-LD: Central PA Cybersecurity and IT Worker Meetup 2026-12-07 (Marzoni's, Mechanicsburg), Checkpoint Cybersecurity Meetup 2026-12-09 (Pizza Boy Brewing, Enola) and Chambersburg Area meetup 2026-12-10. It covers the Harrisburg area's missing meetup-series type. It is not in the registry; the registry's meetup:Ethical-Hackers is a different, Atlanta group." }
+]

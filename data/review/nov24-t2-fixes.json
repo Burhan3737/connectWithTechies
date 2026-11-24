@@ -1,0 +1,266 @@
+[
+  {
+    "action": "add",
+    "reason": "perlcommunity.org/conference/summer2026.html: Summer 2026 Perl Community Conference, Austin TX, July 3rd-4th 2026 (full day 1/day 2 schedule). conference.perlcommunity.org/winter2026/: 'December 17-18, 2026 - Austin, Texas and online', registration open; organiser Brett Estrade's blogs.perl.org post of Nov 13 2026 repeats the Dec 17 & 18 dates and calls for in-person and remote talks. Held twice a year (July 3-4 and December 17-18). No venue published.",
+    "record": {
+      "name": "Perl Community Conference",
+      "type": "conference",
+      "topics": [
+        "perl",
+        "programming",
+        "open-source",
+        "science"
+      ],
+      "city": "Austin",
+      "region": "Texas",
+      "country": "United States",
+      "venue": "",
+      "cadence": "biannual",
+      "month": "July, December",
+      "next_date": "2026-12-17",
+      "next_date_end": "2026-12-18",
+      "last_date": "2026-07-03",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "Perl developers, scientific programmers",
+      "url": "https://conference.perlcommunity.org/winter2026/",
+      "description": "Twice-yearly Perl 5 conference run by the Perl Community nonprofit and Austin Perl Mongers, in Austin with remote talks, with general and Science Perl Journal tracks; the winter edition falls on Perl's birthday.",
+      "source": "https://conference.perlcommunity.org/winter2026/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "summercon.org: 'Summercon 7/10/2026 - 7/11/2026', with Day 1 and Day 2 livestream posts dated July 10 and 11, 2026 and a 'Summercon may be over' post of July 15; America's oldest hacker conference, running since 1987, archives every year to 2025. The conference page puts the venues in Gowanus, Brooklyn (hotels ranked by distance to Littlefield/Ornate Studios/Canal Bar). No 2027 date yet: added recurring-tbd, last_date 2026-07-10.",
+    "record": {
+      "name": "Summercon",
+      "type": "conference",
+      "topics": [
+        "security",
+        "hacking"
+      ],
+      "city": "Brooklyn",
+      "region": "New York",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-10",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "hackers, security researchers",
+      "url": "https://www.summercon.org",
+      "description": "America's oldest hacker conference, held since 1987: a deliberately small, social two days of security talks in Gowanus, Brooklyn.",
+      "source": "https://www.summercon.org/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "scipy2026.scipy.org: 'SciPy 2026 July 13-19, 2026 University of Minnesota Minneapolis, MN' (tutorials July 13-14, conference July 15-17, sprints July 18-19), in person with virtual passes, now 'That's a wrap!'. Annual (25th edition); host city moves (Tacoma 2025, Minneapolis 2026). conference.scipy.org lists no SciPy 2027 yet. Added recurring-tbd, last_date 2026-07-13; venue left blank because the 2027 host is unannounced.",
+    "record": {
+      "name": "SciPy",
+      "type": "conference",
+      "topics": [
+        "python",
+        "data-science",
+        "scientific-computing",
+        "open-source"
+      ],
+      "city": "Minneapolis",
+      "region": "Minnesota",
+      "country": "United States",
+      "venue": "",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-13",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "scientists, researchers, Python developers",
+      "url": "https://conference.scipy.org/",
+      "description": "The annual Scientific Python conference: two days of tutorials, three of talks and two of developer sprints. The host city changes; 2026 was at the University of Minnesota.",
+      "source": "https://www.scipy2026.scipy.org/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "uberconf.com: 'UberConf - July 13 - 16, 2027 - Denver, CO', JSON-LD startDate 2027-07-13, endDate 2027-07-16, location Westin Westminster, 10600 Westminster Blvd, Westminster CO. The 2026 page (uberconf.com/conference/denver/2026/07/home) gives July 14-17, 2026, JSON-LD 2026-07-14 to 2026-07-17. City set to Westminster where the venue physically is, though the organiser brands it Denver.",
+    "record": {
+      "name": "ÜberConf",
+      "type": "conference",
+      "topics": [
+        "java",
+        "jvm",
+        "software-architecture",
+        "ai",
+        "devops"
+      ],
+      "city": "Westminster",
+      "region": "Colorado",
+      "country": "United States",
+      "venue": "The Westin Westminster, 10600 Westminster Blvd",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "2027-07-13",
+      "next_date_end": "2027-07-16",
+      "last_date": "2026-07-14",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "software developers, architects, tech leads",
+      "url": "https://uberconf.com",
+      "description": "No Fluff Just Stuff's flagship Java/JVM conference in the Denver area: ten tracks of 90-minute technical sessions and half-day workshops.",
+      "source": "https://uberconf.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "usa.droidcon.com: 'droidCon USA ... 16-17 JULY 2026 ORLANDO', OCCC West Concourse, 800 Android developers, now showing a 2026 recap. The organiser's letter to the community (usa.droidcon.com/letter-to-community) says droidcon NYC (since 2014) moved to Orlando for 2026 and that 2027 will unite Android, Flutter, React Native, iOS and gaming developers under one roof, without a date or venue. Added recurring-tbd, last_date 2026-07-16.",
+    "record": {
+      "name": "droidcon USA",
+      "type": "conference",
+      "topics": [
+        "android",
+        "mobile",
+        "kotlin"
+      ],
+      "city": "Orlando",
+      "region": "Florida",
+      "country": "United States",
+      "venue": "Orange County Convention Center, West Concourse",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-16",
+      "status": "recurring-tbd",
+      "attendance": "800",
+      "cost": "paid",
+      "audience": "Android developers",
+      "url": "https://usa.droidcon.com/",
+      "description": "The US edition of the droidcon Android developer conference, formerly droidcon NYC, moved to Orlando in 2026; the organiser plans a combined multi-platform mobile format for 2027.",
+      "source": "https://usa.droidcon.com/letter-to-community"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "flutterconusa.dev: 'flutterCon USA ... 16-17 JULY 2026 ORLANDO', OCCC West Concourse, 400 Flutter developers, now showing a 2026 recap. Same organiser (Mobile Seasons GmbH) and venue as droidcon USA, separately ticketed. The droidcon letter to the community says 2027 will bring Android, Flutter and other mobile developers under one roof, with no date. Added recurring-tbd, last_date 2026-07-16.",
+    "record": {
+      "name": "flutterCon USA",
+      "type": "conference",
+      "topics": [
+        "flutter",
+        "dart",
+        "mobile"
+      ],
+      "city": "Orlando",
+      "region": "Florida",
+      "country": "United States",
+      "venue": "Orange County Convention Center, West Concourse",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-16",
+      "status": "recurring-tbd",
+      "attendance": "400",
+      "cost": "paid",
+      "audience": "Flutter and Dart developers",
+      "url": "https://www.flutterconusa.dev/",
+      "description": "Two-day Flutter and Dart conference co-located with droidcon USA in Orlando, with keynotes, codelabs and a Flutter-at-scale track.",
+      "source": "https://www.flutterconusa.dev/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Organiser's Meetup group meetup.com/denverdevday (linked from denverdevday.com) lists past events 'Denver Dev Day Fri, Jun 26 [2026] 9:00 AM MDT, Red Rocks Community College, 13300 W. 6th Ave., Lakewood' and 'Denver Dev Day Fri, Jun 27, 2025' at the same place; sessionize.com/denver-dev-day-2026 (organiser's CFP) confirms Friday June 26 2026, in person only, free, 'our fifteenth Denver Dev Day'. denverdevday.com says 'COMING SOON!' with no next date. Added recurring-tbd, last_date 2026-06-26; city is Lakewood where the college is.",
+    "record": {
+      "name": "Denver Dev Day",
+      "type": "conference",
+      "topics": [
+        "software-development",
+        "cloud",
+        "web",
+        "data"
+      ],
+      "city": "Lakewood",
+      "region": "Colorado",
+      "country": "United States",
+      "venue": "Red Rocks Community College, 13300 W 6th Ave",
+      "cadence": "annual",
+      "month": "June",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-06-26",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "free",
+      "audience": "developers",
+      "url": "http://denverdevday.com",
+      "description": "Free, in-person-only, community-run one-day developer conference for the Denver area, with client, web, data and cloud tracks.",
+      "source": "https://www.meetup.com/denverdevday/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "swiftrockies.com: 'Calgary, Alberta - July 22-23, 2026' (JSON-LD 2026-07-22 to 2026-07-23), held at the Wilder Institute Calgary Zoo, 180 seats; the recap says '2026 was our inaugural year. Swift Rockies 2027 is coming' and 'Stay tuned for updates about Swift Rockies 2027!'. Next edition announced without dates: added recurring-tbd, last_date 2026-07-22.",
+    "record": {
+      "name": "Swift Rockies",
+      "type": "conference",
+      "topics": [
+        "ios",
+        "swift",
+        "mobile"
+      ],
+      "city": "Calgary",
+      "region": "Alberta",
+      "country": "Canada",
+      "venue": "Wilder Institute Calgary Zoo",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-22",
+      "status": "recurring-tbd",
+      "attendance": "180",
+      "cost": "paid",
+      "audience": "iOS developers",
+      "url": "https://swiftrockies.com",
+      "description": "Retreat-style, single-track iOS developer conference at the Calgary Zoo, with round tables instead of rows and speakers seated among attendees.",
+      "source": "https://swiftrockies.com/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "mafiq.org (organiser, Mafiq Foundation): 'MY-HACK Since 2022, Mafiq also started an annual event ... for high-school students and older'; its event list shows 'MY Hackathon 2026' July 25-26, Islamic Center of Maryland (ICM), Gaithersburg, teams of 3-5 students. Devpost myhack-2026.devpost.com agrees (July 25-26 2026, ICM, in person overnight). Registration form: $100 fee with financial assistance on request. Open to Muslim high-school and college students generally, not one institution's enrolment. No 2027 date: added recurring-tbd, last_date 2026-07-25.",
+    "record": {
+      "name": "MY Hackathon",
+      "type": "hackathon",
+      "topics": [
+        "social-good",
+        "students"
+      ],
+      "city": "Gaithersburg",
+      "region": "Maryland",
+      "country": "United States",
+      "venue": "Islamic Center of Maryland",
+      "cadence": "annual",
+      "month": "July",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-07-25",
+      "status": "recurring-tbd",
+      "attendance": "32",
+      "cost": "paid",
+      "audience": "Muslim high-school and college students",
+      "url": "https://mafiq.org/",
+      "description": "The Mafiq Foundation's annual Muslim Youth hackathon, an overnight build for social good at the Islamic Center of Maryland.",
+      "source": "https://mafiq.org/"
+    }
+  }
+]

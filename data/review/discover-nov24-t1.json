@@ -1,0 +1,133 @@
+{
+  "pass": "nov24-t1",
+  "date": "2026-11-24",
+  "returning": [
+    {
+      "name": "Hacks 2025",
+      "verdict": "exists",
+      "reason": "cgu-hacks.devpost.com ('Hacks 2025', JSON-LD 2025-11-15, Claremont) is Claremont Graduate University's hackathon. It is already held as curated record 'CGU Hacks' | Claremont (url research.cgu.edu/hackathon/, last_date 2026-11-13, recurring-tbd)."
+    },
+    {
+      "name": "GlobeHack",
+      "verdict": "rejected",
+      "reason": "Closed to one institution. globehack.devpost.com/rules, section 2 Eligibility: 'Participation is open to all currently enrolled Arizona State University (ASU) students.' The overview says it pairs 'ASU's top 300 developers' (ACM at ASU) with Global Career Network business students. It ran Apr 18-19 2026 in Tempe."
+    },
+    {
+      "name": "Memphis Microsoft Community Days 2026",
+      "verdict": "added",
+      "reason": "ti.to/tndays/memphis2026 (organiser Tennessee Community Days): June 5 2026, Microsoft Office in Memphis. The 2025 edition ran Oct 2-3 2025 at the same office, and Sessionize calls 2026 the third Memphis event. No 2027 date yet: added recurring-tbd, last_date 2026-06-05."
+    },
+    {
+      "name": "BSides Albany",
+      "verdict": "rejected",
+      "reason": "Site gone. bsidesalbany.org no longer resolves (no DNS A/AAAA record; curl gets no response). The only copies, Wayback Apr 2026, show an unfinished template: 'Save the Date June 6th, 2026', lorem-ipsum body text, 'Registration Opens March 1st', no venue. The bsides.org listing 'BSidesAlbany - Albany, NY, USA' gives only 'Date: June 6' 2026. Searches for 'BSides Albany 2026' found no report that it was held. The feed also had the city wrong: it was planned for Albany, not New York City."
+    },
+    {
+      "name": "vibeFORWARD: M2—Agents",
+      "verdict": "unresolved",
+      "reason": "vibeforward-m2-agents.devpost.com and vibe-forward.vercel.app: a one-day multi-agent hackathon, Sun June 7 2026, Fordham Lincoln Center, the closing event of a16z NYC Tech Week. An earlier 'vibeFORWARD Hackathon' ran April 12 2026 (luma.com/2e1fmxfn). Neither page announces another round, and searching 'vibeFORWARD hackathon 2026/M3 NYC' found nothing newer. It is an ad-hoc series with no organiser site beyond the Vercel page."
+    },
+    {
+      "name": "CDAO New York",
+      "verdict": "added",
+      "reason": "cdao-ny.coriniumintelligence.com: 'JOIN US April 14, 2027 | W Hoboken'. The venue page gives W Hoboken, Hoboken, NJ 07030, and an archived April 2026 copy shows the 2026 edition was there too. Added as upcoming in Hoboken, New Jersey (not New York, NY), last_date 2026-06-09."
+    },
+    {
+      "name": "AgentCon - Phoenix",
+      "verdict": "rejected",
+      "reason": "Cancelled. agentcon.city/Phoenix returns 404. The Global AI Community event page (globalai.community/e/y1fcl3zp) now returns 404, and a search snippet of it read 'AgentCon Phoenix is cancelled'. It is absent from the organiser's AgentCon archive (globalai.community/events/agentcon), which lists every other 2026 US stop. It was planned for June 10 2026 at Gateway Community College, Phoenix AZ; the feed's 'Phoenix, AR' was also wrong."
+    },
+    {
+      "name": "KCD New York 2026",
+      "verdict": "added",
+      "reason": "kcdnewyork.com: 'Kubernetes Community Days New York 2027 - When June 2027, exact date to be announced'. The 2026 (third) edition was June 10 2026 at Convene One Liberty Plaza. Month only, so added recurring-tbd, last_date 2026-06-10."
+    },
+    {
+      "name": "Blastoff Rails",
+      "verdict": "added",
+      "reason": "blastoffrails.com: 'coming back June 10-11, 2027'. The holding page gives no city; rubyonrails.org/events lists it as Albuquerque, New Mexico, June 10-11 2027, and the archived May 2026 site showed June 11-12 2026, Albuquerque. Added as upcoming, last_date 2026-06-11."
+    },
+    {
+      "name": "Power BI Days DC 2026",
+      "verdict": "added",
+      "reason": "powerbidc.org: 'Thursday June 11 - Friday June 12, 2026, Microsoft | Arlington, Virginia' (sold out). A 2025 edition also ran. No 2027 date yet: added recurring-tbd, last_date 2026-06-11."
+    },
+    {
+      "name": "State of the Map US 2026",
+      "verdict": "added",
+      "reason": "openstreetmap.us/events/state-of-the-map-us/2026/: '14th annual State of the Map US conference on June 11-13, 2026 in Madison, Wisconsin'. The /2027/ path redirects to the generic page, so no 2027 edition yet. Added recurring-tbd, last_date 2026-06-11, at Madison; the host city rotates every year."
+    },
+    {
+      "name": "AgentCon - Miami",
+      "verdict": "unresolved",
+      "reason": "The organiser's AgentCon archive (globalai.community/events/agentcon) confirms 'AgentCon - Miami', Fri 12 June 2026, Global AI Miami, in person, but agentcon.city/miami now returns 404. The tour's only upcoming stops are Mukono (May 7 2027) and Utrecht (June 24 2027), with no 2027 Miami stop. No earlier Miami edition appears in the archive, so this was a one-time tour stop with no announced return."
+    },
+    {
+      "name": "Houston Fabric Day",
+      "verdict": "added",
+      "reason": "meetup.com/houston-fabric-user-group/events/314150202: 'Global Fabric Day 2026 - Houston', Sat Jun 13 2026, 9:30-4:30, Microsoft Technology Center, 750 Town and Country Blvd, Houston, in person. It is run by the Houston Fabric User Group, which keeps meeting (events Dec 2025, Jan, Jun, Sep 2026), so the group's Meetup is listed in sources-nov24-t1.json instead of a one-off add."
+    },
+    {
+      "name": "Databricks Apps & Agents for Good Hackathon 2026",
+      "verdict": "exists",
+      "reason": "dais-for-good-2026.devpost.com: 'Databricks Data + AI Summit', Jun 15-16 2026, 'Who can participate: Accepted Data + AI Summit Attendees'. It is a programme inside the summit, open only to summit attendees, which is already held as curated record 'Data + AI Summit' | San Francisco (next 2027-06-21)."
+    },
+    {
+      "name": "Unhacked 360 International Cybersecurity Conference",
+      "verdict": "rejected",
+      "reason": "Organiser page gone. momentera.org/conferences/unhacked360conference now returns 404. Momentera Pvt Ltd's homepage lists only 'Unhacked 360 India: FutureSec Summit' (Hyderabad, Oct 5 2026); search also found a Berlin edition. It lists no US edition, and aggregator listings for Atlanta, June 15-17 2026, disagreed on venue and called it hybrid. There is no live organiser page to confirm an in-person Atlanta event."
+    },
+    {
+      "name": "AI Community Days (AICD) Montréal 2026",
+      "verdict": "unresolved",
+      "reason": "communitydays.org: June 17-18 2026, Microsoft Montréal, the first bilingual AICD Montréal, run by GUM365. GUM365's own event page (gum365.com/evenement/ai-community-days-aicd-montreal-2026/) now returns 404, and gum365.com says 'Aucun événement public à venir n'est actuellement publié'. No 2027 edition is announced. GUM365's Meetup (meetup:gum365) is already a feed source."
+    },
+    {
+      "name": "BSDCan",
+      "verdict": "added",
+      "reason": "bsdcan.org/2027/: 'BSDCan 2027, July 7 - 11, 2027, Vancouver, Canada' (tutorials Jul 7-8, conference Jul 9-10). bsdcan.org/2026/ confirms June 17-20 2026 at the University of Ottawa. The conference is moving from Ottawa to Vancouver: added as upcoming in Vancouver, BC, last_date 2026-06-17."
+    },
+    {
+      "name": "AWS Community Day - East Canada 2026",
+      "verdict": "unresolved",
+      "reason": "awscommunitydayeast.ca: 'June 20, 2026', 200 rue Sherbrooke Ouest, Montréal, 'the first edition'. The site still shows 2026, and no 2027 edition is announced. The organising AWS Montréal user group's Meetup (montreal-aws-users-united) is already read by the feed."
+    },
+    {
+      "name": "Beam Summit 2026",
+      "verdict": "added",
+      "reason": "beamsummit.org: 'Thank you for attending Beam Summit 2026!'. The archived May 2026 site gives June 22-23 2026 in NYC at Google's St. John's Terminal. The summit has run every year since 2022 (photo albums), and no 2027 date is posted: added recurring-tbd, last_date 2026-06-22."
+    },
+    {
+      "name": "UN Open Source Week",
+      "verdict": "added",
+      "reason": "unopensource.org (linked from the UN ODET page): JSON-LD 2026-06-22 to 2026-06-26, 'United Nations Headquarters, New York 22-26 June'. A 2025 edition also ran, and un.org's open-source-week-2027 path is 404. Added recurring-tbd, last_date 2026-06-22."
+    },
+    {
+      "name": "Accelerate Chicago",
+      "verdict": "unresolved",
+      "reason": "gotochgo.com redirects to /accelerate-chicago-2026: 'Accelerate Chicago by GOTO & Slalom, June 22-24, Convene Willis Tower' (JSON-LD 2026-06-22 to 06-24). This is the 2026 replacement for GOTO Chicago. GOTO's own 'Upcoming conferences' list shows only GOTO Copenhagen 2027 and YOW!, with no 2027 Chicago edition, and gotochgo.com/2027 is 404."
+    },
+    {
+      "name": "AgentCon - Lincoln",
+      "verdict": "unresolved",
+      "reason": "agentcon.city/Lincoln redirects to globalai.community/e/d8yp8sl2: 'AgentCon - Lincoln, Mon 22 June 2026, University of Nebraska College of Engineering Kiewit Hall, 1700 Vine St', in person. The feed had June 24; the organiser says June 22. This was the first Lincoln stop, and the AgentCon tour's upcoming list (Mukono May 2027, Utrecht June 2027) has no Lincoln return."
+    },
+    {
+      "name": "AWS Community Day Midwest 2026",
+      "verdict": "added",
+      "reason": "midwestcommunityday.com: 'June 24, 2026', the '8th annual Community Day | Midwest', at the Hyatt Regency Downtown Indianapolis; 2025 was in Milwaukee. No 2027 date or city yet: added recurring-tbd, last_date 2026-06-24, at the last host city."
+    },
+    {
+      "name": "IEEE Cloud Summit 2026",
+      "verdict": "added",
+      "reason": "ieeecloudsummit.org: 'June 25-26 2026, Washington Marriott Capitol Hill, Washington DC'. The site links earlier editions (2020, 2021, 2023, 2024). No 2027 date yet: added recurring-tbd, last_date 2026-06-25."
+    },
+    {
+      "name": "The Perl & Raku Conference in Greenville, SC 2026",
+      "verdict": "added",
+      "reason": "tprc.us/tprc-2026-gsp/: Perl and Raku Conference 2026, Greenville SC, main conference June 26-28 (June 25-29 with classes). Past conferences: 2025 Greenville, 2024 Las Vegas, 2023 Toronto. tprc.us/tprc-2027/ is 404: added as 'The Perl and Raku Conference', recurring-tbd, last_date 2026-06-25."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}

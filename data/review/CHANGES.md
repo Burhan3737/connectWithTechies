@@ -1,168 +1,165 @@
 # Changes since the last publish
 
-Generated 2026-11-21 by `scripts/build-data.mjs`, against `data/events.json` at 4286647 (2026-11-19). Every build
+Generated 2026-11-23 by `scripts/build-data.mjs`, against `data/events.json` at 4be1e24 (2026-11-21). Every build
 rewrites this file, so it always describes the data as it stands against what was last committed.
 
 | | Total | Curated | Feed |
 |---|---|---|---|
-| Events | 17631 → 18812 | | |
-| Added | 1240 | 21 | 1219 |
-| Removed | 58 | 1 | 57 |
-| Re-dated | 45 | 0 | 45 |
-| Re-listed under a new id | 36 | | 36 |
+| Events | 18812 → 19203 | | |
+| Added | 426 | 45 | 381 |
+| Removed | 35 | 1 | 34 |
+| Re-dated | 30 | 1 | 29 |
+| Re-listed under a new id | 22 | | 22 |
 
 ## Removed
 
 | Reason | Events |
 |---|---|
-| no longer listed | 53 |
-| organiser retired | 3 |
+| no longer listed | 34 |
 | curated record removed | 1 |
-| now a curated record | 1 |
 
 Curated records removed — each needs a reason in `data/review/APPLIED.md`; the audit checks:
 
-- Vibe Coding Con — Las Vegas
+- Central Ohio Software Symposium — Columbus
 
-**no longer listed** (53):
+**no longer listed** (34):
 
-- (draft) Drones in Public Safety: Inside Arlington County Fire & Police UAS Ops — Arlington, 2026-12-03 (meetup)
-- DevDogs × GDGC UGA │ DevDogs Touch Grass #2 — Athens, 2026-11-30 (bevy)
-- Factory Presents: Dune: Part Three | Private Screening - Austin — Austin, 2026-12-17 (luma)
-- Austin Startups, Investors, Professionals: Pitch & Networking Event — Austin, 2026-11-30 (eventbrite)
-- Digitize Your Expert Knowledge — Chapel Hill, 2026-12-01 (eventbrite)
-- Holiday Happy Hour: Celebrate with Trailblazers — Cincinnati, 2026-12-07 (bevy)
-- Factory Presents: Dune: Part Three | Private Screening - Dallas — Dallas, 2026-12-17 (luma)
-- Denver Tech Startups, Investors, Experts Networking & Pitch Event — Denver, 2026-12-15 (eventbrite)
-- Kansas City, MO - Investor Ready Workshop — Kansas City, 2026-12-01 (luma)
-- Utah Quantum 2027 and Beyond: Have Your Say… — Lehi, 2026-11-23 (luma)
-- KCD Florida — Miami, 2026-12-11 (devevents)
-- Nashville Entrepreneur Day, Winter — Nashville, 2026-12-03 (eventbrite)
-- San Diego Arduino Enthusiasts — National City, 2026-12-16 (meetup)
-- Animal Welfare Coworking Day 12/16 @ Collider! — New York, 2026-12-16 (luma)
-- Lunch & Learn: OpenRouter x Antler — New York, 2026-12-02 (luma)
-- … and 38 more
-
-**organiser retired** (3):
-
-- 💻 Coworking Meetup ☕📚 — Bellevue, 2026-11-17 (meetup)
-- Heidegger "The Question Concerning Technology" — Houston, 2026-11-29 (meetup)
-- 🤖 Does AI make ordinary people more powerful or more replaceable? — Vancouver, 2026-11-29 (meetup)
-
-**now a curated record** (1):
-
-- DevFest Montréal — Montreal, 2026-11-06 (devevents)
+- BUILDING ANYWAY - Female Founders Creative Challenge + Networking — Burnaby, 2026-11-26 (luma)
+- AI Unfiltered- Hiring for the AI Era: Triangle Founders on work, skills and UNC Talent — Chapel Hill, 2026-12-09 (ical)
+- AI for Nonprofit Fundraising: hands-on workshop — Irvine, 2026-12-10 (luma)
+- ASAN Pickleball Tournament: Los Angeles — La Cañada Flintridge, 2026-12-07 (luma)
+- Tech Alley Vegas December 2026 Event — Las Vegas, 2026-12-19 (meetup)
+- Wild AI December Meetup — Minneapolis, 2026-12-21 (luma)
+- Montreal Women in Tech Meetup: Coffee Crawl — Montreal, 2026-11-29 (luma)
+- Pre-Seed Pitch Night — NYC — New York, 2026-12-11 (luma)
+- Rally Product Leaders Roundtable Dinner — New York, 2026-12-10 (luma)
+- Co-Working for Social Entrepreneurs — New York, 2026-12-09 (luma)
+- Founders in NYC; Building with AI — New York, 2026-12-02 (luma)
+- Dec. Ultra Happy Hour — New York, 2026-12-02 (luma)
+- Cogent NYC Office Warming — New York, 2026-12-02 (luma)
+- Citizen AI - AI Cafe — New York, 2026-12-01 (luma)
+- React Summit US — New York, 2026-11-17 (confstech)
+- … and 19 more
 
 ## Added
 
-By source: eventbrite 680 · luma 279 · meetup 193 · bevy 66 · curated 21 · ical 1
+By source: luma 286 · meetup 55 · curated 45 · eventbrite 30 · ical 8 · devevents 1 · mlh 1
 
-Top cities: New York 107 · San Francisco 76 · Chicago 45 · Toronto 44 · Austin 38 · Atlanta 37 · Los Angeles 30 · Las Vegas 28 · Vancouver 26 · Montreal 25 · Calgary 21 · Houston 20
+Top cities: New York 52 · San Francisco 49 · Toronto 16 · Washington 14 · Seattle 13 · Vancouver 13 · Phoenix 12 · Los Angeles 11 · Brooklyn 10 · Las Vegas 10 · Atlanta 9 · Bellingham 8
 
 Curated:
 
-- Swan Hacks — Ames
-- Hack the Change — Calgary
-- Tom Tom Festival Innovation Summit — Charlottesville, 2027-04-22
-- beCamp — Charlottesville
-- HooHacks — Charlottesville
-- SCITDA Fall Conference — Columbia, 2027-09-27
-- SCGMIS Management, Innovation and Security Conference — Columbia
-- HackED Beta — Edmonton
-- Oregon Cyber Resilience Summit — Eugene, 2027-10-06
-- Razorhack Cyber Competition — Fayetteville
-- Startup Crawl — Fayetteville
-- HogHacks — Fayetteville
-- AI Tinkerers Fort Wayne — Fort Wayne
-- Florida Startup Summit — Gainesville
-- Dream Team Engineering Designathon — Gainesville
-- ProfHacks — Glassboro
-- Hacktually — Merced
-- MakeCU — New York
-- Cutie Hack — Riverside, 2026-11-21
-- Immerse the Bay — Stanford
-- Opportunity Hack ASU Fall Hackathon — Tempe
+- Blastoff Rails — Albuquerque, 2027-06-10
+- ISU Startup Factory Demo Day — Ames, 2026-12-08
+- Community College Cyber Defense Challenge — Ames, 2026-12-04
+- Power BI Days DC — Arlington
+- Perl Community Conference — Austin, 2026-12-17
+- Summercon — Brooklyn
+- Swift Rockies — Calgary
+- MY Hackathon — Gaithersburg
+- GrrCON — Grand Rapids, 2027-09-16
+- Tech Week Grand Rapids — Grand Rapids, 2027-09-13
+- Beer City Code — Grand Rapids
+- Atomic Games — Grand Rapids
+- Tech Week Greenville — Greenville
+- Next Venture Summit — Greenville
+- DC864 — Greenville
+- Secure Carolinas Conference — Greenville
+- Carolina Code Conference — Greenville
+- The Perl and Raku Conference — Greenville
+- PA TechCon — Harrisburg, 2027-08-12
+- Harrisburg University Data Analytics Summit — Harrisburg, 2027-04-29
+- Harrisburg University Cybersecurity Summit — Harrisburg
+- Stevens Innovation Expo — Hoboken, 2027-05-07
+- CDAO New York — Hoboken, 2027-04-14
+- Business+AI Forum — Hoboken
+- Stevens QuackHacks — Hoboken
+- Computing [MTU] Showcase — Houghton
+- Design Expo — Houghton
+- AWS Community Day Midwest — Indianapolis
+- Denver Dev Day — Lakewood
+- State of the Map US — Madison
+- Memphis Microsoft Community Days — Memphis
+- SciPy — Minneapolis
+- AI in Finance Summit NY — New York, 2027-04-12
+- swampUP — New York
+- M365 Community Days NYC — New York
+- Beam Summit — New York
+- UN Open Source Week — New York
+- KCD New York — New York
+- droidcon USA — Orlando
+- flutterCon USA — Orlando
+- Chain React — Portland
+- Tulsa AWS Community Day — Tulsa
+- BSDCan — Vancouver, 2027-07-07
+- IEEE Cloud Summit — Washington
+- ÜberConf — Westminster, 2027-07-13
 
-From the feed (1219; the first 30):
+From the feed (381; the first 30):
 
-- Free In-Person Robotics Demo Workshop in Abbotsford, BC For Kids ( 7–14 Y) — Abbotsford, 2026-11-28 (eventbrite)
-- Free SEO Workshop in Alhambra: Website Layouts That Turn Traffic Into Sales — Alhambra, 2026-12-09 (luma)
-- AI Safety: Why Our Communities Need a Voice — Alpharetta, 2026-12-03 (meetup)
-- Atlanta Airflow Meetup at Equifax! — Alpharetta, 2026-12-02 (meetup)
-- Robot Builders — Ambler, 2026-12-12 (eventbrite)
-- Coworking Day - Recess Café — Ann Arbor, 2026-12-18 (luma)
-- Antigravity Live + Show and Tell — Ann Arbor, 2026-12-14 (meetup)
-- Art Tank: Acquisition Pitch Competition — Ann Arbor, 2026-12-07 (meetup)
-- Use Agent Swarms for your most Ambitious projects: Replit Missions — Ann Arbor, 2026-12-03 (meetup)
-- Repairsday Thursday — Ann Arbor, 2026-12-03 (meetup)
-- Hacktober Redux: Open-weight models — Ann Arbor, 2026-11-24 (meetup)
-- Ann Arbor Bitcoin — Ann Arbor, 2026-11-24 (eventbrite)
-- All Hands Active Open Hours — Ann Arbor, 2026-11-22 (meetup)
-- Antioch Small Business Pitch Competition — Antioch, 2026-12-14 (luma)
-- Cover6 Community Meet & Greet: December — Arlington, 2026-12-18 (meetup)
-- Winter Tech Mixer @ AWS Skills Center - Come Join Us!! — Arlington, 2026-12-02 (eventbrite)
-- Unstuck Tuesday: Raw Feedback for Startup & Tech Founders — Arlington, 2026-12-01 (luma)
-- Dinner with Entrepreneurs | Arlington (Giving Back Edition) — Arlington, 2026-11-26 (eventbrite)
-- Morning tech and coffee — Astoria, 2026-11-27 (meetup)
-- ACME POCT Diagnostic Futures Summit 2027 — Atlanta, 2027-03-18 (eventbrite)
-- Startup Pitch Events Atlanta: 5 Founders on Stage — Atlanta, 2027-01-12 (eventbrite)
-- Tech Startup Networking Atlanta - Series A / Venture Capital Networking Event — Atlanta, 2027-01-07 (eventbrite)
-- Find a Cofounder, Help or Join a Startup — Atlanta, 2026-12-17 (luma)
-- Startup Pitch Events Atlanta: 5 Founders on Stage — Atlanta, 2026-12-17 (luma)
-- Find a Startup to Help or Join — Atlanta, 2026-12-17 (meetup)
-- Find a Cofounder, Help or Join a Tech Startup — Atlanta, 2026-12-17 (meetup)
-- Startup & Business Networking in Atlanta — Atlanta, 2026-12-17 (eventbrite)
-- Startup Tech & AI Networking in Atlanta — Atlanta, 2026-12-17 (eventbrite)
-- AI & Tech Networking Event in Atlanta by Ascent Valley — Atlanta, 2026-12-17 (eventbrite)
-- Tech Founders & Digital Innovation Networking & Pitch Atlanta — Atlanta, 2026-12-15 (eventbrite)
+- Neurons as an Interpretable Basis — Ann Arbor, 2026-11-24 (luma)
+- Agentic Marketing DC - January meetup — Arlington, 2027-01-13 (luma)
+- M-A Investment Club Talk with Alexandra, Global Vice President of Sales at Microsoft — Atherton, 2026-12-02 (luma)
+- Code, Copilot & Connections — Atlanta, 2026-12-10 (luma)
+- Fireworks NeurIPS Happy Hour — Atlanta, 2026-12-10 (luma)
+- Georgia’s Future in AI and Blockchain: A Conversation with Lawmakers — Atlanta, 2026-12-10 (luma)
+- BUILDING & GROWING IN THE AI ERA — Atlanta, 2026-12-08 (luma)
+- The Quarter by FWDher: Q1 Planning Workshop for Female Founders — Atlanta, 2026-12-05 (luma)
+- Breakthrough Accelerator: Hacks of High Achievers — Atlanta, 2026-12-03 (luma)
+- OpenAI Studio Sessions — Atlanta, 2026-12-02 (luma)
+- Brookhaven Monthly Meetup (w/ The AI Collective) — Atlanta, 2026-12-02 (luma)
+- Appreciation Social — Atlanta, 2026-11-24 (meetup)
+- Pre-SXSW Tech Mixer — Austin, 2027-03-14 (luma)
+- Austin International Founders Meetup (Vol. 12) — Austin, 2026-12-24 (luma)
+- Devopsdays Baltimore — Baltimore, 2027-05-18 (devevents)
+- AI Leader + Dev Social: Seattle — Bellevue, 2027-01-13 (luma)
+- AI & Cybersecurity Leadership Roundtable & Dinner — Bellevue, 2026-12-03 (luma)
+- Bellingham Evening Toastmasters — Bellingham, 2026-12-01 (eventbrite)
+- New Member Onboarding, Bellingham Makerspace — Bellingham, 2026-11-29 (eventbrite)
+- 3D Printing 101 with Caleb C. — Bellingham, 2026-11-29 (eventbrite)
+- FREE. Makerspace Craft Time! Free! Hosted by Craft Wizard Tod! — Bellingham, 2026-11-28 (eventbrite)
+- FREE! Wire Wrapping Workshop with Steve B. — Bellingham, 2026-11-28 (eventbrite)
+- FREE: Executive Director Office Hours w/Jason D. — Bellingham, 2026-11-28 (eventbrite)
+- BMS Hack Night — Bellingham, 2026-11-28 (eventbrite)
+- Monthly Makerspace Show & Share Potluck — Bellingham, 2026-11-28 (eventbrite)
+- First Friday Film: Naza presented by East Bay Media Center — Berkeley, 2026-12-04 (luma)
+- Fireside Chat with Tom Steyer, Billionaire Investor and Climate Activist — Berkeley, 2026-12-03 (luma)
+- Stop AI Meeting Berkeley — Berkeley, 2026-11-29 (luma)
+- On the Shelf: A New Era for Water? (A Conversation with Loonen Founder & CEO Clara Sieg) — Boston, 2027-02-18 (luma)
+- On the Shelf: Made Good, Made Well (A Conversation with MadeGood Co-Founder Nima Fotovat) — Boston, 2027-01-27 (luma)
 
 ## Re-dated
 
 Dates still to come that moved — postponements and corrections.
 
-- FIESTA Austin — Austin: 2027-01-19 → 2027-02-16 (meetup)
-- Hack AI: Cybersecurity in the Agentic Era — Austin: 2026-12-03 → 2026-12-02 (luma)
-- Engineering and Business Networking | Elevating Your Potential - Calgary — Calgary: 2026-11-25 → 2027-01-06 (eventbrite)
-- Blockchain and Business Networking | Elevating Your Potential - Calgary — Calgary: 2026-11-25 → 2027-01-06 (eventbrite)
-- Blockchain and Business Networking | Elevating Your Potential - Cincinnati — Cincinnati: 2026-11-25 → 2027-01-06 (eventbrite)
-- Tech and Business Networking | Elevating Your Potential - Cincinnati — Cincinnati: 2026-11-25 → 2027-01-06 (eventbrite)
-- Engineering and Business Networking | Elevating Your Potential - Cincinnati — Cincinnati: 2026-11-25 → 2027-01-06 (eventbrite)
-- SEO Meets AI — Corte Madera: 2027-01-06 → 2027-01-05 (eventbrite)
-- BioTech, MedTech, Pharma Networking & Pitch Event Denver — Denver: 2026-11-23 → 2027-01-11 (eventbrite)
-- Deep Learning Architectures & Systems — Durham: 2026-11-25 → 2026-12-02 (meetup)
-- RocketRide — Developer-First AI Pipeline Infrastructure — Fresno: 2026-11-21 → 2026-12-19 (bevy)
-- Halifax Light the Atlantic - Women in AI — Halifax: 2026-12-01 → 2027-01-14 (eventbrite)
-- Tech and Business Networking | Elevating Your Potential - Hamilton — Hamilton: 2026-11-25 → 2027-01-06 (eventbrite)
-- PDX Code & Coffee - Happy Valley @ Peet's Coffee (Partnership) — Happy Valley: 2027-05-08 → 2027-06-12 (meetup)
-- Indie Games x Wearables: Build, Play, Connect — Kings County: 2026-12-02 → 2026-11-30 (meetup)
-- Tech and Business Networking | Elevating Your Potential - Vegas — Las Vegas: 2026-11-25 → 2027-01-06 (eventbrite)
-- Blockchain and Business Networking | Elevating Your Potential - Vegas — Las Vegas: 2026-11-25 → 2027-01-06 (eventbrite)
-- Engineering and Business Networking | Elevating Your Potential - Vegas — Las Vegas: 2026-11-25 → 2027-01-06 (eventbrite)
-- Founder Sprint: Pitch & Connect — Los Angeles: 2026-12-02 → 2026-12-03 (luma)
-- Intro to Woodworking at the Collab MakerSpace — Los Angeles: 2026-12-05 → 2026-12-02 (eventbrite)
-- Group Programming - LeetCode — Mesa: 2026-11-25 → 2026-12-02 (meetup)
-- NYC Female Founders Dinner — New York: 2026-11-27 → 2026-12-04 (luma)
-- OpenOakland - Civic Tech for the Community — Oakland: 2026-12-01 → 2026-12-08 (luma)
-- Orlandopreneur Lunch 'n Learn Ya™: Pitch Like a Pro! — Orlando: 2026-12-25 → 2027-01-22 (meetup)
-- C.O.D.E. with Rust Tuesdays! 🦀 @ Blockspace Community Space — Philadelphia: 2026-11-24 → 2026-12-08 (meetup)
-- Tech and Business Networking | Elevating Your Potential - Phoenix — Phoenix: 2026-11-25 → 2027-01-06 (eventbrite)
-- Engineering and Business Networking | Elevating Your Potential - Phoenix — Phoenix: 2026-11-25 → 2027-01-06 (eventbrite)
-- Blockchain and Business Networking | Elevating Your Potential - Phoenix — Phoenix: 2026-11-25 → 2027-01-06 (eventbrite)
-- Create Build Optimize Ventures: Founders & Investors Night — Phoenix: 2026-11-30 → 2026-12-01 (eventbrite)
-- Tech and Business Networking | Elevating Your Potential - Pittsburgh — Pittsburgh: 2026-11-25 → 2027-01-06 (eventbrite)
-- Blockchain and Business Networking | Elevating Your Potential - Pittsburgh — Pittsburgh: 2026-11-25 → 2027-01-06 (eventbrite)
-- Engineering and Business Networking | Elevating Your Potential - Pittsburgh — Pittsburgh: 2026-11-25 → 2027-01-06 (eventbrite)
-- Make: Creative Solar Circuits book release! — Queens: 2026-12-05 → 2027-02-06 (eventbrite)
-- Flushing Tech Meetup - Hackathon at TIQC — Queens County: 2026-11-28 → 2026-12-12 (luma)
-- Physical AI Hack — San Francisco: 2026-11-28 → 2027-01-16 (luma)
-- Cooking with Workato — San Francisco: 2026-12-03 → 2027-01-07 (luma)
-- Startup Pitch Events San Francisco: 5 Founders on Stage — San Francisco: 2026-12-02 → 2027-01-06 (meetup)
-- Startup Pitch Events San Jose: 5 Founders on Stage — San Jose: 2026-12-25 → 2026-12-22 (luma)
-- Wednesday Startups in Action Social — Seattle: 2026-11-25 → 2026-12-02 (luma)
-- 6th Annual End Of Year Tech Meetup Extravaganza — Tampa: 2026-12-02 → 2026-12-14 (meetup)
-- Tech and Business Networking | Elevating Your Potential - Vancouver — Vancouver: 2026-11-25 → 2027-01-06 (eventbrite)
-- Exploring Liberating Structures — Victoria: 2026-11-24 → 2026-11-26 (meetup)
-- NVIDIA Developer Live Agent Gauntlet — Washington: 2026-12-01 → 2026-12-02 (luma)
-- Notion x WVG Builder Hours 002: Café Coworking with Northside Ventures — Waterloo: 2026-12-03 → 2026-12-02 (luma)
-- Base44 Pitch Competition X CODE — Wellesley: 2026-12-01 → 2027-02-10 (luma)
+- Southside Social — Auburn: 2026-11-23 → 2026-11-30 (meetup)
+- Real Wealth, Real Impact: Web3, Crypto & AI CryptoMondays Austin × Media of Society — Austin: 2026-11-23 → 2026-11-30 (luma)
+- PDX Code & Coffee - Beaverton @ Fly Chai — Beaverton: 2026-11-23 → 2026-11-30 (meetup)
+- HiddenLayer AI Security Scramble - ROK Golf — Bee Cave: 2026-11-23 → 2026-12-07 (luma)
+- Bay Area Nix Meetup second Fridays at UC Berkeley’s OCF on December 11th 6PM to 11PM 🕚 — Berkeley: 2026-12-11 → 2026-12-04 (luma)
+- Coding Class: Web Development & Python — Cambridge: 2026-11-23 → 2026-11-30 (meetup)
+- GameDev Coworking — Cary: 2026-11-23 → 2026-11-30 (meetup)
+- NERP is not exclusively Raspberry Pi — Chicago: 2026-11-23 → 2026-12-07 (meetup)
+- East Columbus Maker Meetup - Monday, 14th December — Columbus: 2026-11-23 → 2026-12-14 (guild)
+- PDX Code & Coffee - Happy Valley @ Peet's Coffee (Partnership) — Happy Valley: 2027-06-12 → 2027-07-10 (meetup)
+- Claude SMB Workshop with LaFargue - Lafayette — Lafayette: 2026-12-08 → 2026-12-09 (luma)
+- Claude SMB Workshop with LaFargue - Lake Charles — Lake Charles: 2026-12-07 → 2026-12-08 (luma)
+- Create Your Own Movie Prop Space Blaster (Parent + Kid Workshop) — Los Angeles: 2026-11-29 → 2026-12-13 (eventbrite)
+- Sip & Blast: Build a Movie Prop Space Blaster! (18+) — Los Angeles: 2026-11-28 → 2026-12-12 (eventbrite)
+- Wood Shop — Melbourne: 2026-11-23 → 2026-11-30 (meetup)
+- Wild AI February Meetup — Minneapolis: 2027-01-18 → 2027-02-15 (meetup)
+- Django Girls New York City — New York: 2026-11-27 → 2027-05-07
+- Pitch and Run Monday — New York: 2026-11-23 → 2026-11-30 (luma)
+- STARTUP FUNDRAISING STRATEGY SESSION 2026 — New York: 2026-11-23 → 2026-11-24 (eventbrite)
+- IGC Pharma Private Investor Briefing - Palo Alto — Palo Alto: 2026-12-02 → 2027-01-18 (luma)
+- Palo Alto BioTech & Pharma Startups, Investors & Professionals Networking Event — Palo Alto: 2026-11-23 → 2027-01-11 (meetup)
+- Claude Code Build Night: Build the MVP — Phoenix: 2026-12-09 → 2027-01-05 (meetup)
+- Little Italy San Diego Tech Coffee — San Diego: 2026-11-23 → 2026-11-30 (meetup)
+- Legal AI Vibe Lab #7: Agents, Workflows, and the Future of Legal Work — San Francisco: 2026-12-09 → 2026-12-16 (luma)
+- Woodworking Workshop — San Francisco: 2026-11-23 → 2026-11-30 (meetup)
+- All things software infrastructure — San Francisco: 2026-11-23 → 2026-11-30 (meetup)
+- Ruby on Rails 'Yelp' clone — San Francisco: 2026-11-23 → 2026-11-30 (meetup)
+- FWD Coworking pass: 003 — Toronto: 2026-11-24 → 2026-11-25 (luma)
+- The Junior Technician Program (Ages 8 - 14): Build, Tinker, & Troubleshoot — Union City: 2026-11-23 → 2026-11-30 (eventbrite)
+- Open Hac — Washington: 2026-11-23 → 2026-11-30 (meetup)
 

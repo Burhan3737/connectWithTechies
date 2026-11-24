@@ -1,0 +1,297 @@
+[
+ {
+  "action": "add",
+  "reason": "techweekgr.com (The Right Place, organiser): page title 'Tech Week Grand Rapids 2027', 'join us for tech week 2027 9.13 - 9.18', countdown script targets 2027-09-13; JSON-LD on the same page carries the 2026 edition startDate 2026-09-14 / endDate 2026-09-19. Unconference of ~160 independently hosted in-person events, 15,000 attendees. Not in data/events.json under any name.",
+  "record": {
+   "name": "Tech Week Grand Rapids",
+   "type": "tech-week",
+   "topics": [
+    "ai",
+    "startups",
+    "innovation",
+    "community"
+   ],
+   "city": "Grand Rapids",
+   "region": "Michigan",
+   "country": "United States",
+   "venue": "",
+   "cadence": "annual",
+   "month": "September",
+   "next_date": "2027-09-13",
+   "next_date_end": "2027-09-18",
+   "last_date": "2026-09-14",
+   "status": "upcoming",
+   "attendance": "15000",
+   "cost": "varies",
+   "audience": "technologists, founders, students, business leaders",
+   "url": "https://www.techweekgr.com/",
+   "description": "A six-day community unconference organised by The Right Place: around 160 independently hosted in-person events across Grand Rapids, from AI workshops and tech showcases to investor sessions and mixers.",
+   "source": "https://www.techweekgr.com/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "grrcon.com (organiser): 'GrrCON Cyber Security and Artificial Intelligence Conference September 16th and 17th, 2027 | DeVos Place, Grand Rapids Michigan', ~3,000 attendees. 2026 edition from the organiser's own page as archived by the Wayback Machine (web.archive.org/web/20260801/https://grrcon.com/): 'September 24th and 25th, 2026'; grrcon.com/schedule/ shows the 2026 Thursday/Friday programme, and 2026-09-24 is a Thursday. Not in data/events.json.",
+  "record": {
+   "name": "GrrCON",
+   "type": "conference",
+   "topics": [
+    "cybersecurity",
+    "ai",
+    "infosec"
+   ],
+   "city": "Grand Rapids",
+   "region": "Michigan",
+   "country": "United States",
+   "venue": "DeVos Place",
+   "cadence": "annual",
+   "month": "September",
+   "next_date": "2027-09-16",
+   "next_date_end": "2027-09-17",
+   "last_date": "2026-09-24",
+   "status": "upcoming",
+   "attendance": "3000",
+   "cost": "paid",
+   "audience": "security practitioners, researchers, AI developers, students, executives",
+   "url": "https://grrcon.com/",
+   "description": "West Michigan's practitioner-run cybersecurity and AI conference: three-plus presentation tracks, in-conference workshops and a solutions arena over two days at DeVos Place.",
+   "source": "https://grrcon.com/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "beercitycode.com (organiser): 'August 14 - 15, 2026 Grand Rapids, MI', 'an annual conference for software developers held in Grand Rapids', Friday workshops Aug 14 and Saturday conference Aug 15, venue Calvin University Fine Arts Center, 3201 Burton St SE; tickets show 'Sales Closed'. The organiser's Eventbrite agrees (JSON-LD startDate 2026-08-14, endDate 2026-08-15). No 2027 date yet, so recurring-tbd. Successor of Grand Rapids DevDay. Not in data/events.json.",
+  "record": {
+   "name": "Beer City Code",
+   "type": "conference",
+   "topics": [
+    "software",
+    "development",
+    "workshops"
+   ],
+   "city": "Grand Rapids",
+   "region": "Michigan",
+   "country": "United States",
+   "venue": "Calvin University Fine Arts Center",
+   "cadence": "annual",
+   "month": "August",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-08-14",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "paid",
+   "audience": "software developers",
+   "url": "https://www.beercitycode.com/",
+   "description": "Grand Rapids' annual software developer conference, the successor to Grand Rapids DevDay: a Friday of day-long hands-on workshops and a Saturday of talks.",
+   "source": "https://www.beercitycode.com/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "Atomic Object's own Luma event page (luma.com/r9mflosx, 'Presented by Atomic Object'): 'Atomic Games 2026 is an annual game programming competition in Grand Rapids, where 32 students from universities across the Midwest team up', location_type offline at Atomic Object, 1034 Wealthy St SE; start_at 2026-02-28T14:00Z (9 AM Detroit). Open to students of any Midwest university by request to join. No 2027 date, so recurring-tbd. Series history on spin.atomicobject.com/tag/atomic-games/. Not in data/events.json.",
+  "record": {
+   "name": "Atomic Games",
+   "type": "hackathon",
+   "topics": [
+    "ai",
+    "programming",
+    "game-ai",
+    "students"
+   ],
+   "city": "Grand Rapids",
+   "region": "Michigan",
+   "country": "United States",
+   "venue": "Atomic Object, 1034 Wealthy St SE",
+   "cadence": "annual",
+   "month": "February",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-02-28",
+   "status": "recurring-tbd",
+   "attendance": "32",
+   "cost": "free",
+   "audience": "university computer science students from across the Midwest",
+   "url": "https://luma.com/r9mflosx",
+   "description": "A one-day pair-programming competition at Atomic Object's Grand Rapids office: student teams build a bot for a game revealed that morning, then play a bracket tournament for a $600 prize.",
+   "source": "https://luma.com/r9mflosx"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "carolina.codes (organiser): 'Home of the Carolina Code Conference at Flywheel Coworking in Greenville, SC every August'; /calendar/past lists 'Carolina Code Conference 2026, day one' Friday August 14, 2026 and day two Saturday August 15, 2026 at Flywheel Coworking; /about says the 2027 conference is 'August 6th & 7th OR August 13th & 14th. TBD', so no 2027 date yet. ~300 attendees, ~30 speakers, single track; includes DC864's capture-the-flag. Not in data/events.json.",
+  "record": {
+   "name": "Carolina Code Conference",
+   "type": "conference",
+   "topics": [
+    "software",
+    "polyglot",
+    "cybersecurity",
+    "ai"
+   ],
+   "city": "Greenville",
+   "region": "South Carolina",
+   "country": "United States",
+   "venue": "Flywheel Coworking, 25 Goldsmith St.",
+   "cadence": "annual",
+   "month": "August",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-08-14",
+   "status": "recurring-tbd",
+   "attendance": "300",
+   "cost": "paid",
+   "audience": "developers of every experience level, security practitioners, meetup groups from the Southeast",
+   "url": "https://carolina.codes/",
+   "description": "A community-run, single-track 'polyglot' and cybersecurity conference: about 30 speakers across many languages over two days, with a DEF CON 864 capture-the-flag and meetup groups from across the Carolinas, Tennessee and Georgia.",
+   "source": "https://carolina.codes/calendar/past"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "nextgengvl.org/next-venture-summit/ (NextGEN, formerly NEXT Upstate, organiser): '11th annual Summit', Match Day September 15, 2026 and The Summit September 16, 2026, both at Judson Mill, Greenville, SC; 'Connect with over 200 industry leaders, innovators, and other founders'. That edition has passed and no 2027 date is posted, so recurring-tbd with last_date 2026-09-15. Not in data/events.json.",
+  "record": {
+   "name": "Next Venture Summit",
+   "type": "summit",
+   "topics": [
+    "startups",
+    "venture-capital",
+    "ai"
+   ],
+   "city": "Greenville",
+   "region": "South Carolina",
+   "country": "United States",
+   "venue": "Judson Mill",
+   "cadence": "annual",
+   "month": "September",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-09-15",
+   "status": "recurring-tbd",
+   "attendance": "200",
+   "cost": "paid",
+   "audience": "founders, investors, ecosystem supporters",
+   "url": "https://nextgengvl.org/next-venture-summit/",
+   "description": "NextGEN's two-day Upstate South Carolina startup summit: an investor Match Day of curated founder-investor pitch meetings, then a day of talks on AI, scaling and fundraising.",
+   "source": "https://nextgengvl.org/next-venture-summit/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "techweekgreenville.com (organiser): page title 'Tech Week Greenville | Sept 20 – Sept 26, 2026'; its JS bundle carries 'September 20th – 26th, 2026 • Greenville, SC' and in-person sessions at SynergyMill, Greenville Technical College's Center for Manufacturing Innovation, Flywheel Coworking and Plant Stella (corroborated by FOX Carolina, Sept 23 2026). No 2027 date and no earlier edition found, so this may have been the first; added recurring-tbd rather than guessing a date. Not in data/events.json.",
+  "record": {
+   "name": "Tech Week Greenville",
+   "type": "tech-week",
+   "topics": [
+    "ai",
+    "education",
+    "workforce",
+    "startups"
+   ],
+   "city": "Greenville",
+   "region": "South Carolina",
+   "country": "United States",
+   "venue": "",
+   "cadence": "annual",
+   "month": "September",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-09-20",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "varies",
+   "audience": "technologists, students, educators, founders",
+   "url": "https://techweekgreenville.com/",
+   "description": "A week of community-hosted in-person events across Greenville on AI, education and the workforce: panels, a women-in-tech brunch, STEM sessions and closing talks.",
+   "source": "https://techweekgreenville.com/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "dc864.org (organiser): Upstate South Carolina's DEF CON group, 'open to the public. No dues, no fees'; 'The monthly meeting is held on the 1st Thursday of every month at 6 PM ET. Meetings are hybrid, both virtual and in-person at OpenWorks (101 N Main St, Greenville, SC 29601)'. Latest posted meeting: 'September 3rd - Conference Review', Thursday September 3 [2026], 6-8 PM at OpenWorks (post dated 14 August 2026). Feeds missed it because it announces on Discord, LinkedIn and its own blog; its Meetup group page (meetup.com/defcon864) showed no event listings when read, so it cannot go in sources. Added as a curated meetup-series, recurring-tbd since no future meeting is posted.",
+  "record": {
+   "name": "DC864",
+   "type": "meetup-series",
+   "topics": [
+    "cybersecurity",
+    "hacking",
+    "privacy",
+    "ctf"
+   ],
+   "city": "Greenville",
+   "region": "South Carolina",
+   "country": "United States",
+   "venue": "OpenWorks, 101 N Main St",
+   "cadence": "monthly",
+   "month": "Varies",
+   "next_date": "",
+   "next_date_end": "",
+   "last_date": "2026-09-03",
+   "status": "recurring-tbd",
+   "attendance": "",
+   "cost": "free",
+   "audience": "security practitioners, hackers, makers, students",
+   "url": "https://www.dc864.org/",
+   "description": "Upstate South Carolina's DEF CON group: a free first-Thursday evening meeting at OpenWorks (hybrid) covering infosec, privacy, locksport and CTFs; it also runs the CTFs at Carolina Code Conference and BSides Greenville.",
+   "source": "https://www.dc864.org/about/"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "entrepreneurship.iastate.edu/event/startup-factory-demo-day (ISU Pappajohn Center, organiser): 'Startup Factory Demo Day, Tuesday, Dec 08, 2026 from 5:30 pm to 8:00 pm, ISU Research Park Core Facility, 1805 Collaboration Pl, Ames'; JSON-LD startDate 2026-12-08T17:30-06:00; celebrates Cohort 20. Cohort 18 presented Dec 9 2025 (discoverames.com listing linking the organiser's RSVP), so it runs twice a year. Open to the startup community (RSVP). Not in data/events.json.",
+  "record": {
+   "name": "ISU Startup Factory Demo Day",
+   "type": "demo-day",
+   "topics": [
+    "startups",
+    "entrepreneurship",
+    "innovation"
+   ],
+   "city": "Ames",
+   "region": "Iowa",
+   "country": "United States",
+   "venue": "ISU Research Park Core Facility",
+   "cadence": "biannual",
+   "month": "May, December",
+   "next_date": "2026-12-08",
+   "next_date_end": "2026-12-08",
+   "last_date": "",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "free",
+   "audience": "founders, mentors, investors, startup community",
+   "url": "https://entrepreneurship.iastate.edu/event/startup-factory-demo-day",
+   "description": "Iowa State's startup incubator presents its latest cohort of founders, followed by a networking reception with alumni, mentors and the Ames startup community.",
+   "source": "https://entrepreneurship.iastate.edu/event/startup-factory-demo-day"
+  }
+ },
+ {
+  "action": "add",
+  "reason": "cyio.iastate.edu/cyber-defense-challenges/ (ISU Center for Cybersecurity Innovation & Outreach, organiser): 'CDC Dates for 2026 - 2027 ... Community College CDC December 4-5, 2026'; held Friday (setup) and Saturday (challenge from 8 a.m.) in 1313 Coover Hall; 'The Community College CDC is open to any community college in Iowa and surrounding states'; red team open to anyone, and anyone may visit. In-person blue-team/red-team cyber defense competition. The ISU-only CDCs (Oct 9-10 2026, Mar 5-6 2027) were not added as they are closed to ISU students. Not in data/events.json.",
+  "record": {
+   "name": "Community College Cyber Defense Challenge",
+   "type": "ctf",
+   "topics": [
+    "cybersecurity",
+    "students",
+    "blue-team"
+   ],
+   "city": "Ames",
+   "region": "Iowa",
+   "country": "United States",
+   "venue": "1313 Coover Hall, Iowa State University",
+   "cadence": "annual",
+   "month": "December",
+   "next_date": "2026-12-04",
+   "next_date_end": "2026-12-05",
+   "last_date": "",
+   "status": "upcoming",
+   "attendance": "",
+   "cost": "free",
+   "audience": "community college students from Iowa and surrounding states; volunteer red-team attackers",
+   "url": "https://www.cyio.iastate.edu/cyber-defense-challenges/",
+   "description": "Iowa State's ISEAGE-run cyber defense competition for community college teams: students build and defend a network against a live red team of security professionals for a day in Coover Hall.",
+   "source": "https://www.cyio.iastate.edu/cyber-defense-challenges/"
+  }
+ }
+]

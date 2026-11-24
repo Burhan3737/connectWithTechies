@@ -1454,16 +1454,16 @@
     "venue": "Loews Royal Pacific Resort at Universal Orlando",
     "cadence": "annual",
     "month": "November",
-    "next_date": "2026-11-15",
-    "next_date_end": "2026-11-20",
-    "last_date": "2025-11-16",
+    "next_date": "2027-11-14",
+    "next_date_end": "2027-11-19",
+    "last_date": "2026-11-15",
     "status": "upcoming",
     "attendance": "",
     "cost": "paid",
     "audience": "developers, IT pros, data and security engineers",
-    "url": "https://live360events.com/events/orlando-2026/home.aspx",
+    "url": "https://live360events.com/events/orlando-2027/home.aspx",
     "description": "Six co-located conferences under one badge, including Visual Studio Live!, Data Platform Live!, TechMentor and Artificial Intelligence Live!, with 200+ sessions and 30+ workshops.",
-    "source": "https://live360events.com/events/orlando-2026/home.aspx"
+    "source": "https://live360events.com/events/orlando-2027/home.aspx"
   },
   {
     "name": "BSides Orlando",
@@ -1811,16 +1811,16 @@
     "venue": "McKimmon Conference & Training Center",
     "cadence": "annual",
     "month": "April-May",
-    "next_date": "",
-    "next_date_end": "",
+    "next_date": "2027-04-27",
+    "next_date_end": "2027-04-28",
     "last_date": "2026-04-30",
-    "status": "recurring-tbd",
+    "status": "upcoming",
     "attendance": "",
     "cost": "paid",
     "audience": "devops practitioners, SREs, operations engineers",
-    "url": "https://devopsdays.org/events/2026-raleigh/welcome/",
+    "url": "https://devopsdays.org/events/2027-raleigh/welcome/",
     "description": "The Raleigh edition of the global devopsdays series, held at NC State's McKimmon Center, marking its tenth anniversary in 2026 with talks, ignites and open spaces.",
-    "source": "https://devopsdays.org/events/2026-raleigh/welcome/"
+    "source": "https://devopsdays.org/events/2027-raleigh/welcome/"
   },
   {
     "name": "Triangle InfoSeCon",

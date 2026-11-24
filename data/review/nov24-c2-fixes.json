@@ -1,0 +1,12 @@
+[
+  { "match": { "name": "Live! 360 Tech Con", "city": "Orlando" },
+    "action": "update",
+    "reason": "live360events.com/events/orlando-2027/home.aspx (organiser) reads 'Live! 360 Tech Con 2027 | November 14-19, 2027 | ROYAL PACIFIC RESORT AT UNIVERSAL ORLANDO', with per-day Nov 14-19, 2027 dates; the live360events.com home page lists the same under Upcoming Conferences. The 2026 edition (Nov 15-20, 2026) has run and is kept as last_date. url/source moved from the orlando-2026 page to the 2027 page.",
+    "set": { "next_date": "2027-11-14", "next_date_end": "2027-11-19", "last_date": "2026-11-15", "status": "upcoming",
+             "url": "https://live360events.com/events/orlando-2027/home.aspx",
+             "source": "https://live360events.com/events/orlando-2027/home.aspx" } },
+  { "match": { "name": "BSides Ottawa", "city": "Ottawa" },
+    "action": "update",
+    "reason": "bsidesottawa.ca (organiser) during the event read 'Live now // Nov 19-20 // Ottawa ... We're live at the Ottawa Conference & Event Centre', 'When Thu Nov 19 & Fri Nov 20'. Dates already matched; the record had no venue and cited allbsides.com as its source, so venue and source are filled from the organiser's own page. Dates unchanged.",
+    "set": { "venue": "Ottawa Conference & Event Centre", "source": "https://www.bsidesottawa.ca/" } }
+]

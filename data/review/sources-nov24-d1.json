@@ -1,0 +1,17 @@
+[
+ {
+  "url": "https://www.meetup.com/grwebdev/",
+  "name": "GRWebDev (Grand Rapids Web Development Group)",
+  "reason": "Grand Rapids' main web-dev Meetup group, not in the registry. In-person (eventType PHYSICAL) evening talks roughly monthly (Oct 26 and Nov 23, 2026) plus a monthly 'Coffee with Creators @ The Factory' (Oct 15, Nov 19; next Dec 17, 2026); its Friday 'Code + Commiserate' sessions are ONLINE and the feed should drop them. Covers Grand Rapids' missing meetup-series type."
+ },
+ {
+  "url": "https://www.meetup.com/hack-greenville/",
+  "name": "HackGreenville",
+  "reason": "Greenville SC's tech community group, not in the registry. In-person quarterly 'HackGreenville Nights' (Feb 25, May 28, Nov 5, 2026) and UpstatePHP meetups (Feb 19, May 14, Oct 15, 2026), all eventType PHYSICAL in downtown Greenville. Covers Greenville's missing meetup-series type."
+ },
+ {
+  "url": "https://www.meetup.com/grand-junction-technerd-herd/",
+  "name": "Grand Junction TechNerd Herd",
+  "reason": "Grand Junction's only active tech Meetup group, not in the registry: a second-Monday evening talk every month (Apr 13 through Nov 9, 2026, all eventType PHYSICAL) at Elm Ave venues (735 and 745 Elm Ave), Grand Junction CO, on topics from local LLMs to Elixir; it also ran an 'Open Spaces' micro-conference. Covers Grand Junction's missing meetup-series type."
+ }
+]

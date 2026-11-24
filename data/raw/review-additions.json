@@ -2934,9 +2934,9 @@
     "country": "United States",
     "venue": "Fractal Tech Hub, 111 Conselyea St, Brooklyn",
     "cadence": "one-off",
-    "month": "November",
-    "next_date": "2026-11-27",
-    "next_date_end": "2026-11-28",
+    "month": "May",
+    "next_date": "2027-05-07",
+    "next_date_end": "2027-05-08",
     "last_date": "",
     "status": "upcoming",
     "attendance": "",
@@ -2944,7 +2944,7 @@
     "audience": "women new to programming",
     "url": "https://djangogirls.org/en/nyc/",
     "description": "A Django Girls one-day beginner programming workshop in New York City, where participants build and deploy their first Django web application with one-on-one coach support. Django Girls workshops are free and volunteer-run.",
-    "source": "https://djangogirls.org/en/newyorkcity/"
+    "source": "https://djangogirls.org/en/nyc/"
   },
   {
     "name": "The Carpentries Workshops",

@@ -1,0 +1,133 @@
+{
+  "pass": "nov24-t3",
+  "date": "2026-11-24",
+  "returning": [
+    {
+      "name": "Chain React 2026",
+      "verdict": "added",
+      "reason": "chainreactconf.com (organiser, Infinite Red/Expo/React Foundation): '6th annual, Portland, Oregon', July 30-31 2026 at The Armory, workshops July 29; annual since 2017. Site still shows 2026 and announces no 2027 date. Added as 'Chain React', recurring-tbd, last_date 2026-07-29."
+    },
+    {
+      "name": "M365 Community Days NYC",
+      "verdict": "added",
+      "reason": "communitydays.org/event/2026-07-31/m365-community-days-nyc: July 31 2026, Microsoft, 11 Times Square, in person. Annual: 2024 edition (July 26, Microsoft Times Square, MVP blog recap on techcommunity.microsoft.com) and 2025 (July 25). No 2027 listing yet. Added recurring-tbd, last_date 2026-07-31."
+    },
+    {
+      "name": "Maverick Hackathon",
+      "verdict": "unresolved",
+      "reason": "maverick-hackathon.devpost.com (organiser 'wavehack'): one-day game hackathon, Aug 1 2026, Alpharetta GA, high-school students only, 11 participants. Same organiser's only other event is a differently named 'WaveHack' (May 23 2026, coffee shop). No organiser site, no next Maverick edition on Devpost (API search 'maverick', 'wavehack')."
+    },
+    {
+      "name": "Revolute Hackathon",
+      "verdict": "exists",
+      "reason": "Same organiser (Revolute Community, revolutehack.com, Boston robotics hackathons at FabLab Kendall) is in data/events.json as the luma feed record 'Revolute v1.11: Physical AI Hackathon 🤖' (Cambridge, 2026-11-20, via luma-area:Boston). revolutehack.com lists the 2026 run (Aug 1 'Cooking with robots' Devpost edition, Oct 9, Oct 16, Nov 6, Nov 13, Thanksgivathon Nov 20-21). Not added to sources: it publishes from a personal Luma calendar (usr-KxkVCLYqVvA7jev), which the Luma adapter skips as an organiser to follow."
+    },
+    {
+      "name": "La Villa - Hacker Summer Camp 2026",
+      "verdict": "exists",
+      "reason": "lavillahacker.com: 'La casa de la comunidad de habla hispana y portuguesa dentro de defcon', Aug 6-9 2026, Las Vegas - a Spanish/Portuguese-language village inside DEF CON 34, not a separate event. Covered by the curated record 'DEF CON' (Las Vegas, LVCC, last_date 2026-08-06, next 2027-08-05)."
+    },
+    {
+      "name": "revolutetest",
+      "verdict": "rejected",
+      "reason": "Not a real event: revolutetest.devpost.com is a 'Test Hackathon' ('make robot arms cook', $10 prize, judge 'test123', 6 participants), Aug 2 2026, a dry run of the Revolute Hackathon Devpost page."
+    },
+    {
+      "name": "Recon Village @ DEFCON 2026",
+      "verdict": "exists",
+      "reason": "reconvillage.org: 'OSINT & Reconnaissance Village at DEF CON', DEF CON 34, Las Vegas Convention Center, August 7-9 2026 - a village inside DEF CON. Covered by the curated record 'DEF CON' (Las Vegas, last_date 2026-08-06, next 2027-08-05)."
+    },
+    {
+      "name": "Red Team Village at DEFCON 34",
+      "verdict": "exists",
+      "reason": "redteamvillage.io: 'Attendee Guide - Everything you need to navigate DEF CON 34', Red Team Village [309] in Hall 1 - a village inside DEF CON. Covered by the curated record 'DEF CON' (Las Vegas, last_date 2026-08-06, next 2027-08-05)."
+    },
+    {
+      "name": "Beer City Code 2026",
+      "verdict": "exists",
+      "reason": "beercitycode.com: 'annual conference for software developers held in Grand Rapids', 2026 edition August 14-15 (workshops Fri Aug 14, conference Sat Aug 15) at Calvin University Fine Arts Center, 3201 Burton St SE. (The row's Aug 8-9 came from dev.events and is wrong.) Predecessor Grand Rapids DevDay, renamed 2017. No 2027 date yet. Same record (same name, city, 2026 dates and venue) is already being added in this run by data/review/nov24-d1-fixes.json from the Grand Rapids / Greenville city discovery, so no second add here (the patcher rejected it as a duplicate add)."
+    },
+    {
+      "name": "DefCon Training",
+      "verdict": "exists",
+      "reason": "training.defcon.org/pages/2026-las-vegas-call-for-trainers: DEF CON Training Las Vegas, Aug 8-11 2026 at the Las Vegas Convention Center, 'alongside and after DEF CON 34'. Part of DEF CON week, covered by the curated record 'DEF CON' (Las Vegas, LVCC). The only next edition announced is DEF CON Training Singapore, March 5-7 2027 (outside US/Canada); no 2027 Las Vegas training dates."
+    },
+    {
+      "name": "Firehacks",
+      "verdict": "unresolved",
+      "reason": "firehacks.devpost.com (CodeStarters): beginner hackathon, Aug 8-9 2026, Pleasanton CA, ages 13-18 high-school only, 78 participants. Appears to be the first edition (the 2024 'FireHacks Fall' on Devpost is a different, online Texas robotics-team event). CodeStarters' next event, IceHacks (Nov 8-15 2026), is online. No organiser site found and no next in-person Firehacks announced."
+    },
+    {
+      "name": "SpaceXAI Grokathon",
+      "verdict": "unresolved",
+      "reason": "spacexai-grokathon.devpost.com: one-day, in-person, invite-only ('Accepted members') 12-hour hackathon 'at the old X office on Market Street in San Francisco', Aug 8 2026, 16 participants. A company promotional event; no repeat SF edition announced (Devpost search 'grokathon' shows only a separate Georgia Tech student Grokathon, Nov 2 2026)."
+    },
+    {
+      "name": "Carolina Code Conference 2026",
+      "verdict": "exists",
+      "reason": "carolina.codes: 'Home of the Carolina Code Conference at Flywheel Coworking in Greenville, SC every August'; organiser blog 'Carolina Code Conference 2026 Week is here!' gives check-in Fri 8/14 and conference Sat 8/15 2026. carolina.codes/calendar shows only '(HOLD)' dates for 2027 (both Aug 6-7 and Aug 13-14), so not confirmed. Same record (same name, city, 2026 dates and venue) is already being added in this run by data/review/nov24-d1-fixes.json from the Grand Rapids / Greenville city discovery, so no second add here (the patcher rejected it as a duplicate add)."
+    },
+    {
+      "name": "Montreal Community Days",
+      "verdict": "unresolved",
+      "reason": "communitydays.org/event/2026-08-21/microsoft-community-days-montreal (the row's /pending/ URL now 404s): 'Microsoft Community Days Montreal', Aug 21 2026, Microsoft Montreal, 2000 avenue McGill College; Sessionize CFP agrees. Appears to be the first edition (no 2025 found; searched 'Community Days Montreal 2025'), and no 2027 edition is listed. The GUM365 quarterly 'M365 Community Days Montréal' sessions are a different series."
+    },
+    {
+      "name": "8-Bit Jam",
+      "verdict": "unresolved",
+      "reason": "8-bit-jam.devpost.com (Hack Club): one-day game jam, Aug 22 2026, Great Falls VA, 'for Fairfax County high school students', 20 participants. First edition; no organiser site and no 2027 edition found (Devpost search '8-bit jam', 'great falls')."
+    },
+    {
+      "name": "Tulsa AWS Community Day",
+      "verdict": "added",
+      "reason": "awsdaytulsa.com (JS bundle): 'Thank You, Tulsa! - Tulsa AWS Community Day 2026', Saturday, August 22, 2026; 'Planning for Tulsa AWS Community Day 2027 begins this fall' (2027 announced, no date). Venue OSU-Tulsa Conference Center per the organiser's Sessionize CFP. Added recurring-tbd, last_date 2026-08-22."
+    },
+    {
+      "name": "ICFP 2026",
+      "verdict": "rejected",
+      "reason": "Next edition outside the US/Canada: ICFP moves each year; icfp27.sigplan.org places ICFP 2027 in Nijmegen, The Netherlands (Sept 26 - Oct 1 2027). The 2026 Indianapolis edition (icfp26.sigplan.org, Aug 24-29, Madam Walker Legacy Center) was a one-time North American stop."
+    },
+    {
+      "name": "U.S. Travel's ESTO 2026",
+      "verdict": "rejected",
+      "reason": "Not a tech event: esto.ustravel.org is U.S. Travel Association's Educational Seminar for Tourism Organizations, a destination-marketing conference for tourism bureaus. (Next: San Antonio, Aug 28 - Sep 1 2027.)"
+    },
+    {
+      "name": "DynamicsCon Regional: Ohio Valley 2026",
+      "verdict": "exists",
+      "reason": "dynamicscon.com/regionals: the Columbus regional continues as 'Midwest USA, Columbus, OH, August 31 - September 1, 2027'. Already in data/events.json as feed records 'DynamicsCon Regional Midwest 2027' (Columbus, 2027-08-31, devevents) and 'DynamicsCon Regional: Midwest USA' (Dublin, 2027-08-31, meetup)."
+    },
+    {
+      "name": "2026 Secure Carolinas Conference",
+      "verdict": "added",
+      "reason": "aegisx.events (organiser) and its Sessionize CFP: 2026 Secure Carolinas Conference, Aug 26-27 2026, Roam Center, downtown Greenville SC, 350+ attendees. CyberSC's site has photo galleries for the 2024, 2025 and 2026 conferences (annual). No 2027 announced. Added as 'Secure Carolinas Conference', Greenville, recurring-tbd, last_date 2026-08-26."
+    },
+    {
+      "name": "CTP Hacks 2026",
+      "verdict": "rejected",
+      "reason": "Closed to one program's enrolment: ctp-hacks-2026.devpost.com 'Hackathon for CUNY Tech Prep's Cohort 12 Fellows'; 'Who can participate: CUNY Tech Prep Cohort 12', invite only (Aug 27 2026, New York)."
+    },
+    {
+      "name": "Midnight Hackathon: August 2026",
+      "verdict": "rejected",
+      "reason": "Online-only series: MLH's Midnight hackathons are 48-hour virtual events. The July 2026 edition's Devpost lists the same 'New York, NY' address (500 7th Ave, MLH's office) as the August one, yet events.mlh.com/events/14413-midnight-hackathon says 'Event is hosted online'; the Sept 2025 and May 2026 editions were also online. No in-person venue appears anywhere for Aug 28-30."
+    },
+    {
+      "name": "International DreamHacks 2026 — Virtual Hackathon",
+      "verdict": "rejected",
+      "reason": "Online-only: dreamhacks-gt.devpost.com 'DreamHacks 2026 is a free, virtual hackathon bringing together high school students ages 13-18 from around the world'; Atlanta is only the organisers' (Georgia Tech collaborators') location."
+    },
+    {
+      "name": "sloptic test",
+      "verdict": "rejected",
+      "reason": "Not a real event: sloptic-test.devpost.com 'test hackathon, do NOT join' / 'Sloptic test (sloptic.org). Please do NOT join this hackathon.' 4 participants."
+    },
+    {
+      "name": "swampUP 2026",
+      "verdict": "added",
+      "reason": "swampup.jfrog.com JSON-LD: swampUP 2026, startDate 2026-09-01, endDate 2026-09-03, The Glasshouse, 660 12th Ave, New York, in person (OfflineEventAttendanceMode). Page says 'MEET US NEXT YEAR - Join the Waitlist for JFrog swampUP 2027', no date or city. Added recurring-tbd in New York (last host city), last_date 2026-09-01."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}

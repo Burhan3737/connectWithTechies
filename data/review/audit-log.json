@@ -723,6 +723,28 @@
           "resolution": "Cause fixed: curator.md RETURNING table now rejects single-institution events (quote eligibility; Devpost 'Invite only' alone is not the test). Analytics for Good Hackathon record left in place pending owner decision (remove, or date it 2027-01-29..30)."
         }
       ]
+    },
+    {
+      "id": "2026-11-24-i1",
+      "date": "2026-11-24",
+      "iteration": 1,
+      "scope": "nov24 cycle: script refresh, 60 re-check rows (c1-c3), 10 DISCOVER cities (d1-d2), 75 RETURNING rows (t1-t3); 41 updates, 45 adds, 1 removal applied",
+      "checked": "Central Ohio Software Symposium removal (NFJS cancellation page); Django Girls NYC and Tech Alley Vegas re-dates; city moves SC to Denver, BSides SLC to Sandy, CDAO to Hoboken, BSDCan to Vancouver; Ignite, Live! 360, BSides MKE/KC/SD 2027 dates; random confirmed rows (All Things Open, Florida Startup Summit, East Meets West, AI Tinkerers Fort Wayne, QCon SF, Cutie Hack); 13 new adds on organiser pages; no aggregator sources; coverage losses all explained",
+      "blocking": 0,
+      "warnings": 1,
+      "findings": [
+        {
+          "id": "2026-11-24-i1-W1",
+          "severity": "warning",
+          "event": "Memphis Microsoft Community Days; Power BI Days DC; State of the Map US; Beam Summit; UN Open Source Week; AWS Community Day Midwest; IEEE Cloud Summit; The Perl and Raku Conference; Summercon; SciPy; MY Hackathon; Chain React; M365 Community Days NYC; Secure Carolinas Conference",
+          "summary": "nov24-t1/t2/t3 again added RETURNING rows as recurring-tbd although no next edition is announced (the curators' own reasons say so), contrary to curator.md's RETURNING table. Applied inconsistently: t1 left AWS Community Day East Canada and Accelerate Chicago unresolved on the same facts. Rotating-city events (SciPy, State of the Map US, AWS Community Day Midwest, TPRC) are pinned to the last host city, while t2 rejected AlmaLinux Day and bitcoin++ as rotating one-time city stops. Dates and cities are historically true; nothing fabricated.",
+          "recommendation": "Owner policy decision still pending. Either revert these adds and record them unresolved with a retry date, or drop the gate in curator.md and add a rule for rotating-city events with no announced next host (leave unplaced or skip rather than pin to the last host city). Apply one rule to RETURNING and DISCOVER.",
+          "repeat_of": "2026-11-21-i1-W1",
+          "status": "deferred",
+          "resolved_on": "2026-11-24",
+          "resolution": "Repeat of 2026-11-21-i1-W1, same owner policy decision: keep the RETURNING gate (revert these 14 adds to unresolved) or drop it in curator.md and add a rule for rotating-city events. Adds kept pending that decision."
+        }
+      ]
     }
   ]
 }

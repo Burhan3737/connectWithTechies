@@ -1,0 +1,29 @@
+[
+  {
+    "match": {
+      "name": "Tech Alley Vegas",
+      "city": "Las Vegas"
+    },
+    "action": "update",
+    "reason": "meetup.com/tech-alley (organiser's Meetup group, linked from techalley.org): the next event 'Tech Alley Vegas December 2026 Event' is listed for Sat, Dec 19 2026, 10:00 AM PST, at Third Street, 814 S 3rd St, Las Vegas (JSON-LD startDate 2026-12-19T18:00Z, endDate 2026-12-20T00:00Z = 10 AM-4 PM PT, one day). The stored next_date was the elapsed Nov 21 2026 edition (the built record showed it as last_date with next_date empty / recurring-tbd); the patcher carries 2026-11-21 into last_date. The following one is also listed, Jan 16 2027.",
+    "set": {
+      "next_date": "2026-12-19",
+      "next_date_end": "2026-12-19",
+      "status": "upcoming"
+    }
+  },
+  {
+    "match": {
+      "name": "Django Girls New York City",
+      "city": "New York"
+    },
+    "action": "update",
+    "reason": "djangogirls.org/en/nyc/ (the workshop's own page on the Django Girls site): 'Build your first website May 7th - 8th, 2027 in New York City ... It will take place on May 7th & 8th, 2027 at Fractal Tech Hub, 111 Conselyea St, Brooklyn', schedule Friday May 7th 2027 check-in/installation party 6 PM, Saturday May 8th 2027 workshop 9 AM-6 PM, applications close April 17th 2027. The djangogirls.org/en/events/ listing agrees: 'New York City 8th May 2027'. The stored Nov 27-28 2026 dates appear nowhere on either page, and there is no November 2026 New York City edition in the past-events list, so last_date stays empty. The old source URL /en/newyorkcity/ returns 404; replaced with /en/nyc/.",
+    "set": {
+      "next_date": "2027-05-07",
+      "next_date_end": "2027-05-08",
+      "month": "May",
+      "source": "https://djangogirls.org/en/nyc/"
+    }
+  }
+]

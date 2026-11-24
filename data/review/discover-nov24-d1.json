@@ -1,0 +1,269 @@
+{
+ "pass": "nov24-d1",
+ "date": "2026-11-24",
+ "returning": [],
+ "reported": [],
+ "cities": [
+  {
+   "city": "Ames",
+   "region": "Iowa",
+   "queries": [
+    "Ames Iowa tech conference 2027",
+    "Iowa State University Cyber Defense Competition 2027 ISEAGE",
+    "Ames Iowa startup pitch demo day OR game jam OR tech meetup 2026",
+    "\"Securing the Heartland\" Iowa State cybersecurity conference Scheman 2025 OR 2026",
+    "Iowa State University game jam OR hackathon OR \"Youth AI Summit\" Ames 2027",
+    "meetup.com Ames Iowa developers OR programming OR AI group in person"
+   ],
+   "found": [
+    {
+     "name": "ISU Startup Factory Demo Day",
+     "url": "https://entrepreneurship.iastate.edu/event/startup-factory-demo-day",
+     "verdict": "added",
+     "reason": "ISU Pappajohn Center event page: Tue Dec 8 2026, 5:30-8 pm, ISU Research Park Core Facility, Cohort 20; runs twice a year (Cohort 18 presented Dec 9 2025). Covers Ames' missing demo-day type."
+    },
+    {
+     "name": "Community College Cyber Defense Challenge",
+     "url": "https://www.cyio.iastate.edu/cyber-defense-challenges/",
+     "verdict": "added",
+     "reason": "ISU CyIO page: Community College CDC Dec 4-5 2026 in 1313 Coover Hall, open to any community college in Iowa and surrounding states. Covers Ames' missing ctf type. The ISU-only CDCs (Oct 9-10 2026, Mar 5-6 2027) are closed to one institution and were not added."
+    },
+    {
+     "name": "State Cybersecurity Conference (Securing the Heartland)",
+     "url": "https://www.cyio.iastate.edu/state-cybersecurity-conference/",
+     "verdict": "rejected",
+     "reason": "Held Oct 22 2026 at the Scheman Building; only this one edition found, no earlier or 2027 edition, so a recurring record cannot be justified; aimed at Iowa county, city and school officials."
+    },
+    {
+     "name": "Youth AI Summit",
+     "url": "https://www.cyio.iastate.edu/youth-ai-summit/",
+     "verdict": "rejected",
+     "reason": "For students in grades 9-12 only (Apr 15 2026, ISU Alumni Center); no 2027 date and no evidence it recurs."
+    },
+    {
+     "name": "Ivy Hackathon",
+     "url": "https://www.ivybusiness.iastate.edu/ivy-hackathon/",
+     "verdict": "rejected",
+     "reason": "Single-institution: 'All Iowa State University students are welcome to participate in the Ivy Hackathon'. A business-case challenge (Sep 30 2026)."
+    },
+    {
+     "name": "Ivy Sales Innovation Summit",
+     "url": "https://www.luminik.io/events/ivy-sales-innovation-summit/",
+     "verdict": "rejected",
+     "reason": "Sales and marketing event at the Memorial Union, Apr 7 2027, found only on an aggregator; not a tech event."
+    },
+    {
+     "name": "Swan Hacks",
+     "url": "https://hackclub.ece.iastate.edu/html/swanhacks.html",
+     "verdict": "exists",
+     "reason": "Already curated as Swan Hacks, Ames. No Ames meetup group, game jam, tech week or startup week found."
+    }
+   ]
+  },
+  {
+   "city": "Glenpool",
+   "region": "Oklahoma",
+   "queries": [
+    "Glenpool Oklahoma conference center tech event 2026 2027",
+    "Glenpool OK hackathon OR meetup OR \"tech\" event 2026 -BSides"
+   ],
+   "found": [
+    {
+     "name": "BSidesOK",
+     "url": "https://bsidesok.com",
+     "verdict": "exists",
+     "reason": "Already curated as BSidesOK, Glenpool (Glenpool Conference Center). Note: bsidesok.com did not respond (connection failed on https, www and http) on 2026-11-24, so its link may need a check."
+    },
+    {
+     "name": "2026 Modern Workforce Summit",
+     "url": "https://allevents.in/glenpool/business",
+     "verdict": "rejected",
+     "reason": "Business and workforce event at the Glenpool Conference Center (Oct 8 2026), not a tech event. Glenpool is a small Tulsa suburb: no hackathon, meetup, CTF, game jam, demo day or tech week found there. Tulsa's own events (e.g. Tulsa Tech Week) are held in Tulsa."
+    }
+   ]
+  },
+  {
+   "city": "Grand Junction",
+   "region": "Colorado",
+   "queries": [
+    "Grand Junction Colorado tech meetup OR startup week OR hackathon 2026",
+    "Grand Junction Colorado Mesa University hackathon OR \"game jam\" OR \"pitch competition\" OR \"Startup Week\" 2026 2027",
+    "\"West Slope Startup Week\" 2026",
+    "Grand Junction CO \"pitch night\" OR \"demo day\" OR \"game jam\" OR \"capture the flag\" OR \"AI summit\" 2026"
+   ],
+   "found": [
+    {
+     "name": "Grand Junction TechNerd Herd",
+     "url": "https://www.meetup.com/grand-junction-technerd-herd/",
+     "verdict": "added",
+     "reason": "Monthly second-Monday in-person tech talks in Grand Junction through Nov 9 2026; went to sources-nov24-d1.json, not as a one-off add."
+    },
+    {
+     "name": "West Slope Startup Week",
+     "url": "https://westslopestartupweek.com",
+     "verdict": "exists",
+     "reason": "Already curated under Durango, where it has been held for four years (2026: Oct 5-9). Grand Junction hosted only the 2019 Techstars edition."
+    },
+    {
+     "name": "RedacteCON",
+     "url": "https://redactecon.org/",
+     "verdict": "exists",
+     "reason": "Already curated under Grand Junction."
+    },
+    {
+     "name": "CMU Entrepreneurship Day",
+     "url": "https://www.coloradomesa.edu/now/2026/may/built-on-a-century-cmus-19th-annual-entrepreneurship-day-powers-the-future.html",
+     "verdict": "rejected",
+     "reason": "General business entrepreneurship day on Colorado Mesa University's campus, not a tech event. No hackathon, CTF or game jam found in Grand Junction."
+    }
+   ]
+  },
+  {
+   "city": "Grand Rapids",
+   "region": "Michigan",
+   "queries": [
+    "Grand Rapids tech week OR startup week 2026 2027",
+    "Grand Rapids hackathon 2026 OR 2027",
+    "Grand Rapids AI meetup OR developer meetup monthly 2026 meetup.com",
+    "BSides Grand Rapids 2026 OR 2027 cybersecurity conference",
+    "Grand Rapids game jam OR CTF OR demo day 2026",
+    "Atomic Games 2026 Atomic Object Grand Rapids student game programming competition",
+    "Global Game Jam Grand Rapids site OR GVSU hackathon OR \"Kendall\" game jam 2026",
+    "Grand Rapids \"demo day\" startup accelerator 2026 OR \"Start Garden\" OR \"Grand Rapids Startup Week\""
+   ],
+   "found": [
+    {
+     "name": "Tech Week Grand Rapids",
+     "url": "https://www.techweekgr.com/",
+     "verdict": "added",
+     "reason": "Organiser site: 2027 edition 9.13-9.18 (Sep 13-18, 2027); 2026 edition Sep 14-19 from its JSON-LD. Covers the missing tech-week type."
+    },
+    {
+     "name": "GrrCON",
+     "url": "https://grrcon.com/",
+     "verdict": "added",
+     "reason": "Organiser site: Sep 16-17, 2027 at DeVos Place; 2026 edition Sep 24-25 from the organiser's page as archived Aug 2026. ~3,000 attendees; was missing from the data entirely."
+    },
+    {
+     "name": "Beer City Code",
+     "url": "https://www.beercitycode.com/",
+     "verdict": "added",
+     "reason": "Organiser site: Aug 14-15, 2026 at Calvin University Fine Arts Center; annual developer conference; no 2027 date, added recurring-tbd."
+    },
+    {
+     "name": "Atomic Games",
+     "url": "https://luma.com/r9mflosx",
+     "verdict": "added",
+     "reason": "Atomic Object's annual student bot-programming competition, Feb 28 2026 at its Grand Rapids office, open to students from universities across the Midwest; added recurring-tbd as a hackathon."
+    },
+    {
+     "name": "GRWebDev",
+     "url": "https://www.meetup.com/grwebdev/",
+     "verdict": "added",
+     "reason": "Active in-person web-dev Meetup group (monthly talks and coffee, next Dec 17 2026); went to sources-nov24-d1.json."
+    },
+    {
+     "name": "Merge (Software GR)",
+     "url": "https://merge.softwaregr.org/",
+     "verdict": "exists",
+     "reason": "Already curated as Merge, Grand Rapids. Software GR's own Meetup has held nothing but Merge since Dec 2025, so it was not proposed as a source."
+    },
+    {
+     "name": "River City AI & Dev",
+     "url": "https://www.meetup.com/river-city-ai-dev-group/",
+     "verdict": "rejected",
+     "reason": "Three in-person meetings Apr 15 to Jun 17 2026 and none since; not active enough to follow."
+    },
+    {
+     "name": "AI Tinkerers Grand Rapids",
+     "url": "https://grand-rapids.aitinkerers.org/",
+     "verdict": "rejected",
+     "reason": "Chapter page lists no events and its public .ics feed is empty; nothing to add."
+    },
+    {
+     "name": "GR DeepTech",
+     "url": "https://www.gvsu.edu/computing/gr-deeptech-230",
+     "verdict": "rejected",
+     "reason": "GVSU pitch competition whose final is held during GVSU's Innovation Day (Apr 24); the page lists GVSU workshop rooms on its Allendale and Health campuses, not a public Grand Rapids event with its own date."
+    },
+    {
+     "name": "City Hacks GR",
+     "url": "https://peoplefirsteconomy.org/?p=113904",
+     "verdict": "unresolved",
+     "reason": "A '1st Annual' tech weekend and hackathon for Sep 14-17 with no year in the snippet; no organiser page found to confirm the year or that it recurs."
+    }
+   ]
+  },
+  {
+   "city": "Greenville",
+   "region": "South Carolina",
+   "queries": [
+    "Greenville SC tech conference OR summit OR hackathon 2027",
+    "\"Tech Week Greenville\" 2026 OR 2027 dates",
+    "\"Tech Week Greenville\" SC organizer website schedule September 2026",
+    "\"Tech Week Greenville\" 2025",
+    "Greenville SC startup pitch competition OR demo day OR game jam OR CTF 2026",
+    "HackGreenville hackathon OR \"Code for Greenville\" OR \"Greenville game jam\" OR \"Upstate CTF\" 2026",
+    "NEXT Venture Summit Greenville SC 2026 OR 2027",
+    "Carolina Code Conference 2026 Greenville SC dates venue",
+    "DEF CON 864 Greenville SC group meetings"
+   ],
+   "found": [
+    {
+     "name": "Tech Week Greenville",
+     "url": "https://techweekgreenville.com/",
+     "verdict": "added",
+     "reason": "Organiser site: Sept 20-26, 2026, in-person sessions across Greenville; no 2027 date and no earlier edition found, so added recurring-tbd. Covers the missing tech-week type."
+    },
+    {
+     "name": "Next Venture Summit",
+     "url": "https://nextgengvl.org/next-venture-summit/",
+     "verdict": "added",
+     "reason": "NextGEN's 11th annual summit, Sep 15-16 2026 at Judson Mill; no 2027 date, added recurring-tbd. Covers the missing summit type."
+    },
+    {
+     "name": "Carolina Code Conference",
+     "url": "https://carolina.codes/",
+     "verdict": "added",
+     "reason": "Organiser site: every August at Flywheel Coworking; 2026 was Aug 14-15; 2027 is 'August 6th & 7th OR August 13th & 14th. TBD', so added recurring-tbd."
+    },
+    {
+     "name": "DC864",
+     "url": "https://www.dc864.org/",
+     "verdict": "added",
+     "reason": "Upstate SC DEF CON group, first-Thursday monthly meeting at OpenWorks (latest posted Sep 3 2026). Announces on Discord, LinkedIn and its own blog, so no feed sees it; added as a curated meetup-series."
+    },
+    {
+     "name": "HackGreenville",
+     "url": "https://www.meetup.com/hack-greenville/",
+     "verdict": "added",
+     "reason": "Quarterly HackGreenville Nights plus UpstatePHP meetups, all in person; went to sources-nov24-d1.json."
+    },
+    {
+     "name": "BSidesGreenville",
+     "url": "https://bsides.org/event/bsidesgreenville-2/",
+     "verdict": "exists",
+     "reason": "Already curated as BSidesGreenville; DC864 runs its CTF, so no separate CTF record."
+    },
+    {
+     "name": "Innovation Exchange",
+     "url": "https://nextgengvl.org/innovation-exchange/",
+     "verdict": "rejected",
+     "reason": "NextGEN's first enterprise-startup exchange, May 13 2026; inaugural with no further edition announced, and selected startups pitch only to invited enterprise leaders."
+    },
+    {
+     "name": "Manufacturing Technology Series SOUTHEAST 2027",
+     "url": "https://princemanufacturing.com/manufacturing-technology-series-southeast-2027-industrial-automation-and-robotics-event-in-greenville-south-carolina/",
+     "verdict": "rejected",
+     "reason": "Industrial manufacturing and automation trade show (Oct 19-21 2027, Greenville Convention Center), found only via a vendor post; not a software or tech-community event."
+    },
+    {
+     "name": "Rinker Paladin Pitch Competition",
+     "url": "https://www.furman.edu/parents/events/2026-04-16/",
+     "verdict": "rejected",
+     "reason": "Furman University student pitch competition (four student finalists), Apr 16 2026; single-institution and general business. No Greenville hackathon or game jam found."
+    }
+   ]
+  }
+ ]
+}

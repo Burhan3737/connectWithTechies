@@ -24,8 +24,9 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 | 2026-11-17-i1 | 2 | 0 | 2 | 1 | 0 | 2026-11-17 cycle: re-check nov17-c1/c2 (60 rows), cities nov17-d1/d2 (17 curated adds + CGU Hacks update), nov17-xaudit (BSides CMH), sources-nov17-feed/d1/d2 |
 | 2026-11-19-i1 | 2 | 0 | 0 | 0 | 0 | nov19 cycle: re-check c1/c2 (60 dispatched rows), returning-event discovery t1-t3, city discovery d1-d2 (46 adds), xaudit PASS rename |
 | 2026-11-21-i1 | 2 | 0 | 2 | 0 | 2 | nov21 cycle: recheck c1/c2/c3 (60 dispatched + 2 Techstars rows), discovery t1/t2/t3 and d1/d2 (22 adds, 1 removal), 15 organiser retirements, d1/d2 follows |
+| 2026-11-24-i1 | 3 | 0 | 1 | 0 | 1 | nov24 cycle: script refresh, 60 re-check rows (c1-c3), 10 DISCOVER cities (d1-d2), 75 RETURNING rows (t1-t3); 41 updates, 45 adds, 1 removal applied |
 
-**12 audit cycle(s); 6 found something blocking on its first audit.** 49 findings in total, 38 fixed, 9 open or deferred, 9 repeat(s) of an earlier finding.
+**13 audit cycle(s); 6 found something blocking on its first audit.** 50 findings in total, 38 fixed, 10 open or deferred, 10 repeat(s) of an earlier finding.
 
 ## Open
 
@@ -56,8 +57,21 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 - **2026-11-21-i1-W2** · warning · deferred · **Analytics for Good Hackathon (Minneapolis); curator brief (single-institution events)** — Ruling: t2/t3 were right to reject hackathons open only to one institution's students (verified on KTPHacks 2 and Grizzly Hacks VII; consistent with 8+ earlier rejections). The brief does not state this rule, and the oct31-d2 add Analytics for Good Hackathon breaks it: its organiser page says it is open only to University of Minnesota Twin Cities and Duluth students. That page also announces January 29-30, 2027, while the record still shows recurring-tbd.
   - recommended: Add to curator.md: an event open only to one institution's students or members is rejected as not publicly attendable, and Devpost 'Invite only' alone is not the test. Remove Analytics for Good Hackathon under that rule, or if it is kept, set next_date 2027-01-29, next_date_end 2027-01-30, status upcoming.
   - note: Cause fixed: curator.md RETURNING table now rejects single-institution events (quote eligibility; Devpost 'Invite only' alone is not the test). Analytics for Good Hackathon record left in place pending owner decision (remove, or date it 2027-01-29..30).
+- **2026-11-24-i1-W1** · warning · deferred · **Memphis Microsoft Community Days; Power BI Days DC; State of the Map US; Beam Summit; UN Open Source Week; AWS Community Day Midwest; IEEE Cloud Summit; The Perl and Raku Conference; Summercon; SciPy; MY Hackathon; Chain React; M365 Community Days NYC; Secure Carolinas Conference** — nov24-t1/t2/t3 again added RETURNING rows as recurring-tbd although no next edition is announced (the curators' own reasons say so), contrary to curator.md's RETURNING table. Applied inconsistently: t1 left AWS Community Day East Canada and Accelerate Chicago unresolved on the same facts. Rotating-city events (SciPy, State of the Map US, AWS Community Day Midwest, TPRC) are pinned to the last host city, while t2 rejected AlmaLinux Day and bitcoin++ as rotating one-time city stops. Dates and cities are historically true; nothing fabricated.
+  - recommended: Owner policy decision still pending. Either revert these adds and record them unresolved with a retry date, or drop the gate in curator.md and add a rule for rotating-city events with no announced next host (leave unplaced or skip rather than pin to the last host city). Apply one rule to RETURNING and DISCOVER.
+  - note: Repeat of 2026-11-21-i1-W1, same owner policy decision: keep the RETURNING gate (revert these 14 adds to unresolved) or drop it in curator.md and add a rule for rotating-city events. Adds kept pending that decision.
 
 ## History
+
+### 2026-11-24-i1 — 0 blocking, 1 warning(s)
+
+Scope: nov24 cycle: script refresh, 60 re-check rows (c1-c3), 10 DISCOVER cities (d1-d2), 75 RETURNING rows (t1-t3); 41 updates, 45 adds, 1 removal applied
+
+| id | severity | event | finding | status | resolution |
+|---|---|---|---|---|---|
+| W1 | warning | Memphis Microsoft Community Days; Power BI Days DC; State of the Map US; Beam Summit; UN Open Source Week; AWS Community Day Midwest; IEEE Cloud Summit; The Perl and Raku Conference; Summercon; SciPy; MY Hackathon; Chain React; M365 Community Days NYC; Secure Carolinas Conference | nov24-t1/t2/t3 again added RETURNING rows as recurring-tbd although no next edition is announced (the curators' own reasons say so), contrary to curator.md's RETURNING table. Applied inconsistently: t1 left AWS Community Day East Canada and Accelerate Chicago unresolved on the same facts. Rotating-city events (SciPy, State of the Map US, AWS Community Day Midwest, TPRC) are pinned to the last host city, while t2 rejected AlmaLinux Day and bitcoin++ as rotating one-time city stops. Dates and cities are historically true; nothing fabricated. | deferred (2026-11-24) | Repeat of 2026-11-21-i1-W1, same owner policy decision: keep the RETURNING gate (revert these 14 adds to unresolved) or drop it in curator.md and add a rule for rotating-city events. Adds kept pending that decision. |
+
+Checked and sound: Central Ohio Software Symposium removal (NFJS cancellation page); Django Girls NYC and Tech Alley Vegas re-dates; city moves SC to Denver, BSides SLC to Sandy, CDAO to Hoboken, BSDCan to Vancouver; Ignite, Live! 360, BSides MKE/KC/SD 2027 dates; random confirmed rows (All Things Open, Florida Startup Summit, East Meets West, AI Tinkerers Fort Wayne, QCon SF, Cutie Hack); 13 new adds on organiser pages; no aggregator sources; coverage losses all explained
 
 ### 2026-11-21-i1 — 0 blocking, 2 warning(s)
 

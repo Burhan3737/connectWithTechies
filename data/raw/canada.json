@@ -519,19 +519,19 @@
     "city": "Mississauga",
     "region": "Ontario",
     "country": "Canada",
-    "venue": "",
+    "venue": "Sheridan College Hazel McCallion Campus",
     "cadence": "annual",
     "month": "April",
-    "next_date": "",
-    "next_date_end": "",
+    "next_date": "2027-04-23",
+    "next_date_end": "2027-04-25",
     "last_date": "2026-04-24",
-    "status": "recurring-tbd",
+    "status": "upcoming",
     "attendance": "",
     "cost": "free",
     "audience": "students",
     "url": "https://www.bearhacks.com/",
     "description": "A weekend student hackathon in Mississauga run under the MLH member event programme, aimed at first-time and returning hackers alike.",
-    "source": "https://www.mlh.com/seasons/2026/events"
+    "source": "https://www.bearhacks.com/"
   },
   {
     "name": "Video Game Live Expo (VGLX)",
@@ -769,7 +769,7 @@
     "city": "Waterloo",
     "region": "Ontario",
     "country": "Canada",
-    "venue": "",
+    "venue": "Conestoga College, Waterloo Campus",
     "cadence": "annual",
     "month": "April",
     "next_date": "",
@@ -781,7 +781,7 @@
     "audience": "students",
     "url": "https://conhacks.io/",
     "description": "A student hackathon in Waterloo running under the MLH member event programme, with workshops and sponsor challenges over a long weekend.",
-    "source": "https://www.mlh.com/seasons/2026/events"
+    "source": "https://conhacks.io/"
   },
   {
     "name": "MasseyHacks",
@@ -1608,7 +1608,7 @@
     "city": "Vancouver",
     "region": "British Columbia",
     "country": "Canada",
-    "venue": "",
+    "venue": "UBC Robson Square",
     "cadence": "annual",
     "month": "November",
     "next_date": "2026-11-05",
@@ -1620,7 +1620,7 @@
     "audience": "WordPress developers, agencies, content creators",
     "url": "https://canada.wordcamp.org/2026/",
     "description": "The national Canadian WordPress community conference, with developer, designer and business tracks plus a contributor day.",
-    "source": "https://dev.events/NA/CA"
+    "source": "https://canada.wordcamp.org/2026/"
   },
   {
     "name": "Polyglot Unconference",

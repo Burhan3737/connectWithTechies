@@ -1,0 +1,133 @@
+{
+  "pass": "nov24-t2",
+  "date": "2026-11-24",
+  "returning": [
+    {
+      "name": "AgentCon - Orlando",
+      "verdict": "rejected",
+      "reason": "Never held: the organiser's Sessionize CFP (sessionize.com/agentcon-orlando) is marked 'Event has been Postponed' for its 26 Jun 2026 date; the Global AI event page globalai.community/chapters/orlando/events/agentcon-orlando and the short link agentcon.city/orlando both return 404, and the Global AI Orlando chapter page shows 0 events. No new date anywhere."
+    },
+    {
+      "name": "Denver Dev Day | Developer's Conference | June 2026",
+      "verdict": "added",
+      "reason": "meetup.com/denverdevday: Denver Dev Day Fri Jun 26 2026 and Fri Jun 27 2025, Red Rocks Community College, Lakewood CO; organiser's Sessionize CFP confirms Jun 26 2026, 15th edition, free, in person only. denverdevday.com says 'Coming soon', no date. Added as 'Denver Dev Day', Lakewood, recurring-tbd."
+    },
+    {
+      "name": "Perl Community Conference, Summer 2026",
+      "verdict": "added",
+      "reason": "conference.perlcommunity.org/winter2026/: Winter 2026 PCC December 17-18, 2026, Austin TX and online, registration open; Summer 2026 schedule page shows July 3-4 2026 in Austin. Added as 'Perl Community Conference', biannual, next 2026-12-17, last 2026-07-03."
+    },
+    {
+      "name": "Sandbox/Test",
+      "verdict": "rejected",
+      "reason": "Not a real event: sandbox-test.devpost.com is a 'Testing' page by TIKA Corp, invite only, 4 participants, a 15-minute window on Jul 4 2026, prizes described as 'This is a test hackathon'."
+    },
+    {
+      "name": "Mobile Developers",
+      "verdict": "rejected",
+      "reason": "One-off: mechat.devpost.com is a 3-participant challenge run by The Webb Schools CSC (a Claremont prep-school club) with no organiser site; 'California City' looks like a placeholder; no recurring edition found."
+    },
+    {
+      "name": "AI for Social Good: Hack with MLH & DigitalOcean",
+      "verdict": "rejected",
+      "reason": "One-off sponsor hackathon: ai-for-social-good-mlh.devpost.com, MLH and DigitalOcean, San Francisco, Jul 10-11 2026, ended; no series or later edition announced."
+    },
+    {
+      "name": "Summercon 2026",
+      "verdict": "added",
+      "reason": "summercon.org: Summercon 7/10/2026-7/11/2026, Brooklyn (Gowanus), oldest US hacker conference, since 1987. No 2027 date: added as 'Summercon', recurring-tbd, last_date 2026-07-10."
+    },
+    {
+      "name": "ACM Irving Tech Talk July 2026 (In-Person)",
+      "verdict": "unresolved",
+      "reason": "irving.acm.org/events/ lists 'No upcoming events scheduled yet'. Its 2026 events: Mar 8 kickoff (virtual), Apr 25 tech talk (virtual), Jul 11 tech talk in person at 2711 LBJ Fwy, Dallas (not Irving). The chapter is active but no further in-person talk is announced, so no recurring in-person series can be confirmed yet."
+    },
+    {
+      "name": "SciPy 2026",
+      "verdict": "added",
+      "reason": "scipy2026.scipy.org: July 13-19 2026, University of Minnesota, Minneapolis, in person with virtual passes, 25th annual. conference.scipy.org shows no SciPy 2027 yet. Added as 'SciPy', recurring-tbd, last_date 2026-07-13."
+    },
+    {
+      "name": "RubyConf Las Vegas 2026",
+      "verdict": "exists",
+      "reason": "Already curated as 'RubyConf' | Las Vegas (url rubycentral.org/conferences/, last_date 2026-07-14, recurring-tbd)."
+    },
+    {
+      "name": "UberConf",
+      "verdict": "added",
+      "reason": "uberconf.com: ÜberConf July 13-16 2027, JSON-LD 2027-07-13/2027-07-16, Westin Westminster, Westminster CO; the 2026 page gives July 14-17 2026. Added as 'ÜberConf', Westminster, next 2027-07-13, last 2026-07-14."
+    },
+    {
+      "name": "2026 NCCI Annual Conference",
+      "verdict": "rejected",
+      "reason": "Not a tech event: NCCI is the Network for Change and Continuous Innovation, a higher-education change-management association (ncci-cu.org/education/annual-conference/; next edition July 14-16 2027, Oakland Marriott City Center). Its conference is about organisational change in universities, not technology."
+    },
+    {
+      "name": "DroidCon",
+      "verdict": "added",
+      "reason": "usa.droidcon.com: droidCon USA 16-17 July 2026, OCCC West Concourse, Orlando; the letter to the community announces a combined multi-platform event in 2027 with no date. Added as 'droidcon USA', recurring-tbd, last_date 2026-07-16 (same record as the 'droidcon USA' row)."
+    },
+    {
+      "name": "droidcon USA",
+      "verdict": "added",
+      "reason": "Same event as the 'DroidCon' row: added as 'droidcon USA', Orlando, recurring-tbd, last_date 2026-07-16, from usa.droidcon.com and its letter to the community."
+    },
+    {
+      "name": "FlutterCon",
+      "verdict": "added",
+      "reason": "flutterconusa.dev: flutterCon USA 16-17 July 2026, OCCC West Concourse, Orlando, co-located with droidcon USA, separately ticketed. Added as 'flutterCon USA', recurring-tbd, last_date 2026-07-16."
+    },
+    {
+      "name": "Midnight Hackathon",
+      "verdict": "rejected",
+      "reason": "Online-only: the MLH listing events.mlh.com/events/14413-midnight-hackathon says 'Event is hosted online' for July 17-19 2026; the Devpost 'New York, NY' location is not a venue. Midnight's earlier MLH hackathon (Sept 2025) was also virtual."
+    },
+    {
+      "name": "AlmaLinux Day",
+      "verdict": "rejected",
+      "reason": "One-time city stop: almalinux.org/almalinux-day-los-angeles-2026/ was a single day, July 18 2026, at E-Central Downtown LA Hotel, now showing a thank-you recap. The series moves (Vancouver 2025, Los Angeles 2026) and the only upcoming edition listed is AlmaLinux Day: Tokyo 2027; no North American 2027 stop is announced."
+    },
+    {
+      "name": "AlmaLinux Day: Los Angeles",
+      "verdict": "rejected",
+      "reason": "Same event as the 'AlmaLinux Day' row: a single Los Angeles edition on July 18 2026; almalinux.org lists only AlmaLinux Day: Tokyo 2027 as upcoming, with no return to Los Angeles."
+    },
+    {
+      "name": "Worlds in Action Hack [02-LA]",
+      "verdict": "rejected",
+      "reason": "One-time city stop of the SensAI Hack series: worlds-in-action-hack-02-la.devpost.com, Jul 18-19 2026, Los Angeles, a SIGGRAPH-edition hack. sensaihack.com lists only past 2026 stops (SF, Atlanta, LA), an online Build with AI competition and a 'Global Online Hack: To be announced'; no further in-person LA edition."
+    },
+    {
+      "name": "GABA Hackday",
+      "verdict": "rejected",
+      "reason": "Online and one-off: gaba-hackday.devpost.com says it is 'GABA's first hackathon, anyone is eligible to join, participate online and submit your project by the end of the day' (Jul 20 2026, 12 participants, high-school builder club)."
+    },
+    {
+      "name": "bitcoin++ consensus edition",
+      "verdict": "rejected",
+      "reason": "One-time city stop of a rotating series: btcpp.dev/toronto shows the Toronto consensus edition July 22-24 2026 at The Great Hall. btcpp.dev lists editions moving city to city and only one upcoming stop, bitcoin++ europe, April 8-10 2027 in Eindhoven; no return to Toronto or other North American stop announced."
+    },
+    {
+      "name": "Swift Rockies",
+      "verdict": "added",
+      "reason": "swiftrockies.com: inaugural edition July 22-23 2026 at the Calgary Zoo; 'Swift Rockies 2027 is coming ... Stay tuned'. Added recurring-tbd, last_date 2026-07-22."
+    },
+    {
+      "name": "Daytona HackSprint w/ Braintrust - SF, July 2026",
+      "verdict": "rejected",
+      "reason": "One-off dated sprint: daytona-hacksprint-sf-jul-2026.devpost.com, Jul 24 2026, invite-only, registration via luma.com/hacksprint-sf. Daytona's later SF/NYC builder nights and sprints already reach us through the Luma area discovery feed (e.g. 'Daytona AI Builders - SF, December 2026' in feed.json)."
+    },
+    {
+      "name": "⚡ Build Fast. Launch Loud. ⚡",
+      "verdict": "rejected",
+      "reason": "One-off vendor hackathon: promptdriven.ai/events/build-fast-launch-loud-prompt-driven-hackathon, Prompt Driven Development, July 25-26 2026 at 555 University Ave, Palo Alto, marked 'Past Event'; no series or later edition."
+    },
+    {
+      "name": "MYHack 2026",
+      "verdict": "added",
+      "reason": "mafiq.org: MY-HACK is an annual Mafiq Foundation event since 2022; 'MY Hackathon 2026' July 25-26, Islamic Center of Maryland, Gaithersburg. Added as 'MY Hackathon', recurring-tbd, last_date 2026-07-25."
+    }
+  ],
+  "cities": [],
+  "reported": []
+}
