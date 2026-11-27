@@ -43,10 +43,16 @@ test.describe('Search', () => {
     expect(dialogs).toBe(0);
   });
 
-  test('is restored from the URL', async ({ page }) => {
+  test('is restored from the URL', async ({ page, request }) => {
+    // Counted, not "the first row's name says BSides": search matches descriptions
+    // too, so the soonest hit can be an event a BSides chapter runs under another
+    // name (FrostCon, by BSides Charlotte, broke the name check on 2026-11-27).
+    const data = await dataset(request);
     await openBoard(page, 'q=bsides');
     await expect(page.locator('#q')).toHaveValue('bsides');
-    await expect(page.locator('#board .ev__name').first()).toContainText(/bsides/i);
+    const expected = data.events.filter((e) => isUpcoming(e) && haystack(e).includes('bsides')).length;
+    expect(expected).toBeGreaterThan(0);
+    await expect.poll(() => shownCount(page)).toBe(expected);
   });
 });
 
