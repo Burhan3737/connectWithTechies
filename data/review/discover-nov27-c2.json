@@ -1,0 +1,107 @@
+{
+  "pass": "nov27-c2",
+  "date": "2026-11-27",
+  "returning": [],
+  "cities": [
+    {
+      "city": "Johnstown",
+      "region": "Pennsylvania",
+      "queries": [
+        "Johnstown PA hackathon 2026 OR 2027",
+        "Johnstown Pennsylvania tech meetup OR startup pitch OR summit 2027",
+        "Johnstown PA 2026 innovation conference OR expo technology defense",
+        "Pitt-Johnstown PITTchFEST OR Big Idea pitch competition 2026",
+        "Aerium Innovation Summit Johnstown 2027",
+        "Johnstown Pennsylvania game jam OR capture the flag OR coding competition Pitt-Johnstown OR UPJ"
+      ],
+      "found": [
+        { "name": "Aerium Spring Innovation Summit", "url": "https://aerium.org/innovation27/", "verdict": "added",
+          "reason": "aerium.org/innovation27/: 'June 2-4, 2027 | Johnstown, PA', day 1 at the Johnstown-Cambria County Airport, days 2-3 downtown. 2026 edition May 27-28 per Aerium's press room. Aviation, aerospace and drone technology summit, held annually." },
+        { "name": "Showcase for Commerce", "url": "https://www.showcaseforcommerce.com/", "verdict": "rejected",
+          "reason": "Organiser page gives June 2-4, 2027 in Johnstown, but describes itself as 'a nationally renowned business and industry trade show and defense contracting exhibition' connecting businesses with defense contractors for procurement. A procurement trade show, not a tech event. Its tech-facing part, the Aerium summit, is added separately." },
+        { "name": "Johnstown Region Startup Meetup", "url": "https://www.meetup.com/johnstown-region-startup-meetup/", "verdict": "rejected",
+          "reason": "Meetup group page: its only upcoming event (Dec 7 2026) and the past ones (Nov 2, Oct 5) are 'Entrepreneur Meetup @ Virtual', online only, and general small-business networking rather than tech." },
+        { "name": "PITTchFEST (Pitt-Johnstown)", "url": "https://www.johnstown.pitt.edu/sites/default/files/block-img/PitchFEST19%20programd1%20%281%29.pdf", "verdict": "rejected",
+          "reason": "The only evidence is a 2019 programme PDF. No later edition found, so it is not a current event." }
+      ]
+    },
+    {
+      "city": "Kansas City",
+      "region": "Kansas",
+      "queries": [
+        "Kansas City Kansas hackathon 2027",
+        "\"Kansas City, KS\" tech summit OR demo day OR game jam OR CTF 2027",
+        "Kansas City tech week OR startup week 2026 2027 dates",
+        "Kansas City Global Game Jam site 2027 OR KC game jam 2026",
+        "KU Medical Center OR \"Kansas City Kansas Community College\" hackathon OR CTF OR tech summit 2026",
+        "KC Tech Council \"Energy & Data Center Innovation Summit\" 2025"
+      ],
+      "found": [
+        { "name": "Energy & Data Center Innovation Summit", "url": "https://www.kctechcouncil.com/edci-2026/", "verdict": "added",
+          "reason": "kctechcouncil.com/edci-2026/: 'November 13, 2026, Sporting Park - Kansas City, Kansas', 'EDCI returns in 2026'. Added as recurring-tbd with last_date 2026-11-13; no 2027 date published." },
+        { "name": "Endeavor Heartland Sports & Wellness Tech Scale Up demo day", "url": "https://luma.com/civg105v", "verdict": "rejected",
+          "reason": "The search summary calls the cohort demo day invite-only, with no date and no confirmed repeat. Not a public event." },
+        { "name": "Hack Midwest / KCDC / DevFest KC / Code for KC Hack-a-thon", "url": "https://hackmidwest.com", "verdict": "exists",
+          "reason": "Hack Midwest, Kansas City Developer Conference and DevFest KC are already curated under Kansas City, Missouri. The Code for KC hack-a-thon listing places it at Bartle Hall, which is also in Missouri. None of the searches found a hackathon, tech week, game jam or CTF physically held in Kansas City, Kansas." }
+      ]
+    },
+    {
+      "city": "Kent",
+      "region": "Ohio",
+      "queries": [
+        "Kent State University Global Game Jam 2027 jam site",
+        "globalgamejam.org jam-sites 2026 Kent State Design Innovation Hub",
+        "Kent Ohio tech conference OR summit OR pitch competition OR CTF 2027 Kent State",
+        "\"Kent State\" AI OR cybersecurity OR technology conference 2027 Kent campus public registration"
+      ],
+      "found": [
+        { "name": "Global Game Jam at Kent State (Design Innovation Hub)", "url": "https://www.kent.edu/node/1016663", "verdict": "unresolved",
+          "reason": "Search snippets of kent.edu/node/1016663 describe a 2026 GGJ site at the Design Innovation Hub, Jan 30-Feb 1 2026, hosted by the Animation Game Design Program and club and open to 'all college students in the region'. The page now returns 403 'There is no content here' to curl and to WebFetch, so I could not read it. No globalgamejam.org jam-site page was found under the guessed slugs, and no 2027 site is announced (GGJ 2027 is Jan 25-31, and site registration opened Nov 1). The only earlier Kent State site was at Tuscarawas (New Philadelphia) in 2019, so there is no proof it repeats in Kent. Not added." },
+        { "name": "Kent State Idea Pitch / Spring Pitch Competition / LaunchNET Elevator Pitch", "url": "https://www.kent.edu/business/idea-pitch", "verdict": "rejected",
+          "reason": "Student business pitch competitions run by Kent State's Brinzo Center and LaunchNET for Kent State students (fall Idea Pitch semifinals Oct 2 2026; Spring Pitch Apr 16 2026). Limited to one institution's students and not a tech event." }
+      ]
+    },
+    {
+      "city": "Kitchener",
+      "region": "Ontario",
+      "queries": [
+        "Kitchener Ontario hackathon 2026 OR 2027",
+        "Communitech Kitchener event 2027 summit OR conference OR demo day",
+        "Kitchener-Waterloo tech meetup monthly Kitchener venue developers",
+        "\"Builders Club\" \"165 King St W\" Kitchener",
+        "Conestoga College Kitchener game jam OR hackathon OR CTF 2026 open to public",
+        "Communitech Techtoberfest 2026",
+        "Global Game Jam 2026 Kitchener Waterloo jam site"
+      ],
+      "found": [
+        { "name": "Communitech (Luma calendar)", "url": "https://luma.com/communitech", "verdict": "added",
+          "reason": "Added to sources-nov27-c2.json, not as a one-off. Communitech's calendar lists in-person events in Kitchener nearly every week, including the Communitech Dual-Use Summit (Sep 16 2026, Kitchener, CA$56.50) and Techtoberfest. Some of its events reach the feed today only through luma-area:Waterloo discovery." },
+        { "name": "Builders Club (Technical Wednesday etc.)", "url": "https://luma.com/6ydai55y", "verdict": "exists",
+          "reason": "Builders Club, 165 King St W, Kitchener, posts its events on the 'Waterloo Tech (+adjacent) Events' Luma calendar (cal-rJoHBmPlHGvg5F8), which is already in data/feeds/registry.json." },
+        { "name": "ROBOHAX 2026", "url": "https://luma.com/geb8y6i2", "verdict": "rejected",
+          "reason": "Calls itself Kitchener Waterloo Region's robotics hackathon, but the competition day (Oct 24 2026) is at the Spur Innovation Center, Waterloo, and this was the first edition. Only the Sep 16 kickoff was in Kitchener. Not a Kitchener event, and not yet recurring." },
+        { "name": "KWLUG (Kitchener-Waterloo Linux User Group)", "url": "https://luma.com/tleo6ucz", "verdict": "rejected",
+          "reason": "Meets at the University of Waterloo Davis Centre in Waterloo, not Kitchener." },
+        { "name": "Conestoga College game jam / CTF / ConHacks", "url": "https://gdg.community.dev/events/details/google-gdg-on-campus-conestoga-college-waterloo-campus-waterloo-canada-presents-gdg-conestoga-capture-the-flag/", "verdict": "rejected",
+          "reason": "All held at Conestoga's Waterloo campus, not Kitchener. The game jam was for Conestoga students. ConHacks is already curated under Waterloo." }
+      ]
+    },
+    {
+      "city": "Lakewood",
+      "region": "Colorado",
+      "queries": [
+        "Lakewood Colorado hackathon OR \"game jam\" OR CTF 2026 2027",
+        "Lakewood CO tech summit OR startup week OR pitch demo day OR tech meetup 2027",
+        "\"Denver Federal Center\" Cyber Summit 2026 Lakewood",
+        "ISSA Northern Colorado chapter \"Denver Federal Center\" summit register attendees"
+      ],
+      "found": [
+        { "name": "Denver Federal Center Cyber Summit", "url": "https://www.secretsauceevent.com/4-denver-federal-center-cyber-summit", "verdict": "added",
+          "reason": "Organiser page: 4th Annual Denver Federal Center Cyber & IT Summit, GSA Building 41, 'date is TBA for September 2027'. 3rd edition Aug 20 2026 (organiser's 3rd-edition page). Added as recurring-tbd." },
+        { "name": "Colorado Deep Tech Summit", "url": "https://lu.ma/qcobmuod", "verdict": "rejected",
+          "reason": "Held at the Beck Venture Center in Golden, not Lakewood, with no 2027 date in the search results. Out of scope for this city." }
+      ]
+    }
+  ],
+  "reported": []
+}

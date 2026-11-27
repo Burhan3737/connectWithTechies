@@ -1,0 +1,235 @@
+{
+ "pass": "nov27-c1",
+ "date": "2026-11-27",
+ "returning": [],
+ "reported": [],
+ "cities": [
+  {
+   "city": "Gaithersburg",
+   "region": "Maryland",
+   "queries": [
+    "Gaithersburg Maryland tech conference 2027",
+    "Gaithersburg MD hackathon OR demo day OR pitch OR tech summit OR game jam OR CTF 2026 2027",
+    "NIST Gaithersburg conference 2027 open registration technology workshop",
+    "Montgomery County Maryland tech week OR innovation week OR startup week 2026 Gaithersburg",
+    "meetup.com Gaithersburg MD tech group in-person developers OR AI OR cybersecurity OR game developers",
+    "Gaithersburg conference 2026 technology Hilton / Marriott Washingtonian / Bohrer Park",
+    "Seventh PQC Standardization Conference NIST"
+   ],
+   "found": [
+    {
+     "name": "PQC Standardization Conference (NIST)",
+     "url": "https://csrc.nist.gov/projects/post-quantum-cryptography/events",
+     "verdict": "rejected",
+     "reason": "Irregular NIST series that moves between sites: the 6th was Sep 24-26 2025 at NIST Gaithersburg (hybrid), the 5th Apr 10-12 2024 in Rockville. NIST's PQC events page lists no 7th, so there is no cadence or next edition to record."
+    },
+    {
+     "name": "6th Quantum Matters in Materials Science (QMMS) Workshop",
+     "url": "https://www.nist.gov/news-events/events",
+     "verdict": "rejected",
+     "reason": "NIST research workshop (Feb 24-25 2027, NIST Gaithersburg campus) for materials scientists; a scientific workshop, not a tech event for this directory."
+    },
+    {
+     "name": "Maryland Tech Council Startup Demo Day",
+     "url": "https://biobuzz.io/?p=68069",
+     "verdict": "rejected",
+     "reason": "First edition was hosted at U.S. Pharmacopeia, whose headquarters is in Rockville, not Gaithersburg; MTC's Bio Innovation Conference is at the Bethesda North Marriott (North Bethesda). Neither is a Gaithersburg event."
+    },
+    {
+     "name": "Montgomery County ignITe Hub Future of Tech series",
+     "url": "https://www.eventbrite.com/e/ignite-hub-future-of-tech-lunch-and-learn-series-spring-2026-tickets-1917601300109",
+     "verdict": "exists",
+     "reason": "Held at Montgomery College in Rockville, not Gaithersburg; the ignITe Hub is already in the feed registry. Nothing else found in Gaithersburg itself: aggregator pages (clocate, Eventbrite) tag Gaithersburg on DC and Northern Virginia conferences, and no tech week, startup week, summit, demo day, CTF, game jam or meetup group based in Gaithersburg turned up."
+    }
+   ]
+  },
+  {
+   "city": "Huntington",
+   "region": "West Virginia",
+   "queries": [
+    "Huntington WV hackathon OR tech conference OR demo day Marshall University 2026 2027",
+    "Huntington West Virginia game jam OR hackathon OR pitch competition OR tech meetup 2026",
+    "TechConnect WV Women & Tech 2027 conference date",
+    "gBeta Huntington Marshall iCenter pitch night 2026 cohort",
+    "Marshall University hackathon OR game jam OR capture the flag Huntington students 2026"
+   ],
+   "found": [
+    {
+     "name": "CyberCon",
+     "url": "https://www.marshall.edu/cyber/cybercon-2027/",
+     "verdict": "added",
+     "reason": "Marshall University Institute for Cyber Security: 'CyberCon 2027 April 12-14, 2027', DoubleTree by Hilton Huntington, free three-day annual conference; 2026 edition was March 25-27 2026 at the same hotel. Covers Huntington's missing conference type."
+    },
+    {
+     "name": "gBETA at Marshall's iCenter Showcase",
+     "url": "https://www.marshall.edu/icenter/gbeta/",
+     "verdict": "added",
+     "reason": "iCenter page: Fall 2026 cohort 'Showcase expected in March 2027'; Summer 2026 showcase was July 9 2026 at the Brad D. Smith Center for Business and Innovation (events.marshall.edu, JSON-LD). Month only, so added as recurring-tbd. Covers the missing demo-day type."
+    },
+    {
+     "name": "Women & Tech Conference (TechConnect WV)",
+     "url": "https://techconnectwv.org/women-and-tech",
+     "verdict": "exists",
+     "reason": "Already held as 'TechConnect WV Women in Tech Conference', city South Charleston, which is TechConnect's office address. Its organiser page shows the 2026 edition on Fri Feb 13 2026 at the DoubleTree by Hilton Huntington, so an update patch moves it to Huntington and sets last_date 2026-02-13."
+    },
+    {
+     "name": "Converged Forensic Summit",
+     "url": "https://www.marshall.edu/cyber/cfs/",
+     "verdict": "rejected",
+     "reason": "Inaugural edition only (Sep 29-30 2026, Memorial Student Center); a multidisciplinary forensic-science summit for law enforcement and prosecutors, not a tech event, and no second edition announced."
+    },
+    {
+     "name": "Cyber Experience Day / Cyber Safety Summit",
+     "url": "https://www.marshall.edu/cyber/conferences/",
+     "verdict": "rejected",
+     "reason": "Youth outreach days for high school (Oct 15 2026) and middle school (Nov 12 2026) student groups, not open public events. No Huntington hackathon, CTF, game jam, tech week, startup week or meetup group found; the only Marshall game jam found was in 2019."
+    }
+   ]
+  },
+  {
+   "city": "Idaho Falls",
+   "region": "Idaho",
+   "queries": [
+    "Idaho Falls hackathon OR startup week OR tech summit 2026 2027",
+    "iTECH Summit 2027 Idaho Falls",
+    "Idaho Falls game jam OR 1 Million Cups OR tech meetup OR pitch night OR CTF 2026",
+    "Idaho Falls developers meetup group in-person monthly software OR AI OR cybersecurity",
+    "Idaho National Laboratory Idaho Falls public cybersecurity competition OR hackathon OR capture the flag College of Eastern Idaho 2026"
+   ],
+   "found": [
+    {
+     "name": "iTECH Summit Idaho Falls",
+     "url": "https://www.idahotechcouncil.org/itc-brings-eastern-idaho-together-in-2nd-annual-itech-summit-tech-powered-community-led",
+     "verdict": "added",
+     "reason": "Idaho Technology Council recap: '2nd Annual iTECH Summit', March 17-18 2026, Mountain America Center, Idaho Falls, sold out; 1st edition March 18-19 2025 per the council's own release. The 2026 event page now 404s and no 2027 date is published, so added as recurring-tbd. Covers the missing summit type."
+    },
+    {
+     "name": "Idaho Falls Programmers Group",
+     "url": "https://www.meetup.com/eiprogrammers/",
+     "verdict": "added",
+     "reason": "In-person talks at the Idaho Falls Public Library, roughly monthly (latest Nov 21 2026), 112 past events, on Meetup. Proposed in sources-nov27-c1.json for the feed rather than as a one-off add."
+    },
+    {
+     "name": "WiCyS Idaho Affiliate / IdaSec",
+     "url": "https://sites.google.com/wicys.org/wicysidaho/events",
+     "verdict": "unresolved",
+     "reason": "WiCyS Idaho's page describes a monthly no-host restaurant meetup in Idaho Falls with no 2026 dates; IdaSec's only listing found was Mar 6 2025 on a magazine calendar. Could not confirm either is still meeting."
+    },
+    {
+     "name": "CyberForce Competition at INL",
+     "url": "https://www.uidaho.edu/engr/departments/cs/degrees/cyberforce",
+     "verdict": "rejected",
+     "reason": "DOE competition hosted at INL in 2018-2019 for invited university teams; no current Idaho Falls edition found. No Idaho Falls hackathon, game jam, tech week, startup week or demo day found."
+    }
+   ]
+  },
+  {
+   "city": "Irvine",
+   "region": "California",
+   "queries": [
+    "Irvine California tech conference 2027",
+    "OC Tech Week 2026 Orange County Irvine official",
+    "OC Tech Week TCVN Tech Coast Venture Network inaugural OR 2025 OR 2027",
+    "Octane OC Innovation Week 2026 OR 2027 dates",
+    "Octane Tech Innovation Forum 2027 Irvine",
+    "Irvine CA cybersecurity conference OR summit OR CTF OR game jam OR startup week 2027",
+    "FutureCon Orange County CyberSecurity Conference 2027 venue",
+    "GuidePoint Security GPSEC SoCal 2027 Irvine",
+    "Irvine Tech Day 2026 OR 2027 City of Irvine",
+    "DevFest Orange County 2026 Irvine GDG OR AWS Community Day Irvine OR SoCal Code Camp Irvine",
+    "UC Irvine game jam OR CTF competition open to all 2026 2027 VGDC OR Cyber @ UCI"
+   ],
+   "found": [
+    {
+     "name": "Irvine Tech Day",
+     "url": "https://irvinetechday.org/",
+     "verdict": "added",
+     "reason": "irvinetechday.org: May 7-9 2026, main day at Irvine City Hall with panels, pop-up market and Pitch Irvine finale, plus the 'annual' Irvine Dream Run; successor to the City of Irvine's Irvine Tech Week (Mar 2023, Apr 2024). No 2027 date, so recurring-tbd. Covers the missing conference type."
+    },
+    {
+     "name": "OC Tech Week",
+     "url": "https://octechweek.com/",
+     "verdict": "rejected",
+     "reason": "octechweek.com: OC Tech Week 2026, Oct 19-24 2026, hosted by TCVN, decentralised across Orange County's cities. Only this one edition found and no 2027 edition announced, so a recurring record is not justified yet; its sessions already reach us through the feed (several Irvine items tagged OC Tech Week). Its host TCVN's Luma calendar is proposed in sources-nov27-c1.json. Worth re-checking in 2027."
+    },
+    {
+     "name": "OC Innovation Week / Tech Innovation Forum (Octane)",
+     "url": "https://octaneoc.org/ociw/",
+     "verdict": "unresolved",
+     "reason": "Annual Octane week in Irvine (May 5-9 2025 per the organiser's page as archived by the Wayback Machine, 20250504 capture; Tech Innovation Forum at AV Irvine). octaneoc.org returns a Cloudflare 403 to curl, fetch-page and WebFetch alike, the Tribe events API and .ics are also 403, and register.octaneoc.org has no 2026 or 2027 forum page (tif26/tif27/ociw26 slugs 404). The 2026 dates (Apr 22-23 at UCI Beall Applied Innovation) appear only on an aggregator, so they were not used."
+    },
+    {
+     "name": "GPSEC SoCal (GuidePoint Security)",
+     "url": "https://www.guidepointsecurity.com/gpsec/",
+     "verdict": "unresolved",
+     "reason": "Mar 25 2027 in Irvine appears only on starbridge.ai; guidepointsecurity.com returns 403 and GuidePoint's go.guidepointsecurity.com pages list other 2027 cities but not SoCal. A vendor event with approval-gated registration in any case."
+    },
+    {
+     "name": "FutureCon Orange County CyberSecurity Conference",
+     "url": "https://infosec-conferences.com/event/20270728-futurecon-cybersecurity-conference-orange-county-2027/",
+     "verdict": "rejected",
+     "reason": "Not held in Irvine: past editions were at the DoubleTree Santa Ana and listings put 2026 in Garden Grove; the 2027 date is aggregator-only."
+    },
+    {
+     "name": "ZotJam (UCI VGDC)",
+     "url": "https://itch.io/jam/fall-2026-zotjam",
+     "verdict": "rejected",
+     "reason": "Single-institution: the Fall 2026 jam was limited to UCI students and the Spring 2026 jam to 'UCI students and alumni'. No open Irvine CTF found (Cyber@UCI competes elsewhere), and no startup week."
+    }
+   ]
+  },
+  {
+   "city": "Ithaca",
+   "region": "New York",
+   "queries": [
+    "Ithaca NY tech conference OR demo day OR game jam OR startup week 2026 2027",
+    "Cornell game jam 2026 OR 2027 Ithaca game jam open to public",
+    "Ithaca NY tech meetup group in person developers OR AI OR Ithaca Web People 2026"
+   ],
+   "found": [
+    {
+     "name": "Educational Technology Day",
+     "url": "https://www.ithaca.edu/educational-technology-day",
+     "verdict": "added",
+     "reason": "Ithaca College: 'SAVE THE DATE - MARCH 18, 2027'; 2026 vendor packet gives the 32nd annual edition as Thu Mar 26 2026 at Emerson Suites & Campus Center, free, 1,100+ attendees, 40+ seminars. Covers the missing conference type."
+    },
+    {
+     "name": "Networking@Rev: Prototyping Demo Day",
+     "url": "https://www.revithaca.com/event/demo-day-2027/",
+     "verdict": "added",
+     "reason": "Rev: Ithaca Startup Works event page: July 29 2027, 6-8:30 pm, 314 E State St; earlier editions 2026-07-30 and 2025-07-31 in Rev's own events API. Free on Eventbrite. Covers the missing demo-day type. Rev's .ics feed proposed in sources-nov27-c1.json."
+    },
+    {
+     "name": "Cornell Systems Summit",
+     "url": "https://www.duffield.cornell.edu/sys/cornell-systems-summit/",
+     "verdict": "added",
+     "reason": "Cornell Duffield Engineering: Nov 1-3 2026 at the Statler Hotel, third year ('building on two years of momentum', 2025 delegates listed), paid registration open beyond Cornell. No 2027 date, so recurring-tbd. Covers the missing summit type."
+    },
+    {
+     "name": "The Things Network Ithaca",
+     "url": "https://www.meetup.com/the-things-network-ithaca-community-meetup/",
+     "verdict": "added",
+     "reason": "Monthly in-person meeting and hacking hours on LoRaWAN/IoT at MCCI, Krums Corners Road; 176 past events, latest Aug 25 2026. Proposed in sources-nov27-c1.json for the feed rather than as a one-off add."
+    },
+    {
+     "name": "DGA Game Jam (Cornell Development in Games Association)",
+     "url": "https://itch.io/jam/2025-dga-game-jam",
+     "verdict": "rejected",
+     "reason": "Single-institution: the jam's itch.io page says 'this game jam is only open to Cornell students at this time!'"
+    },
+    {
+     "name": "GDIAC Showcase",
+     "url": "https://gdiac.cs.cornell.edu/gdiac/showcase/",
+     "verdict": "unresolved",
+     "reason": "Search snippets describe a public student-game showcase on Sat May 16 2026 at Cornell's CIS Building, but gdiac.cs.cornell.edu and gdiac.cis.cornell.edu both fail with an expired TLS certificate (curl and WebFetch), so the organiser's page could not be read and no 2027 date was found."
+    },
+    {
+     "name": "Ithaca Web People",
+     "url": "https://www.revithaca.com/events/month/2017-07/",
+     "verdict": "unresolved",
+     "reason": "Monthly web-professionals meetup (about 1,070 members on Meetup); its last event found was a Jul 7 (2025) talk, and the group page could not be located: meetup.com/ithaca-web-people, /ithacawebpeople, /Ithaca-Web-People and /IthacaWebPeople all return Group not found. Could not confirm it still meets. No Ithaca CTF, startup week or tech week found."
+    }
+   ]
+  }
+ ]
+}

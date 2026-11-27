@@ -1,0 +1,77 @@
+[
+  {
+    "action": "add",
+    "reason": "Discovery for Johnstown, Pennsylvania (no curated summit there). Organiser page aerium.org/innovation27/ reads 'Aerium 2027 spring innovation summit ... June 2-4, 2027 | Johnstown, PA': Wednesday June 2 at the Johnstown Airport, Thursday June 3 and Friday June 4 in downtown Johnstown, held with Showcase for Commerce. Previous edition from Aerium's own press room (aerium-conference.prezly.com, '4th Annual Aerium Innovation Summit returns to Johnstown'): Wednesday May 27 and Thursday May 28, 2026 at the John Murtha Johnstown-Cambria County Airport. aerium.org/summit/ says it is held annually at the airport.",
+    "record": {
+      "name": "Aerium Spring Innovation Summit",
+      "type": "summit",
+      "topics": ["aerospace", "drones", "aviation", "workforce"],
+      "city": "Johnstown",
+      "region": "Pennsylvania",
+      "country": "United States",
+      "venue": "John Murtha Johnstown-Cambria County Airport",
+      "cadence": "annual",
+      "month": "May-June",
+      "next_date": "2027-06-02",
+      "next_date_end": "2027-06-04",
+      "last_date": "2026-05-27",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "aviation, aerospace and drone industry, founders, educators, policymakers",
+      "url": "https://aerium.org/summit/",
+      "description": "Aerium's annual summit on aviation, aerospace and unmanned-systems technology and workforce, with a day in the airport hangars and two days downtown alongside Showcase for Commerce.",
+      "source": "https://aerium.org/innovation27/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Discovery for Kansas City, Kansas (no curated summit there). Organiser page kctechcouncil.com/edci-2026/ reads 'Energy & Data Center Innovation Summit ... November 13, 2026, Sporting Park - Kansas City, Kansas. The Energy & Data Center Innovation Summit (EDCI) returns in 2026', with a full day agenda (8:15 AM check-in to 3:00 PM). That edition has passed and no 2027 date is published, so next_date is empty. Cost left as 'varies': the page links registration but shows no price.",
+    "record": {
+      "name": "Energy & Data Center Innovation Summit",
+      "type": "summit",
+      "topics": ["data centers", "energy", "infrastructure", "policy"],
+      "city": "Kansas City",
+      "region": "Kansas",
+      "country": "United States",
+      "venue": "Sporting Park",
+      "cadence": "annual",
+      "month": "November",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-11-13",
+      "status": "recurring-tbd",
+      "attendance": "",
+      "cost": "varies",
+      "audience": "data center and energy engineers, tech leaders, founders, policymakers",
+      "url": "https://www.kctechcouncil.com/edci-2026/",
+      "description": "KC Tech Council's one-day summit on data center design, energy demand and infrastructure policy, with breakout tracks and a digital-infrastructure founder showcase.",
+      "source": "https://www.kctechcouncil.com/edci-2026/"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Discovery for Lakewood, Colorado (no curated summit there). Organiser Secret Sauce Events' page secretsauceevent.com/4-denver-federal-center-cyber-summit reads: ISSA Northern Colorado Chapter 'invites you to join them for the 4th Annual Denver Federal Center Cyber & IT Summit ... once again at GSA Building 41 in the Remington Arms Conference Room. The date is TBA for September 2027' and 'Over 200 attendees participated in 2026'. Its 3rd-edition page (secretsauceevent.com/denver-federal-center-cyber-summit) gives Thursday, August 20, 2026. The Denver Federal Center is in Lakewood. Attendee registration listed as 'Complimentary' on GovEvents; sponsors pay. No exact 2027 date, so next_date is empty.",
+    "record": {
+      "name": "Denver Federal Center Cyber Summit",
+      "type": "summit",
+      "topics": ["cybersecurity", "government", "data management"],
+      "city": "Lakewood",
+      "region": "Colorado",
+      "country": "United States",
+      "venue": "GSA Building 41, Denver Federal Center",
+      "cadence": "annual",
+      "month": "August-September",
+      "next_date": "",
+      "next_date_end": "",
+      "last_date": "2026-08-20",
+      "status": "recurring-tbd",
+      "attendance": "200",
+      "cost": "free",
+      "audience": "federal and state IT and security staff, ISSA and DAMA members, government vendors",
+      "url": "https://www.secretsauceevent.com/4-denver-federal-center-cyber-summit",
+      "description": "One-day cybersecurity and IT summit on the Denver Federal Center campus, hosted by ISSA Northern Colorado with ISSA Denver and DAMA Rocky Mountain, with government and industry technical briefs and exhibits. Entry to the federal campus requires registration.",
+      "source": "https://www.secretsauceevent.com/4-denver-federal-center-cyber-summit"
+    }
+  }
+]

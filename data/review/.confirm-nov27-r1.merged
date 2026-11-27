@@ -1,0 +1,142 @@
+[
+  {
+    "name": "DC864",
+    "city": "Greenville",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "dc864.org home and /about: Upstate SC DEF CON group meets 'the 1st Thursday of every month at 6 PM ET', hybrid at OpenWorks (101 N Main St, Greenville) and online, open to the public, no fees. Latest posted meeting is the September 3rd conference review, matching last_date 2026-09-03. Monthly series with no per-meeting date published on the site (announcements go to Discord/LinkedIn), so recurring-tbd stands; venue and city correct."
+  },
+  {
+    "name": "Atomic Games",
+    "city": "Grand Rapids",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "Organiser's Luma page luma.com/r9mflosx (Atomic Object): 'Atomic Games 2026', start_at 2026-02-28T14:00Z / end 2026-02-28T23:00Z (America/Detroit, 9am-6pm), Atomic Object, 1034 Wealthy St SE, Grand Rapids; 32 students, $600 prize. Matches last_date 2026-02-28 and venue. No 2027 edition found: atomicobject.com/atomic-games is a 404 and a web search for 'Atomic Games 2027' returned nothing, so recurring-tbd stands."
+  },
+  {
+    "name": "AWS Community Day Midwest",
+    "city": "Indianapolis",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "midwestcommunityday.com title 'AWS Community Day Midwest 2026 | Indianapolis', 'June 24, 2026', past events list 2025 Milwaukee, 2024 Columbus. Matches last_date 2026-06-24 and city. No 2027 date or host city on the site (no '2027' anywhere in the page), so recurring-tbd stands."
+  },
+  {
+    "name": "Beam Summit",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "beamsummit.org now reads 'Thank you for attending Beam Summit 2026!' (blog post of that name, 2026 sessions and photo album). Wayback snapshot of the organiser homepage dated 2026-06-17 reads 'Beam Summit 2026 is happening June 22nd & 23rd, 2026 in NYC!', matching last_date 2026-06-22. No 2027 edition announced on the site, so recurring-tbd stands."
+  },
+  {
+    "name": "Beer City Code",
+    "city": "Grand Rapids",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "beercitycode.com: 'August 14 - 15, 2026, Grand Rapids, MI', workshops Friday Aug 14, main conference Saturday Aug 15, Calvin University Fine Arts Center, 3201 Burton St SE; tickets 'Sales Closed'. Matches last_date 2026-08-14 and venue. No 2027 date on the site, so recurring-tbd stands."
+  },
+  {
+    "name": "Business+AI Forum",
+    "city": "Hoboken",
+    "status": "corrected",
+    "cycle": "nov27-r1",
+    "evidence": "ailab.stevens.edu/business-ai-forum-december-2026/: 'the third Business+AI Forum', Wednesday, December 2, 2026, 4:00-6:00 p.m., Babbio Center Room 122, Stevens Institute of Technology, free with registration; also listed under Upcoming Events on the lab's homepage and events page. Record had next_date empty; patch sets 2026-12-02, status upcoming. September 23, 2026 (second forum) remains last_date."
+  },
+  {
+    "name": "Carolina Code Conference",
+    "city": "Greenville",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "carolina.codes/calendar/past: 'Carolina Code Conference 2026, day one, Friday, August 14, 2026' and day two Saturday August 15, Flywheel Coworking, Greenville SC. Matches last_date 2026-08-14 and venue. The upcoming calendar lists two alternative 2027 weekends, both marked '(HOLD)' (Aug 6-7 and Aug 13-14, 2027), and the homepage says 'Subscribe to be the first to know as things develop for 2027', so no 2027 date is settled; recurring-tbd stands."
+  },
+  {
+    "name": "Chain React",
+    "city": "Portland",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "chainreactconf.com: '6th annual, Portland, Oregon', 'July 30-31, 2026'; /workshops lists the workshops on 'July 29, 2026, Ecotrust Building'; /attending says 'Back at The Armory in downtown Portland'. last_date 2026-07-29 is the workshop day of the 2026 edition, consistent with the description (a workshop day, then two days of talks). No 2027 date published, so recurring-tbd stands."
+  },
+  {
+    "name": "Computing [MTU] Showcase",
+    "city": "Houghton",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "mtu.edu/icc/events/computing-mtu-showcase/showcase2026/: 2026 events run from the TRON screening 'Tuesday, September 29th, 6:30-9:00 PM, Fisher Hall Room 135', through the keynote and fireside chat Thursday October 1st (Fisher Hall 138), to the student poster competition Friday October 2nd (H-STEM Building, Longyear Commons). Matches last_date 2026-09-29 and venue. No 2027 showcase page, so recurring-tbd stands."
+  },
+  {
+    "name": "Denver Dev Day",
+    "city": "Lakewood",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "Organiser's Meetup group meetup.com/denverdevday lists the past event 'Denver Dev Day, Fri, Jun 26, 9:00 AM MDT, Red Rocks Community College, 13300 W. 6th Ave., Lakewood, CO' (2026; the 2025 one is listed separately as Jun 27, 2025). Matches last_date 2026-06-26 and venue. denverdevday.com (redirects to denverdevday.github.io) reads 'COMING SOON!' with no date, and Meetup has no upcoming event, so recurring-tbd stands."
+  },
+  {
+    "name": "Design Expo",
+    "city": "Houghton",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "mtu.edu/expo (redirects to mtu.edu/enterprise/involved/expo/): 'Design Expo 2026, Tuesday, April 14, 2026'; the registration timeline gives the student showcase 10 a.m.-2 p.m. at the Van Pelt and Opie Library. Matches last_date 2026-04-14. No 2027 date on the expo, registration or judge pages, or in a web search, so recurring-tbd stands."
+  },
+  {
+    "name": "droidcon USA",
+    "city": "Orlando",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "usa.droidcon.com: '16-17 JULY 2026, Orlando, OCCC West Concourse' and 'Thank you all for being at droidCon USA 2026'. Matches last_date 2026-07-16 and venue. /letter-to-community says 2027 will unite Android, Flutter, React Native, iOS and gaming developers 'under one roof', with no date or venue; a web search found no 2027 dates. recurring-tbd stands."
+  },
+  {
+    "name": "flutterCon USA",
+    "city": "Orlando",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "flutterconusa.dev: '16-17 JULY 2026, Orlando', 'OCCC, West Concourse', 'Thank you all for being at flutterCon USA 2026'. Matches last_date 2026-07-16 and venue. No 2027 date on the site, so recurring-tbd stands."
+  },
+  {
+    "name": "Harrisburg University Cybersecurity Summit",
+    "city": "Harrisburg",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "harrisburgu.edu/events/2026-cybersecurity-summit/: 'The 2026 Cybersecurity Summit, 10/21/2026 - 10/22/2026', in-person and virtual registration, CTF and TTX, Harrisburg University. Matches last_date 2026-10-21. The university events listing shows no 2027 summit, so recurring-tbd stands."
+  },
+  {
+    "name": "IEEE Cloud Summit",
+    "city": "Washington",
+    "status": "corrected",
+    "cycle": "nov27-r1",
+    "evidence": "ieeecloudsummit.org homepage still shows 'June 25-26 2026, Washington Marriott Capitol Hill', matching last_date 2026-06-25. The organiser's own /2027-cfp page reads 'IEEE Cloud Summit 2027. Dates: June 24-25, 2027 | Location: Washington DC, USA', paper deadline Feb 1, 2027. Patch sets next_date 2027-06-24 to 2027-06-25, status upcoming; venue left blank because none is published."
+  },
+  {
+    "name": "KCD New York",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "kcdnewyork.com: 'Kubernetes Community Days New York 2027. When: June 2027, exact date to be announced. Where: New York, NY, venue to be announced'; recap says 'On June 10, 2026 ... filled Convene One Liberty Plaza for our third edition'. Matches last_date 2026-06-10, month June and the description. No exact date yet, so recurring-tbd stands."
+  },
+  {
+    "name": "M365 Community Days NYC",
+    "city": "New York",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "communitydays.org/event/2026-07-31/m365-community-days-nyc: 'M365 Community Days NYC, July 31, 2026, Microsoft, New York, NY', six tracks, keynote Heather Cook. Matches last_date 2026-07-31. The communitydays.org homepage lists events through April 2027 with no NYC M365 Community Days, so recurring-tbd stands."
+  },
+  {
+    "name": "Memphis Microsoft Community Days",
+    "city": "Memphis",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "ti.to/tndays/memphis2026 (organiser's ticket page, linked from tndays.com/memphis): 'Memphis Microsoft Community Days 2026, 9am-4pm, June 5th, 2026, Microsoft Office in Memphis, 6750 Poplar Ave, 8th floor'. Matches last_date 2026-06-05 and venue. ti.to/tndays lists no newer event and tndays.com announces no next Memphis date (its homepage text is stale, still saying October 2-3, 2025), so recurring-tbd stands."
+  },
+  {
+    "name": "MY Hackathon",
+    "city": "Gaithersburg",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "mafiq.org JSON-LD and event list: 'MY Hackathon 2026', 25-26 July, Islamic Center of Maryland (ICM), Gaithersburg, teams of 3-5 high-school-and-above students. Matches last_date 2026-07-25 and venue. The page also lists a second 2026 run on September 5-6 at the ISNA Convention, Huntington Place, Detroit; that is a separate city and already past, so no record was added. 'Upcoming Events: No event found', so recurring-tbd stands."
+  },
+  {
+    "name": "Next Venture Summit",
+    "city": "Greenville",
+    "status": "confirmed",
+    "cycle": "nov27-r1",
+    "evidence": "nextgengvl.org/next-venture-summit/: 'Next Venture Summit coming September 15 & 16, 2026', Match Day September 15 and Summit September 16 at Judson Mill, Greenville SC, 11th annual. Matches last_date 2026-09-15 and venue. The NextGEN events page shows no 2027 summit, so recurring-tbd stands."
+  }
+]

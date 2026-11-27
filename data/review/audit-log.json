@@ -745,6 +745,28 @@
           "resolution": "Repeat of 2026-11-21-i1-W1, same owner policy decision: keep the RETURNING gate (revert these 14 adds to unresolved) or drop it in curator.md and add a rule for rotating-city events. Adds kept pending that decision."
         }
       ]
+    },
+    {
+      "id": "2026-11-27-i1",
+      "date": "2026-11-27",
+      "iteration": 1,
+      "scope": "nov27 cycle: 60 re-check rows (r1-r3: 44 confirmed, 12 corrected, 4 blocked), 10 DISCOVER cities (c1-c2), 13 adds, 1 city correction, sources c1/c2/gate",
+      "checked": "City moves TechConnect WV to Huntington and Bank Tech to Manhattan KS (organiser pages); 2027 dates for Triangle Game Jam, Business+AI Forum, Summercon, IEEE Cloud Summit, GWU Stronger Together, BSidesSF, ConUHacks, FIRST, BSides ICS/OT; Car.HMI/Tech.AD are distinct co-located events (audit-run duplicate is a false positive); random confirms AI Tinkerers SD, PA TechCon, Tech Week GR, AI & Big Data Expo NA, Beer City Code, DC864; all 13 new adds on organiser pages; no aggregator sources; no removals, no curated loss",
+      "blocking": 1,
+      "warnings": 0,
+      "findings": [
+        {
+          "id": "2026-11-27-i1-B1",
+          "severity": "blocking",
+          "event": "Bank Technology & Operations Conference & Showcase (Manhattan, Kansas; published as New York, New York)",
+          "summary": "nov27-r3 correctly set city Manhattan, region Kansas (ksbankers.com 2027 page: 'February 9-10, 2027 Hilton Garden Inn, Manhattan, KS'), but the bare alias 'manhattan' -> ['New York','New York'] in scripts/lib/places.mjs ignores the region, so events.json publishes it as New York, NY (id ...-new-york). audit-run missed it because Kansas's count netted out with the EDCI add.",
+          "recommendation": "Leave the raw record as it is. In scripts/lib/places.mjs scope the alias: 'manhattan|new york': ['New York','New York'] (plus 'manhattan|ny' if needed) instead of bare 'manhattan', then rebuild. Expect city Manhattan, region Kansas, id bank-technology-operations-conference-showcase-manhattan. A scan of data/raw found no other record affected.",
+          "repeat_of": null,
+          "status": "fixed",
+          "resolved_on": "2026-11-27",
+          "resolution": "scripts/lib/places.mjs: bare 'manhattan' alias region-qualified to 'manhattan|new york' / '|ny' / '|' (empty); regression checks added to scripts/selftest.mjs. Record now publishes as Manhattan, Kansas (id ...-manhattan); scoped Sonnet re-check: ok."
+        }
+      ]
     }
   ]
 }

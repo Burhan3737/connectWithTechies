@@ -1,0 +1,14 @@
+[
+  {
+    "match": { "name": "Summercon", "city": "Brooklyn" },
+    "action": "update",
+    "reason": "summercon.org home and summercon.org/conference.html: 'Summercon XL July 9-10, 2027 · gowanus, brooklyn', venue section lists Littlefield (635 Sackett St), Lucky 13 Saloon and The Ornate Studio in Gowanus; Eventbrite ticket link 'summercon-2027-tickets' from the organiser's page. The archive page gives 2026 as Brooklyn July 10-11, so the existing last_date 2026-07-10 stays. Record had next_date empty and recurring-tbd.",
+    "set": {
+      "next_date": "2027-07-09",
+      "next_date_end": "2027-07-10",
+      "status": "upcoming",
+      "venue": "Littlefield, Lucky 13 Saloon and The Ornate Studio, Gowanus",
+      "source": "https://summercon.org/conference.html"
+    }
+  }
+]

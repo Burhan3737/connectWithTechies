@@ -1,0 +1,164 @@
+[
+  {
+    "match": {
+      "name": "Car.HMI USA",
+      "city": "Dearborn"
+    },
+    "action": "update",
+    "reason": "we.CONECT's 2026 Tito page ti.to/weconect/carhmi-usa ('Car.HMI USA 2026'): 'December 1st-2nd, 2026, The Henry, Dearborn MI', venue The Henry, Autograph Collection, Fairlane Plaza, 300 Town Center Dr. The stored ti.to/weconect/car-hmi-usa is the 2025 page. last_date 2025-12-08 unchanged.",
+    "set": {
+      "next_date": "2026-12-01",
+      "next_date_end": "2026-12-02",
+      "status": "upcoming",
+      "url": "https://ti.to/weconect/carhmi-usa",
+      "source": "https://ti.to/weconect/carhmi-usa"
+    }
+  },
+  {
+    "match": {
+      "name": "Tech.AD USA",
+      "city": "Dearborn"
+    },
+    "action": "update",
+    "reason": "we.CONECT's 2026 Tito page ti.to/weconect/tech-ad-usa ('Tech.AD USA 2026'): 'December 1st-2nd, 2026, The Henry, Dearborn MI', same venue. The stored ti.to/weconect/techad-usa is the 2025 page. last_date 2025-12-08 unchanged.",
+    "set": {
+      "next_date": "2026-12-01",
+      "next_date_end": "2026-12-02",
+      "status": "upcoming",
+      "url": "https://ti.to/weconect/tech-ad-usa",
+      "source": "https://ti.to/weconect/tech-ad-usa"
+    }
+  },
+  {
+    "match": {
+      "name": "Triangle Game Jam",
+      "city": "Raleigh"
+    },
+    "action": "update",
+    "reason": "entrepreneurship.ncsu.edu/trianglegamejam/: 'Triangle Game Jam 2027', kickoff Saturday February 13 at Duke, showcase and awards Sunday February 21 at NC State Hunt Library; registrations close Friday, February 5, 2027. Weekdays match 2027. last_date 2026-01-16 unchanged.",
+    "set": {
+      "next_date": "2027-02-13",
+      "next_date_end": "2027-02-21",
+      "status": "upcoming"
+    }
+  },
+  {
+    "match": {
+      "name": "Bank Technology & Operations Conference & Showcase",
+      "city": "Wichita"
+    },
+    "action": "update",
+    "reason": "ksbankers.com/conference/2027-bank-technology-operations-conference-and-showcase/ (Kansas Bankers Association): 'February 9-10, 2027, Hilton Garden Inn, Manhattan, KS'. The KBA events portal lists the same dates and venue. The 2026 edition (Feb 9-10, 2026) was in Wichita, which stays as last_date; the 2027 edition moves to Manhattan.",
+    "set": {
+      "city": "Manhattan",
+      "region": "Kansas",
+      "venue": "Hilton Garden Inn, Manhattan",
+      "next_date": "2027-02-09",
+      "next_date_end": "2027-02-10",
+      "status": "upcoming",
+      "url": "https://ksbankers.com/conference/2027-bank-technology-operations-conference-and-showcase/",
+      "source": "https://ksbankers.com/conference/2027-bank-technology-operations-conference-and-showcase/"
+    }
+  },
+  {
+    "match": {
+      "name": "BSides ICS/OT",
+      "city": "Tampa"
+    },
+    "action": "update",
+    "reason": "bsidesics.org: 'BSidesICS/OT 2027, Tampa, FL, Monday, February 8, 2027, 8:30 AM - 4:30 PM ET, venue to be announced'; tickets on sale via Humanitix. last_date 2026-02-23 unchanged.",
+    "set": {
+      "next_date": "2027-02-08",
+      "next_date_end": "2027-02-08",
+      "status": "upcoming",
+      "source": "https://bsidesics.org/"
+    }
+  },
+  {
+    "match": {
+      "name": "BSidesSF",
+      "city": "San Francisco"
+    },
+    "action": "update",
+    "reason": "bsidessf.org homepage: 'BSidesSF 2027 will be April 3-4!'. last_date 2026-03-21 unchanged.",
+    "set": {
+      "next_date": "2027-04-03",
+      "next_date_end": "2027-04-04",
+      "status": "upcoming",
+      "month": "April",
+      "source": "https://bsidessf.org/"
+    }
+  },
+  {
+    "match": {
+      "name": "ConUHacks",
+      "city": "Montreal"
+    },
+    "action": "update",
+    "reason": "conuhacks.io: 'ConUHacks XI, FEBRUARY 6 - 7, 2027, 24 HOURS, CONCORDIA UNIVERSITY, MONTREAL'. last_date 2026-01-24 unchanged.",
+    "set": {
+      "next_date": "2027-02-06",
+      "next_date_end": "2027-02-07",
+      "status": "upcoming",
+      "month": "February"
+    }
+  },
+  {
+    "match": {
+      "name": "Cybersecurity, Stronger Together Conference",
+      "city": "Washington"
+    },
+    "action": "update",
+    "reason": "cyberconference.cps.gwu.edu: 'SAVE THE DATE 3rd Annual Stronger Together Cybersecurity Conference on April 21, 2027!'. The page confirms the 2026 edition was held February 3, 2026 (last_date unchanged). No 2027 room is named, so the venue no longer asserts Jack Morton Auditorium.",
+    "set": {
+      "next_date": "2027-04-21",
+      "next_date_end": "2027-04-21",
+      "status": "upcoming",
+      "month": "April",
+      "venue": "George Washington University (2027 room not yet announced)",
+      "source": "https://cyberconference.cps.gwu.edu/"
+    }
+  },
+  {
+    "match": {
+      "name": "FIRST Championship",
+      "city": "Houston"
+    },
+    "action": "update",
+    "reason": "firstinspires.org/programs/first-championship: 'Save the date FIRST Championship April 28 - May 1, 2027'. FIRST's blog 'Update: Future of FIRST Championship' keeps it at George R. Brown Convention Center, Houston through 2034. last_date 2026-04-29 unchanged.",
+    "set": {
+      "next_date": "2027-04-28",
+      "next_date_end": "2027-05-01",
+      "status": "upcoming",
+      "month": "April-May"
+    }
+  },
+  {
+    "action": "add",
+    "reason": "Found while verifying BSides Charlotte. bsidesclt.org/frostcon/ and the bsidesclt.org homepage (page published 2026-11-04, modified 2026-11-18): 'FrostCon 3, When: December 2, Where: Booth Playhouse', 'traditionally on the first Wednesday in December', doors 8:00 AM, opening remarks 9:00 AM, a day of 15-minute cybersecurity lightning talks, run by BSides Charlotte, Charlotte ISSA and Phish Club; tickets via Blumenthal Arts. The page prints no year. 2026 is fixed by three things: the page went up November 2026, it calls the event upcoming, and December 2 is the first Wednesday of December in 2026 (in 2025 it was a Tuesday, in 2027 a Thursday). Not already in events.json.",
+    "record": {
+      "name": "FrostCon",
+      "type": "conference",
+      "topics": [
+        "security",
+        "community"
+      ],
+      "city": "Charlotte",
+      "region": "North Carolina",
+      "country": "United States",
+      "venue": "Booth Playhouse",
+      "cadence": "annual",
+      "month": "December",
+      "next_date": "2026-12-02",
+      "next_date_end": "2026-12-02",
+      "last_date": "",
+      "status": "upcoming",
+      "attendance": "",
+      "cost": "paid",
+      "audience": "security practitioners from beginners to executives",
+      "url": "https://bsidesclt.org/frostcon/",
+      "description": "A one-day run of 15-minute cybersecurity lightning talks held each December at the Booth Playhouse, put on by BSides Charlotte with Charlotte ISSA and Phish Club.",
+      "source": "https://bsidesclt.org/frostcon/"
+    }
+  }
+]

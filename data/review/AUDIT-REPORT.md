@@ -1,112 +1,85 @@
-# Audit report — 2026-11-24
+# Audit report — 2026-11-27
 
-**Verdict: 1 DISCREPANCY** (0 blocking, 1 warning, a repeat of a deferred policy finding)
+**Verdict: 1 DISCREPANCY** (1 blocking, 0 warnings)
 
-Scope: nov24 cycle. Script refresh, then 60 re-check rows (nov24-c1/c2/c3), 10 DISCOVER cities
-(nov24-d1/d2) and 75 RETURNING rows (nov24-t1/t2/t3). 41 updates, 45 adds and 1 removal were applied.
-
-Mechanical audit (`audit-run.mjs`): 0 blocking, 0 warnings. 1168 -> 1212 curated events, 1 gone (with a
-reason), 60/60 dispatched rows have a ledger entry, 49/49 new or changed links resolve, no unexplained
-re-dates, no feed delistings over threshold, no duplicates, no internal-consistency errors.
+Scope: the nov27 cycle. Re-check passes nov27-r1/r2/r3 (60 dispatched rows: 44 confirmed, 12 corrected, 4 blocked).
+Discovery passes nov27-c1/c2 (10 cities, 13 adds, 1 city correction). Sources files c1, c2 and gate.
+Mechanical audit: 1212 -> 1223 curated events, 0 curated gone by name, 60 feed delistings (inside the 56-69 baseline),
+60/60 queue coverage, 15/15 new or changed links resolve.
 
 ## Blocking
 
-None.
+- **Bank Technology & Operations Conference & Showcase (published as New York, New York; should be Manhattan, Kansas)**
+  - **What is wrong:** nov27-r3 correctly moved the 2027 edition from Wichita to Manhattan, KS. The raw record
+    (`data/raw/us-central.json`, line 1336) says `"city": "Manhattan", "region": "Kansas"`. The build then
+    rewrote it through the bare alias `'manhattan': ['New York', 'New York']` in `scripts/lib/places.mjs` line 14.
+    `canonPlace()` applies a bare alias whatever the region is, so `data/events.json` now publishes a Kansas
+    Bankers Association conference as `city: "New York", region: "New York"`, with id
+    `bank-technology-operations-conference-showcase-new-york`. Kansas users will not find it, and New York users will
+    see a Kansas bankers' event.
+  - **Evidence:** the organiser's page
+    https://ksbankers.com/conference/2027-bank-technology-operations-conference-and-showcase/ reads
+    "2027 Bank Technology & Operations Conference and Showcase February 9-10, 2027 Hilton Garden Inn, Manhattan, KS",
+    and "A block of sleeping rooms has been reserved at the Hilton Garden Inn for the nights of February 8 and 9".
+  - **Why the mechanical audit missed it:** per-region counts net out, because Kansas lost this event and gained
+    Energy & Data Center Innovation Summit (Kansas City, KS). Nothing checks that the published region matches the
+    raw region.
+  - **Fix (verified):** the curator's data is right, so do not patch the raw record. Scope the alias to New York in
+    `scripts/lib/places.mjs`: replace `'manhattan': ['New York', 'New York']` with
+    `'manhattan|new york': ['New York', 'New York']` (add `'manhattan|ny'` too if postal codes appear), then rebuild.
+    Expected result: `city: "Manhattan", region: "Kansas"`, id `bank-technology-operations-conference-showcase-manhattan`.
+    I scanned every `data/raw/*.json` record for a bare city alias that overrides a different region. This is the only
+    record affected, and no raw record uses Manhattan with a New York region, so the change cannot move anything else.
 
 ## Warnings
 
-- **RETURNING adds with no announced next edition (repeat of 2026-11-21-i1-W1, still deferred to owner)**
-  - **What is wrong:** t1/t2/t3 added about 14 RETURNING rows as `recurring-tbd` even though each
-    organiser's page shows only the edition that just ran. The curators' own reasons say "no 2027 date",
-    "no 2027 edition announced" or similar for each one:
-    - t1: Memphis Microsoft Community Days, Power BI Days DC, State of the Map US, Beam Summit, UN Open
-      Source Week, AWS Community Day Midwest, IEEE Cloud Summit, The Perl and Raku Conference.
-    - t2: Summercon, SciPy, MY Hackathon. Denver Dev Day ("COMING SOON!") is borderline.
-    - t3: Chain React, M365 Community Days NYC, Secure Carolinas Conference.
-  - **Why it matters:** curator.md's RETURNING table allows `added` / `recurring-tbd` only when "next
-    edition announced, no dates yet". The same curators did not apply one rule:
-    - t1 marked AWS Community Day - East Canada and Accelerate Chicago `unresolved` because no 2027
-      edition was announced, but added Power BI Days DC and IEEE Cloud Summit on the same facts.
-    - SciPy (Tacoma 2025, Minneapolis 2026), State of the Map US (a new US city every year), AWS Community
-      Day Midwest (Milwaukee 2025, Indianapolis 2026) and TPRC (Las Vegas 2024, Greenville 2025-26) are
-      rotating events. Each is now pinned to its last host city with no next city known. Meanwhile t2
-      rejected AlmaLinux Day, bitcoin++ and Worlds in Action Hack as "one-time city stop of a rotating
-      series".
-  - **What I checked:** the dates and cities in these records are true as historical facts. I found
-    nothing fabricated. This is the policy gap the 2026-11-21 audit raised and the owner deferred.
-  - **What to do:** the owner decides one rule for both RETURNING and DISCOVER:
-    - **(a) Keep the gate:** revert the adds listed above and record them `unresolved` with a retry date.
-    - **(b) Drop the gate in curator.md:** keep them, and add a line telling curators how to place a
-      rotating-city event that has no announced next host. Either leave it unplaced or leave it out.
-      Do not pin it to the last host city.
+None.
 
 ## Checked and sound
 
-I checked these against the organisers' own pages, so the next auditor does not need to repeat them.
-
-- **Removal: Central Ohio Software Symposium (Columbus).** Holds up.
-  - nofluffjuststuff.com/columbus still shows "Sep 29 - Oct 1, 2023" (JSON-LD 2023-09-29).
-  - /conference/columbus/2025/04/canceled reads "the Central Ohio Software Symposium scheduled for
-    April 11 - 12, 2025 has been canceled".
-  - The removed 2026-04-10 last_date had no organiser support.
-- **Django Girls New York City.** The Nov 27-28 2026 -> May 7-8 2027 move is correct.
-  - djangogirls.org/en/nyc/ reads "May 7th & 8th, 2027 at Fractal Tech Hub, 111 Conselyea St, Brooklyn".
-  - The /en/events/ listing reads "New York City 8th May 2027".
-  - The old /en/newyorkcity/ source has no Wayback capture, and no Nov 2026 NYC edition is listed.
-- **Tech Alley Vegas.** meetup.com/tech-alley JSON-LD gives 2026-12-19T18:00Z to 2026-12-20T00:00Z
-  ("Tech Alley Vegas December 2026 Event", Third Street). last_date 2026-11-21 is carried correctly.
-- **City change: SC Conference (Supercomputing), Chicago -> Denver.**
-  - sc27.supercomputing.org/all-dates-deadlines/ reads "Program Sunday-Friday 14-19 November 2027".
-  - The SC27 home page reads "Explore our host city, Denver" and names the Colorado Convention Center.
-- **City change: BSides SLC, Salt Lake City -> Sandy.** bsidesslc.org reads "BUY TICKETS May 6-7, 2027"
-  and gives the venue as "Conference Center at Miller Campus, 9750 S 300 W Sandy, Utah 84070". The
-  "March 26, 2027" on the same page is BSides Red Rocks and was correctly ignored.
-- **City change: CDAO New York (added in Hoboken).** The organiser's pages read "JOIN US April 14, 2027,
-  W Hoboken" and give the venue as "W Hoboken 225 River St Hoboken, New Jersey 07030".
-- **City change: BSDCan (added in Vancouver).** bsdcan.org/2027/ reads "BSDCan 2027 July 7 - 11, 2027
-  Vancouver, Canada".
-- **Microsoft Ignite.** The banner reads "Mark your calendar: Microsoft Ignite in San Francisco, November
-  16-19, 2027".
-- **Live! 360 Tech Con.** The orlando-2027 page reads "November 14-19, 2027".
-- **BSides MKE.**
-  - bsidesmke.org reads "March 26, 2027".
-  - Its ticket block still says "Sept 2027". That contradiction is on the organiser's own page.
-  - sessionize.com/CypherCon2027 independently reads "BSidesMKE March 26, 2027", so March 26 is right.
-- **BSidesKC.** bsideskc.org reads "April 24, 2027" and gives "7250 State Ave, Kansas City KS". BSides KC
-  and BSidesKC are two raw records that build merges into one, which is why APPLIED.md shows the patch
-  twice. The same applies to the doubled BSides MKE line.
-- **BSides San Diego.** bsidessd.org reads "Saturday, March 27, 2027, Location 6075 Aztec Circle Dr".
-- **Confirmed rows sampled at random:**
-  - All Things Open: "Save the date for All Things Open 2027! Join us in Raleigh, NC October 17-19".
-  - Florida Startup Summit: Luma JSON-LD 2026-10-09, Reitz Union.
-  - East Meets West: JSON-LD 2026-04-08/09, no 2027 date.
-  - AI Tinkerers Fort Wayne: JSON-LD latest 2026-10-21, none after it.
-  - QCon San Francisco: the 2027 dates on its page are QCon London and QCon AI Boston, not SF, so
-    `recurring-tbd` is right.
-  - Cutie Hack: "November 21, 2026".
-- **New adds checked on organiser pages:**
-  - GrrCON: "September 16th and 17th, 2027", DeVos Place.
-  - Tech Week Grand Rapids: "tech week 2027 9.13 - 9.18". The 2026 JSON-LD gives 2026-09-14/19.
-  - Blastoff Rails: "June 10 - 11, 2027".
-  - ÜberConf: JSON-LD 2027-07-13/16.
-  - PA TechCon: "08.12.2027".
-  - HU Data Analytics Summit: "4/29/2027".
-  - Stevens Innovation Expo: JSON-LD 2027-05-07.
-  - ISU Startup Factory Demo Day: JSON-LD 2026-12-08 17:30, ISU Research Park.
-  - Community College Cyber Defense Challenge: "December 4-5, 2026". The page reads "open to any
-    community college in Iowa and surrounding states", and the ISU-only CDCs were correctly left out.
-  - AI in Finance Summit NY: "April 12-13, 2027".
-  - Perl Community Conference: "December 17-18, 2026, Austin, Texas and online ... Join us in person".
-  - swampUP: JSON-LD 2026-09-01/03, "Waitlist for 2027".
-  - DC864: monthly, hybrid with an in-person meeting. Its latest post is still Sep 3.
-- **Eligibility note, not a finding: MY Hackathon (Gaithersburg).** The Devpost rules read "Open to Muslim
-  high school, college, and university students". This is an identity-community audience, like Django
-  Girls (women). It is not a single-institution enrolment limit. The record discloses it in `audience`.
-  It is a candidate for the W1 revert only because no 2027 edition is announced.
-- **Aggregators:** no curated record changed this run cites dev.events, 10times, Eventbrite search or MLH
-  as its `source`. Every new date comes from an organiser page.
-- **Coverage:** the only curated city or state losses are the three explained moves above: Columbus -1
-  (removal), Chicago -1 (SC moved to Denver), Salt Lake City -1 (BSides SLC moved to Sandy). No feed
-  region lost more than 20% of its non-past records.
-- **Duplicates:** none of the 45 adds collides with an existing record under another name. The 6 new
-  organiser follows are in-person groups, and their online-only series are named for the feed to drop.
+- **Mechanical "duplicate" Car.HMI USA / Tech.AD USA (Dearborn) is a false positive. Do not act on it.** These are
+  two separate we.CONECT conferences, held side by side, each with its own Tito page and its own programme.
+  ti.to/weconect/carhmi-usa: "Car.HMI USA 2026 December 1st-2nd, 2026 The Henry, Dearborn MI ... automotive HMIs and
+  UX". ti.to/weconect/tech-ad-usa: "Tech.AD USA 2026 December 1st-2nd, 2026 The Henry, Dearborn MI ... vehicle
+  automation ... 300+ stakeholders". Both records existed before this run. The r3 correction (2026-12-01 to 12-02, new
+  2026 Tito URLs) is right for both. The audit-run duplicate rule will keep flagging this pair until Dec 2.
+- **City changes:** TechConnect WV Women in Tech, South Charleston -> Huntington. techconnectwv.org/women-and-tech
+  reads "Women & Tech Conference 13 FEBRUARY ... our 2026 theme ... FRIDAY 8:30AM - 3:30PM EST Double Tree by Hilton
+  Huntington, WV". South Charleston is only TechConnect's office address in the footer. Sound. Bank Tech's move to
+  Manhattan, KS is also right at the data level (see Blocking for the build problem).
+- **Large date moves (recurring-tbd rows that got dates):** Triangle Game Jam 2027-02-13..21. The NCSU page names a
+  Feb 13 kickoff at Duke, a Feb 14 work day and a Feb 21 showcase at NC State, and registration closes Feb 5, 2027.
+  Business+AI Forum 2026-12-02 (Stevens page and JSON-LD: "the third Business+AI Forum on December 2"). Summercon
+  2027-07-09..10 ("Summercon XL July 9-10, 2027 · gowanus, brooklyn"; Littlefield, Ornate Studios, Lucky 13).
+  IEEE Cloud Summit 2027-06-24..25 (/2027-cfp: "Dates: June 24-25, 2027 | Location: Washington DC"). Cybersecurity,
+  Stronger Together 2027-04-21 ("SAVE THE DATE 3rd Annual ... April 21, 2027", 2026 "Held February 3, 2026").
+  BSidesSF 2027-04-03..04. ConUHacks 2027-02-06..07 (Concordia, John Molson Building). FIRST Championship
+  2027-04-28..05-01. BSides ICS/OT 2027-02-08, Tampa. All match the organiser pages word for word.
+- **Random confirmed rows:** AI Tinkerers San Diego (JSON-LD 2026-12-03T17:00-08:00, OfflineEventAttendanceMode).
+  PA TechCon ("08.12.2027" in the h1). Tech Week Grand Rapids ("tech week 2027 9.13 - 9.18"). AI & Big Data Expo
+  North America: the live site is now back and reads "June 16-17, 2027 San Jose McEnery Convention Center", which
+  agrees with the Wayback-based confirm. Beer City Code (Aug 14-15, 2026). DC864 (1st Thursday, OpenWorks, hybrid).
+  All evidence matched the pages.
+- **New adds, all checked on organiser pages:** FrostCon (bsidesclt.org homepage: "FrostCon 3 When: December 2
+  Where: Booth Playhouse"; the year inference holds). CyberCon Huntington ("April 12-14, 2027"). Irvine Tech Day
+  ("MAY 7-9, 2026 • IRVINE"). Educational Technology Day ("SAVE THE DATE - MARCH 18, 2027"). Networking@Rev
+  Prototyping Demo Day (JSON-LD 2027-07-29T18:00-04:00). Aerium ("June 2-4, 2027 | Johnstown, PA"). EDCI
+  ("November 13, 2026 Sporting Park - Kansas City, Kansas"). Denver Federal Center Cyber Summit ("GSA Building 41 ...
+  TBA for September 2027"). iTECH Summit ("March 17-18, 2026", Mountain America Center). gBETA showcase ("Showcase
+  expected in March 2027"). Cornell Systems Summit ("November 1-3, 2026 • Statler Hotel"); the registration form
+  takes general attendees as well as Cornell faculty and alumni, so it is not invitation-only. None of these
+  duplicates an existing record. All are in person.
+- **No aggregator sources:** none of the 24 new or changed curated records cites dev.events, 10times or an
+  Eventbrite search URL.
+- **No removals** this cycle. No curated event lost. Feed delistings (60, all "no longer listed", meetup/luma) are
+  inside the baseline.
+- **Blocked rows** (UGAHacks, MakeUofT, RevolutionUC, WEHack): left unchanged, correctly. The organisers publish only
+  a season, and the curator would not take the MLH listing's date.
+- **Sources:** sources-nov27-c1/c2/gate add in-person tech calendars (Idaho Falls Programmers, TTN Ithaca, Rev .ics,
+  TCVN, Communitech, Prefect, AGI Society, jazz.tools). The reasons are specific, and the Rev entry notes that its
+  online sessions must be filtered out.
+- **Open finding 2026-11-24-i1-W1** (RETURNING rows held as recurring-tbd): this cycle partly works it down. Summercon
+  and IEEE Cloud Summit now carry announced 2027 dates. The others were re-confirmed with no 2027 date announced. No
+  new instance was added.
+- **Note, not a finding:** Business+AI Forum now lists month "March, September, December" but keeps cadence
+  "biannual". The cadence vocabulary has no three-times-a-year value, so the record is left as it is.

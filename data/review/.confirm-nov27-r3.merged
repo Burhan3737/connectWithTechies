@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Car.HMI USA",
+    "city": "Dearborn",
+    "status": "corrected",
+    "cycle": "nov27-r3",
+    "evidence": "The stored ti.to/weconect/car-hmi-usa page still shows the 2025 edition ('December 8th-9th, 2025'). we.CONECT's 2026 Tito page, ti.to/weconect/carhmi-usa (title 'Car.HMI USA 2026'), reads 'December 1st-2nd, 2026, The Henry, Dearborn MI' with venue 'The Henry, Autograph Collection, Fairlane Plaza, 300 Town Center Dr, Dearborn'. carhmi-usa.com redirects to we-conect.com/events/car-hmi-usa-2026/, a JS shell that shows no text. Patched next_date 2026-12-01 to 2026-12-02, status upcoming, url/source moved to the 2026 Tito page; last_date 2025-12-08 kept. Co-located sibling InCabin.Sensing USA 2026 (ti.to/weconect/incabin-sensing-usa) shows the same Dec 1-2, 2026 at The Henry."
+  },
+  {
+    "name": "Tech.AD USA",
+    "city": "Dearborn",
+    "status": "corrected",
+    "cycle": "nov27-r3",
+    "evidence": "The stored ti.to/weconect/techad-usa page is the 2025 edition ('December 8th-9th, 2025'). we.CONECT's 2026 Tito page ti.to/weconect/tech-ad-usa (title 'Tech.AD USA 2026') reads 'December 1st-2nd, 2026, The Henry, Dearborn MI', venue The Henry, Autograph Collection, Fairlane Plaza, 300 Town Center Dr, Dearborn. Patched next_date 2026-12-01 to 2026-12-02, status upcoming, url/source moved to the 2026 page; last_date 2025-12-08 kept."
+  },
+  {
+    "name": "Triangle Game Jam",
+    "city": "Raleigh",
+    "status": "corrected",
+    "cycle": "nov27-r3",
+    "evidence": "entrepreneurship.ncsu.edu/trianglegamejam/ (NC State Entrepreneurship, organiser): 'The Triangle Game Jam 2027' with Key Details 'Saturday, February 13: Kickoff event at Duke University; Sunday, February 14: Work day and workshops at UNC-Chapel Hill; Saturday, February 20: Work day at NC State; Sunday, February 21: Showcase at NC State' at Hunt Library, Duke Energy Hall; 'Accepting registrations until Friday, February 5, 2027'. Every weekday matches 2027. Record had no next date; patched 2027-02-13 to 2027-02-21, status upcoming. last_date 2026-01-16 kept."
+  },
+  {
+    "name": "AI Tinkerers San Diego",
+    "city": "San Diego",
+    "status": "confirmed",
+    "cycle": "nov27-r3",
+    "evidence": "san-diego.aitinkerers.org (organiser) JSON-LD startDate 2026-12-03T17:00-08:00, endDate 2026-12-03T19:00; page text 'Next event: Thursday, December 3, 2026, Agents, Harnesses, and Software Factories, 5PM to 7PM PST', in-person meetup, sponsors Google, Backland Labs, Horus Technology. The previous meetup listed is Tuesday November 17 (Claude x AI Tinkerers, Physical AI), which matches last_date 2026-11-17. The '2026-12-10' that the script flagged comes from the city switcher in the header ('Montreal Next: Dec 10'), not from San Diego."
+  },
+  {
+    "name": "Steel City AI Innovators Meetup",
+    "city": "Pittsburgh",
+    "status": "confirmed",
+    "cycle": "nov27-r3",
+    "evidence": "The organiser's Eventbrite event page (Pittsburgh Technology Council, event 1980999306252; this is the event's own page, not a search URL) has JSON-LD startDate 2026-12-09T17:30-05:00, endDate 19:30, OfflineEventAttendanceMode, location Pittsburgh Technology Council, 100 South Commons #172, Pittsburgh. pghtech.org/events/Steel_City_AI_11_1 shows the November 11, 2026 session, which matches last_date, and says '2nd Wednesday of every month, 5:30-7:00 PM, Pittsburgh Tech Council & Fortyx80'. Dec 9, 2026 is the 2nd Wednesday."
+  },
+  {
+    "name": "BSides Philly",
+    "city": "Philadelphia",
+    "status": "confirmed",
+    "cycle": "nov27-r3",
+    "evidence": "bsidesphilly.org (organiser) JSON-LD startDate 2026-12-11T08:00-05:00, endDate 2026-12-11T18:00; location Live! Casino & Hotel Philadelphia, 900 Packer Ave, Philadelphia PA 19148; description 'Friday, December 11, 2026 at Live! Casino & Hotel Philadelphia'. Matches the record's date and venue."
+  },
+  {
+    "name": "The Montgomery Summit",
+    "city": "Santa Monica",
+    "status": "confirmed",
+    "cycle": "nov27-r3",
+    "evidence": "montgomerysummit.com gives curl no response from this machine. WebFetch of the same organiser page reads 'Exclusive Access March 9th & 10th, 2027' and says it draws attendees 'to Santa Monica'; registration opened September 2026. Matches the record's 2027-03-09 to 2027-03-10, Santa Monica. Third-party listings name the Fairmont Miramar as the venue, but the official page does not, so venue is left alone."
+  },
+  {
+    "name": "DrupalCon North America",
+    "city": "Orlando",
+    "status": "confirmed",
+    "cycle": "nov27-r3",
+    "evidence": "events.drupal.org/orlando2027 serves curl a JS 'Client Challenge' page. WebFetch of the same organiser page reads '22 March 2027 - 25 March 2027' and 'DrupalCon Orlando will take place at the Hyatt Regency Grand Cypress Resort'. Matches the record's dates and venue."
+  },
+  {
+    "name": "Alaska SBDC Summit",
+    "city": "Anchorage",
+    "status": "confirmed",
+    "cycle": "nov27-r3",
+    "evidence": "summit.aksbdc.org (organiser) still presents the 2026 edition: 'Hosted at The Wildbirch Hotel on March 6, 2026', one-day, with healthcare, AI and e-commerce tracks. It announces no 2027 date. The record (recurring-tbd, last_date 2026-03-06, The Wildbirch Hotel) matches."
+  },
+  {
+    "name": "Bank Technology & Operations Conference & Showcase",
+    "city": "Wichita",
+    "status": "corrected",
+    "cycle": "nov27-r3",
+    "evidence": "Kansas Bankers Association's own 2027 page, ksbankers.com/conference/2027-bank-technology-operations-conference-and-showcase/, reads 'February 9-10, 2027, Hilton Garden Inn, Manhattan, KS', room block nights Feb 8-9, rate cutoff January 19, 2027. The portal.ksbankers.com/events calendar lists 'Feb 9, 2027 - Feb 10, 2027, 2027 Bank Technology and Operations Conference, Hilton Garden Inn'. The 2026 page confirms the last edition was February 9-10, 2026 in Wichita. The 2027 edition moves city, so patched the city to Manhattan, plus venue, dates, status, url and source; last_date 2026-02-09 kept."
+  },
+  {
+    "name": "BrickHack",
+    "city": "Rochester",
+    "status": "confirmed",
+    "cycle": "nov27-r3",
+    "evidence": "brickhack.io (codeRIT, organiser): the title bar reads 'BrickHack 12', but the body still shows BrickHack 11, 'February 22-23, 2025, In-person event, RIT SHED', open to any university student 18+. Neither the MLH 2026 nor the 2027 season page lists BrickHack, and a web search found no 2026 or 2027 edition. The record (recurring-tbd, last_date 2025-02-22) matches every source that can be read. Caution: nothing newer than 2025 has been published, so a future pass may find it has lapsed."
+  },
+  {
+    "name": "BSides Charlotte",
+    "city": "Charlotte",
+    "status": "confirmed",
+    "cycle": "nov27-r3",
+    "evidence": "bsidesclt.org (organiser, modified 2026-11-04): the homepage still carries the 2026 theme and promotes only FrostCon 3 (December 2, Booth Playhouse), a separate one-day lightning-talk event. No 2027 BSides Charlotte date is published. The record (recurring-tbd, last_date 2026-03-28) stands. FrostCon is added as its own record in nov27-r3-fixes.json."
+  },
+  {
+    "name": "BSides ICS/OT",
+    "city": "Tampa",
+    "status": "corrected",
+    "cycle": "nov27-r3",
+    "evidence": "bsidesics.org (organiser), title 'BSidesICS/OT Tampa 2027': 'Monday, February 8, 2027, 8:30 AM - 4:30 PM ET, Tampa, FL (venue to be announced)'; tickets on sale via Humanitix; the CFP closed Nov 25, 2026. The record had no next date; patched next_date and next_date_end 2027-02-08, status upcoming. Venue stays blank because none is announced. last_date 2026-02-23 kept."
+  },
+  {
+    "name": "BSidesSF",
+    "city": "San Francisco",
+    "status": "corrected",
+    "cycle": "nov27-r3",
+    "evidence": "bsidessf.org (organiser) homepage: 'BSidesSF 2027 will be April 3-4!'. The record had no next date; patched 2027-04-03 to 2027-04-04, status upcoming. No venue is named, so venue stays blank. last_date 2026-03-21 kept."
+  },
+  {
+    "name": "Code4Lib",
+    "city": "Philadelphia",
+    "status": "confirmed",
+    "cycle": "nov27-r3",
+    "evidence": "code4lib.org/conference/ lists 'code4lib 2026 - Philadelphia, PA. March 2-5' as the latest edition, matching last_date 2026-03-02, and names no 2027 conference. wiki.code4lib.org/2027_Hosting_Proposals lists no proposals and no winner. 2027.code4lib.org does not resolve. recurring-tbd stands. Note: the host city changes every year, so once a 2027 host is chosen this record's city will need to move."
+  },
+  {
+    "name": "ConUHacks",
+    "city": "Montreal",
+    "status": "corrected",
+    "cycle": "nov27-r3",
+    "evidence": "conuhacks.io (organiser), title 'ConUHacks XI': 'FEBRUARY 6 - 7, 2027, 24 HOURS, CONCORDIA UNIVERSITY, MONTREAL', registration open. The record had no next date; patched 2027-02-06 to 2027-02-07, status upcoming, month February. last_date 2026-01-24 kept."
+  },
+  {
+    "name": "CyberConVA",
+    "city": "Richmond",
+    "status": "confirmed",
+    "cycle": "nov27-r3",
+    "evidence": "rvatech.com/events/premier-conferences/ (organiser) lists 'CyberConVA 2026, February 12, 2026' as the latest edition, matching last_date 2026-02-12. rvatech.com/cyber/ describes the conference but gives no 2027 date. rvatech.com/rvatech-events/cyberconva-2027/ returns 404, and a web search found no 2027 announcement. recurring-tbd stands."
+  },
+  {
+    "name": "Cybersecurity, Stronger Together Conference",
+    "city": "Washington",
+    "status": "corrected",
+    "cycle": "nov27-r3",
+    "evidence": "cyberconference.cps.gwu.edu (GWU College of Professional Studies, organiser): 'SAVE THE DATE 3rd Annual Stronger Together Cybersecurity Conference on April 21, 2027!', adding a career fair. It confirms the 2026 edition was 'Held February 3, 2026', matching last_date. Patched next_date 2027-04-21, status upcoming, month April. No 2027 room is named, so the venue now says that rather than asserting Jack Morton Auditorium."
+  },
+  {
+    "name": "DakotaCon",
+    "city": "Madison",
+    "status": "confirmed",
+    "cycle": "nov27-r3",
+    "evidence": "dakotacon.org (organiser), title 'DakotaCon 13': 'March 27-28, 2026, Madison, South Dakota', talks at the Theater & Conference Center. No DakotaCon 14 or 2027 date is published. The record (recurring-tbd, last_date 2026-03-27) matches."
+  },
+  {
+    "name": "FIRST Championship",
+    "city": "Houston",
+    "status": "corrected",
+    "cycle": "nov27-r3",
+    "evidence": "firstinspires.org/programs/first-championship (organiser): 'Save the date FIRST Championship April 28 - May 1, 2027'. FIRST's own blog post 'Update: Future of FIRST Championship' says 'the George R. Brown Convention Center (GRB) in Houston will remain the venue for FIRST Championship through 2034'. Patched next_date 2027-04-28, next_date_end 2027-05-01, status upcoming, month April-May. last_date 2026-04-29 kept."
+  }
+]

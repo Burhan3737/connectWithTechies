@@ -265,6 +265,31 @@
     "curated record removed": 1
    },
    "relisted": 22
+  },
+  {
+   "base": "2fdf207",
+   "built_on": "2026-11-26",
+   "before": 19203,
+   "after": 19582,
+   "added": {
+    "total": 439,
+    "curated": 11,
+    "feed": 428
+   },
+   "removed": {
+    "total": 60,
+    "curated": 0,
+    "feed": 60
+   },
+   "redated": {
+    "total": 55,
+    "curated": 0,
+    "feed": 55
+   },
+   "removed_by_reason": {
+    "no longer listed": 60
+   },
+   "relisted": 25
   }
  ]
 }

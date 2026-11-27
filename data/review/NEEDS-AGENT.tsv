@@ -1,34 +1,42 @@
 verdict	name	city	next_date	note	url
 ambiguous	UGAHacks	Athens	2027-02-05	page loads but the stored date is not on it and it publishes no structured event date	https://ugahacks.com/
 ambiguous	OWASP Global AppSec USA	Atlanta	2027-09-20	page loads but the stored date is not on it and it publishes no structured event date	https://owasp.org/events/
-ambiguous	Georgia Tech All-Majors Career Fair	Atlanta	2027-01-25	"january 25" appears, but so do 1 date(s) this event does not have (e.g. 2027-01-04) — the page lists too many dates for a match to mean anything	https://career.gatech.edu/career-fair
 ambiguous	CppCon	Aurora	2027-09-18	"september 18" appears, but so do 1 date(s) this event does not have (e.g. 2027-10-02) — the page lists too many dates for a match to mean anything	https://cppcon.org/
-ambiguous	SLOSS.tech	Birmingham	2027-06-23	"june 23" appears, but so do 1 date(s) this event does not have (e.g. 2027-06-02) — the page lists too many dates for a match to mean anything	https://sloss.tech
 ambiguous	BSidesCharm	Baltimore	2027-04-24	page loads but the stored date is not on it and it publishes no structured event date	https://www.bsidescharm.org/
+ambiguous	SLOSS.tech	Birmingham	2027-06-23	"june 23" appears, but so do 1 date(s) this event does not have (e.g. 2027-06-02) — the page lists too many dates for a match to mean anything	https://sloss.tech
 ambiguous	SpiceWorld	Austin	2027-10-26	page loads but the stored date is not on it and it publishes no structured event date	https://www.spiceworks.com/spiceworld/
+ambiguous	Georgia Tech All-Majors Career Fair	Atlanta	2027-01-25	"january 25" appears, but so do 1 date(s) this event does not have (e.g. 2027-01-04) — the page lists too many dates for a match to mean anything	https://career.gatech.edu/career-fair
 ambiguous	DevRelCon New York	Brooklyn	2027-07-21	page loads but the stored date is not on it and it publishes no structured event date	https://nyc.devrelcon.dev/
 ambiguous	Vermont Tech Jam	Burlington	2027-10-23	"october 23, 2027" appears, but so do 1 date(s) this event does not have (e.g. 2027-10-02) — the page lists too many dates for a match to mean anything	https://techjamvt.com/
 ambiguous	Pearl Hacks	Chapel Hill	2027-02-13	page loads but the stored date is not on it and it publishes no structured event date	https://pearlhacks.com/
 ambiguous	iFiveK	Charleston	2027-04-22	"april 22, 2027" appears, but so do 1 date(s) this event does not have (e.g. 2027-04-01) — the page lists too many dates for a match to mean anything	https://www.charlestondigital.com/community/ifivek
+ambiguous	FrostCon	Charlotte	2026-12-02	page loads but the stored date is not on it and it publishes no structured event date	https://bsidesclt.org/frostcon/
 ambiguous	Cybersecurity Summit Chicago	Chicago	2027-04-27	page loads but the stored date is not on it and it publishes no structured event date	https://cyberriskalliance.swoogo.com/Chicago2027
-ambiguous	CUhackit	Clemson	2027-02-20	page loads but the stored date is not on it and it publishes no structured event date	https://cuhack.it/
 ambiguous	RevolutionUC	Cincinnati	2027-02-27	page loads but the stored date is not on it and it publishes no structured event date	https://www.revolutionuc.com/
+ambiguous	CUhackit	Clemson	2027-02-20	page loads but the stored date is not on it and it publishes no structured event date	https://cuhack.it/
 ambiguous	Roots Weekend	Columbia	2027-04-23	"april 23" appears, but so do 1 date(s) this event does not have (e.g. 2027-04-02) — the page lists too many dates for a match to mean anything	https://rootsweekend.com/
 ambiguous	PitchBreakfast	Charlotte	2026-12-09	"december 9" appears, but so do 1 date(s) this event does not have (e.g. 2027-01-13) — the page lists too many dates for a match to mean anything	https://pitchbreakfast.com/
-ambiguous	PASS Data Community Summit North America	Denver	2027-10-13	"october 13" appears, but so do 1 date(s) this event does not have (e.g. 2027-10-20) — the page lists too many dates for a match to mean anything	https://passdatacommunitysummit.com/north-america/
+ambiguous	SC Conference (Supercomputing)	Denver	2027-11-14	page loads but the stored date is not on it and it publishes no structured event date	https://sc27.supercomputing.org/
 ambiguous	SANS AI Cybersecurity Summit	Denver	2027-04-27	page loads but the stored date is not on it and it publishes no structured event date	https://www.sans.org/cyber-security-training-events/
+ambiguous	PASS Data Community Summit North America	Denver	2027-10-13	"october 13" appears, but so do 1 date(s) this event does not have (e.g. 2027-10-20) — the page lists too many dates for a match to mean anything	https://passdatacommunitysummit.com/north-america/
 ambiguous	Product-Led Summit Denver	Denver	2027-04-07	"april 7" appears, but so do 1 date(s) this event does not have (e.g. 2027-04-14) — the page lists too many dates for a match to mean anything	https://world.productledalliance.com/location/denver
 ambiguous	CED Venture Connect	Durham	2027-03-22	page loads but the stored date is not on it and it publishes no structured event date	https://cednc.org/venture-connect/
 ambiguous	VentureCat	Evanston	2027-05-27	page loads but the stored date is not on it and it publishes no structured event date	https://www.venturecat.northwestern.edu/
+ambiguous	Tech Week Grand Rapids	Grand Rapids	2027-09-13	page loads but the stored date is not on it and it publishes no structured event date	https://www.techweekgr.com/
 ambiguous	Fairfield StartUp Showcase	Fairfield	2027-04-15	"april 15, 2027" appears, but so do 1 date(s) this event does not have (e.g. 2027-04-29) — the page lists too many dates for a match to mean anything	https://www.fairfield.edu/startup/
+ambiguous	PA TechCon	Harrisburg	2027-08-12	page loads but the stored date is not on it and it publishes no structured event date	https://www.patechcon.com/
 ambiguous	PTC Annual Conference	Honolulu	2027-01-17	page loads but the stored date is not on it and it publishes no structured event date	https://www.ptc.org/
+ambiguous	FIRST Championship	Houston	2027-04-28	page loads but the stored date is not on it and it publishes no structured event date	https://www.firstinspires.org/
 ambiguous	Mira Awards	Indianapolis	2027-04-23	"april 23, 2027" appears, but so do 1 date(s) this event does not have (e.g. 2027-04-02) — the page lists too many dates for a match to mean anything	https://techpoint.org/mira-awards/
-ambiguous	Black Hat USA	Las Vegas	2027-07-31	page loads but the stored date is not on it and it publishes no structured event date	https://blackhat.com/
+ambiguous	Aerium Spring Innovation Summit	Johnstown	2027-06-02	page loads but the stored date is not on it and it publishes no structured event date	https://aerium.org/summit/
 ambiguous	NetSuite SuiteWorld	Las Vegas	2027-10-18	"october 18" appears, but so do 1 date(s) this event does not have (e.g. 2027-10-25) — the page lists too many dates for a match to mean anything	https://www.netsuitesuiteworld.com/
+ambiguous	Black Hat USA	Las Vegas	2027-07-31	page loads but the stored date is not on it and it publishes no structured event date	https://blackhat.com/
+ambiguous	Tech Alley Vegas	Las Vegas	2026-12-19	page loads but the stored date is not on it and it publishes no structured event date	https://www.techalley.org/
 ambiguous	HackKU	Lawrence	2027-04-09	page loads but the stored date is not on it and it publishes no structured event date	https://www.hackku.org/
 ambiguous	LA Hacks	Los Angeles	2027-04-16	page loads but the stored date is not on it and it publishes no structured event date	https://lahacks.com/
 ambiguous	dev2next	Lone Tree	2027-10-18	page loads but the stored date is not on it and it publishes no structured event date	https://dev2next.com/
 ambiguous	Midwest Gaming Classic	Milwaukee	2027-04-23	page loads but the stored date is not on it and it publishes no structured event date	https://www.midwestgamingclassic.com
+ambiguous	BearHacks	Mississauga	2027-04-23	page loads but the stored date is not on it and it publishes no structured event date	https://www.bearhacks.com/
 ambiguous	Hackville	Mississauga	2027-01-23	"january 23" appears, but so do 1 date(s) this event does not have (e.g. 2027-01-02) — the page lists too many dates for a match to mean anything	https://hackville.io/
 ambiguous	ALL IN	Montreal	2027-09-22	"september 22" appears, but so do 1 date(s) this event does not have (e.g. 2027-09-01) — the page lists too many dates for a match to mean anything	https://allinevent.ai/
 ambiguous	AAAI Conference on Artificial Intelligence	Montreal	2027-02-16	"february 16" appears, but so do 1 date(s) this event does not have (e.g. 2027-02-23) — the page lists too many dates for a match to mean anything	https://aaai.org/conference/aaai/aaai-27/
@@ -36,36 +44,44 @@ ambiguous	Global Game Jam	Multiple cities	2027-01-25	page loads but the stored d
 ambiguous	CT Tech Week	Multiple cities	2027-06-07	page loads but the stored date is not on it and it publishes no structured event date	https://cttechweek.com/
 ambiguous	BSides Nashville	Nashville	2027-04-23	"april 23" appears, but so do 1 date(s) this event does not have (e.g. 2027-04-02) — the page lists too many dates for a match to mean anything	https://bsidesnash.org
 ambiguous	BSides NOLA	New Orleans	2027-05-11	page loads but the stored date is not on it and it publishes no structured event date	https://nolabsides.com
-ambiguous	Django Girls New York City	New York	2026-11-27	page loads but the stored date is not on it and it publishes no structured event date	https://djangogirls.org/en/nyc/
+ambiguous	Bank Technology & Operations Conference & Showcase	New York	2027-02-09	"february 9" appears, but so do 1 date(s) this event does not have (e.g. 2027-01-19) — the page lists too many dates for a match to mean anything	https://ksbankers.com/conference/2027-bank-technology-operations-conference-and-showcase/
 ambiguous	Gartner IT Symposium/Xpo	Orlando	2027-10-18	page loads but the stored date is not on it and it publishes no structured event date	https://www.gartner.com/en/conferences/na/symposium-us
 ambiguous	DrupalCon North America	Orlando	2027-03-22	page loads but the stored date is not on it and it publishes no structured event date	https://events.drupal.org/orlando2027
 ambiguous	uOttaHack	Ottawa	2027-01-15	page loads but the stored date is not on it and it publishes no structured event date	https://2027.uottahack.ca/
 ambiguous	BSides Peoria	Peoria	2027-10-23	"october 23" appears, but so do 1 date(s) this event does not have (e.g. 2027-10-02) — the page lists too many dates for a match to mean anything	https://www.bsidespeoria.com/
-ambiguous	Hacktech	Pasadena	2027-02-26	"february 26" appears, but so do 1 date(s) this event does not have (e.g. 2027-04-02) — the page lists too many dates for a match to mean anything	https://hack.caltech.edu/
-ambiguous	BSides Philly	Philadelphia	2026-12-11	page loads but the stored date is not on it and it publishes no structured event date	https://bsidesphilly.org
+ambiguous	Hacktech	Pasadena	2027-02-26	page loads but the stored date is not on it and it publishes no structured event date	https://hack.caltech.edu/
 ambiguous	MSPGeekCon	Orlando	2027-05-23	"may 23" appears, but so do 1 date(s) this event does not have (e.g. 2027-05-02) — the page lists too many dates for a match to mean anything	https://mspgeekcon.com/
 ambiguous	Steel City AI Innovators Meetup	Pittsburgh	2026-12-09	page loads but the stored date is not on it and it publishes no structured event date	https://www.pghtech.org/events/Steel_City_AI_11_1
+ambiguous	BSides Philly	Philadelphia	2026-12-11	page loads but the stored date is not on it and it publishes no structured event date	https://bsidesphilly.org
 ambiguous	Interface	Quebec City	2027-06-01	page loads but the stored date is not on it and it publishes no structured event date	https://interfaceqc.com/
+ambiguous	Triangle Game Jam	Raleigh	2027-02-13	"february 13" appears, but so do 1 date(s) this event does not have (e.g. 2027-02-20) — the page lists too many dates for a match to mean anything	https://entrepreneurship.ncsu.edu/trianglegamejam/
+ambiguous	BSides Seattle	Redmond	2027-03-05	page loads but the stored date is not on it and it publishes no structured event date	https://bsidesseattle.com
 ambiguous	Cultivator Startup Summit	Regina	2027-09-15	page loads but the stored date is not on it and it publishes no structured event date	https://www.cultivator.ca/events/startup-summit
 ambiguous	Cultivator Community Night	Regina	2027-01-19	page loads but the stored date is not on it and it publishes no structured event date	https://www.cultivator.ca/events
+ambiguous	Microsoft Ignite	San Francisco	2027-11-16	page loads but the stored date is not on it and it publishes no structured event date	https://ignite.microsoft.com/
 ambiguous	Tech Week San Francisco	San Francisco	2027-10-04	page loads but the stored date is not on it and it publishes no structured event date	https://www.tech-week.com/
 ambiguous	AI Tinkerers San Diego	San Diego	2026-12-03	"december 3, 2026" appears, but so do 1 date(s) this event does not have (e.g. 2026-12-10) — the page lists too many dates for a match to mean anything	https://san-diego.aitinkerers.org/
-ambiguous	All Things Open	Raleigh	2027-10-17	"october 17" appears, but so do 1 date(s) this event does not have (e.g. 2027-11-21) — the page lists too many dates for a match to mean anything	https://allthingsopen.org/
+ambiguous	AI & Big Data Expo North America	San Jose	2027-06-16	page loads but the stored date is not on it and it publishes no structured event date	https://www.ai-expo.net/northamerica/
 ambiguous	tech SAVannah Tech Tuesday	Savannah	2026-12-08	"dec 8" appears, but so do 1 date(s) this event does not have (e.g. 2027-01-12) — the page lists too many dates for a match to mean anything	https://www.meetup.com/techsav/
-ambiguous	Product-Led Summit Seattle	Seattle	2027-06-16	"june 16" appears, but so do 1 date(s) this event does not have (e.g. 2027-05-26) — the page lists too many dates for a match to mean anything	https://world.productledalliance.com/location/seattle
-ambiguous	WEHack	Richardson	2027-04-10	page loads but the stored date is not on it and it publishes no structured event date	https://www.wehackutd.com/
 ambiguous	Buffer-Free Video^AI	Seattle	2027-07-28	page loads but the stored date is not on it and it publishes no structured event date	https://buffconf.gomomento.com/
+ambiguous	Product-Led Summit Seattle	Seattle	2027-06-16	"june 16" appears, but so do 1 date(s) this event does not have (e.g. 2027-05-26) — the page lists too many dates for a match to mean anything	https://world.productledalliance.com/location/seattle
 ambiguous	Nrth Festival	Toronto	2027-09-14	page loads but the stored date is not on it and it publishes no structured event date	https://nrth.ca/
-ambiguous	UofTHacks	Toronto	2027-01-15	page loads but the stored date is not on it and it publishes no structured event date	https://uofthacks.com/
+ambiguous	WEHack	Richardson	2027-04-10	page loads but the stored date is not on it and it publishes no structured event date	https://www.wehackutd.com/
 ambiguous	MakeUofT	Toronto	2027-02-13	page loads but the stored date is not on it and it publishes no structured event date	http://makeuoft.ca/
+ambiguous	UofTHacks	Toronto	2027-01-15	page loads but the stored date is not on it and it publishes no structured event date	https://uofthacks.com/
 ambiguous	Digital Summit Tampa	Tampa	2027-03-23	"march 23" appears, but so do 1 date(s) this event does not have (e.g. 2027-03-02) — the page lists too many dates for a match to mean anything	https://www.digitalsummit.com/tampa/
-ambiguous	HackIllinois	Urbana-Champaign	2027-02-26	page loads but the stored date is not on it and it publishes no structured event date	https://www.hackillinois.org/
 ambiguous	KeanUHackThis	Union	2027-04-02	page loads but the stored date is not on it and it publishes no structured event date	https://www.keanuhackthis.com/
+ambiguous	HackIllinois	Urbana-Champaign	2027-02-26	page loads but the stored date is not on it and it publishes no structured event date	https://www.hackillinois.org/
 ambiguous	External Development Summit (XDS)	Vancouver	2027-09-20	page loads but the stored date is not on it and it publishes no structured event date	https://xdsummit.com/
+ambiguous	Cybersecurity, Stronger Together Conference	Washington	2027-04-21	page loads but the stored date is not on it and it publishes no structured event date	https://cyberconference.cps.gwu.edu/
+ambiguous	IEEE Cloud Summit	Washington	2027-06-24	page loads but the stored date is not on it and it publishes no structured event date	https://www.ieeecloudsummit.org/
 ambiguous	SANS DFIR Summit & Training	Washington	2027-08-23	"aug 23" appears, but so do 1 date(s) this event does not have (e.g. 2027-08-02) — the page lists too many dates for a match to mean anything	https://www.sans.org/cyber-security-training-events/digital-forensics-summit-2027/
 unreadable	ODSC East	Boston	2027-05-10	16-byte stub, likely a captcha	https://odsc.ai/east/
-unreadable	Hack Cupertino	Cupertino	2027-04-10	382-byte stub, likely a captcha	https://www.cupertino.gov/hackcupertino
+unreadable	Hack Cupertino	Cupertino	2027-04-10	384-byte stub, likely a captcha	https://www.cupertino.gov/hackcupertino
+unreadable	BSidesOK	Glenpool	2027-04-05	no response	https://bsidesok.com
+unreadable	BSidesKC	Kansas City	2027-04-24	no response	https://bsideskc.org
 unreadable	DEF CON	Las Vegas	2027-08-05	no response	https://defcon.org/
+unreadable	BSides MKE	Milwaukee	2027-03-26	no response	https://bsidesmke.org
 unreadable	CypherCon	Milwaukee	2027-03-24	no response	https://cyphercon.com
 unreadable	MariHacks	Montreal	2027-04-09	476-byte stub, likely a captcha	https://www.marihacks.com/
 unreadable	Lesbians Who Tech + Allies Summit	New York	2027-06-07	no response	https://lwtsquad.com/
@@ -74,5 +90,5 @@ unreadable	The Reinforcement Learning Conference (RLC)	Providence	2027-08-02	392
 unreadable	WiCHacks	Rochester	2027-02-27	469-byte stub, likely a captcha	https://wichacks.io/
 unreadable	Agile2027	San Diego	2027-08-09	no response	https://agilealliance.org/event/agile2027/
 unreadable	The Montgomery Summit	Santa Monica	2027-03-09	no response	https://montgomerysummit.com/
-unreadable	ServiceNow Knowledge	Las Vegas	2027-05-04	no response	https://www.servicenow.com/events/knowledge.html
 unreadable	ElleHacks	Toronto	2027-01-29	476-byte stub, likely a captcha	https://ellehacks.com/
+unreadable	ServiceNow Knowledge	Las Vegas	2027-05-04	no response	https://www.servicenow.com/events/knowledge.html

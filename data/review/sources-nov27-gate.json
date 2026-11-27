@@ -1,0 +1,5 @@
+[
+  { "url": "https://luma.com/prefect-io", "tech": true, "reason": "Prefect (luma.com/prefect-io): the Python workflow-orchestration company's calendar, hosting the FastMCP Meetup (San Francisco, luma.com/fastmcp-meetup-dec26). Seen in the gate's dropped sample on the 2026-11-27 run: 'FastMCP' gives the gate no tech signal." },
+  { "url": "https://luma.com/agi-society", "tech": true, "reason": "AGI Society Official Calendar (luma.com/agi-society): AI chapter events (AGI Society San Francisco December Chapter Event, luma.com/lq654fq4). Seen in the gate's dropped sample on the 2026-11-27 run: 'AGI' is not a gate keyword." },
+  { "url": "https://luma.com/jazz-tools", "tech": true, "reason": "jazz.tools events (luma.com/jazz-tools): the local-first developer framework's calendar, hosting Side-Project Party V (luma.com/spp5), a build night for developers. Seen in the gate's dropped sample on the 2026-11-27 run with no tech signal." }
+]

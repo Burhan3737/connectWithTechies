@@ -25,8 +25,9 @@ Every auditor run, what it flagged, and what was done about it. Generated from
 | 2026-11-19-i1 | 2 | 0 | 0 | 0 | 0 | nov19 cycle: re-check c1/c2 (60 dispatched rows), returning-event discovery t1-t3, city discovery d1-d2 (46 adds), xaudit PASS rename |
 | 2026-11-21-i1 | 2 | 0 | 2 | 0 | 2 | nov21 cycle: recheck c1/c2/c3 (60 dispatched + 2 Techstars rows), discovery t1/t2/t3 and d1/d2 (22 adds, 1 removal), 15 organiser retirements, d1/d2 follows |
 | 2026-11-24-i1 | 3 | 0 | 1 | 0 | 1 | nov24 cycle: script refresh, 60 re-check rows (c1-c3), 10 DISCOVER cities (d1-d2), 75 RETURNING rows (t1-t3); 41 updates, 45 adds, 1 removal applied |
+| 2026-11-27-i1 | 3 | 1 | 0 | 1 | 0 | nov27 cycle: 60 re-check rows (r1-r3: 44 confirmed, 12 corrected, 4 blocked), 10 DISCOVER cities (c1-c2), 13 adds, 1 city correction, sources c1/c2/gate |
 
-**13 audit cycle(s); 6 found something blocking on its first audit.** 50 findings in total, 38 fixed, 10 open or deferred, 10 repeat(s) of an earlier finding.
+**14 audit cycle(s); 7 found something blocking on its first audit.** 51 findings in total, 39 fixed, 10 open or deferred, 10 repeat(s) of an earlier finding.
 
 ## Open
 
@@ -62,6 +63,16 @@ Every auditor run, what it flagged, and what was done about it. Generated from
   - note: Repeat of 2026-11-21-i1-W1, same owner policy decision: keep the RETURNING gate (revert these 14 adds to unresolved) or drop it in curator.md and add a rule for rotating-city events. Adds kept pending that decision.
 
 ## History
+
+### 2026-11-27-i1 — 1 blocking, 0 warning(s)
+
+Scope: nov27 cycle: 60 re-check rows (r1-r3: 44 confirmed, 12 corrected, 4 blocked), 10 DISCOVER cities (c1-c2), 13 adds, 1 city correction, sources c1/c2/gate
+
+| id | severity | event | finding | status | resolution |
+|---|---|---|---|---|---|
+| B1 | blocking | Bank Technology & Operations Conference & Showcase (Manhattan, Kansas; published as New York, New York) | nov27-r3 correctly set city Manhattan, region Kansas (ksbankers.com 2027 page: 'February 9-10, 2027 Hilton Garden Inn, Manhattan, KS'), but the bare alias 'manhattan' -> ['New York','New York'] in scripts/lib/places.mjs ignores the region, so events.json publishes it as New York, NY (id ...-new-york). audit-run missed it because Kansas's count netted out with the EDCI add. | fixed (2026-11-27) | scripts/lib/places.mjs: bare 'manhattan' alias region-qualified to 'manhattan\|new york' / '\|ny' / '\|' (empty); regression checks added to scripts/selftest.mjs. Record now publishes as Manhattan, Kansas (id ...-manhattan); scoped Sonnet re-check: ok. |
+
+Checked and sound: City moves TechConnect WV to Huntington and Bank Tech to Manhattan KS (organiser pages); 2027 dates for Triangle Game Jam, Business+AI Forum, Summercon, IEEE Cloud Summit, GWU Stronger Together, BSidesSF, ConUHacks, FIRST, BSides ICS/OT; Car.HMI/Tech.AD are distinct co-located events (audit-run duplicate is a false positive); random confirms AI Tinkerers SD, PA TechCon, Tech Week GR, AI & Big Data Expo NA, Beer City Code, DC864; all 13 new adds on organiser pages; no aggregator sources; no removals, no curated loss
 
 ### 2026-11-24-i1 — 0 blocking, 1 warning(s)
 

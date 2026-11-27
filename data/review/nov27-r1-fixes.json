@@ -1,0 +1,10 @@
+[
+  { "match": { "name": "Business+AI Forum", "city": "Hoboken" },
+    "action": "update",
+    "reason": "ailab.stevens.edu/business-ai-forum-december-2026/ announces 'the third Business+AI Forum' on Wednesday, December 2, 2026, 4:00-6:00 p.m., Stevens Institute of Technology, Babbio Center Room 122, free with registration; the Stevens Business+AI Lab homepage and events page list it under Upcoming Events. The September 23, 2026 edition (the second) stays as last_date. Month widened to include December, since a third 2026 edition now runs then.",
+    "set": { "next_date": "2026-12-02", "next_date_end": "2026-12-02", "status": "upcoming", "month": "March, September, December", "source": "https://ailab.stevens.edu/business-ai-forum-december-2026/" } },
+  { "match": { "name": "IEEE Cloud Summit", "city": "Washington" },
+    "action": "update",
+    "reason": "ieeecloudsummit.org/2027-cfp, the organiser's own Call for Papers page: 'IEEE Cloud Summit 2027. Dates: June 24-25, 2027 | Location: Washington DC, USA', paper deadline Feb 1, 2027. The record had next_date empty (recurring-tbd) and last_date 2026-06-25, which the homepage still confirms ('June 25-26 2026, Washington Marriott Capitol Hill'). No 2027 venue is published yet, so venue stays blank.",
+    "set": { "next_date": "2027-06-24", "next_date_end": "2027-06-25", "status": "upcoming", "source": "https://www.ieeecloudsummit.org/2027-cfp" } }
+]

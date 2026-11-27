@@ -1,10 +1,10 @@
-{ "date": "2026-11-24", "iteration": 1,
-  "scope": "nov24 cycle: script refresh, 60 re-check rows (c1-c3), 10 DISCOVER cities (d1-d2), 75 RETURNING rows (t1-t3); 41 updates, 45 adds, 1 removal applied",
-  "checked": "Central Ohio Software Symposium removal (NFJS cancellation page); Django Girls NYC and Tech Alley Vegas re-dates; city moves SC to Denver, BSides SLC to Sandy, CDAO to Hoboken, BSDCan to Vancouver; Ignite, Live! 360, BSides MKE/KC/SD 2027 dates; random confirmed rows (All Things Open, Florida Startup Summit, East Meets West, AI Tinkerers Fort Wayne, QCon SF, Cutie Hack); 13 new adds on organiser pages; no aggregator sources; coverage losses all explained",
+{ "date": "2026-11-27", "iteration": 1,
+  "scope": "nov27 cycle: 60 re-check rows (r1-r3: 44 confirmed, 12 corrected, 4 blocked), 10 DISCOVER cities (c1-c2), 13 adds, 1 city correction, sources c1/c2/gate",
+  "checked": "City moves TechConnect WV to Huntington and Bank Tech to Manhattan KS (organiser pages); 2027 dates for Triangle Game Jam, Business+AI Forum, Summercon, IEEE Cloud Summit, GWU Stronger Together, BSidesSF, ConUHacks, FIRST, BSides ICS/OT; Car.HMI/Tech.AD are distinct co-located events (audit-run duplicate is a false positive); random confirms AI Tinkerers SD, PA TechCon, Tech Week GR, AI & Big Data Expo NA, Beer City Code, DC864; all 13 new adds on organiser pages; no aggregator sources; no removals, no curated loss",
   "findings": [
-    { "severity": "warning",
-      "event": "Memphis Microsoft Community Days; Power BI Days DC; State of the Map US; Beam Summit; UN Open Source Week; AWS Community Day Midwest; IEEE Cloud Summit; The Perl and Raku Conference; Summercon; SciPy; MY Hackathon; Chain React; M365 Community Days NYC; Secure Carolinas Conference",
-      "summary": "nov24-t1/t2/t3 again added RETURNING rows as recurring-tbd although no next edition is announced (the curators' own reasons say so), contrary to curator.md's RETURNING table. Applied inconsistently: t1 left AWS Community Day East Canada and Accelerate Chicago unresolved on the same facts. Rotating-city events (SciPy, State of the Map US, AWS Community Day Midwest, TPRC) are pinned to the last host city, while t2 rejected AlmaLinux Day and bitcoin++ as rotating one-time city stops. Dates and cities are historically true; nothing fabricated.",
-      "recommendation": "Owner policy decision still pending. Either revert these adds and record them unresolved with a retry date, or drop the gate in curator.md and add a rule for rotating-city events with no announced next host (leave unplaced or skip rather than pin to the last host city). Apply one rule to RETURNING and DISCOVER.",
-      "repeat_of": "2026-11-21-i1-W1" }
+    { "severity": "blocking",
+      "event": "Bank Technology & Operations Conference & Showcase (Manhattan, Kansas; published as New York, New York)",
+      "summary": "nov27-r3 correctly set city Manhattan, region Kansas (ksbankers.com 2027 page: 'February 9-10, 2027 Hilton Garden Inn, Manhattan, KS'), but the bare alias 'manhattan' -> ['New York','New York'] in scripts/lib/places.mjs ignores the region, so events.json publishes it as New York, NY (id ...-new-york). audit-run missed it because Kansas's count netted out with the EDCI add.",
+      "recommendation": "Leave the raw record as it is. In scripts/lib/places.mjs scope the alias: 'manhattan|new york': ['New York','New York'] (plus 'manhattan|ny' if needed) instead of bare 'manhattan', then rebuild. Expect city Manhattan, region Kansas, id bank-technology-operations-conference-showcase-manhattan. A scan of data/raw found no other record affected.",
+      "repeat_of": "" }
   ] }
