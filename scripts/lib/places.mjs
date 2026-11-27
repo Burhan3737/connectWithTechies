@@ -11,7 +11,11 @@
 export const CITY_ALIASES = new Map(Object.entries({
   'new york city':        ['New York', 'New York'],
   'nyc':                  ['New York', 'New York'],
-  'manhattan':            ['New York', 'New York'],
+  // Region-qualified: Manhattan, KS is a real city (audit 2026-11-27-i1-B1 —
+  // a Kansas Bankers Association conference was published as New York, NY).
+  'manhattan|new york':   ['New York', 'New York'],
+  'manhattan|ny':         ['New York', 'New York'],
+  'manhattan|':           ['New York', 'New York'],
   'urbana':               ['Urbana-Champaign', 'Illinois'],
   'champaign':            ['Urbana-Champaign', 'Illinois'],
   'ankeny':               ['Des Moines', 'Iowa'],

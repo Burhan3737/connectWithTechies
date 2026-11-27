@@ -15,6 +15,7 @@ import { validateRecord, decideAdd } from './lib/record.mjs';
 import { orderPatchFiles } from './lib/patch-order.mjs';
 import { renderings, jsonLdEvents, judgePage } from './lib/date-match.mjs';
 import { diffEvents, changesMarkdown, historyRow, upsertHistory, delistings, retiredOrganisers } from './lib/changes.mjs';
+import { canonPlace } from './lib/places.mjs';
 import { planCities, mergeSearched, candidateCities, TYPES } from '../agent/tools/discovery-plan.mjs';
 
 let failed = 0, passed = 0;
@@ -422,6 +423,16 @@ console.log('\nverify-dates page matching');
     'jsonLdEvents keeps upcoming Event-typed objects only, soonest first', JSON.stringify(typed));
   ok(jsonLdEvents('<script type="application/ld+json">{not json</script>', NOW).length === 0,
     'unparseable JSON-LD is skipped, not fatal');
+}
+
+console.log('canonPlace');
+{
+  // Audit 2026-11-27-i1-B1: a bare 'manhattan' alias published Manhattan, KS as New York.
+  const at = (c, r) => { const p = canonPlace(c, r); return `${p.city}|${p.region}`; };
+  ok(at('Manhattan', 'Kansas') === 'Manhattan|Kansas', 'Manhattan, Kansas keeps its own city', at('Manhattan', 'Kansas'));
+  ok(at('Manhattan', 'New York') === 'New York|New York', 'Manhattan, New York folds into New York', at('Manhattan', 'New York'));
+  ok(at('Manhattan', 'NY') === 'New York|New York', 'Manhattan, NY folds into New York', at('Manhattan', 'NY'));
+  ok(at('Manhattan', '') === 'New York|New York', 'Manhattan with no region folds into New York', at('Manhattan', ''));
 }
 
 console.log(failed ? `\n${failed} CHECK(S) FAILED` : `\nALL ${passed} SCRIPT CHECKS PASSED`);
